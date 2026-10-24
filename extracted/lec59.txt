@@ -1,0 +1,276 @@
+Programming in Java
+Prof. Debasis Samanta
+Department of Computer Science and Engineering
+Indian Institute of Technology, Kharagpur
+Lecture – 59
+Case Study – IV
+Welcome to the session. In this session we will be discuss few more projects. So, the
+projects idea actually so that you can work on the projects and then improve your skill
+so, this is the 8th project in the series of projects that we are discussing in this week. This
+project is based on the Tic-tac-toe game development. Tic-tac-toe game is very familiar
+game and you can find some apps also available now-a-days in the mobile.
+So, that this game is available and then this game can be played between the user and the
+machine, system, computer. So, one party; one player is user and another player is
+computer. However, in this game we will discussed about how the game can be played
+by two users that users; obviously, with their own computer and the two computers the
+players which they are using the playing the games is connected through the net. So, this
+is the requirement it is required here.
+(Refer Slide Time: 01:34)
+
+Now, let us have the idea about this game. Now, before going to discuss the idea what
+are the basic skill that is required so that you can cope with this project. Obviously, you
+should have the good knowledge about Java swing and then little bit graphics also
+
+involved event handling mechanism. So, it is basically GUI programming related issues
+and the networking concept is required. So, if you have cover all those concepts then you
+are ready for this project.
+(Refer Slide Time: 02:04)
+
+Now, so, the idea about this project; here the idea as we see the tic-tac-toe board as it
+appears and is a familiar form as it is shown here this is the tic-tac-toe board and there
+are markings. So, there are two types of marking as you see here; one is marking is cross
+and another is 0. So, cross markings by one player whereas 0 markings will be indicated
+by another player. So, as a simple form of this tic-tac-toe game as we see here there is a 3
+cross 3 board. There may be some complex version also there 4 cross 4, 5 cross 5 and
+much more also.
+Anyway let us just work with the 3 cross 3, later on if your time permit and if your
+interest grows then you can extend easily to 4 cross 4 or 5 cross 5. Anyway so, we will
+consider a 3 cross 3 tic-tac-toe game here. Now, as I have only mentioned that this game
+will be between two players. Two players will play the game from their machines; the
+machines are remotely located and of course, the machines are connected through the
+network.
+Now so, two applications therefore, we have to develop, rather two programs we have to
+develop; two programs we can say the two socket programs more precisely the two
+socket programs will be executed in to host machines that into machines of the users.
+
+And, then the two games that two socket programs we will learn concurrently;
+concurringly say the at the same time in the two machines the programs are to be run and
+then once the program is in execution the user can play the game. And, the game we will
+continue you can fix a time or the game may be continued until user wants to do so. So,
+this is the idea about this game.
+(Refer Slide Time: 04:22)
+
+Now, let us see how we can deal with this project. Now, we will again follow a step by
+step incremental procedure so that we can develop this game easily. The first at task is to
+design the gaming windows as we see it is a frame and this frame includes the you can
+say 4 fields rather we can say 4 button sort of thing sorry not 4 is a 9 bottom sort of thing
+and we can easily do this frame work easily the actually. So, this is a very trivial task and
+this is obviously, the first phase of the projects and in our next part.
+So, the event handling if we say, the even handling will be like this so, people we will
+select a particular button and then one players selection will be marked with X. So, the
+other player selection will be marketed as 0 and then it will continue. And, then every
+times the player will get his own turn to mark the selection and once a player win the
+game automatically a message box will appear showing that this player A or player B
+won the match. So, this is the interface that you have to develop first and this is the first
+version first phase of the program.
+
+(Refer Slide Time: 05:50)
+
+In our second phase of the program, we can say it is the second version of the tic-tac-toe
+game. Here we have to add few more functionalities into the gaming windows. Now, let
+us see what the functionality that can be considered here are. So, initially the initial
+interface is there. Now, after the initial interface there will be a start or stop button; that
+button can be a toggle button so that once the start then it will be automatically next go
+to the stop. So, if we will select it automatically that portion will be there. So, if a player
+wants to start his game so, the player; the start button should be there. And restart means
+say suppose you want to abandon the game in the mid way then you can follow that a
+start button.
+Now, once the start is there either start after start the restart will be an executable, if it is
+stop no restart button. So, this is an enabled, disabled depending on the first button that
+you have selected. Once the start button is selected other than the start and restart or start
+and stop and restart buttons we have to also around one another initiatives or facilities to
+connect the user to some other machine; some other users; some other player. So, a
+connect button will take care for this and disconnected basically if you want to quit the
+game.
+
+(Refer Slide Time: 07:20)
+
+So, one user; one player click a connect button, then it will pop up a window, so, it
+basically the game ID. So, your name can be the game ID again. Now, if you are already
+using then or all or say some user all already working on that then the same game ID can
+be use. Say suppose player X is already in the field I mean in the active then we can
+game ID is X actually otherwise if you want to create the game from your side only. So,
+you can give a your game ID.
+Now, that game ID will be available to all the users who are connected in the net and
+then they can select that they to with home, they want to play all this things. Once the
+game is created then there is a join option will be there, so that if user can join the game.
+And then game once the game ID is created it will appear a game ID which is the game
+ID that we have been created.
+So, now, this is the starting of the session of a game from a player sides. So, other player
+knowing that what are the game ID’s available, he can select and then join and then I can
+start the gaming.
+
+(Refer Slide Time: 08:43)
+
+And this is basically from one side so, one machine, one socket we can say. So, in the; in
+two sockets that if programs if it is run then the network connectivity we will take care
+about these execution. So, this is the third version is that you have developed the things
+in a standalone in a one side only and how the two programs can run concurrently in two
+different machines and they are connected through the net. So, here networking is
+required so that all the sockets can communicate among the two between the two players.
+Now, as a part of the communication few things that we have to take care about it; so,
+this tic-tac-toe board should be visible from the continuing the same state of information
+to both the users. So, initially it is blank no clicking is there, no ticking is there now, say
+suppose player 1 here and player 2, they are playing the game and player 1 ticks it. So, as
+soon as his ticking is over, then it will be marked and the same marking also will be
+visible to the other player as well as.
+Now, it is the player turn and here when the player turn is there, the player 1 cannot
+initiate any move it is not allowed. So, game will take care about this. So, game we will;
+in you will wait until player to finish his game; finished his turn move. Now, here the
+again player 2 we will move. So, player 2 we will click and then according to this that
+click we will appear in his own board as well as the same will be appear in to the other
+parties board also. So, this will continue and this is the type of the game that you have to
+implement and definitely the socket programming is required and then GUI
+
+programming is required. These are the two I mean programming aspects are to be
+exercise in this project.
+Now, let us come to the next project. This project is as we have given the title of this
+project is document browser, you know exactly browser. Browser is basically is a
+interface right, like say Internet Explorer or say Mozilla or Chrome you know these are
+the browsers. Now, so Browser basically take a link and based on the link or browser we
+will take a I mean link and then they will navigate to that link and then it will fetch some
+things like that.
+Also some time browser if it is a search engine like for example, Google then they will
+take a link as well as they will take some keywords. And then related to the keyword
+they will search the entire internet and then and whatever the document matches with
+this keyword they will fetch it to the user. That may be a million of link whatever it is
+there million of documents is there whatever it is there.
+Now, so, there is a search engine, the search engine can be accessed from any program.
+In fact, there is a little tricks about the tricks can be readily available from the internet if
+you just take a quick search and then you can find many solution to that. Anyway, I will
+come to that discussion again in a detail way later on. So, what is the idea about is that a
+browser will basically browse; browse in the sense that it will surf the net and then
+retrieve the documents to the say browsers machine or the users machine.
+So, user will browse the system. So, here user is a browser and user will browse through
+an interface. That interface we are going to develop and we term is a document browser.
+Definitely it will not browse you just want to make it little simple so that we can restrict
+to a particular kind of documents let it be an only PDF documents. That mean those are
+the documents available in the net. There is a lot of I mean million of documents, billion
+of documents are available in the net which are basically in a PDF format. Anyway, so if
+this document browser will only search the PDF contents those are available in internet,
+in the www dot w in what is called the World Wide Web link actually there.
+
+(Refer Slide Time: 13:04)
+
+So, this; so, idea about ok so, before coming to this idea what are the concept that it will
+cover, so far this browser development is concerned Swing is required to be apply to be
+exercised here and then networking. Obviously, it is there, but this is a simple
+networking in fact.
+(Refer Slide Time: 13:26)
+
+Now, let us come to the discussion over this project it is there. So, here basically you
+have to develop a java program which will help a user, user is an I mean user means we
+searching for a document in the net for any PDF documents available. User will provide
+
+definitely a keyword. A keyword can be a group of words or whatever it is there, no
+issue. So, a keyword maybe say NPTEL course so, this keyword. So, it will be fetched
+all PDF file related NPTEL course like there.
+So, anyway so once the user provide a search word; so keywords rather right then your
+program will search using some search engine and fetch all the documents with matches
+with the keyword, that is the concept it is there that you have to implement it. All
+documents fetch will be populated in a list in your in the local machine of the browser.
+So, that means, the it is not exactly same as the search engine like Google does for you, it
+basically give a link of all the document then user has to click with some snippets that is
+there. However, I am telling is that you can bring it, but we have to process this phase
+little bit who is basically search engine returns and then get the PDF file, and download
+these PDF file of your own and then make a list in your own machine. So, this is the
+extra step that your browser should do or the proposed browser should do.
+And then once the list of documents are fetched in to the users machine then a user can
+select any documents of each choice given the title of all the documents in the listed
+itself. And, then document needs to be read by the user. Here again some functionalities
+are to be added here functionalities that document will be open, a document will be
+marked, a document will be saved, a document will be rated whatever it is there.
+So, you are proposing that if the document like say document like anything so, we can
+give the 10 point and if he does not like at all then it is a 0 point. So, 0 to 10 a Likert
+scale a document can be rated. And, then this rating can be maintained in the document
+itself and user can save this document for further reading in future. So, the document will
+be stored with this rating point and everything. So, these are the things that your
+document browser will facilitate to the user.
+
+(Refer Slide Time: 15:55)
+
+Now, let us see how we can develop this document step by step. So, first we have to
+create a simple layout as we have shown here the layout will includes away on simple
+text field level and then button. So, here the level is basically what is the keyword that
+you want to supply enter text like and then this is a text field where the keyword that is
+basically user will provide it and then finally, search. So, whenever if the button will be
+clicked, it will basically connect to the Google search engine or some other search engine
+whichever you want to use in your machine and then say this search engine.
+Again, you have to just communicate this search keyword to the search engine; search
+engine take it, search engine will fetch the document for you, return all the pages
+containing snippets and links and everything, then your program will right browse the
+links and then connect the network corresponding to the given link and fetch the
+document. Here is a networking issues will be there. So, you have to process all the
+things and then and then network communication needs to be done so that it can be a
+retrieve the files and everything.
+Anyway, so, this is the first level interface that you have to develop. Here little bit heavy
+code is involved whenever user enter search keyword. It is a little bit time consuming job
+and little bit innovations are also there because it is not so easy going task actually, but if
+you try and then if you little bit experienced user then it is very simple things. And, this
+
+kind of an experience if you gather, if you learn it, it is really useful in any future
+development of this kind of software development.
+Now, so, here is an example. So, once the user click the search engine it will basically
+contact to the search engine and then it basically return the link, as you see the different
+links those are continuing PDF file and all the PDF file will be fetched to the documents
+as a next in turn.
+(Refer Slide Time: 17:55)
+
+Now, here you see our next version of the interface that you have to add the fetch
+document and they list box will be there. As we see here basically; so, this is basically
+list box will contains all the documents that have been fetched based on these keyword in
+the system. So, it will tooled there. Then user can navigate this list and then scroll it then
+clicking this all the list will be a formed and then select one list of his own interest.
+One particular document is selected then the open button will be there if it is clicked, the
+document will be opened. And then for the opening these document another interface
+should be there; that means, you have to develop another one user program which will
+basically open the document. You should not use any adobe PDF or some PDF, Browser
+like this; you have to develop the browser document of your own so that it will basically
+browser windows are there.
+
+(Refer Slide Time: 19:02)
+
+Now, the browser window typically it will look like this, here is suppose this is the
+interface and then browser window and here is the look of the browser window. So, this
+is another GUI that you have to develop once the user selects the open button it will
+appear. And in this browser you have to added some facilities like say plus and minus as
+you see.
+So, if you click the plus, the document will be zoomed little bit higher resolution and is a
+minus it will be a lower. So, depending on the user’s choice and requirement so, the
+document will be either zoomed in or zoomed out like. And, then there is also back
+button should be there, back button will scroll from the next previous page and the next
+button also we can apply here also, so that it in go to the next page. So, it is page up,
+page down sort of things are there.
+In addition to this, there is a scrollbar should be there if the document is too big in size,
+so scrollbar needs to be followed there. So, using the scrollbar user can scroll the
+document up and down also from this side to that side also. So, both vertical scroll bar
+and horizontal scrollbar can be included in this what is called the document reader
+actually you can say.
+
+(Refer Slide Time: 20:27)
+
+So, this is the idea and in addition to this also we can add few more facilities like rating
+and as I told you rating and then saving the document for future referral. So, that can be
+carried out as a next phase of your project as a third version. As you see here so, in
+addition to this all these things are we have already discussed about it. Now, I just in the
+document reader only I want to add few more things as you see here. So, at a one button
+like rate; that means, if you read this document then you can read this document from 0
+to 10 Likert scale both inclusive and then save offline.
+Here is the another button; that means, if you like this document and if you want to save
+this document then it will basically give this. When you click this it will find the save
+location and then name of the file that you want to save it, you can do it and then save
+button can be clicked and then it will save the document in your own machine. So, this
+document whenever it is saved; it will saved with it is rating values also. So, the two
+things are to be maintained so; accordingly the saving pattern should be created.
+So, it is not the simple saving as the windows operating system or other saving, other
+ways does for you. So, you have to do little bit how the two things can be maintained. It
+is not a very big job you can maintain one simple lock file and in the lock file you can
+include all these information live.
+So, this is basically the idea about document browser and I hope you have understood it.
+In case of some difficulties to understand you are feel free to approach to me, to my team
+
+also, they are constantly will be available for your support. So, this is the idea about two
+projects and we will discuss few more projects in the next session.
+Thank you for your attention.
+
+

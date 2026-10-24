@@ -1,0 +1,425 @@
+Programming In Java
+Prof. Debasis Samanta
+Department of Computer Science Engineering
+Indian Institute of Technology, Kharagpur
+Lecture – 05
+Java Applet Programming
+So, we have run few programs and then how they can be composed in Java environment.
+So, initially you may find it difficult to cope with this, but you should not write lose your
+(Refer Time: 00:34) actually right, you have to be patience. And of course, if you have
+any difficulties while you are learning then you should I mean post your questions that
+difficulties and doubt. So, that you can at least you can understand.
+Now, we have learn about some simple programs in fact, in Java there are two types of
+programming’s is there they are called Java application and one is called Java applet. So,
+in today’s lecture we will just have an idea about is not the details running details
+running will takes more time so, a very simple overview of Java Applet Programming.
+(Refer Slide Time: 01:32)
+
+So, far the Java applet programming is concerned so, basically yeah so, Java
+programming for applet. So, the idea about as I told you there are two types of
+programming, the application which you have already learnt. And then applications are
+most simplest simple programs actually those are basically in for example, C C++
+python that you have already tested maybe, but the applet is a little bit a
+
+[difficu/difficult] different type of programs. And then Java is a unique program
+language which is basically suppose to do that.
+So, the name applet actually whenever you want to mention something small so, it is
+basically late. So, small application is called Java applet. So, it is basically Java applet is
+nothing, but a small program in Java and but more specifically these are small program is
+for writing graphical user interface related program.
+(Refer Slide Time: 02:28)
+
+Now, so applet is basically a view also and then how we can create a view using Java
+that is the concept Java applet programming. And typically a Java applet will look like
+this and if you see the Java applet here is just look like a window. So, an applet is
+nothing but an window.
+As the window is basically the one bar is call the title bar. And then there is a name of
+the windows and then these basically display area of the windows. So, this is the idea
+about an applet and then applet this is very simple version of an applet that I have shown
+you and here you can include image, then multimedia document text link what is not. So,
+this basically the display area, where we can include many components, that is required
+there in case of GI or windows programming.
+
+(Refer Slide Time: 03:40)
+
+And then another example of applet if you can see it so, you know it this is basically look
+of a calculator it is also an applet. And although things are basically close pattern
+minimize pattern, then maximum pattern all these things are there. And then these applet
+contains a number of components for example, these are the component is called the
+button and then level and this is the one component is called the area, where it will
+display something. So, it is called a text field area and like this. So, this is an another
+example of applet that is there so, we will see exactly how using Java we can create our
+own applet.
+(Refer Slide Time: 04:23)
+
+Now, so let us write a program for a simple applet, I want to write one applet, which
+basically we will display one message hello world we have already learn how a hello all
+can be displayed on the screen right in the window, command window, command
+prompt. But, here it will display through an applet; that means, on window and within
+the window the string will be there. Now, here is a very small look of the program and
+here actually the where command can the placed. So, it is a basically command about the
+program.
+So, that you usually whenever write program put as many commands as possible so, that
+you can understand later on or anybody can understand your program so, the command
+and these are the two essential import I told you that Java has lot of packages. If you
+want to use some package or packages, then they should be imported first. So, the import
+command here is basically to import all the packages that you want to use in your
+program. For Java applet programming the two packages are very essential one is called
+the java.applet and another is called java.awt. So, here you can see how one can import
+the two packages Java dot applet and java.awt.
+And if I write again after name of the packages, then java.applet or java.awt a particular
+name it is actually a particular class, in Java dot applet there are many classes, but I want
+to use only one particular class so, I can mention dot applet. Similarly, in awt I want to
+mention only one package class call the graphic so, I use it. So, this way I can import
+package here we have used imported two packages and dot applet and then dot awt and
+two classes in that packages applet class and then graphics class.
+So, this is about import statement, then there will be the class definition as I told you
+here is also the class definition, here the name of the class that I have discussed is here.
+The name of the class means this is the program that we are going to write; that means,
+here is a applet program having name hello world, but here one thing we have used it
+that extends see it is always a standard syntax, if you write an applet, then applet class
+that you are writing that mean this one should extend one package class call applet.
+So, this is the standard syntax that you have to do it. So, this is basically defining the new
+class of your applet programs. Now, you can find the difference between in case of
+simple application we use, simple class hello world a p p and then within this right, but
+here we have to do it. And then these basically the closing and matching second braces
+
+indicating that whatever the code that you want to include, the code indicates the what
+are the data and the methods that you want to include that should be enclosed within the
+closing and beginning brackets.
+Now, in this in this program we have only one what is called the function who have
+declared is called a method of course not function so method. So, the name of the
+method is paint, I have declared here one method public void paint I will discuss about
+what is the meaning of this later on you just simply take it that ok, this is the syntax that
+you have to follow while you writing the paint methods. So, paint and then this argument
+also you have to mention. So, here we declare one method called the paint method and
+this method in order to display on screen use this kind of syntax:
+
+g.drawstring().
+
+So,
+
+this method is basically declare in graphics class; that means, this method is already
+known, you can just simply use it and this method will basically print a string on an
+applet.
+And then this location indicates that where in the applet it will print is basically 150 150
+means in the Cartesian location coordinate x location and y location. So, that if the applet
+is a 1000 by 1000 right, if it is a 1000 cross 1000 pixel, then is 150 and 150. So, here the
+g dot string will be displayed so, this is a concept here. So, this is basically simple one
+applet you can write that will display one string hello world on the applet.
+Now, let us see how to run these applet how to of course, editing is editor come editor
+say Notepad ++ and then how this can be edit in shape and then compile and finally, it
+can be executed.
+
+(Refer Slide Time: 09:43)
+
+Now, the name of the applet should be same, as the convention that we have already
+used while you are saving this program as the same as the name of the class here, the
+name of the class is hello world. So, name of the file where you should save this program
+is helloworld.java.
+(Refer Slide Time: 10:15)
+
+So, you can save this program as hello world dot Java file and; obviously, in your
+working directory you can save it and then compilation, we have used Javac compiler to
+compile Java application the same is also valid for here, to compile a Java applet you use
+
+the Javac command. So, and then you write Javac the name of the file that, you want to
+compile hello world dot Java in this case. So, it will compile these Java file into class
+file.
+(Refer Slide Time: 10:43)
+
+So, it will create a class file, the name of the class file will be same as the name of the
+file in Java except the extension dot class. It is a same as in case of application that we
+have learned.
+(Refer Slide Time: 10:55)
+
+Now, I will come to the discussion of running I mean how to execute this class file. Here
+is the difference from the application to the applet running, in case of applet, in case of
+application we use Java command is basically interpreter which basically executive your
+program, but in this case Java we cannot use it, whether we can use applet viewer instead
+of Java we should use applet viewer.
+But applet viewer can run only an HTML file, this means that the class file that you have
+created should be stored in an HTML file. Now, here is a typical look of an HTML file I
+do not know whether you know about the HTML file and then HTML tags and
+everything. But, if you do not know absolutely it is not is a matter of concern, you will
+learn it shortly once you learn many other applets and then run it then. There is a basic
+syntax that you should follow basic structure that you should follow in order to embed
+your class file into an HTML file.
+And here is basically the HTML file look like. So, this is the beginning of the tag this is
+the ending of the tag as HTML construct is there, these are body; that means, this is a
+body of the HTML and here is the syntax that you should follow to MBT or dot class
+file. So, applet code and then hello world dot class, this is the file that you have created I
+mean compiled by writing your Java applet program.
+And this is the concept that how large the applet you want to display. So, it is 300 300
+indicates that if your total screen size is 1000 by 1000, then out of this 1000 by 1000 on
+the portion 300 by 300 will take to view your applet, I mean display your applet on your
+computer screen. So, 300 by 300 is the size of the applets that will be displayed.
+So, you have to write an HTML file and then write this code in the HTML file and save
+this program. Now, while you are saving this program, you can give a name of the file
+for this HTML, the name of that HTML file can be anything name of the file can be
+anything, but the extension should be HTML. So, here basically this is the applet
+embedded in an HTML file and then let us give the same name as the program file name
+that is means hello world, but in this case I have given the name for example, hello Java.
+So, in this case the name of the program is given as hello Java dot HTML.
+
+(Refer Slide Time: 13:28)
+
+Now, you can note that the name of the class is hello world, but I have given the
+different name it is ok, even you can give x.HTML, a b c dot HTML team dot HTML
+any name. So, here it is not necessary to maintain the same name as the file name and
+then class name not necessary, you can make any name, but the extension should be dot
+html. So, that HTML can be browsed by any browser. So, once you save this program as
+an HTML file, then you are ready to run this program; then you are ready to run this
+program.
+(Refer Slide Time: 14:38)
+
+I told you in order to run this program, you should use applet viewer. So, use the applet
+viewer as a command and then you just run the program as an applet viewer.
+(Refer Slide Time: 14:51)
+
+So, here is the command is that applet viewer and then this is the name of the file that
+you have created say for example, hello Java dot HTML.
+So, here for example, hello world these are name of the HTML file. So, if you write it
+then this file will be executed on execution, you can see the output on execution you can
+see the output.
+(Refer Slide Time: 15:26)
+
+The output will look like this. So, hello world this is the string that it will print here and
+this is the 300 cross 300 size and, this is a location (150, 150) of the point, where it will
+start painting the text. So, you have learn about how a simple applet can be created and
+then the same can be executed.
+So, I should advise you to test the kind of applet programming as a first experience how
+to write the program. And there are many more things are involved while you are writing
+applet programming, I will just try to give I mention few important things here, many
+more things will be discussed, when will discuss applet in details. So, writing an applet
+needs lot of many other I mean exposure to many more things. So, it will take it is own
+time and we will learn it slowly, before going to learn many more details about the
+applet, I just want to have a brief overview about how what are the structure of an applet
+in general.
+(Refer Slide Time: 16:48)
+
+So, typically the structure that we have learnt so, far is basically writing a program in
+Java syntax. So, essentially while you are dealing with applet programming so, three
+things are there. So, the first thing is your program that you should write following some
+Java syntax and, then program will look like this.
+And then second thing that you have to embed the program using an HTML file which
+look like this form. So, these are the two things are obvious state that you have to follow.
+And then running this kind of things using an applet viewer and this will look like this
+
+output. So, these are the three things. So, far the Java applet programming is concerned
+the basic steps that you should follow.
+(Refer Slide Time: 17:52)
+
+Now, apart from this basic steps there are many more things involved, while you have to
+develop your Java applet. And then basically the how a complete Java program Java
+applet you look like this. Is basically many more things are involved there I just want to
+highlight the important things that is there. So, while you write a Java applets the first
+thing that you should write the input, as I told you in our program that we have
+experienced now. So, there basically import Java dot applet dot applet class and then
+Java dot awt dot graphic class these are the things like. So, it is there import section you
+have to mention what are the things that you have to import it.
+And I wants the input is there then main body of the applet class, as a main body first we
+have to start with the naming of the applet so, that name you have to give one name of
+your own. And these are the things that you have to always fix public class always you
+have to give it, there is no other thing that you can write if you do not write then there
+will be compilation error. So, without any hesitation you just right that public class and
+then give the name of your class and, then your class should extends the applet so, this is
+also another extends.
+So, this is your own and this is the standard that you have to follow always and, then
+what about the code that you want to use in your program, you should write within the
+
+starting and then closing brackets. So, these are the second part I can say. And then
+within this part they are may required some variable to declare. So, if you need some
+variable that is required in your applet programming, then you define all these things
+here. And then the different methods that is required to build your applet should mention
+their. So, there are all together four parts, that you have to think about while you are
+writing applet in java.
+So, regarding the different parts we will discuss one by one, but in todays lecture we will
+try to discuss about basic things and mainly what are the different methods that can be
+there, here I want to mention again one thing is that any method should not be included
+there, there are certain free defined methods, you can only use them. However, the
+methods you can fill them that mean methods are fixed, but they are body you can write
+with some codes that is required for your applet.
+(Refer Slide Time: 20:29)
+
+So, these are the things are there now, let see what are the different methods are there in
+this applet programming obviously, the method that we have discussed already with our
+own applets, has only one method the name of the method is paint. So, this method is
+there you cannot change the name of this method, in any way you cannot write any other
+method of your own name there. So, this is a fix method that you have to use it the paint
+with. Other than this paint method there are few more methods are there, which needs to
+
+be written in your program Java applet the methods are called here for example, we have
+listed the three methods one is init, another is start and then stop.
+(Refer Slide Time: 21:02)
+
+And there is another 2 methods are there, we will discuss about destroy and then paint.
+(Refer Slide Time: 21:19)
+
+So, all together only 5 methods those you can use in your applet. So, five methods have
+their own meaning, the start method is basically to start running an applet, sometimes we
+have to control applet view. So, in that case if you want to control then you start,
+
+sometimes you have to also close the applet which are there in one program you can use
+3 4 applets.
+So, sometime we have start one applet close another and like this. So, in that case you
+use start and close stop method and then paint method already you have used it if you
+want to draw something on the applet area, then you call the paint method and the in the
+body you can write anything like. And destroy method if you want to remove an applet
+from your program. So, you can use the destroy method while they are running. So,
+destroy will kill the applet view forever in a program execution. So, these are the
+different methods are there and, I will just highlights or explain one method call the init
+method.
+(Refer Slide Time: 22:28)
+
+So, let us see the init method how it can be reconfigured in your applet programming.
+Now, here let us look at the low code these are import section already we have learned
+about it. And then this is the name of the applet called hello world and in our earlier
+program this code was not there. Now, I want to use this code where this code this part
+of the code already it was there. So, it is fine now let us see what is the [imp/impact]
+impact of this code so, here basically init one method I have called these basically call
+another method resize is a one method which is defined in awt it is already there.
+So, this resize method I call an 200 200 what is the idea about is that. So, whatever the
+applet size if you mention in your HTML, you can note that in HTML we use usually
+
+what should be the size of your applet view say 300 300, but after the CPU call and init
+method with resize as 200 * 200. So, an applet size will be automatically resize to 200 *
+200 view there. So, so idea about resize command is there. Now, let see the output if you
+use resize through init method and if you do not use it how it will work for you.
+(Refer Slide Time: 23:59)
+
+So, here is the method the view without any resize. So, this is the program this is the
+applet the 300 and 300s are default size that we have mentioned and then the output will
+look like this. So, here basically 300 by 300 is the applet without any resize.
+But, if you use the resize method that mean these code is used and again you use the
+applet, this is the HTML file, then the applet that will appear with the smaller size. So,
+resize is basically will allow a programmer to control the size of the applet as it is there.
+So, this is one example of resize in init method use of init method, there is another one
+use of init method. So, that applet how we can given input to an applet, because while
+applet is running it is a basically via HTML and then how input to an applet be given
+there. So, input to an applet if you want to give then you should give via HTML itself.
+
+(Refer Time: 25:04)
+
+So, here also the init method can be used for this purpose. Now, here let us look at the
+code of another use of init method which is basically being used here to input pass an
+input to an applet while applet is running. Now, if you see the code little bit carefully.
+So, these are the import as usual and it basically import applet and awt and dot star is
+basically another way of importing; that means, it will input everything. If you are not
+sure about which particular class is responsible for your applet program, then you can
+instead right dot start that mean all the classes will be imported into your applet program.
+In this case the name of the class that I have given is rectangle test, name of the rectangle
+and this program basically is mean for drawing a rectangle on the applet. So, for this the
+method that is required is g drawrect, it is already defined the graphics package. And
+then it will basically rate and this basically needs 4 parameter x y w h. So, idea about is
+that if this is the applet view and then x y is a coordinate; that means, from where the
+applet rectangular will start and this the w and this is a h. So, x y and this is the w and
+then h. So, this is the specification that is required. So, we have to pass the input while
+we call g.drawRect() and the four parameter that is require here x y w and h to be
+passed.
+And then we want to get the value x y w h from the applet itself. So, for this we can write
+the init method. So, this is the init method we have write it here and then code in the init
+method is there. This is a typically I mean some code it is required, here the idea it is that
+
+say there is a integer passing, it is declare it is already there in Java dot line package
+basically it will pass the value that is there in the applet and then store as an integer. So,
+this is the standard syntax in Java. And get parameter is basically get a value from the
+HTML code. So, this is a get parameter method and then that parameter where in HTML
+code, it is written as x value. So, in HTML code if there are certain parameter which is
+defined as x val ,y val, w val ,h val, they well be retrieved from the HTML file process it
+and store them as an x y w h in this case as an input to the parameter applet.
+So, this is the idea about how the input can be given to the applet. Now, let see the so this
+is the program your new applet program where it will read x y w h from the HTML file
+and then it will draw a rectangle. Now, let us see how the HTML file will be in this case.
+So, what is the change in their HTML file is there.
+(Refer Slide Time: 28:20)
+
+So, here the HTML code will be same as earlier HTML body tag and everything, only
+the code that is required here, basically applet code this is the code that needs to be
+executed and you can write the dot class also dot class. And then this is a width and
+height that you have specified that window size and here param name x val and this
+value equals to 20; that means, you want to say that this is a parameter name x value
+whose value is 20 this is a typical HTML code that occupy x value is now val 20 40 150
+for y value w value h value respectively.
+
+So, this is the HTML code that you have to write in order to pass the values, from an
+HTML to the applet code it is there. So, once these HTML code is there you run this
+code as usual using applet viewer applet viewer.
+(Refer Slide Time: 29:20)
+
+So, applet viewer can be run here and if you run this HTML code using applet viewer, it
+will display the applet look like this. So, it will draw the rectangle which x y coordinate
+with this one and w is this one and h is this one. So, applet will be drawn. Now let us run
+the same program, but we changing the deferent value. So, if you want to change the
+value definitely you have to negotiate the HTML file there.
+So, in HTML file here 20 40 150 is written, if you give the different value so, different
+rectangular will be drawn accordingly. Now, let see how the new HTML file can be with
+the new set of values and then corresponding HTML can be drawn.
+
+(Refer Slide Time: 30:03)
+
+So, here again I have rewritten the HTML file here with the different values 30 13 in this
+case and then corresponding applets will look like this. So, you can change of change,
+while you taste it and then writing the different values and then you can run by means of
+applet viewer, you will be able to see that how the different shape it is there.
+Now, if I ask you that how to in addition to the in addition to drawing a rectangle, if I
+want to print one message here that this is my rectangle, how you can do that, you do not
+have to do anything here especially only the thing that you have to use that you use in the
+paint method some other value like. So, for example, in the paint method here in the
+paint method for example, here right. If you want to draw a message on the applet so,
+what you can do is that instead of g drawrect you use g dot draw string this method and
+then you can type whatever the string that you want to do so, you just use this one.
+So, this way in the paint method you can add any methods of your own to display
+whatever the content that you want to do it. So, this is the way that the applet can be
+developed and have a basic idea about how the applet can be developed and, then you
+can execute it using a HTML. So, here our objective was to how to write applet and then
+the same can be displayed on the screen ok.
+
+(Refer Slide Time: 32:28)
+
+So, we have learn about applet now; obviously, there are I mean certain differences
+between application and applet. And as a first look they have the two different structures
+and as you see here these are structure of a usual applet look like and here is a structure
+of an applet and this is a structure of an application. And in case of application you
+should declare one class call the main class and in main method, but you can see in case
+applet there is no main method.
+Now obviously, it has implication will learn about this later on. And then so, this is the
+one important different that in case of application one class is there, which includes the
+main method, but in case of applet there is no need of main method. And another
+difference is that an application can include any user defined method; that means, user
+can give some name of the method and then use it. But, in case of applet other than some
+specific methods user cannot give any methods. So, these are the key differences
+between the two in addition to their, there are few more difference there are few more
+differences also.
+
+(Refer Slide Time: 33:44)
+
+So, other than the naming and the main class and the main methods that applets needs to
+be embedded in an HTML page try out to it is execution whereas, an application does not
+required. And so, far input output is concerned; obviously, application will allow to in
+read any input from any source, from keyboard from file or whatever it is there, but as
+you see in case of applet these kind of input is not direct input is not possible. If you
+want to give any input, then you should give all the input via an HTML file. And few
+more salient difference between the two things that applet cannot communicate to other
+applet or other browser or other machine.
+Whereas, application will be able to communicate that is; obviously, recover for network
+programming internet programming then JDBC :Java Data Base Connectivity and
+elsewhere, but applet cannot do that. And applet also cannot run any program written
+maybe in any other language or any other application from the local computer. So,
+whereas, application can do that and, applet also not able to interface with any other
+programming languages program written in any other programming languages.
+
+(Refer Slide Time: 35:18)
+
+So, these are the differences; obviously, the reasons are there why all these are the
+differences. All these are the differences because the purpose of these two programs are
+different, that is why the developer makes the differences for us and definitely all these
+questions on the answer to all these question that may why so, many restrictions in
+applets are there will be in due course of time. And then obvious another question is that
+whether we can build and application and applet together. So; obviously, what is your
+idea is that no applet and application are the two separate entity they cannot be build
+together. Anyway so, we will discuss all these things and many more other things in next
+lectures guys.
+Thank you.
+
+

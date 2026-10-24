@@ -1,0 +1,396 @@
+{
+  "lecture": 6,
+  "title": "Demonstration II (Applets)",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What command is used to run a Java applet using appletviewer?",
+      "options": {
+        "A": "java AppletName",
+        "B": "appletviewer AppletName.class",
+        "C": "appletviewer htmlfile.html",
+        "D": "javac htmlfile.html"
+      },
+      "answer": "C",
+      "explanation": "appletviewer requires the HTML file as its argument (e.g., 'appletviewer index.html'). The HTML file contains the <applet> tag that tells appletviewer which .class file to load and what dimensions to use."
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Is it necessary to recompile the Java applet after changing only the width/height in the HTML file?",
+      "options": {
+        "A": "Yes, every change requires recompilation",
+        "B": "No, only the HTML file needs to be saved; no recompilation needed",
+        "C": "Yes, but only if width is changed, not height",
+        "D": "No, but appletviewer must be restarted manually"
+      },
+      "answer": "B",
+      "explanation": "Width and height are HTML attributes stored in the .html file, not in Java bytecode. Changing them only requires editing and saving the HTML file. The .class file is unchanged, so no recompilation is needed."
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is the mandatory keyword that must appear in the class declaration of every Java applet?",
+      "options": {
+        "A": "implements",
+        "B": "extends",
+        "C": "applet",
+        "D": "override"
+      },
+      "answer": "B",
+      "explanation": "'extends Applet' is mandatory in every Java applet class declaration. The 'extends' keyword establishes the inheritance relationship with java.applet.Applet, providing the class with applet lifecycle capabilities."
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "If you modify the .java applet source code, what must you do before running appletviewer?",
+      "options": {
+        "A": "Delete the old .html file",
+        "B": "Recompile using javac to regenerate the .class file",
+        "C": "Restart the computer",
+        "D": "Run appletviewer twice"
+      },
+      "answer": "B",
+      "explanation": "appletviewer executes the compiled .class bytecode, not the .java source. After modifying the source file, you must run 'javac FileName.java' again to produce an updated .class file, otherwise appletviewer runs the old unchanged version."
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What HTML tag sets the title text shown in the appletviewer window title bar?",
+      "options": {
+        "A": "<header>",
+        "B": "<name>",
+        "C": "<title>",
+        "D": "<caption>"
+      },
+      "answer": "C",
+      "explanation": "The HTML <title> tag, placed inside <head>, sets the page title. appletviewer displays this title text in its window title bar, allowing developers to label their applet windows descriptively."
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "Can you display multiple text strings in a single applet by calling g.drawString() multiple times?",
+      "options": {
+        "A": "No — only one drawString() per paint() is allowed",
+        "B": "Yes — each call draws at its specified coordinates",
+        "C": "Only with a loop structure",
+        "D": "Only if each string uses a different Graphics object"
+      },
+      "answer": "B",
+      "explanation": "Multiple g.drawString() calls within paint() are perfectly valid and commonly used. Each call independently renders its text at the specified (x, y) coordinates, enabling complex multi-line or multi-element layouts."
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "In a basic HTML file for an applet, where is the <applet> tag typically placed?",
+      "options": {
+        "A": "Inside the <head> section",
+        "B": "Inside the <body> section",
+        "C": "Outside all tags",
+        "D": "Inside the <title> section"
+      },
+      "answer": "B",
+      "explanation": "The <applet> tag is placed inside the <body> section of the HTML file because it represents displayable content. The <head> section is for metadata like <title>, while the <body> contains visible page elements."
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What is the basic HTML structure needed to embed an applet named 'HelloApplet.class' with 300x200 pixel dimensions?",
+      "options": {
+        "A": "<java file=\"HelloApplet.class\" w=300 h=200>",
+        "B": "<applet code=\"HelloApplet.class\" width=300 height=200></applet>",
+        "C": "<embed java=\"HelloApplet\" size=300x200>",
+        "D": "<applet src=\"HelloApplet.class\" size=\"300,200\"></applet>"
+      },
+      "answer": "B",
+      "explanation": "The correct HTML syntax uses <applet code=\"FileName.class\" width=N height=N></applet>. The 'code' attribute must reference the .class filename, and width/height define the applet's display area dimensions."
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "Which step comes first when developing a Java applet?",
+      "options": {
+        "A": "Run appletviewer",
+        "B": "Write the HTML file",
+        "C": "Write and compile the Java source file",
+        "D": "Set CLASSPATH"
+      },
+      "answer": "C",
+      "explanation": "The development workflow is: 1) Write the Java source (.java), 2) Compile with javac to produce .class, 3) Write the HTML file referencing the .class, 4) Run appletviewer. You need the .class file before the HTML can reference it."
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What does 'extends Applet' signify syntactically in Java?",
+      "options": {
+        "A": "The class is a final class",
+        "B": "The class inherits from the Applet class",
+        "C": "The class implements the Applet interface",
+        "D": "The class creates an instance of Applet"
+      },
+      "answer": "B",
+      "explanation": "'extends Applet' declares an inheritance relationship. The new class is a subclass of java.applet.Applet, inheriting all its fields and methods. This is the required syntax to create a Java applet class."
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "A student writes an applet, compiles it successfully, creates the HTML file, but appletviewer shows a blank white window. What is the most likely cause?",
+      "options": {
+        "A": "The HTML file is missing the <body> tag",
+        "B": "The paint() method was not overridden or draws at coordinates outside the visible area",
+        "C": "The applet needs to be run as an administrator",
+        "D": "The JAVA_HOME variable is not set"
+      },
+      "answer": "B",
+      "explanation": "A blank applet window usually means either paint() was not overridden (so the default empty paint does nothing) or drawString() coordinates are outside the applet's visible boundaries. The class structure is valid, but no visible rendering occurs."
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "After running appletviewer to display an applet, what happens to the display when you minimize and then restore the appletviewer window?",
+      "options": {
+        "A": "The applet display is permanently lost",
+        "B": "paint() is called again automatically to redraw the applet content",
+        "C": "The applet must be manually refreshed with a keyboard shortcut",
+        "D": "The applet recompiles before redisplaying"
+      },
+      "answer": "B",
+      "explanation": "When a window is restored, the system sends a repaint request to the applet. The applet framework automatically calls paint() to redraw all content. This is a key feature of the applet's event-driven model."
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "In the applet development workflow, if you edit the HTML file to change only the title, what file(s) need to be updated?",
+      "options": {
+        "A": "Both .java and .html must be updated and .java recompiled",
+        "B": "Only the .html file needs to be saved",
+        "C": "Only the .class file needs to be updated",
+        "D": "The .java source must be recompiled even if only HTML changed"
+      },
+      "answer": "B",
+      "explanation": "The <title> tag is part of the HTML file only. Since Java source code is unchanged, no recompilation is needed. Simply saving the .html file with the new title is sufficient for appletviewer to show the updated title."
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "What is the effect of calling g.drawString() three times with coordinates (50,50), (50,80), and (50,110)?",
+      "options": {
+        "A": "Only the last drawString() is displayed",
+        "B": "All three strings are displayed stacked vertically at x=50",
+        "C": "A compilation error occurs for duplicate coordinates",
+        "D": "The strings overlap each other at (50,50)"
+      },
+      "answer": "B",
+      "explanation": "Each drawString() call is independent. Using x=50 and incrementing y by 30 each time (50, 80, 110) positions each string 30 pixels below the previous one, creating a vertical list of text at horizontal position x=50."
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "What is the difference between running an applet with 'appletviewer' versus running an application with 'java'?",
+      "options": {
+        "A": "appletviewer is faster; java is slower",
+        "B": "appletviewer reads an HTML file and provides an applet container; java reads a class name and calls main()",
+        "C": "They are identical; either can run both applets and applications",
+        "D": "appletviewer only works on Windows; java works on all platforms"
+      },
+      "answer": "B",
+      "explanation": "appletviewer is an applet container that parses an HTML file, finds <applet> tags, loads the .class file, and manages the applet lifecycle (init, start, paint). The 'java' command is an application launcher that finds the specified class and invokes its main() method."
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "What would happen if you use 'java HelloApplet' to try to run an applet class?",
+      "options": {
+        "A": "The applet runs successfully",
+        "B": "An error occurs because HelloApplet has no main() method",
+        "C": "The applet renders in a terminal window",
+        "D": "Java automatically detects it is an applet and switches to appletviewer"
+      },
+      "answer": "B",
+      "explanation": "The 'java' command launches applications by calling main(). Since an applet class typically has no main() method, the JVM reports an error: 'Main method not found in class HelloApplet'. The applet must be run through appletviewer or a browser."
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "In the applet demonstration, to display text 'NPTEL Java' at position (100, 50) and 'IIT Kharagpur' at (100, 80), which code is correct?",
+      "options": {
+        "A": "g.drawString(\"NPTEL Java\" + \"IIT Kharagpur\", 100, 50);",
+        "B": "g.drawString(\"NPTEL Java\", 100, 50); g.drawString(\"IIT Kharagpur\", 100, 80);",
+        "C": "g.drawString(\"NPTEL Java\", 100, 50, \"IIT Kharagpur\", 100, 80);",
+        "D": "g.print(\"NPTEL Java\", 100, 50); g.print(\"IIT Kharagpur\", 100, 80);"
+      },
+      "answer": "B",
+      "explanation": "Two separate g.drawString() calls are needed, each with its own text and coordinates. The first places 'NPTEL Java' at y=50 and the second places 'IIT Kharagpur' at y=80, 30 pixels below the first string."
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "During the Lecture 6 demonstration, the appletviewer window title matches the HTML <title> tag. What does this imply about appletviewer's behavior?",
+      "options": {
+        "A": "appletviewer parses and uses the HTML content, including the <title> tag",
+        "B": "appletviewer reads the Java source file for the title",
+        "C": "appletviewer generates a default title from the class name",
+        "D": "The operating system sets the window title automatically"
+      },
+      "answer": "A",
+      "explanation": "appletviewer parses the HTML file to extract applet configuration, and it also uses the HTML <title> element as the window title. This demonstrates that appletviewer processes the full HTML structure, not just the <applet> tag."
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What is the correct file extension for the HTML file used with appletviewer?",
+      "options": {
+        "A": ".applet",
+        "B": ".java",
+        "C": ".html or .htm",
+        "D": ".xml"
+      },
+      "answer": "C",
+      "explanation": "The HTML file used with appletviewer should have the .html or .htm extension. It is a standard HTML file containing the <applet> tag. appletviewer is passed this HTML filename as its argument."
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "In applet development, what is the relationship between the .java file, .class file, and .html file?",
+      "options": {
+        "A": ".java imports .html; .html imports .class",
+        "B": ".java is compiled to .class; .html references .class to embed and run the applet",
+        "C": ".html is compiled with .java; .class is a documentation file",
+        "D": "All three files are identical in function but different in format"
+      },
+      "answer": "B",
+      "explanation": "The workflow chain is: .java (source) is compiled by javac → .class (bytecode). The .html file contains an <applet code=\"Name.class\" ...> tag that tells appletviewer/browser which .class to load and execute. The three files serve distinct purposes in the development pipeline."
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "A developer modifies the applet source to add color (g.setColor(Color.RED)) but forgets to import java.awt.Color. The original code used only g.drawString(). What happens?",
+      "options": {
+        "A": "Compilation succeeds because java.awt is auto-imported",
+        "B": "Compilation fails with 'cannot find symbol: class Color'",
+        "C": "The color defaults to red without importing Color",
+        "D": "Runtime exception when paint() is called"
+      },
+      "answer": "B",
+      "explanation": "java.awt.Color is not auto-imported. Although java.awt.Graphics is imported (needed for the paint method parameter), the Color class is a separate class requiring its own import. Without 'import java.awt.Color;', the compiler cannot resolve the Color symbol."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Why does appletviewer open the HTML file rather than the .class file directly?",
+      "options": {
+        "A": "appletviewer cannot read binary .class files",
+        "B": "The HTML file provides configuration (dimensions, parameters) that appletviewer needs to set up the applet container properly",
+        "C": "It is a historical design flaw in the JDK",
+        "D": "The .class file does not contain the applet's class name"
+      },
+      "answer": "B",
+      "explanation": "The HTML <applet> tag contains essential configuration: the class file name, display width and height, optional <param> tags for parameters, and other attributes. appletviewer needs this metadata to create the correct-sized container and pass the right parameters to the applet."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "An applet draws text using g.drawString() in paint(). A user resizes the appletviewer window to be smaller than the text coordinates. What is the behavior?",
+      "options": {
+        "A": "An ArrayIndexOutOfBoundsException is thrown",
+        "B": "The text outside the new boundaries is clipped (not visible)",
+        "C": "The text automatically rescales to fit the new size",
+        "D": "The applet crashes and the window closes"
+      },
+      "answer": "B",
+      "explanation": "Java's graphics system applies a clipping region to the paint context. Only content within the visible window bounds is rendered. Text whose coordinates fall outside the current window size is simply clipped without errors, and no exception is thrown."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "In the applet demonstration, what is the exact sequence of steps for the full applet development cycle?",
+      "options": {
+        "A": "Write HTML → Write Java → Compile → Run appletviewer",
+        "B": "Write Java → Run appletviewer → Write HTML → Compile",
+        "C": "Write Java source → Compile with javac → Write HTML with <applet> tag → Run appletviewer html",
+        "D": "Compile Java → Write HTML → Write Java → Run appletviewer"
+      },
+      "answer": "C",
+      "explanation": "The correct sequence is: 1) Write the Java applet source (.java), 2) Compile with javac to produce .class, 3) Write the HTML file containing the <applet> tag referencing the .class, 4) Run 'appletviewer htmlfile.html'. The .class must exist before the HTML can successfully reference it."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "If an applet class is defined in a package (e.g., 'package demo;'), how must the HTML <applet> tag's code attribute be written?",
+      "options": {
+        "A": "code=\"AppletName.class\"",
+        "B": "code=\"demo.AppletName\"",
+        "C": "code=\"demo/AppletName.class\"",
+        "D": "code=\"demo.AppletName.class\""
+      },
+      "answer": "D",
+      "explanation": "When an applet is in a package, the 'code' attribute uses the fully qualified class name with the .class extension, using dots as separators: code=\"demo.AppletName.class\". The appletviewer/browser resolves this to the correct directory path."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "What is the significance of the applet lifecycle method init() compared to using the constructor for initialization?",
+      "options": {
+        "A": "init() and the constructor are identical in applets",
+        "B": "init() is called after the applet is fully embedded in its container with a valid graphics context; the constructor may be called before the container is ready",
+        "C": "The constructor is never called in applets",
+        "D": "init() is called every time the applet repaints"
+      },
+      "answer": "B",
+      "explanation": "The applet container calls init() once after the applet object is constructed and fully inserted into the container with a valid AWT component hierarchy. Using init() ensures that methods requiring an active container (like getParameter(), getSize()) work correctly. In the constructor, the applet may not yet be attached to its container."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Why does modifying applet display logic require recompilation, but changing applet display size in HTML does not?",
+      "options": {
+        "A": "Applet display logic is compiled into bytecode; HTML attributes are read at load time by appletviewer",
+        "B": "HTML files are compiled by the browser",
+        "C": "Display logic is stored in the .html file",
+        "D": "appletviewer ignores the width/height attributes"
+      },
+      "answer": "A",
+      "explanation": "Applet display logic (what and where to draw) is encoded in Java bytecode (.class file) and only updated by recompilation. Width/height are HTML attributes that appletviewer reads and interprets at runtime to size the container window. The two pieces of information live in different files with different update requirements."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "A developer runs 'appletviewer test.html' but gets an error saying the applet class was not found. The .java was compiled successfully. What is the most likely cause?",
+      "options": {
+        "A": "The .html file has a syntax error in the <body> tag",
+        "B": "The 'code' attribute in <applet> does not match the actual .class filename",
+        "C": "appletviewer does not support Java 8",
+        "D": "The JAVA_HOME variable is not set"
+      },
+      "answer": "B",
+      "explanation": "If appletviewer cannot find the class, the most common cause is a mismatch between the 'code' attribute value in the HTML and the actual .class filename. Both are case-sensitive. For example, code=\"helloapplet.class\" when the file is HelloApplet.class will fail."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "How does the applet repaint mechanism differ from how a Java application refreshes its console output?",
+      "options": {
+        "A": "Both use System.out.println() to refresh",
+        "B": "Applets use an event-driven repaint() / paint() cycle triggered by the container; applications actively push output to System.out when they choose to",
+        "C": "Applications use paint(); applets use println()",
+        "D": "They are identical; both use the same refresh mechanism"
+      },
+      "answer": "B",
+      "explanation": "Applet rendering is event-driven: the container triggers repaint events (on window expose, resize, etc.) which schedule paint() calls. The applet reacts to these events. Console applications push output imperatively with System.out.println() whenever the code reaches that statement — they are not event-driven."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "What would happen if two different HTML files both reference the same 'Hello.class' applet but with different width and height values?",
+      "options": {
+        "A": "A conflict error occurs and neither applet runs",
+        "B": "Each HTML file creates its own applet instance with its own specified dimensions",
+        "C": "The applet uses the dimensions from the first HTML file loaded",
+        "D": "The .class file must be modified for each dimension change"
+      },
+      "answer": "B",
+      "explanation": "Each <applet> tag creates a separate applet instance. When appletviewer (or a browser) processes each HTML file independently, it creates a separate container with the dimensions specified in that file's <applet> tag. The same .class file can be instantiated multiple times with different configurations."
+    }
+  ]
+}

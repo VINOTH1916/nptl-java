@@ -1,0 +1,396 @@
+{
+  "lecture": 14,
+  "title": "Demonstration VI (Inheritance Demo)",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What keyword is used to call a superclass method from within a subclass?",
+      "options": {
+        "A": "this",
+        "B": "super",
+        "C": "parent",
+        "D": "base"
+      },
+      "answer": "B",
+      "explanation": "'super' is the keyword used to reference the superclass. 'super.methodName()' calls the superclass version of an overridden method, and 'super()' calls the superclass constructor. It is used in subclasses to access hidden or overridden superclass members."
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What does 'super()' do when placed in a subclass constructor?",
+      "options": {
+        "A": "Creates a new superclass object",
+        "B": "Calls the superclass constructor to initialize the inherited fields",
+        "C": "Returns the superclass reference",
+        "D": "Overrides the superclass constructor"
+      },
+      "answer": "B",
+      "explanation": "super() in a subclass constructor invokes the superclass constructor. This is used for constructor chaining to ensure the superclass portion of the object is properly initialized. super() must be the first statement in the subclass constructor."
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What does the 'final' keyword mean when applied to a class?",
+      "options": {
+        "A": "The class cannot have any methods",
+        "B": "The class cannot be subclassed (no inheritance from it)",
+        "C": "The class can only be used once",
+        "D": "The class cannot have constructors"
+      },
+      "answer": "B",
+      "explanation": "A 'final' class cannot be extended. No class can use 'extends FinalClass'. This is used when a class's implementation should not be modified through inheritance (e.g., java.lang.String is a final class)."
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What does the 'final' keyword mean when applied to a method?",
+      "options": {
+        "A": "The method always executes last",
+        "B": "The method cannot be overridden in subclasses",
+        "C": "The method has a fixed return value",
+        "D": "The method can only be called once"
+      },
+      "answer": "B",
+      "explanation": "A 'final' method cannot be overridden by subclasses. The superclass version is the definitive implementation. This is used to prevent subclasses from changing critical behavior. For example, a security validation method might be final to prevent bypass."
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "In the lecture, if class A has fields i and j, and class B extends A, can a B object call A's showIJ() method?",
+      "options": {
+        "A": "No — A's methods are private to A",
+        "B": "Yes — B inherits public/protected methods from A",
+        "C": "Only if B redeclares showIJ()",
+        "D": "Only if A is in the same file as B"
+      },
+      "answer": "B",
+      "explanation": "B inherits all public and protected methods from A, including showIJ(). A B object can call subOb.showIJ() even though showIJ() is defined in A. This is the primary benefit of inheritance — reusing superclass methods without redefining them."
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What is method overriding in the context of the Lecture 14 demonstration?",
+      "options": {
+        "A": "Defining a new method in the subclass",
+        "B": "The subclass defines a method with the same name and signature as a superclass method",
+        "C": "Calling a superclass method",
+        "D": "Using the 'override' keyword"
+      },
+      "answer": "B",
+      "explanation": "Method overriding occurs when a subclass provides its own implementation of a method that the superclass already defines, using the same method signature. The subclass version replaces the superclass version for objects of the subclass type."
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "Can you create an object directly from an abstract class?",
+      "options": {
+        "A": "Yes — abstract classes are just regular classes with some methods",
+        "B": "No — abstract classes cannot be instantiated with 'new'",
+        "C": "Yes, but only if all abstract methods are static",
+        "D": "Only if the abstract class has a constructor"
+      },
+      "answer": "B",
+      "explanation": "An abstract class cannot be instantiated. 'new AbstractClass()' causes a compilation error: 'AbstractClass is abstract; cannot be instantiated'. An abstract class is designed to be a superclass only — you must create objects of concrete subclasses."
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "In the lecture, subclass object 'subOb' can access inherited methods from superclass A. What does this demonstrate?",
+      "options": {
+        "A": "Method overloading",
+        "B": "Inheritance — the subclass object has access to the superclass's public/protected methods",
+        "C": "Encapsulation",
+        "D": "Interface implementation"
+      },
+      "answer": "B",
+      "explanation": "The demonstration shows that a subclass object can call methods defined in the superclass without those methods being redefined in the subclass. This is the core feature of inheritance — subclass objects contain all superclass members."
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What is constructor chaining in the context of inheritance?",
+      "options": {
+        "A": "Calling multiple constructors within the same class",
+        "B": "Subclass constructor calling superclass constructor using super()",
+        "C": "Calling constructors from a static method",
+        "D": "Using constructors without the 'new' keyword"
+      },
+      "answer": "B",
+      "explanation": "Constructor chaining in inheritance means the subclass constructor uses 'super(args)' to invoke the superclass constructor. This ensures the superclass portion of the object is initialized before the subclass-specific initialization runs."
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "Can a superclass object and a subclass object be created independently?",
+      "options": {
+        "A": "No — creating a subclass object automatically creates a superclass object",
+        "B": "Yes — they are independent; each can be created with 'new'",
+        "C": "Only if the superclass is not abstract",
+        "D": "Only if both are in the same file"
+      },
+      "answer": "B",
+      "explanation": "You can independently create objects of both the superclass and subclass (assuming neither is abstract). 'A superOb = new A()' and 'B subOb = new B()' create separate, independent objects. The subclass object contains superclass fields, but they are distinct objects."
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "In class B extends A, both have method 'show()'. How does B's show() call A's show() in addition to its own behavior?",
+      "options": {
+        "A": "A.show()",
+        "B": "super.show()",
+        "C": "parent.show()",
+        "D": "this.show()"
+      },
+      "answer": "B",
+      "explanation": "'super.show()' inside B's show() method explicitly calls the superclass A's version of show(). This is commonly used to extend (rather than replace) superclass behavior: call super's version first, then add subclass-specific behavior."
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "What happens if super() is NOT the first statement in a subclass constructor?",
+      "options": {
+        "A": "The compiler inserts super() at the beginning automatically",
+        "B": "Compilation error — super() or this() must be the first statement in a constructor",
+        "C": "super() is called after all other statements",
+        "D": "The superclass constructor is skipped"
+      },
+      "answer": "B",
+      "explanation": "Java requires super() or this() to be the FIRST statement in a constructor. Placing other code before super() causes a compilation error: 'call to super must be first statement in constructor'. This ensures superclass initialization always happens before subclass initialization."
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "In the demo, abstract class 'Geometry' has abstract method 'area()'. Class 'Rectangle' extends Geometry. What must Rectangle do?",
+      "options": {
+        "A": "Nothing — abstract methods are optional to implement",
+        "B": "Rectangle must provide a concrete implementation of area()",
+        "C": "Rectangle must also be declared abstract",
+        "D": "Rectangle must call Geometry.area() using super"
+      },
+      "answer": "B",
+      "explanation": "Rectangle is a concrete (non-abstract) class extending abstract class Geometry. It must implement all abstract methods, including area(). If it doesn't, Rectangle itself must be declared abstract, preventing its instantiation."
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "What is the difference between method overriding and using super.methodName()?",
+      "options": {
+        "A": "They are identical",
+        "B": "Overriding replaces the superclass behavior; super.methodName() calls the superclass version from within the override",
+        "C": "super.methodName() overrides; overriding calls super",
+        "D": "super.methodName() is only for constructors"
+      },
+      "answer": "B",
+      "explanation": "Overriding means the subclass completely replaces the superclass method implementation for its objects. super.methodName() is used INSIDE the overriding method to additionally invoke the superclass version, allowing the override to extend (rather than fully replace) the superclass behavior."
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "If 'final class String' in Java cannot be extended, what happens if you write 'class MyString extends String'?",
+      "options": {
+        "A": "MyString extends String with all its methods",
+        "B": "Compilation error: cannot inherit from final class String",
+        "C": "Runtime error when MyString is instantiated",
+        "D": "MyString becomes a new String type"
+      },
+      "answer": "B",
+      "explanation": "The 'final' modifier on String prevents any class from extending it. 'class MyString extends String' causes a compilation error: 'cannot inherit from final String'. This is intentional — String's immutability and behavior should not be altered by subclasses."
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "In the lecture demo, class B extends A (which has int i, int j and showIJ()). B adds int k and showK(). What members does a B object have?",
+      "options": {
+        "A": "Only k and showK()",
+        "B": "i, j, k, showIJ(), and showK()",
+        "C": "i, j, k, and showIJ() only",
+        "D": "Only the members explicitly declared in B"
+      },
+      "answer": "B",
+      "explanation": "Inheritance means B acquires all accessible members from A (i, j, showIJ()) plus B's own members (k, showK()). A B object has the full complement: fields i, j, k and methods showIJ(), showK()."
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Can a final method still be called from a subclass?",
+      "options": {
+        "A": "No — final methods cannot be called from subclasses",
+        "B": "Yes — final only prevents overriding; the method is still inherited and callable",
+        "C": "Only through super.methodName()",
+        "D": "Only if the method is also public"
+      },
+      "answer": "B",
+      "explanation": "'final' on a method prevents overriding, NOT calling. A final public method is inherited by subclasses and can be called on subclass objects. Subclasses just cannot provide their own version — they must use the superclass's final implementation."
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "In the demonstration, what is the purpose of showing that subOb.showIJ() works for a B object?",
+      "options": {
+        "A": "To demonstrate method overloading",
+        "B": "To demonstrate that inherited methods are accessible on subclass objects without redefinition",
+        "C": "To show that showIJ is a static method",
+        "D": "To demonstrate constructor chaining"
+      },
+      "answer": "B",
+      "explanation": "The demonstration of subOb.showIJ() on a B object shows the fundamental principle of inheritance: the subclass object has access to all public and protected methods of the superclass without having to redeclare them. This is code reuse in action."
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What is the @Override annotation and when is it used?",
+      "options": {
+        "A": "Required annotation to make a method override work",
+        "B": "Optional annotation that asks the compiler to verify the method actually overrides a superclass method",
+        "C": "An import from a special package",
+        "D": "Used to mark methods that cannot be overridden"
+      },
+      "answer": "B",
+      "explanation": "@Override is an optional annotation that signals the compiler: 'I intend this to override a superclass method.' If the method signature doesn't match any superclass method, the compiler reports an error. It helps catch typos (e.g., 'tostring' instead of 'toString') that would create a new method rather than overriding."
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "How does the 'super' keyword differ from 'this' in a subclass?",
+      "options": {
+        "A": "They are identical keywords",
+        "B": "'this' refers to the current object; 'super' refers to the superclass portion of the current object",
+        "C": "'this' is for fields; 'super' is for methods",
+        "D": "'super' creates a new superclass object; 'this' doesn't"
+      },
+      "answer": "B",
+      "explanation": "'this' is a reference to the current object (all fields and methods of the actual class). 'super' is a reference to the superclass portion of the current object — it is not a separate object, but rather a way to access superclass members that might be hidden or overridden."
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "In class B extends A, B overrides show(). Inside B's show(), 'super.show()' is called. If a C extends B (without overriding show()) and c.show() is called, what happens?",
+      "options": {
+        "A": "A's show() is called only",
+        "B": "B's show() is called (which also calls A's via super.show())",
+        "C": "C's automatically generated show() is called",
+        "D": "Both A's and B's show() are called independently"
+      },
+      "answer": "B",
+      "explanation": "C doesn't override show(), so the JVM finds B's show() as the closest override. B's show() is invoked, which internally calls A's show() via super.show(). The result: A's behavior then B's additional behavior, both executed."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "What is the output of: class A { void show() { System.out.print('A'); } } class B extends A { void show() { super.show(); System.out.print('B'); } } B b = new B(); b.show();",
+      "options": {
+        "A": "B",
+        "B": "A",
+        "C": "AB",
+        "D": "BA"
+      },
+      "answer": "C",
+      "explanation": "B's show() calls super.show() first (prints 'A'), then executes its own code (prints 'B'). The combined output is 'AB'. This demonstrates the common pattern of extending superclass behavior using super in overriding methods."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "A class declares 'final int MAX = 100;'. What does this mean?",
+      "options": {
+        "A": "MAX can only be used 100 times",
+        "B": "MAX is a constant — its value cannot be changed after initialization",
+        "C": "MAX is a final method named 100",
+        "D": "The class has at most 100 methods"
+      },
+      "answer": "B",
+      "explanation": "'final' on a variable makes it a constant — it can be assigned once and never changed. 'final int MAX = 100' creates an integer constant. Any attempt to assign a new value to MAX (e.g., MAX = 200) causes a compilation error: 'cannot assign a value to final variable MAX'."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "In constructor chaining with super(), if the superclass has 'A(int x) { this.x = x; }', how should the subclass B constructor properly call it?",
+      "options": {
+        "A": "A(x);",
+        "B": "super(x); as the first statement in B's constructor",
+        "C": "super.A(x);",
+        "D": "new A(x);"
+      },
+      "answer": "B",
+      "explanation": "'super(x);' as the FIRST statement in B's constructor calls A's parameterized constructor, passing x. This is proper constructor chaining. Any other position causes a compile error. 'new A(x)' creates a separate A object, not what's needed."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "What is the key semantic difference between 'final class', 'final method', and 'final variable' in Java?",
+      "options": {
+        "A": "All three mean the same thing: cannot change",
+        "B": "final class: cannot be subclassed; final method: cannot be overridden; final variable: cannot be reassigned",
+        "C": "final class: fastest execution; final method: no parameters; final variable: read-only at runtime only",
+        "D": "final applies only to classes; for methods and variables, 'constant' is used"
+      },
+      "answer": "B",
+      "explanation": "The 'final' keyword has context-dependent meaning: for classes it prevents inheritance, for methods it prevents overriding in subclasses, and for variables/fields it prevents reassignment after the initial value is set. All three forms provide different kinds of immutability guarantees."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "When a subclass B constructor calls super(), and A's constructor also calls its own superclass constructor, what is the order of execution?",
+      "options": {
+        "A": "B's constructor body first, then A's constructor",
+        "B": "Root superclass (Object) constructor first, then down the chain to B's constructor body",
+        "C": "All constructors execute in parallel",
+        "D": "Determined by the order classes are defined"
+      },
+      "answer": "B",
+      "explanation": "Constructor execution follows a top-down order in the hierarchy. super() in B calls A's constructor; A's constructor calls Object's constructor (always first). Object's constructor completes, then A's body executes, then B's body executes. This ensures the most foundational (Object) initialization happens first."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "In the demo, why can't you use 'super' to access a superclass's private field?",
+      "options": {
+        "A": "super can only access methods, not fields",
+        "B": "private fields are only accessible within the declaring class; super doesn't bypass access control",
+        "C": "super is a runtime construct that doesn't know about field visibility",
+        "D": "private fields are deleted before subclasses can access them"
+      },
+      "answer": "B",
+      "explanation": "'super' gives access to superclass members, but still respects Java's access control rules. Private fields/methods are not accessible outside their declaring class — even via super. To access private superclass state from a subclass, you must use public/protected accessor methods."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "What is the purpose of making a class abstract with some concrete methods?",
+      "options": {
+        "A": "To prevent all methods from being called",
+        "B": "To provide a template with shared implementation for some methods while requiring subclasses to implement the abstract behavior",
+        "C": "To make the class available in multiple packages",
+        "D": "Concrete methods in abstract classes are ignored by the compiler"
+      },
+      "answer": "B",
+      "explanation": "An abstract class with concrete methods provides a 'Template Method' pattern: shared logic is implemented once in the abstract class (concrete methods), while varying behavior is declared abstract for subclasses to implement. Subclasses get the shared code for free and only implement what's unique to them."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Why would you mark a method as 'final' inside a non-final class?",
+      "options": {
+        "A": "To make the method run faster",
+        "B": "To prevent subclasses from overriding that specific method while still allowing the class to be subclassed",
+        "C": "To make the method static",
+        "D": "To allow the method to be called without an object"
+      },
+      "answer": "B",
+      "explanation": "Marking a specific method as final while keeping the class non-final allows selective immutability: the class can be extended (subclassed), but that particular method cannot be overridden. This is useful for ensuring a critical algorithm (like an authentication check) always runs as written, even in subclasses."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "In Java, can you override a method and change its return type to a subtype of the original return type?",
+      "options": {
+        "A": "No — the return type must be exactly the same",
+        "B": "Yes — this is called covariant return type (Java 5+); you can return a more specific type",
+        "C": "Yes, but only if the method is abstract",
+        "D": "Only if the override also changes the method parameters"
+      },
+      "answer": "B",
+      "explanation": "Java 5 introduced covariant return types: an overriding method can declare a return type that is a subtype of the superclass method's return type. For example, if super returns Animal, the override can return Dog (a subtype of Animal). This allows more specific return types in subclasses without losing polymorphic compatibility."
+    }
+  ]
+}

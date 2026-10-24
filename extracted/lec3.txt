@@ -1,0 +1,504 @@
+Programming In Java
+Prof. Debasis Samanta
+Department of Computer Science Engineering
+Indian Institute of Technology, Kharagpur
+Lecture – 03
+Java Tools and Resources
+So, we have learned about a very basic things about the Java in the last two lectures.
+Now, we will see exactly what are the tools and resources that you should have in your
+own custody so that you can develop your own program brand your own program, test
+your own program and all these things. So, today’s lecture includes what are the Tools
+and Resources that you can think. So, that you can use in and then you can prepare your
+programming environment.
+(Refer Slide Time: 00:53)
+
+So, Java programming tools first I would like to discuss about it. Now, one very
+interesting thing about is that everything is free; that means, Java tools those are freely
+available, you can download it from the net and then you can use it.
+So, what the thing it is required is that you should have your own machine a laptop,
+whether it is windows it is Macintosh or it is Solaris absolutely it is not an issue you just
+have it. And then you can download the program from the different links. So, I will tell
+you the different links that is available, and then we can use it. So, basically the JDK;
+once I told you the JDK is called the Java development kit. This is the basic building
+
+what is called the blocks, or basic building tools basically we can load it. And once you
+load it you can install it.
+So, JDK can be load directly from the Java source, JavaSoft you just simply in the
+Google give you the index JDK. And then you can find lot of links and there are free
+links all that means they are freely downloadable. And so, far the JDK is concerned there
+are many versions one is called the SDK version and JDK version.
+I should not suggest you to download the SDK, SDK is for the advanced programmer it
+is called the super development kit, who there are many features unnecessarily make
+your system slow so, better not to use it. And so, far the JDK is concerned which was
+introduced in 1996 first time, after that lot of versions are available till time. The latest
+version that you can have 11, but for beginners the basic programmers right you should
+use the JDK version 8, JDK version eight is most versatile most matured and then it is
+easy to use. So, I should suggest you to download the JDK version 8 in your machine
+and then install the same in your machine.
+(Refer Slide Time: 02:54)
+
+So, this will completes the Java software for your working that is all. Now, next let us
+see what the things there in your JDK tool. JDK is a basically a bundle; that means, it
+contains many programs. Now, here I have listed the programs those are there in JDK, I
+can say the JDK or SDK there are both are the things are same so, there in fact seven
+programs.
+
+I have already discussed about one program; that means, to how to translate a dot Java
+file into dot class file it is called the javac. So, javac is there it is basically Java compiler,
+then Java one another command we have used to run the program it is called the Java
+interpreter. So, these are the two programs very used frequently used in that is there in
+bundle in JDK. Other than this for some large program software development where we
+have to have a documentation; that means, different documentation for large software is
+required and there is a tools available for that is called the Javadoc using Javadoc you
+can do very quiet and comfortable documentation in your own program so that the
+program written by you can understand by any other programmer, who wants to extend
+your program all these things. So, in a team work if you want to do develop a program
+Java doc definitely suitable and you should know it.
+Then appletviewer is very another program and appletviewer is basically to run the Java
+applet. Regarding Java applet we will discuss about it is just like a browser program. So,
+it basically run html file actually which contains some Java code in it. So, appletviewer is
+to basically running Java applet a special kind of Java program, which is basically
+suitable for window programming, or is a graphical user interface program development.
+Then the Java debugger. So, if you have very large set of classes in your program,
+sometimes it is not giving the desired output. Then you may have to debug; that means,
+find the error where it is there. So, for this debugging the JDK provides you a very
+efficient and then handy tool set it is called the JDK this is for the Java develop Java
+debugger for fixing errors in the program. And then Java disassembler it is called the
+javap that is basically dissembling, if you want to make the program if it is very complex
+and large program into several components. So, javap will basically allow you to
+dissembling your program into small program sets and then it is also a tool that you can
+use it and then do it.
+And then javah is the one another facilities included in a JDK. And it basically help us to
+create an interface between Java and other programming particularly C routine or C++
+routine, here basically javah is used suppose some part of the program you want to
+develop in C. And then another program part you want to develop in Java. And then both
+the things are needs to be interfaced together. So, that they can work together so, in that
+case you can use javah is a facilities that is bundle there in JDK.
+
+(Refer Slide Time: 06:24)
+
+There are few more resources that you should consult while you learn this [FL]
+programming and, also attend this course and one is a very important link it is called the
+very popularly it is called the javatpoint is a tutorial point. So, it has very large set of
+examples and than illustrations and, then only the missing is that they do not discuss
+about the theory or any concept.
+They have just simply programs a sea of programs we can say, that you can download
+from this run in your environment and by the way you can learn a lot of course, but
+without knowing theory and then principle and concept learning on the program is not
+suitable. So, this is not so suitable for the beginners of course, but you can at least have
+some hands on of some programming from this source. So, it is a javatpoint and Java
+another few I mean documentation that you can download from the sum Java website
+itself.
+So, there are many documents very vast document of course, sometimes if you are to
+learn this program in a small means say maybe in 3 months or 2 months, then learning all
+those things is really not suitable. And this documentation is of course, good and is
+preferable for the advanced programmer.
+So, if you are not an advanced programmer, then all this program should not be utilized
+at the moment. Later on whenever you learn some basic things, then you can use it then
+as a run as a more advanced step.
+
+(Refer Slide Time: 08:06)
+
+And there are few more resources that is also available which you can consult, that is
+again from the sun Java website itself this is a very authenticated document actually
+there is no error in the documentation. So, is a error free documentation and then very
+professionally maintain the documentation, this is from the Java dot sun dot com is from
+the sun original websites. And there is another sun developer network is also available
+for many other resources.
+This is also from the sun Microsystems official website, where the documentation
+regarding many packages. Actually Java also the JDK includes many other packages,
+those packages are called API. Now regarding this packages this package is basically a
+library. So, if you want to know about this libraries and what are the classes are there in
+the libraries and what are the functions methods or operation that all classes we will do
+for you, then the API documentation. Those API documentation also you can have it
+from Java dot sun dot com website. So, these are the very two important links that you
+can have it.
+
+(Refer Slide Time: 09:18)
+
+Now, I was talking about in API and is a full form is application programming interface.
+Now, Java is great because of this the APIs, the Java API is basically is a very big one
+voluminous resources. And in fact, there are I mean nine packages and each packages
+consist of huge number of classes and their definitions and then their use.
+So, all this classes you can use in your program; that means, is basically programmers
+supports. So, there are nine packages are there and then all packages are basically
+categorized to sub different task. Now for example, there is one packet package called
+applet. So, this package usually called java.applet. So, this package is basically suitable
+for writing applet in writing applet manual programming in applets.
+So, applets as I already told you applet is for designing graphical user interface,
+graphical user interface means button then checkbox call window, then text field area all
+these things. So, this is basically the applet packages will help you to create the graphical
+user interface very easily, without knowing details about how they are doing it is just like
+a magic if you run know that ok. This is the one class that you should use to create your
+own button and then use it and then run it like this one.
+Now, so Java applet is the one right is for applet programming and regarding applet
+programming applet programming is a very past concept of course, and we will learn
+shortly. And then there is another package the name of the package is called Java dot
+
+AWT it is called the Java abstract windowing toolkit. So, abstract windowing toolkit is
+basically another extension or is a basically support to develop GUI programs.
+Then another package regarding input output handling, you can recall the different way
+the input can be considered, input from the mouse, input from the microphone, input
+from the document, input from the handwritten, gesture whatever it is there so, input
+from an image input from network so, how to deal with so, many versions of input. So,
+there is a package .io package java.io which basically help you to take the input from
+many sources and then use in your program process it and then produce output according
+to the requirement.
+So, java.io is basically suitable. java.lang is a another package which is basically
+frequently used package; that means, one program which always required one package
+that is a java.lang package, you cannot write any program without java.lang package. As
+this package is very important and essential and in all program it is required. So, it is not
+required to be explicitly imported that mean it will automatically included in your
+program, even if you do not input. However, other packages if you want to use it, then
+before using they should be imported in your program.
+I will tell you how to import a package in your program or a particular class which
+belongs to a particular package in your program. So, that the concept; that means, a
+particular facility is that that can be imported in your program whereas, java.lang is a
+default package that can be imported automatically, and it basically give you the basic
+programming facilities that you can have if you have this java.lang package.
+
+(Refer Slide Time: 13:13)
+
+So, out of nine packages we have discussed 5 there are; few more important packages are
+there few more packages like Java dot net, net is basically the package suitable for
+network programming. Networking is a very important one features in Java
+programming. So, we can have the Java dot net package to develop our network protocol
+network programming, socket programming like this and java.util; util it is basically one
+advanced one programming which basically gives you many what is called the built in
+data structure.
+As you know data structure is a very important concept for programming; that means,
+you have to store the data in an efficient way, how you can store the data in an efficient
+way data structure tells about it. The many data structure like stack ,queue, linked list
+and vector all these things are readily defined in the package java.util one important
+dictionary data structure is called dictionary; that means, you can maintain a dictionary
+for any language to any language or dictionary for medical vocabulary or whatever it is
+there.
+So, the dictionary data structure is already there, data structure means how to define the
+structure and then what are the operation already defined in that package. So, you just
+know about, that what are the facilities available and then you can plug in your program
+and then use it.
+
+Then the one advanced packages those are there in Java latter on it is included, early in
+earlier version it was not Java version 5 onwards this package is used it is called the
+swing, swing just like AWT. But it is more interesting and more lovely things there in
+Java programming, Java swing basically another extension of AWT abstract windowing
+toolkit for supporting GUI development.
+And for Java database connectivity there is one package it is called the java.SQL. So,
+this using this package, you will be able to connect to a remote server database from your
+application. So, these are the different packages, which are available in Java
+environment. And if you once install JDK with all programs that we have already
+discussed like javac, javap, and javaap, javah all these things in addition to this all this
+API also will be install automatically.
+(Refer Slide Time: 15:47)
+
+So, in JDK is basically contains everything. Now, we told about the free software that is
+available all this softwares are free; however, as the Java is very popular and then many
+software developer many software engineering firm, they develop the program in a large
+scale, large scale to support the program many and sophisticated programming
+environment is all already available in the market. However, it is not free costly. There
+are few software development environment it is called IDE the full form is integrated
+development environment.
+
+So, there are lot of IDEs are available for example, from sun microsystem itself one IDE
+is available, but it is not free of cost is for the commercial purpose only called the Sun’s
+Java workshop. It is very good one environment which can help you to develop your
+program very easily and in a user friendly manner. Mojo is the one good I mean comma
+popular one software development environment, it is from the penumbra software is a
+company basically suitable for creating Java applets.
+Similarly, Jumba is from Aimtech and IBM it is also one environment suitable for Java
+applet programming. And the best I ever seen is called a semantic cafe, it is a very well
+known very popular and very sophisticated one programming environment it is called the
+semantic cafe. So, if you can afford you can purchase a semantic cafe right and then
+install in your machine, this software include everything your JDK the API the other
+programs and what is not. So, it will help you a lot debugging, testing, maintaining
+everything put together is a very nice programming and environment semantic cafe, but
+it is not free commercially the cost is too much actually individually level it is very
+difficult to afford.
+(Refer Slide Time: 17:59)
+
+So, these are the tools I should say the third party tools for Java programming
+environment. And there are few tools also available for browsing the software; that
+means, as you know the Java is suitable for internet programming and internet
+
+programming means lot of webpage programming ja JSP Java script or Java browser
+related programming.
+So, there are lot of browsers are also required, earlier when Java was introduced initially
+all browsers like internet explorer, then all these things are supporting. Now-a-days all
+this browsers stop supporting Java browsing, there are some security issue that is why.
+So, all browsers cannot support your Java program to browse it directly actually, but the
+other way it can browsed and it can be executed. There are many security reason that is
+why the different browser has stopped running the Java program remotely actually.
+And initially hot Java actually was introduced as a very beginning when the Java was
+introduced for the browsing purpose only, but the hot Java is also still available and you
+can use it, but hot Java is not so popular like Mozilla, Safari or Internet Explorer is
+popular Netscape Navigator also available as a browser it is windows NT environment or
+some other Unix environment net score navigator is available. This also supports Java in
+a full phase.
+So, these are the browsers that you can think about it, but while you learn Java
+programming you usually use applet viewer as a Java browsing. So, for learning and
+practicing the applet viewer is fine, but whenever you have to deploy the program, the
+shape and different technology different concept needs to be followed. That will be
+discussed later on, but here till time we will not discuss about any other browser
+whenever we have to run Java applets or Java program we will follow applet viewer as a
+applet browser.
+
+(Refer Slide Time: 19:57)
+
+There are few more important resources available I am not sure whether it is available in
+a free version or not. There are obviously, a free is software available not in the full
+functionality for enable net bean. Net bean is very famous for building very large
+software it is just an IDE integrated developing environment.
+It is free if it is available; obviously, not all features cannot be available, but it is at least
+some essential features you can have it so, it is an IDE. So, at least some IDE freely if it
+is available, then it is net bean you can install and then run your Java program using this
+net beans. And one editor I should mention it which is very good one editor and very
+sophisticated and versatile editor it is called the Notepad++.
+Because you have to run the program, you have to save the program and those for typing
+the program all those things should be as fast as possible. So, that efficiently you can do
+it. So, Notepad++ is highly recommendable. So, that you can download it Notepad+
++again is a free software. So, you can download freely and install in your machine and
+then use as a default editor. You can make the editor as a default this one. Now so, we
+have learn about the Java language Java tools and Java resources that you should hold,
+before you just warm up yourself into the Java programming environment and become a
+Java programmer.
+
+(Refer Slide Time: 21:31)
+
+Now, I am I just want to mention about few things, which is basically in Java commonly
+occur. So, sometimes you have to face all this thing again and again. So, these are called
+the subset of the language subset. In fact, a rich subset of the language, it is not possible
+to cover in one slide or in 5 minutes discussion it require in fact, the full discussion and
+we will learn all this subsets of the Java language one by one.
+So, there are many built in data types, like Boolean, integer floating all these things,
+there are many system functions like println printf and all this thing. For example, in our
+program we have face that System.out.println() this kind of things are there. So, many
+frequent and then common things are there. So, this slides includes the many common
+things those are there in your Java programming Java programming, or while you writing
+Java program you have to use it. Obviously, for the first time programmer all those
+things little bit looks like very difficult to understand, but once you are practiced it and
+then involved it. So, you will be slowly habituated all this term.
+So, these are the subsets and I just want to skip this subset discussion, because it will be
+learned slowly, but consistently we will learn it, ok.
+
+(Refer Slide Time: 21:50)
+
+So, these are the basically standard data types, if you know C programming then you
+definitely know that what is a data types like, they are called the built in data type or
+primitive data type like Boolean. Boolean is a data type by which we can declare one
+variable, which record only 1 bit to store. And then byte: byte is a new data type which is
+there in Java in C++ also it is there, and there char is also there in C programming in
+Java and short is there. In addition to this there are few more data types like int, long,
+float, double if you know C programming then you can see that. These are the few data
+type which is there in Java also there in C.
+And actually if you know C programming then learning C++ programming is very
+easier. And if you know C++ programming, then learning Java program is also very
+easier. Anyway, but if you do not know C++ programming absolutely it is not an issue,
+but there are many things are very common. So, for the syntax the commands and all
+these things, those are there in C programming also there in Java programming. So, it is
+an added advantage for the C programmer to cope with the Java programming
+environment.
+Now so, far the data type is concerned all these data type that we have discussed call the
+built in data type, or simply they are called primitive. Because those are the data type
+already developed by the compiler, compiler can understand automatically you do not
+have to bother about anything about all this data type. Other than built in data type that is
+
+more interesting to learn and you should learn it more skillfully so, that you have you are
+an expert in Java programming is called a reference data type.
+Reference data type basically define your own data type our own type of data. As I told
+you object is also one type of data. So, the reference type it is called, or is called the
+abstract data type, or customer defined data type.
+(Refer Slide Time: 24:47)
+
+So, regarding reference data type we will discuss in details in this course we learn about
+what are the reference data types are there, and how it can be developed, how it can be
+used how it can be manipulated modified everything right now. So, far the Java character
+sheet; that means, if you want to write a program, which character you should use which
+character you should not use.
+Now, if you see the keyboard the qwerty keyboard that is there, lot of characters are
+there, but all keys you should not press to type your program. There are definite sets
+uppercase letters A to Z they are permissible the lowercase letter any a to z you can use
+in your program writing, any digits 0 to 9 you can use and in addition to this A to Z and
+the numbers, you can use some special character sets which is listed there in this table.
+So, these are the characters that you can use, other than this characters. If you use any
+other characters, then your compilation will be erroneous that there will be a error while
+the program is complied.
+
+(Refer Slide Time: 25:47)
+
+Now, I can define; that means, naming of variables or class or methods, it should follow
+certain rule. The same rule that is followed in C program also C language, also
+applicable in java. That means, the name should be given to a programmer a program
+elements like variable, constant, class methods etcetera. The names may consist letters
+digits and underscore with no space in between.
+That is very important and then blank and comma are not allowed, while you are naming
+a variable, or identifier or any type. The first character must be an alphabet or
+underscore. If you start a variable name or class with say number it sometimes gives an
+error, I mean it easily give an error in some compiler definitely advanced features it may
+not give, but it is usually not advisable to follow, then and I write an and name of the
+variable can be of any length there is no limit.
+But again, unnecessary giving very large name to a variable or type is not a good. So,
+you should give very short name, but meaningful name. And I and one more thing that
+you should take into account is that the Java programming language is case sensitive.
+This means that if you declare a variable name as small x and then same variable other
+variable name as capital X, they are basically two different variable name.
+
+(Refer Slide Time: 27:24)
+
+So, the case sensitive means the capital letter and small letter matters a lot and here is a
+free example right. The how you can declare the different type of variable for example,
+int a b we declare the two variable name as a and b. And, then b is initialized 0 like this 1
+and then the system brought print is a system one statement by which we can print one
+message.
+And whatever you want to print you should enclose in a sin double quote, if you type
+anything double quote it will print (Refer Time: 27:54) bottom on the screen. Then if you
+want to print anything else, then you have to write plus, then what are the other things.
+So, if you to the sum is the value of C then the syntax is like this one. So, all this things
+we will discuss whenever we will discuss the program it is there.
+
+(Refer Slide Time: 18:15)
+
+Now, I will quickly come to the discussion about array is a one very important structure
+in java. And array is basically instead of only one variable value or elements, we have to
+store a number of elements into a location or chunk or memory, then it is called the array
+is a basically finite set of is a collection of finite set of elements of same type; that
+means, integer or integer, character or character, float or float.
+Now, we will quickly discuss about how an array can be declared in Java. And then once
+you declare an array. Then it is also your responsibility to allocate the memory for the
+array. So, how you can allocate the memory for an array and then how you can load the
+values into the array.
+
+(Refer Slide Time: 28:55)
+
+So, those are the things that you can quickly learn about it. So, if you to declare an array
+say x, then the syntax it is there int x within square brackets. And then termination
+symbol is semicolon that you have to meet it. So, that is also alternative int square
+bracket x also the same way people can use it; that means, x is an array of integers.
+Then one you declare an integer array, then you have to allocate the memory, for the
+allocation there is a operator it is called the new operator is called the memory allocator
+operator. So, you have to use the new and the syntax is like. So, if you new and then
+type; that means, what type of data you want to store and then this is the size and then
+this basically is the location where it is stored.
+Basically the x is an array, this basically allocate the memory for storing 100 integers
+right. So, this is a way that the integer can be stored into an array of size 100.
+
+(Refer Slide Time: 30:07)
+
+So, this is the way and then one shortcut also in one go you can define it like this,
+int x []=new int this; that means, the memory allocation as well as defining an array can
+be done in one go. So, this is a shortcut syntax for this. So, this is a syntax that you
+should use to declare an array of any size whatever you want.
+(Refer Slide Time: 30:26)
+
+So, this way you can create an array. And once you can create an array that array can be
+used using for loop while loop like this one.
+
+(Refer Slide Time: 30:34)
+
+And here is also alternative way array can be declared memory can be allocated and then
+value can be stored at the same time.
+So, this is a simple syntax that you can follow for example, here an array of x will be
+declared which will store; that means, size of the array is four integers. And then the
+element that will be stored, there is 12, 13, 9 and 15 out of which 12 is a first element
+and one more thing that I you should note that just like in see the array index start from
+0. So, that mean first array location is 0 x 0 and then x 1 x 2 and x 3. So, total index is
+from 0 to 3 in this case that means four elements.
+
+(Refer Slide Time: 31:18)
+
+And array can be used for many purpose, we have to maintain a large pool of data. And
+then, that data can be used either for in searching some other element deleting some
+elements sorting searching.
+(Refer Slide Time: 31:30)
+
+And then traversal and others there so array in Java can be done the way I have already
+told you here, here is a simple few steps further.
+
+(Refer Slide Time: 31:44)
+
+So, that you can follow it, and then I will discuss about that array that we have discussed
+is one dimensional array Java can help you to have any dimensional array. Here I am
+going to discuss about how the two dimensional array can be declared in Java. For
+example, say name of the array is same myArray this are your array that you want to
+develop you want to maintain and this is a two dimensional.
+So, for the two dimensional you have to use the two square bracket. So, this completes
+declaring an array of 2 D and then this basically allocate the memory. So, myArray new
+int here two dimensional and then for each dimension what is the size, for the first
+dimension 3 and then this is the 4. So, this means that it will declare an array of 3 row 3
+rows and 4 column so, 3 cross 4 the name of the array is myArray.
+Alternatively this is also the one way syntax that can be used to declare, define and then
+allocate the memory at one point.
+
+(Refer Slide Time: 32:59)
+
+So, this is the way that two dimensional array can be declared likewise 2 D array the 3 D
+array also can be used. Now, again 2 D array initialization can be done by using for loop.
+The way first you have to two loops here you have to use it.
+Otherwise if it is a small array, then you can use this kind of syntax for the singular one
+dimensional array, we have used it in the same way. If you do it like this you will see the
+Java; Java system will automatically store this in the first row and then this in the second
+row like this one, if the array is like this. Otherwise you can just make it more structure
+within brackets, within brackets like 1, 2, 3 this 4, 5, 6 this one.
+If 1 2 3 and is a blank then that element will be null and other element will be stored this
+way. So, this is more compact one way, that the array can be initialize 2 D, but this is
+only meaning for small arrays, but not good for the large arrays, large array we have to
+use the loop structure to initialize the elements.
+
+(Refer Slide Time: 34:00)
+
+And then the 2 D array with variable size also we can declare here for example, in this
+row only 2 column in this row 3 4 column in this row 3 column. So, that is a variable
+sized array also can declared and here is a quick syntax for variable sized array
+declaration here, basically the concept it is there. So, we can declare the 2 D array like
+this.
+The declaration here row size is declared because the number of rows is defined here, but
+column size is not declared here, that that can be decided here using this one. So, for
+each row once it is declared using this one and then for each column can declare by
+rolling 1 for i is equal to 0 to i less than row size for each row. We have to run this and
+then these are basically name of the array, then this is the size that you want to do for
+example, here 2 3 4 you can mention it and then column size. So, this way you can build
+the array of any variable sized.
+
+(Refer Slide Time: 35:09)
+
+Now, likewise the 3 D array also possible to maintain in Java also 3 D array is bit
+complex, we have a demonstration about 3 D array so, that we can understand here. So, a
+3 D array typically just look like. So, if it is a 2 D array so, is a collection of 2 D array is
+basically 3 D array; that means, for each this page we can say and there is a collection of
+page.
+So, each elements in one page can be accessed by the number of rows and column. So, i j
+and then each page will be denoted by k. So, is k is basically this is k equals to 0 k equals
+to 1 and this is equals to k equals to n if the n number of pages are there. And similarly
+for each page using just two dimensional concept you can access this one.
+So, here is an example, this example you can follow it slowly with your own space, you
+can understand that this example basically how a 3 D array can be declared and its
+memory can be allocated. And finally, the different elements in it can be loaded. So, this
+the whole program you can check it slowly with your own time. And then you can also
+try to run it then you can understand how it’s there.
+And here you can say for 2 D array we will need 2 loops for 3 D array we need in fact, 3
+loops for. For example, in this case we use 3 for loops one loop for i for row variation,
+another loop for j for column variation for each row there are variation of each column.
+And then for each there is a column page variation.
+
+So, this is an example so, that you can understand and you can practice it. So, we have
+learned about the basic few things particularly Java tools and resources and then the
+basic Java language subsets. And in the subsets only we have certain idea about Java
+arrays.
+(Refer Slide Time: 37:09)
+
+The array can be of 2 D and 3 D array like and done now next; obviously, more few
+more things also on the queue.
+(Refer Slide Time: 37:12)
+
+That whether Java supports writing recursive program, probably you know the recursive
+program and if you know C programming. C programming is very good for writing
+recursive programs and recursive programs is basically an easy way to write very
+complex and difficult programming structure. Now java in fact, supports recursive
+program, then it is interesting to learn how we can write recursive program in Java. And
+then other features the input output in the Java and everything.
+So, in the next lectures, we will discuss about all this advanced features in java, but
+before that I will discuss about applet programming. So, a quick overview of the applet
+programming once it is known to us. Then we can have a basic idea about the Java
+programming flavors.
+Thank you very much.
+
+

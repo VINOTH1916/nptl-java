@@ -1,0 +1,507 @@
+Programming in Java
+Prof. Debasis Samanta
+Department of Computer Science and Engineering
+Indian Institute of Technology, Kharagpur
+Lecture – 43
+Swing Programming - I
+We have learned about AWT and AWT is sufficient enough to develop any graphical
+user interface based program. However, Java developer was not so, happy with the
+AWT, they dream to give something more than AWT which should be more elegant and
+then user friendly I should say rather programmer friendly; that means, programmer will
+find it so, easy to include there those components into their program and that is basically
+the process of it is called that in a light weight way to develop this thing without much of
+the code details they can develop their window program.
+So, with this m Java developer introduced from version 6 onwards another utility
+package API it is called the Java swing. So, in today’s lecture we will discussed first part
+of the Java Swing because it is so, vast that we should take at least 2 modules to cover
+the entire package one by one. So, first we will discussed about exactly what is the
+Swing.
+(Refer Slide Time: 01:25)
+
+As I told you Java developer introduced it in version 6 onwards, but version 5 and lower
+version Java Swing is was not available. Now Java Swing is basically is a part of Java
+
+foundation classes which is the one foundation programs it is developed usually the
+oracle to make the Java Swing is more platform independent.
+So, Java Swing in fact, provides a better light weight components than AWT in the sense
+light weight means we understand that user a programmer can do many things without
+knowing exactly how all those things been done. That means, we do not have to bother
+about the implementation details only just idea is that, if this thing is available just use it
+and then solve your problem. So, it is just like a very good library we can say very
+sensible library rather ok, so, that we can get many different utilities easily comfortably.
+Now, so, Java that is a Swing the swing is included in one package you see it is not
+exactly same as the java dot package name like, but it is the new thing javax dot swing.
+So, javax dot swing package is there it is again whenever you install jdk right with your
+latest version then you will be able to automatically install it is bundle with jdk itself.
+Now, the these javax swing package contains many components as we have already
+familiar to some components like button test field list menu item like this it is there, but
+whenever the to make it difference from the swing component to AWT component, then
+they use basically one more capital characters preponed to each component like say
+JButton is for button in swing, JTextField is a text field in swing and like this one.
+So, a ‘J’ characters are preponed to each component to. So, indicate that it is from the
+swing actually. So, a now all those buttons are there; obviously, question that are is then
+what is the difference from this button to JButton or like this and why JButton is more
+preferable than the button we will able to understand these things when we will start our
+discussion about the swing component, definitely it has more advantages and first of all
+the thing is that all the component that will appear in a interface looks may much elegant
+than the component that you can develop with the AWT.
+
+(Refer Slide Time: 04:13)
+
+Anyways, so, there are some salient difference between the two things that is AWT and
+Swing. The first thing is that AWT components are platform dependent this means that is
+java environment is required in order to run all those things no other environment you
+can use it.
+However, Java Swing is platform independent whatever be the environment absolutely
+you so, you do not have to bother you can use it. And AWT a components are heavy
+weights; heavy weights means many thing that you have to write the codes of your own
+and they are not they are much abstract rather whereas, Swing components is much more
+abstract than the AWT components this means that you do not have to bother about how
+all those things coming and then how all those things will be implemented you just
+simply plug and play.
+And AWT does not support pluggable look and feel; that means, whatever the idea that it
+looks like it is really coming it is not like that. So, sometimes it show something it is
+appearing in a different form like, but it is basically pluggable look and feel. So, what
+exactly it looks like you can find it like that. AWT provides less component compared to
+the Swing because it has only few; however, Swing provides much more components
+then the AWT components such as tables, lists, then scrollpanes, tabbedpane and then
+colorchooser, etc all those things were not there in AWT, but those are there here in Java
+Swing.
+
+And another advantage of having the Java Swing is basically they follow one concept in
+graphical leisure intersplit programming is called the Model View Controller. So, it is
+basically called MVC actually AWT does not follow MVC then model view controller
+whereas, Swing follows MVC I do not want to discuss details about the MVC which is
+not so much relevant to this discussion. Anyway this is the one way how the graphical
+user interface can be developed.
+(Refer Slide Time: 06:22)
+
+Now, java is basically from the JFC; JFC developed by the oracle Java Foundation
+Classes for developing the graphical interface related to oracle systems. So, it is from the
+JFC only.
+
+(Refer Slide Time: 06:37)
+
+And then here is basically whatever the different classes are there so, for the JF Swing
+package is concerned we have shown here as we see here as it is right. So, JComponent
+is basically related to the component it is very same as the AWT components and in
+addition to these things there is a container and then container has say panel and then
+frame and all these things and other that thing dialog is there and container may be also
+an Applet. So, it is the basic idea and that is basically called the Swing components ok.
+So, Swing components basically as you see the JComponent is basically subclass of the
+components; that means, whatever the facilities that is available in AWT, you can have it
+here in swing; that means, both swing and AWT can be used together.
+You can use anyone. So, that is why the idea it is there. So, they are all basically subclass
+of the AWT component class that is there in AWT package. And that is why whenever
+you have to use it we should import Java dot AWT dot star as well as Javax.Swing.*;
+that means, to avail all the facility that is there and particularly the event handling
+facilities are defined there in AWT itself.
+So, that anyway you have to use AWT package while when the whether you use AWT or
+in addition to AWT you use swing. So, this is the idea about the basic about the classes
+that is there.
+Now, we will discuss about the different components that is there in swing as it is there
+is a large number of components as you have show told.
+
+(Refer Slide Time: 08:28)
+
+So, definitely it will take much time to discuss all the components. So, I will be little bit
+fast about I am just showing what exactly the component it looks and then what are the
+methods and then what are the other constructors that is there this is for your
+information.
+So, my suggestion would be that if you practice it with the example which is here given
+in the slides as well as in the link that I have given and also you can practice any
+program collecting from any other sources from net like an if you practice it if you run
+then you can understand. Actually it is very difficult to learn from the very scares level
+another in the very in depth. So, better idea would be to learn it by your own practice.
+So, you have to practice it vigorously so, that you can learn it.
+Now, first of all the component class that is there as you have already familiar to it has
+few methods like say add component. So, if you use the add any component can be
+added into some other either it is in a frame or it can be added into the applet like this
+one. And it also has the set size method we have already familiar to that and set layout
+and set visible those methods are already there and those methods should be also used in
+when whenever you include some Java Swing component in our program.
+
+(Refer Slide Time: 09:50)
+
+(Refer Slide Time: 09:54)
+
+And the Java Swing is basically first is that we will discussed about how the components
+can be added from a more precisely, the Java Swing component can be added into our
+program. There are mainly 3 ways I am giving you using a Frame we can add it. So, in
+this example as we see we create a Frame and in this Frame we can add the thing these
+are the most simplest way.
+On the other hand we can create another way also by using the constructor and here is
+one thing you can see in this example, we create a frame and then this frame is basically
+
+using a constructor of this class which is basically the main program, there we can in
+include it and then that constructor can be called for that.
+So, this is the one way of doing these things, it is basically same impact. So, this is the
+one way within the main program, without any creating subclass we can do it, but here
+creating a subclass we can do it and then you can use it. So, this is more useful because if
+we developed one and then same class can be used in some other program also this is an
+example like.
+(Refer Slide Time: 11:05)
+
+And another way the third way it is basically it is extending the Frame. It is almost the
+same as the previous one what is that this is basically class extend the frame and then the
+same way it is like this one. So, basically whether you can inherits a frame or not, in that
+case this basically program is limited to only Frame, but in the previous example you can
+create a Frame you can add it you can get other maybe panel, you can add some things
+into that panel or something else like.
+So, whatever the way you want to have it you can do it. So, these are the different way
+that we will follow we usually follow to include the swing components in our program
+anyway. So, any one method you can use it, but for the demonstration or for the
+illustration, we will consider the second method that we have discussed ok. So, these are
+the different way the frame the Java Swing component can be added into the frame and
+we will discuss the different classes one by one.
+
+(Refer Slide Time: 12:10)
+
+The first is JButton. JButton is basically as we have already familiar to this it is similar to
+that.
+(Refer Slide Time: 12:16)
+
+But in addition to the concept that is there it has something different than the previous
+one as we can see it is here. So, JButton icon as you can see this is basically default
+without any level and this is basically a button which will appear with certain level on it
+and this is basically one important Icon i; where icon is a class that is defined in the java
+dot Graphics dot Image and in that icon is basically shows an image; that means, a button
+
+can includes an image. So, this is the idea about this one so; that means, a button can
+include nothing a button can include simple a text as a level, a button can include as an
+image also.
+(Refer Slide Time: 12:57)
+
+So, here is an example as a simple Button as we see this button is created and floated on
+a frame and then level of the Button is clicked here. And then another Button which is
+here as we see here text field and then the Button is also can be just here the basically the
+idea it is that if we click here and then this text field will appear.
+(Refer Slide Time: 13:08)
+
+So, this is basically action. So, what I want to see here is that all the event handling
+routine that we have already learnt also equally applicable to it also; that means, add
+ActionListener and then you can define the listener methods all these things.
+As we see here in this program we do the same thing, we add action listener all the
+button and then we define the method for that action perform and then basically here is
+that whenever a button is clicked it will appear this kind of text. So, all.
+(Refer Slide Time: 13:58)
+
+So, whatever the action handling mechanisms we have already learnt, that they can be
+applicable to this also. And this example indicates that with a Button can include an
+image as you see an image is also there on the Button itself. So, there are many small
+image can be embedded into the Button to go some more good feeling and good looking.
+
+(Refer Slide Time: 14:19)
+
+Now, JLable same as the AWT Lable is basically same.
+(Refer Slide Time: 14:19)
+
+There is such different it has 3 4 different constructors.
+
+(Refer Slide Time: 14:27)
+
+And also it has 5 different methods for accessing its or related to the JLable we can have
+the different information by virtue of all these methods it is there.
+(Refer Slide Time: 14:32)
+
+And this is an example as we see it basically display 2 Lables First Lable and Second
+Lable, the methods is almost same AWT which we have already discussed. So, I do not
+want to elaborate it.
+
+(Refer Slide Time: 14:52)
+
+Same thing is there and then again any event can be added into this Lable as we have
+seen here. So, we can type it something and then if we type it, then the button you can
+use it and then to have many other things are there. So, it is action listing all these
+performance is also added can be added to a component as we have discussed.
+(Refer Slide Time: 15:16)
+
+JTextField is not similar to the same text field it is there.
+
+(Refer Slide Time: 15:24)
+
+And it is an example of the text field area it is there and it has so, many constructors 4
+constructors and then 4 methods.
+(Refer Slide Time: 15:28)
+
+And here is an example as we see is very similar to the same example as AWT, this
+program includes 2 Text Field with default state welcome to IIT Kharagpur and AWT
+tutorial like.
+
+(Refer Slide Time: 15:40)
+
+And then action also can be added into any program like. So, here also another example
+JTestField with certain action added into there. Here is basically if you type something in
+this example if we type something say 5 and 10 and then plus you can add. So, 15 will
+appear. So, here is basically 3 Text Fields which is initially empty, but we have added
+event so, that if we type something here and there and then add it then result will be
+automatically come into this Text Field. So, the idea it is like this. So, action can be
+added in this. So, you can understand that how these kind of things can be utilized in
+your actual application.
+(Refer Slide Time: 16:26)
+
+So, this is the TextFieldExample that we have discussed this is an example.
+(Refer Slide Time: 16:33)
+
+And then text area also similar to the text area that we have discussed in the context of
+AWT. It looks look like that.
+(Refer Slide Time: 16:38)
+
+It has 4 different methods and then 4 different construction and 5 different methods.
+
+(Refer Slide Time: 16:41)
+
+(Refer Slide Time: 16:45)
+
+And these are very simple example that text field area that will come here like this.
+
+(Refer Slide Time: 16:54)
+
+And action listening can be also added with action listener how the text will work it is
+shown there. Here is basically in this action listener one very important thing that you
+can note it is very interesting. So, this is basically your text area, in this text area you can
+add some type cut and paste also you can do no issue and then there is a button we have
+used it which basically count words. Now if we click it then automatically all these word
+count and then character count will come.
+Now, how it is there you do not have to write any explicit code for that, you see what is
+the code it is here? So, setText the l1 and l2 are the 2 lable l one and l two and then l1 dot
+setText (“words ” “ plus words dot length ) that mean here this words dot length already
+defined in the java dot at till how the lengths how many words are there in a text can be
+calculated similarly text dot length also this is a method which will return how many
+characters are there in this text.
+So, it will display there. So, it is so, easy we do not have to do much programming
+actually, you do not have to account how many words is with a very critical program as
+you know probably in c or whatever it is other programming language. So, counting
+character also not that you have to stand one by one for the entire text. It is just simply
+the simple method that will help to do it very efficiently and effectively. So, this is a
+different application that which is coming in my mind to explain then I have just
+mentioned it.
+
+(Refer Slide Time: 18:27)
+
+And then PasswordField it is a new one item which was not there in AWT components
+and you know the password is basically usually look like is it appear as a some wild
+character like they will star star star. So, it hide the actual character that you have typed
+it. So, this is this look like a text field area only, but it will appear with that kind of things
+are there.
+(Refer Slide Time: 18:46)
+
+Now, so, first we the PasswordField constructor can be defined using these are the 3 4
+constructors.
+
+(Refer Slide Time: 18:54)
+
+And it does not have any method and then this is a very simple example by which we can
+see you can practice it that how a PasswordField can be included in your frame and this
+is an example that you can find if you run this program.
+(Refer Slide Time: 19:09)
+
+And action listening also can be added there; that means, after getting the PasswordField
+you can verify that whether this is a correct password or not and then through
+verification you have to store I have to compare these things some store value
+somewhere else like. So, all these things you can do it here user name password user
+
+name may be the text field and password may be say PasswordField and then login if
+you click it, then whatever the things that you have typed it login will be there.
+(Refer Slide Time: 19:41)
+
+So, here you have to write an event handling methods for login whenever a user click the
+button login after giving text field login and then PasswordField password. So, this is the
+example that you can see. Here is basically user name Debasis password is something as
+it is there corrected. In this case we have just simply that value you have correctly read
+from the user interaction and then you can print it.
+(Refer Slide Time: 20:04)
+
+Now, checkbox is JCheckBox is similar to the AWT checkbox and as we see the
+checkbox is basically which lay option one. So, in this example as you see this is the
+basically checkbox, it has the 3 items and then we can click here multiple click is also
+possible or single click is also possible that you have to define it by means of its
+appropriate constructor, whether you have to do the single click or you have to do the
+multiple click.
+(Refer Slide Time: 20:34)
+
+And it has got 4 constructors and two methods only.
+(Refer Slide Time: 20:37)
+
+(Refer Slide Time: 20:40)
+
+And this is a simple example how the JCheckBox can be done using a single multiple
+click C++ and Java are the 2 checkbox choices in the checkbox is included and it looks
+like that.
+(Refer Slide Time: 20:54)
+
+And JRadioButton radio button we have already familiar with the AWT it is also there,
+but here the loops of the JButton is much more elegant than the AWT and this is an
+example of a RadioButton.
+
+(Refer Slide Time: 21:06)
+
+Say button group actually the object that you have to create it and it has the 3
+constructors.
+(Refer Slide Time: 21:09)
+
+And these are the so, many methods as you see.
+
+(Refer Slide Time: 21:14)
+
+And then this is an simple example and if you implement this example you can find this
+kind of output that you can find it and this is a self explanatory. So, it has basically 2
+RadioButtons as we can see one is A Male and then B Female and then you can select
+anyone whichever you select it will be highlighted by a Button form.
+And this is the example you can add more Buttons and then you can run it and you can
+find it how it will appear.
+(Refer Slide Time: 21:42)
+
+And then JComboBox it is just similar to the list items there in AWT and here the in this
+example as we see 2 ComboBox; ComboBox1 and ComboBox2 is created and in the
+ComboBox1 there may be some items and in the ComboBox2 also some items. So, as
+many as ComboBox can be included in any frame or any effects also and then anyone
+items can be selected, which item you select that item will appear in the text field area in
+the main ComboBox slide.
+(Refer Slide Time: 22:11)
+
+And these this has 3 constructors and then there are five methods declare in it.
+(Refer Slide Time: 22:13)
+
+(Refer Slide Time: 22:17)
+
+This is a simple example for your practice, as you can run it then you can find it that this
+is a one ComboBox that will appear and in your program.
+(Refer Slide Time: 22:27)
+
+Now, Java Swing JTable this is a new one addition compared to the AWT it is it was not
+there in AWT, but it is here now this class JTable is basically showing how the entire
+table can be displayed.
+So, if there is a table already stored in your machine in a memory then that table can be
+displayed here.
+
+(Refer Slide Time: 22:45)
+
+But in I have just these are this for the creating JTable it has only 2 constructors.
+(Refer Slide Time: 22:51)
+
+And then this is a simple program by which you can display one table here we have just
+created a table in program itself.
+And as you see this table has three rows and then column heading is ID, NAME and then
+SALARY and the table will look like this as you see here. So, it is like this. So, here the
+table is just for an example here, but you can create a set of objects having the different
+
+fields and then we can get the value and then we can put in the table and then table can
+be displayed.
+(Refer Slide Time: 23:25)
+
+(Refer Slide Time: 23:27)
+
+JList is also similar to the list actually. And we do not have to discuss much about
+because it is been in many way very similar to AWT list it has 3 constructor 4 methods.
+
+(Refer Slide Time: 23:36)
+
+And this is simple program you should practice it here actually it shows a list with 4
+items it is defined there.
+(Refer Slide Time: 23:45)
+
+And JOptionPane it is also a new things which was not there in AWT. JOptionPane is
+basically is a popup dialog box or sometimes it is called the message box whenever you
+make some mistake automatically windows popup with a message box or window
+actually. So, if you want to create any window like this with certain messages, then this
+
+is the right way and if you select then means you have accepted and if you select stop
+this view then you can do it.
+(Refer Slide Time: 24:15)
+
+So, this is the way the option pane can be created there are 3 constructors and then few
+methods are there.
+(Refer Slide Time: 24:18)
+
+And this is an example to create a simple option pane with a message hello welcome to
+IIT like. So, it is sometimes time to time we have to give our message to your user, then
+you can do user the option pane.
+
+(Refer Slide Time: 24:31)
+
+And then JScrollBar bar is similar to the scrollbar bar that is there. So, is basically same
+thing horizontal and vertical scrollbar can be created.
+(Refer Slide Time: 24:39)
+
+There are 3 constructor to create a Scrollbar.
+
+(Refer Slide Time: 24:42)
+
+And here is a simple example by which one Scrollbar can be created it is a vertical
+scrollbar that we have created likewise horizontal Scrollbar, Scrollbar with more
+animation and everything can be also done.
+(Refer Slide Time: 24:55)
+
+JMenuBar is very similar to JMenuBar is also a new things which was not there in AWT
+is basically as you see this is the MenuBar actually this is the MenuBar if you click it
+some other some Menu will appear like this one. So, the many MenuBar also can be
+included in your program and this is the idea about the JMenuBar.
+
+(Refer Slide Time: 25:20)
+
+For this JMenuBar there is again few constructors are there. So, usually JMenuBar and
+JMenuBar related to each other.
+(Refer Slide Time: 25:27)
+
+So, I will just give an idea about JMenuBar which is basically include some JMenu and
+there is also JMenuItem. So, this is an example as we see here it basically includes
+MenuItems 1 and i 2 and then it basically shows there and as you know for MenuItem
+there will be sub menu. So, it is sub menu under sub menu all these things. So, those
+things can be cleared. So, this program you can practice for your own understanding.
+
+And then finally, the JPopupMenu; JPopupMenu is basically is a whenever something is
+appear the menu will popup like.
+(Refer Slide Time: 26:02)
+
+And it is look like this. So, PopupMenu whenever you create it and then some menu will
+appear.
+(Refer Slide Time: 26:07)
+
+It has 2 constructor as we see here on constructor without any argument another is which
+string argument.
+
+(Refer Slide Time: 26:15)
+
+And here is a simple example that you can see this example as you see whenever some
+things clicked. So, it will basically a PopupMenu will appear this is the PopupMenu and
+then you can select anyone cut copy paste like.
+As probably you know whenever you use some word or some other text reaching
+document and whenever you have to a select the edit and then usually cut copy paste all
+these things are there. So, it is just as the idea is very similar to that concept only. So, this
+is the PopupMenu and then JavaSwingCheckboxMenu.
+(Refer Slide Time: 26:52)
+
+CheckBoxMenuItem is very similar to the CheckBoxMenu CheckBoxConcept there is a
+AWT class.
+(Refer Slide Time: 26:57)
+
+It is basically under the component class in the other.
+(Refer Slide Time: 27:03)
+
+It has the so, many constructors usually little bit complex to use it.
+
+(Refer Slide Time: 27:07)
+
+And then this is an example. So, this example we you can see here in this example you
+have added many thing button then JFrame Menu MenuBar MenuItem in the same
+example and also action in (Refer Time: 27:25) event is also used here. So, you can
+verify this algorithm this program and then you can check that how it is working. So, it is
+just look like a JCheckBox menu item file, and file open close save as all these things
+you can add it.
+(Refer Slide Time: 27:38)
+
+So, this is the part of the program that you can run it.
+
+(Refer Slide Time: 27:41)
+
+Anyway so, we have discussed about the Swing components, not the all components
+there are few more components are there and from this understanding probably you have
+heard about that the Swing is a new one compared to the AWT which was very old. And
+using the swing components we can built many other we can include many elements
+many components into our programs which was not possible in AWT. There are few
+more what components are also that we have yet to discuss. So, those things will be
+discussed in our next module.
+Thank you very much.
+
+

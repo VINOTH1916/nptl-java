@@ -1,0 +1,386 @@
+Programming in Java
+Prof. Debasis Samanta
+Department of Computer Science and Engineering
+Indian Institute of Technology, Kharagpur
+Lecture – 57
+Case Study – II
+So, this is another project that we are going to discuss. We have discussed two projects
+in the last session. In this section we will discuss three more projects. All these are the
+small projects in the same category like, but as you see as we go from one session of
+projects to next session of projects, the complexity will be little bit increased. So, all the
+projects that you have we have discussed we have learned about in the last session it is
+simple to solve that again the complexity will be little bit increased.
+Now, in this projects we will again consider that the different flavor of the Java
+programming can be used, utilized, so that you can really along much more about while
+you are involve in working with the project. Now, I will just discuss about the third
+project, here drawing images on canvas. Probably you have already have an idea about
+how the scribble can be there, so that user can draw some image using mouse pointer or
+like this. But here it is not exactly the same thing. Its bit different thing, but here the idea
+will be little bit in a phasor manner and then you can think about it.
+(Refer Slide Time: 01:32)
+
+But if you can solve this problem definitely the lot of other different aspects of the
+programming like say multi-level inheritance, polymorphism, graphics, applet will be
+cover. So, this projects aims, so that it can cover all these concepts in Java programming.
+Now, let us have the idea about this project.
+(Refer Slide Time: 01:48)
+
+Now, this project is basically drawing an image. The image is basically consists of the
+several geometrical objects, a point may be a geometrical object, a line may be, a
+triangle, a circle and ellipse or any polygon or some rectangle square like this one. Not
+only this geometrical object they can be filled with different colour, different style, their
+border or line can be also different colour, different style, like, like, like. So, this is
+basically the way a geometrical objects can be drawn and again if you see an image an
+image is nothing but a collection of several geometrical of a place in their appropriate
+positions. So, this way it basically completes an image.
+So, here is an idea about that how the different geometrical objects can be defined, so
+that you can use to draw an image of your own. So, for these things our plan is to create
+a class called the geo object class. We will discuss about the class structures in details
+when you will discuss about how to solve this problem, how to deal with this project.
+And second thing is that, if you create the geometrical object using this geometrical
+objects how we can create an image that can be stored as a class structure and whenever
+an object is created of that class; that means, an image will be created and that image can
+
+be again on execution it can display on the screen or it can be stored, later on you can use
+it redraw these things these one.
+And then the final stage of this project you have to do the animation. So, a circle if it is
+there which is present there, initial it is a static, but you can move it; that means, a circle
+can move from left to right or top to bottom from one any direction to another direction
+like this one. So, all those things also can be done. So, this project is basically we will do
+all this things together. Now, let us see how step by step we can do towards this project
+implementation.
+(Refer Slide Time: 03:46)
+
+So, first thing that you should have the repository that all the objects of their different
+type and how to draw everything should be defined in your own class declaration. You
+can give the name of this class as a GeoObject.
+Now, once this class is declared. So, this class and then an object of this class can be
+used to create your own image. Here is an example about how an image will look like.
+
+(Refer Slide Time: 04:13)
+
+As you see in this example and image consist of many structure say suppose this is the
+one rectangle and this is also another rectangle, but the difference from this rectangle to
+this rectangle their positions, their style. Here for example, the line by which this
+rectangle is drawn with no colour, but the filling is some other colour, here filling is
+different colour and this is the circle, this is also another circle. So, this the different
+geometrical objects composed an image. So, this is basically we can say that image.
+Now, these geometrical objects can be created by using any one class which you have
+already defined belongs to the geo object class and geo object class can be obtained by
+means of multilevel inheritance, multiple inheritance as the idea it is given there in the
+form of a inheritance tree. And such an image therefore, is a in the form of a class not a
+bits farm or image or not a dot jpeg form or pdf form or i m g form like the or p n g form.
+It is just simply a class. And this class can be executed, so that you can see the image
+actually. So, this is the idea about the painting an image on a canvas. And in the canvas,
+here is basically a frame or panel you can think about in that case a little bit awt units to
+be followed here.
+
+(Refer Slide Time: 05:50)
+
+Now, so this is the idea about how and image can be created. Our next idea about that
+how the movement of an object on the canvas can be added into this one; so, this is the
+second phase of your project here you can create any one image initially you should
+consider only one a simple image may be a circle.
+Now, animate the moment of the image. Now, here you can we have only known about
+the banner applet that we have discussed while we are discussing about applet. So, there
+we have also made it. So, the movement can be achieved by means of repeated use of
+update and repaint method that is there. So, I will I rather advice you to do it using an
+applet because it is easier. Later on the same thing also can be added into any frame or in
+a panel or in any other container class using A W T or Swing.
+And better idea will be it is little bit difficult, but it is not as such so much difficult also
+that it is moving of a geometric object is easier, but moving an composite object; that
+means, a group of object may be say one circle and another box can move together. So,
+that is also can be done.
+So, if you do it is basically moving an object it is there. For example, you can draw a bar
+using say few straight line and then point and then dot like and then the same can be
+moved together, so that it will appear an animation that a bar is moving like. So, this is
+the idea about moving an object on an image canvas and you really will be able to enjoy
+
+it if you can implement it, but it will little bit patience and then confidence is also
+required.
+(Refer Slide Time: 07:25)
+
+Now, I will discuss about the control movement of an object; in the previous fetch we
+have declared the movement in one direction only, but here you can fix that in this
+direction you can move as a simpler version you should take in a simple way that is a
+control movement in a specific direction. As I have mentioned from right to left or left to
+right, top to bottom or bottom to left like this.
+So, an image is anywhere then you can give an instruction is an even can be generated.
+So, that if you click it then it will start moving and in a particular direction. So, here you
+can just think an applet program for that and then view of the applet you will look like
+this. So, this is basically the one area of the canvas we can say and this is basically the
+control area.
+
+(Refer Slide Time: 08:07)
+
+So, if the user selects up then what will happen this object will move up and then go
+there again come here. So, this is way it is just in a movement the in this direction. On
+the other hand, if it is the right then it will move from this direction to this direction and
+come here again this direction this direction and if you click again it will stop its moving.
+So, here if, so if there are many other objects also you can select which objects you want
+to peruse the movement. Out of many objects some objects can be selected there is a
+choice, in this choice also it can you can give that movement of few more. So, if you
+choice a circle then you can select left, circle will move then another object may be
+ellipse and then move right. So, right will be there and so on, so on.
+So, you can just simply control the even handling mechanism here. Although the simple
+even handling mechanism is there because here how many is a choice list and then this is
+the four buttons are there and you have to just, ok, button handling mouse even handling
+routine needs to be implemented there. So, you can try it and then it will given idea about
+how nice a program can be there which basically use for animation purpose also, but at
+this is at just for the beginners.
+So, this is the fourth project in the today in this session second project, but all together is
+a fourth project that this is a secure message transmission. This is also an very interesting
+projects. Then you obviously, this project needs certain what is called the technological
+concept. Again this project is good for the students who are from electronics electrical
+
+and computer science background because little bit security aspect learning is there
+security means how the cryptography, encryption, decryption and all other methods are
+there.
+(Refer Slide Time: 10:16)
+
+Now, let us see what are the skill set that you should have or the confidence level that
+you should have; you should be a good core programmer. That means, you know exactly
+good Java programming, syntax and others. Then GUI programming is also required,
+you have to develop certain graphically user interface, windows is required and finally,
+you should have a very good knowledge about the networking.
+So, it will blend all three things together in these projects. So, if you can implement these
+projects so, this project has its own value of course, and apart from this you will be able
+to have a good confidence level, so far all this key concepts in Java programming each
+concerned.
+
+(Refer Slide Time: 10:56)
+
+Now, let us have the idea about these projects. Now, this project is basically as I told you
+few technical things are involved, who is I have highlighted here you should have the
+encryption, decryption and then cryptographic key. And then also you should have some
+other ah networking all these things that is there.
+Now, here is the what is the idea here? The idea is that a message whatever it is there
+that can be encrypted. Encrypted means it change, so that nobody can read it even open it
+they will not be able to get the meaning of this. So, this is the idea about the encryption
+and whenever you want to send a document say suppose the document written in war or
+pdf, I have no problem you can consider simply a text document in a R T F for whatever
+it is there. So, using text editor, you can use it.
+Now, the document will be encrypted from the sender. So, sender will do the encryption.
+And to do these things sender should use one key it is called cryptographic key.
+Similarly, the same document whenever it is received by another receiver, a documents
+will be decrypted; that means, converted in the original form and for this conversion
+called the description again we need some keys. May be the same key or different key
+now there is a concept that I am going to discuss about how the same key or different
+key can be used to use the encryption and decryptions are there. So, it is basically the
+idea of the cryptographic key.
+
+So, if you do not have any idea about encryption, decryption and cryptographic concept.
+So, you should go through some elementary documents that will give you enough idea.
+You do not have to do the research in cryptography rather you have to know exactly
+what is the different methods are there, so that all these methods can be used and then
+you have to implement all those methods in a Java programming.
+Even in the network in the internet also lot of readily available programs are there, even
+inputting Java also there you can download this programs. So, you can use, it you can
+little bit modify it and you can utilize in your program also. Absolutely, there is no harm
+for that.
+(Refer Slide Time: 13:18)
+
+Now, I will discussed about the steps that you should follow. As a first step we have to
+decide about the cryptographic key. So, there are two type of cryptographic key, one is
+called the symmetric. Symmetric cryptographic key means the key which is used for
+encryption the same key will be used for decryption. So, this is called the symmetric key
+cryptography. In this case both sender and receiver should have this key and an
+algorithm for both encryption and decryption.
+On the other hand there is an another method that sender we will use one key which is
+private to the sender only sender knows only, but receiver does not know it. On the other
+hand, sender will communicate to each counterpart by a key it is called the public key
+and using this public key the receiver will be able to encrypt it.
+
+Now, there is again different type of algorithms are for possible like say RSA algorithm,
+DSA algorithm, like. So, using all those algorithm the asymmetric key cryptographic can
+be there. Here again you have to know exactly how the key can be generated both the
+two keys, public key and private key, those are not same different and they can be shared
+among the two parties also and all those things are there. And their again keys sharing
+key generation for asymmetric there any protocols. For example, Diffie Hellman
+protocol, electric of cryptography protocol, DSA protocol, so many other protocols are
+there. So, you have to little bit learn about all those things methods are there techniques
+are there you have to implement in your Java environment.
+And then you can develop all those things; that means, all the algorithms for encryption,
+how the key can be generated, how the key can we shared, all these things you develop
+as a program and you know in Java program means is a class all these class for you can
+stored in a package. Let us give the name to this package as a security.
+(Refer Slide Time: 15:14)
+
+Now, here is an idea about how your framework will work so that you can develop
+ultimately a system. I have just given a picture for your own understanding. So, here a
+sender who wants to send some document. So, this is the document. So, basically sender
+will use a key, that is a cryptographic key whether is a same or different that you think
+about then encryption this algorithm.
+
+So, you need how this key can be generated how this technique can be done. So, these
+two methods you have to learn it, and document can be any document word document or
+note pad document or pdf document or image document, absolute no issue that algorithm
+we will take care about it.
+Now, so this algorithm take a document with the help of key will create one file it is
+called the encrypted file. The same file will be sent to the net. So, there is a socket
+program you can think about. So, a socket we will take this encrypted file and then
+socket we will send it to the sender, receiver. So, this is the receiver, receiver has another
+socket program at his machines. So, these two machines are different. They are
+connected through the net. So, these are the two socket, one the receiver socket and then
+server socket we will just ok, will be used for the communication purpose and any
+protocol datagram protocol or TCP IP protocol you can follow through transmit
+whatever the large document may be.
+Now, this then they at the say receiver end there is a program or algorithm is a class
+program, Java program you can say which basically decrypt the document which has
+been received. And so, and for this decryption another key will be used cryptographic
+key may be same or different whatever it is there. So, using this key the algorithm will
+decrypt it and then finally, it will reach the, receive the documents and this document we
+will be opened by the user.
+Now, so this is the idea about the system that you have to develop and you have
+understood that, you have to use it programming core programming and bit networking
+also involved and also graphical user interface also needs to be there. And in the version
+one you can just simply then generate the cryptographic key and in the second version
+you can do is basically the graphical user interface.
+
+(Refer Slide Time: 17:34)
+
+And here how the graphical user interface you will look like I have displayed here. So,
+there will be just this is the view of a GUI windows program, and here if you click the
+upload document it will basically just ok, go to the browser and then it will select the
+directory and in this select the any file can be selected and then open it.
+So, it will just display that this file has been successfully selected. And then you can
+keep the encryption algorithm button it is if you click this, so it will basically follow the
+algorithm and also it will take the cryptographic key and then it will be basically create
+an encrypted file and encrypted file can be again send. So, you can see the ID, you can
+give the URL address or local machine number or such thing and if you select it thus it
+will go to the send receiver. The receiver window; that means, this is the program that
+we have discussed about is a GUI program. It can be embedded in a socket and then
+socket this is the GUI is basically punch in a socket program actually.
+And this is another socket program at the receiver end. Receiver end once this program is
+there then it will basically whatever the message that he has received will be there. So,
+this is basically one inbox sort of thing. In this inbox he can select one and then he can
+select this decrypt. In this once this encryption is then is a decrypt. So, these decrypt we
+will basically convert the encrypted file into decrypt decryption one and then finally, it is
+open.
+
+(Refer Slide Time: 19:16)
+
+So, these are the two windows, at the server size, at the sender size, as the receiver size
+needs to be implemented. So, here windows programming, also socket programming and
+then the algorithm to be implemented together in at the both end. Now, then the message
+transmission through network the network implementation is to be there and you know
+exactly how the networking is possible using this one, two sides of client can be there
+and then once the receiver receives a message it will send an acknowledgement to the
+sender.
+Now, all the system that you have developed is stored in a secure file better you can put
+into the jar file and this jar file is installable in any other users machine, and using
+installation of these jar file or using these jar file any people can send the document to
+anyone and any people also receive the document sent by someone and then use it as an
+encryption and decryption also.
+Even you can plug in with your email system also. So, before sending or attaching, you
+can encrypt it and then the receiver also can decrypt it using your same program. So,
+plugging with your own program with the other program also possible that is another
+lessons that you have to learn about it, anyway. So, forget about the plug in and others
+you just simply used for a standalone system that is there.
+Now, let us discuss about another projects is a fifth project. And as the name at the title
+of the project is basically you have little bit idea about the bank transaction while we are
+
+discussing about multithreading in this course. It is basically heavily used based on this
+concept transaction system, but using multithreading, but in addition to this threading
+also it will considers few more Java programming aspects like GUI programming also,
+networking and then JDBC.
+(Refer Slide Time: 21:11)
+
+So, this is the another little bit complex program or heavy program compared to the last
+four program that we have discussed about because so many skill sets are there. If you do
+it one by one then it will basically all this projects are planned in that order only. So,
+slowly as we go from next project the complexity will be little bit high. Anyway, so this
+is the project where you should have the knowledge or learning capability about all these
+four aspects.
+
+(Refer Slide Time: 21:47)
+
+Now, let us see what is idea of the project. It is very simple idea, as you know so for the
+banking or any finance organization there is the one server which maintains the database
+and the database includes the records of all the customers. So, basically customer ID, the
+account number, the customer name, customer address, accounts and also the history of
+transaction all these things are there. So, you can plan a database for that. A tables that
+are relevant to this one and then so, you have to prepared one database for this.
+Anyway so, a bank we will maintain all customer records in a database server. And then
+customer can access his accounts online. Online means login password should be there
+by which the customer will should be first authenticated, once the authentication is first
+his information will go to the database and accordingly database will give that different
+facilities or the operations like balance enquiry, or if you wants to deposit amount or
+withdrawal amount and everything.
+So, here actually no physical money is involved, the logical some things is there because
+you have to just practice it how such a things are there and whenever the hardware can
+be interfaced with this physically it can be there. In actual cases the banking system will
+be there any way. So, it is like this one.
+
+(Refer Slide Time: 23:14)
+
+Now, let us see the different steps that you should follow one by one, so that you can
+implement this ah project very comfortably. So, first you have to develop one database
+server you can use in this course MySQL, other then MySQL in this SQL or oracle
+server also anyone, no issue you can use it. And JDBC also needs to be archived in your
+program jar file is there available we have already discussed about how the database
+JDBC connectivity can be done, here you can use it.
+As a programs, so far the programs are concerned, so in this project we have to develop
+for sever sockets. Server socket means this will basically handle with the database and
+everything. So, that can be considered as a concurrent server because this server should
+be ready to receive many request at the same time and therefore, it can process. As a
+result of concurrent server you can implement a multithreading concept here. So, several
+threads are to be executed whenever there is a request received from a client in a distance
+from the distance location.
+And then there will be another socket programs for the customer. So, the two sockets
+here is the customer size. So, customer can be from his own machine or from his own
+mobile, can run the sockets, the sockets will run then through the sockets customer can
+place the request and then accordingly it will be executed.
+
+(Refer Slide Time: 24:43)
+
+So, these are the things are there. Now, here again a little bit GUI components also
+involved. As you see here, the first GUI interface for the login and password which will
+look like trivial form as you are familiar to this one you have to do it. So, once the login
+element is there login ID and then password is entered and then press 1. So, if the login
+is successful it will basically can go to the next step that it will basically see that what
+operation you need.
+So, after these things it will basically, once the login is successful the online banking
+system will appear to the user and if it is a failure it will deny to access it. Now, here
+again balance enquiry if we click the balance enquiry it will just ok, because login
+account number and everything fast after authentication is done. So, it will ok, connect to
+the server and then that server will basically consult with the database server, get the
+information and then display it here.
+And then once it is there the next will be may say withdraw. Say similarly, withdraw it
+will basically ask about what amount you want to withdraw. If you give in, so then after
+the withdraw operation is successful it will give a message successful message. And then
+the deposit, similarly deposit it is there if, so after the successful deposition it will give
+the balance and all these things are there.
+So, you have to just simply develop this kind of screen with dialogue box and you have
+known you have learnt or using Java swing also how all those things can be developed.
+
+So, you just even handling, mechanism, the interface you have to develop and then it will
+just do the socket programming, the networking and then JDBC the database handling
+are to be there.
+(Refer Slide Time: 26:26)
+
+So, this is basically the idea about this one. And then once you develop this program and
+this is a particular program whether you see whether this program is a very much robust
+and then perform perfectly as it should be here. So, here are the different test that you
+can accomplish. So, that you can just run the program, several sockets, client sockets
+from the several points and then execute and try to access the database as well as the
+concurrent server simultaneously.
+So, here I have mentioned with a single deposit with multiple deposit, both say deposits
+as well as withdrawal at the same time and then there are so many other variation that
+you can do, so testing. You can include in your friend also in your the in this testing, and
+then you can do it and then get the results it is really if you can do it and then we it will
+improve your confidence like anything.
+So, these are the things that we have discussed about. The three projects in this session
+and then best idea would be if you can do alone, so do it. If you cannot then best idea is
+that you can do as a team, right. So, you can include some of your friends into the team
+and then discuss how to solve it, what to do, what are the difference are there and then
+you can do it together. First two programs you can do alone, but whenever the
+
+complexities because different components are there, better that you can do in a two
+manner. And then teamwork is very important because whenever we have to use in a
+software development firm right you have to work as a team. So, from this time onwards
+you should practice these things.
+So, thank you for attention.
+Thank you.
+
+

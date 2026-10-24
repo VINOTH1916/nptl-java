@@ -1,0 +1,396 @@
+{
+  "lecture": 20,
+  "title": "Interfaces I",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What is an interface in Java?",
+      "options": {
+        "A": "A class with all private methods",
+        "B": "A contract that defines method signatures without implementations",
+        "C": "A subclass with no constructors",
+        "D": "A class with only static methods"
+      },
+      "answer": "B",
+      "explanation": "An interface defines a contract — it specifies method signatures that implementing classes must provide, but does not include the actual implementations. It is declared with the 'interface' keyword and represents a capability or role that classes can implement."
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What keyword is used to declare an interface in Java?",
+      "options": {
+        "A": "abstract",
+        "B": "contract",
+        "C": "implements",
+        "D": "interface"
+      },
+      "answer": "D",
+      "explanation": "The 'interface' keyword declares an interface: 'interface IShape { ... }'. This is distinct from 'class' and 'abstract class'. The interface body contains method signatures and possibly constant fields."
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What keyword is used by a class to implement an interface?",
+      "options": {
+        "A": "extends",
+        "B": "inherits",
+        "C": "implements",
+        "D": "interface"
+      },
+      "answer": "C",
+      "explanation": "A class uses 'implements' to implement an interface: 'class Circle implements IShape { ... }'. This is different from inheritance (extends). A class can implement multiple interfaces but can only extend one class."
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What are the implicit modifiers on methods in a Java interface (pre-Java 8)?",
+      "options": {
+        "A": "private and static",
+        "B": "public and abstract",
+        "C": "protected and final",
+        "D": "default and final"
+      },
+      "answer": "B",
+      "explanation": "Interface methods are implicitly 'public' and 'abstract' — even if you don't write these modifiers explicitly. This means all interface methods are part of the public API, and all are abstract (no body, must be implemented by classes)."
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What are the implicit modifiers on fields declared in a Java interface?",
+      "options": {
+        "A": "private and instance",
+        "B": "public, static, and final",
+        "C": "protected and mutable",
+        "D": "default and volatile"
+      },
+      "answer": "B",
+      "explanation": "Fields (variables) declared in an interface are implicitly 'public', 'static', and 'final' — making them constants. They must be initialized at declaration. Example: 'int MAX_SIZE = 100;' in an interface means 'public static final int MAX_SIZE = 100;'."
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "Can you create an object directly from an interface?",
+      "options": {
+        "A": "Yes — using 'new IShape()'",
+        "B": "No — interfaces cannot be instantiated with 'new'",
+        "C": "Yes, if the interface has at least one method",
+        "D": "Only if all interface methods are default methods"
+      },
+      "answer": "B",
+      "explanation": "Interfaces cannot be instantiated. 'new IShape()' causes a compilation error: 'IShape is abstract; cannot be instantiated'. You can only create objects of classes that implement the interface."
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "If a class implements interface IShape with methods area() and circumference(), what must the class do?",
+      "options": {
+        "A": "Inherit from a superclass that has these methods",
+        "B": "Provide concrete implementations for BOTH area() and circumference()",
+        "C": "Only implement the methods it chooses to override",
+        "D": "Declare itself as abstract"
+      },
+      "answer": "B",
+      "explanation": "A concrete class implementing an interface must provide implementations for ALL abstract methods in the interface. If even one method is not implemented, the class must be declared abstract. The interface contract is fulfilled only when all methods are implemented."
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What is the syntax for declaring an interface IShape with abstract methods area() and circumference()?",
+      "options": {
+        "A": "abstract class IShape { abstract double area(); abstract double circumference(); }",
+        "B": "interface IShape { double area(); double circumference(); }",
+        "C": "interface IShape extends { double area(); double circumference(); }",
+        "D": "public IShape { void area(); void circumference(); }"
+      },
+      "answer": "B",
+      "explanation": "'interface IShape { double area(); double circumference(); }' is correct. The methods don't need 'abstract' or 'public' modifiers — they are implicitly public and abstract. The method signatures end with semicolons (no body)."
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What is an abstract class in Java?",
+      "options": {
+        "A": "A class that implements all methods of an interface",
+        "B": "A class declared with 'abstract' that may have both abstract and concrete methods, cannot be instantiated",
+        "C": "A class with only static methods",
+        "D": "A class that extends an interface"
+      },
+      "answer": "B",
+      "explanation": "An abstract class is declared with 'abstract class ClassName'. It can have abstract methods (declared but not implemented) and concrete methods (fully implemented). It cannot be instantiated directly — only subclasses that implement all abstract methods can be."
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What is the 'abstract' keyword used for with a method?",
+      "options": {
+        "A": "Makes the method run faster",
+        "B": "Declares a method signature without a body — subclasses must implement it",
+        "C": "Prevents the method from being inherited",
+        "D": "Makes the method private"
+      },
+      "answer": "B",
+      "explanation": "'abstract void draw();' declares an abstract method: no body ({}) is provided. The class containing it must be abstract. Concrete subclasses must provide the implementation. Abstract methods define a contract that subclasses fulfill."
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "What is the key difference between an interface and an abstract class?",
+      "options": {
+        "A": "Interfaces can be instantiated; abstract classes cannot",
+        "B": "An interface has NO implementations (pure contract); an abstract class CAN have some concrete implementations",
+        "C": "Abstract classes support multiple inheritance; interfaces do not",
+        "D": "Interfaces can only have one method; abstract classes can have many"
+      },
+      "answer": "B",
+      "explanation": "The key difference: interfaces (pre-Java 8) provide only method signatures with no implementations — a pure contract. Abstract classes can have a mix of abstract methods (no body) and concrete methods (with body). An abstract class provides partial implementation; an interface provides none."
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Can a class implement multiple interfaces in Java?",
+      "options": {
+        "A": "No — a class can implement only one interface",
+        "B": "Yes — 'class C implements A, B' is valid Java",
+        "C": "Only if the interfaces don't share method names",
+        "D": "Only if one interface extends the other"
+      },
+      "answer": "B",
+      "explanation": "Java allows a class to implement multiple interfaces: 'class Circle implements IShape, IDrawable, IResizable'. This is Java's substitute for multiple inheritance of behavior. The class must implement all methods from all interfaces."
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "What happens if a class implements IShape but only provides implementation for area() and not circumference()?",
+      "options": {
+        "A": "circumference() defaults to returning 0",
+        "B": "Compilation error — the class must implement all interface methods or be declared abstract",
+        "C": "Runtime error when circumference() is called",
+        "D": "The interface provides the default implementation"
+      },
+      "answer": "B",
+      "explanation": "A concrete class must implement ALL methods from the interfaces it implements. If circumference() is not provided, the compiler reports: 'class Circle must either be declared abstract or implement abstract method circumference() in IShape'."
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "What is the correct implementation of interface IShape in class Circle?",
+      "options": {
+        "A": "class Circle extends IShape { double area() { return Math.PI*r*r; } double circumference() { return 2*Math.PI*r; } }",
+        "B": "class Circle implements IShape { public double area() { return Math.PI*r*r; } public double circumference() { return 2*Math.PI*r; } }",
+        "C": "class Circle interface IShape { double area() { return Math.PI*r*r; } }",
+        "D": "abstract class Circle implements IShape { double area() { return Math.PI*r*r; } }"
+      },
+      "answer": "B",
+      "explanation": "Correct: 'class Circle implements IShape' with 'public double area()' and 'public double circumference()'. The 'implements' keyword is used (not 'extends'). Methods must be declared 'public' (since interface methods are public, the implementation must be at least as accessible)."
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Why must implemented interface methods be declared 'public' in the implementing class?",
+      "options": {
+        "A": "Java requirement for all interface implementations",
+        "B": "Because interface methods are implicitly public, the implementing class cannot reduce their accessibility; access can only stay the same or become more accessible",
+        "C": "Public methods are faster to execute",
+        "D": "Only public methods can override abstract methods"
+      },
+      "answer": "B",
+      "explanation": "In Java, you cannot reduce the accessibility of an overridden method. Since interface methods are implicitly public, the implementing class's method must be public (same level). Making it protected or private would reduce accessibility and cause a compilation error."
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Can an abstract class implement some (but not all) methods of an interface?",
+      "options": {
+        "A": "No — it must implement all or none",
+        "B": "Yes — an abstract class can implement some interface methods and leave others abstract for subclasses",
+        "C": "Only if the unimplemented methods are also marked abstract in the interface",
+        "D": "Only for interfaces in the same package"
+      },
+      "answer": "B",
+      "explanation": "An abstract class implementing an interface can provide implementations for some methods and leave others abstract. This is useful when you want to provide a partial implementation that subclasses can extend. The abstract class satisfies the ones it implements; concrete subclasses must complete the rest."
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What is the abstract class 'Geometry' with abstract method 'area()' used to demonstrate in the lecture?",
+      "options": {
+        "A": "That abstract classes work identically to interfaces",
+        "B": "That abstract classes can define partial implementation contracts that concrete subclasses must complete",
+        "C": "That geometry calculations require abstraction",
+        "D": "That abstract classes cannot extend other classes"
+      },
+      "answer": "B",
+      "explanation": "'abstract class Geometry { abstract double area(); }' demonstrates that an abstract class creates a partial contract. Subclasses like Circle and Rectangle extend Geometry and MUST implement area(). Geometry provides the blueprint; subclasses fill in the specific computation."
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "In Java, can an interface extend another interface?",
+      "options": {
+        "A": "No — interfaces cannot extend anything",
+        "B": "Yes — using the 'extends' keyword: interface B extends A",
+        "C": "Yes — using the 'implements' keyword",
+        "D": "Only abstract interfaces can extend other interfaces"
+      },
+      "answer": "B",
+      "explanation": "Interfaces can extend other interfaces using 'extends': 'interface IDrawable extends IShape'. The extending interface inherits all methods of the parent interface and can add new ones. A class implementing IDrawable must implement all methods from both IShape and IDrawable."
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What is the difference between 'class B implements A' and 'class B extends A' where A is a class?",
+      "options": {
+        "A": "They are identical keywords",
+        "B": "'implements' is for interfaces; 'extends' is for classes (and interface-to-interface inheritance)",
+        "C": "'extends' is for interfaces; 'implements' is for classes",
+        "D": "Both can be used interchangeably for abstract classes"
+      },
+      "answer": "B",
+      "explanation": "'implements' is specifically for a class implementing an interface. 'extends' is for class-to-class inheritance (class B extends class A) or interface-to-interface inheritance. Using 'extends' for an interface or 'implements' for a class causes a compilation error."
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Why is the IShape interface named with 'I' prefix in the NPTEL lecture?",
+      "options": {
+        "A": "Java requires all interfaces to start with 'I'",
+        "B": "It is a naming convention (common in some styles) to distinguish interface types from class types at a glance",
+        "C": "'I' stands for 'inheritance'",
+        "D": "It prevents name collision with the class 'Shape'"
+      },
+      "answer": "B",
+      "explanation": "The 'I' prefix (IShape, IDrawable) is a naming convention used in some programming styles to indicate that a type is an interface. Java doesn't require this — it's purely a readability convention. Other conventions omit the 'I' prefix (just 'Shape', 'Drawable')."
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Both interface and abstract class prevent instantiation. What is the fundamental design reason to choose an interface over an abstract class?",
+      "options": {
+        "A": "Interfaces compile faster",
+        "B": "Use an interface when defining a pure capability/role that multiple unrelated classes can implement; use an abstract class when sharing common implementation between closely related classes",
+        "C": "Interfaces are more memory efficient",
+        "D": "Abstract classes are deprecated in modern Java"
+      },
+      "answer": "B",
+      "explanation": "Design principle: interface = 'can do' (capability), abstract class = 'is a' with shared code. Flyable interface can be implemented by Bird, Airplane, Superman — unrelated classes. AbstractAnimal abstract class is for Dog, Cat, Bird — related animals sharing common behaviors. Interfaces decouple; abstract classes share implementation."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Can an interface field be changed after declaration? Why or why not?",
+      "options": {
+        "A": "Yes — through setter methods",
+        "B": "No — interface fields are implicitly public static final (constants); they cannot be reassigned",
+        "C": "Yes, but only by the implementing class",
+        "D": "Only if the field is of a primitive type"
+      },
+      "answer": "B",
+      "explanation": "Interface fields are implicitly 'public static final'. The 'final' modifier makes them constants — they must be initialized at declaration and can never be reassigned. Any attempt to change 'IShape.MAX_POINTS = 5;' causes a compile error: 'cannot assign a value to final variable'."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "What happens if two interfaces A and B both declare 'void display()' and class C implements both?",
+      "options": {
+        "A": "Compilation error due to conflict",
+        "B": "C must provide one implementation of display() that satisfies both interfaces",
+        "C": "C must provide two separate implementations",
+        "D": "Java randomly picks which interface's display() to use"
+      },
+      "answer": "B",
+      "explanation": "If two interfaces have the same method signature, one implementation in the class satisfies both. Since both A and B declare 'void display()', C's single 'public void display() { ... }' simultaneously fulfills A's and B's contracts. No conflict exists for identical signatures."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Can an interface reference variable hold a reference to an implementing class object?",
+      "options": {
+        "A": "No — interface variables cannot hold object references",
+        "B": "Yes — 'IShape shape = new Circle();' is valid; this enables polymorphism through interface types",
+        "C": "Only if Circle is also abstract",
+        "D": "Only if an explicit cast is used"
+      },
+      "answer": "B",
+      "explanation": "'IShape shape = new Circle();' is valid — Circle implements IShape. The interface reference 'shape' can only call methods defined in IShape, but the actual object is a Circle. This enables polymorphism: you can pass any IShape-implementing object wherever IShape is expected."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "What is the difference between 'abstract class Geometry { abstract double area(); }' and 'interface IGeometry { double area(); }'?",
+      "options": {
+        "A": "They are functionally identical",
+        "B": "Geometry can have concrete methods, instance fields, and constructors; IGeometry can only have method signatures and constants",
+        "C": "IGeometry can have instance fields; Geometry cannot",
+        "D": "Abstract classes support multiple inheritance; interfaces don't"
+      },
+      "answer": "B",
+      "explanation": "Abstract class Geometry can have: concrete methods (with bodies), instance fields (per-object state), constructors, and protected members. Interface IGeometry can only have: method signatures (no bodies), constants (public static final fields), and nothing else (pre-Java 8). An abstract class can provide partial implementation; an interface provides none."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Java 8 introduced 'default methods' in interfaces. How does this blur the distinction between interfaces and abstract classes?",
+      "options": {
+        "A": "It doesn't change anything",
+        "B": "Default methods provide optional concrete implementations in interfaces, allowing existing classes to add new interface methods without modification — reducing but not eliminating the distinction",
+        "C": "Default methods make interfaces identical to abstract classes",
+        "D": "Default methods were removed in Java 9"
+      },
+      "answer": "B",
+      "explanation": "Java 8 default methods allow interfaces to provide implementations: 'default void draw() { ... }'. This closes the gap but doesn't eliminate distinctions: abstract classes still have constructors, instance fields, and access modifiers (protected) that interfaces lack. Default methods mainly enable backward-compatible interface evolution."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "If class Circle extends AbstractShape AND implements IShape, which method resolution applies when Circle.area() is called?",
+      "options": {
+        "A": "AbstractShape's area() is always called",
+        "B": "IShape's area() is always called",
+        "C": "Circle's own area() is called if defined; otherwise AbstractShape's concrete area() (classes take precedence over default interface methods)",
+        "D": "Compilation error — a class cannot extend a class AND implement an interface simultaneously"
+      },
+      "answer": "C",
+      "explanation": "Java's resolution order: 1) The class's own method, 2) Superclass methods, 3) Interface default methods. If Circle defines area(), it's used. If not, AbstractShape's concrete area() is used (class wins over interface default). Interface abstract methods still require implementation by the class hierarchy."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "What is the 'marker interface' pattern and what is an example?",
+      "options": {
+        "A": "An interface with exactly one method",
+        "B": "An empty interface (no methods) used to mark a class as having a particular property; java.io.Serializable is a classic example",
+        "C": "An interface used only for naming purposes",
+        "D": "An interface that marks classes as deprecated"
+      },
+      "answer": "B",
+      "explanation": "A marker interface has no methods — it's an empty interface used to 'tag' a class as having a certain characteristic. java.io.Serializable (no methods) marks classes as serializable; the JVM and ObjectOutputStream check 'instanceof Serializable' to decide whether serialization is allowed. Modern Java uses annotations for this purpose."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Why can't interfaces have constructors?",
+      "options": {
+        "A": "Constructors are only for abstract classes",
+        "B": "Interfaces cannot be instantiated, so there's nothing to construct; constructors initialize object state, and interfaces have no instance state (no instance fields)",
+        "C": "Java syntax doesn't support interface constructors",
+        "D": "Interface constructors would conflict with implementing class constructors"
+      },
+      "answer": "B",
+      "explanation": "Constructors exist to initialize object instances when 'new' is called. Interfaces can't be instantiated (no 'new IShape()'), so there's nothing to initialize. Interfaces also have no instance fields (only public static final constants), so there's no per-object state to set up — making constructors meaningless for interfaces."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "How does implementing IShape for both Circle and Rectangle enable polymorphic behavior without inheritance between the two classes?",
+      "options": {
+        "A": "Circle and Rectangle must share a common parent class",
+        "B": "Both implement IShape, so an IShape reference can hold either, and calling area() on the reference dynamically dispatches to the correct implementation — without any Circle-Rectangle inheritance relationship",
+        "C": "Polymorphism requires inheritance; interfaces don't support it",
+        "D": "Circle and Rectangle become identical after implementing IShape"
+      },
+      "answer": "B",
+      "explanation": "Interface-based polymorphism: 'IShape[] shapes = {new Circle(5), new Rectangle(4, 6)};'. Calling shapes[0].area() dispatches to Circle's area(), shapes[1].area() to Rectangle's. Circle and Rectangle have no inheritance relationship — their only connection is implementing the same interface. This is more flexible than inheritance-based polymorphism."
+    }
+  ]
+}

@@ -1,0 +1,396 @@
+{
+  "lecture": 13,
+  "title": "Inheritance",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What is inheritance in Java?",
+      "options": {
+        "A": "The ability for a class to contain multiple objects",
+        "B": "Creating a new class from an existing class, acquiring its properties and methods",
+        "C": "Hiding data within a class",
+        "D": "The process of converting one type to another"
+      },
+      "answer": "B",
+      "explanation": "Inheritance is an OOP mechanism that allows a new class (subclass) to acquire the fields and methods of an existing class (superclass). The subclass can then add new members or override existing ones."
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which keyword is used to establish inheritance in Java?",
+      "options": {
+        "A": "implements",
+        "B": "inherits",
+        "C": "extends",
+        "D": "super"
+      },
+      "answer": "C",
+      "explanation": "'extends' is the Java keyword for inheritance. 'class B extends A' means B is a subclass of A. B inherits all accessible members of A and can add its own members."
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is the class being inherited FROM called?",
+      "options": {
+        "A": "Child class",
+        "B": "Subclass",
+        "C": "Derived class",
+        "D": "Superclass (parent class)"
+      },
+      "answer": "D",
+      "explanation": "The class being inherited from is called the superclass, parent class, or base class. The class that inherits is called the subclass, child class, or derived class. Java uses the term 'superclass'."
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What relationship does inheritance represent?",
+      "options": {
+        "A": "HAS-A relationship",
+        "B": "USES-A relationship",
+        "C": "IS-A relationship",
+        "D": "DEPENDS-ON relationship"
+      },
+      "answer": "C",
+      "explanation": "Inheritance models the IS-A relationship. If class Car extends Vehicle, then a Car IS-A Vehicle. This means a Car object can be used anywhere a Vehicle is expected. This is fundamental to polymorphism."
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What are the two main advantages of inheritance?",
+      "options": {
+        "A": "Faster execution and less memory usage",
+        "B": "Code reusability and maintainability",
+        "C": "Easier compilation and debugging",
+        "D": "Stronger type checking and security"
+      },
+      "answer": "B",
+      "explanation": "The two primary advantages of inheritance are: code reusability (subclasses reuse superclass code without rewriting it) and maintainability (changes to the superclass automatically benefit all subclasses). This reduces duplication and simplifies future updates."
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "In the lecture example, what class does Point2D extend?",
+      "options": {
+        "A": "Point",
+        "B": "Shape",
+        "C": "Object",
+        "D": "Geometry"
+      },
+      "answer": "C",
+      "explanation": "In the NPTEL lecture, Point2D extends Object (all classes in Java implicitly extend java.lang.Object if no other superclass is specified). Point3D then extends Point2D, creating a multi-level inheritance chain."
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What is single inheritance?",
+      "options": {
+        "A": "A class with only one method",
+        "B": "A class that inherits from exactly one superclass",
+        "C": "An inheritance chain with exactly one level",
+        "D": "When only one class in a program uses inheritance"
+      },
+      "answer": "B",
+      "explanation": "Single inheritance means a class extends exactly one superclass. Java supports only single class inheritance (unlike C++ which allows multiple inheritance). A class cannot 'extend' more than one class in Java."
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What is multi-level inheritance?",
+      "options": {
+        "A": "A class inheriting from multiple classes simultaneously",
+        "B": "An inheritance chain: A → B → C where B extends A and C extends B",
+        "C": "Multiple classes inheriting from one parent",
+        "D": "Inheritance across multiple packages"
+      },
+      "answer": "B",
+      "explanation": "Multi-level inheritance is a chain: A extends Object, B extends A, C extends B. C inherits from B which inherits from A. The lecture's example: Point2D extends Object, Point3D extends Point2D forms a multi-level chain."
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What does method overriding mean?",
+      "options": {
+        "A": "Calling a method from the superclass",
+        "B": "A subclass redefining a method that already exists in the superclass with the same signature",
+        "C": "Defining multiple methods with different parameter counts in the same class",
+        "D": "Preventing a method from being called"
+      },
+      "answer": "B",
+      "explanation": "Method overriding occurs when a subclass provides its own implementation of a method that is already defined in the superclass with the same method signature (same name, same parameters, same return type). The subclass version replaces the superclass version for that subclass's objects."
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What does the 'abstract' keyword mean when applied to a class?",
+      "options": {
+        "A": "The class cannot have any methods",
+        "B": "The class cannot be instantiated directly",
+        "C": "The class is automatically final",
+        "D": "The class can only be used in interfaces"
+      },
+      "answer": "B",
+      "explanation": "An abstract class cannot be instantiated with 'new'. It is designed to be a superclass that other classes extend. Abstract classes can have both abstract methods (no body) and concrete methods (with body)."
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "In the inheritance hierarchy: Object → Vehicle → Car → FireTruck, how many levels of inheritance does FireTruck have?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "1"
+      },
+      "answer": "B",
+      "explanation": "FireTruck extends Truck, Truck extends Vehicle, Vehicle extends Object — that's 3 levels of explicit inheritance above FireTruck. FireTruck itself is at level 4 in the hierarchy. The question asks how many levels FireTruck inherits through, which is 3 ancestor classes above it."
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "If class A has method 'void show()' and class B extends A with its own 'void show()', which version is called on a B object?",
+      "options": {
+        "A": "Always A's version",
+        "B": "B's version (overrides A's)",
+        "C": "Both versions are called sequentially",
+        "D": "Compilation error due to duplicate method"
+      },
+      "answer": "B",
+      "explanation": "When a subclass B overrides show() from class A, calling show() on a B object invokes B's version. This is runtime polymorphism — the actual method called is determined by the actual type of the object, not the declared type."
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Does a subclass inherit private members of the superclass?",
+      "options": {
+        "A": "Yes — the subclass gets all members including private ones",
+        "B": "No — private members exist in the subclass object but are not directly accessible from subclass code",
+        "C": "Yes, but only if the subclass is in the same package",
+        "D": "No — private members are deleted when inherited"
+      },
+      "answer": "B",
+      "explanation": "Private superclass fields ARE present in the subclass object (they're part of the object's memory), but they cannot be directly accessed in subclass code. The subclass can access them through public/protected getter/setter methods defined in the superclass."
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "In the lecture example of Vehicle → Car, Truck → FireTruck, which class is the superclass of FireTruck?",
+      "options": {
+        "A": "Car",
+        "B": "Vehicle",
+        "C": "Truck",
+        "D": "Object"
+      },
+      "answer": "C",
+      "explanation": "FireTruck extends Truck (FireTruck IS-A Truck). Truck is the direct superclass of FireTruck. Vehicle is a superclass of Truck (indirect superclass of FireTruck). The inheritance chain is: FireTruck → Truck → Vehicle."
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "What is the difference between method overriding and method overloading?",
+      "options": {
+        "A": "Overriding: same class, different parameters; Overloading: different class, same parameters",
+        "B": "Overriding: subclass redefines same signature from superclass; Overloading: same class, same name but different parameters",
+        "C": "They are identical concepts",
+        "D": "Overloading: subclass redefines; Overriding: same class"
+      },
+      "answer": "B",
+      "explanation": "Method overriding involves a subclass providing its own implementation of a superclass method with the SAME signature (name + parameters). Method overloading involves multiple methods in the SAME class with the same name but DIFFERENT parameter lists."
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Why is the IS-A relationship important for inheritance?",
+      "options": {
+        "A": "It determines memory allocation for objects",
+        "B": "It allows a subclass object to be used wherever the superclass type is expected (polymorphism)",
+        "C": "It ensures constructors are called correctly",
+        "D": "It is required for the 'extends' keyword to compile"
+      },
+      "answer": "B",
+      "explanation": "The IS-A relationship enables polymorphism: since a Car IS-A Vehicle, you can assign a Car object to a Vehicle reference ('Vehicle v = new Car()'). The program can treat Car objects as Vehicles wherever Vehicle behavior is needed, enabling flexible, extensible code."
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What does it mean for Point3D to extend Point2D in the lecture example?",
+      "options": {
+        "A": "Point3D contains a Point2D field",
+        "B": "Point3D inherits x and y from Point2D and adds a z coordinate",
+        "C": "Point3D is a synonym for Point2D",
+        "D": "Point3D replaces Point2D in the program"
+      },
+      "answer": "B",
+      "explanation": "Point3D extends Point2D means it inherits Point2D's x and y coordinate fields and adds the z coordinate. This demonstrates reuse — Point3D doesn't need to redeclare x and y, it gets them from Point2D. This is a natural modeling of 3D as an extension of 2D."
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Can Java support multiple inheritance of classes (class C extends A, B)?",
+      "options": {
+        "A": "Yes — Java fully supports multiple class inheritance",
+        "B": "No — Java supports only single class inheritance (one parent class)",
+        "C": "Yes, but only if A and B are in the same package",
+        "D": "Only with abstract classes"
+      },
+      "answer": "B",
+      "explanation": "Java intentionally does not support multiple inheritance of classes to avoid the 'diamond problem' (ambiguity when two parents have the same method). Java allows implementing multiple INTERFACES as an alternative."
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "If class B extends class A, can a B object access public methods of class A?",
+      "options": {
+        "A": "No — subclass objects cannot use superclass methods",
+        "B": "Yes — public methods of A are inherited and accessible through B objects",
+        "C": "Only if B explicitly redeclares them",
+        "D": "Only in the same package"
+      },
+      "answer": "B",
+      "explanation": "Inheritance means public and protected methods of the superclass become part of the subclass. A B object can call A's public methods directly as if they were defined in B. This is the essence of code reuse through inheritance."
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What is an abstract method?",
+      "options": {
+        "A": "A method with no parameters",
+        "B": "A method declared with the 'abstract' keyword that has no body; subclasses must implement it",
+        "C": "A private method in an abstract class",
+        "D": "A static method in an abstract class"
+      },
+      "answer": "B",
+      "explanation": "An abstract method is declared with 'abstract' and has no body (no { }): 'abstract void draw();'. It defines a contract — any non-abstract subclass must provide an implementation. Abstract methods can only exist in abstract classes."
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "In the inheritance chain Object → Point2D → Point3D, if Point2D has method 'toString()' overriding Object's, and Point3D doesn't override it, which toString() is called on a Point3D object?",
+      "options": {
+        "A": "Object's toString()",
+        "B": "Point2D's toString()",
+        "C": "Java auto-generates a new toString() for Point3D",
+        "D": "Compilation error — must override in each subclass"
+      },
+      "answer": "B",
+      "explanation": "Java's method resolution starts from the actual class (Point3D) and walks up the hierarchy until it finds an implementation. Point3D has no toString(), so Java finds Point2D's toString(). Point2D's version is used, not Object's, because Point2D already overrode it. Java always uses the closest override in the hierarchy."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Why doesn't Java allow multiple inheritance of classes but allows implementing multiple interfaces?",
+      "options": {
+        "A": "Interfaces are simpler to implement than classes",
+        "B": "Multiple class inheritance creates the 'diamond problem' — ambiguity when two parents have conflicting implementations of the same method; interfaces avoid this because they (traditionally) have no implementation",
+        "C": "Multiple inheritance is not useful in practice",
+        "D": "The JVM cannot process multiple parent classes"
+      },
+      "answer": "B",
+      "explanation": "The diamond problem occurs when class C extends A and B, and both A and B have a method 'void show()'. Which version does C inherit? This ambiguity is the diamond problem. Interfaces avoid this because they have no implementation (pre-Java 8) — the class provides the only implementation."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "In a Vehicle → Car hierarchy, if Vehicle has 'void start() { System.out.println(\"Vehicle start\"); }' and Car overrides it with 'void start() { System.out.println(\"Car start\"); }', what does '((Vehicle) new Car()).start()' print?",
+      "options": {
+        "A": "\"Vehicle start\" — because the reference is Vehicle type",
+        "B": "\"Car start\" — runtime polymorphism uses actual object type",
+        "C": "Both are printed sequentially",
+        "D": "Compilation error — cannot cast Car to Vehicle"
+      },
+      "answer": "B",
+      "explanation": "Runtime polymorphism: the actual type of the object (Car) determines which method is called, not the declared reference type (Vehicle). Even though the reference is Vehicle, the JVM dispatches to Car's start() because the actual object is a Car. This is fundamental to OOP polymorphism."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "If an abstract class has 3 abstract methods, how many must a concrete subclass implement?",
+      "options": {
+        "A": "At least 1",
+        "B": "0 — optional",
+        "C": "All 3",
+        "D": "At least 2"
+      },
+      "answer": "C",
+      "explanation": "A concrete (non-abstract) subclass must implement ALL abstract methods inherited from abstract superclasses. If even one abstract method is not implemented, the subclass must also be declared abstract. This enforces the contract that abstract methods define."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "In the hierarchy FireTruck → Truck → Vehicle, what members can FireTruck access directly?",
+      "options": {
+        "A": "Only members defined in Truck",
+        "B": "All public and protected members from both Truck and Vehicle",
+        "C": "All members from Truck, Vehicle, and Object",
+        "D": "Only members explicitly redeclared in FireTruck"
+      },
+      "answer": "C",
+      "explanation": "Inheritance is transitive. FireTruck inherits from Truck, which inherits from Vehicle, which inherits from Object. FireTruck has access to all public and protected members from the entire chain: Truck, Vehicle, and Object (like equals(), toString(), hashCode())."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "What is the 'Liskov Substitution Principle' and how does it relate to the IS-A relationship in Java?",
+      "options": {
+        "A": "Objects of superclass type can be replaced by subclass objects without altering program correctness",
+        "B": "Subclasses must have fewer methods than their superclass",
+        "C": "All classes must ultimately extend from Object",
+        "D": "Private methods cannot be overridden"
+      },
+      "answer": "A",
+      "explanation": "The Liskov Substitution Principle states that if S is a subtype of T, objects of type T may be substituted with objects of type S without breaking the program. In Java's IS-A relationship: anywhere a Vehicle is expected, a Car (as a Vehicle subtype) can be used without breaking the program — the Car must honor the Vehicle's contract."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Given abstract class Shape { abstract double area(); } and class Circle extends Shape, what happens if Circle doesn't implement area()?",
+      "options": {
+        "A": "area() defaults to returning 0.0",
+        "B": "Compilation error: Circle must be declared abstract or implement area()",
+        "C": "Runtime error when area() is called",
+        "D": "Circle inherits Shape's area() with no implementation"
+      },
+      "answer": "B",
+      "explanation": "If a concrete class extends an abstract class but doesn't implement all abstract methods, the compiler produces an error: 'class Circle must either be declared abstract or implement abstract method area()'. Java enforces the abstract method contract at compile time."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "In a multi-level inheritance (A → B → C), if all three classes define method 'void show()', which is called when 'C obj = new C(); obj.show();' is executed?",
+      "options": {
+        "A": "A's show()",
+        "B": "B's show()",
+        "C": "C's show()",
+        "D": "All three are called in order A, B, C"
+      },
+      "answer": "C",
+      "explanation": "Method resolution starts from the actual type of the object (C) and calls C's show(). C's show() completely overrides both B's and A's versions for C objects. If C's show() wants to call B's version, it must explicitly use 'super.show()'."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Why is 'extends' better understood as 'IS-A' rather than 'adds features to'?",
+      "options": {
+        "A": "IS-A is the correct mathematical term for class hierarchies",
+        "B": "'IS-A' captures the semantic meaning: a Dog IS-AN Animal, enabling substitutability and correct polymorphic use; 'adds features to' only describes syntax, not the semantic contract",
+        "C": "'Extends' is deprecated in favor of 'is-a'",
+        "D": "IS-A is required by the Java language specification"
+      },
+      "answer": "B",
+      "explanation": "While a subclass does 'add features', the IS-A relationship captures the semantic contract. Dog IS-AN Animal means a Dog must honor all Animal behaviors. This semantic constraint (Liskov Substitution) is what enables correct polymorphism. Viewing inheritance as merely 'adding features' can lead to misuse where a class inherits for code reuse despite no true IS-A relationship."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Can a subclass constructor exist without calling a superclass constructor, assuming the superclass has only a parameterized constructor (no no-arg constructor)?",
+      "options": {
+        "A": "Yes — subclass constructors never need to call superclass constructors",
+        "B": "No — if the superclass has no no-arg constructor, the subclass MUST explicitly call super(args) as the first statement",
+        "C": "Yes — the JVM provides a default superclass constructor call",
+        "D": "Only if the subclass declares all superclass fields"
+      },
+      "answer": "B",
+      "explanation": "Java automatically inserts 'super()' (no-arg superclass constructor call) as the first statement in a subclass constructor if no super() call is explicit. If the superclass has no no-arg constructor, this automatic insertion fails and the compiler requires an explicit super(args) call matching an available constructor."
+    }
+  ]
+}

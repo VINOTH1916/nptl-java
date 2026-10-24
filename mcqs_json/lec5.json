@@ -1,0 +1,396 @@
+{
+  "lecture": 5,
+  "title": "Java Applet Programming",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What are the two main types of Java programs?",
+      "options": {
+        "A": "Desktop and Mobile",
+        "B": "Application and Applet",
+        "C": "Server and Client",
+        "D": "Compiled and Interpreted"
+      },
+      "answer": "B",
+      "explanation": "Java programs are categorized into two main types: Applications (standalone programs with a main() method) and Applets (small programs embedded in web pages that run in a browser or appletviewer)."
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which class must a Java applet class extend?",
+      "options": {
+        "A": "javax.swing.JApplet",
+        "B": "java.awt.Frame",
+        "C": "java.applet.Applet",
+        "D": "java.awt.Panel"
+      },
+      "answer": "C",
+      "explanation": "A Java applet class must extend java.applet.Applet. This provides the applet with lifecycle methods (init, start, stop, destroy) and the ability to be embedded in a browser or run with appletviewer."
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "Which method is used to display output in an applet?",
+      "options": {
+        "A": "main(String[] args)",
+        "B": "System.out.println()",
+        "C": "paint(Graphics g)",
+        "D": "display()"
+      },
+      "answer": "C",
+      "explanation": "Applets use the paint(Graphics g) method for all display operations. Unlike applications that use main(), applets are event-driven and the browser/appletviewer automatically calls paint() to render the applet's content."
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "Which Graphics method is used to draw a string of text in an applet?",
+      "options": {
+        "A": "g.print(\"text\", x, y)",
+        "B": "g.drawString(\"text\", x, y)",
+        "C": "g.write(\"text\", x, y)",
+        "D": "g.setText(\"text\", x, y)"
+      },
+      "answer": "B",
+      "explanation": "g.drawString(\"text\", x, y) draws the specified text string at pixel coordinates (x, y) in the applet window. The parameters are: the string to draw, the x coordinate, and the y coordinate from the top-left origin."
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What command is used to run a Java applet?",
+      "options": {
+        "A": "java AppletClassName",
+        "B": "javac AppletClassName",
+        "C": "appletviewer htmlfile.html",
+        "D": "jrun htmlfile.html"
+      },
+      "answer": "C",
+      "explanation": "Applets are run using 'appletviewer htmlfile.html', where the HTML file contains the applet tag that references the compiled .class file. Unlike applications, applets cannot be run directly with the 'java' command."
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "Which two packages must be imported in a basic Java applet program?",
+      "options": {
+        "A": "java.io and java.util",
+        "B": "java.applet.Applet and java.awt.Graphics",
+        "C": "javax.swing and java.net",
+        "D": "java.lang and java.awt"
+      },
+      "answer": "B",
+      "explanation": "A basic applet requires 'import java.applet.Applet;' (to extend the Applet class) and 'import java.awt.Graphics;' (to use the Graphics object in the paint() method). These two imports form the foundation of applet programming."
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "Where is the coordinate origin (0,0) located in a Java applet window?",
+      "options": {
+        "A": "Center of the applet window",
+        "B": "Bottom-left corner",
+        "C": "Top-right corner",
+        "D": "Top-left corner"
+      },
+      "answer": "D",
+      "explanation": "In Java's applet (and AWT) coordinate system, (0,0) is the top-left corner. X coordinates increase to the right and Y coordinates increase downward, which is the standard pixel coordinate system for 2D graphics."
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "Which HTML tag is used to embed a Java applet in a web page?",
+      "options": {
+        "A": "<java code=\"Name.class\">",
+        "B": "<applet code=\"Name.class\" width=N height=N></applet>",
+        "C": "<embed src=\"Name.class\">",
+        "D": "<script type=\"java\" src=\"Name.class\">"
+      },
+      "answer": "B",
+      "explanation": "The <applet> HTML tag embeds a Java applet. It requires the 'code' attribute pointing to the .class file, and 'width' and 'height' attributes defining the applet display area dimensions in pixels."
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What is the compilation command for an applet source file 'MyApplet.java'?",
+      "options": {
+        "A": "appletviewer MyApplet.java",
+        "B": "javac MyApplet.java",
+        "C": "java MyApplet.java",
+        "D": "javap MyApplet.java"
+      },
+      "answer": "B",
+      "explanation": "Applets are compiled the same way as regular Java applications using 'javac MyApplet.java'. The compilation process is identical; only the execution method differs (appletviewer instead of java)."
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What is an applet in Java?",
+      "options": {
+        "A": "A Java program that runs on a server",
+        "B": "A small Java GUI program embedded in web pages",
+        "C": "A Java program with a command-line interface",
+        "D": "A Java class without methods"
+      },
+      "answer": "B",
+      "explanation": "An applet is a small Java program designed to be embedded in and displayed within web pages. It provides an interactive GUI experience in the browser window, unlike standalone applications which run independently."
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Why can't you run a Java applet using the 'java ClassName' command?",
+      "options": {
+        "A": "Applets are not compiled to .class files",
+        "B": "Applets have no main() method — they rely on a browser/appletviewer lifecycle",
+        "C": "The java command only works on Linux",
+        "D": "Applets require a special .jar extension"
+      },
+      "answer": "B",
+      "explanation": "The JVM's 'java' launcher looks for a public static void main(String[] args) method as the entry point. Applets don't have main(); instead they have lifecycle methods (init, start, paint, stop, destroy) that are called by the applet container (browser or appletviewer)."
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "In the applet HTML tag '<applet code=\"Hello.class\" width=300 height=200></applet>', what do the width and height attributes specify?",
+      "options": {
+        "A": "The size of the browser window",
+        "B": "The size of the applet's display area in pixels",
+        "C": "The font size for text in the applet",
+        "D": "The number of pixels in the .class file"
+      },
+      "answer": "B",
+      "explanation": "The width and height attributes of the <applet> tag define the dimensions of the rectangular display area allocated for the applet within the web page, measured in pixels. The applet renders its output within these boundaries."
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "What is the complete method signature of the paint method in an applet?",
+      "options": {
+        "A": "public void paint()",
+        "B": "public static void paint(Graphics g)",
+        "C": "public void paint(Graphics g)",
+        "D": "void draw(Graphics g)"
+      },
+      "answer": "C",
+      "explanation": "The correct signature is 'public void paint(Graphics g)'. It must be public (overriding a public superclass method), void (no return value), named 'paint', and take a Graphics parameter. The 'static' modifier would prevent proper object-oriented override behavior."
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "If g.drawString(\"Hello\", 50, 100) is called in an applet, where does the text appear?",
+      "options": {
+        "A": "50 pixels from the left, 100 pixels from the top (baseline of text)",
+        "B": "100 pixels from the left, 50 pixels from the top",
+        "C": "At the center of the applet window",
+        "D": "50 characters from the left margin"
+      },
+      "answer": "A",
+      "explanation": "In drawString(text, x, y), x=50 is the horizontal position (pixels from left edge) and y=100 is the vertical position (pixels from top edge). The (x, y) coordinates specify the baseline of the text, so the text appears with its baseline at (50, 100)."
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "What is the key structural difference between a Java application and a Java applet?",
+      "options": {
+        "A": "Applications use int data types; applets use float",
+        "B": "Applications have a main() entry point; applets extend Applet and use lifecycle methods",
+        "C": "Applications are compiled; applets are interpreted directly from source",
+        "D": "Applications are object-oriented; applets are procedural"
+      },
+      "answer": "B",
+      "explanation": "The fundamental structural difference is the entry point: applications have 'public static void main(String[] args)' as the starting point, while applets extend java.applet.Applet and implement lifecycle methods like init(), start(), paint(), stop(), and destroy() that the container calls automatically."
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Can you call multiple g.drawString() methods in the paint() method to display multiple text elements?",
+      "options": {
+        "A": "No — only one drawString() is allowed per paint() call",
+        "B": "Yes — each call draws text at the specified coordinates",
+        "C": "Only if you create multiple Graphics objects",
+        "D": "No — you must use a loop for multiple strings"
+      },
+      "answer": "B",
+      "explanation": "You can call g.drawString() multiple times within paint() to render multiple text elements at different coordinates. Each call independently places its text at the specified (x, y) position, allowing complex layouts with multiple text items."
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What does 'extends Applet' mean in the context of an applet class declaration?",
+      "options": {
+        "A": "The class borrows memory from the Applet class",
+        "B": "The class inherits all methods and properties of the Applet class, enabling it to run as an applet",
+        "C": "The class extends the size of the applet window",
+        "D": "The class overrides the Applet class entirely"
+      },
+      "answer": "B",
+      "explanation": "'extends Applet' creates an inheritance relationship. The user-defined applet class inherits lifecycle methods (init, start, stop, destroy), the paint method infrastructure, and the ability to integrate with a browser/appletviewer. Without this, the class cannot function as an applet."
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What is the purpose of passing a Graphics object 'g' to the paint() method?",
+      "options": {
+        "A": "It holds the text content to display",
+        "B": "It provides the drawing context and methods for rendering graphics on screen",
+        "C": "It represents the applet window dimensions",
+        "D": "It stores the HTML attributes like width and height"
+      },
+      "answer": "B",
+      "explanation": "The Graphics object 'g' is the drawing context provided by the applet framework. It contains all methods for rendering: drawString, drawLine, drawRect, fillOval, setColor, etc. Without it, there's no way to render anything on the applet's display area."
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which of the following is a correct minimal Java applet class structure?",
+      "options": {
+        "A": "public class MyApplet { public static void main(String[] args) {} }",
+        "B": "import java.applet.Applet; import java.awt.Graphics; public class MyApplet extends Applet { public void paint(Graphics g) {} }",
+        "C": "public class MyApplet extends java.lang.Object { public void paint() {} }",
+        "D": "public applet MyApplet { void paint(Graphics g) {} }"
+      },
+      "answer": "B",
+      "explanation": "A correct minimal applet requires: importing java.applet.Applet and java.awt.Graphics, declaring the class as extending Applet, and overriding the paint(Graphics g) method. All other options are missing critical elements."
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What does the 'code' attribute in the <applet> HTML tag reference?",
+      "options": {
+        "A": "The .java source file",
+        "B": "The compiled .class file",
+        "C": "A JavaScript function",
+        "D": "An HTML file"
+      },
+      "answer": "B",
+      "explanation": "The 'code' attribute in <applet code=\"MyApplet.class\" ...> references the compiled Java bytecode .class file. The browser or appletviewer loads and executes this .class file using its embedded JVM."
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "An applet's paint() method draws text at y=10. Why might the text appear clipped or barely visible at the top of the applet window?",
+      "options": {
+        "A": "y=10 is outside the applet boundary",
+        "B": "drawString uses the text baseline as the y coordinate; at y=10, the top of the characters may extend above the visible area",
+        "C": "The font size is too large for y=10",
+        "D": "g.drawString requires y >= 50 to work"
+      },
+      "answer": "B",
+      "explanation": "In drawString, the y parameter specifies the baseline of the text (the line characters sit on). Characters with ascenders extend above the baseline. At y=10, the top of uppercase letters or ascenders may be near pixel 0, potentially clipping the text. A safe minimum y is typically around 20-30 for standard fonts."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "What happens if you change the width/height attributes in the HTML <applet> tag without recompiling the Java source?",
+      "options": {
+        "A": "The applet fails to load because the .class file is invalidated",
+        "B": "The applet runs with the new dimensions without recompilation",
+        "C": "The applet uses the old dimensions from the last compilation",
+        "D": "A runtime error is thrown by appletviewer"
+      },
+      "answer": "B",
+      "explanation": "Width and height are HTML attributes processed by the browser/appletviewer, not compiled into the Java bytecode. Changing them only requires editing the HTML file; the Java code is not recompiled. The applet rendering area resizes accordingly."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Why does Java separate the Applet lifecycle into init(), start(), paint(), stop(), and destroy() instead of a single run() method?",
+      "options": {
+        "A": "To match the HTML DOM lifecycle",
+        "B": "To allow fine-grained control over initialization, rendering, pausing, and cleanup as the user navigates the browser",
+        "C": "Because the JVM cannot support a single long-running method",
+        "D": "To enable parallel execution of each phase"
+      },
+      "answer": "B",
+      "explanation": "The lifecycle separation allows the browser to manage applet resources efficiently: init() runs once at load, start() runs when the applet becomes visible, paint() handles each screen refresh, stop() pauses when the user navigates away, and destroy() releases resources on close. This enables resource-conscious behavior in browser environments."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "A developer has 'public class Demo extends Applet' but forgets to add 'import java.applet.Applet;'. What happens during compilation?",
+      "options": {
+        "A": "Compilation succeeds because Applet is in java.lang",
+        "B": "Compilation fails with 'cannot find symbol: class Applet'",
+        "C": "Compilation succeeds but appletviewer fails to run it",
+        "D": "The compiler automatically adds the import"
+      },
+      "answer": "B",
+      "explanation": "The Applet class is in the java.applet package, which is not auto-imported. Without the explicit 'import java.applet.Applet;', the compiler cannot resolve the symbol 'Applet' and produces a 'cannot find symbol' compilation error. Only java.lang is auto-imported."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "How does an applet access parameters passed from the HTML file (e.g., <param name=\"msg\" value=\"Hello\">)?",
+      "options": {
+        "A": "Through the main(String[] args) method",
+        "B": "Using getParameter(\"msg\") method inherited from the Applet class",
+        "C": "By reading from System.in",
+        "D": "Through the Graphics object g.getParam(\"msg\")"
+      },
+      "answer": "B",
+      "explanation": "The Applet class provides the getParameter(String name) method which retrieves the value of <param> tags in the HTML applet element. This allows HTML authors to pass configuration data to the applet without modifying and recompiling Java code."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Why is g.drawString() preferred over System.out.println() for displaying text in an applet?",
+      "options": {
+        "A": "System.out.println() causes SecurityException in applets",
+        "B": "Applets display in a visual panel, not a console; drawString() renders to the graphics canvas, System.out writes to terminal (not visible in the applet window)",
+        "C": "drawString() is faster than println()",
+        "D": "System.out.println() is deprecated in Java 8"
+      },
+      "answer": "B",
+      "explanation": "Applets run in a windowed GUI context. System.out.println() writes to the standard output stream (terminal/console), which users don't see in the applet window. g.drawString() renders text directly onto the applet's graphical display area, making it visible within the applet."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "What security restriction was commonly applied to applets in browsers that limited their capabilities?",
+      "options": {
+        "A": "Applets could only use 1MB of memory",
+        "B": "Applets ran in a security sandbox restricting file system access and network connections to non-originating hosts",
+        "C": "Applets could not use the Graphics class",
+        "D": "Applets could not extend other classes"
+      },
+      "answer": "B",
+      "explanation": "Browser-based applets ran in a 'sandbox' security model that restricted potentially dangerous operations: they couldn't read/write local files, couldn't make network connections to servers other than the originating host, and couldn't execute system commands. This protected users from malicious applets."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "Given an applet with width=400 and height=300, and a call to g.drawString(\"Test\", 450, 150), what happens?",
+      "options": {
+        "A": "Runtime exception is thrown",
+        "B": "The text is drawn but clipped/invisible since x=450 is outside the 400px width",
+        "C": "The applet window automatically expands to accommodate x=450",
+        "D": "drawString wraps the text to the next line"
+      },
+      "answer": "B",
+      "explanation": "The Graphics context draws to the applet's clipping region. At x=450, the text starts beyond the 400px right boundary, so it is clipped and not visible. No exception is thrown — Java's graphics system simply doesn't render content outside the visible area."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Why did most modern browsers eventually drop support for Java applets in favor of JavaScript/HTML5?",
+      "options": {
+        "A": "Java was slower than JavaScript for all tasks",
+        "B": "Security vulnerabilities, plugin requirement, poor mobile support, and the rise of capable browser-native technologies made applets obsolete",
+        "C": "Sun Microsystems prohibited browsers from supporting applets",
+        "D": "Applets could not render text or graphics"
+      },
+      "answer": "B",
+      "explanation": "Applets required the Java browser plugin (a major security attack surface), didn't work on mobile devices, had frequent security vulnerabilities, and required plugin installation. HTML5 Canvas, CSS3, and JavaScript became capable enough to replicate applet functionality natively, making the Java plugin unnecessary."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "If an applet class overrides paint(Graphics g) without calling super.paint(g), what potential issue arises?",
+      "options": {
+        "A": "The applet fails to compile",
+        "B": "The background may not be properly cleared, causing graphical artifacts on repaint",
+        "C": "The Graphics object becomes null",
+        "D": "The applet window will not display at all"
+      },
+      "answer": "B",
+      "explanation": "The superclass Applet.paint() (inherited through Component) typically clears the background before drawing. Skipping super.paint(g) means the background clearing step may not occur, causing previous renderings to remain visible when the applet repaints, resulting in graphical 'ghosting' or artifacts."
+    }
+  ]
+}

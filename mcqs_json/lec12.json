@@ -1,0 +1,396 @@
+{
+  "lecture": 12,
+  "title": "Demonstration V (Loops and Scope)",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "Which loop checks its condition BEFORE executing the body?",
+      "options": {
+        "A": "do-while loop",
+        "B": "for loop",
+        "C": "while loop",
+        "D": "Both B and C"
+      },
+      "answer": "D",
+      "explanation": "Both the for loop and while loop check their condition before executing the body. If the condition is initially false, the body never executes (0 iterations). The do-while loop is the only one that checks after the first execution."
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which loop guarantees at least one execution of the body?",
+      "options": {
+        "A": "while loop",
+        "B": "for loop",
+        "C": "do-while loop",
+        "D": "All loops guarantee at least one execution"
+      },
+      "answer": "C",
+      "explanation": "The do-while loop executes its body FIRST and then checks the condition. This guarantees the body runs at least once, even if the condition is initially false. This is useful when you need to execute something before the first check (like reading user input)."
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is the syntax of a do-while loop in Java?",
+      "options": {
+        "A": "do { body } while(condition);",
+        "B": "while(condition) do { body }",
+        "C": "do(condition) { body }",
+        "D": "loop { body } until(condition);"
+      },
+      "answer": "A",
+      "explanation": "The do-while loop has the body in braces after 'do', followed by the condition in parentheses after 'while', ending with a semicolon. The semicolon at the end of the while condition is mandatory and commonly forgotten."
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What does the 'break' statement do inside a loop?",
+      "options": {
+        "A": "Skips the current iteration and goes to the next",
+        "B": "Exits the loop immediately, regardless of the loop condition",
+        "C": "Pauses the loop for 1 millisecond",
+        "D": "Resets the loop counter to zero"
+      },
+      "answer": "B",
+      "explanation": "break immediately terminates the loop and transfers execution to the statement following the loop's closing brace. The loop condition is not checked again. For nested loops, break exits only the innermost loop."
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What does the 'continue' statement do inside a loop?",
+      "options": {
+        "A": "Exits the loop immediately",
+        "B": "Skips the rest of the current iteration and proceeds to the next iteration",
+        "C": "Restarts the entire loop from the beginning",
+        "D": "Jumps to a labeled statement outside the loop"
+      },
+      "answer": "B",
+      "explanation": "continue skips the remaining statements in the current iteration and jumps to the loop's update (for loop) or condition check (while/do-while), starting the next iteration. Unlike break, it doesn't exit the loop."
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What are the three components of a for loop in Java?",
+      "options": {
+        "A": "declare, test, execute",
+        "B": "initialization; condition; update",
+        "C": "start, check, end",
+        "D": "begin, while, increment"
+      },
+      "answer": "B",
+      "explanation": "A for loop has: initialization (runs once before the loop), condition (checked before each iteration), and update (runs after each iteration). Example: for(int i=0; i<10; i++) — initialization: int i=0, condition: i<10, update: i++."
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "How do you write an infinite loop using a for statement?",
+      "options": {
+        "A": "for(int i=0; i<0; i++)",
+        "B": "for(;;)",
+        "C": "for(int i=0; i!=0; i--)",
+        "D": "for(int i=0; i<-1; i++)"
+      },
+      "answer": "B",
+      "explanation": "for(;;) creates an infinite loop because all three parts (initialization, condition, update) are omitted. With no condition, Java treats it as always true. An infinite for loop is typically controlled with a break statement inside the body."
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "Does Java support recursive functions?",
+      "options": {
+        "A": "No — Java does not support recursion",
+        "B": "Yes — a Java method can call itself",
+        "C": "Only if the method is declared with 'recursive' keyword",
+        "D": "Only for static methods"
+      },
+      "answer": "B",
+      "explanation": "Java fully supports recursion. A method can call itself, creating a recursive call. Recursion requires a base case to terminate. Common examples include factorial, Fibonacci sequence, and tree traversal."
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What is the correct for loop to print the first 10 positive integers (1 through 10)?",
+      "options": {
+        "A": "for(int i=0; i<10; i++) System.out.println(i);",
+        "B": "for(int i=1; i<=10; i++) System.out.println(i);",
+        "C": "for(int i=1; i<10; i++) System.out.println(i);",
+        "D": "for(int i=0; i<=10; i++) System.out.println(i);"
+      },
+      "answer": "B",
+      "explanation": "To print 1 through 10: initialize i=1 (start at 1, not 0), condition i<=10 (include 10), increment i++. Option A starts at 0 and excludes 10. Option C starts at 1 but excludes 10. Option D starts at 0 and includes 11 values (0-10)."
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What is the scope of a variable declared in the for loop's initialization (e.g., 'for(int i=0; ...)')?",
+      "options": {
+        "A": "Accessible throughout the entire method",
+        "B": "Accessible only inside the for loop (initialization, condition, update, and body)",
+        "C": "Accessible until the end of the enclosing block",
+        "D": "Accessible in all loops in the method"
+      },
+      "answer": "B",
+      "explanation": "A variable declared in the for loop's initialization (like 'int i') has scope limited to the for statement itself: the initialization, condition, update expressions, and the loop body. It is not accessible outside the loop."
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "When is a do-while loop preferred over a while loop?",
+      "options": {
+        "A": "When the loop body must never execute",
+        "B": "When the loop body must execute at least once before the condition is checked",
+        "C": "When performance is critical",
+        "D": "When the loop counter must count down"
+      },
+      "answer": "B",
+      "explanation": "do-while is preferred when the body must always execute at least once. A classic use case is a menu-driven program that must display the menu at least once before checking if the user wants to exit, or reading input that is then validated."
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "What is the output of this code? int i=0; while(i<3) { System.out.print(i + \" \"); i++; }",
+      "options": {
+        "A": "1 2 3",
+        "B": "0 1 2",
+        "C": "0 1 2 3",
+        "D": "1 2"
+      },
+      "answer": "B",
+      "explanation": "The while loop starts with i=0, checks i<3 (true), prints 0, increments to 1. Continues printing 1, then 2. When i=3, condition 3<3 is false, loop exits. Output: '0 1 2 ' (with trailing space after each number)."
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "What is the output of: for(int i=1; i<=5; i++) { if(i==3) continue; System.out.print(i + \" \"); }",
+      "options": {
+        "A": "1 2 3 4 5",
+        "B": "1 2",
+        "C": "1 2 4 5",
+        "D": "3 4 5"
+      },
+      "answer": "C",
+      "explanation": "The loop iterates i from 1 to 5. When i==3, continue skips the print statement and goes to i++ (next iteration). So 1, 2 are printed, 3 is skipped, then 4, 5 are printed. Output: '1 2 4 5 '."
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "What is the output of: for(int i=1; i<=10; i++) { if(i==5) break; System.out.print(i + \" \"); }",
+      "options": {
+        "A": "1 2 3 4 5",
+        "B": "1 2 3 4",
+        "C": "5 6 7 8 9 10",
+        "D": "1 2 3 4 6 7 8 9 10"
+      },
+      "answer": "B",
+      "explanation": "The loop iterates from 1. When i==5, break exits the loop immediately BEFORE printing 5. The print statement after break is not reached when i=5. So only 1, 2, 3, 4 are printed."
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "What is a common use case for 'while(true)' with a break statement?",
+      "options": {
+        "A": "Syntax error — while(true) is not valid Java",
+        "B": "Implementing a loop where the exit condition is checked in the middle or end of the loop body",
+        "C": "Creating a loop that runs exactly once",
+        "D": "It is identical to a for(;;) loop with no practical use"
+      },
+      "answer": "B",
+      "explanation": "while(true) with break creates an infinite loop that exits when a condition inside the body is met using break. It is useful when the exit condition is determined mid-loop (after some processing), making it cleaner than evaluating complex conditions in the while() header."
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "What does the following code print? int x=10; { int y=20; System.out.println(x+y); } System.out.println(x);",
+      "options": {
+        "A": "30 then 30",
+        "B": "30 then 10",
+        "C": "Compilation error — y is out of scope",
+        "D": "20 then 10"
+      },
+      "answer": "B",
+      "explanation": "Inside the block, both x and y are accessible, so x+y = 10+20 = 30 is printed. After the block, y is out of scope but x (declared in the outer scope) is still accessible. println(x) prints 10. No error because x is in scope for both statements."
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What is the output of the do-while loop: int i=5; do { System.out.print(i + \" \"); i--; } while(i>5);?",
+      "options": {
+        "A": "Empty — condition is false so loop doesn't execute",
+        "B": "5 (prints once, then exits because i=4 is not >5)",
+        "C": "5 4 3 2 1",
+        "D": "Infinite loop"
+      },
+      "answer": "B",
+      "explanation": "The do-while executes the body first: prints 5, decrements i to 4. Then checks the condition i>5: 4>5 is false, so the loop exits. Even though the condition was initially false (5 is not > 5), the body ran once — this is the key behavior of do-while."
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Can a continue statement be used inside a do-while loop?",
+      "options": {
+        "A": "No — continue only works in for and while loops",
+        "B": "Yes — continue in do-while skips to the condition check",
+        "C": "Only if the do-while has a counter variable",
+        "D": "continue inside do-while restarts from the do keyword"
+      },
+      "answer": "B",
+      "explanation": "continue works in all Java loop types (for, while, do-while). In a do-while, continue skips the remaining body statements and jumps to the condition evaluation at the while() part. The condition is then checked to determine whether another iteration runs."
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What is the potential problem with a recursive function that lacks a proper base case?",
+      "options": {
+        "A": "It compiles but prints nothing",
+        "B": "It causes a StackOverflowError because each recursive call adds a frame to the call stack",
+        "C": "It runs infinitely without errors",
+        "D": "It is a compilation error"
+      },
+      "answer": "B",
+      "explanation": "Without a base case, a recursive method calls itself indefinitely. Each call adds a new stack frame to the JVM's call stack. Eventually, the stack runs out of memory and throws java.lang.StackOverflowError, terminating the program."
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "How many times does the for loop body execute? for(int i=1; i<=10; i+=2) { System.out.println(i); }",
+      "options": {
+        "A": "10 times (i = 1,2,3,...,10)",
+        "B": "5 times (i = 1,3,5,7,9)",
+        "C": "6 times (i = 1,3,5,7,9,11 but 11>10 so stops)",
+        "D": "4 times (i = 2,4,6,8)"
+      },
+      "answer": "B",
+      "explanation": "The loop starts at i=1 and increments by 2 each iteration (i+=2). Values of i: 1, 3, 5, 7, 9. When i=11, the condition 11<=10 is false and the loop stops. Total: 5 iterations, printing odd numbers 1 through 9."
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "What is the output of: int sum=0; for(int i=1; i<=100; i++) { if(i%2==0) continue; sum+=i; } System.out.println(sum);",
+      "options": {
+        "A": "5050 (sum of 1 to 100)",
+        "B": "2550 (sum of even numbers 1-100)",
+        "C": "2500 (sum of even numbers 2-100)",
+        "D": "2500 (sum of odd numbers 1-99)"
+      },
+      "answer": "D",
+      "explanation": "The continue skips even numbers (i%2==0). Only odd numbers (1,3,5,...,99) are added to sum. Sum of odd numbers 1 to 99: there are 50 odd numbers, and their sum = 50² = 2500."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "What is the behavior of nested loops with break? outer: for(int i=0;i<3;i++) { for(int j=0;j<3;j++) { if(j==1) break; System.out.print(i+\"\"+j+\" \"); } }",
+      "options": {
+        "A": "00 01 02 10 11 12 20 21 22",
+        "B": "00 10 20",
+        "C": "00 01 10 11 20 21",
+        "D": "Only 00"
+      },
+      "answer": "B",
+      "explanation": "break without a label exits only the innermost (j) loop. For each value of i, j starts at 0: j==0, print (i,0) then j==1, break inner loop. So for i=0: prints 00; i=1: prints 10; i=2: prints 20. Output: '00 10 20'."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "What is a labeled break? In 'outer: for(...) { inner: for(...) { if(cond) break outer; } }', what does 'break outer' do?",
+      "options": {
+        "A": "Breaks only the inner loop",
+        "B": "Breaks both the inner and outer loops, transferring control to the statement after the outer loop",
+        "C": "Breaks all loops in the method",
+        "D": "Causes a compilation error — labels are not valid in Java"
+      },
+      "answer": "B",
+      "explanation": "A labeled break (break label) exits the loop identified by the label, not just the innermost loop. 'break outer' exits the outer for loop entirely (along with the inner), transferring control to the statement after the outer loop's closing brace."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "What is the difference in scope between: (A) 'int i=0; while(i<5){...i++;}' and (B) 'for(int i=0; i<5; i++){...}'?",
+      "options": {
+        "A": "No difference — both create i in the same scope",
+        "B": "In A, i is accessible after the while loop; in B, i is scoped to the for loop only",
+        "C": "In B, i is accessible after the for loop; in A, i is not",
+        "D": "Both restrict i to the loop body only"
+      },
+      "answer": "B",
+      "explanation": "In A, 'int i' is declared before the while loop in the enclosing scope (method body), so i remains accessible after the loop exits. In B, 'int i' is declared in the for-loop initialization, limiting its scope to the for loop. After the for loop, i cannot be accessed."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "How do you implement a recursive factorial function, and what is the base case?",
+      "options": {
+        "A": "int fact(int n) { return n * fact(n-1); } — no base case needed",
+        "B": "int fact(int n) { if(n<=1) return 1; return n * fact(n-1); } — base case is n<=1",
+        "C": "int fact(int n) { if(n==0) return 0; return n * fact(n+1); }",
+        "D": "int fact(int n) { return fact(n-1) * n; if(n==0) return 0; }"
+      },
+      "answer": "B",
+      "explanation": "A correct recursive factorial: base case 'if(n<=1) return 1' stops recursion (0! = 1! = 1). The recursive case 'return n * fact(n-1)' reduces the problem. Without the base case (A), the recursion never stops and causes StackOverflowError."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "What is the output of: int x=1; for(int i=1; i<=4; i++) { x*=i; } System.out.println(x);",
+      "options": {
+        "A": "10",
+        "B": "24",
+        "C": "16",
+        "D": "4"
+      },
+      "answer": "B",
+      "explanation": "This computes 4! (factorial): x starts at 1. i=1: x=1*1=1. i=2: x=1*2=2. i=3: x=2*3=6. i=4: x=6*4=24. Output: 24. This is a common pattern for computing factorials using a for loop."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Can a variable declared inside a for loop body be used in the loop's update expression (the third part of for)?",
+      "options": {
+        "A": "Yes — the update runs inside the body context",
+        "B": "No — the update expression is outside the loop body's scope",
+        "C": "Only if the variable is declared with final",
+        "D": "Yes, but only for primitive types"
+      },
+      "answer": "B",
+      "explanation": "The for loop structure is: initialization; condition; update. The update expression runs AFTER the body but is lexically part of the for statement, not inside the body's { }. Variables declared inside the body { } are out of scope in the update expression."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "What is the time complexity of a nested for loop where both loops run n times (no break or continue)?",
+      "options": {
+        "A": "O(n)",
+        "B": "O(n log n)",
+        "C": "O(n²)",
+        "D": "O(2n)"
+      },
+      "answer": "C",
+      "explanation": "With n iterations of the outer loop and n iterations of the inner loop for each outer iteration, the total number of iterations is n × n = n². This gives O(n²) time complexity, which is typical of naive sorting algorithms like bubble sort."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Why might a while loop be preferable to a for loop for reading input until a sentinel value?",
+      "options": {
+        "A": "while loops are faster for I/O operations",
+        "B": "while(condition) is more natural when there's no fixed counter — the loop runs based on a condition checked at the start, which fits 'keep reading until done'",
+        "C": "for loops cannot handle I/O operations",
+        "D": "while loops automatically import Scanner"
+      },
+      "answer": "B",
+      "explanation": "A for loop is natural when you know the number of iterations (for i=0 to n). A while loop is natural for indefinite iteration based on a condition: 'while(input != -1) { read input; process; }'. The logic more clearly expresses 'continue until sentinel' without forcing an artificial counter variable."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "In Java, does 'continue' inside a switch statement inside a for loop skip to the next loop iteration?",
+      "options": {
+        "A": "Yes — continue always affects the nearest enclosing loop",
+        "B": "No — continue inside a switch inside a loop is a compilation error",
+        "C": "No — continue only skips the switch case",
+        "D": "It depends on whether the switch is inside the loop body"
+      },
+      "answer": "A",
+      "explanation": "continue applies to the nearest enclosing loop, even if the continue statement is inside a switch statement within that loop. switch is not a loop construct, so continue skips past it to the loop's next iteration. This is a subtle but important distinction from break, which exits the nearest switch OR loop."
+    }
+  ]
+}

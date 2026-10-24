@@ -1,0 +1,461 @@
+Programming in Java
+Prof. Debasis Samanta
+Department of Computer Science and Engineering
+Indian Institute of Technology, Kharagpur
+Lecture - 36
+Applet Programming – III
+So, we are discussing about Applet. And in the last module, we have discussed the
+standard methods which can be included in an applet. Now, we will discussed about the
+HTML concept, as you know an applet cannot be executed independently. So, in order to
+view an applet, we have to host this applet code into an HTML page. And then this
+HTML page will be browsed by means of a web browser like say Internet Explorer or
+Netscape navigator or the hot Java browser. And in Java JDK, there is a built-in viewer
+also called the applet viewer.
+Now, whatever it is there, first the idea is that applet should be hosted by an HTML page
+embedded into an HTML page. So, in this module, we will see how this hosting is
+possible using HTML contact. Actually, one specific tag that is there in HTML; HTML
+stands HyperText Markup Language is called the applet tag. So, we have to discuss
+about applet tag here.
+(Refer Slide Time: 01:30)
+
+Now, so applet tag is basically let us first see exactly how a typically an HTML page
+looks like. Now, here you see HTML is a basic tag-based as we said, now this is
+
+basically HTML, and this is the end. So, these are the tag, it is called the HTML tag that
+means, this indicates that this is the HTML page 1.
+So, if this is the tag and then browser use it no issue, the browser will see the blank page
+here, because it in this tag nothing is there. Now, the next that we can do is that head. So,
+head is basically we can write, what is the title that will be there. So, head is basically
+with one HTML browser will show it, here the browser view is not there. So, a simple
+HTML file if you use it, the browser will show that.
+And then within this body, we have a text is a header 1, header 1 is a very big font large
+font. So, this will display here in the header font. Now, you see there the different tag we
+are using, so this is another tag B. So, B tag indicates that, it will display some font in a
+bold as well as I tag to indicate that italics. So, this basic text will be displayed both in
+bold and italics form.
+The next tag is H 2, H 2 is the text is basically small tag. And here not H 1 is the very
+bigger font, H 2 is a little bit smaller medium size font, so this will display here. And you
+see there is another a ref is basically link, so this is another tag a, and then closing tag.
+So, every tag is here starting and then closing syntax. And then these basically see the
+link that means, from there this is the hyperlink if we do it, so this and in this basically
+hyperlink. Hyperlink means if we click it, it will go to this link actually that means, it
+moves to browser moves the focus from this link this page to some other distant page.
+Then there are many other images also can be included in the text. And in order to
+include an image, so image img is the tag for that. So, these basically display this kind of
+image on your screen. And the comment if you want to include in HTML, it basically
+comment will be included within this angular, then exclamation then dot, and then it is
+closing is this one.
+So, these are the few tags that I have shown here, so that how the HTML page can be
+designed using the tag only. And the browser is basically run and HTML page. So,
+browser running an HTML page, this is basically in an interpretative manner. So, it will
+basically the first tag, then second tag, next tag and so on. As it is interpretative not
+compilation nothing is there. So, if there is any mistake in these tags, say suppose H 1 is
+there, no closing this one, so this means that this will completely ignore. So, the browser
+will not do anything ignore, it does not mean that the next portion will not be executed.
+
+So, the next portion will be interpreted and executed. So, it is an interpreter, and it will
+see every tag, and interpret every tag, and then display or paint on the screen. So,
+basically, the browser will paint on a window actually. So, this is basically the HTML
+page concept, and one more important thing that HTML tags whatever you can it is a
+case insensitive whether capital letter, small letter, it does not matter for the browser, the
+browser will do it correctly. So, is a case so is whether lower case on an upper case that
+is not the issue there; so, this way the HTML page can be executed there.
+(Refer Slide Time: 05:09)
+
+Now, we have discussed about the different tags. There is one special tag that is called
+the applet tag. So, this special tag is basically to include the code that you want to
+include in an HTML page. So, the tag looks like an applet, and this code indicates that
+what is the class file in the Java class compile version of the Java applet program.
+And then this is basically width and height that mean, it shows that what how much size
+of the applet would be in the windows that the browser will take to display your applet.
+So, these are the very nominal applet tag concept that is there. And then you can use it,
+and you can so if you can do it, your browser can run your applet from the machine
+current machine.
+
+(Refer Slide Time: 05:55)
+
+Now, so this is the idea about, but there are few hinge is there is that now applet is little
+bit disregarded in the sense that many browsers, they do not support until unless you use
+a special plugin for that. However, the chrome totally ignore any applet tag in the HTML
+page. Internet explorer till version 4.0, it was supporting and after that, it stops
+supporting.
+Then Mozilla can supports if you use one special plugin for that. And this is the Netscape
+navigator, it always favors the applet code applet tag in an HTML page which means,
+Netscape navigator browse successfully. And the opera is another browser also which
+does not support it. So, many browser they do not support many browser support
+conditionally under the usage of the plugin, whatever it is there. So, these are the basic
+restriction, and restrictions there is a certain reason for this kind of restriction, mainly it
+is from the security point of view. So, many browsers have stopped supporting applet
+code in HTML.
+
+(Refer Slide Time: 07:19)
+
+Now, see applet code; whenever it was initiated initially, applet code has many other
+parameters for the complete specification of an applet.
+(Refer Slide Time: 07:33)
+
+The parameters that are there in an applet code are like which are some specification
+optional, and some are necessary. Those are optional, which are written in the square
+bracket look like. So, for example, this is the applet tag initial, and this is the starting of
+the applet. And there if you see within this there is a few portions which you can include,
+and then this is in the applet portion; so, this is very important. So, this and then curly
+
+brackets is basically the different parameter that the applet tag will allow to specify for
+the special viewing of your applet. So, this is there, and what is the special thing that can
+be here you see.
+And the codebase is the one parameter, archives are their code already we have
+discussed, then an object, alt, name, width, height, align, vspace, and hspace are the few
+things that we have. And apart from this param name also somethings are there. If the
+param name is there, then separate angular brackets should be used for each parameter
+name. Param name probably for passing parameter or passing input from HTML page to
+an applet, we have discussed you can recall.
+Now, here we can see out of this different specification that is possible for an applet, few
+things are mandatory. These are code, width, and heights, these are mandatory that
+means, you have to give it. If you do not give it, your applet the tag will not be executed
+by a browser successfully. Whereas the other the code based, archives, object, alt, name,
+and align, all these things are optional. And then param name also optional, you can have
+you also may not have it. So, these are the different tags specification; so, for the applet
+tag is concerned are there.
+(Refer Slide Time: 09:37)
+
+Now, in our next few slides, we will see exactly what is the meaning of each
+specification in the applet tag?
+
+(Refer Slide Time: 09:39)
+
+Now, these are the ok, I have listed the few things that you can take your own time to go
+through, and then understand about it, but I will give the detail description in next slides.
+(Refer Slide Time: 09:47)
+
+And as I told you HTML also has the different versions. And HTML5 onwards, the
+applet tag is not supported. Rather instead of applet tag, they supported some other
+concept, it is called the object, I will discuss this thing.
+
+(Refer Slide Time: 10:07)
+
+Now, first is basically the code. Code as it is the as you have learned it, within this
+applet. The code indicates that what is the class file that you want to include width and
+height specification. So, this is the minimum portion that it should have in your applet
+tag to run an applet.
+So, this is basically code is there. And then code is basically here one important point
+that you should note. Whenever you run an HTML file hosting a class file, it basically
+requires two things. The HTML file itself, it should be saved somewhere, and then
+the .class file should be saved somewhere. So, if you do not specify anything explicitly,
+then your browser assume that the .class file and HTML file belong to the same
+directory.
+If you want to explicitly mention that it is not in the same directory, but somewhere else,
+then we should use the codebase. So, codebase usually accompanied by code, if you
+want to tell that the HTML file is here, and then code is somewhere else. Regarding
+codebase, we will discuss the details. ah
+So, and another thing is that, so for the width and height whenever it is the applet code, it
+is not necessary to maintain in this order. It also can be in any order like here width,
+height. And also another thing is that this is the width in pixel, those things also not
+necessary to put in a double quote, but is customary to for improving the viewer view
+(Refer Time: 11:51). So, we usually put in the double quote, but this needs to be put in
+
+the double quote always. So, here is an example like, so this is also correct, and this is
+also correct. So, these are the code and this code and with height and width are the
+mandatory things. Mandatory means, you have to use it without using you cannot do
+that.
+(Refer Slide Time: 12:07)
+
+Now, let us come to the concept of the codebase. So, codebase is basically showing the
+relative address of your or base address of your applet. Now, what exactly the idea it is
+that if you want to I mean import your class file from a distance machine from your local
+other than your local. So, browser from which machine it is browsing, it is called the
+local to that browser. And if you want to have access from some distance machine
+remote machine, then the through a browser that can be connected.
+Here is an example say https indicates that it is the location of the remote repository,
+where this class file is there. So, this means that your browser will connect to this size,
+and then check this that class file import it into to your local machine, and then this
+applet code will be executed. So, applet code is not necessary to be executed from your
+own machine from the distance.
+Usually, in case of internet programming, we are we have to do that. You can import
+your HTML page from the remote machine, and importing means all the class file
+applets, all the image, all the audio, video files, whatever it is required. Needs to be
+fetched into your browser machine, and then it will be executed there in your browser
+
+machine, so the codebase is for that purpose. We can explicitly mention that which is the
+location where your class file is there.
+Even if you use the same thing in your own local machine also, but it is that the HTML
+file is in belongs to one directory, whereas the class file belongs to the separate directory.
+So, the base is basically here, which is the base directory and with respect to this base,
+which is the class file that you want to use. So, in the codebase also that we can use it,
+but in that case, we have to use the file command here. So, file and then the location of
+the directory, and then the name of the class file that you want to use it. So, this is the use
+of the tag the codebase.
+(Refer Slide Time: 14:29)
+
+And the archive is there for this purpose is that say suppose, as I told you applet can be
+viewed from your local machine containing its elements from the distance machine. If
+you want to do that, then every time you want some things to be included in your applet,
+it needs to be connected to your remote machine and then import it, and then store it, and
+then display.
+So, instead of whatever the files that are required for that HTML page, you can put into
+an archive in a jar file it is called here, for example, all files that are required for an
+HTML page can be put into one jar file. Then the browser that it will do is that the
+browser will import only once with an only a single connection to the remote server, and
+then fetch it into a local machine.
+
+And then from this jar file whatever the file that is required image or video, audio or any
+other class file will be extracted from there and will be referred to this one. So, this
+archive commands will basically give an idea about that which is the jar file that needs to
+be fetched only once in a lifetime of the viewing. So, this is an idea about the archive tag
+specification in the applet code.
+(Refer Slide Time: 15:54)
+
+And then object. Object as I told you HTML5, and upwards version of the HTML, they
+have stopped supporting applet code. So, in that case is basically allow to use the object
+code. So, object code is the same as the applet tag actually; so an applet is not there. So,
+here basically the same instead of applet, you use the object that is all; so, this basically
+the idea about. And other code-based, then width, height everything is applicable to that
+only. So, an object is an alternative to an applet tag that is the newer version in the
+HTML page.
+
+(Refer Slide Time: 16:32)
+
+And here again if you want to suppose, you do not know whether your browser will
+support, whether HTML4 or HTML2 or HTML5 or upwards so, sometimes to make it
+more robust for images or compatible with any versions; so some HTML designer used
+both objects as applet code here. For example, an object is there here, and then an applet
+code is also there. So, if it fetches for the, for example, HTML4, you want your browser
+supporting HTML4, then object will not be applicable to that HTML browser. So, in that
+case, you can use this one; so all these will be ignored, but an applet will be considered
+in that case.
+On the other hand, another version which supports HTML5, then the only object; so, this
+will be ignored by that browser, only this portion will be considered, and the applet that
+file will be successfully browsed. So, this is the idea about that both object and applet
+can be merged together, to make it more compatible with your browser system.
+
+(Refer Slide Time: 17:44)
+
+And width and height as I told you specification of the height and width by changing this
+parameter, we can resize your applet view, and that can be done from your applet from
+the HTML page itself, so that is why the ok. Before viewing the HTML, so HTML will
+be footed in front of within a set of text in a multimedia document like it can include
+audio, image, and then video also, in addition to the hyperlink text, hypertext we can say.
+And then the applet is basically a window within this text also, it appears as a living on
+things for the browser. So, in that case, we can specify the width and height, how much
+space of the total view area of your display that it will take to display your applet. So,
+this is the width and height is an essential one parameters ok.
+
+(Refer Slide Time: 18:49)
+
+And then the alt. Say suppose your applet, there are some mistakes in your class file or
+there is a problem that it is not able to load it successfully, then the browser can give
+some message to the user. So, here the message that can be given by means of all
+statement. In case, suppose this is a problem right, your browser faces the problem of
+fetching this class or executing this class file, then it will be there; otherwise, this will
+not be executed.
+So, this is basically for giving users good interaction or impressions about viewing a
+page. So, alt statement is used there. So, alt is basically an alternate text within this
+double quote that can be used. And you see one thing here all these things will be within
+this applet tag, whatever this codebase, code, alt, width, height, name whatever it is
+there. Those are the within this applet state and finally, this is called the final applet tag.
+
+(Refer Slide Time: 19:55)
+
+Next is the name. And in your HTML page, you can use many applets into the same
+HTML page or sometimes applet can be used in a distributed programming system also.
+From your machine, you are running an applet. From another machine, another user
+running, another applet and both the applets need to be communicated to each other. And
+for this communication, so that actually one specification that is required that which
+applets communicate to which one that mean, each applets should have their own
+identity; this identity can be mentioned by means of name.
+So, name is the one specification that is there by which we can specify that if each applet
+has its own unique name. And then by this name the applet in your applet programming
+using the method get the name of the applet can be understood, and using this under say
+some communication can be established or some communication protocol can be
+implemented, so that is why the name that specification has been there in the applet. And
+then so name can be obtained by the getApplet method not get name ok.
+
+(Refer Slide Time: 21:17)
+
+So, these are there are a few more method tags align. Align means you can view your
+applet in a particular position. For example, these are so many positions left, right, top,
+bottom, and absolute bottom, whatever. There are many other specification that you can
+find you can mention, so that applet will be placed accordingly whether left side, right
+side, top, bottom absolute top, top of some text like this one. So, these are basically
+placing one applet in an HTML page HTML area view windows that are browsed by the
+applets.
+(Refer Slide Time: 21:51)
+
+And VSPACE and HSPACE is basically the use of this say suppose, this is the total
+HTML view of your total HTML page. And there some text like, and here also some text
+like and where you want to display your applet like suppose. Now, so VSPACE,
+HSPACE is basically how much gap that you want to give between the text and this
+applet. And so it is basically VSPACE.
+Similarly, if there is some other text, it is there or some other applet is where you want to
+place it, then this basically HSPACE means what is the gap that you want to allow
+between the text or this one. So, is basically VSPACE, HSPACE totally is say that other
+than this is the applet view, this is the width and height is basically how much space that
+you want to do it. Sometimes it is basically used for a good impression of the applets,
+and then an artistical presentation of this applets that in there is HTML that can be
+controlled using this VSPACE, HSPACE commands.
+(Refer Slide Time: 22:59)
+
+And parameter name param is another important parameter, extensively used one
+parameter that is required to specify the input to an applet as you know an applet cannot
+take the direct input from the browser machine or cannot take direct input from the
+distance machine also. So, if you want to pass any input to your applet, then in the
+HTML page the parameter names to be mentioned there.
+Now, the syntax is like this. The tag specification is called the param, the name of the
+parameter. For example, in this example, as we see the font name is the name of a
+
+parameter, and value is basically the courier, so that means, this is the parameter the font
+name the value is courier. Then font size is another parameter, whose value is 14 at
+present. The name is image source, the value is basically the file location.
+And then name is another is that audio source, the value is this one. So, here we can see
+these are the different parameters, whose values are like this which we want to pass from
+this HTML page to this applet when it is in execution. So, whenever the applets start its
+execution, it will refer whatever the parameter that is mentioned there in this HTML
+applet code will obtain the value from here, and it will use it.
+So, for this purpose the parameters concept param tag is there defined there. And this tag
+you see this is an applet, an applet is there, this is the applet part. Yeah, this is basically
+the applet tag, but within this applet tag, separate parameter tags are to be mentioned
+there. So, and then whole the things will be basically the applet tag for the HTML page.
+Now, so param name, so how an applet can get these values. So, for this purpose, the get
+parameter methods are there defined in the applet class, and which can be called for this.
+And then can be can get these values from the HTML itself. So, if you change this values
+from your machine, and then this will display the different values to your applets. Now,
+let us see one example to illustrate the use of this one. And this is supposed the HTML
+page that you have defined, and my class .class is our applet, which basically wants to
+take input from this value. And then how the applet code will be there.
+(Refer Slide Time: 25:40)
+
+Now, here is the applet code which looks like this here if you see the paramdemo is the
+name of the applet, which you are going to demo it, and these are the different
+parameters called the field of this class like fontname, fontsize, leading, active. All these
+are the variable as we have declared in a class; so this is the class members.
+And here you see the methods start is basically to be either it is in the start method or
+initializes method, you can read the value. So, here, in this case, we can read the value
+from the start method or like this one. Now, here as you see all the parameter values that
+will be read from the HTML page, they will read from a string. So, let the name of the
+string be param and read. And then from this parameter string, we can convert into a
+different form.
+So, is a get parameter font name, which is there in an HTML page, you will get this and
+then font name will be there. So, this is the basic parameter that is there font name, font
+name from a courier. So, the value will be there, so the font name is currently the courier.
+And it is basically the try-catch is mentioned, if in case suppose, this value is not present
+in the HTML page like this one.
+And then so there is another param is if you want to convert in integer also, because it is
+read as a string, so we can change into integer. So, integer class, then present, it will
+convert the string to an integer, so font size, and then this one ok. Now, so this way as
+the different parameters, there are few more parts of the text that are there, code is there.
+The different parameters can be read using this get parameter method is there.
+
+(Refer Slide Time: 27:31)
+
+Now, other parameters also gets parameter leading and then get parameter account to
+enable. All these values will be read from the HTML page. And then the once the value
+is loaded into your applet, and then we can use them in your paint method; so, here is the
+paint method. And you see whatever the value that we could read, it from the HTML
+page like font name, font size, reading, and active.
+And then they can be printed on the screen like in this case, and then if you run this
+applet using the HTML file that we have previously shown, it will basically like this one.
+So, what we want to say here is that whatever the parameters, we want to pass from an
+HTML page to an applet, they can be embedded into the HTML page itself within the
+applet tag by the special tag specification called the param. So, this way we can pass the
+parameter and we can run this like this. So, usually the HTML page designer have this
+provision to pass the different values or there are many other ways also, it can be there.
+
+(Refer Slide Time: 28:46)
+
+One good example that we can have it, then we can see the applet is ok, it is just a
+windows program. And this is the HTML page for this applet, it will look like.
+(Refer Slide Time: 28:53)
+
+The applet finding an applet size; now sometimes it is required to interact with the applet
+size which some situations, then we need to know what is the current size of the applet.
+So, the current size of the applet can be understood using another method called the get
+size, which is defined in applet methods are there. So, this basically get the applet size
+like.
+
+(Refer Slide Time: 29:18)
+
+And this example says for a current applet, what is this width and height parameter that
+can be read here.
+(Refer Slide Time: 29:26)
+
+Now, there is also another method is also in an applet is basically called the show status
+method.
+
+(Refer Slide Time: 29:34)
+
+So, here basically the idea is that this basically showing the status of the applet. If the
+applets started its execution, it is called the applet started. If it is destroyed, it is applet is
+stopped or killed or if it is applet is not yet started like not started this kind of. So, this is
+called the status bar of the applet, and this is the title of the applet. Now, sometimes the
+show status, we can for some reason that we want to display our own, what is called the
+message on to this one. So, this can be done using the show status method.
+(Refer Slide Time: 30:19)
+
+And here is the one simple example, how this show status method can be utilized. Here
+you see this method can be used here show status, and this string. And if you run this
+applet, then it basically shows in this status bar there that this is shown in the status
+window like.
+(Refer Slide Time: 30:40)
+
+So, this is the different methods are there that can be used to display the status concept
+here. And there are a few more interesting facts that I want to give, before concluding
+this module.
+(Refer Slide Time: 30:53)
+
+And let us see the first is HTML file is always necessary to execute an applet that means,
+as I have mentioned that HTML code should be there, an HTML file is there, but there is
+a trick that the tricks are basically HTML applet tag can be directly embedded into the
+Java program itself. And then that can be used by the applet viewer actually.
+Now, what is the policy it is here that means, whatever the applet tag, it is there? You
+just write after the HTML file, either after or before whatever wherever it is there as
+shown no problem. Then same .java file can be used, so no need to maintain two files.
+One is the .java file or .class, and then .html, but only one .java, and then the
+corresponding class file should be there complied version.
+(Refer Slide Time: 31:43)
+
+Now, here is an example as you can see here, this is the applet program that we have
+already know; so, this is the .java file. And here is the HTML code, which basically to
+host it. Now, I can maintain only one file, and then let the name of the file is .java. So,
+this is the .java may be status window .java is the name of the applet file compile it.
+Now, whenever you go for compilation, those are the things included within this
+comment which means, your compiler the Java compiler will ignore this one.
+On the other hand, whenever an applet viewer will come into their, applet viewer will
+ignore, all these paths because an applet viewer cannot understand about this tag and
+simply ignore it is just interpreted. But, whatever the portions it is there, applet viewer
+can understand it, and then can be interpreted.
+
+So, if we run this using applet viewer for example, here run it applet viewer status
+window .java. So, here you have to write .java, this is an original file right. So, then as
+the applet viewer will browse it, and then displayed. So, only one HTML file that you
+can plan only one dot file only .java file can be maintained, and then no need to maintain
+explicitly .html file. So, this is the idea about and many programmers prefer to do that,
+what is the code HTML tag it is required, they usually use in the .java file within the
+comment lines only; so this is the one.
+(Refer Slide Time: 33:25)
+
+And another is that it is applet the only way to create a graphical user interface or there
+are many other ways are there. In our next discussion, we will discuss about the AWT
+the Abstract Windowing Tool kit. The abstract windowing tool kit allows us to include
+our code here. So, using this one also you can do it, but regarding this abstract window
+tool kit, we will discuss all these things in detail there.
+
+(Refer Slide Time: 33:52)
+
+(Refer Slide Time: 33:53)
+
+So, it means that in your program, you can write one application look like, it is not an
+applet actually. But, it looks like an applet, it is basically called the frame or panel, and
+that panel is basically a windows programmer. So, these are another version of the
+windows program, which can come in the form of an AWT programming.
+
+(Refer Slide Time: 34:07)
+
+And this is the one AWT code that will be discussed in details, I just want to skip it.
+(Refer Slide Time: 34:16)
+
+And so this way we can run another windows program, other than applets. So, AWT is
+an alternative to the applet programming actually. And applet regarding AWT
+programming, we will discuss in our next module onwards. And then will discuss
+another programming concept in Java the AWT concept.
+Thank you very much.
+
+

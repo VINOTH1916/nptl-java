@@ -1,0 +1,680 @@
+Programming in Java
+Prof. Debasis Samanta
+Department of Computer Science and Engineering
+Indian Institute of Technology, Kharagpur
+Lecture – 48
+Java Networking
+So, now we are in a position to discuss about network related programming in Java. So
+basically, the idea of networking is useful to I mean do certain what is called the
+programming, so that the communication between two so users can be achieved. So, here
+we have to cover how this network related programming can be done, what are the
+different supports the those are available in Java networking, we will discuss. Before
+going to actual networking related programming, we have to have certain familiarity
+related to the network-related terminologies.
+(Refer Slide Time: 01:11)
+
+And then we will discuss those things, then these are the things that is required to
+understand the next discussion. So, we will quickly cover the basic concepts of
+networking and then finally, the Java. Now, you know exactly what is the process of
+networking, it is basically is a process of communication between the two computers we
+can say and they can communicate by this ok, if they are the connected through net
+network actually, communication channel right; they can communicate, they can share
+the file, they can talk to each other’s and like this one. So, these are the things it is there.
+
+And the networking is an issue, because as the time passing on the number of users are
+more those are connected in the network and it becomes really very complex and
+complicated, how these programming issues can be handled. And this is (Refer Time:
+01:56) it has been evolved many ideas that how this networking can be done, the many
+tools, there many what is called the environments are available, out of which Java gives a
+very good one system, which basically allows you to write your own program and using
+this program you can communicate ah communicate to any parties actually. So, this is
+basically the basic idea about the Java networking.
+(Refer Slide Time: 02:23)
+
+Now, I will just quickly recapitulate the different terminology that is relevant to the
+networking related issues that are there. And probably you know all those terminology, I
+will just quickly touch there, so like LAN-MAN-WAN, WWW, IP address, port number,
+URL, then MAC address and sockets, because all those things will be referred into our
+Java-based network programming concept is there.
+
+(Refer Slide Time: 02:49)
+
+Now, so for the local area network is concerned. It is basically the network is a
+connection of computers of course, but this is called a local network if the network spans
+within say maximum 1 to 10 kilometers within the range. So, usually it is basically on a
+campus or even a large building, then the network that needs to be carried out is called
+the local area network; it is simply called the LAN.
+On the other hand, the medium area network a little bit larger than this one, this span is
+usually 10 to 40 kilometers. So, if you have to carried out certain communication within
+the city say suppose or an innovative metropolitan area, then it is called the medium
+metropolitan area network that is why it is called the metropolitan area network or
+sometimes medium network also we can say. And is an example is that cable TV
+connection and or cable internet connection, all these things are basically an example of
+a metropolitan area network.
+On the other hand, a wide area network if the network ah what is called connectivity
+extends up to a state or even the entire country, then it is called the wide-area network.
+And the span is basically 40 kilometers and above. So, usually internet is a good example
+of the public worldwide area network, there is maybe a public network, there may be
+private network. Private network is limited to among the peer to peer communications
+only on the other hand, public means anybody can be connected and then they can share
+them use they can use this one.
+
+(Refer Slide Time: 04:29)
+
+Now, WWW as you have heard about it is basically a popularly called the W3 or simply
+web is a World Wide Web, is a web means it just like a net actually you can see, who is
+basically spread. And the world wide web is basically related to the internet also because
+the internet is a part of the worldwide. So, what is the World Wide Web? Actually, it is a
+collection of huge what is called the documents, which are spread over the entire what is
+called the network or you can more precisely call the internet. So, sometimes worldwide
+web is also called a network of networks that means, is there are a lot of networks which
+are connected to each other’s is called that worldwide.
+And related to World Wide Web, there are many keywords which have been evolved and
+fist said, 50 years or so, which we have mentioned like browsers, the search engine, the
+content, hypertext documents, the computer, networks and so many things are there. All
+those things evolved not in a day of course gradually, and today basically we see exactly
+what is the World Wide Web to and today World Wide Web is basically indispensable in
+our day to day activities.
+
+(Refer Slide Time: 05:47)
+
+Now, so far the different computer connectivity’s are concerned every computer should
+be uniquely identified, there should be some numbers for that and that is what the W3
+consortium they proposed one mechanism, it is called the IP address concept. So, it is
+basically IP stands for Internet Protocol.
+So, IP address usually is a 4 byte address segmented into 8 bytes each, and then the last 8
+byte is basically hosting id that means, if one computer is connected to a network and
+that network may have its own id, usually that is decided by the first 3 bytes; in the last
+byte is for the computer which is connected to this network. So, it is basically as it is an 8
+by 2, so each byte value if you express it is basically in the range 0 to 255 as an example
+192.168.0 is the basic one network id, and then .1 is basically the host id means id of a
+computer. So, this address is not exactly the physical address, logical address.
+Logical I say in the sense that whenever one user wants to connect to a network, he or
+she should approach to the network administrator, the network administer will assign one
+id; whether it is a network service provider or your network administrator in your
+organization, whatever it is there.
+
+(Refer Slide Time: 07:19)
+
+So, this is the IP address and in addition to this IP address, there is also on another
+identity is required it is called the port number. So, port numbers related to a particular
+and application. So, whenever you run one program, whether it is a Gmail program or is
+a browser program or whatever it is there. So, it is basically created an application.
+So, every application should be uniquely identified, usually it is that identification it by
+means of it is called the port number. So, usually, the port number is related to the
+machine itself. So, every machine is given a unique port number and together with the IP
+address and port number actually called the socket address. So, the socket addresses
+nothing but this is an address of an application.
+
+(Refer Slide Time: 08:03)
+
+And then there is also the concept of URL, probably we familiar to an example of URL
+like www.google.com. So, this is the one example of URL it is the full form is Uniform
+Resource Locator. Now, here it is basically one idea about by which a particular what is
+called the document, we can say the hypertext document like or a particular server can be
+identified.
+Is basically if we have this URL, then we will be able to quickly look at a computer
+where it is located. And for this location as you see there are many parts are involved,
+one is called the domain name. And the domain name has the 3 components, is basically
+connected to which computer for you www this means is connected to the web that
+means, internet. And .example is basically the name of the server, where that particular
+file or document is located. And .com is the name of the organization and that means, it
+is basically .com or is basically say .in that means, it is connected to India or .au for
+Australia or .ua for USA these kind of things are there .UK United Kingdom like this
+one.
+So, the different country has the different what is called the extension of these domain
+name. And then private organization .com is basically for all commercial documents
+related and like this one, .org the for an educational institution, .edu also other additional
+institution like. So, these are the different organized wise the naming is there.
+
+Anyway in addition to this, so this is basically called the location of a particular file and
+there is also another is called the protocol. So, which protocol that it should use in order
+to access that document, it is specified by that one, for example, HTTP it is basically
+protocol. So, it is basically (Refer Time: 10:03) protocol and then followed by the
+resource name, resource name is basically www.example.com for example, in this case,
+is basically both together includes the URL.
+(Refer Slide Time: 10:29)
+
+So, there are different instead of protocol, here we have uses example one protocol
+HTTP, near there may be FTTP or FTP or SMTP like this. So, a different protocol is for
+dual discuss about the different protocol shortly. And then MAC address is basically is a
+another physical address, where the IP address is a logical. So, it is physical address
+means whenever you purchase a computer, the manufacturer assigns on unique number
+to this computer and these are this is called the MAC address, the full form of this is
+Media Access Control address. And this is also unique for every machine whichever it is
+manufactured in till time has the unique number.
+So, this MAC address is specified by 48 bits number, again each of 8 there is 6 8 bytes
+segmentation which is basically usually expressed in a hexadecimal number like, so
+usually max at this, for example, I have given the MAC address of this one.
+
+(Refer Slide Time: 11:23)
+
+So, MAC address is also required again to identify uniquely a location of a particular
+machine. And then socket as the socket is basically is a is an application program, you
+have a software you can say is a port we can say which basically use for the
+communication, is basically is an application program which is responsible for
+connecting two endpoints.
+So, if you want to connect two computers in a network, this means that that connection
+can be controlled by means of two programs at the two ends. So, two computer which
+should run two programs, they are called the socket programs as you know the socket is
+basically connected to a computer. So, every socket should be uniquely identified and
+that for this the IP address in combination with the port number both together call the
+socket address. For example, as you see the socket address of this machine is 10.14.90.85
+and the port number is 27017 like. So, there so including these two things basically
+combined the socket address. And therefore, a socket is not a hardware device, it is
+basically software.
+
+(Refer Slide Time: 12:29)
+
+And now let us come to the communication protocol, there are many communication
+protocols that have been proposed so far people you are using, like say UDP protocol it
+is that all connectionless protocol whereas, the TCP is very popular one protocol trans
+Transmission Control Protocol is called the connection-oriented protocol.
+And there is another protocol, which is connection-oriented as well as connectionless it
+is called the TCP-IP. In fact, IP is the one protocol just like a UDP it is called the
+connectionless protocol. So, TCP-IP is a combination of both the thing and FTP is a
+protocol, which is basically used for transferring the file from one machine to another.
+And HTTP is the file to accessing web documents, like say HTML page like and it is the
+full form of Hypertext Transfer Protocol and HTTPS is the one it advanced version is
+basically Hypertext Transfer Protocol will follow the simple document transmission
+whereas, the HTTP follows the secure document transmission as the security is there is
+basically security is enforced by means of some encryption and decryption. And SMTP
+is also just like an HTTP it is, but it is related to an only application for the mail transfer.
+So, if you want to communicate your peers using mail and everything, so usually you
+follow SMTP for which you have to follow one mail server. So, mail servers usually
+follow SMTP.
+Now, here is again connectionless and connection-oriented, the two protocols by name
+you can understand that if it is a connection-oriented protocol means before the
+
+communication, there should be the connection between the two computers should be
+established, so that is the one idea. There is a mechanism by which the communication or
+connection can be established prior to the communication begin. So, there is called the
+communication-oriented protocol.
+On the other hand, connection-less protocol means, if the two-party want to
+communicate themselves, that they do not record any prior and at the prior connection to
+be established, they simply start sending their documents. Now, it is just like a sender
+sending a letter to his friend how he can send, you just simply write the postal address of
+the friend and then drop it to the post box, and then there is a postal service is there. They
+will channelize this letter into a particular frame-like. So, it is the procedure is called the
+connectionless protocol.
+Anyway, so these are the protocol and more interesting fact is that Java supports anyone
+protocol whatever we have mentioned, whether it is a UDP or TCP TCP-IP or HTTP
+HTTPS absolutely not the issues there.
+(Refer Slide Time: 15:13)
+
+And so these are convection-less.
+
+(Refer Slide Time: 15:13)
+
+And connection-oriented protocol, as you have discussed about.
+(Refer Slide Time: 15:15)
+
+And then TCP-IP is also one protocol which is basically more reliable as well as fast
+usually connectionless protocol is not reliable; however, it is fast whereas, a connectionoriented protocol is highly reliable, but it is not so fast. On the other hand, TCP-IP is a
+combination of both connection-less and connection-oriented protocol which is reliable
+as well as very fast.
+
+(Refer Slide Time: 15:41)
+
+Now, the FTP protocol is for the transferring file.
+(Refer Slide Time: 15:43)
+
+And HTTP is also transferring the hypertext document. For example, say the document is
+an HTML page who is hosted some scraped, PHP, Javascript or even a plate-like this
+one. So, this basically how these files the documents can be coming I mean, can be from
+one server, can be brought to a browser machine here for maybe see your local machine
+and so and so on. So, these are protocol that it follows.
+
+(Refer Slide Time: 16:07)
+
+SMTP is for transferring the file document.
+(Refer Slide Time: 16:09)
+
+And there is obviously, some salient points the between HTTP-FTP and SMTP, I have
+listed all these points here for the summarization of all these aspects you can take your
+own time to go through this and then can understand it.
+
+(Refer Slide Time: 16:25)
+
+Now, I will come to that Java networking which is more important things to understand
+at the moment. And for the Java networking, there are many ways actually and all the
+things can be categorized into two categories. They basically called the stream class and
+then the datagram sockets or stream sockets and datagram sockets, as you know socket
+means a program actually. So, the program should be written in the Java language.
+So, there are two ways the program can be written, one way is called the concept using
+stream sockets and another way is considering your datagram sockets. So actually, these
+are the two different programs, if we use the two different classes for communications
+among the two parties. Now, so far the stream sockets are concerned, it basically the
+related to the connection-oriented service like say TCP.
+ah So, according to these sockets it basically first establishes a connection between the
+two communicating parties. And then whenever the connection is established, then they
+will start streaming the data from one machine to another as a continuous that is why it is
+called the string sockets. And here as I already told you, this is a connection-oriented
+protocol that means TCP is followed here.
+On the other hand, datagram sockets are another way of sending I mean communicating
+between the two parties, it is based on the connectionless protocol. Here actually what is
+that the entire documents or the content that needs to be channelized, needs to be sent
+
+from one into another is basically divided into small parts, each part is called the packets
+or more precisely it is called the datagram.
+A datagram is just like a packet consists of maybe say 64 bytes or every 1024 bytes the
+network admitters can decide that what should be the size, but the standard size is 64
+bytes like. So, is a smaller bytes packets are created. So, entire documents if it is a 1 MB,
+it will be fragmented into 64 bytes each, each, each, each. And then it starts sending one
+byte at a rate, and then whenever a packet is there or a datagram packet it should include;
+who is the sender and who is the receiver all at this everything is there.
+Now, it starts sending start dropping this packet into the network. And then the network a
+controller is there, which will basically decide that whether if this packet is available to
+him when to which direction he should forward this packet, so that ultimately it will
+reach to the destination ah points. So, this is the idea about this one and this protocol
+popularly called UDP – User Datagram Protocol.
+(Refer Slide Time: 19:07)
+
+So, these are the two protocol that is followed here. And again there are obviously, some
+comparisons between the TCP versus UDP. The basic ways that TCP is connection yes
+or else the UDP connection-oriented, where is the UDP is connection-less. And there are
+some other more implicated the differences are there which has been listed here, again I
+advise you to just go through all the points and try to understand that is the difference is
+
+there, but at the moment all those difference is not so much important. So, for our
+network each programming is concerned.
+(Refer Slide Time: 19:41)
+
+Now, I will come to the discussion on what are the different process so that we can
+utilize, because you know Java is the object-oriented programming. So, for the
+implementation of anything, we have to rely on the different classes. So, I will just
+discuss what are the different classes which basically you should learn so that you can
+find yourself comfortable with the network-related programming with Java.
+Now, here there are few classes related to the connection and then identifying a
+connection like. So, we have listed here like URL is a class, URLConnection is also
+another class, and then HttpURLConnection is another class, InetAddress is class, we
+will go quickly go through the different class, they are compositions and then they are
+utilization and everything also illustration. And then so these are the different classes by
+which the connections related information’s can be maintained or can be controlled.
+And then regarding these connections and then making the communications actually, so
+that means sending and receiving and everything, it has been followed by few more
+classes, like DatagramSockets, ServerSocket and the Socket. Now, DatagramSocket is
+basically the concept that followed is a datagram streaming that means for UDP protocol
+like, whereas ServerSocket and Socket is basically for the TCP related protocol that
+means, connection-oriented protocol like.
+
+So, ServerSocket is basically whenever we have to make one machine as a server and
+then socket is basically for making some machines as a client. So, it is basically for
+client-server computing or distributed computing line. Anyway, we will discuss the
+different ah concept of all the classes that are basically very much essentials here, relate
+to the Java networking program.
+Anyway, all these classes definitely are Java is very organized on system, they are
+defined in a package. The package, which basically used for this is ava.net.package.
+java.net.package is basically is the package means for including all these classes, where
+users can get it and then you can use it.
+(Refer Slide Time: 21:49)
+
+Now, I will first discuss each one class one by one followed by some illustration, so that
+you can understand the concept that what are these classes has these facilities and on
+what occasion which class should be used like this. So, the class URL and I know you
+have already mentioned what exactly and URL look like. So, URL first point is which
+protocol that it follows.
+For example, in this example as you see there are two parts in this URL, https is the
+protocol that it should follow. And then followed by the what is called the resource
+location, this resource location is basically nptel.ac.in/course.php, this means that in this
+location, there is a file available means a user, a browser, a party can access on the tile
+
+the name of the file is course.php. So, the course.php can be accessed by means of this
+URL and here another thing is that from which machine that this file can be accessed.
+So, the middle part that is nptel.ac.in indicates in which server, this file is located. And
+then if this file and this server are identified, then they are definitely what type of
+protocol transmission should be followed in order to get access to this file into your own
+machine. So, here, therefore, the protocol, the server name and sometimes the server
+name should be associated with port number also. For example, nptel.ac.in and then
+colon and the port number say 5 0 5 0 that also can be specified; if no port number is
+mentioned, then by default the port number will be considered as a minus 1, so this is the
+default standard and like this one.
+And then finally, the last component is the actual document specialist at the document.
+Like, say if we say there, test.java. So, this is the file that you can have and then we can
+access it. So, it is like this so this way the URL basically imply it, now whenever we can
+define a class. So, a URL basically this is an object as you see, so then this is basically an
+object and we can say that URL object that means, URL consists of so many
+information; what is the protocol, what is the name of the server, what is the file name or
+maybe. So, this is the name of the server that we can understand, but in new of this on
+the server name can be also uniquely identified by IP address say 155.18.20.31, so that is
+also this one, so logically address is there.
+So, it is in and there and there may be one machine that proxy we can say, a proxy has
+the tank mapping that if this is the name domain name or the server name, then
+corresponding this which is the IP address. So, there is a table maintained for every
+network there is a proxy machine, which basically includes everything if this is the
+domain name then what is the IP address like this one.
+So, so this is a very important one concept about regarding the location or a precisely
+specifying the machine that is there. So, this basically the URL location and the URL
+classes basically has many other constructors as well as method is there.
+
+(Refer Slide Time: 25:27)
+
+Ok.
+(Refer Slide Time: 25:37)
+
+So, the methods those are they are in URL by there are few more methods also, but I
+have mentioned only those are most important methods are there; getProtocol, getHost
+that means, the name of the host and then getPort, getFile, and then openConnection, like
+this one. So, I have already mentioned about the URL. So, if it is a URL object is given
+to you, and then you can get although the information from there.
+
+(Refer Slide Time: 26:05)
+
+And so this is an example you can understand, this is very separating a simple example.
+So, we can create a URL object like this one, sending this information. And then from
+this URL class and using this getProtocol method that we have already discussed, we can
+have all the information related to this object. So, this is a simple example if you can run
+it, you can get an idea. So, instead of any other URL, you can mention any URL of your
+own and you can find the execution of this thing you can understand about these one.
+And so this is the URL.
+(Refer Slide Time: 26:41)
+
+And then the next class is called the URL class, URL connection class. It has the two
+methods mainly, the open connection and get input stream and this open connection is
+basically to establish a connection from one machine to another machine from the
+current socket to the distant socket-like. And then get input stream basically, how the
+data can be read from the distant socket or from another socket to this current socket. So,
+this is the two methods usually very much useful, there are some other methods also
+those are very much essential right, but those are the methods we have we will be
+referring here, we have mentioned here only.
+(Refer Slide Time: 27:15)
+
+And this is an example that you can check it quickly. And so this is basically URL object
+is created, and then we just make a connection and this is the method by which we can
+make the connection. So, this name of the connection, connection again is an object
+everything in Java theater engine objects. So, URL connection and then once the
+connection is there, then we can create a stream and this stream is basically getting input
+stream for this URL connection that means, if this is the machine and we can connect
+this another machine like right from so this is basically the distance machine.
+So, this machine address is this on, it is your own program from where I am running this
+one, so this one. And then from there, I get a get input stream means I am reading the
+data from this machine. So, this is the idea about each here that and then we can start
+reading this data in the stream ah. So, long the end of the file has occurred which means
+
+the entire file will be read from the distance machine and will be stored into the local
+machine-like. So, this is a very simple example that explain these concept that how the
+URL connection can be utilized to fetch data from the distance machine through the
+communication.
+(Refer Slide Time: 28:21)
+
+Now, HttpURLConnection is very similar to URL connection only, but only in this case
+the protocol, that it should follow HTTP protocol only.
+(Refer Slide Time: 28:29)
+
+And here is a rather different methods that are included in the HttpURLConnection, the
+huge number of methods are there, but I have mentioned only two methods other
+methods you can obtain from the core Java material, tutorial that is there.
+(Refer Slide Time: 28:41)
+
+Now, let us come to the example here as you see, so this is the URL connection, URL
+objects. And these basically the idea about, how the HttpURLConnection can be
+established. And once this connection is established rest of the things is same as the
+previous one. So, this is the idea about so only these basically make distinguish or simple
+communication or the URL HTTP communication like.
+
+(Refer Slide Time: 29:07)
+
+And InetAddress also similar to the URL address, but it has a different way the internet
+address related composition. So, he is basically IP, Port, everything can be there, it can
+be understood. And as you have seen these are the different methods is very similar to
+the URL like, the different methods are there by which you can access the different
+information related to the different connection of a connection with them about the
+different connection.
+(Refer Slide Time: 29:33)
+
+And here is another example that you can see. So, InetAddress just like a similarly URL,
+this is basically the URL we can say I have specified and get by name and InetAddress.
+So, IP is basically the I InetAddress in this case, one this InetAddress is there, then we
+can have the different method getHostname, getHost localhost and everything of this
+method. And then we can obtain the different information, the concept is very similar to
+the URL connection and the idea it is like this. And here is an example that you can run
+this program.
+Now, I will come to the communication. So, using the sockets basically and there are
+two types of sockets, rather 3 socket DatagramSockets, server socket and socket only.
+(Refer Slide Time: 30:17)
+
+So, DatagramSocket basically follows the UDP protocol and the different methods those
+are defined therein DatagramSockets, these are the basically constructor by which a
+socket can be created actually that they are different constructor means, I can either we
+can mentioned the port number or we can means at the port number as well as either at
+this or you cannot mean some anything. So, this socket is basically if you want to
+communicate within the same localhost that means, maybe that within the same machine
+like one machine can be connected by the two users.
+So, it is basically shear single shear machine is sheared form and then there protocol can
+be followed, but here if the distance machine from this machine a to another machine b.
+And it is also a distance machine, but if you know the InetAddress quickly early. So,
+
+these are the differences I mean constructed those are useful for the DatagramSocket
+like.
+(Refer Slide Time: 31:13)
+
+And these are the methods getAddress, getPort, and then getData and getLength. getData
+is very important in order to get the data I mean ah get fetching the data from the
+machine to that machine here.
+(Refer Slide Time: 31:27)
+
+And this example is very easy to understand and very simple example I have planned for
+you. So, in this example as we see DatagramSockets ds object is created, and here you
+
+have to mention the port that is the port number which we and this machine this example
+is basically, in the same machine how it can be shared the documents actually. So, the
+idea is there you can run the two programs, socket program so that means, two different
+threads are there.
+And that two threads is just you can simulate that ok, this is the one party and this is
+another party; like so one party is called the receiver, another party is called the sender.
+And this is a receiver socket and this is the Sender sockets. The idea is very simple, first,
+you have to keep creating a DatagramSocket objects as you have created here. And then
+to do this thing, I have mentioned here port number. So, the port number should be the
+same as these two machines, these two programs who run in the same machine. So, for
+both servers and send receiver and sender it has the same port number.
+And then here you just create a DatagramPacket. So, DatagramSockets and
+DatagramPackets are basically to see that whatever the message that you want to
+communicate, how the entire message can be created into a number of packets, a packets
+may be of 64 bytes as I have told you. So, this object we will do these things for you.
+The entire buffer if you give it, then this dp will create the packets that needs to be
+transmitted from one party to another here.
+And then once it is there, then this basically dp.getData can be converting the string and
+the same string can be transmitted by this means of the method. So, receive the dp that
+means, it basically receives packets that can be a send that has been send by some
+machine and it will receive. And then after receiving this packet dp, it will basically
+process that means, you can process shown or you can display whatever it is there.
+So, this is so further received is concerned. And nowhere is basically sending, as you
+know the sending here. So, suppose I want to send only this text, Welcome to an
+NPTEL. So, first I have to create a DatagramSocket ds, as you have to send in the same
+machine. So, a port number is the basically same thing that you can do, otherwise, you
+can do not use anything also. And then this is the message that I want to send it, is very
+small message of course in this case, but actually it can be very large file, in that case, I
+can mention that this is a file that you have to store, but using say file input stream the
+file can be converted in the stream format and that stream can be put into that datagram
+like.
+
+And then this is the ip at this from here you have to send it. Now, here is the one thing is
+that or it is a default that if the same machine it will already assign one ip address that it
+is this one 127.0.0.1, it is the standard default only. So, this is the default ip address if
+you have to communicate within the same machine only. And then the DatagramPacket
+that will be transmitted about this string. So, it is a string we convert in the
+DatagramPacket, and then we send this DatagramPacket to this port and then is basically
+send.
+So, the DatagramPacket has been ready with these destination addresses and everything
+and therefore send. So, this way the sender will send, it will go to the receiver, receiver
+will receive, and then it will be processed. So, this is basically the communication
+between the two parties, which are basically using the same port we can say. Same port
+in the sense that they are the same machine.
+(Refer Slide Time: 35:01)
+
+Now, so another is a class ServerSockets, these have the few constructor as we have
+mentioned here. Again the port, the InetAddress and then time that needs to be queued
+and so many things are the basic information that needs to be provided in order to create
+the object.
+As I have already mentioned you, the server socket is basically the program that
+basically suitable for maintaining one machine as a server that means, this machine may
+be connected with many clients, those are either in the same or you may the same system
+
+or maybe in the remote systems whatever it is here. And so idea it is like this, so server
+socket is there. And the constructor it is these are the constructor.
+(Refer Slide Time: 35:41)
+
+There are many more methods are there, I have mention few methods here.
+(Refer Slide Time: 35:49)
+
+I have mentioned a few methods, those are very important here. For example, getting the
+information about the port, and connecting that accept I mean accepting a
+communication connection, and then how much time that it should way to listen to
+
+others, those are the different information which is basically can be maintained by and
+then can be obtained from the from this method for a ServerSocket object-like.
+(Refer Slide Time: 36:19)
+
+And then Class Sockets, very similar to this server socket itself only the thing is that
+socket can be used to represents a client machine, so that is why and it has the different
+constructor as I have mentioned here. And in addition to these constructors, there are
+many other methods also involved.
+(Refer Slide Time: 36:37)
+
+So, these are the methods very similar to the server sockets. And then I will quickly
+conclude this presentation with more few examples, 2 3 examples I will give it. So, a
+simple client-server.
+(Refer Slide Time: 36:49)
+
+For example, I have already given an idea about the sender and receiver. It is a very
+similar tune only, how this program basically explained, how one machine can be made
+as a server, another machine can be made as a client. So, the here basically the
+ServerSocket to be created and here the socket is created. Once it is created is basically
+by means of getInputStream, it will read it; and by means of getOutputStream, then it
+will basically send it. So, these are the two concepts by which communication can be
+established. So, this is the idea about communication here.
+Now, the server as you see in this program we have created a socket as an ss and
+ServerSocket ss also. Now, here ss this basically we create ss dot accept means, the
+server accepts any response that is basically made by on a request that is made by a client
+so that it will accept and then the DataInputStream is a class by which it will read data
+from the client actually. So, it is a right s is the socket program in the client and ss is the
+socket program in the server in this case and then it will basically send. And finally,
+when the message receiving is complete, so it is basically closed. So, this is the idea it is
+there.
+
+(Refer Slide Time: 38:11)
+
+And then once it is this is the server program and similarly the client program it looks
+like, so this is the client program. And in this client program, we create a socket program
+here, so s is the socket objects. And then DataOutputStream, because here client we will
+send some data to the server, and this is the message that the client supposes to send it.
+And this basically message will be transmitted, I mean will be sent to the net and then it
+will go to the sockets and then this one. And here is the port number, this port number
+should be the port number of the server to which it wants to communicate actually. And
+it should be same is in the case of both server and then socket as you see here, the port
+number that we have used here.
+
+(Refer Slide Time: 38:53)
+
+Is basically 6 6 6 also, it is basically in the server. Now, so this is the idea about that ok,
+here in this particular example how a client machine can send a document to the server,
+and then the server can receive it and process it.
+And our next example is basically to give the dialogue that means the client will send
+something, the server responds to that; again client will send something, the server will
+respond to that this is called the dialogue process. And this is an again simple program to
+understand this concept.
+(Refer Slide Time: 39:25)
+
+And here is basically the server is basically this is the server, and then server as the
+ServerSockets and these basically accept and this is basically input, output mechanism
+that is read from the client right through the client like this one. So, for which data input
+and DataOutputstream, d in and d out has been created, and then it will be for reading if
+the large message needs to be read. So, data to buffer reader should be used, so it is a
+buffered reader and from the buffer reader it basically is reading, and whenever there is a
+message that from the client that is a stop, then it will close the service, then server will
+stop it there.
+So, this is the server-side program. Is a very simple program actually as you see, and you
+can understand easily just you have to remember the input-output stream, we are once we
+have discussed about our IO stream concept like.
+(Refer Slide Time: 40:17)
+
+And this is the client-side program. On this client-side the same port number it should
+use. So, it is based on socket and the local host means is the local actually in the same
+machine. So, in the same machine two programs, we will learn. So, it is quite possible
+multiple program can be executed in the same machine, Java allows these things very
+heavily, so it will there.
+And then data is basically input-output that means, client will send something, client will
+receive something from the server. So, this one again the buffer will be there, to read the
+network line actually channel, and then this is the communication continue until the
+
+server wants to continue it there. So, this is the idea about the dialogue client-server as
+you have so it is a basic dialogue between the two machines. And this is the one example
+here, in the last example we have considered that in the same machine, but in this
+example if the two distance machines are there.
+(Refer Slide Time: 41:09)
+
+So, obviously you should know exactly what is the IP address of the distance machine.
+The program is very similar to the previous one, only the difference is that we have to
+explicitly mention, the IP address and then these are port number and number of client
+that it can support in this case. So, this is the only change in the server program,
+otherwise, everything remains same. The client program particularly is the same program
+as it is the earlier one.
+
+(Refer Slide Time: 41:35)
+
+So, this is the client program already we have discussed and you can run it, we can
+simulate it in the same machine or in at the distance machine also the output that you will
+can obtain. And then again the communication, dialogue, chat, and everything whatever
+you want to do, you can do that. So, this is basically the remote communication between
+the two machines.
+(Refer Slide Time: 41:55)
+
+And then a concurrent server is basically one server that can process more than one client
+at a time, so it is called the concurrent server. In this case, the threats to be maintained
+
+and if there should be some method should be by which the client handling client can be
+handled. So, here again this is an example, so this basically creating the server as a
+socket and for this server socket we accept any client that it send the request, and so this
+is the same thing as earlier.
+(Refer Slide Time: 42:25)
+
+And then the next thing is basically here is the thread that you have to create it. And for
+this thread, this is the one simple intermediate procedure about an input-output stream
+that needs to be created. And we create a thread here; this is because you have to
+establish a thread there. And this basically ah so the thread is basically here, the
+implementation of thread method in the last example we created thread actually.
+
+(Refer Slide Time: 42:59)
+
+So, here we see we create a thread here, so a server is a thread. It will run for so long,
+and the thread needs to be handled by the ClientHandle by means of input stream and
+output stream, those are things to be mentioned there. So, this is basically created thread.
+So, in this case, the server is a thread and we start the thread. Once the thread is started,
+we have to define the thread.
+(Refer Slide Time: 43:23)
+
+And thread define means all the methods you have to define it here. And the run method
+is basically is defined as the thread of how the thread needs to be run actually. And here
+
+is the server part next part of the server; that means, we just continuation of this one
+while is basically this is an infinite execution, while it is truly like.
+So, until you do not at a disconnect the connection, it will continue this one. And then it
+will receive the message, send the message, all these things will be carried out in a
+synchronized manner actually, so that program is like this, so that concurrently that
+means it does this basically constantly attend attending on client request if it is there;
+once it is there, it responds immediately for which the thread is basically mean for that.
+(Refer Slide Time: 44:11)
+
+And here this is the continuation of this program.
+
+(Refer Slide Time: 44:13)
+
+And the client program, as usual, the similar one, absolutely there is no same where
+different. It is basically same, we have to make this as connection as a 5 0 5 6 is the port
+number of the server itself, and then input-output stream for the dialogue communication
+if you want to maintain. Then it basically than any other protocol says maybe say, here
+we are using the ip i InetAddress, basically TCP-IP protocol, but you can mean some the
+datagram protocol dp and you can use it.
+So, in that case of a message needs to be the first packet it using the datagram packets
+and it can be sent here. So, this is the idea about the concurrent servers both in the clientside and then server-side. And this basically explained the different mechanisms by
+which the communication can be done and as in the class of learning right. So, we are
+basically learning, how the communication can be written using Java program, so that is
+the only focus we have. Now, in our next we will discuss some demonstration of this
+program so that you can see exactly how they run and then how they can execute, and
+then how they can see the result actually.
+So, we will discuss about the demonstration of this program in our next module that we
+will give an idea about, how we can implement all these programs and then you can
+execute it and you can see the output.
+Thank you very much.
+
+

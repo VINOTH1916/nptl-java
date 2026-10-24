@@ -1,0 +1,446 @@
+Programming in Java
+Prof. Debasis Samanta
+Department of Computer Science and Engineering
+Indian Institute of Technology, Kharagpur
+Lecture - 50
+JDBC – I
+Now, we shall start learning about JDBC. The full form of the JDBC is Java Database
+Connectivity and these concepts will be covered in 6 sessions including today. So, first,
+we will learn about actually so, far the JDBC is concerned there are three things to be
+learned. First of all the database management system and then how the database
+management system can be connected. And, this itself is called the JDBC driver and then
+finally, the java application which basically will help a programmer to connect a
+database from the application as an endpoint.
+So, three things are there so, for the database management system is concerned there are
+many tools many packages are known. In this course, we will cover one system which
+basically helps a programmer to maintain a database is called the MySQL. So, we will
+discuss the MySQL and the MySQL is a database management system and then we will
+discuss about how these MySQL can be installed. If you are new to this MySQL then all
+this information is highly essential for your learning. So, I do not know exactly whether
+you are familiar with SQL or MySQL or rather relational database management system
+anyone.
+Anyway so, considering that you do not have any background knowledge about the
+database management system handling. So, I will take a quick tour of the SQL based
+database management system which is a very popular one is MySQL. So, in this session,
+we will try to learn about how the MySQL can be installed. And then finally, we will see
+exactly using this MySQL if once installs in your machine successfully then how we can
+manage the database management system related to a task. Namely, how we can create a
+database management database, how we can create a table under a database and then
+how you can accomplish different operations to the database.
+
+(Refer Slide Time: 02:40)
+
+Now so, first what exactly the MySQL it is. So, it is a very popular software usually you
+know for the database management system handling one language has been provided. It
+is very popular and a standard language it is called the Structured Query Language. We
+usually call this language as a fourth-generation language, if we set C, C++, Java they
+are the third generation language. The language of course, but the thing is that it follows
+a certain syntax that is why it is sometimes it is called the language, but truly SQL is not
+a language like Java, C, C++.
+Anyway, SQL programming whatever it is there we can do it in English like syntax
+actually. And it is basically a de facto standard nowadays; every database management
+system engineer prefers the SQL based system. And, SQL base system is basically
+followed there are many types of database management systems as relational database
+management system, object-oriented database management systems; SQL is in fact, a
+relational database management system. Now, regarding the relational database
+management system, we will discuss a few things about it, a few salient points about
+this.
+Now, the SQL is basically is very simple and it is easy to use and that is why it is fourthgeneration language; actually that the difference between 3 GL and 4 GL. Third
+generation and fourth generation languages are that third-generation language is
+basically how to do concept; that means if you want to solve a certain problem how this
+
+problem can be solved. Then we have to write a details about it, but whereas, as the
+fourth generation language, it is what to do. Just you tell that what you want to have then
+automatically the SQL processor will take care about your what aspects and then solve
+the problem. You do not have to write so, many details about the programming. So, that
+is why SQL is basically a lightweight concept.
+(Refer Slide Time: 04:39)
+
+Now, using this SQL we can do many things, that we will be going to discuss and
+another thing is that whatever the syntax that you can write that is basically in English of
+course. And you know in English, there are two types of characters: lower case and
+upper case. SQL does not distinguish whether you have typed in lower case and upper
+case; that means it is case insensitive.
+
+(Refer Slide Time: 05:02)
+
+Now, SQL has many advantageous and there are many tools that basically leverage the
+concept of SQL. And, as I know the SQL is structured query language that is what we
+have learned in the last slides. The MySQL is a specific application that is a tool which
+basically developed by Monty Widenius and it is basically My, My is his daughter's
+name. So, that is why MySQL he gave the name about his fond daughter. So, MySQL so,
+it is not that MySQL means it is mine SQL is not like that and then it is basically the
+SQL can be installed in your stand-alone machine like PC, laptop whatever it is here.
+And, then once you installed it then you can maintain your database very easily. And as
+you know it provides the structured query language and structure query language become
+a de facto standard. This means that you can test it, you can use it, you can solve any
+problems and then once you have done it using MySQL then finally, you can deploy to
+any other systems which basically have an interface about the SQL. So, that is is the
+beauty of these things. So, MySQL is initially developed, distributed and supported by
+Oracle corporation. As you know Oracle is a joint player in the field of database
+management system. Now, I will first quickly tell about how MySQL can be installed in
+your machine.
+
+(Refer Slide Time: 06:37)
+
+Now, there are many ways the install can the MySQL can be accessed from different
+sources; I will discuss about the installation of MySQL in Windows environment.
+However, the basic steps and procedures are very similar to any other environment like
+macOS or Linux.
+(Refer Slide Time: 06:55)
+
+Now, you can download a very go-to resource of the SQL is basically contains many
+things, if you want to have an Apache server or if you want to develop something in
+PHP. PHP is one another sort of programming language for web programming it is called
+
+the Hypertext Pre-processor. And, the MySQL they are basically bundled together and
+there are many sources for which the for example, here XAMPP, WAMP Server
+etcetera. So, all those things you can download from that link which I have given for
+XAMPP for Windows, I have given the links similarly for WAMP for windows also the
+second link you can follow.
+So, these are the well-known link and definitely, this is the free source actually; you do
+not have to pay anything, you can download it is freely open source.
+(Refer Slide Time: 07:47)
+
+Now, I am telling you how the other source that you can follow to download your
+MySQL software. So, if there is a link as I have given here, dev mysql.com downloads.
+So, from this link you can go and in this link, you can find MySQL community server.
+So, you just click this link then it will face to you, it will align to you in the MySQL
+community server. You open this link and then finally, you can find there are many what
+is called the software available for freely downloadable. And, out of which we have to
+select without installation and is an archive version.
+And, then directly also you can follow the link on which you can download the software.
+I have mentioned here for the software and for the 64 bits machine, if we have the 64-bit
+machine then it easier. And, the latest version I have mentioned here as MySQL 8.0 0.13
+this is the current version. So, you can download it and if it is changing the version you
+can again download the newer version and you can re-install it whatever it is there. So,
+
+this is the kind version that you can and this will be download as a zip file.
+(Refer Slide Time: 08:58)
+
+So, you have to unzip this file. So, what is the idea about is that where you want to install
+that you have to decide. So, if you suppose you want to install in C drive and under the
+name of MySQL. So, then you should extract the file; I mean, the zip file that you have
+downloaded to extract all the files it is there; I mean unzip the files actually into the C
+drive. And, then you should rename the folder otherwise if you directly start installing
+then it will take the same name actually here MySQL version and then Window 32 for
+example, instead of Windows MySQL 8.0.13 then Window 64. So, you can just rename
+this file to MySQL rename this folder to MySQL. Then MySQL can be however,
+MySQL can be installed anywhere, but the basic steps are same.
+
+(Refer Slide Time: 09:50)
+
+So, now you have to place the folder on another drive to make backups and reinstalls
+easier; actually, as you know MySQL maintains a database repository. So, data
+repository for which you have to create one directory separately for you; by default, it
+should be the directory in the same as the MySQL is installed. So, better is that the
+directory can be maintained in some other drive for example, in D drive. So, the default
+name is data that you have to do you should not change it. For example, here I have sent
+is that D colon D data is the directory drive where we want to maintain all the data
+repository under MySQL server.
+And so, we can copy all the contents which are there once after in the folder that is the
+MySQL you can move to that D data. So, there are some that system file is there, you
+just move all the system file into the newly created directory, that you have create that
+we have just now done in the D drive and then you have two folders. So, you should
+remove one folder. So, C then MySQL data that folder should be removed. So, it should
+have only one existence.
+
+(Refer Slide Time: 11:11)
+
+So, this will complete the installation of the MySQL and then there is a little bit
+configuration it needs to be done; for this configuration, there is a file, it is called my ini
+file. So, it is an initiation file that you can find the MySQL folder. So, you just using any
+editor let us say WordPad or Notepad you just type this contents. In this my ini file and
+then it will basically complete the my ini file. So, just typing this file and save this file
+into the MySQL directly it is there.
+(Refer Slide Time: 11:56)
+
+So, this is basically the configuration there are few more configuration also you have to
+
+consider ok. So, there are few more configuration is required, here I have mentioned
+exactly what are the configure and you should consider. The thing is that, if you want to;
+I mean, MySQL server is now ready to run actually. And, then you can run this by first
+time if you want to run it, then you should try this command actually C colon MySQL
+bin mysql.exe. So, this is basically to run the MySQL server first time. And, for this
+thing you just go to the Start, Run command and then following the command also you
+can do it for the initialization.
+And then here the password you they will ask it so, you can give some password for
+example, here this is the password that you can set and then root is the password like. So,
+you can give the root password or guess password whatever it is there and then you can
+also change the password at a later stage. So, that option is there I will tell you exactly
+how the password can be changed at a later stage. So, these are the things that you should
+do, first of all, ini file and then you have to run the SQL server first time and then change
+the password there.
+(Refer Slide Time: 13:12)
+
+So, these are the ones you do these things then your next step is basically to set the
+classpath. So, that you can run this program from any other directory like.
+
+(Refer Slide Time: 13:21)
+
+So, here is basically how the how you can do this. So, this is basically calling you to
+have to create a Windows service. In order to do the Window service from the command
+prompt, you have to go again. And, then in the command prompt, you have to write this
+command cd MySQL Bin and then MySQL install. And, that also can be done in this
+way control panel you have to go in this environment. And, then there is an
+administrative tool we have to select it and then services and double click you can under
+the service you see MySQL is already available. So, you have to double click and under
+the double click is the startup type it is basically select the automatic.
+So, this will basically ensure that you can run this MySQL server as soon as you boot the
+system; that means, you just on the system automatically MySQL is ready to serve you.
+Then you have to go to the command from MySQL and then you can use it whatever the
+way you want to use it. So, these are the different procedures that are very much
+necessary so far the setting up of the MySQL service is concerned. Now, I will discuss
+about how the MySQL statements can be, there are what are the SQL statements exactly.
+So, that you can execute from the MySQL server.
+
+(Refer Slide Time: 14:46)
+
+Now, there are different statement and the first statement that you can do is basically
+show a statement. I can say it is the show command, it basically you can type in either
+small letter or capital letter it is not an issue. And then show database; that means if this
+is the full command actually; it will basically tell you what is the database which is
+available under the MySQL at the moment. So, is basically this is the command, I am
+just telling you what are the different command that you should learn as the first time ok.
+So, this is a first command that you can think about it and then the next command that
+you can think about the create database.
+So, how you can create a database as you see here, the create database is the command
+and then you have to give the name of your database. For example, I have given the
+name of the databases test, that means every database should be uniquely identified by a
+name; unique name. And, that name is essential and every user should know about what
+exactly the database. This implies that MySQL server can maintain many databases in
+the same server or in the same machine. So, that is why the different and under a
+database there are a lot of tables that will be there. So, that is what you have to first
+create a database and the mean is this.
+Now, suppose already there is a database which has the same name then definitely it will
+report an error. So, that you that database creation is not successful, please try with some
+different name. So, this is an idea about the second command which basically how we
+
+can create the database of your own and then finally, you have to initialize the test. So,
+for these things, the command is use command. So, use and then give the name of the
+database that means, this database is, therefore, now active for your work. So, these are
+the three commands that are very beginning. So, if you want to create a database of your
+own which is new and then you can just do it and then finally, activate it by using the use
+command.
+(Refer Slide Time: 16:58)
+
+And then there are many other commands which are basically useful. So, you have so far
+created a database which is a name and under this database, we want to maintain tables.
+So, first I will tell you how a table can be created. Now, as you know a table basically
+looks like this, a table has its own name. So, there should be a name and there will be
+some columns, these are columns are call attributes. So, this is the attributes and then
+each row will contain a record. So, each row will contain a record. Now so, attributes
+and then table name are the first thing that you should ensure that whenever you have to
+create a table.
+And, this command basically creates a table is a command that basically tell you exactly
+what is the way you can create a table of your own. So, the column is that you have to
+first give the table name. So, this is the command create table and this is the table name
+that you have to specify. So, my table name may be saying NPTEL data like this and
+whatever it is there and then all the column name, say suppose this is the one column
+
+name. So, maybe say roll number roll and this is another column say a name and this is
+another column say marks and this is the another column say grade and this is our total
+whatever it is there so, these are the column name. As you see here I am in the process of
+creating one table and the name of the table, in this case, is JavaCourse and I created four
+columns here Roll, Name, Marks and Grades.
+So Roll, Name, Marks, and Grade so, five columns are not there. And then we have to
+specify for each attributes what is its type. As you see here for the Roll column that mean
+attributes type is Integer and I mention that this is the primary key, if you know one key
+should be unique all values then this is the primary key. So, this column will contents all
+records having the unique values unit columns. So, all values are unique like so, this is
+called the primary key and then the Name is basically is a character is a Varchar is a
+syntax for that. So, that SQL can understand about it and 30 is basically maximum string.
+That means, you can store a name of a maximum 30 characters in this column so, name.
+And then, Marks is again Integer and it is not null; that means, if you enter any null then
+you will not be able to null it. And the primary key is also not null; that means, no record
+you can enter for which this element has the null value, null value means no value ok.
+So, integer Mark’s is also should be a not you have discussed it here and Grade is also a
+string of two characters. So, this way we define one table and this is the command, if
+issue this command to SQL server then SQL server will create a table under the active
+database which is the test in this case. So, this completes how the database can be
+created.
+
+(Refer Slide Time: 20:05)
+
+And then, if you want to know exactly the database that you have created what is its
+description. So, the description can be obtained by the command is called a DESC, it is
+basically the short form SQL sometimes allowed to give you short-form describe; short
+form of describing statement. Now, if you type this command describe followed by the
+table name, in this case, the table name is JavaCourse then you will be able to see exactly
+which is the structure of the table. So, this is the command here desc then database table
+name is JavaCourse and then it basically gives the structure.
+So, as you see here so, it basically what are the fields and then type it is there. So, in this
+case, the fields also call the attributes there are four and then the type is int. So, basically
+11 digits can be there, Marks also integer 11 digits can be there and the Name is string 30
+and varchar is 2 30 and here you see null or not null. So, this means no null value is there
+with no null value; however, this can have null value also.
+And then finally, you see whether there is any is a primary key or not. As we have
+mentioned this is a primary key, this is the primary key and other is nothing is
+determined non-primary key and then default is basically null. So, initially whenever you
+create the table that time there is no default value, you can also while you are creating
+some default value say 0 0 0 all this thing can be included there also.
+So, this is the structure of the database that just now we have created and after creating
+the data table as we have seen it, you can see the structure of the database. And, using
+
+this also what are the different type of fields also can be created, we will discuss shortly
+about this different type of file that can be possible using SQL.
+(Refer Slide Time: 21:56)
+
+And the next is that your table; your database is ready, under these database a table is
+ready, but at this moment the table is empty. Now, it is your task to enter the data into
+the table. Now, the data into the table can be inserted by another command in SQL it is
+called the INSERT, INSERT INTO. Then this is basically table name, for example,
+JavaCourse and then what are the values that you want to enter in each rows. So, here
+Value1, Value2., ., Value n provided that there is n number of fields are there. So, this is
+the command INSERT INTO is basically default in setting record into a table.
+Now, if the table in contents already some record, then insert the command will insert
+into the appending mode. So, whatever the records are there it will be there and then it
+will start appending the record at the end of the existing records. So, this the statement as
+we have seen here with this ok, we have issued four insert common one by one. First
+insert into JavaCourse values 01 Debasish 75 A, as you see here it is basically like; insert
+into JavaCourse values 02 Nilanjan 85 EX. So, it is the second record and this way this is
+the third record and this is the fourth record that we have inserted.
+So, we have seen exactly four insert command as have been issued to insert four records
+successfully one after another. If you again type another click insert command so, the
+next record will come here and so on. So, this is the simple way the insert command can
+
+be issued to the SQL system and your SQL will insert one by one.
+(Refer Slide Time: 23:47)
+
+And here is the UPDATE command, if you want to change some values in a particular
+record that can be done using the UPDATE command. So, here the command syntax is
+UPDATE then table name and then SET. So, these are the command syntax and then
+table name in for example, in this case, JavaCourse and then which column that you have
+to change it. So, column name Value1 Value2; that means, these are the new value that
+you have to changed it. And, then this is the condition for which record that you want to
+tell. If you where star then for all it will be there if we instead of the star actually the
+short form that was star means all or where all otherwise you column name equals to
+Value1.
+That means, it will change those columns whose column name is Name1 is Value1. This
+is basically condition; that means, if you want to update particular records then which
+record should be updated that has to be mentioned here. Now, here is an example if you
+see there is a two update command we have done it here; update this is the table name set
+Name Debasish that means we want to update this table at the Name field by Debasis
+where Name is Debasish. That means, this is the condition, this means that earlier table
+that we have created, if you see this entry was d e b a s i s h and then by means of this
+update command we will be able to change this one. So, this table basically is shown
+after the update I mean first command is executed.
+
+Now, let us see the second command another command update again, the same table
+name set Marks 85 Grade Ex where Name equals to Debasis. So, after this one if this
+Debasis earlier it was 65 a, now it becomes 85 Ex. As you see here update command will
+basically help you to change the values in a records, satisfying a certain condition that
+we have there.
+(Refer Slide Time: 25:44)
+
+And so, this is the update and then finally, SELECT is very popular one command; if
+you want to read some records from the existing table in a database then the select
+command is there. So, a select command basically stands because syntax is SELECT
+FROM WHERE. So, this is the command syntax that you have to remember, SELECT
+then you can select all columns, then select star FROM the which table we have to read,
+we have to mention. And, if you want to select some records which satisfy certain
+particular condition then you can mention this one. So, this is basically the way by the
+select command can be executed.
+Now, let us have some command execution on the existing database that we have just
+now created namely the JavaCourse. And, there is a select star from JavaCourse, this
+means that we want to select all the fields from the table JavaCourse and there is no
+condition that means, it will basically select all. So, no condition needs to be satisfied. If
+you exit this command then you will be able to see this kind of database is there. Now if
+you want to run the next command, next command says suppose select name roll from
+
+JavaCourse So, this is the command that we have select name roll that means only two
+fields from the table. So, this basically will be the output once you execute this
+command.
+You can see this output on your console, in your console the display screen all these
+tables will look like in this table form. And then next commands, let see another
+command on the same database like a select star; select star means all field from
+JavaCourse where marks are greater than 80. That means, it will select all the fields the
+marks are greater than 80; that means, in this table as you know this is the initial table
+only these two records qualify for this statement. So, it will basically display this output
+and next another column; you see another command that is the select star from as we see
+the command again select star from JavaCourse where name like this one. So, a name
+like means it is basically whatever the other things are there, only there should be at least
+two-three characters like j e e.
+Now, this is the condition it is there, where name like is another syntax for, there are
+many other selects common is syntax and compositions are there. I am giving you the
+basic concept at this stage only, you can follow any SQL book. So, that you can learn
+many other command formation from that under the select there are many other
+command formation actually. And, then nested select although select within select so,
+many other things are there that I just want to skip at the moment. Now, if you execute
+this command then it may not satisfy any record that may not satisfy this condition. In
+that case, it will display the blank table, as you see here no values, in any records which
+have the name having any three characters say j double e. So, it will return a null table,
+blank table in this case.
+Now, our next command that we are going to is this select star from JavaCourse order by
+marks. Now, we can understand what is the meaning; meaning is very simple in English.
+So, you can understand if I do not say anything also you will be able to order by means it
+will display the table, but according to by default is according to the ascending order.
+Otherwise order by marks you can write descending also it can be there, by default it is
+an ascending order. As we see this basically select the entire, I mean display the entire
+table and when the marks are basically in the ascending order of the marks is there. So,
+this is the few commands that you can think about how the table can be created anyway.
+
+(Refer Slide Time: 29:58)
+
+So, these are the few command that we have discussed about. So, for the select is
+concerned and next we will discuss about another very important command DELETE.
+So, using this command, if you want to delete any record that you could that. So, this is
+the command syntax is DELETE FROM, WHERE. So, delete means it is the table name
+that you have to specify and you can delete entire records, if it satisfies certain
+conditions. So, we have two conditions like, all the conditions as you like say name
+equals to say d e b a s i s whatever it is they're like this one so, it will delete that record.
+Now, let us see one example so, that you can understand how the delete command can be
+executed for the database, that we have created namely JavaCourse under the test table;
+JavaCourse under the database test. Now, this the one example that deletes from
+JavaCourse where a mark is less than 66; you can understand it will delete all the records
+which have to satisfy this condition. As you see there are few records as the marks 65
+those have been deleted like this one. So, after the successful execution of this command,
+it will give output like this. And, you note one thing one is deleted; that means, it is
+physically removed ever no logical deletion takes place.
+So, delete command is very dangerous in that sense that you should issue this command,
+once you delete it then you will not be able to recover it later on ok. So, this is the delete
+commands and then there is another command also delete from JavaCourse then you can
+understand this means it will delete all the records from your table.
+
+(Refer Slide Time: 31:34)
+
+Now, DROP TABLE is another command which basically to delete the entire table. So,
+drop table is also another very dangerous command of course, and as you need syntax is
+a very simple drop table, this is the command and then you have to give the table name
+which you want to delete it. so here. Now, as we see the example a drop table
+JavaCourse this mean that whatever the records it is there, it will be deleted forever.
+And, then if you again select start from the database it will say that database or table
+does not exist; this kind of commands it is there if you want to select it there.
+(Refer Slide Time: 32:16)
+
+So, we have to just learned about the setting up of MySQL and also we have learned
+about a few important and 1frequently occurred SQL statements. I hope you have
+understood, but this is just at the beginning stage; if you run with many other database
+creations, many other tables you can create. And, then for each table, you can run just
+you can just come into the playing mode like. So, play with this one right, but you have
+to install the MySQL first, MySQL installation is not a big job.
+In our demonstration 1, we will give a thorough step of how the MySQL can be installed
+in your machine, At that time if you have your own laptop you can write attain this
+session using your laptop and you can follow it. So, everything is very simple, but before
+that you can install all the software from the net and then start our procedures seeing our
+demonstration. So, MySQL should be installed beforehand you know so, that you can
+practice it about it. In our next session, we will discuss about JDBC driver regarding and
+then we will discuss about it and then; obviously, MySQL is a structured language.
+So, unstructured data cannot be maintained by this one and then how to take a backup of
+MySQL data ok. Those things you can find if you give this search into the net, the net
+will give you a lot of solutions for keeping backup data. Now, in your backup data as you
+see say suppose you have to install a MySQL with a newer version, but you do not want
+to lose your data. So, that is why your data should be stored in a separate drive that we
+have done here D. So, D drive can be copied anywhere and then if you install again
+newer version and you're in setting, if you mention that your data is that right so, that
+data can be accessible always.
+So, absolutely no problem, if there is a problem or the MySQL server is corrupted or
+there is a breakdown in your machine you will not lose any data there; provided that you
+have keep you kept the backup all the times you have there. So, database security is not
+an issue so far the MySQL is concerned there. And, many systems actually usually
+follow several back-ups of the same system, those are the different issue that is for the
+more reliable database management if you want to have it. So, thank you we will come
+to the next session where, we will discuss about JDBC driver.
+Thank you very much.
+
+

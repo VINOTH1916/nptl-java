@@ -1,0 +1,396 @@
+{
+  "lecture": 19,
+  "title": "Demonstration VIII (Packages Demo)",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "In the packages demonstration, which class is used as an example of importing an API package?",
+      "options": {
+        "A": "java.util.Scanner",
+        "B": "java.lang.Math with Math.sqrt()",
+        "C": "java.io.BufferedReader",
+        "D": "javax.swing.JFrame"
+      },
+      "answer": "B",
+      "explanation": "The NPTEL Lecture 19 demonstration uses java.lang.Math (specifically Math.sqrt()) as an example of importing and using an API package. Since java.lang is auto-imported, Math.sqrt() can be used without an explicit import."
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "In the demonstration, what user-defined package is created?",
+      "options": {
+        "A": "com.nptel.java",
+        "B": "myInterface",
+        "C": "utils.math",
+        "D": "custom.pack"
+      },
+      "answer": "B",
+      "explanation": "The NPTEL Lecture 19 demonstration creates a user-defined package called 'myInterface'. Classes in this package are stored in a directory named 'myInterface', demonstrating how user-defined packages map to directory structures."
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What import statement is used to access the user-defined package 'myInterface' in the demonstration?",
+      "options": {
+        "A": "package myInterface;",
+        "B": "include myInterface.*;",
+        "C": "import myInterface.*;",
+        "D": "use myInterface.*;"
+      },
+      "answer": "C",
+      "explanation": "'import myInterface.*;' imports all public classes from the 'myInterface' package, making them available without fully qualified names. This demonstrates the standard import mechanism for user-defined packages."
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What access level must a class have for it to be accessible from outside its package?",
+      "options": {
+        "A": "default (no modifier)",
+        "B": "protected",
+        "C": "private",
+        "D": "public"
+      },
+      "answer": "D",
+      "explanation": "Only public classes are accessible from outside their package. Default (package-private) classes are inaccessible from different packages. In the demonstration, classes in 'myInterface' must be declared public to be used by classes in other packages."
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "In the demonstration, what is 'default access' equivalent to in terms of package visibility?",
+      "options": {
+        "A": "Accessible from everywhere",
+        "B": "Package-level access — accessible within the same directory/package only",
+        "C": "Accessible only within the class",
+        "D": "Accessible from subclasses only"
+      },
+      "answer": "B",
+      "explanation": "Default access (no modifier) means package-level access. Classes and members without an access modifier are accessible only from within the same package (same directory). The demonstration shows that a default class becomes inaccessible when accessed from a different package."
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What example value is shown in the lecture for setting CLASSPATH on Windows?",
+      "options": {
+        "A": "set CLASSPATH=C:\\Windows\\System32",
+        "B": "set CLASSPATH=C:\\MyPrograms\\Java",
+        "C": "set CLASSPATH=%JAVA_HOME%\\lib",
+        "D": "set CLASSPATH=.\\myInterface"
+      },
+      "answer": "B",
+      "explanation": "The NPTEL lecture shows 'set CLASSPATH=C:\\MyPrograms\\Java' as an example of configuring the CLASSPATH environment variable on Windows to tell the JVM where to find user-defined packages."
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "Can class inheritance work across packages when using user-defined packages?",
+      "options": {
+        "A": "No — inheritance only works within the same package",
+        "B": "Yes — a class in one package can extend a public class from another package",
+        "C": "Only with protected access modifier",
+        "D": "Only for abstract classes"
+      },
+      "answer": "B",
+      "explanation": "Class inheritance works across packages. A class in 'com.app' can extend a public class from 'myInterface' package using 'extends' after importing the class. This is demonstrated in the lecture — the demonstration shows inheritance across the imported user-defined package."
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "When is CLASSPATH setting needed?",
+      "options": {
+        "A": "Always — CLASSPATH must be set for any Java program to run",
+        "B": "Only when packages are located outside the current working directory",
+        "C": "Only when using multiple classes",
+        "D": "Only for applet programs"
+      },
+      "answer": "B",
+      "explanation": "CLASSPATH is needed when class files or packages are in directories other than the current working directory. By default, the JVM looks in the current directory. If packages are stored elsewhere (like C:\\MyLib), CLASSPATH must be set to include those locations."
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What does the demonstration show about public class accessibility from different packages?",
+      "options": {
+        "A": "Public classes are accessible only within their package",
+        "B": "Public classes in a package are accessible from any other package after importing",
+        "C": "Public classes require explicit permission from the package owner",
+        "D": "Public classes are accessible only through inheritance"
+      },
+      "answer": "B",
+      "explanation": "The demonstration shows that public classes in a user-defined package (like 'myInterface') are accessible from any other package once the package is imported with 'import myInterface.*;'. This is the key visibility rule for cross-package class usage."
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What happens in the demonstration when a default (non-public) class is accessed from a different package?",
+      "options": {
+        "A": "It works fine",
+        "B": "A compilation error occurs — default class not accessible from different package",
+        "C": "A runtime exception is thrown",
+        "D": "The class is automatically made public"
+      },
+      "answer": "B",
+      "explanation": "The demonstration explicitly shows that a class without the 'public' modifier (default access) causes a compilation error when accessed from a different package. The error message indicates the class has package-level access and cannot be accessed from outside."
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "In the demonstration, what is the correct sequence to create and use a user-defined package 'myInterface'?",
+      "options": {
+        "A": "1)Create directory, 2)Write class with package statement, 3)Compile, 4)Import and use",
+        "B": "1)Write class, 2)Compile, 3)The directory is auto-created",
+        "C": "1)Import, 2)Write class, 3)Compile, 4)Run",
+        "D": "1)Register package in JVM, 2)Write class, 3)Compile"
+      },
+      "answer": "A",
+      "explanation": "The correct sequence: 1) Create the directory 'myInterface/', 2) Write the Java class with 'package myInterface;' at the top, 3) Compile with javac (optionally use -d to auto-create the directory), 4) In another class, add 'import myInterface.*;' and use the classes."
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Why does the demonstration use 'import java.lang.Math' as an example of an API package, even though it's redundant?",
+      "options": {
+        "A": "To show that java.lang can be imported explicitly even though it's automatic",
+        "B": "java.lang must be imported explicitly in Java 8",
+        "C": "Math.sqrt() requires a special import",
+        "D": "To demonstrate that Math is in java.math, not java.lang"
+      },
+      "answer": "A",
+      "explanation": "Using 'import java.lang.Math' (or 'import java.lang.*') in the demonstration serves a pedagogical purpose — it shows the import syntax and concept even though java.lang is auto-imported. This helps students understand the general import mechanism before applying it to packages that DO require explicit imports."
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "In the demo, when inheriting from a class in 'myInterface' package, what must be added to the current class?",
+      "options": {
+        "A": "package myInterface;",
+        "B": "import myInterface.ClassName; (or import myInterface.*;) and then extends ClassName",
+        "C": "CLASSPATH must be set to myInterface",
+        "D": "The class must be in the same directory as myInterface"
+      },
+      "answer": "B",
+      "explanation": "To extend a class from 'myInterface' package: 1) Import the class: 'import myInterface.ClassName;' 2) Declare inheritance: 'class MyClass extends ClassName { ... }'. The import makes the class name available; 'extends' establishes the inheritance."
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "What is the difference between 'import java.lang.*' and 'import java.lang.Math' in effect?",
+      "options": {
+        "A": "The wildcard form imports more classes, making the program slower",
+        "B": "Functionally identical for using Math; wildcard imports all java.lang classes (all already auto-imported), so both are effectively no-ops",
+        "C": "The specific form is required for static methods",
+        "D": "The wildcard form is invalid for java.lang"
+      },
+      "answer": "B",
+      "explanation": "Both are redundant for java.lang since it's auto-imported. For other packages, 'import java.util.*' imports everything in java.util, while 'import java.util.Scanner' imports only Scanner. For runtime behavior, both have no difference — imports only affect compile-time name resolution."
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "The demonstration shows that CLASSPATH is needed when the package is 'outside the working directory'. What does 'outside' mean here?",
+      "options": {
+        "A": "On a different computer",
+        "B": "In a directory not included in the current CLASSPATH search path",
+        "C": "In a different partition of the hard drive",
+        "D": "Only in network drives"
+      },
+      "answer": "B",
+      "explanation": "'Outside the working directory' means the package directory is not at (or under) the current working directory or any existing CLASSPATH entry. The JVM only searches the current directory by default — any other location must be added to CLASSPATH."
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "In the demonstration, why is access protection in packages important for library design?",
+      "options": {
+        "A": "It prevents users from reading the code",
+        "B": "It controls what is part of the public API (public) vs. internal implementation (default/private), giving library designers control over their interface",
+        "C": "It prevents multiple classes in one package",
+        "D": "It makes code run faster"
+      },
+      "answer": "B",
+      "explanation": "Access protection in packages separates API from implementation: public classes/methods form the stable interface that external code depends on; package-private classes are internal details that can change freely. This is the key design principle — expose what users need, hide what they don't."
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "If 'myInterface' package is stored in 'C:\\Programs\\myInterface', what CLASSPATH setting allows its use?",
+      "options": {
+        "A": "set CLASSPATH=C:\\Programs\\myInterface",
+        "B": "set CLASSPATH=C:\\Programs",
+        "C": "set CLASSPATH=C:\\Programs\\myInterface\\*.class",
+        "D": "set CLASSPATH=myInterface"
+      },
+      "answer": "B",
+      "explanation": "CLASSPATH should point to the PARENT directory of the package directory, not the package directory itself. Setting 'CLASSPATH=C:\\Programs' allows the JVM to find 'myInterface/ClassName.class' because it looks for 'C:\\Programs\\myInterface\\ClassName.class' when resolving 'myInterface.ClassName'."
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "The demonstration shows that Math.sqrt() is used from the java.lang package. What does this demonstrate about static methods in packages?",
+      "options": {
+        "A": "Static methods require a special import syntax",
+        "B": "Static class methods can be called directly using ClassName.methodName() after the class is accessible (via import or full qualification)",
+        "C": "Static methods cannot be in packages",
+        "D": "Static methods require object creation before use"
+      },
+      "answer": "B",
+      "explanation": "Math.sqrt() demonstrates that static methods in packaged classes are called with ClassName.methodName() syntax. Once the class is accessible (Math via auto-import in java.lang), its static methods are available directly. No object creation (new Math()) is needed."
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What does the demonstration reveal about what happens when you don't add 'public' to a class in 'myInterface' package?",
+      "options": {
+        "A": "The class still compiles and works from other packages",
+        "B": "Compilation succeeds but the class is invisible and inaccessible from outside the package",
+        "C": "A compiler warning is generated",
+        "D": "The JVM automatically promotes it to public"
+      },
+      "answer": "B",
+      "explanation": "A class without 'public' has default (package-private) access. It compiles successfully within its own package, but when another package tries to use it (after import), the compiler reports an error: 'ClassName is not public in package myInterface; cannot be accessed from outside package'."
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "How does the demonstration prove that Java package = directory structure?",
+      "options": {
+        "A": "By showing that package declarations are optional",
+        "B": "By showing that the class in 'package myInterface;' must physically be in the 'myInterface/' directory for the JVM to find it",
+        "C": "By showing that multiple packages can share one directory",
+        "D": "By showing that CLASSPATH can override directory structure"
+      },
+      "answer": "B",
+      "explanation": "The demonstration proves package = directory by showing: a class with 'package myInterface;' MUST be in a directory named 'myInterface/'. When the class file is in the correct directory and CLASSPATH includes the parent directory, the JVM finds it correctly. Moving it to a wrong directory causes class loading failure."
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "In the demonstration, if 'myInterface.ClassA' is public but 'myInterface.ClassB' has default access, which can be used from another package?",
+      "options": {
+        "A": "Both can be used after importing myInterface.*",
+        "B": "Only ClassA — it's public; ClassB's default access prevents cross-package use",
+        "C": "Only ClassB — default access is more permissive",
+        "D": "Neither can be used from another package"
+      },
+      "answer": "B",
+      "explanation": "After 'import myInterface.*', only public ClassA is usable from outside the package. ClassB with default access causes a compile error if referenced from another package. The wildcard import makes all public types available, but default-access types remain package-private."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "In the demonstration, inheritance across packages is shown. What specific constraint ensures the inherited class works correctly?",
+      "options": {
+        "A": "The parent class must have a no-arg constructor",
+        "B": "The parent class must be public AND the methods to be used must be public or protected",
+        "C": "Both classes must be in the same directory",
+        "D": "The parent class must declare the child class as a friend"
+      },
+      "answer": "B",
+      "explanation": "For cross-package inheritance to work: 1) The parent class must be public (otherwise it's not accessible from outside the package), and 2) the methods/fields to be inherited and used must be public or protected (private members are inherited but not accessible, default-access members aren't accessible cross-package)."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Why might a production library choose to put all its implementation classes in an '.internal' sub-package?",
+      "options": {
+        "A": "For faster compilation",
+        "B": "To visually signal to users that these classes are internal details not meant for external use, even if they are technically public",
+        "C": "The JVM restricts access to .internal packages",
+        "D": ".internal packages are automatically private"
+      },
+      "answer": "B",
+      "explanation": "Naming internal packages with '.internal' (like org.springframework.internal.*) is a convention that signals to developers: 'these are implementation details, don't use them directly'. While Java doesn't enforce this programmatically (classes may be public for internal use), tools like OSGi and Java modules (module-info.java) can enforce this boundary."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "In the demonstration, 'import myInterface.*' is used. Could you use a specific import 'import myInterface.SpecificClass' instead? What's the tradeoff?",
+      "options": {
+        "A": "No — only wildcard imports work for user-defined packages",
+        "B": "Yes — specific import makes dependencies explicit (better for large projects); wildcard is more convenient but obscures which classes are actually used",
+        "C": "Specific imports are only valid for java.* packages",
+        "D": "Wildcard imports are faster at runtime"
+      },
+      "answer": "B",
+      "explanation": "Both work for user-defined packages. Specific imports (import myInterface.MyClass) make it explicit exactly which classes are used from the package, aiding code readability and refactoring. Wildcard imports are convenient but hide dependencies. Most style guides prefer specific imports for production code."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "The demonstration sets 'CLASSPATH=C:\\MyPrograms\\Java'. If user types 'java myInterface.MyClass' from C:\\Test, what path does the JVM look for?",
+      "options": {
+        "A": "C:\\Test\\myInterface\\MyClass.class",
+        "B": "C:\\MyPrograms\\Java\\myInterface\\MyClass.class",
+        "C": "C:\\MyPrograms\\Java\\MyClass.class",
+        "D": "Both A and B"
+      },
+      "answer": "B",
+      "explanation": "The JVM maps the fully qualified class name 'myInterface.MyClass' to a path by replacing dots with directory separators. With CLASSPATH=C:\\MyPrograms\\Java, it looks for 'C:\\MyPrograms\\Java\\myInterface\\MyClass.class'. C:\\Test is not in the CLASSPATH (unless '.' is included), so the current directory is not searched."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "What is a 'static import' and how does it differ from a regular import?",
+      "options": {
+        "A": "Static import imports static classes only",
+        "B": "Static import (import static ClassName.memberName) allows using static fields/methods without class name prefix: 'sqrt(4)' instead of 'Math.sqrt(4)'",
+        "C": "Static imports are only for java.lang classes",
+        "D": "Static import imports all static methods of all classes in a package"
+      },
+      "answer": "B",
+      "explanation": "Static import (import static java.lang.Math.*;) allows using static members directly without the class name: 'sqrt(4)' instead of 'Math.sqrt(4)'. Regular import makes class names available without package prefix. Static import is useful for constants and math functions but can reduce readability if overused."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "If the demonstration creates a class in 'myInterface' package that uses another class also in 'myInterface', does it need an import?",
+      "options": {
+        "A": "Yes — always need import",
+        "B": "No — classes in the same package can use each other without import",
+        "C": "Only if the classes are in different files",
+        "D": "Only if one class extends the other"
+      },
+      "answer": "B",
+      "explanation": "Classes in the same package have automatic access to each other without any import statement. 'myInterface.ClassA' can directly reference 'myInterface.ClassB' without importing it. This is one of the benefits of organizing related classes in the same package."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "What is the significance of showing Math.sqrt() in the packages demo when java.lang is auto-imported?",
+      "options": {
+        "A": "Math.sqrt() is not in java.lang",
+        "B": "It demonstrates the concept of using classes from packages, establishing the pattern before showing user-defined packages that DO require explicit imports",
+        "C": "Math.sqrt() requires special activation",
+        "D": "It demonstrates that java.lang can be overridden"
+      },
+      "answer": "B",
+      "explanation": "Using Math.sqrt() (from auto-imported java.lang) serves as a simple, familiar example to establish the concept of 'using a class from a package' before demonstrating user-defined packages. The pedagogical progression: familiar API package → user-defined package, building understanding incrementally."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Why does Java require packages to mirror directory structure rather than using a separate mapping file?",
+      "options": {
+        "A": "Historical accident from the initial Java design",
+        "B": "Directory-to-package mapping is predictable and efficient — the JVM can locate any class directly from its fully qualified name without reading a mapping index",
+        "C": "Operating systems require directories to match class names",
+        "D": "It reduces the size of compiled .class files"
+      },
+      "answer": "B",
+      "explanation": "The directory-mirrors-package approach enables O(1) class lookup: given 'com.bank.Account', the JVM constructs the path 'com/bank/Account.class' and reads it directly. A mapping file would require reading and parsing an index file first. This design choice makes class loading fast and predictable."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "The demonstration shows class inheritance across packages. What happens to the protected members of the parent class in this cross-package inheritance scenario?",
+      "options": {
+        "A": "Protected members become public in the subclass",
+        "B": "Protected members are accessible in the subclass through the subclass's own reference (this), but not through superclass-type references from outside",
+        "C": "Protected members become private in the subclass",
+        "D": "Protected members are inaccessible in cross-package inheritance"
+      },
+      "answer": "B",
+      "explanation": "In cross-package inheritance, protected members are accessible inside the subclass through 'this' reference or the subclass type. However, Java restricts cross-package protected access: from outside the subclass's package, you cannot access the protected member through a superclass-type reference, only through the subclass type."
+    }
+  ]
+}

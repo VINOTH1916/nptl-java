@@ -1,0 +1,346 @@
+Programming in Java
+Prof. Debasis Samanta
+Department of Computer Science and Engineering
+Indian Institute of Technology, Kharagpur
+Lecture - 53
+Demonstration – XX
+So, here is the session about JDBC, there are there is a series of demonstration will be
+followed after the learning, so, for the theoretical concepts.
+(Refer Slide Time: 00:31)
+
+So, first we will discussed about regarding the MySQL server installation and after the
+steps of installation we will decide exactly how to access the MySQL server. Initially we
+will consider about the console based accessing and then later on another session where
+we will demonstrate how the same can be done through the JDBC driver. So now, let us
+have the demonstration about the MySQL database server installation in your own
+machine right.
+It may be laptop, it may be PC we will we are going to consider the installation in
+Windows system. However, the procedure and the steps basically in variance for any
+other systems to be followed. So, as an installation the first step is basically to download
+the software as you have told the download the link that we have already given.
+
+(Refer Slide Time: 01:22)
+
+So, this is the link the dev dot mysql dot com oblique downloads oblique. So, this
+actually is the link; so, if you just able to access this link then it will open a browser
+window where you can find MySQL community downloads.
+(Refer Slide Time: 01:58)
+
+So, we have just clicked the link and then we see that MySQL community server is there.
+So, we have to open the link and then we will find the installer basically as you have told
+Windows installer you have to consider here. So, this is basically archive a ZIP Archive.
+
+(Refer Slide Time: 02:12)
+
+And depending on your machine configuration whether it is a 32 bit or is 64 bits; you
+have to decide the correct what is called downloading software for your download. So,
+that you have to ensure that otherwise your installation may not be successful operation.
+So, assuming that our machine is Windows 64 and we are just going to download the
+latest version of the MySQL server which is the MySQL 8.0 and then release 13.0. So,
+we are going to install it; so, here actually we have already pre-installed, it is in our
+desktop terminal.
+(Refer Slide Time: 02:49)
+
+And then so, this is a zip file. So, this zip file you should copy into some directly where
+you were you want to install; obviously, zip file is a compressed one you have to unzip
+the folder. And then so, it will basically give you all the installable file that is there in
+there in the zip file.
+(Refer Slide Time: 03:09)
+
+So, here as you see the folder where we have unzipped the all components is mysql 8.0
+then 13.0 and then win war. So, this is the software basically we have right to copy this
+folder into the exact location where you want to install as we are going to install into our
+C drive. So, you just copy this folder into our C drive here and we just rename the drive
+as mysql because, you want to install this software as a MySQL.
+So, we have done it my SQL ok. So, our zip file contains lot of other executable bin then
+data then docs etcetera. So, we can see these are the basically zip unzip these are the total
+installable file it is there. So, this is the first step that the download it and then we have to
+copy the folder into the proper location.
+
+(Refer Slide Time: 04:10)
+
+And then we have to so, this basically completes the downloading about it and then go
+to the command prompt. So, you have to copy the my any file as we have already
+mentioned and that my any files should be placed into the MySQL directory. So, my any
+file the configuration which is there that configuration and we have already mention in
+theory class; we are typing the configuration that is required for the my any file right.
+So, this is the syntax that you have to follow verbatim without knowing what exactly the
+things are there, only the system can understand about the any file. This is required for
+the initialization so far the MySQL server is concerned. So, MySQL id then hash
+installation directory then base directory. So, it will be base dir equals these is a base
+directory where our zip file is located that is c colon then slash mysql slash within double
+quote. And then data directory hash data directory; data directory is equals to within d
+colon dash data.
+So, this is basically back up file will be stored in this drive we have planned that all the
+backup file or data file will be stored in a D drive of this machine. You can make our
+some other stores location also no issue.
+
+(Refer Slide Time: 05:37)
+
+Anyway so, the data file is created here in D drive, we have created a folder there.
+(Refer Slide Time: 05:41)
+
+And there is in a C diver so, you see in the mysql directory the data file is there, this
+folder should be removed. So, we are removing this folder from here.
+
+(Refer Slide Time: 05:50)
+
+Now so, this completes exactly the storing the files there.
+(Refer Slide Time: 05:57)
+
+Now, you have to run the program and to run this program you have to go to command
+prompt. And in command prompt mysql go to the bin directory and there you type
+mysqlid --console console. These are command already you have mentioned there
+console data initial is right initialize right ok. So, once we face it so, your system will
+take care about this installation of these program.
+
+So, installation is going on and then as you return to the command prompt and you have
+return it to this and localhost that basically the this machine is the host machine in this
+mysql server is there. So, we have completed the installation here ok. So, it is now
+installed, now our next task is basically to change the password.
+(Refer Slide Time: 06:57)
+
+So, we can do this thing again from command mode. So, mysql -u root -p. So, basically
+user is root and then password it is basically asking the password. So, in this local
+machine and then you have to enter the password you can type any password. So, in this
+case you are setting the password as the root password right ok. So, this is the localhost
+password is basically as it is mentioned. So, this you have to give the password at the
+beginning; so, we are copying it and then pasting.
+So, you are giving the password; however, we can change the password also for these
+things, we can write the command alter. So, we are just changing the user id login for
+this as alter user give this root, we are giving the user name as root at the local host. So,
+this is the step that you should follow user root and percent localhost. So, this is a
+command identified as root. So, this is basically root is the user id in this case enter. So,
+there is some syntax error ok.
+So, now so this is the correct syntax that you should follow in order to give the proper
+name of the user here, you should note it this is very important and then once the user is
+there we have to set the password also. So, you should set the password here ok. So, here
+
+you see alter user command. So, this is the user at the rate of localhost identified as this
+is basically the password. So, we set for this mysql server at the moment user id as root
+and password is also root. So, this is the login and password for this one.
+(Refer Slide Time: 09:15)
+
+And now our mysql server is ready, we can type exit command and to exit from this
+setting.
+(Refer Slide Time: 09:27)
+
+Then we will go for the class per checking or not now. So, we have done it and then we
+can change the password, this is the changing the password of.
+
+(Refer Time: 09:35).
+So now, we are now our server is ready and now we are going to log into the server. So,
+for this login we have type the command in the mysql prompt you have to go mysql -u
+root –p is basically ask for the password to be entered. So, the root is the password and it
+is case sensitivity. So, in the small letter you type root. So, it is there and then system has
+accepted this authorization check is passes. Now, one thing authorization check is
+passed; that means, MySQL server is now allow you to execute any statement whichever
+you want to run it right ok.
+(Refer Slide Time: 10:22)
+
+Now, we are going to first our step is that initially the server is prepared; however, there
+is no database there is no table under this database. So, we should see exactly if there is
+any database at the moment in the server or not under your categories. So, absolutely is
+not there; so, you first create this is the default database is there, but we have to create
+our own.
+So, now we are going to create one database of our own. So, clear let it be test database
+test now so, database test is created. Now, again if we try to create database test it will
+give an error because, it will not allow to duplicate the test 1. So, it is there now, if you
+can again create database test 1 this is quite possible test 1. So, it is you can delete also if
+you want to remove these.
+
+(Refer Slide Time: 11:16)
+
+So, databases if you see it will give you all the databases that is here. So, right now test
+and test 1 these 2 databases have been created.
+(Refer Slide Time: 11:27)
+
+Now, these 2 data bases under your own jurisdiction and inside these databases you can
+put as many table as you wish. Now, we are going to enter some table under the data
+base test 1. So, you have to make it active.
+So, let us use the command use test. So, this basically make the data base currently
+active. So, this is now current active database test. Now, whatever the command that will
+
+be you will be able to enter it now it will go to this test data base actually. Now, let us
+first create a table, we want to create one table the name of the table that we want to give
+a JavaCourse.
+And then this table has four fields as we see Roll, Name, Marks and Grade, they are 4
+columns actually. The first fill field Roll has the type Integer we have to give this syntax,
+the Name Varchar and then you can type in integer in capital letter or small letter
+absolutely no issue. You can do whatever it is there and then the second field is Name it
+is basically string of 30 characters, for this the syntax is Varchar. And then within
+brackets is 30 indicates the maximum 30 characters can be allowed to enter or; that
+means, this is the weight of the column. And then Marks is also the type Integer and then
+Grade is also a character, but is of 2 characters only.
+And one more thing that you ensure that for the first field Roll we have declared the
+primary key. For every database table there should be one field as a primary key, there
+may be more than one field also primary key any way no issue. But, if it is a primary key
+then it should have all the entries are all null and entries in any rows should be unique.
+So, you cannot allow it based system not allowed to duplicate entries in 2 rows for this
+value primary key which is defined. And then other is also you see marks integer not null
+this indicates that these entry has to be there whenever you insert some record into it no
+null values is allowed.
+And great is a second and at the moment there is no entry. So, it is basically default is no
+value is it is there. So, we have entered it now you can show the table that we have
+entered; so, table you see ok. So, this is the case right now we have created one table
+called the JavaCourse and this is the describe command short form DESC if we type it, it
+will basically display all the structures there which is there.
+
+(Refer Slide Time: 14:04)
+
+So, as we see the 4 fields there type and then null key is primary default is null also and
+there is no exactly my field and there is a total structure composition so far the SQL
+server is concerned maintained this metadata in its own repository. Now so, the data is
+created now at the moment is javacourse table does not have any data.
+So, if we add use the command select start this basically the command is to retrieve all
+the record that is stored there in this database in this table JavaCourse. At the moment as
+it gives that empty set there is no elements there. So, now let us see how the record can
+be inserted into the table the JavaCourse again which is under database test. So, there are
+commands like insert, insert command can be one at a time or four insert commands can
+be also placed in the same command also, now we are typing only one command first ok.
+So, at the same time we have typed all commands on by one anyway so, it will execute.
+So, first insert into JavaCourse value 0 1 Debasish 75 A. So, 4 records has been inserted
+and you know all these record insertion will go into the appending mode. So, one by one
+it will be inserted; now if again if you see the show table or select star command and as
+you see the four records has been inserted.
+Now, I am again issuing one more insert command here insert into data into javacourse
+value say 0 7 and then within quote name is Amit and then marks is 95. And then grade
+is EX within double quote all the string or varchar should be in the EX. Now, semi colon
+
+should be there termination of the command enter, now it is successful; now, enter the
+data right.
+(Refer Slide Time: 16:03)
+
+As we see we can enter it here roll number is the unique key, now let us see again insert
+command at the primary key should be unique. Now what we are going to be, we have to
+starting the insert and then 0 7 again insert value 0 7 Anand a n a n d Anand then 85 fine
+no problem. So, whatever it is there; now if we want to do because primary key should
+be a unique one, but here as we have given this so, it basically gives that error. So, it
+should be different ok.
+
+(Refer Slide Time: 16:40)
+
+Now so, this you have added it and as we see at the moment there are 7 records entered
+into the table. The name of the table data database table is javacourse. So, this is the
+insertion command is there and also we have learnt about the select command select star.
+Now, select star has the different other nesting and then conditional base also. Now, here
+we want to execute the select command select name roll from JavaCourse.
+So, basically not the entire table, but only 2 columns mainly name and roll number it will
+be there; as you see name is there roll is there. So, in order you will specify the field in
+that order it will basically get the data as we see the 5 records have been retrieved and
+there are 2 fields name and roll number has been there.
+
+(Refer Slide Time: 17:37)
+
+So, again so, select star indicate all fields, but if you specify the name of fields so,
+explicitly only those fields will be selected and then so, again from select only the
+grades. So, if you see it will not display the name yes, select grade from JavaCourse as
+you see here right. So, it will only the particular field will be particular field; that means,
+column grade will be selected as you see. So, this one and this is basically the results that
+SQL server returns against command that you have given to it.
+Now, our next command that we are going to exercise is basically conditional. So, select
+star from the JavaCourse with certain condition, here suppose the condition that we are
+going to give that marks is greater than 80. So, that mean it will basically retrieve those
+records whose marks is greater than 80. So, this is the command that you followed and
+note that command should be terminated by a semicolon. As we see out all the records
+these are the 2 records only satisfy this condition and therefore, has been retrieved. So,
+this is the select with condition, there are many other complex condition also can be
+fired.
+
+(Refer Slide Time: 19:03)
+
+Now, let us see another conditions that we are going if this condition does not implies to
+any record so, then in that case it will return null. So, here is another select star from
+JavaCourse where name here this is the command name like something; that means, we
+want to have if any name is there for which any substream JEE is there. So, this is the
+command that we are going to write yeah.
+So, you see here within single quote there is a “ JEE “ this means there should be any
+one name who substring is jee; as it does not have any such name in this current record
+entry. So, it should return an null actually. So, its empty set as its says that there is no
+record which matches with this condition therefore, it returns empty sets.
+
+(Refer Slide Time: 20:02)
+
+Now, next our commands is basically we can also retrieve the order according to some
+ordering may ascending order or descending order based on the numeric field. As we see
+we have the two numeric field one is roll number and another is grade marks. So, let us
+see to retrieve the value of the field based on the ascending order of the number like. So,
+select star from JavaCourse order by marks. So; that means, the marks field will be order
+in an ascending order.
+Now, the same thing also we can do in descending order; in this case the command little
+bit you have to change in order by descending order right; ordered by desc write desc
+after the by the desc right desc desc then marks. So, this is right so, we are facing some
+syntax error anyway. So, select start from JavaCourse order by marks descending. So,
+this is way you can see this display the record in the descending order of the results.
+
+(Refer Slide Time: 21:54)
+
+So, we have learn about the different compositions, there are many more select command
+is very complex also because, nested select is also possible here. Anyway that we do not
+want to discuss at the moment, let us proceed further. Now, we will exactly how a
+particular record we have learnt about how to insert a record, opposite to insertion
+operation is basically deletion we will see how a record can be deleted ok. So, have we
+have to first discuss update, let us see exactly how a record can be updated here. So, we
+will discuss about the update command.
+So, update is basically JavaCourse, we have to update the table and then to update it you
+have to give some condition that what is the basis of updation in which value needs to be
+updated. So, here is the command update JavaCourse set, we have to just change the
+value the field name and we have to change the value of this field by Debasis where
+Name is equals to Debasish. So, it will find if any entry for the field name is equal to
+Debasis it will change Debasish as a different spelling. So, this one enter now it is done.
+Now, if you show if we show that it will select star. So, you will see in earlier case select
+star from write javacourse as you see the these things been changed. So, like this
+anythings for example, you want to change the marks who got 75 or more we want to
+make it as a 80 or (Refer Time: 23:38) like. So, here again we are going to change it
+update javacourse set marks equals to 80, where marks equals to 70 marks is greater than
+75 that is all, marks is less than 75 rather.
+
+So, you can understand what is the meaning so, all the marks will be right. So, it is
+changed one change has been done as you see those are the 75 above had been changed
+and this update is basically permanent; that means, one you do it so, it is basically
+permanent forever. So, this is the one another updation is set marks equals to 85 grade
+EX where, name equals to Debasish we want to change this yeah. So, we are just going
+to change it that.
+(Refer Slide Time: 24:42)
+
+Another update command as you see we are using another update command update
+second update right yes. So, as you see here update JavaCourse set Marks equals to 85
+Grade is equals to Ex; we are changing the 2 fields where Name is Debasis. Earlier,
+Debasis marks is 75 A, now after this updation you will see marks will be 85 grade is
+here grade right. As you see this has been updated. Now, fine so now so update is there,
+next our statement that we are going to discuss about delete operation.
+
+(Refer Slide Time: 25:27)
+
+So, delete means basically if you want to delete a record, it is again physically deletion;
+that means, it will remove forever. Here we are issuing one command delete from
+javacourse where marks equals to marks is less than 75 fine. So, you are deleting the
+marks there is no entry which satisfy so, no deletion is there. Now, we are giving the
+command marks is less than 85 ok. So, here we can see 2 rows has been deleted; after
+deletion if we see the table entry we will be able to see that this is the table actually there
+which basically is there deletion.
+And so, delete if we issue the delete from table the entire table will be deleted delete
+from javacourse. So, this means it is permanent 3 rows where the present it is there. So, it
+is deleted the set is empty, now we can permanently remove yeah show table; as you see
+only on table javacourse is there. Now, the entire table also can be deleted whether it
+contains data or not it absolutely does not matter; for these are command is drop table.
+
+(Refer Slide Time: 26:53)
+
+So, here you have the command drop table the name of the table. So, this one basically
+completes this one. Now, if we show data then show tables as you see there is no tables
+in these database. Now, that database also can be deleted as you have current database
+test right it can be deleted no ok. Anyway so, as we see there are few some step SQL
+statement.
+How they can be executed after the successful instalment of SQL server. Now, we have
+done about the SQL our SQL installation is ready. It may be here in the currently local
+machine, but the same can be installed in a remote machine also.
+
+(Refer Slide Time: 27:35)
+
+If it is installed in a remote machine so, you have to note the IP address of the same
+machine and then using this concept you will be able to connect to this. But, this
+connection is through the JDBC driver. So, that will be discussed in our next session.
+Thank you.
+
+

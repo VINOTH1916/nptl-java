@@ -1,0 +1,356 @@
+Programming In Java
+Prof. Debasis Samanta
+Department of Computer Science and Engineering
+Indian Institute of Technology, Kharagpur
+Lecture - 06
+Demonstration – II
+So, in the last lecture, we have learned about programming in applet programming; Java
+applet programming. It is something different, in fact, java programming is very fun this
+is because of the applet in fact, an applet is really enjoyable. So today, we will have a
+quick demo about how we can write the java applets and then the same applet can be
+executed and then the different twist in the applet also try to understand in today’s demo.
+So, let us first write our first simple java applet program.
+(Refer Slide Time: 00:57)
+
+So, so in today’s demo, we will discuss how we can write a java applet and embed it
+using HTML file. And there are few applet programs that we will discuss that the simple
+applet program called the hello world applet and then there are a different way the applet
+can be configured is basically resizing setting background color and then taking input to
+the applet via HTML and all these things. So, today we will discuss all these things in
+our demo. So, let us start our demo,.
+
+(Refer Slide Time: 01:34)
+
+So, we are now in a position to write our first java applet, this is not applet later on this is
+not the right one, right. First hour you just run 2.1 2 point yeah. So, this is the simple
+java applet that we write, we have written it for you yeah. So, as we have already
+mentioned in our discussion in the last lectures that the first portion that should have the
+input section for any java applet you have to import two packages the java.applet.Applet
+and then another package is java.awt packages and under these two packages two classes
+namely Applet and Graphics.
+So, these two class files are to be inputted because they are essential for running your
+applet program. Now here we see the name of the applets that we have given here is
+demonstration_21 and we have already mentioned in the last lectures that it should
+extend the class Applet. So, extends and regarding extends we will learn about it later on.
+So, this is the way the name of the class file that, the name of the java applet program
+that you can give it in this case demonstration_2 1 is that java file should be.
+Now, these are simple java applet it includes only one method the paint method and the
+paint method is to display a miss, the name the text here, in this case, it welcome and 150
+and 150 is the location where the text will start displaying in your applet. So, this applet
+once it is written you should save it with the extension.java and the name should be
+given as demonstration_21.java.
+
+So, we have saved this file as this one demonstration_200.java and then we should
+compile it, that compilation is the same as the java application compilation is javac. So,
+javac then name of the java file demonstration_21.java (Refer Time: 04:04) you type it.
+(Refer Slide Time: 04:10)
+
+So, right so javac then the name of the file it is here at demonstration_21.java, yes. So,
+this is the file yeah. So, this now this compilation produces a class file, the name of the
+class file you can see the demonstration_21.class.
+So, this file is required to run the applet, now in order to run this applet we need 1
+HTML file to be created.
+
+(Refer Slide Time: 04:55)
+
+Now, with a simple HTML file look like this here the standard syntax that is there, you
+have to blindly follow it at the moment later on you will be able to understand the
+different tags the meaning of these things. Today also you will be able to explain some
+meaning of the tag.
+Now, the important tag it is there in HTML file called the apple;t applet code
+demonstration_21.class the file that you have just now created and then here width
+equals to within single code 300 and height equals to 300 and you can see there is no
+comma nothing is there.
+So, this basically specifies the size of your applet should be on your display screen. So, it
+is basically 300-pixel X 300 pixels. So, once this HTML file is written you can save this
+file using any name. In this case, we have given the name of this HTML file as
+HTML_21.html. So, let us save this HTML file as HTML_21.html. So, this file is
+written here ok, we can see the HTML file that is created here in our directory project
+directory HTML 21.
+
+(Refer Slide Time: 06:10)
+
+Now, we can run this HTML 21 using applet viewer. So, I applet viewer and then give
+the name of the file as HTML_21.html. So, this is the way that you can browse this one
+and once it is browsed this applet is created. So, this is the look of the applet that you
+have created, here you can see the title bar and then default applet is there and that
+welcome it is there.
+Now, if we again go to the applet program that we have written here, go to the program
+here ok.
+(Refer Slide Time: 06:43)
+
+So, welcome and then we can write welcome NPTEL Java, NPTEL Java capital
+welcome yeah right fine. Now let us see how we can run it again repeat the same
+procedure compile because you have changed in the main program. So, this should be
+compiled again and then the class file should be created and the class file is created and
+the same HTML file we do not require to change anything because HTML file you will
+remain same then run it. So, it will display it, yeah you can see this will display this one
+right. Now let us see if we change the applet code little bit let us go to the HTML file
+that we have created for this applet. Yes and then instead of 300 we just give 200 x 200
+and then save it.
+So, here we need not compile it again because there is no change; however, HTML file
+does not record any compilation. So, simply browse this HTML file using applet viewer
+and then you see because of the size has changed the text that will be printed according
+to these things not properly displayable so you have to be careful about it. Now if I
+change the width say 500 x 500, you will be able to understand the meaning of width
+parameter and height parameter in the applet code they are in HTML file yeah.
+(Refer Slide Time: 08:20)
+
+So, you can see the size of the applet has increased and then the display and everything.
+Now, go to the applet program again and then here that g.drawstring we have used only
+one text. So, let us print another text. So, we just repeat it. drawString and then
+g.drawString then install welcome. So, let us pin that Kharagpur and then location I just
+
+see 50 and 20. Now let us see we have changed the location; that means, the welcome
+will be printed in some location and then 50, 20 really and we have changed the program
+file applet program. So, we have to compile it.
+So, let us compile and then now after the compilation we just no need to change in the
+HTML file. So, it is not required and then we can browse the HTML file using applet
+viewer ok, now you can see two things, the Kharagpur is printed at 50 20 location
+whereas, welcome NPTEL java is printed at 150 150 location. So, this is the way the
+applet program your first applet program where you can display some messages or text
+in your applet view applet window. So, these are first applet program.
+Now, let us go to some other applet program; we have another program where you can
+see the applet, the applet that we have shown you here.
+(Refer Slide Time: 09:45)
+
+So, there is a title bar there is no text displayable. Now, this title can be changed, but to
+do this thing you do not have to do anything in your applet program only the thing that
+you should go to change in the HTML file.
+
+(Refer Slide Time: 10:01)
+
+So, go to the HTML 2.2 program, yes now we have little bit change about HTML code it
+is not as simple as the first HTML file that we have created for your first program.
+Now, here if you see in the there is a tag called the title and we have written it takes there
+the hello world applet, if this is the text is written in HTML file then this text will appear
+as a title in your applet status bar in the top of the applet viewer and the rest of the things
+are same and lets run this program and then I come we shall come back to this HTML
+file again. So, this is the basically same program, but with the different applet HTML file
+it will basically use demonstration_22.class. Another java program, java applet that we
+have created. So, just go to the demonstration_22.class program first, yeah it is basically
+new java applet we have created right run it show it.
+
+(Refer Slide Time: 11:07)
+
+Go to that note foot notepad yes notepad just a star. So, this is the new program
+demonstration_22 is basically the same, but only it will print hello world. Anyway
+basically the same applet, now we embed this applet into our current HTML file, as a
+current HTML file like this now let us run this HTML using applet viewer yeah.
+(Refer Slide Time: 11:35)
+
+Now, you see right. So, here you can see in the first applet which we have executed, they
+are applet viewer demonstration_22.html class. So, it was not showing there, but it is
+
+here showing where is this showing that title the hello world applet? It is not showing
+nothing. So, let me just do some changes here we can see it.
+Browser, lets go to the chrome then we will not be able to go. So, that title will not be
+able to display using applet viewer, it will be done by why do not check it fine. So, now
+so, these are a very simple applet that we have tested with.
+(Refer Slide Time: 12:31)
+
+Now, we will come to this regarding the different methods. So, the applet can include
+many methods and in the last lecture, we have discussed 5 methods on which the init()
+method. Now today we will just have a quick demo about the usage of the init() method.
+Now, here again, see another applet program, go to the camp account background and
+outer common from the yeah. So, yeah right , let us look at this program, the first two
+lines are the import section and then there is the name of the applet here
+demonstration_23 and then here is the init() method, the init() method has only one
+statement called the resize 300 300. So, if you ambit this applet class in an HTML file
+with certain width and height parameters and then init() if it is if you want to resize this
+value into some other values, then you can do it using the resize method, resize method
+is defined in applet class.
+
+So, by default it will come you do not have to bother about the declaration or defining
+the resize method it is already there in the applet class, it will call it and they need to
+basically initialize the applet with the desired size in this case 300 x 300.
+(Refer Slide Time: 13:55)
+
+Now, let us come to the HTML slide here and you see that 200 and then 200 is the
+default height for the applet from the HTML we have fixed it. Now if we run it so we
+will see a clear code, clear code clear right.
+(Refer Slide Time: 14:15)
+
+.
+
+Now, here javac so, this is basically compiling this program and then class file is created,
+this basically embedded in the HTML file and then being the HTML file yeah. So, here
+you can see it basically displays of the HTML file here with the resize.
+Now, let us go to the resize method again and then let us change 300 x 300 to 500 x 500.
+So, definitely, it will reconfigure your applet size to 500 x 500 bigger applet, now again
+run the same HTML file. Now we have not done any changes in the HTML file only we
+have done the changes in the applet program and we can see the applet is coming in that
+way. So, it is basically an HTML file where you can define one parameter which can be
+reconfigured from the applet program itself and for these things you have to use the init()
+method and there the resize method.
+So, we have discussed the usage of init() method and thereby the research application, let
+us have another application another use of the init() method this is also init() method is
+initially is basically mean for initializing your applet. Now here we are going to discuss
+one another applet which basically initializes the background color as by default the
+background color is white.
+(Refer Slide Time: 15:45)
+
+So, you are, now this is the one program let us have a quick look.
+So, in this program we have used another method another class which is defined in awt
+packages, the name of the class is color this is basically regarding setting colors of the
+
+different components in an applet or applet itself. And so, this is the program name, the
+name of the program is demonstration_24 extends applet as usual and you just check a
+look the method init. Here in earlier init() method, we use a resize, but in this case, we
+use the method setBackground, this method is defined in the color class which is in awt
+package and here the method is used to set background.
+So, it will basically set the background color as yellow. So, for this thing the parameter is
+color.yellow. So, this is the default standard that capital letter you have to write the color
+name and then the white paint the same thing it will just pin the takes the applet
+background color and this is embedded in an HTML file.
+(Refer Slide Time: 16:51)
+
+The name of the HTML file, in this case, is HTML 2.4. Now let us view this HTML file
+we have created the class file for it ok. Now so applet viewer runs this HTML file yes,
+run yeah you can see the background color is created like this yeah not here, fine.
+
+(Refer Slide Time: 17:20)
+
+So, the applet is created now, let us go to the applet program again now we can do many
+more things in the init(). So, init() is nowhere for set background, I can again do the
+resize, let's resize here resize then 400 x 400 so; that means, initially the applet was very
+small I want to make it a little bit larger. So, 400 400 be the size then we have to compile
+it again because you have changed the applet code. So, the compilation is done and then
+embedded in HTML file no need to change in the HTML file itself. So, now, you can see
+the applet is now viewed with a little bit larger in size the color is yellow.
+Now, again in the saved background, if we change the color say rate we just write rate all
+these colors are defined in color class. Here applet background will appear, we have to
+change the class file. So, compile then run this one.
+
+(Refer Slide Time: 18:20)
+
+So, the background color will change the rate. So, now, we can understand about the
+init() method. So, init() method is basically you should use to initialize your applet view.
+Now, there are there is another important application of init() method which is very
+interesting also so. In fact, I told you that you cannot give or applet cannot take direct
+input from the keyboard. Even applet cannot take any input from any other sources.
+(Refer Slide Time: 18:52)
+
+Like say key file or any network or whatever it is there and applet also cannot write
+anything into anywhere also, applet only can display on the screen.
+
+Now, here is another example, if we want to give some input to our applet. So, how the
+applet can be given input to that so if you want to pass any input to your applet program
+it is possible by the means of HTML only. Now let us see this is the one program which
+we have planned to pass input. So, here basically the applet is planned like this, it will
+take any message from the input as an input and the same message will be displayed in a
+location x and y which also should be read from the HTML. So, here we have declared x
+and y. So, this is the program demonstration to_2 4 5 25 is the name of the applet and
+here we declare two variables x and y which basically will be, whose value will be
+collected from the HTML.
+So, we have declared the two variables as integer and then later one comes, let me finish
+this one good here yes and as I already told you this applet will take a message from the
+outside also. So, the message that will be stored here in a temporary variable the name of
+the variable is msg called the message and it is the type of String; String is a class which
+is already the declare in the lang package java.lang package. So, it is by default it is
+imported. So, you do not have any import specially and then here integer parseInt this is
+basically is parsing or pre-processing of the value to an integer, this is because the java
+reads everything in the form of a string.
+So, it is basically convert a string to an integer value. So, that is why the command is
+integer.parseInt and it requires the value, that value should get parameter getParameter
+basically the method which will read from the HTML. And in that HTML there should
+be some tag get a value called the x position and the value should be supplied there in the
+HTML file then it will basically parse the HTML and whenever the exposition where
+very parameters named it will face and it will take its value and the return to x as an
+integer.
+Similarly, another value which is parameter name is y position in the applet file at an
+HTML file and its read it and then return to y and finally, getParameter msg it will also
+read a parameter msg that is there in HTML and return as a string. So, need not parse
+into any other type. So, it is simply written it as a msg and finally, drawstring it is same
+as earlier it will display the message that will read from the HTML file and it will display
+the message at the location x and y the value of x and y also read from the HTML file.
+Now let us see the HTML file for this applet, how it should look like.
+
+(Refer Slide Time: 22:18)
+
+So, definitely, it is a little bit different than the previous HTML because here we have to
+specify the three parameters msg, x position, y position three parameters along with their
+three values. Now here we can see the first the code, the applet code is as usual it
+basically include the class file, in this case, demonstration_25.class file and this is the
+size of the applet in this case 300 as width and then 300 as height.
+Now, it read the first parameters called the message, the first parameter that we plan to
+read it here as a message the value is here this is a parameter example program. And then
+the second parameter namely the x position also we read it here value as 50 and then
+third parameter y position that is there is, in this case, is 50. So, these are the values
+which can be passed to an applet via an HTML file. So, this is the HTML file for your
+program and then we shall able to run this of HTML file we have already created a class
+file for this. So, this is the class file, yes class file clear (Refer Time: 23:43) screen clear
+fine.
+
+(Refer Slide Time: 23:48)
+
+So, now we let us run this an HTML, the name of the HTML file is this one ok.
+Now, here you can see we have read the message this is the pro example, it not clear. So,
+so these are texts that we have already passed from the HTML, this is a parameter
+example program and then the location where it printed is 50. Now again if we change
+the value here accordingly it will take the different value and then the same applet will
+run, but will different input. for example, not here. So, write the message in capital
+HELLO and then the position is 20 and 50, 20 and 50, we have changed it, no need to
+compile the program because there is no change in the applet program only the change in
+HTML file. So, here you can see we have taken the different message and then we have
+printed in a different location, which read from the HTML file itself.
+Now, let us see if you run the same program without any extension what will happen?
+See applet viewer HTML_25.without HTML. Now lets see if we are able to run it, now
+you will not be able to run it this is because it should require the full name of the file to
+execute it. So, if you do a partial name of the file then your applet cannot recognize it
+and it will not be able to run it. So, you have to be careful when you call your applet
+viewer the right file name should be given there. And another thing is that the name of
+the HTML file not necessary to be same as the name of the class file that you ambit if
+you do it its good, but if you do not do this is not an issue ok.
+
+So, there is no problem this is 1, now. So, this is the way you can see how the applet
+programming is possible, we have learned only the init() method and the HTML file that
+is required to view it and fine. Now let us see one twist is here; that means, is it really
+allows the applet viewer is required that it should record the HTML file allows here is an
+example you can check it.
+(Refer Slide Time: 26:15)
+
+Let us see the program here ok.
+(Refer Slide Time: 26:24)
+
+Go to the program yeah look at this program, this is a new one program is basically same
+as the first program that you have used it, yes and see these are the input section, as
+usual, it is there input section. And this is the name of the new java applet, the name is
+demonstration_26 the paint method it is they are no unit anything is there very simple
+and it will print now will come to the applet.
+Now, and here the HTML tag or HTML code that is required to embed this class file is
+written here at the bottom. So, you see this is that this one, here the HTML code. So,
+sometimes many programmers prefer to write the applet program and at the bottom or at
+the end of the same program file they usually embed the HTML code. So, they usually
+want to avoid writing both the things in the two different file, rather they save all the
+thing in the same file. Let us save this program as demonstration_26.java.
+Now, you should compile it. So, when the compilation will take place all the portion
+which is written as an applet tag should be ignored because they are under comment. So,
+they will compile successfully, for example, in this case, we could compile it. So,
+compilation creates your class file demonstration_26.class file and now we see without
+embedding it in an HTML file we will be able to run it, to run it we just simply type
+demonstration_the java file name that you have given earlier you write it.
+Now, here you can see yeah so right now there is just little wait. So, here applet viewer,
+we just call the applet viewer for the program demonstration_26.java we did not create
+an HTML file for this particular example now let us see whether applet viewer can take
+this or not, yeah very nice. So, we can see that applet viewer, take this file as an input
+and then successfully executed and it gives the output.
+Now so, some sometimes if you want you can avoid this having the two different files as
+a.java file as well as the .HTML file and then you can run it. So, it is not magic. The
+policy it is here is that both the java and applet viewer, in fact, the runtime interpreter.
+So, java program interprets the byte code which is in the class file form and then applet
+viewer is also an interpreter who is basically interpreting the HTML code only. So, in
+this case, the applet viewer interpreter the demonstration_26.java file and in the process
+of interpretation whatever the statements or lines it is they are on the way it is ignorable,
+except those are the line which are with HTML tag.
+
+So, applet viewer only executes those are the under HTML tag successfully. So, in this
+case, the tag applet code demonstration_26.class has been interpreted and then executed.
+So, this is the way you can use it this is a shortcut method of course, , but my suggestion
+is that you can have the HTML file separate and then.java file separate, create the class
+file successfully and use it and enjoy the applet programming more on an applet
+programming will be discussed there is many things regarding the applet programming,
+it will be discussed in due time.
+Thank you very much.
+
+

@@ -1,0 +1,303 @@
+Programming in Java
+Prof. Debasis Samanta
+Department of Computer Science and Engineering
+Indian Institute of Technology, Kharagpur
+Lecture – 58
+Case Study – III
+(Refer Slide Time: 00:35)
+
+Let us continue about a few more projects using applying the concepts that we have
+learned in this course. Now, this is the third case study, here also again we will discuss
+two projects. The first project that is we are going to discuss about the systematic design
+towards an advanced calculator.
+Now, we have already had an idea about how a calculator can be designed. And now we
+discussed about how the same can be applied to develop a more advanced calculator. So,
+the first phase that we will consider about designing a simple calculator using the simple
+features, this is the beginning of the projects. And then we will slowly try to add few
+more features, for example, few more functionalities, more operations, equations, others.
+And then finally, we will develop an advanced calculator having more complex
+functionalities like this say using the bracketed expression, and then some others also.
+And then scope of customization, setting the styles and everything.
+
+(Refer Slide Time: 01:38)
+
+So, let us discuss about the flow of the projects, the different steps or the versions of the
+project. In the first version, as you are very much familiar to this kind of projects, and we
+have developed this kind of project using applet, you can do it is in the using simple nonapplet program also using swing or AWT as well as anyway so both applet version and
+then non-applet version program also can be written for this purpose.
+So, this is very simple. We have already had an idea about that this is the few buttons are
+to be there, among text field area will be there, and then the user performs any
+operations. Those operations are basically binary operations, like no unary operation. For
+example, square root, cube, log, all these things not involved here. So, it is simple.
+So, here you have to just create the layout, and then include certain component into that
+layout. And then finally, we have to add the listener methods, so that events can be
+handled. So, there are many programs, you can find on the internet. So, for that are Java
+calculator is concerned right, you can check all the programs, those are available try to
+understand those programs.
+In this course also, we have used several programs for Java calculator, as a Java
+calculator, you can nurture those programs also. Then you will be able to learn it, then
+you can try to modify of your own like say setting the different fonts or the button color
+or whatever it is there, so that you can exercise, whether the change that you have
+desired, whether you can reflect into the program, and you can see it or not. So, this will
+
+basically gives a lot of practice. And then as the beginning of the design of a calculator,
+this is mass structure.
+(Refer Slide Time: 03:29)
+
+Now, our next part is basically, if they're a little bit improve version. So, this is the
+simple calculator, we have already learned about, after learning the simple calculator.
+Our next step, this is the basic simple calculator as you see and then we will basically
+change this into this one, you can see the difference. Here the difference is basically as
+you see the difference here is basically add few more buttons as we have mentioned here,
+so few more buttons we have added here.
+
+(Refer Slide Time: 04:07)
+
+Like say C buttons C means clear, then is whatever the previous calculation, we can load
+into the memory, and then read or memory can be clear. And, here we have used one
+more functionality say square root calculation or square calculation, whatever it is there.
+Now, I can advise you to have this is a usual symbol, not the square level. The square
+root symbol can be put into there also ok. So, we have check that ok, after adding this
+one, how the same calculator can be improved to have this kind of look, and how the
+even handling operation related to this CM or MR, MC can be added there. We will be
+able to try to do that, and then you that is the only thing that you have to apply your ideas
+about how these things can be done.
+So, let us see, whether you can do it or not. In case suppose, you are finding any
+difficulty, we will be available to have any interaction not the direct online interaction
+rather, you can send your problems through mail or you can request for an interaction
+program so that we can sit and then discuss and solve the problems. But, before that, you
+should fire all the problems to us, so that we can go through the program problems, and
+then get ready to resolve it quickly.
+The next version of this is basically to have a more improved calculator design. So, this
+is the last calculator version, we have to change it into their as you see in this calculator
+version, we can do many things. So, the previous calculator is basically adding two
+numbers and operation, then it will give the result. But, here we can do say add, sub,
+
+division together many operations, and then final the result, so 5 plus 6 plus 10 into 2
+minus 8 that is the result will be calculated like. So, this calculator, we will provide these
+facilities.
+In addition to this, this calculator also allowed to have the bracketed expression,
+bracketed expression means is basically within this bracket, so 2 plus 3 multiplied by say
+5, it basically gives the result accordingly, so the brackets. And then complex bracket all
+the matching parenthesis should be there, it should be; in case there is an error in the
+matching practice, your calculator should report an error message on the screen. I mean
+text (Refer Time: 06:53) instead of the result. And so this is the method that we have
+discussed is an improved version of the previous one, you have to add few more buttons.
+And then for each button, we have to add the listening methods.
+(Refer Slide Time: 07:06)
+
+And then finally, the next is advance calculator design. And as you see little bit more
+buttons are there. And here I have made it a little bit open space for you so that you can
+think about how more advanced calculator more sophisticated calculator can be
+designed. You can follow for an example; the Casio math calculator which is very
+famous among the students popular among the students.
+So, you can follow this calculator, and see whether the same can be developed in your
+Java environment. And you can see many calculators available in your Windows
+environment, in your Linux system as well as if you have the mobile also, you can find
+
+many calculators there also. You can think about the calculator, the calculator that you
+can develop in Java can be exported to a mobile setting; so, there mobile app as a
+calculator can be used, your advance calculator.
+Now, let us see, what is the advance component that we are thinking about, so power
+button that we have considered that means, if you click the power for example, so all the
+things will be deemed, and then there will be no highlights like that. It since that the
+calculator is power off like, so it is power on and off like sort of thing, so some setting
+changes. And after that power on and off, if anybody uses any keys and everything, so
+calculator we will not work for you, so it becomes disabled.
+And then there is about, so here you can see the different other component style. Say
+suppose you have to change the background, because I do not like these background so,
+user can customize the background color, foreground color, font, font size, and then
+orientation if you want to change the orientation in this light or everything that you can
+allow using this one.
+And exit basically if you do certain changes, whatever it is there exit. Now, you can
+replace this exit button, which some other buttons like all other trigonometric functions
+say sin, cos, tan, cot like this one that also if you clicked it, and then this of this operator,
+we will add. Because, if we add more buttons, the size of the applet will increase, and at
+the cost of the size of the fonts and button size, and then error will be there. If you want
+to click this one by mistake because of the small size in button, you go to some other
+button or whatever it is there.
+So, in that case, some other functionalities like log functionalities, trigonometric
+functionalities or some other functionalities can be added there also ok. So, this way the
+calculator can be improved. And, another scope of improvement is that so log table also
+can be there, and then some statistical table also can be added into this log at this
+calculator itself, so that in the memory the table will be stored. And whenever you give
+any value say a degree of freedom, and then the value, then it will result in the return. So,
+if you are a little bit knowledge about the statistical process or statistical tables or
+distribution function all these things, those also think can be incorporated into it.
+There are many scopes of improvement again. Now, here we have designed the
+calculator in English, but those do not know English for them, how this calculator can be
+
+facilitated. So, for these things all the things which are there in English, it can be
+converted into other languages Hindi or some Telugu or Tamil like. So, here all these
+characters can be changed, it is just minimum effort is required.
+So, in the style file or about or in the setting file, you can change that calculator in which
+language, so language setting also can be there. So, a lot of things can be done. And this
+way, you can innovate that how you can better calculator can be designed. And the
+calculator design is a very good example for and usually many teacher, the many author
+also, they preferred that calculator should be discussed while they discussed the different
+Java concepts. We have done the same thing also here, but there is a starting point, you
+can go on, and carry with this, and they learn many things are there.
+Now, let us come to the next projects, this project is again very similar to the project as
+you can see, if you are familiar to Kaun Banega Crorepati right. So, there is a one quiz
+game is there, where Mr. Bachchan, who is basically conducting this one. So, we can
+implement the quiz game application, but Bachchan should not be available all the time.
+So, in place of Bachchan, our computer can play the role of Bachchan.
+So, here questions a quiz can be popped off from the repository, and then the user will be
+allowed to select an of select and option and if it is a correct option, his score will be
+increased. And if it is a wrong option or if it has suspect about any results, then we will
+just like a Kaun Banega Crorepati quiz, it will basically give that 50 percent off, then
+accordingly a score will be reduced. And then only two options will be given, out of
+these two options, you have to select. All those things can be done. So, this is the exactly
+quiz game application, it is there.
+
+(Refer Slide Time: 12:28)
+
+Now, let us see, what is an idea? And for this, obviously things to implement it, the
+different concept that you have to apply Java swing is required, event handling, I-O
+stream is needed to be followed, and JDBC also to be there. So, if you have the
+confidence in all of these concepts, then definitely you can study. Even if you do not
+have any confident also, let us start dealing with these projects and then try to learn as it
+is required. And then this is also one way of learning process.
+(Refer Slide Time: 12:56)
+
+Now, here is the idea about quiz game application. So, first of all, you have to create a
+question bank. The question bank means, it is basically set of all questions maybe 500,
+maybe 5000, maybe 50,000, absolutely no issue there is a little bit no limit. And then the
+question bank needs to be prepared, and this question bank needs to be maintained in a
+server.
+So, in this way JDBC coming into the picture, a database server is coming into the
+picture. I will tell you the idea, how this question bank server can be created in this
+project. And then user will be allowed to play for this game playing, definitely there
+should be one GUI to be developed. So, a GUI based engine needs to be developed by
+which it can play the game, it will basically be asked what questions, then questions will
+be there, options will be there, then the select button will be there, other options will be
+there, so many things are there. So, the GUI program is basically a front end for the user.
+And there are many facilities, flexibility, so the game can be tuned as per the different
+twists, and then the requirement is concerned.
+(Refer Slide Time: 14:15)
+
+Now, let us discuss each step one by one, so that we can understand about how the
+project can be carried out one by one. So, the question bank database server creation.
+There are two things that can be done, you can add the database by using a skill
+commands, it is there sitting on the console typing each command at a time, and then
+adding the record into the database.
+
+Now, here I want to say is that if the database table needs to be created, then what will be
+the structure of the table, it has one field about the question itself. Then the other four
+fields, for the four options. Then another field the 6th field, it should be the correct
+option because this information is required, so that the program can process it. And then
+whenever this database whenever the game is in running condition, it will phase 1
+question as well as all options, and then correct option.
+And then we will throw the question as well as the options, and then it will select the
+choice from the user verify the option if the correct one, and then accordingly score will
+be calculated like this one. Now, one process that I told you that you have enter the data
+one by one, but 500 enter data those are the text and then typing error and everything, so
+it is very difficult. So, we can write one program automatically that the program will
+basically take as an input as a document file.
+And then that file will be scanned and each record will be entered automatically to the
+server, so that file can be created using an excel sheet-like, and I have given an idea here
+CSV file, it is just similar to Excel file only the comma-separated. So, each field will be
+separated by a comma, you have to scan it. Whenever you find a comma, you can take
+that this is the one field value, and then go into that field value, the next and so on so on.
+So, this way 6th field question four options, and a then correct option will be selected
+and then accordingly, populated to the database server.
+So, here is the idea it is given, this is the CSV file that you created, and that can be cut
+and paste for document can be created, and then one. And that program, if you run with
+another CSV file, it will be automatically updating the database easily just running the
+program itself. So, developing the program only the issues are there, but it is only a few
+lines code is required. Let us try to do it, how the CSV file can be read and then the
+content can be retrieved, and the same content can be sent and executed as an insert
+record to the database server. So, this way it can be done.
+And another thing that ok, there are you the as a database administrator, you can create
+the database table also from the JDBC also you can create the table absolute no problem.
+Whatever the way you there, we can do there, and there may be different topics can be
+included in your game. So, some topics maybe say related to the politic, some maybe
+related to the entertainment, some maybe related to the other topic say computer science
+
+or physics chemistry like this one. Users can be given a chance therefrom which topic he
+is interested to play the game. So, accordingly, the topic can be selected maybe two or
+more top is can be selected, so that the question can be read can be fetched from all the
+topics that the user has selected like. So, topic wise the different tables also can be
+maintained, and it can be updated into the server or data can be loaded with the
+corresponding topic tables and so on.
+(Refer Slide Time: 17:43)
+
+So, this is the data entry. So, for the I mean MySQL the server database creation is
+concerned. And here is a GUI forgiving at the very beginning stage, you can have a very
+simple look of the game as you see here, it will first discuss the question number. And
+then the question will be appeared here, and then four options like option 1, option 2,
+option 3 is there. And then all the options are not highlighted.
+Whenever user select an option, it will click it. And then here another option that the
+correct option, which will be selected will be displayed or if the option that has been
+selected is not correct, the correct option actually according to this question will be
+displayed there. Anyway, so it will after the selection of an option, the correct option will
+be displayed, and accordingly the score also will be computed.
+So, this GUI program, we will take care everything. So, here the interface to be
+developed, and for the event handling routine asked to be written, so that it can do the
+
+work as per the requirement it is there. So, this is the idea about the first phase of the
+program.
+(Refer Slide Time: 18:47)
+
+In the second phase, GUI plus program for gaming as we have send that at the front-end
+the GUI should appear, and at the back-end there lot of other activity should be carried
+out. For which we need to develop socket program, because this GUI should interact
+with the socket that socket will be responsible through the server so that on a network if
+your server is not connected users in the same machine, then you have to do it.
+Anyway, so that if you have to have access to JDBC, then you have to have the
+connectivity and everything is the whether in the host machine and the game may
+playing a machine in the same system or in the remote system, whatever it is there. So,
+you can develop the socket program for that socket will basically run the networking,
+and then JDBC related program elements, and then this is the backend program actually.
+And then this program, we will take a selection from the user at the end of the round, the
+correct option will be highlighted, and score will be updated. These are the program
+activities that it should go, the game will continue until there maybe say 15 rounds or
+until there will be an option that if you want to quit, then the quit option should be asked
+from the user, and then quit it. Then finally, the game whenever it is over, then the total
+score that the user the pair has achieved will be displayed on the screen and like this one.
+So, this is the idea about the second version.
+
+(Refer Slide Time: 20:21)
+
+And then the third version is basically, let us improve the interface as well as the
+interface will change, all the backend program also has to be changed, all this thing that
+you have to do it. Here I have given some ideas, but you can think some better idea than
+this one. I wanted to make the idea little bit simple so that you can implement you can
+handle this project in the shortest possible time.
+And here is the idea that we are going to see here, the topic selection should be given as
+an extra facilities to is earlier version it was not there, so topic 1, topic 2, everything is
+here start the quiz. And if it is start, then this button will be changed to the stock quizlike. So, this button will be needed toggle mode. One start means, it will be start, and
+then everything we will start like this one.
+And whatever the topic that you selected, the topic will be highlighted here, so that you
+can understand that on which topic he is giving the answer. And so in this case, only one
+topic that one user can be selected at a time. So, at every round, the user can change this
+topic, and then accordingly the question will be faced, the question will be displayed
+here, these are the all same things it is there, so as you there.
+And then so here again another facility so this is another improved version of the layout
+that you can think about, and this is the another more improve version, where we can add
+a few more button as we see. So, remove one question, remove two question, and all this
+thing. So, remove one question means, it is basically one-third score will be reduced.
+
+And then out of 4, it basically only 3, out of which one should be the correct of course is
+there.
+Remove 2 question means, 50-50 right means, it is basically two questions will two
+options will be removed. And then only two options out of which one is there, so the is
+basically then the player can guess more precisely so that the more score can be there, it
+is just like an in the form of a Kaun Banega Crorepati quiz style. And then this is the
+interface that you can develop it. So, here it will basically few more buttons can be
+added, and for these buttons, we have to add the interface program accordingly. So, this
+is the 7th program, and this is the quiz playing game, actually we have discussed.
+I hope, you are finding these projects interesting. And these are the small projects as
+obviously, because the purpose that I have already tended you as motivated with that you
+can apply your learning skill to developing this project. And if this project also, you can
+carry out as your undergraduate project curriculum also, if you are an undergraduate
+student like. And so this way, you can learn much more.
+And then I have given the initial idea, not necessary initial idea is you can improve this
+idea of your own, creativity is an essential part should be that the software engineer
+should have. So, I have also that expectation from you, so that you can add a few more
+novelty, more creativity in the project. So, these are the sit project, we can say, starting
+with this one, then improve it. And then see what are the based product, you can
+developed. Thank you for your endeavor.
+Thank you very much.
+
+

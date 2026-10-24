@@ -1,0 +1,550 @@
+Programming in Java
+Prof. Debasis Samanta
+Department of Computer Science and Engineering
+Indian Institute of Technology, Kharagpur
+Lecture – 33
+Demonstration – XII
+So, this demo is based on the topics that you have covered in the last three modules. In
+the last three modules we have cover on the topic Input-Output streams in java. And as
+you know the input and output is the very important activity in any program
+development. And in order to make this diversified input-output process that means input
+from the different sources, output to different sources, there are many mechanism rather
+many ways has been devised in java system.
+(Refer Slide Time: 00:53)
+
+Now, today we will discussed about how the different in way of input-output is possible.
+There are some trivial input output mechanism, those are related to the standard input,
+and then standard output namely keyboard, and then display unit we have already
+covered, we usually used it in our previous programs. But, here we will discussed about
+other than the standard input and output, how we can store some data into memory or we
+can receive something which is stored in hard disk like.
+So, our demonstration includes how to create, how to open, and close a file, how we can
+create our own file. And there are again two different classes rather we can say the ways
+
+the byte stream classes, and then character stream classes to read and write into file from
+file by means of DataInputStream and the data output stream. So, we will discussed
+about the usage of these two classes to create files to access the data, all these things.
+And then we will discussed again file handling in java. So, file is basically secondary
+storage right, we can store some data in a permanent non-volatile way into the secondary
+storage space. So, how we can create a file such a secondary storage, and also how we
+can open, how we can copy, how we can merge, so many other things are there. And few
+advanced methods, they are called BufferedInputStream, and SequenceInput Stream to
+make our programming easy we will discuss in this demo.
+(Refer Slide Time: 02:51)
+
+So, let us have the demo for first thing, and this demo we can start about from very
+simple idea about using the DataInputStream class. We have already familiar to this class
+in our last in our earlier discussion we have used it. So, DataInputStream class as in the
+name in implies that it will basically for the input purpose, then we using this class, we
+can read something from some sources.
+Now, here we will see exactly DataInputStream class can read from memory, can be
+from network channel, it can read from standard input device. This example illustrate
+how the DataInputStream class can be configured, so that we can read some data from
+the standard input namely the keyboard. As we see the program here, so this is the main
+method as we see here. In this main method, we create two way fields namely the
+
+principal amount, and the rate of interest for which we want to read the value from the
+keyboard, and the number of years also. So, the three input needs to be collected from
+the user through keyboard.
+Now, here basically we create an object called in, and this is object that object is created.
+And then this object wants that it is created by means of a constructor, where the input is
+basically System dot in. Now, System dot in implies that it is a standard input the System
+dot in this is already defined in the java dot lang, so from there it will get the definitions.
+So, it will basically is a standard input.
+Now, so basically what we do we here that we create and DataInputStream object, which
+basically connect your program to the keyboard. Now, let us see we given from to the
+user that entire principal amount, here basically we have discussed about that for seeing
+that means, keyboard has its own buffer. So, we have to clean the buffer, each time we
+are going to read from it.
+So, System dot out dot flush is basically clean it is now here then ok, so it will read from
+the object in here that means which connect the keyboard. And the in that read line for
+this method read line means, it will read the entire content that is there is a buffer. So, the
+entire whatever the value we will enter, it is read it here, but as you know the value that
+will be there is a buffer java program read it as a stream. So, we temporarily store this in
+the stream format here, so it will basically read as a stream. Although these are may have
+entered some value say 5, 6, 5.25, so it is basically plotting point or double value.
+Now, here we convert this string value into our double value or float value. So, using the
+float method for this in the class float, which is defined in the java.net (Refer Time:
+06:02) package, and for this class there is a method called value of this is a static class
+actually. So, we just convert this string into the float value.
+Now, again we read the another form enter interest again we flush it, and then readLine,
+again read the buffer, and then again convert this string into the float value which stored
+in the rateofInterest. Say again then we need the integer number from the read, we
+convert it into integer format as initially it is a string, and then store the value is a
+number of years here. So, this is the way we can read the three inputs from the standard
+in standard input that is the keyboard here.
+
+And then finally, we calculate these are trivial process. Now, main thing here we can see
+you can tell here is that how using this DataInputStream class, we can create a stream
+object which connect your program to your keyboard. So, the stream can be propagated
+from the input source to the program. Anyway, so this is the simple program we are
+already familiar to, and we have discussed it many times earlier. And other than this
+class also there are many way the input can be found the standard device like common
+line input, and then the using the Scanner class which is defined in java.util package, we
+can run all this things.
+(Refer Slide Time: 07:43)
+
+Now, our next example that we are going to discuss about is basically as we have
+discussed about all the DataInputStream class is basically the two fold using the byte
+stream, and then character stream. Our next example this examples to illustrate how we
+can output to a file which is stored in a secondary storage, and we can propagate the
+output from the program to the file in the byte form. As you know byte is the smallest
+unit a chunk that the java program can handle it.
+Now, here is a program as you see here ok. First you have to import java.io.FileOutput
+Stream, this is because we want to propagate the output to a file. And this a FileOutput
+Stream class in defined in the java.io package, so the import is must. Now, here is the
+main method as we see we create an object name of the object is a fout is basically of
+type FileOutputStream. And here you see the constructor the FileOutputStream has its
+
+own constructor, where an argument is required is basically the target. So, here actually
+the target we have mentioned explicitly, where we want to store this content.
+So, as you see it is in the D drive under these D drive there is a directive demonstration,
+under this demonstration XII, and then this is basically the target file and test dot txt. So,
+you should explicitly mention path of the file, where you want to store your data. So, this
+is a way that we can do it. Now, here you see for this object fout, fout therefore object is
+basically the connection from your program to this file test dot txt.
+Now, from the programme we can write 65. Now, 65 is basically here in integer form,
+but it will be converted to and byte form as you know the 65 byte in the byte form, it is
+basically capital A character. So, ultimately although we give the 65 your program the
+system will convert into it a byte that means, 65 in the byte is basically the ASCII code is
+a. So, a will be store actually in the file. And then finally, once the file is open, we have
+to close the file it is always, you should close your file always wants your task is over,
+and then finally it print the writing is over.
+Now, this program as you see this program will write 65 in the byte code form into a file
+test.txt. So, after the successful execution of this program, we will see the output file here
+test.txt that 65 is told there or not. So, this program is run successfully, and then output
+file is here. The test dot txt is now displayed as we see it basically store A.
+(Refer Slide Time: 10:41)
+
+Now, in the same program if we again write 90 fout write 90 type it no another write, 65
+is the here write yes in addition write.
+(Refer Slide Time: 10:59)
+
+Now, we are writing another 90, as you see it will happened after the first 65 that mean
+A, and corresponding the 90 byte code, it will be stored there in the same file again.
+Now, here the same file can be AZ. So, Z is basically the ASCII code for the 90 ok. So,
+we are learned about how in the byte form, we learn more about in the byte. So, the next
+example, suppose you want to store an array of elements into a file. Here we can give an
+idea about how using the bytes code system, and array of elements can be stored into an
+into a file.
+Now, this program as we see the main program we first created array of bytes, so here D,
+E all these are basically the ASCII value within the single code whatever we mention, it
+is basically the ASCII value of that character. So, capital D, E, L, H, I, so ultimately like
+the previous program as we see this is the byte so A it will store, but it will store now in
+the array. And this array is basically byte array, because it is declared as a byte type
+array. We can declare float, integer also that way it will store the integer from that way.
+Anyway, so this basically now we create one output objects, so output file is a type of
+FileOutput Stream very similar to the previous one. And then we decide it is a create the
+object, and finally we make a connection that where this value will store. So, for this
+object output file, we establish a connection to this is the location. So, the location is as
+
+we see location is city dot txt that means, this is the output destination target, where the
+output the entire things whichever here will be there.
+And then finally, you write the entire array here, so passing the array name here and
+finally close, these are the same as earlier now ok. So, this way the entire array elements
+will be stored into the file. Now, let us run the program, and final you will be able to see
+the file in this case city dot txt, which store all the values that is there in the byte array
+ok. So, file has been written successfully.
+(Refer Slide Time: 13:43)
+
+And then we will be able to run the we are display city dot txt as we see here Delhi,
+Mumbai, London. These are the basically ASCII character as it is there in the byte array.
+So, it is basically print a store successfully. So, this program says how a an array, and the
+similar way this program can be an extended to store any array actually, whatever the
+you can use a byte array rather you can use the characteristic classes also whatever it is
+there.
+
+(Refer Slide Time: 14:07)
+
+So, an array of elements can be stored, a single element can be stored, and like this, here
+we are storing all these things in our memory. Now, our next example again using
+FileOutputStream classes that we have discussed that we have to pay to copy some text
+using again byte array steam into the same file.
+Now, here is a program as we see, it is the same FileOutputStream class. Here
+FileOutputStream, create the object, and we just connect it to one target testout.txt. And
+here we create a stream here welcome to NPTEL. Here is a small string we have
+considered, many other large string also we can include say, other things also you can
+input here.
+For example, type here welcome to NPTEL, hope you are enjoying java programming
+hope you are enjoying java programming ok. So, this is the text whatever the text may be
+here only few characters, very big I mean very large file also can be consider. I will
+discuss about how a file can be entire file can be copied here, anyway our objecting is
+that these stray string, which is basically here in the program, I want to store into a file
+the name of the file is testout dot txt.
+Now, we first store this string into the form of a bytes. So, here is a mechanism for a
+string object, how we can convert into the bytes. So, basically string this is the string and
+we converting into the entire string content is the byte. So, get bytes is a method for the
+string class, which is there in java dot (Refer Time: 15:57) package. So, we temporary
+
+stored into an array byte array, it is the similar to the city array we have as discuss there.
+Then write function write method for this a fout FileOutputStream, which basically write
+the entire array, it is also same as the earlier one and close. And finally, file writing is
+over (Refer Time: 16:16), and then it will there.
+Now, we see after the successful running of this program. We will see one file testout dot
+txt has been created, where we could store the stream which has mentioned there fine.
+Now we are displaying the file content as we see this is the content has been pushed to
+the file, which we have displaced there. Now, so this is the way that now so far what we
+have done is that we can create something we can store something from our program to
+file.
+(Refer Slide Time: 16:57)
+
+Now, we learn about how to read a content from a file. Now, this very simple program
+for this purpose for reading some content from the file, we have to have that create object
+for the file input stream class. So, file input stream class, because we have to go for input
+process. And then fin is the name of the object of this class we have created, and this is a
+usual process of creating the object, and giving the explicit mentioning where actually
+from which file we want to read.
+So, in this example we want to read something from testout.txt, which file we have
+already created like welcome to NPTEL like. And here int i equals fin dot read(), you
+
+little bit carefully observe for the fin object. A f in object means that is a connection from
+this program to this file, we inform the method read.
+Now, read method always read one character at a time, so this means that the whenever
+we create the object file object here, it basically point to the first character in that file,
+and it will basically read that character. And this character actually written by this read
+method as an ASCII value of the character that means, it will read there. And finally, we
+can print this character by casting it that means, i its ASCII value will be converting the
+character corresponding to this, and it will be stored there.
+So, you can note that in the previous example testout dot txt, we have store the welcome
+to the NPTEL. So, W has been store there, and W being the ASCII value, and then it is it
+will be access it, and then it will display from your program. Now, here you can see here
+you can see here, you can see W is being printed. Now, if little bit change this program
+without casting it, you can see here without casting it, we can run the same program
+again, but only the its integer value rather it is basically not ASCII code, it is the ASCII
+value.
+Now, here we see we print here in case 87 and 87 is basically the ASCII value for the
+ASCII character W. So, this is basically the way here exactly we save this programme
+earlier in the byte code form, here we read in that ASCII form byte form, and then
+printing into its character. So, conversion is it possible. So, this means actually I want
+emphasize is that whatever the way in the byte or character, you can do it and you can
+read it also no issue it is there.
+
+(Refer Slide Time: 19:55)
+
+Now, we learn about more about regarding the charactering the stream classes. As we
+have seen in the last example, we could read only one character from the file. If you want
+to read the entire character set stream text from a file, what is the program should look
+like? In this case, again we have to create an object for the FileInputStream, because we
+want to read a file. And here is the object the same way, we created the object a fin. And
+this is the for example, testout.txt is the target file from, where you want to read the
+entire text. As you know in this text, we have written welcome to NPTEL hope you are
+enjoying java programming like.
+Now, here this basically is the loop instead of only single character, we want to read it all
+the characters which are stored there in this testout dot file. Now, a fin.read, it is
+basically to be looped until here is the condition. This is very important not equals to -1,
+so not equals to minus 1 java (!=-1) implies that it is the end of file. At every end of file
+whenever you put file close; the java put a -1 there indicating that this is the end of the
+file, so -1 is a termination condition for a file object.
+Now, it will basically read the file content. And here the content which will be read from
+their FileInputStream in the byte form, we convert the character and those things will be
+converted printed on the screen. And finally, wants the entire file is scanned, it will
+basically closed. And here you can see it will read the file sequentially the first, then
+second, and third and so on so on, until it will reach to the end of file.
+
+So, these program again as you can understand anticipate. If we run, it is basically
+extract all the content, which is there in test out dot txt, and display on your terminal. So,
+I am running this program, and then will see after running. So, this program has we see
+here, it basically show the output entire which has been accessed from the text out dot.
+This is the basically content, which we have stored in the taste out file and this exercise
+and displayed it.
+(Refer Slide Time: 22:03)
+
+Now, so we are learned about how we can open a file. And then from that file we can
+read the content in the form of a byte. And our next example is basically regarding the
+file status checking. So, it is a 12.6 programme, we are going to see about it. Now, here
+you know so for the status of the file is concerned. Whenever we store a file or operating
+system maintain all about its file that mean in which directory what is the name of the
+file, what is the extension, whether the file is in which mode readable or writable,
+whether file is available or not available, whether file is corrupt, whatever the
+information it is there. So, it is basically the program, which all these information can be
+accessed from the program site itself.
+Now, here we can see this is the program, and it basically two methods we have
+discussed here in this class, this is basically our main class. The method is getPaths, and
+another method is getInfo. Now, so for the getPath method is concerned for a object file
+object. So, file is basically one class, which is define in java.io package, so .* include
+
+that file package the file class need to be accessed. So, file for this we will pass this file
+object, whenever you call this getPaths.
+And now here you see this getPaths method input simple three statement namely, it will
+basically give the name of the file f dot getName(), the name of the file f dot getPath(),
+which path actually it is stored. And f dot getParent() what is the parent, if it is there.
+And then so far the getInfo method is concerned, if the file exist that means, if file is not
+null, file exist means you can pass information which is no more exist. So, in that case if
+it is exist, it will just exception.
+If it is exist it is true, then it will go for this printing f dot canRead, f dot canWrite that
+means, it basically whether this file is readable or write writeable, read mode or write
+mode, read permission, write permission. And then it also say the last modified
+whenever you created file, system always store at the last modification of the date of this
+one so this one. And f dot length is basically how many bytes, basically how many byte
+basically are stored there in this file. So, they are the information.
+Now, let us come to the main method here. So, this is the main method this is the main
+method. Here basically we create one file object name of the object is file to check. And
+then if args.length, basically we can we can pass the command line input, so that we can
+run this method program for as many file you want to check for it. So, it is basically args
+dot length. And for each file argument we have passed it, it will basically call the
+getPaths and getInfo method that means, it will retrieve all the information regarding the
+file name path and status of it, and finally it will come to the end of this program.
+
+(Refer Slide Time: 25:27)
+
+Now, will run this program passing three input as a command line, and say the input is
+input is say city.txt, we know we have created one file test dot txt, testout dot txt. These
+are three files are already we have created. Now, so we can see ok, we are running this
+program using passing three input city.txt, test.txt, and textout.txt fine.
+Now, here you can see the output as we see path test dot txt parent there is no parent
+actually indicating null, and then and is writable. Last modified this is basically the
+system time it is in a some (Refer Time: 26:13) form, and then file size is two bytes.
+Now, name city text, path is city.txt, parent there is no parent for the, this file. Readable
+file it is also it is a writable, last modified this one 20 bytes, this also like this. And here
+you see textout.txt this basically file does not exist, because this file actually it is not
+there whatever it is here.
+
+(Refer Slide Time: 26:47)
+
+So, whatever file you have passed to the program, this program from side it can check
+the status, and can show you. Now, we have discussed about so far the byte stream
+classes for reading as well as writing. Now, it is our time to learn about other classes, so
+for the file handling is concerned. They are called FileReader and FileWriter class.
+Now, we are going to have a demo. Here in this demo, we will see how we can copy the
+content of one file into another, so basically making a duplicate, and using FileReader
+and FileWriter class. So, this program again we make the program for illustration as
+simple as possible, we can see we fast create one object inFile for the file. This basically
+creates a connection from this program to this target date input data. Assuming that
+input.dat file is already there in the system. If it is not there, then it is throw an exception,
+because file opening will not be possible anyway.
+So, this is also another out file, and this basically where the content will store. So, here
+we have created two file, inFile and outFile for the two purpose; purpose is that reader
+and writer. So, I just create an object ins, so that in file can be used for the input purpose
+that means, from in file I will be able to read something. So, inside out are the two
+objects of type FileReader and FileWriter for the input and output mechanism.
+Now, here for ins we create the file reader object for the inFile. So, in this case inFile
+means, it is basically input data. So, in other words ins means, basically a connection
+from your program to inFile, inFile means input.dat. Similarly, outs is the connection
+
+from your program to outFile that is the output.dat file. Now, here basically we have to
+read each and every character those are there input.dat that means, inFile. And then write
+into the out display on the it is basically read the entire file, and then outs write means it
+will store into the output file.
+Here we see the statement that we have ins read means read one character from the file at
+a time store as ch the temporary store. And then same ch, it write into the output file
+outs. So, reading one character from the ins, writing the same character into the outs that
+mean input date and output date. So, this program and also we have filled up with try and
+catch you have to always use try and catch block.
+(Refer Slide Time: 29:27)
+
+As there may be some situation unwanted situation, whenever a file is not accessible the
+file read permission is not there, write permission is there or file is no more memory
+space is available to avoid so many situations, we have to handle the exception. So, those
+things can be done by try catch mechanism.
+So, you have to handle for every occurrences either creating file or reading or writing,
+whatever right so they should be put into the try catch flow there. Now, here is basically
+as we see the output welcome to NPTEL is the input.file. And we copy this the same
+content, and also create the output file welcome to NPTEL. So, we created the duplicate
+of one file input dat the name of the duplicated file is output dat.
+
+(Refer Slide Time: 30:29)
+
+So, we have learned about how a file copy is possible. Now, here another example in the
+last example, we have discuss that copying the file using characters, so it will basically
+character stream classes. We want to do the same thing again, but using byte stream
+classes. The difference is that in the last example, they will read as a character, but here
+they will read as a byte that is all.
+Now, the mechanism is almost same, but there is again reason that when we have to read
+character, when we have read byte. Whenever heterogeneous stream is concerned, then
+you should use the byte stream classes. And homogeneity means in the same system
+whatever it is there, you have created the file in macro ways, and want to read from the
+windows, then obviously byte stream is the best procedure. But, if it is the same system
+(Refer Time: 31:09), then you can use whatever method you can. So, byte stream is
+always preferable.
+Now, here is a program as we see the same as a inFile, and outFile are the two FileInput
+Stream and FileOutputStream object. We create the connection inFile, passing this is a
+target is the input source is the target that means, where the file will be stored there, now
+here is only mechanism it is difference then the previous one.
+So, here byte read temporary store here as a byte in file read, it will read from the in file,
+store if the byte form, and it is the byte ok. And then by read is again while this is not
+equal to -1 mean, you have to copy scan the entire file. So, we have to go for loop. And it
+
+read one byte at a time, and the same byte is write into the output file, and again go for
+reading the next, and then loop continue and until this one is there.
+Now, input.dat as you see welcome to NPTEL restored there. And here out.dat file will
+be created now, if it is successfully copied from that file. So, mechanism is little it
+different, but the target objective is same object is that we are copying from file to
+another file yeah, file has been created out.dat file we are going to display the out.dat file
+yeah, this is the out.dat dat file, you see this is the continue file that we have obtained it
+after successful compling competition.
+(Refer Slide Time: 32:37)
+
+Now, so this is the idea about, now before concluding our demonstration we want to
+have two more chance in programming illustration. This is the utility of BufferedOutput
+Stream class like also BufferedOutputStream, BufferedInputStream. In our next two
+examples, we will demonstrate how the BufferedOutputStream and BufferedInputStream
+is possible, it is basically same thing the same idea about byte stream actually, but you
+use another class that is there already java jdk call the BufferedOutputStream class.
+Now, let us have a quick look of this program here, we just create file output stream of
+this, because you want to read something to write into somewhere for the file output
+stream, we want to write something into testout1 dot txt. This is our target file, where
+you want to store it from our programme, we want to put somewhere into this target.
+
+Now, let us see what is the program that you have to put string s welcome to NPTEL,
+this means that you want to write stray string, string into this one, but here we want to
+store it using this is the object the BufferedOutputStream object call the bout. So, is
+basically bout is a BufferedOutputStream is basically is a connection from the fout. So,
+the fout to this one that means, it will channelize the content. And then is stored in a
+BufferedOutputStream form and that in this one.
+So, here at this stream s will be from our program, and we convert in the string and here
+write b byte, and then we will store into the bout form. Now, this idea about that byte
+buffer output stream classes is there, and this kind of program although we are storing
+our programme. But, instead of this program if it is a network source at the moment, we
+do not have any network experience. So, we will not be able to do it with a networking
+example, but here this s can be forms a network channel.
+Now, you will receive the BufferedOutputStream from the network whatever the stream
+will come, we will buffer it first in our local buffer, and from that buffer we will push
+into the file target file. So, basically suppose you are downloading an image from the
+website, and then this image can to be a very large one, so we will buffer into. So, in that
+case we should use buffered output stream object, so that we can store and image as a
+buffer form instead of the entire image can be push there, because entire means too large
+maybe few MB, and you cannot put it there, so it is a buffer form. So, for this purpose,
+we will do it yes.
+Likewise, buffered input basically if we read very large image from the channel network,
+and writing into a channel network like ok now, let us see here, how we can write this
+things into this one. And ok, so here the file is successfully content, here we can see
+directed our output to a file. But, here instead of directing this file, we can direct it into
+some network port, so that through network this can be transmitted. We will see about
+the network, whenever you will cover the networking in this module in this course.
+
+(Refer Slide Time: 36:19)
+
+Now, the next example just opposite to this byte output steam buffer, here the byte
+BufferedInputStream class. Same problem here, basically here we just create the buffer
+input stream that means, we will read something. Here we will read again from this
+object out dot dat is already stored there.
+So, instead of out.dat here, we can in this source we can maintain the network port
+number socket all these things. Here we will just read the output at in source of the input.
+And then it basically read the entire content, and then read in the form of a byte, and then
+print on the screen. So, it is basically the idea about BufferedInputStream, and then
+BufferedOutputStream
+
+concept
+
+yeah
+
+this
+
+BufferedInputStream, we can access the file.
+
+program
+
+as
+
+you
+
+see
+
+using
+
+the
+
+(Refer Slide Time: 37:19)
+
+Now, if I ask you the same thing instead of buffer input stream using simple
+DataInputStream and output stream, you can do the same thing, you can do it actually
+you have done it already. Now, our next example to illustrate the usage of Sequence
+InputStream class. Now, so the SequenceInputStream class is basically can handle two
+more files together. And it will automatically manage it without any intervention within
+them.
+Now, here is the program you see, first we create one input stream FileInputStream
+namely input1 and another input stream-2. So, here input1, and input2 are the two input
+target source I can say. And these are two source namely input.txt, input2.txt assuming
+that there already present in the directory. Now, here you see we create an object call
+inst, which is of type sequence input stream, this class is again define in java.io package.
+So, we can create an object inst, now why we are creating objective you will see, how we
+can create object passing two input as a overloading constructor of this class input1,
+input2. Here also we can create input1, input2, input3 also, it will take the overloading
+constructor will take it. Now, what it will do is basically input1 and input2 the two
+sources will be scanned one by one, and then the resultant total scanning output will be
+stored into the inst. And then that inst can be accessed I can read it, and then finally this
+inst can be display on the screen.
+
+Now, here is basically inst, which is basically the result of sequence input stream, and
+then will be displayed on the screen. So, it will see the input 1. txt, and input 2.txt, the
+two content will be displayed on the screen. And finally, we close all the string in input1,
+and input2 from our system quick.
+(Refer Slide Time: 39:31)
+
+As you see here the output as it is shown here, this is a input this is a input two one. So,
+actually this is the content in the input1.txt and this is a contain input2.txt. So, two files
+are sequential accessed one after another, and it is basically displayed on this one.
+(Refer Slide Time: 39:49)
+
+So, this is the one usage of the sequence input stream class. Another one application of
+the sequence input stream class very same concreted margin. Here actually we (Refer
+Time: 39:58) not stored into the third file. When this program will basically tell you, how
+the merging result can be stored in the third file is the same as this one. And file1 and
+file2 just like input file1 input file2, and file 3 is basically the target third file is basically,
+we will store the concatenation of the two file.
+We use the sequence input stream again file 1 and file 2 that means, file 3 will store the
+merging of the two content. Now, using the buffer input stream, I can read it and then
+display it. So, here basically in buffer, in out buffer is basically file3 and output is output
+buffer is basically displaying on the our standard output device.
+So, it basically using the by buffer output in form and this program if it is data there, so
+the concatenation of the two file result will be displayed from the third file on the screen.
+So, this is a program that we have discuss about using the sequence input stream class
+example and here is the. So, this is the again program as you see this is an input this is
+the same thing that is concatenation of the two input file.
+(Refer Slide Time: 41:17)
+
+Now, we will discuss about random access, this is the last content to have the
+demonstration. Random access is just different mechanism the totally different, then the
+concept that you have learn so far. In some situation, we have to access the file in a
+random manner, whatever the things we have discuss that we discuss the file in a
+
+sequence manner that means, one character the next character one by the next byte until
+the end of file likely, but here we can read at random.
+So, this program can have a quick demo about it. And you can use the file class for this,
+so here we just Random access file rather. There is a class RandomAccessFile, which is
+defining java.io file, we have to create an object for this. So, we create the file is that I
+RandomAccessFile. And this file whenever we created, it can be open in any read write.
+So, other unlike sequence access, it can be read either read or write, but it can be open
+both mode.
+Now, here we create the file object and this is connected to the file. So, you want to
+randomly access rand data reading, writing on the same file at the same time like. So,
+here you see we first write something writeChar, writeInt, and writeDouble, and these
+are the input that we have to write into this that means, if the file is blank or if the file is
+there if we write it from very beginning, it is basically overwriting. Then entire content
+will be deleted, and it will store this one.
+And here is the file seek is basically positioning the file pointer, so it basically zero
+indicates that, it will position file pointer at the very beginning that means, where the x is
+now written there. Now, here system.out.println (file.readchar()) that means, presently
+seek 0 that means start here. This statement will read x, and then again after reading x
+automatically file pointer move to the next one that means, read come here and readInt, it
+will read this one. Go to the next one, readDouble, and it will read this one.
+So, this is basically reading and writing from the same file as you can see there. Now,
+here again seek two as you see that file position will be move to the second location. So,
+1, 2, then it will go there. And then again we readInt that means, you can read the 555
+here. And then file dot seek (file dot length), so file.length as you know, it will give you
+the size of the file.
+So, if the seek is go there means, it will move the file pointer to the end of the file. And
+at the end of the file.writeBoolean false that means, we write a Boolean value and the
+false. And files dot seek (4), again we go to the forth position 1, 2, 3, 4 means, it will
+come here. Then we can file read Boolean, so read Boolean means it will false and then
+finally file close. So, this is basically shows a very quickly shows that how the random
+access mechanism can be applied to a file object.
+
+(Refer Slide Time: 44:13)
+
+Now, here is a quick execution of the program, so that we can learn about it. And then
+you can see the difference state that it will show here as you see here, this is the first read
+integer write, read character, write integer, and then write double, and then again read,
+and then again finally go to the file position at the end, where the true is store and we
+read attribute and then get it. So, this way we will be able to access the file in a random
+way. This is a very small example, we have discussed about it.
+Now, I hope you have understood the concept of file input output mechanism in java.
+Input output mechanism, it just started here. The more input output mechanism will be
+discussed, whenever we will discussed. The graphical user interface concept there is a lot
+of input output in a different fashion, the different style we have to follow. But, all those
+lesson that we have learned, we will be utilize there. In addition to this also few more in
+those context, we discussed ok, we should wait for the next topic that we are going to
+cover, it is basically graphical user interface programming our next topics to be covered.
+Thank you very much, thanks for your attention.
+
+

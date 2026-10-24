@@ -1,0 +1,396 @@
+{
+  "lecture": 16,
+  "title": "Demonstration VII (Access Modifiers Demo)",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "In the access modifier demonstration, what access level does a class with NO modifier before its name have?",
+      "options": {
+        "A": "public",
+        "B": "private",
+        "C": "protected",
+        "D": "default (package-private)"
+      },
+      "answer": "D",
+      "explanation": "A class declared without any access modifier has default (package-private) access. It is accessible only within the same package. This is distinct from 'public' which is accessible everywhere."
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "In the demonstration, two classes in the same directory can access each other's default-access members. What does 'same directory' mean in terms of Java packaging?",
+      "options": {
+        "A": "Same IDE project",
+        "B": "Same package (classes in the same directory are in the same package by default)",
+        "C": "Same Java version",
+        "D": "Same file"
+      },
+      "answer": "B",
+      "explanation": "In Java, classes in the same directory without a 'package' declaration belong to the unnamed/default package. The concept of 'same directory' corresponds to 'same package' in Java. Default access allows access within the same package."
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What does method overloading mean?",
+      "options": {
+        "A": "The same method name in different classes",
+        "B": "Multiple methods with the same name but different parameter lists in the same class",
+        "C": "A subclass redefining a superclass method",
+        "D": "Using too many methods in one class"
+      },
+      "answer": "B",
+      "explanation": "Method overloading means defining multiple methods with the same name in the same class, but with different parameter types, counts, or order. The compiler selects the appropriate version based on the argument types at the call site."
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What is method overriding?",
+      "options": {
+        "A": "Multiple methods with different names in the same class",
+        "B": "A subclass provides its own implementation of a method with the same signature as in the superclass",
+        "C": "Defining a method with the same name in two different unrelated classes",
+        "D": "Using the 'override' keyword to replace a method"
+      },
+      "answer": "B",
+      "explanation": "Method overriding is when a subclass defines a method with the same signature (name, parameter list, return type) as a method in the superclass. The subclass version replaces the superclass version when called on a subclass object."
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What happens when you try to access a private field from outside its declaring class?",
+      "options": {
+        "A": "The field returns its default value",
+        "B": "A runtime exception is thrown",
+        "C": "A compilation error is produced",
+        "D": "The field is accessible but read-only"
+      },
+      "answer": "C",
+      "explanation": "Java enforces access control at compile time. Attempting to access a private member from an external class produces a compile-time error like 'fieldName has private access in ClassName'. The code cannot be compiled."
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "In the demonstration, when class files are moved to a different directory, what happens to default-access members?",
+      "options": {
+        "A": "They become public automatically",
+        "B": "They become inaccessible from other classes (now in a different package)",
+        "C": "They become private",
+        "D": "They remain accessible from anywhere"
+      },
+      "answer": "B",
+      "explanation": "Moving a class to a different directory changes its package (if no explicit package declaration). Default-access members are only accessible within the same package. Once classes are in different packages (directories), default-access members are no longer accessible between them."
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "Which of the following is an example of method overloading?",
+      "options": {
+        "A": "class B extends A { void show() { ... } } (A also has show())",
+        "B": "void add(int a, int b) and void add(double a, double b) in the same class",
+        "C": "Having both main() and start() methods in the same class",
+        "D": "Two classes both named Calculator"
+      },
+      "answer": "B",
+      "explanation": "Overloading: same class, same method name, different parameter types. 'add(int, int)' and 'add(double, double)' are two overloaded versions of 'add'. The compiler selects based on argument types: add(3, 4) calls int version, add(3.0, 4.0) calls double version."
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What is the difference between 'public class' and 'class' (no modifier) in a Java file?",
+      "options": {
+        "A": "No difference in behavior",
+        "B": "public class is accessible from any package; class (no modifier) is accessible only within the same package",
+        "C": "class (no modifier) is abstract by default",
+        "D": "public class requires a constructor; class does not"
+      },
+      "answer": "B",
+      "explanation": "'public class' makes the class accessible from any package. A class with no modifier (default access) is only accessible from within the same package. Additionally, only one public class can exist per .java file, and it must match the filename."
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "Is a protected member accessible in a subclass that is in a different package?",
+      "options": {
+        "A": "No — protected is limited to same package",
+        "B": "Yes — protected allows subclass access across packages",
+        "C": "Only if the subclass is also public",
+        "D": "Only through the superclass reference"
+      },
+      "answer": "B",
+      "explanation": "Protected is specifically designed to allow subclass access across package boundaries. A subclass in a different package can access protected members inherited from the superclass, enabling inheritance-based extensibility while restricting access to unrelated classes."
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "Which access modifier should be used for a utility constant (like PI = 3.14159) that should be readable from anywhere?",
+      "options": {
+        "A": "private",
+        "B": "protected",
+        "C": "default",
+        "D": "public"
+      },
+      "answer": "D",
+      "explanation": "A constant intended for use from anywhere should be public. Since it's also static (shared) and final (immutable), the full declaration would be 'public static final double PI = 3.14159;'. Public access ensures any class can read it."
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "In the demonstration, the same class becomes inaccessible when moved to a different directory. What underlying Java mechanism causes this?",
+      "options": {
+        "A": "File system permission change",
+        "B": "The class's package changes (different directory = different package), breaking default access",
+        "C": "The JVM cannot find the class in a new location",
+        "D": "The file must be recompiled after moving"
+      },
+      "answer": "B",
+      "explanation": "Default access is package-level. When a class is in a different directory (without a matching package declaration), it belongs to a different package. Code in the original directory that relied on default access to the moved class now fails because they're in different packages."
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "How does the compiler distinguish between overloaded methods like add(int, int) and add(double, double)?",
+      "options": {
+        "A": "By the method's return type",
+        "B": "By the method name and parameter types at the call site",
+        "C": "By the position of the method in the class",
+        "D": "By which method was defined first"
+      },
+      "answer": "B",
+      "explanation": "The compiler uses the number and types of arguments in the method call to select the correct overloaded version. 'add(5, 10)' matches add(int, int) because 5 and 10 are int literals. Return type alone CANNOT be used to distinguish overloaded methods."
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Two Java classes in the same package use each other's methods with default access. A third class from a different package tries to use them. What happens?",
+      "options": {
+        "A": "The third class compiles fine",
+        "B": "Compilation error for the third class — it cannot access default-access members from a different package",
+        "C": "Runtime exception for the third class",
+        "D": "The third class gets read-only access"
+      },
+      "answer": "B",
+      "explanation": "Default access is restricted to the same package. The two original classes can use each other's default members (same package). The third class in a different package fails at compilation with access errors for each default-access member it tries to use."
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "In the demonstration, method overriding is distinguished from overloading. What is the key syntactic difference?",
+      "options": {
+        "A": "Overriding uses different method names; overloading uses the same name",
+        "B": "Overriding has same signature in a subclass; overloading has same name but different parameters in the same class",
+        "C": "Overriding is compile-time; overloading is runtime",
+        "D": "Overloading requires @Override; overriding does not"
+      },
+      "answer": "B",
+      "explanation": "Overriding: subclass method has the SAME name AND same parameter list as a superclass method. Overloading: multiple methods in the SAME class with the same name but DIFFERENT parameter lists. The key distinguishers are class relationship (same vs. sub/super) and parameter matching."
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "In the lecture demo, what error occurs when external code accesses a private field directly?",
+      "options": {
+        "A": "NullPointerException at runtime",
+        "B": "Compilation error: 'fieldName has private access in ClassName'",
+        "C": "IllegalAccessException at runtime",
+        "D": "Security exception at runtime"
+      },
+      "answer": "B",
+      "explanation": "Accessing a private field from outside its class produces a compile-time error — the code cannot be compiled. Java's access control is enforced by the compiler, making it a compile-time mechanism (unlike some other languages)."
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Can you overload a method by changing only the return type?",
+      "options": {
+        "A": "Yes — return type differentiates overloads",
+        "B": "No — return type alone is insufficient; parameter lists must differ",
+        "C": "Yes, but only for primitive return types",
+        "D": "Only if the method is static"
+      },
+      "answer": "B",
+      "explanation": "Method overloading requires different parameter lists (different types, count, or order). Return type is NOT part of the method signature for overloading resolution. Having two methods 'int add(int a, int b)' and 'double add(int a, int b)' causes a compilation error — duplicate method."
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "A subclass is in a different package from its superclass. The superclass has a field with default access. Can the subclass access this field?",
+      "options": {
+        "A": "Yes — subclasses always have access to superclass fields",
+        "B": "No — default access doesn't extend to subclasses in different packages",
+        "C": "Only through the superclass's methods",
+        "D": "Yes, but only if the field is not overridden"
+      },
+      "answer": "B",
+      "explanation": "Default (package-private) access is limited to the same package only. It does NOT extend to subclasses in different packages. Even though the class extends the superclass, default-access members are inaccessible from outside the package. Protected is needed for cross-package subclass access."
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "In the lecture demo, what is demonstrated about public access?",
+      "options": {
+        "A": "Public access requires import statements",
+        "B": "Public members are accessible from any class, anywhere, without restriction",
+        "C": "Public access is limited to the same module",
+        "D": "Public access requires explicit inheritance"
+      },
+      "answer": "B",
+      "explanation": "The demonstration shows that public members (fields or methods) are accessible from any class in any package. There is no need for inheritance or being in the same package. Public defines the universal accessibility of a member."
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Why does Java allow method overloading but not variable overloading (two variables with same name) in the same scope?",
+      "options": {
+        "A": "Variables are faster to access when unique",
+        "B": "Methods are disambiguated by parameter types; variables have no such disambiguation mechanism — two 'int x' in the same scope would be impossible to tell apart",
+        "C": "Variable overloading is allowed in Java",
+        "D": "Method overloading requires the JVM; variable overloading requires the compiler"
+      },
+      "answer": "B",
+      "explanation": "Methods with the same name can be disambiguated by their parameter types at the call site. Variables have no such mechanism — 'x + x' is ambiguous if two variables are named 'x'. Therefore, Java allows method overloading (resolved by parameters) but not variable redeclaration in the same scope."
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "A Java class is intended to be used only within its package for internal implementation. Which access level should the class have?",
+      "options": {
+        "A": "public",
+        "B": "protected",
+        "C": "private",
+        "D": "default (no modifier)"
+      },
+      "answer": "D",
+      "explanation": "If a class is only needed within its package (internal implementation details), use default access (no modifier). This prevents external packages from depending on the class, giving you freedom to change or remove it without affecting external code."
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Class A has 'protected int x'. Class B extends A (different package). Inside B, 'B obj = new B(); obj.x = 5;' — is this valid?",
+      "options": {
+        "A": "No — protected doesn't work in different packages",
+        "B": "Yes — B accesses its own inherited x through a B reference",
+        "C": "Only if obj is a B type reference, not A type — actually, this IS valid",
+        "D": "Only if x is initialized in A's constructor"
+      },
+      "answer": "B",
+      "explanation": "Inside a subclass, accessing protected members through a reference of the subclass type (or subclass itself via 'this') is valid. 'B obj = new B(); obj.x = 5;' accesses B's inherited x through a B-type reference inside B — this is allowed. However, accessing A.x through an A-type reference from within B is not allowed."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "What is the difference between static method overloading and instance method overloading?",
+      "options": {
+        "A": "Static methods cannot be overloaded",
+        "B": "They follow the same overloading rules (different parameter lists); both are resolved at compile time based on argument types",
+        "C": "Static method overloading is resolved at runtime; instance overloading at compile time",
+        "D": "Static methods can only be overloaded by other static methods"
+      },
+      "answer": "B",
+      "explanation": "Both static and instance methods can be overloaded with the same rules: same class, same name, different parameter lists. Both are resolved at compile time (static dispatch) based on argument types. This is different from overriding, which involves runtime dispatch."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Class A (package p1) has 'protected int data'. Class B (package p2) extends A. Inside B: 'A aObj = new A(); aObj.data = 10;'. Is this valid?",
+      "options": {
+        "A": "Yes — B is a subclass of A so it has full access to A's protected members",
+        "B": "No — B can access protected members through 'this' or B references, but not through a superclass type reference in a different package",
+        "C": "Yes — protected allows subclass access to any A instance",
+        "D": "Only if A's constructor is accessible"
+      },
+      "answer": "B",
+      "explanation": "Java's protected access has a subtle rule: in a different package, a subclass can only access protected members through references of the subclass type (or its own subclasses), not through a superclass type reference. 'A aObj' is an A-type reference, so 'aObj.data' is prohibited in the different package even within B."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Method overloading is resolved at compile time (static dispatch). Why is method overriding resolved at runtime (dynamic dispatch)?",
+      "options": {
+        "A": "Overriding is a newer feature; older features are resolved at compile time",
+        "B": "Overloading depends on argument types known at compile time; overriding depends on the actual object type, which may only be known at runtime (polymorphism)",
+        "C": "Overriding uses more memory, requiring runtime resolution",
+        "D": "They are both resolved at the same time"
+      },
+      "answer": "B",
+      "explanation": "Overloading is resolved by argument types visible in the source code at compile time. Overriding requires knowing the actual runtime type of the object. A 'Vehicle v = new Car()' has a compile-time type of Vehicle but runtime type of Car — the correct override (Car's method) can only be determined at runtime."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Why is the demonstration of 'moving files to a different directory breaks default access' significant for understanding Java packages?",
+      "options": {
+        "A": "It shows Java is directory-dependent",
+        "B": "It demonstrates that Java package = physical directory, and package membership determines default access boundaries",
+        "C": "It shows that compiled .class files must stay together",
+        "D": "It proves that Java doesn't support multi-directory projects"
+      },
+      "answer": "B",
+      "explanation": "The demonstration teaches that Java packages map to directory structures. Classes in the same directory are in the same unnamed package and share default access. Moving classes to different directories changes their package membership, illustrating the concrete connection between filesystem layout and Java access control."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Can two classes in the same file have methods with the same name and same parameters (not overloading or overriding)?",
+      "options": {
+        "A": "No — method names must be unique across all classes in a file",
+        "B": "Yes — each class has its own namespace; methods with the same signature in different classes are independent",
+        "C": "Only if both classes extend the same superclass",
+        "D": "Only if the methods are static"
+      },
+      "answer": "B",
+      "explanation": "Each class is an independent namespace. Two classes in the same file (e.g., class A and class B) can both have 'void show()' — they are completely independent methods. Neither is overloading (different class) nor overriding (no inheritance relationship)."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "In autoboxing, Java calls Integer.valueOf(int) vs new Integer(int). Both are named 'valueOf' with different parameters — is this overloading?",
+      "options": {
+        "A": "No — valueOf with an int parameter is the only version",
+        "B": "Yes — Integer.valueOf(int) and Integer.valueOf(String) are overloaded versions of valueOf",
+        "C": "No — valueOf is a factory method, not an overloaded constructor",
+        "D": "valueOf is private and not considered for overloading"
+      },
+      "answer": "B",
+      "explanation": "Integer.valueOf(int) and Integer.valueOf(String) are overloaded static methods: same class (Integer), same name (valueOf), different parameter types (int vs String). The compiler selects the appropriate version based on the argument type. This is standard overloading."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "What is the 'fragile base class problem' and how does it relate to access modifiers?",
+      "options": {
+        "A": "Base classes with many private fields are fragile",
+        "B": "Changes to a public/protected superclass can unexpectedly break subclasses that override or depend on the changed methods",
+        "C": "Abstract classes with no concrete methods are fragile",
+        "D": "Classes with default access are fragile"
+      },
+      "answer": "B",
+      "explanation": "The fragile base class problem: when a superclass changes its implementation, subclasses that override methods or depend on the superclass's internal behavior may break. Using 'final' methods and minimizing protected/public members reduces this fragility by limiting what subclasses can depend on or override."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Java uses 'package' as an access boundary. What advantage does this provide over C++'s 'friend' mechanism?",
+      "options": {
+        "A": "Packages are slower but more secure",
+        "B": "Package-based access (default) provides a natural grouping: related classes can share implementation access without individual 'friendship' declarations, and the boundary aligns with modular design",
+        "C": "Java's package system is weaker than C++ friends",
+        "D": "Packages require more boilerplate than C++ friends"
+      },
+      "answer": "B",
+      "explanation": "C++'s 'friend' grants specific class/function access to private members on a one-by-one basis. Java's default (package) access automatically grants access to all classes in the same package. This aligns with modular design — a package groups related implementation classes, and they naturally need to collaborate, avoiding tedious friend declarations."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "If method A() calls private method B() in the same class, and class X extends this class with @Override on A(), does X's A() have access to the private B()?",
+      "options": {
+        "A": "Yes — X's A() inherits access to B()",
+        "B": "No — private B() is inaccessible from X; X's A() override cannot directly call B()",
+        "C": "Yes — B() is accessible because A() and B() are in the same class",
+        "D": "X's A() automatically calls B() through the superclass mechanism"
+      },
+      "answer": "B",
+      "explanation": "Private methods are invisible outside the declaring class. X's override of A() cannot call the superclass's private B() directly (it doesn't even see it). X's A() is a new method that happens to have the same signature as A() in the superclass. The superclass's A() (calling B()) and X's A() (which can't see B()) are separate implementations."
+    }
+  ]
+}

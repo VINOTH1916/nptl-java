@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NPTEL Programming in Java – MCQ Practice</title>
+  <style>
+    /* ─── Reset & Base ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --card: #22263a;
+      --border: #2e3350;
+      --accent: #4f8ef7;
+      --accent2: #7c5cfc;
+      --green: #22c55e;
+      --red: #ef4444;
+      --yellow: #f59e0b;
+      --text: #e2e8f0;
+      --muted: #8892a8;
+      --easy: #22c55e;
+      --medium: #f59e0b;
+      --hard: #ef4444;
+      --radius: 12px;
+      --sidebar: 280px;
+      --transition: .2s ease;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ─── Layout ───────────────────────────────────────────────── */
+    #app { display: flex; height: 100vh; overflow: hidden; }
+
+    /* ─── Sidebar ──────────────────────────────────────────────── */
+    #sidebar {
+      width: var(--sidebar);
+      min-width: var(--sidebar);
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: width var(--transition);
+      z-index: 100;
+    }
+    #sidebar.collapsed { width: 0; min-width: 0; }
+
+    .sidebar-header {
+      padding: 20px 16px 12px;
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .sidebar-header h2 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--accent);
+      margin-bottom: 10px;
+      white-space: nowrap;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 7px 10px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 13px;
+      outline: none;
+      transition: border-color var(--transition);
+    }
+    .sidebar-search:focus { border-color: var(--accent); }
+    .sidebar-search::placeholder { color: var(--muted); }
+
+    .sidebar-filters {
+      display: flex;
+      gap: 4px;
+      padding: 10px 16px 0;
+      flex-shrink: 0;
+    }
+    .filter-chip {
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+    .filter-chip:hover, .filter-chip.active { color: #fff; border-color: transparent; }
+    .filter-chip.all.active { background: var(--accent2); }
+    .filter-chip.easy.active { background: var(--easy); }
+    .filter-chip.medium.active { background: var(--medium); }
+    .filter-chip.hard.active { background: var(--hard); }
+
+    #lecture-list {
+      overflow-y: auto;
+      flex: 1;
+      padding: 8px 8px 20px;
+    }
+    #lecture-list::-webkit-scrollbar { width: 4px; }
+    #lecture-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+    .lecture-item {
+      display: flex;
+      align-items: center;
+      padding: 9px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background var(--transition);
+      gap: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+    }
+    .lecture-item:hover { background: var(--card); }
+    .lecture-item.active { background: linear-gradient(90deg, rgba(79,142,247,.15), rgba(124,92,252,.08)); border-left: 3px solid var(--accent); }
+    .lecture-item.coming-soon { opacity: .45; cursor: not-allowed; }
+
+    .lec-num {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+      min-width: 28px;
+    }
+    .lec-title {
+      font-size: 12.5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.3;
+    }
+    .lec-badge {
+      margin-left: auto;
+      font-size: 10px;
+      padding: 2px 7px;
+      border-radius: 10px;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .lec-badge.done { background: rgba(34,197,94,.15); color: var(--green); }
+    .lec-badge.partial { background: rgba(245,158,11,.15); color: var(--yellow); }
+    .lec-badge.zero { background: rgba(239,68,68,.1); color: var(--red); }
+    .lec-badge.soon { background: rgba(136,146,168,.1); color: var(--muted); }
+
+    /* ─── Main Content ─────────────────────────────────────────── */
+    #main {
+      flex: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
+    #main::-webkit-scrollbar { width: 6px; }
+    #main::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+    /* ─── Top Bar ──────────────────────────────────────────────── */
+    #topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
+    }
+    #menu-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 6px 9px;
+      cursor: pointer;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1;
+      transition: all var(--transition);
+    }
+    #menu-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    #topbar h1 {
+      font-size: 15px;
+      font-weight: 600;
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    #topbar h1 span { color: var(--muted); font-weight: 400; font-size: 13px; }
+
+    .topbar-actions { display: flex; gap: 8px; align-items: center; }
+
+    .stat-pill {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      font-size: 12px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .stat-pill strong { color: var(--text); }
+    .stat-pill.score-pill strong { color: var(--accent); }
+
+    .btn {
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: all var(--transition);
+    }
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff;
+    }
+    .btn-primary:hover { opacity: .85; }
+
+    /* ─── Content Area ─────────────────────────────────────────── */
+    #content { flex: 1; padding: 24px; max-width: 920px; margin: 0 auto; width: 100%; }
+
+    /* ─── Welcome Screen ───────────────────────────────────────── */
+    #welcome {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+      text-align: center;
+      gap: 20px;
+    }
+    .welcome-logo {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 38px;
+    }
+    #welcome h2 { font-size: 26px; font-weight: 700; }
+    #welcome p { color: var(--muted); max-width: 480px; line-height: 1.6; }
+    .welcome-stats {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .welcome-stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 24px;
+      text-align: center;
+    }
+    .welcome-stat .num { font-size: 28px; font-weight: 700; color: var(--accent); }
+    .welcome-stat .lbl { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+    /* ─── Lecture Header ───────────────────────────────────────── */
+    .lec-header {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .lec-header-left {}
+    .lec-header-left .lec-tag {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 6px;
+    }
+    .lec-header-left h2 { font-size: 20px; font-weight: 700; }
+    .lec-header-right { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+
+    /* ─── Progress Bar ─────────────────────────────────────────── */
+    .progress-wrap { margin-bottom: 20px; }
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .progress-label span { color: var(--text); font-weight: 600; }
+    .progress-bar {
+      height: 6px;
+      background: var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      border-radius: 10px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      transition: width .4s ease;
+    }
+
+    /* ─── Difficulty Tabs ──────────────────────────────────────── */
+    .diff-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .diff-tab {
+      padding: 7px 18px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1.5px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      transition: all var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .diff-tab:hover { color: var(--text); border-color: var(--accent); }
+    .diff-tab.active.all { background: var(--accent2); border-color: var(--accent2); color: #fff; }
+    .diff-tab.active.easy { background: var(--easy); border-color: var(--easy); color: #fff; }
+    .diff-tab.active.medium { background: var(--medium); border-color: var(--medium); color: #fff; }
+    .diff-tab.active.hard { background: var(--hard); border-color: var(--hard); color: #fff; }
+    .diff-count {
+      font-size: 10px;
+      background: rgba(255,255,255,.2);
+      padding: 1px 6px;
+      border-radius: 10px;
+    }
+
+    /* ─── MCQ Card ─────────────────────────────────────────────── */
+    .mcq-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 16px;
+      overflow: hidden;
+      transition: border-color var(--transition), transform var(--transition);
+    }
+    .mcq-card:hover { transform: translateY(-1px); }
+    .mcq-card.answered-correct { border-color: var(--green); }
+    .mcq-card.answered-wrong { border-color: var(--red); }
+
+    .mcq-top {
+      padding: 16px 20px 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .q-num {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 4px 10px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .diff-badge {
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+    .diff-badge.easy { background: rgba(34,197,94,.15); color: var(--easy); }
+    .diff-badge.medium { background: rgba(245,158,11,.15); color: var(--medium); }
+    .diff-badge.hard { background: rgba(239,68,68,.15); color: var(--hard); }
+
+    .q-text { font-size: 14.5px; line-height: 1.6; flex: 1; }
+
+    /* ─── Options ──────────────────────────────────────────────── */
+    .mcq-options { padding: 0 20px 16px 20px; display: flex; flex-direction: column; gap: 8px; }
+
+    .option {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 9px;
+      border: 1.5px solid var(--border);
+      cursor: pointer;
+      transition: all var(--transition);
+      user-select: none;
+    }
+    .option:hover:not(.disabled) {
+      border-color: var(--accent);
+      background: rgba(79,142,247,.06);
+    }
+    .option.disabled { cursor: default; }
+
+    .opt-key {
+      width: 26px;
+      height: 26px;
+      border-radius: 7px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: all var(--transition);
+    }
+    .opt-text {
+      font-size: 13.5px;
+      line-height: 1.5;
+      padding-top: 3px;
+    }
+
+    /* Correct option */
+    .option.correct {
+      border-color: var(--green);
+      background: rgba(34,197,94,.08);
+    }
+    .option.correct .opt-key {
+      background: var(--green);
+      border-color: var(--green);
+      color: #fff;
+    }
+    /* Wrong selected */
+    .option.wrong {
+      border-color: var(--red);
+      background: rgba(239,68,68,.08);
+    }
+    .option.wrong .opt-key {
+      background: var(--red);
+      border-color: var(--red);
+      color: #fff;
+    }
+    /* Correct answer revealed when wrong was chosen */
+    .option.reveal-correct {
+      border-color: var(--green);
+      background: rgba(34,197,94,.05);
+    }
+    .option.reveal-correct .opt-key {
+      background: rgba(34,197,94,.2);
+      border-color: var(--green);
+      color: var(--green);
+    }
+
+    /* ─── Explanation ──────────────────────────────────────────── */
+    .explanation {
+      margin: 0 20px 16px;
+      padding: 12px 16px;
+      border-radius: 9px;
+      font-size: 13px;
+      line-height: 1.6;
+      display: none;
+    }
+    .explanation.show { display: block; }
+    .explanation.correct-exp {
+      background: rgba(34,197,94,.08);
+      border: 1px solid rgba(34,197,94,.25);
+    }
+    .explanation.wrong-exp {
+      background: rgba(239,68,68,.08);
+      border: 1px solid rgba(239,68,68,.25);
+    }
+    .exp-label {
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin-bottom: 4px;
+    }
+    .explanation.correct-exp .exp-label { color: var(--green); }
+    .explanation.wrong-exp .exp-label { color: var(--red); }
+
+    /* ─── Result Footer ────────────────────────────────────────── */
+    .mcq-result-icon {
+      position: absolute;
+      right: 14px;
+      top: 14px;
+      font-size: 18px;
+    }
+    .mcq-top { position: relative; }
+
+    /* ─── Score Summary ────────────────────────────────────────── */
+    .score-banner {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .score-ring {
+      width: 80px;
+      height: 80px;
+      flex-shrink: 0;
+    }
+    .score-ring svg { transform: rotate(-90deg); }
+    .score-ring text { transform: rotate(90deg); font-weight: 700; }
+    .score-details { flex: 1; }
+    .score-details h3 { font-size: 16px; margin-bottom: 6px; }
+    .score-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    .score-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .score-item strong { color: var(--text); }
+    .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .dot.correct { background: var(--green); }
+    .dot.wrong { background: var(--red); }
+    .dot.skip { background: var(--muted); }
+
+    /* ─── Loading ──────────────────────────────────────────────── */
+    #loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+      gap: 16px;
+      color: var(--muted);
+    }
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ─── Coming Soon ──────────────────────────────────────────── */
+    #coming-soon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 50vh;
+      text-align: center;
+      gap: 16px;
+      color: var(--muted);
+    }
+    #coming-soon .icon { font-size: 52px; }
+    #coming-soon h3 { font-size: 20px; color: var(--text); }
+
+    /* ─── Responsive ───────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      :root { --sidebar: 260px; }
+      #sidebar { position: fixed; top: 0; bottom: 0; left: 0; }
+      #sidebar:not(.collapsed) { box-shadow: 4px 0 20px rgba(0,0,0,.5); }
+      #sidebar.collapsed { width: 0; }
+      #content { padding: 16px; }
+      .lec-header { padding: 14px 16px; }
+      .mcq-top { padding: 14px 14px 10px; }
+      .mcq-options { padding: 0 14px 14px; }
+    }
+
+    /* ─── Animations ───────────────────────────────────────────── */
+    .mcq-card { animation: fadeUp .25s ease both; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .mcq-card:nth-child(1)  { animation-delay: .02s }
+    .mcq-card:nth-child(2)  { animation-delay: .04s }
+    .mcq-card:nth-child(3)  { animation-delay: .06s }
+    .mcq-card:nth-child(4)  { animation-delay: .08s }
+    .mcq-card:nth-child(5)  { animation-delay: .10s }
+    .mcq-card:nth-child(6)  { animation-delay: .12s }
+    .mcq-card:nth-child(7)  { animation-delay: .14s }
+    .mcq-card:nth-child(8)  { animation-delay: .16s }
+    .mcq-card:nth-child(9)  { animation-delay: .18s }
+    .mcq-card:nth-child(10) { animation-delay: .20s }
+
+    /* ─── Scrollbar Global ─────────────────────────────────────── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+<div id="app">
+  <!-- ── Sidebar ───────────────────────────────────────────────── -->
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <h2>📚 NPTEL Java – 60 Lectures</h2>
+      <input class="sidebar-search" id="search-input" type="search" placeholder="Search lectures…" />
+    </div>
+    <div class="sidebar-filters">
+      <button class="filter-chip all active" data-filter="all">All</button>
+      <button class="filter-chip easy" data-filter="easy">Easy</button>
+      <button class="filter-chip medium" data-filter="medium">Medium</button>
+      <button class="filter-chip hard" data-filter="hard">Hard</button>
+    </div>
+    <div id="lecture-list"></div>
+  </aside>
+
+  <!-- ── Main ─────────────────────────────────────────────────── -->
+  <div id="main">
+    <!-- Top Bar -->
+    <div id="topbar">
+      <button id="menu-btn" title="Toggle sidebar">☰</button>
+      <h1 id="topbar-title">
+        NPTEL Programming in Java
+        <span id="topbar-sub">— Prof. Debasis Samanta, IIT Kharagpur</span>
+      </h1>
+      <div class="topbar-actions">
+        <div class="stat-pill score-pill" id="score-display" style="display:none">
+          Score: <strong id="score-num">0/0</strong>
+        </div>
+        <button class="btn btn-ghost" id="reset-btn" style="display:none" onclick="resetCurrentLecture()">↺ Reset</button>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div id="content">
+      <div id="welcome">
+        <div class="welcome-logo">☕</div>
+        <h2>Java MCQ Practice</h2>
+        <p>30 high-quality MCQs per lecture — Easy, Medium, and Hard. Click any lecture in the sidebar to start practicing. Instant answer feedback with detailed explanations.</p>
+        <div class="welcome-stats" id="welcome-stats">
+          <div class="welcome-stat">
+            <div class="num" id="ws-lectures">0</div>
+            <div class="lbl">Lectures Available</div>
+          </div>
+          <div class="welcome-stat">
+            <div class="num" id="ws-mcqs">0</div>
+            <div class="lbl">Total MCQs</div>
+          </div>
+          <div class="welcome-stat">
+            <div class="num">10+10+10</div>
+            <div class="lbl">Easy + Medium + Hard</div>
+          </div>
+          <div class="welcome-stat">
+            <div class="num" id="ws-done">0</div>
+            <div class="lbl">Answered So Far</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="loading" style="display:none">
+        <div class="spinner"></div>
+        <div>Loading lecture…</div>
+      </div>
+
+      <div id="coming-soon" style="display:none">
+        <div class="icon">🔧</div>
+        <h3>Coming Soon</h3>
+        <p style="color:var(--muted);margin-top:6px">MCQs for this lecture are being generated.</p>
+      </div>
+
+      <div id="lecture-view" style="display:none">
+        <!-- Lecture header, progress bar, diff tabs, score banner, cards all go here -->
+        <div class="lec-header">
+          <div class="lec-header-left">
+            <div class="lec-tag" id="lv-tag"></div>
+            <h2 id="lv-title"></h2>
+          </div>
+          <div class="lec-header-right">
+            <div class="stat-pill"><span id="lv-count"></span>&nbsp;MCQs</div>
+          </div>
+        </div>
+
+        <div class="progress-wrap">
+          <div class="progress-label">
+            <span>Progress</span>
+            <span><span id="prog-ans">0</span> / <span id="prog-total">0</span> answered</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="prog-fill" style="width:0%"></div></div>
+        </div>
+
+        <div class="score-banner" id="score-banner" style="display:none">
+          <svg class="score-ring" viewBox="0 0 80 80">
+            <circle cx="40" cy="40" r="34" fill="none" stroke="#2e3350" stroke-width="7"/>
+            <circle cx="40" cy="40" r="34" fill="none" stroke="#4f8ef7" stroke-width="7"
+              stroke-dasharray="213.6" stroke-dashoffset="213.6"
+              stroke-linecap="round" id="ring-circle"/>
+            <text x="40" y="44" text-anchor="middle" fill="#e2e8f0" font-size="14" id="ring-text">0%</text>
+          </svg>
+          <div class="score-details">
+            <h3 id="score-msg">Keep going!</h3>
+            <div class="score-row">
+              <div class="score-item"><div class="dot correct"></div>Correct: <strong id="sc-correct">0</strong></div>
+              <div class="score-item"><div class="dot wrong"></div>Wrong: <strong id="sc-wrong">0</strong></div>
+              <div class="score-item"><div class="dot skip"></div>Remaining: <strong id="sc-remain">0</strong></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="diff-tabs" id="diff-tabs">
+          <button class="diff-tab active all" data-diff="all">All <span class="diff-count" id="dc-all">30</span></button>
+          <button class="diff-tab easy" data-diff="easy">🟢 Easy <span class="diff-count" id="dc-easy">10</span></button>
+          <button class="diff-tab medium" data-diff="medium">🟡 Medium <span class="diff-count" id="dc-medium">10</span></button>
+          <button class="diff-tab hard" data-diff="hard">🔴 Hard <span class="diff-count" id="dc-hard">10</span></button>
+        </div>
+
+        <div id="mcq-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ─── State ────────────────────────────────────────────────────────
+const TOTAL_LECTURES = 60;
+const AVAILABLE_LECTURES = [
+  1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,
+  21,22,23,24,25,26,27,28,29,30,31
+];
+
+const LECTURE_TITLES = {
+  1:"Introduction to Java", 2:"Java Programming Environment", 3:"Java Tools and Resources",
+  4:"Demonstration I – Setup", 5:"Java Applet Programming", 6:"Demonstration II – Applets",
+  7:"Encapsulation", 8:"Demonstration III – Constructors", 9:"Java Programming Insights",
+  10:"Demonstration IV – I/O", 11:"Java Scope Rules", 12:"Demonstration V – Loops",
+  13:"Inheritance", 14:"Demonstration VI – Inheritance", 15:"Information Hiding",
+  16:"Demonstration VII – Access Modifiers", 17:"Packages I", 18:"Packages II",
+  19:"Demonstration VIII – Packages", 20:"Interfaces I", 21:"Interfaces II",
+  22:"Demonstration IX – Interfaces", 23:"Exception Handling I", 24:"Exception Handling II",
+  25:"Exception Handling III", 26:"Demonstration X – Exceptions", 27:"Multithreading I",
+  28:"Multithreading II", 29:"Demonstration XI – Threads", 30:"I-O Streams I",
+  31:"I-O Streams II", 32:"Demonstration XII – I/O Streams", 33:"String Handling I",
+  34:"String Handling II", 35:"Applet Programming II", 36:"Applet Programming III",
+  37:"Demonstration XIV – Advanced Applets", 38:"AWT Programming I", 39:"AWT Programming II",
+  40:"AWT Programming – Layout Managers", 41:"AWT Programming III – Events",
+  42:"Swing Programming I", 43:"Swing Programming II", 44:"Demonstration – Swing",
+  45:"Demonstration – Event Handling", 46:"Swing Advanced", 47:"Demonstration – Swing Advanced",
+  48:"Networking I", 49:"Networking II", 50:"JDBC I", 51:"JDBC II", 52:"JDBC III",
+  53:"Demonstration – JDBC", 54:"JDBC Advanced", 55:"Demonstration – JDBC Advanced",
+  56:"Case Study I", 57:"Case Study II", 58:"Case Study III", 59:"Case Study IV",
+  60:"Case Study V – Course Management System"
+};
+
+let state = {
+  currentLecture: null,
+  currentData: null,
+  currentDiff: 'all',
+  answers: {},        // { lectureN: { qId: 'A'|'B'|'C'|'D', correct: bool } }
+  sidebarFilter: 'all',
+  searchQuery: ''
+};
+
+// Load persisted answers
+try {
+  const saved = localStorage.getItem('nptel_java_answers');
+  if (saved) state.answers = JSON.parse(saved);
+} catch(e) {}
+
+function saveAnswers() {
+  try { localStorage.setItem('nptel_java_answers', JSON.stringify(state.answers)); } catch(e) {}
+}
+
+// ─── Build Sidebar ────────────────────────────────────────────────
+function buildSidebar() {
+  const list = document.getElementById('lecture-list');
+  list.innerHTML = '';
+
+  const query = state.searchQuery.toLowerCase();
+
+  for (let i = 1; i <= TOTAL_LECTURES; i++) {
+    const title = LECTURE_TITLES[i] || `Lecture ${i}`;
+    const isAvailable = AVAILABLE_LECTURES.includes(i);
+    const answers = state.answers[`lec${i}`] || {};
+    const answered = Object.keys(answers).length;
+    const correct = Object.values(answers).filter(a => a.correct).length;
+
+    // Badge
+    let badge = '', badgeClass = 'soon';
+    if (!isAvailable) {
+      badge = 'Soon'; badgeClass = 'soon';
+    } else if (answered === 30) {
+      badge = `${correct}/30`; badgeClass = 'done';
+    } else if (answered > 0) {
+      badge = `${answered}/30`; badgeClass = 'partial';
+    } else {
+      badge = '0/30'; badgeClass = 'zero';
+    }
+
+    // Difficulty filter for sidebar
+    if (state.sidebarFilter !== 'all' && isAvailable) {
+      // keep all lectures visible — filter only affects what shows in MCQ list
+    }
+
+    // Search filter
+    const searchStr = `lecture ${i} ${title}`.toLowerCase();
+    if (query && !searchStr.includes(query)) continue;
+
+    const item = document.createElement('div');
+    item.className = `lecture-item${isAvailable ? '' : ' coming-soon'}${state.currentLecture === i ? ' active' : ''}`;
+    item.dataset.lec = i;
+    item.innerHTML = `
+      <span class="lec-num">${String(i).padStart(2,'0')}</span>
+      <span class="lec-title">${title}</span>
+      <span class="lec-badge ${badgeClass}">${badge}</span>
+    `;
+    if (isAvailable) {
+      item.addEventListener('click', () => loadLecture(i));
+    }
+    list.appendChild(item);
+  }
+}
+
+// ─── Welcome Stats ────────────────────────────────────────────────
+function updateWelcomeStats() {
+  const avail = AVAILABLE_LECTURES.length;
+  document.getElementById('ws-lectures').textContent = avail;
+  document.getElementById('ws-mcqs').textContent = avail * 30;
+  let done = 0;
+  for (const key in state.answers) {
+    done += Object.keys(state.answers[key]).length;
+  }
+  document.getElementById('ws-done').textContent = done;
+}
+
+// ─── Load Lecture ─────────────────────────────────────────────────
+async function loadLecture(num) {
+  state.currentLecture = num;
+  state.currentDiff = 'all';
+
+  showPanel('loading');
+  buildSidebar();
+
+  // Update topbar
+  document.getElementById('topbar-title').innerHTML =
+    `Lecture ${String(num).padStart(2,'0')}: ${LECTURE_TITLES[num]||''} <span id="topbar-sub"> — NPTEL Java</span>`;
+  document.getElementById('reset-btn').style.display = 'inline-flex';
+
+  if (!AVAILABLE_LECTURES.includes(num)) {
+    showPanel('coming-soon');
+    return;
+  }
+
+  try {
+    const res = await fetch(`mcqs_json/lec${num}.json?v=${Date.now()}`);
+    if (!res.ok) throw new Error('not found');
+    const data = await res.json();
+    state.currentData = data;
+    renderLecture(data);
+    showPanel('lecture-view');
+  } catch(e) {
+    showPanel('coming-soon');
+  }
+}
+
+// ─── Render Lecture ───────────────────────────────────────────────
+function renderLecture(data) {
+  const lecKey = `lec${data.lecture}`;
+  const answers = state.answers[lecKey] || {};
+
+  // Header
+  document.getElementById('lv-tag').textContent = `Lecture ${String(data.lecture).padStart(2,'0')}`;
+  document.getElementById('lv-title').textContent = data.title;
+  document.getElementById('lv-count').textContent = data.mcqs.length;
+
+  // Counts per difficulty
+  const counts = { easy:0, medium:0, hard:0 };
+  data.mcqs.forEach(q => counts[q.difficulty]++);
+  document.getElementById('dc-all').textContent = data.mcqs.length;
+  document.getElementById('dc-easy').textContent = counts.easy;
+  document.getElementById('dc-medium').textContent = counts.medium;
+  document.getElementById('dc-hard').textContent = counts.hard;
+
+  // Diff tabs
+  document.querySelectorAll('.diff-tab').forEach(t => {
+    t.classList.toggle('active', t.dataset.diff === state.currentDiff);
+  });
+
+  // Filter
+  const filtered = state.currentDiff === 'all'
+    ? data.mcqs
+    : data.mcqs.filter(q => q.difficulty === state.currentDiff);
+
+  // Build MCQ list
+  const list = document.getElementById('mcq-list');
+  list.innerHTML = '';
+
+  filtered.forEach((q, idx) => {
+    const ans = answers[q.id];
+    const card = buildCard(q, ans, idx);
+    list.appendChild(card);
+  });
+
+  // Update progress & score
+  updateProgress(data, answers);
+
+  // Score display in topbar
+  updateTopbarScore(data, answers);
+}
+
+// ─── Build MCQ Card ───────────────────────────────────────────────
+function buildCard(q, existingAns, idx) {
+  const card = document.createElement('div');
+  card.className = 'mcq-card';
+  card.id = `card-${q.id}`;
+  if (existingAns) {
+    card.classList.add(existingAns.correct ? 'answered-correct' : 'answered-wrong');
+  }
+  card.style.animationDelay = `${Math.min(idx, 10) * 0.025}s`;
+
+  const answered = !!existingAns;
+  const resultIcon = answered ? (existingAns.correct ? '✅' : '❌') : '';
+
+  card.innerHTML = `
+    <div class="mcq-top">
+      <span class="q-num">Q${q.id}</span>
+      <span class="diff-badge ${q.difficulty}">${q.difficulty}</span>
+      <span class="q-text">${q.question}</span>
+      ${resultIcon ? `<span class="mcq-result-icon">${resultIcon}</span>` : ''}
+    </div>
+    <div class="mcq-options" id="opts-${q.id}">
+      ${['A','B','C','D'].map(k => {
+        let cls = '';
+        if (answered) {
+          if (k === q.answer) cls = existingAns.correct ? 'correct' : 'reveal-correct';
+          else if (k === existingAns.selected) cls = 'wrong';
+          cls += ' disabled';
+        }
+        return `
+          <div class="option ${cls}" data-key="${k}" onclick="chooseAnswer(${q.id},'${k}','${q.answer}','${escapeQuotes(q.explanation)}')">
+            <span class="opt-key">${k}</span>
+            <span class="opt-text">${q.options[k]}</span>
+          </div>`;
+      }).join('')}
+    </div>
+    <div class="explanation${answered ? ' show ' + (existingAns.correct ? 'correct-exp' : 'wrong-exp') : ''}" id="exp-${q.id}">
+      ${answered ? `<div class="exp-label">${existingAns.correct ? '✓ Correct' : '✗ Wrong'}</div>${q.explanation}` : ''}
+    </div>
+  `;
+
+  return card;
+}
+
+function escapeQuotes(str) {
+  return str.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+}
+
+// ─── Choose Answer ────────────────────────────────────────────────
+function chooseAnswer(qId, selected, correct, explanation) {
+  const lecKey = `lec${state.currentLecture}`;
+  if (state.answers[lecKey] && state.answers[lecKey][qId]) return; // already answered
+
+  const isCorrect = selected === correct;
+  if (!state.answers[lecKey]) state.answers[lecKey] = {};
+  state.answers[lecKey][qId] = { selected, correct: isCorrect };
+  saveAnswers();
+
+  // Update card visuals
+  const card = document.getElementById(`card-${qId}`);
+  if (!card) return;
+
+  card.classList.add(isCorrect ? 'answered-correct' : 'answered-wrong');
+
+  const opts = card.querySelectorAll('.option');
+  opts.forEach(opt => {
+    opt.classList.add('disabled');
+    const key = opt.dataset.key;
+    if (key === correct) {
+      opt.classList.add(isCorrect ? 'correct' : 'reveal-correct');
+    } else if (key === selected && !isCorrect) {
+      opt.classList.add('wrong');
+    }
+  });
+
+  // Show explanation
+  const exp = document.getElementById(`exp-${qId}`);
+  if (exp) {
+    exp.className = `explanation show ${isCorrect ? 'correct-exp' : 'wrong-exp'}`;
+    exp.innerHTML = `<div class="exp-label">${isCorrect ? '✓ Correct!' : '✗ Wrong — Correct answer: ' + correct}</div>${explanation}`;
+  }
+
+  // Result icon in header
+  const top = card.querySelector('.mcq-top');
+  const existingIcon = top.querySelector('.mcq-result-icon');
+  if (existingIcon) existingIcon.remove();
+  const icon = document.createElement('span');
+  icon.className = 'mcq-result-icon';
+  icon.textContent = isCorrect ? '✅' : '❌';
+  top.appendChild(icon);
+
+  // Update progress
+  updateProgress(state.currentData, state.answers[lecKey]);
+  updateTopbarScore(state.currentData, state.answers[lecKey]);
+  buildSidebar();
+  updateWelcomeStats();
+}
+
+// ─── Progress & Score ─────────────────────────────────────────────
+function updateProgress(data, answers) {
+  const total = data.mcqs.length;
+  const answered = Object.keys(answers).length;
+  const correct = Object.values(answers).filter(a => a.correct).length;
+  const pct = total > 0 ? Math.round(answered / total * 100) : 0;
+
+  document.getElementById('prog-ans').textContent = answered;
+  document.getElementById('prog-total').textContent = total;
+  document.getElementById('prog-fill').style.width = pct + '%';
+
+  // Score banner
+  const banner = document.getElementById('score-banner');
+  if (answered > 0) {
+    banner.style.display = 'flex';
+    const scorePct = Math.round(correct / total * 100);
+    const circumference = 213.6;
+    const offset = circumference - (correct / total * circumference);
+    const ring = document.getElementById('ring-circle');
+    ring.style.strokeDashoffset = offset;
+    ring.style.stroke = scorePct >= 70 ? '#22c55e' : scorePct >= 40 ? '#f59e0b' : '#ef4444';
+    document.getElementById('ring-text').textContent = scorePct + '%';
+
+    const wrong = answered - correct;
+    document.getElementById('sc-correct').textContent = correct;
+    document.getElementById('sc-wrong').textContent = wrong;
+    document.getElementById('sc-remain').textContent = total - answered;
+    const msgs = scorePct >= 90 ? 'Excellent! 🎉' : scorePct >= 70 ? 'Good going! 👍' : scorePct >= 50 ? 'Keep practicing!' : 'Need more practice!';
+    document.getElementById('score-msg').textContent = msgs;
+  } else {
+    banner.style.display = 'none';
+  }
+}
+
+function updateTopbarScore(data, answers) {
+  const total = data.mcqs.length;
+  const answered = Object.keys(answers).length;
+  const correct = Object.values(answers).filter(a => a.correct).length;
+  const scoreEl = document.getElementById('score-display');
+  const scoreNum = document.getElementById('score-num');
+  if (answered > 0) {
+    scoreEl.style.display = 'flex';
+    scoreNum.textContent = `${correct}/${total}`;
+  } else {
+    scoreEl.style.display = 'none';
+  }
+}
+
+// ─── Reset ────────────────────────────────────────────────────────
+function resetCurrentLecture() {
+  if (!state.currentLecture) return;
+  if (!confirm(`Reset all answers for Lecture ${state.currentLecture}?`)) return;
+  const lecKey = `lec${state.currentLecture}`;
+  delete state.answers[lecKey];
+  saveAnswers();
+  loadLecture(state.currentLecture);
+}
+
+// ─── Diff Tabs ────────────────────────────────────────────────────
+document.getElementById('diff-tabs').addEventListener('click', e => {
+  const tab = e.target.closest('.diff-tab');
+  if (!tab) return;
+  state.currentDiff = tab.dataset.diff;
+  document.querySelectorAll('.diff-tab').forEach(t => {
+    t.className = `diff-tab ${t.dataset.diff}`;
+    if (t.dataset.diff === state.currentDiff) t.classList.add('active');
+  });
+  if (state.currentData) renderLecture(state.currentData);
+});
+
+// ─── Sidebar Filters ──────────────────────────────────────────────
+document.querySelectorAll('.filter-chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    state.sidebarFilter = chip.dataset.filter;
+    buildSidebar();
+  });
+});
+
+// ─── Search ───────────────────────────────────────────────────────
+document.getElementById('search-input').addEventListener('input', e => {
+  state.searchQuery = e.target.value;
+  buildSidebar();
+});
+
+// ─── Toggle Sidebar ───────────────────────────────────────────────
+document.getElementById('menu-btn').addEventListener('click', () => {
+  document.getElementById('sidebar').classList.toggle('collapsed');
+});
+
+// ─── Show Panel Helper ────────────────────────────────────────────
+function showPanel(name) {
+  ['welcome','loading','coming-soon','lecture-view'].forEach(p => {
+    const el = document.getElementById(p);
+    if (el) el.style.display = p === name ? (p === 'lecture-view' ? 'block' : 'flex') : 'none';
+  });
+}
+
+// ─── Keyboard Navigation ──────────────────────────────────────────
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowLeft' && state.currentLecture && state.currentLecture > 1) {
+    const prev = AVAILABLE_LECTURES.filter(n => n < state.currentLecture).pop();
+    if (prev) loadLecture(prev);
+  }
+  if (e.key === 'ArrowRight' && state.currentLecture) {
+    const next = AVAILABLE_LECTURES.find(n => n > state.currentLecture);
+    if (next) loadLecture(next);
+  }
+});
+
+// ─── Init ─────────────────────────────────────────────────────────
+buildSidebar();
+updateWelcomeStats();
+showPanel('welcome');
+
+// Auto-load last visited lecture
+try {
+  const last = localStorage.getItem('nptel_java_last_lec');
+  if (last && AVAILABLE_LECTURES.includes(+last)) {
+    loadLecture(+last);
+  }
+} catch(e) {}
+
+// Save last visited lecture on load
+const _origLoad = loadLecture;
+window.loadLecture = function(num) {
+  try { localStorage.setItem('nptel_java_last_lec', num); } catch(e) {}
+  return _origLoad(num);
+};
+</script>
+</body>
+</html>

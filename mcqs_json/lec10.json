@@ -1,0 +1,396 @@
+{
+  "lecture": 10,
+  "title": "Demonstration IV (Input/Output)",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "Which method prints output WITH a newline at the end?",
+      "options": {
+        "A": "System.out.print()",
+        "B": "System.out.println()",
+        "C": "System.out.printf()",
+        "D": "System.out.write()"
+      },
+      "answer": "B",
+      "explanation": "System.out.println() (print line) outputs the specified text and then appends a newline character, moving the cursor to the next line. System.out.print() outputs text WITHOUT a newline, leaving the cursor on the same line."
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which method prints output WITHOUT a newline at the end?",
+      "options": {
+        "A": "System.out.println()",
+        "B": "System.out.printf()",
+        "C": "System.out.print()",
+        "D": "System.out.flush()"
+      },
+      "answer": "C",
+      "explanation": "System.out.print() outputs the text without appending a newline. The cursor stays on the same line after the output. The next print() or println() will continue from that position."
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is the format specifier for printing an integer with printf()?",
+      "options": {
+        "A": "%s",
+        "B": "%f",
+        "C": "%d",
+        "D": "%i"
+      },
+      "answer": "C",
+      "explanation": "%d is the format specifier for decimal integers in Java's printf(). It is borrowed from C's printf(). For example: System.out.printf(\"%d\", 42) prints '42'."
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What is the format specifier for printing a floating-point number with printf()?",
+      "options": {
+        "A": "%d",
+        "B": "%f",
+        "C": "%s",
+        "D": "%n"
+      },
+      "answer": "B",
+      "explanation": "%f is the format specifier for floating-point numbers in printf(). By default it prints 6 decimal places. You can control precision with %.2f (2 decimal places)."
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What does \\n represent in a Java string?",
+      "options": {
+        "A": "The letter n",
+        "B": "A tab character",
+        "C": "A newline character",
+        "D": "A null terminator"
+      },
+      "answer": "C",
+      "explanation": "\\n is the escape sequence for a newline character in Java (same as in C). When included in a string passed to print() or printf(), it causes subsequent output to appear on the next line."
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "Which class provides the nextInt() and nextLine() methods for reading input?",
+      "options": {
+        "A": "DataInputStream",
+        "B": "BufferedReader",
+        "C": "Scanner",
+        "D": "InputStreamReader"
+      },
+      "answer": "C",
+      "explanation": "java.util.Scanner provides convenient methods like nextInt(), nextDouble(), nextLine(), and next() for parsing different types of input. It wraps System.in and handles parsing automatically."
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "How do you create a Scanner object for reading from standard input (keyboard)?",
+      "options": {
+        "A": "Scanner sc = new Scanner();",
+        "B": "Scanner sc = new Scanner(System.in);",
+        "C": "Scanner sc = Scanner.create(System.in);",
+        "D": "Scanner sc = new Scanner(\"keyboard\");"
+      },
+      "answer": "B",
+      "explanation": "A Scanner for keyboard input is created with 'Scanner sc = new Scanner(System.in);'. System.in is the standard input stream (keyboard). You must also import java.util.Scanner."
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What does the format specifier %.2f mean in printf()?",
+      "options": {
+        "A": "Print a float with 2 total digits",
+        "B": "Print a float with exactly 2 decimal places",
+        "C": "Print 2 float values",
+        "D": "Print a float rounded to 2 significant figures"
+      },
+      "answer": "B",
+      "explanation": "%.2f specifies a floating-point number with exactly 2 decimal places. For example, System.out.printf(\"%.2f\", 3.14159) prints '3.14'. The number after the dot specifies the precision (decimal places)."
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What is the format specifier for printing a String with printf()?",
+      "options": {
+        "A": "%d",
+        "B": "%c",
+        "C": "%str",
+        "D": "%s"
+      },
+      "answer": "D",
+      "explanation": "%s is the format specifier for String values in Java's printf(). For example: System.out.printf(\"Hello %s!\", \"World\") prints 'Hello World!'."
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What does 'System.out.println(\"x = \" + x)' print if x = 42?",
+      "options": {
+        "A": "x = x",
+        "B": "x + 42",
+        "C": "x = 42",
+        "D": "42"
+      },
+      "answer": "C",
+      "explanation": "The + operator is used for string concatenation when one operand is a String. '\"x = \" + x' converts x to its string representation and concatenates it with \"x = \", producing \"x = 42\". println() then prints this with a newline."
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "What is the difference between System.out.println() and System.out.printf()?",
+      "options": {
+        "A": "println() is for integers; printf() is for strings",
+        "B": "println() directly outputs a string and newline; printf() uses format specifiers for formatted output (like C's printf)",
+        "C": "They are identical in functionality",
+        "D": "printf() adds a newline automatically; println() does not"
+      },
+      "answer": "B",
+      "explanation": "println() converts the argument to a string and appends a newline — simple and direct. printf() uses a format string with specifiers (%d, %f, %s) for precise control over number formatting, width, and alignment, similar to C's printf(). printf() does NOT add a newline automatically."
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Given 'Scanner sc = new Scanner(System.in); int n = sc.nextInt();', what does nextInt() do?",
+      "options": {
+        "A": "Reads the next line as a String",
+        "B": "Reads the next token and parses it as an integer",
+        "C": "Reads a character and converts it to int",
+        "D": "Returns the number of characters entered"
+      },
+      "answer": "B",
+      "explanation": "sc.nextInt() reads the next whitespace-delimited token from input and parses it as an int. It blocks (waits) until the user enters input. If the input is not a valid integer, it throws InputMismatchException."
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "What is DataInputStream and how is it used to read a line of input?",
+      "options": {
+        "A": "DataInputStream dis = new DataInputStream(System.in); String s = dis.readLine();",
+        "B": "DataInputStream dis = new DataInputStream(); String s = dis.read();",
+        "C": "DataInputStream dis = System.in; String s = dis.nextLine();",
+        "D": "DataInputStream is used only for binary file reading"
+      },
+      "answer": "A",
+      "explanation": "DataInputStream wraps an InputStream to provide readLine() for reading text. 'new DataInputStream(System.in)' wraps the keyboard input, and dis.readLine() reads until Enter is pressed, returning the line as a String. Note: readLine() in DataInputStream is deprecated in favor of BufferedReader."
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "What is the output of: System.out.print(\"A\"); System.out.print(\"B\"); System.out.println(\"C\");?",
+      "options": {
+        "A": "A\nB\nC\n",
+        "B": "ABC\n",
+        "C": "A B C",
+        "D": "ABC (no newline)"
+      },
+      "answer": "B",
+      "explanation": "print() outputs without newline, so A and B appear immediately on the same line. println(\"C\") adds C plus a newline. The combined output is 'ABC' followed by a newline character — displayed as 'ABC' on one line."
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "What is the output of System.out.printf(\"%d + %d = %d\", 3, 4, 7)?",
+      "options": {
+        "A": "%d + %d = %d",
+        "B": "3 + 4 = 7",
+        "C": "3+4=7",
+        "D": "7"
+      },
+      "answer": "B",
+      "explanation": "printf() replaces each %d format specifier with the corresponding argument in order: first %d → 3, second %d → 4, third %d → 7. The literal text (spaces, plus sign, equals sign) is kept as-is, producing '3 + 4 = 7'."
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "When reading command-line arguments, how do you convert args[0] from String to int?",
+      "options": {
+        "A": "(int) args[0]",
+        "B": "int.parse(args[0])",
+        "C": "Integer.parseInt(args[0])",
+        "D": "args[0].toInt()"
+      },
+      "answer": "C",
+      "explanation": "Command-line arguments are always Strings. To use them as numbers, you must parse them: Integer.parseInt(args[0]) converts the String \"42\" to int 42. Similarly, Double.parseDouble() converts to double."
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What is the key advantage of using Scanner over command-line args for user input?",
+      "options": {
+        "A": "Scanner is faster than command-line args",
+        "B": "Scanner allows interactive input during program execution, while command-line args are specified before the program starts",
+        "C": "Scanner can read integers; command-line args can only read Strings",
+        "D": "Scanner is built into java.lang; args require an import"
+      },
+      "answer": "B",
+      "explanation": "Command-line arguments are provided when launching the program and cannot change during execution. Scanner enables interactive programs that prompt users for input at runtime, making programs more user-friendly and flexible for varying inputs."
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What import statement is required to use Scanner?",
+      "options": {
+        "A": "import java.io.Scanner;",
+        "B": "import java.lang.Scanner;",
+        "C": "import java.util.Scanner;",
+        "D": "No import needed — Scanner is in java.lang"
+      },
+      "answer": "C",
+      "explanation": "Scanner is in the java.util package, so 'import java.util.Scanner;' is required. It is not in java.lang (which is auto-imported), so the explicit import is mandatory."
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What does System.out.printf(\"%.2f%n\", 3.14159) output?",
+      "options": {
+        "A": "3.14159",
+        "B": "3.14 (with newline)",
+        "C": "3.1",
+        "D": "3.14 (without newline)"
+      },
+      "answer": "B",
+      "explanation": "%.2f formats the float to 2 decimal places: 3.14. %n is the platform-independent newline specifier in printf(). So the output is '3.14' followed by a newline. Using %n is preferred over \\n in printf() for cross-platform compatibility."
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "In the demonstration, what are the three main approaches for accepting input in a Java program?",
+      "options": {
+        "A": "GUI dialog boxes, web forms, database queries",
+        "B": "Command-line arguments (args[]), Scanner class, DataInputStream",
+        "C": "System.in, System.out, System.err",
+        "D": "File input, network input, keyboard input"
+      },
+      "answer": "B",
+      "explanation": "The NPTEL Lecture 10 covers three input methods: 1) Command-line arguments (args[] in main), 2) Scanner class (java.util.Scanner) for interactive input, and 3) DataInputStream (java.io.DataInputStream) for reading lines. Each suits different use cases."
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "What is the output of: System.out.printf(\"%5d\", 42)?",
+      "options": {
+        "A": "42",
+        "B": "42   (42 followed by 3 spaces)",
+        "C": "   42 (3 spaces then 42, right-aligned in 5 chars)",
+        "D": "42000"
+      },
+      "answer": "C",
+      "explanation": "%5d specifies a minimum width of 5 characters for the integer, right-aligned by default. 42 occupies 2 characters, so 3 spaces are prepended, giving '   42' (3 spaces + 42). To left-align, use %-5d."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "What happens when sc.nextInt() is called but the user enters a non-integer like 'abc'?",
+      "options": {
+        "A": "Returns 0 as a default",
+        "B": "Returns null",
+        "C": "Throws java.util.InputMismatchException",
+        "D": "Compilation error — nextInt() cannot receive non-integer input"
+      },
+      "answer": "C",
+      "explanation": "Scanner's nextInt() expects a valid integer token. If the next token is not parseable as an integer (like 'abc'), it throws java.util.InputMismatchException at runtime. The token remains in the scanner's buffer and can be consumed with next() or nextLine()."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "What is the difference between sc.next() and sc.nextLine() in Scanner?",
+      "options": {
+        "A": "next() reads one character; nextLine() reads one word",
+        "B": "next() reads the next whitespace-delimited token; nextLine() reads the entire line up to newline",
+        "C": "They are identical",
+        "D": "next() blocks; nextLine() is non-blocking"
+      },
+      "answer": "B",
+      "explanation": "sc.next() reads the next token delimited by whitespace (spaces, tabs, newlines) — it would read 'Hello' from 'Hello World'. sc.nextLine() reads everything up to (but not including) the next newline character — it would read 'Hello World' from the same input."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "After calling sc.nextInt(), a developer calls sc.nextLine() to read the next line but gets an empty string. Why?",
+      "options": {
+        "A": "nextLine() doesn't work after nextInt()",
+        "B": "nextInt() reads the integer but leaves the newline (Enter) in the buffer; nextLine() immediately reads and returns that leftover newline",
+        "C": "The Scanner object becomes unusable after nextInt()",
+        "D": "nextLine() returns empty string when input starts with a space"
+      },
+      "answer": "B",
+      "explanation": "This is a classic Scanner pitfall. nextInt() consumes the integer but leaves the newline character from pressing Enter in the buffer. The subsequent nextLine() reads only up to that leftover newline, returning an empty string. Fix: add an extra sc.nextLine() call to consume the leftover newline before reading the next full line."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "What is the output of: System.out.printf(\"%s is %d years old\", \"Alice\", 30)?",
+      "options": {
+        "A": "%s is %d years old",
+        "B": "Alice is 30 years old",
+        "C": "Alice is years old 30",
+        "D": "String is int years old"
+      },
+      "answer": "B",
+      "explanation": "printf() replaces format specifiers in order: %s is replaced by the first argument 'Alice', and %d is replaced by the second argument 30. Literal text is kept as-is. Result: 'Alice is 30 years old'."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Why is DataInputStream.readLine() marked as deprecated in Java?",
+      "options": {
+        "A": "It was replaced by a faster implementation",
+        "B": "It doesn't properly handle multi-byte character encodings (internationalization/Unicode issues)",
+        "C": "It was a security vulnerability",
+        "D": "DataInputStream was removed in Java 8"
+      },
+      "answer": "B",
+      "explanation": "DataInputStream.readLine() was deprecated because it converts bytes to characters using the platform's default encoding without proper Unicode/multi-byte character support. It fails with international character sets. BufferedReader.readLine() (wrapping InputStreamReader with explicit charset) is the correct replacement."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "What is the output of: System.out.printf(\"%08.2f\", 3.14)?",
+      "options": {
+        "A": "3.14",
+        "B": "00003.14",
+        "C": "3.14    ",
+        "D": "03.140000"
+      },
+      "answer": "B",
+      "explanation": "%08.2f means: total width of 8 characters, 2 decimal places, zero-padded. '3.14' is 4 characters. With 2 decimal places, the formatted value is '3.14' (4 chars). Total width 8 requires 4 more chars of zero padding: '00003.14'."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "A program runs with 'java MyApp 10 20'. Inside main, System.out.println(args[0] + args[1]) prints what?",
+      "options": {
+        "A": "30 (integer addition)",
+        "B": "1020 (string concatenation)",
+        "C": "10 20",
+        "D": "Compilation error"
+      },
+      "answer": "B",
+      "explanation": "Command-line args are always String type. args[0]=\"10\" and args[1]=\"20\". The + operator on two Strings performs concatenation, not addition: \"10\" + \"20\" = \"1020\". To get integer addition (30), you'd need Integer.parseInt(args[0]) + Integer.parseInt(args[1])."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "What is System.err used for, and how does it differ from System.out?",
+      "options": {
+        "A": "System.err is for binary data; System.out is for text",
+        "B": "System.err is the standard error stream for diagnostic output; it is separate from System.out (standard output) and can be redirected independently",
+        "C": "System.err automatically throws exceptions; System.out does not",
+        "D": "They are identical streams with different names"
+      },
+      "answer": "B",
+      "explanation": "System.out is standard output (normally for program results). System.err is standard error (for error messages and diagnostics). They can be redirected to different destinations on the command line: 'java MyApp > output.txt 2> errors.txt' redirects out and err separately. This allows log files to capture errors separately from normal output."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "When using printf() with multiple format specifiers, what determines which argument fills which specifier?",
+      "options": {
+        "A": "Arguments are matched by type to specifiers",
+        "B": "Arguments are matched positionally — first specifier gets first argument, second gets second, etc.",
+        "C": "The programmer names each argument",
+        "D": "Arguments are randomly assigned by the JVM"
+      },
+      "answer": "B",
+      "explanation": "printf() matches format specifiers to arguments positionally in left-to-right order. The first specifier in the format string gets the first vararg argument, the second specifier gets the second argument, etc. If types don't match, an IllegalFormatConversionException is thrown at runtime."
+    }
+  ]
+}

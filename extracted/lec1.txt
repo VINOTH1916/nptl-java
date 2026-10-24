@@ -1,0 +1,412 @@
+Programming In Java
+Prof. Debasis Samanta
+Department of Computer Science Engineering
+Indian Institute of Technology, Kharagpur
+Lecture – 01
+Introduction
+First of all I wish like to welcome you all to the course. So, this is the first lecture. In this
+first lecture I will try to cover the Basic Concept of Java Programming. Now this course
+is being offered with a huge effort, I would like to introduce the team who are involved.
+So myself, Debasis Samanta from IIT Kharagpur and then Tauheed Ahmed is a Research
+Scholar in our institution and then another Research Scholar is Niranjan Sinhababu.
+So, they are basically will act as a TA and then will support me, and then also they will
+be always available for any queries that you can have right. So, you are feel free to ask
+any questions there is a discussion forum, so that we can write attend your questions and
+then give the answer as within a shortest possible time. And also we are always available
+and you can contact us using our email address anytime; whatever it is required for you.
+(Refer Slide Time: 01:35)
+
+Now, this course needs few reference materials. So, there is a very good book on
+programming with Java the title is called Complete Reference Java 2; as on today 10th
+edition is available and it is published from the Tata Mc-Graw Hill Indian edition. In
+addition to this there is a one another book is available publish from the Prentice Hall of
+
+India written by me: this is the Object Oriented Programming with C++ and Java. The
+second book is very useful for the beginners because it is written in a very simple and
+easy way so that you can understand as quick as possible.
+Other than these two books I advise you to look into the web page; that is the link it is
+given here. And this link will give you a lot of materials and then the programs which
+will be covered in this course, so that you can access it and you can use the quotes for
+your practice. So, in addition to the code also some explanation and then why, and then
+frequently asked questions all these things is also included in this link. So, this is a very
+good link and you should use this link while you are attending this course.
+(Refer Slide Time: 03:02)
+
+Now, I just want to tell about the overview of the course, this course is paid over the 60
+lectures. And here we can see the week wise planning of the course; that mean what are
+the topics that will be covered in a particular week that is planned in a well manner. In
+addition to this lecture schedules time to time we will cover the demonstration; that
+means, you will see that if this is the code and you see how to run this code, and if you
+run this code why this code is giving this output for this input or why this code needs a
+special attention, so that you can learn many detail things about the programming. So,
+lectures as well as the demonstrations is very useful, and then I think it is very helpful for
+you to learn the course very easily.
+
+And at the end of the course basically the last week, the week 12 we will cover a project
+right. And then we will discuss about that how a software can be developed using the
+experience that you have gathered, right. So, I hope we the running skill that you will
+earn from this course will helpful for you to develop a projects; obviously, this is a mini
+project that can be covered in 5 lecture hours actually. So, you will get a full flavor of the
+programming and then, it will boost your confidence to develop any software of your
+own.
+
+Now let us come to the Concept of Java Programming. Just give a brief history of Java
+programming. So, Java programming is now little bit matured, maybe say I can say 23
+years old or so. But the first time it was introduced the 1991, there is a team they are
+called the Green Team. Green Team from the sun micro system lab, Sun system lab is
+very famous for developing hardware and software, and they have many contributions in
+the field of information and technology.
+Now, from this green team the pioneer is James Gosling and his colleagues Mike
+Sheridan and Patrick Naughton. They first time introduce the concept of object oriented
+programming. And they give the name of the programming has Greentalk initially; as it
+is from the green team so they call it as a Greentalk. And then Java initially was designed
+for a small embedded system and suitable for many electronic appliances like set of
+boxes and then fees and all these things, but it was too advanced technology for the
+digital cable television industry at that time in fact.
+
+So, later on they developed a more improved version of the concept and they gave the
+name is called Oak. And this is basically under a green project proposed by the green
+team. And then later the same concept has been included in a very famous the giant in
+software industries call the Netscape. So, Netscape is basically very famous for
+networking, network related programming. So, they adapted this Oak technology in their
+own work.
+
+Later on, the Oak actually they gave initially the name Oak, because Oak is very famous
+and is basically nationality in many European countries like Canada, USA, UK fine
+Germany right. So, they later on was searching that the name should be very suitable as
+the programming favor it is. In fact, they have an idea about that this programming really
+is very cool, lively, dynamic, revolutionary and easy to spell and fun to say. So, they
+were searching many names replacing Oak. Then in 1995 the Gosling introduced the
+name Java. In fact, Java is an island of Indonesia, where best coffee of the world is
+produced.
+In fact, Gosling was very fond of coffee, that is why he choose the name Java for this
+programming setup. In fact, the Java is so, popular that in 1995 the Time Magazine
+awarded the Java as one of the best product. And then, with this popularity and then
+maturity in 1996 this is the Sun Micro system first times, introduced a full set of
+programming environment, they call it as JDK- Java Development Kit it was released in
+January 23 1996. So, this gives you a brief history of the Java and why the name of the
+programming is Java.
+
+(Refer Slide Time: 08:47)
+
+Now, the developer in fact, claim that the Java programming is very simple it is portable;
+that means, you can use it any environment and, it is very secure and it is high performed
+high performance, the multithreaded, interpreted, platform independent, dynamic
+architecturally neural, object oriented and finally, it is a robust. So, basically these are
+the different what is call the features, or you can say the parameters or specifications that
+Java programming has its. And this is a really a unique programming environment that is
+why it is a best programming language so far in fact.
+(Refer Slide Time: 09:38)
+
+In fact, so far the popularity score is concerned, here is the graph I have given you can
+see the graph here. And in this graph we can see the score, that the different
+programming language has so, for their popularities are concerned.
+And as you see out of any programming language Java stands on the top. Java has the
+highest popularity score compared to any other programming languages. There are
+similar programming languages for object oriented programming like C++, C star
+whatever it is, but Java is one unique of its own. In fact, Java has consistently been more
+popular, than any other programming language that I have listed here around the year.
+And so, I can say that Java has worldwide popularity.
+Java is really very good for parallel and distributed program development and, the Java is
+basically is a basic programming environments suitable for android mobile operating
+system android platform. And you know, android programming is now increasing its
+demand, because of the huge development of mobile communication, and mobile
+technology. And platform independence, we will discuss in details about how Java is
+platform; that means, it can run in any machine in any software in any operating system
+and then more precisely Java is very much reliable and high speed and then very good
+and accurate programming environment.
+(Refer Slide Time: 11:30)
+
+So, this is why Java is now very popular. Now, I will just discuss about how Java is
+different from the other programming environment.
+
+(Refer Slide Time: 11:38)
+
+Now, in any programming environment, we know the concept that is used is that it
+basically take an input and then produce an output. In order to do these things it basically
+use an architecture and that architecture is popularly called von Neumann architecture.
+So, in this von Neumann architecture the program is loaded into this memory. And then
+from this program is then executed by the CPU it is called the control unit as well as the
+arithmetic and logic unit this is basically mainly for the; this part is basically for the
+execution.
+So, this is the architecture that is used. So, it is not a new things so, this is the old known
+things and starting from the inception of computer, this is the architecture the von
+Neumann architecture being followed.
+Sir, [FL].
+[FL].
+It clear that a (Refer Time: 12:43) may be like this (Refer Time: 12:44).
+[FL] ok.
+[FL]
+[FL] fine.
+
+(Refer Time: 12:59) thank you sir.
+So basically the idea about the programming is that we can handle the different types of
+input and, also we should produce output suitable for the different.Here basically we
+have discuss the what are the different types of the input that a program should take care.
+And then the output also the program should produce.
+(Refer Slide Time: 13:29)
+
+So, this is the ideal about it. And now, in order to have this kind of flavor; that means, to
+deal with the different input and then the different outputs using the conventional
+programming or whatever the programming, what are the different practices are
+available. So, I just want to quickly give a brief overview of the different the
+programming practices that it is there.
+So, programming is of three types actually: the first is called the program whenever it is
+written in machine level. So, it is shown in the machine level programming. And then the
+program can be written in assembly level and the program can be written in high level
+language. So, machine level language actually the code if you see it is stored in the
+binary form, in terms of 1 and 0s, whereas, the program if you write in an assembly
+language it is in the form of some new mini codes like add MOV sub like this. So, these
+are the basically codes for different operations. And third generation language or it is call
+the high level programming language is basically more or similar to English look like.
+
+So, definitely the third high level programming language is most suitable for many
+programmer, because it is easy to write their own program in contrast to the machine
+level and then assembly level. Now, if you write a program in assembly language, then it
+does not record to do anymore processing it will straightway can run your program.
+However, if you write a program in assembly language, then we need to translate this
+program into machine level language. And there is a program is known for this is called
+the assembler. So, assembler will convert or rather we can say translate a program
+written in machine level assembly level language to machine level language.
+On the other high level programming language also need to be translated into machine
+level language. So, far this translation there are two modes available one is the compiler
+another interpreter. So, compiler will translate the entire program at one go and produce
+the machine level code whereas, interpreter will run one statement at a time.
+It will basically translate one statement and then run it then next statement and run it and
+on the way if they find any error in the program. So, the exhibition will hold or it will
+just bypass that statement and then proceed to the next statement so these are. But on the
+other hand compiler will check that the program is written correctly, then only it will
+produce the machine level code. So, this is a concept that is being used. So, for the
+programming different programming language is concerned, I mention these thing
+because you will be able to understand that how it basically makes a sense so that the
+comparable to other programming languages.
+
+(Refer Slide Time: 16:23)
+
+Before going to these things I just want to say few I mean generation of language. In
+fact, the machine level programming is it is the first generation of programming
+language. Later on the second generation programming language is basically with
+assembly language programming, those are basically suitable for microprocessor level
+programming. And then next level programming is called the third generation
+programming language. There are different programming languages like C, C++, C
+sharp, Java, the visual BASIC, FORTRAN all these are basically belongs to this third
+generation programming language.
+Now, third generation programming language needs a skill from the programmer that
+how to solve a problem. Now recently there is another high level programming is called
+the fourth generation programming popularly called the 4 GL. And these basically does
+not require so, much programming afford from the user the programmer should tell what
+to do. So, the third generation language if it is how to do, then the fourth generation
+language is what to do. And example of fourth generation language is SQL structured
+query language that we used to delete the database.
+So, in this course we will also use this 4 GL; that means, Java can interact from its 3 GL
+flavor to the 4 GL things.
+
+(Refer Slide Time: 18:06)
+
+So, there are different programming languages paradigm of course, Java belongs to third
+generation programming languages. Now let us see; what are the principles that the
+different high level programming languages follows.
+(Refer Slide Time: 18:13)
+
+Now, whatever the principles are there, they can be broadly classified into two broad
+categories one is called the function oriented programming and, then another is called the
+object oriented programming. In the concept of function oriented programming, the
+entire program is decomposed into last set of small functions.
+
+So, in this program I can see that we see that there are last these are the basically
+function. So, these are the different functions. So, you can decompose the entire program
+into a small set of a last set of functions you can need so; that means, it is fragmented.
+And all these functions basically shared a data which are common to all functions. So,
+this is called the global data.
+So, this is the global data and any functions can use this data, either they can read as an
+input from this global data process. And then after processing they can store the result
+into this global data. So, it is the idea about that there is a set of functions. And all
+functions can share some data which is stored in a common pool. Now, this is the
+concept of function oriented programming that is mean writing the program as a function
+for example, C programming language is based on this concept.
+(Refer Slide Time: 19:43)
+
+On the other hand, there is another concept is called the object oriented programming
+concept; here the program is concept in the form of a set of objects. So, as an example
+here we can see these are the one object, these are the one object. So, writing a program
+is nothing but writing a set of objects whereas, in terms of functional programming we
+have to write a set of functions so, here we have to write a set of objects. And here you
+can see one another interesting difference is that, there is no global database as it was
+there in function oriented programming. So, there is no global database, then whatever
+the data it the programs required all these data will be stored within each objects.
+
+So, they are basically data are distributed among the different objects and then is a
+localized. So, that is fine. So, data is there and the objects are there, then the
+programming task is basically carried out by communicating among the different objects.
+So, if we want to solve a problem, then this object will communicate to other objects and
+by this communication the program can be solved. So, there is a now obviously, it is
+interesting to learn that how this object communication help us to solve our problem.
+(Refer Slide Time: 21:13)
+
+So, this is the two concept the function oriented programming and then object oriented
+programming. And obviously, there are many I mean good points and bad points of the
+both programming, I have listed brief summary about the different facilities that the
+functionality programming and then object oriented programming provide us.
+So, first of all the program that is organized in function oriented programming by means
+of function whereas, in object oriented programming by means of objects, here
+importance is given to the function whereas, in object oriented programming importance
+is given to the objects. Function oriented programming in fact follow the approach is
+called the top down approach, whereas the object oriented programming follows the
+bottom of the approach. And there are many other such that the function oriented can do,
+whereas the object oriented cannot and vice versa.
+
+(Refer Slide Time: 22:13)
+.
+
+So, all these things we will discuss in details, while we will discuss about the
+programming and you will be able to learn that time only. And then I will discuss about
+what is the peculiarity or the specialty that the Java programming has, it is called the
+Java programming modelling or the Java programming paradigms.
+(Refer Slide Time: 22:25)
+
+So, there and mainly four Java programming paradigms, these are the paradigms for any
+object oriented programming concept actually. So, the four paradigms are encapsulation,
+
+inheritance, information hiding, and polymorphism. So, quickly learn about all though
+you will learn all these things in details while discuss these topics individually, but today
+I just want to give an overview of the four different paradigms one by one.
+(Refer Slide Time: 22:50)
+
+So, first of all is the encapsulation, as I already told that the object oriented programming
+based on the concept of objects that means we had to develop the objects. So, how the
+objects can be developed? So object is basically developed by means of defining classes.
+And then defining a class concept in object oriented programming is called
+encapsulation. So, here it is called encapsulation because in a class we have to
+encapsulate two things, both the data as well as how to manipulate the data, it is just like
+a function. Function basically, know how to manipulate data. So, both data and the
+function are punch together and then put into a class and this class basically is
+responsible for building objects. So, this concept is called encapsulation in Java.
+
+(Refer Slide Time: 23:47)
+
+Now, I can give few examples so, that you can understand say book is basically set of
+objects; that means, the all books belongs to a particular class. And then the books has
+the different data to define it, such as title who is the authors of the book, the accession
+number, cost, borrower date of issue like this one. And the different methods that is
+required in order to process a book, I like issue whether if it is late return then fine, then
+return open a book, close a book, whatever it is there so, these are the methods. Now, all
+these methods are there to define a class of what is called the book.
+Now, another example say borrower, borrower is also set of objects they are the different
+leaders actually. And the a borrower has the different fields or the data actually, they are
+called member elements like name, roll number, address, marks and then they can
+borrow any books what about the books they borrow it is basically name of those books.
+Now other than these data, they are also has some methods like request that mean with
+this method they can send a request to book. So, that this book should be suit to him
+renew a book, enroll for the library and if you want to exit from the library so, that that
+exist methods are there.
+So, these are the different methods are there. Now, all these data and methods basically
+defined a class here for example, class book and then class borrower. And all these
+methods and then member elements the data basically put together and define the classes
+
+for example, the classes as an encapsulation, as well as the borrower crosses as an
+encapsulation.
+(Refer Slide Time: 25:34)
+
+Once the classes are develop; we can create a number of objects. And then they can
+communicate it. For example, if a book can send a message that you have already issued
+a book which is already not return, within a billing it so, you have to impose fine like this
+only. So, this basically objects can send, the message to different objects and then
+accordingly the task can we carried out.
+(Refer Slide Time: 26:03)
+
+For example IP information system will be developed based on this concept. Now, I will
+come to the discussion of inheritance in Java. The concept of inheritance is basically if
+you have a class how you can derive another class; that means, we can existing class how
+one can build many other classes are there.
+(Refer Slide Time: 26:22)
+
+So, this concept is basically the concept of inheritance, here for an example a book is
+already defined class, but the thing is that book has many categories. For example, a
+book can be of textbook type, if it is a textbox when in addition to all the common data
+and method that is there in the book, it may have some extra some features. So, those
+extra features if we include in addition to the previous features, then it is called the
+inheritance. Likewise textbook we can also inherit to another category of book is called
+the reference. This means that from the book class which is the base class, we can
+develop few more subclass call the derived class.
+
+(Refer Slide Time: 27:04)
+
+And so, this way the inheritance is basically help us to build from one class to another
+class and the very last software. Now, I will come to the discussion about information
+hiding. So, information hiding the concept is that, how we can make some methods or
+data that it should not be easily accessible to anybody. So, there are many concept of
+information hiding is known and, they are basically hide some data or method from the
+public accessible or restricted access.
+(Refer Slide Time: 27:36)
+
+So, this is the idea and then polymorphism is a very important concept, here the concept
+is that with the same name, but it can execute a different operations.
+So, this concept is called the polymorphism it look same. So, that it is very simple and
+user friendly, but it will do the its acts according to its own what is called the context.
+For example, if we use a print one operation. So, definitely printing and image and
+printing a document, should not use the same operation rather, it will use the different
+way to print different way, different task, different operations to print actually. So, to a
+user print method will appear that printing an image or printing a document, but inside
+its the different stories should be there.
+(Refer Slide Time: 28:27)
+
+So, this is the concept of polymorphism as an another example you can see, if we write
+say add x and y. So, add is a method this basically add two numbers, similarly the same
+add method also we can define it in a polymorphic way so, that it can concatenate two
+string. Likewise add image and document we can use, but the operation will be different,
+but if these operation will basically print an image paste an image to a document.
+Similarly at the same method in a polymorphic way can be used to merge two documents
+together. So, here we can see the add methods has a different polymorphism. The name
+is same, but they are argument that is called the input is different and, their function is
+different their task is different this concept is called the polymorphism concept.
+
+And so, just I am almost in finishing this lectures today, before going to these things, we
+will just have an idea about that what the Java programming can do for us.
+(Refer Slide Time: 29:33)
+
+In fact, Java programming can do a lot for us, what about the task that Java programming
+can support a programmer can be divided into three broad categories. The first the
+category is called Java core programming using the Java programming, we can develop
+many software’s those are basically very large software maybe system software or may
+be an application software.
+So, Java Core is basically useful for developing system software as well as application
+software and to do these things the multithreading, the interfaces, the input output
+handling, Java beans, packages, exception handling all that the key issues are to be plan
+for that. So, if you learn all these concept, then we are fit for writing application software
+using Java core concept.
+Next is Java Applet. As you know different operating systems give you even the mobile
+also, they give you lot of what is called the user interface. It is called the graphical user
+interface, or interface with speech interface with registers, touch whatever it is there.
+Now so, Java applet programming is basically suitable for developing such kind of
+interface and here, we use Java multimedia Java script and then windows toolkit and
+Java swing.
+
+So, these are the basic concept that we have to learn, before use before going to develop
+our own system and their user interface in the form of GUI like. Then the third part is the
+most advanced part of this Java programming, here basically the Java can be used for
+internet programming. So, as a task of internet programming we can do networking,
+developing different network protocol for communication. The distributed programming
+this is basically the client server model. So, that program can be run distributed across
+the different machines, remotely distributed throughout the different geographically
+distributed space. And then database connectivity; that means, Java can be used to
+connect any database which is stored in a server database.
+So, from your program you can pass some comments so that comment will remotely go
+to the server which is connected through net. And then you will be able to access the data
+in the remote server, or you can load some data into their server. So, it is called the
+JDBC Java database connectivity. And then Java JSP also scripting for programming,
+this is for developing the browser program different web pages that can be developed
+using JSP also we use nowadays Java script.
+However, Java script is totally different and needs a different what is called the study and
+learning, other than this Java programming. Java script is basically maintained by
+Netscape nowadays ok, with this I just want to say few things.
+(Refer Slide Time: 32:50)
+
+So, right so we have not introduction about the basic concept of Java programming. Then
+it is very interesting to learn about how the Java can be used to develop the programs so
+that it can runs in any operating system in any architecture any hardware. And then it is
+also very interesting to learn how a browser like say internet Explorer the Mozilla the
+Chrome all these things can works in our mobile or in our computer. So, all these things
+we will be discussed in our next class.
+Thank you.
+
+

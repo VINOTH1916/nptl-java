@@ -1,0 +1,361 @@
+{
+  "lecture": 23,
+  "title": "Exception Handling I",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What is an exception in Java?",
+      "options": {
+        "A": "A syntax error detected at compile time",
+        "B": "An unexpected event that disrupts the normal flow of program execution",
+        "C": "A warning printed to the console",
+        "D": "A method that returns an error code"
+      },
+      "answer": "B",
+      "explanation": "An exception is an unexpected runtime event that disrupts normal program flow. Java's exception handling mechanism (try-catch-finally) allows programs to detect and recover from such events gracefully."
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which keyword is used to manually throw an exception in Java?",
+      "options": {"A": "throws", "B": "catch", "C": "throw", "D": "raise"},
+      "answer": "C",
+      "explanation": "The 'throw' keyword is used to explicitly throw an exception object, e.g., 'throw new IllegalArgumentException(\"msg\")'. It is used inside method bodies to signal an error condition."
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "Which keyword is used in a method signature to declare that a method may throw a checked exception?",
+      "options": {"A": "throw", "B": "throws", "C": "exception", "D": "declare"},
+      "answer": "B",
+      "explanation": "The 'throws' keyword appears in a method signature to declare which checked exceptions a method may propagate, e.g., 'void readFile() throws IOException'. Callers must then handle or re-declare these exceptions."
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What is the root class of the Java exception hierarchy?",
+      "options": {"A": "Exception", "B": "Error", "C": "Throwable", "D": "RuntimeException"},
+      "answer": "C",
+      "explanation": "Throwable is the root of Java's exception hierarchy. It has two main subclasses: Error (JVM-level, typically unrecoverable) and Exception (program-level, which includes checked and unchecked exceptions)."
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "Which of the following is an unchecked (RuntimeException) exception?",
+      "options": {"A": "IOException", "B": "SQLException", "C": "NullPointerException", "D": "ClassNotFoundException"},
+      "answer": "C",
+      "explanation": "NullPointerException extends RuntimeException, which is unchecked — the compiler does not require it to be caught or declared. IOException and SQLException are checked exceptions; the compiler enforces their handling."
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "Which of the following is a checked exception in Java?",
+      "options": {"A": "ArithmeticException", "B": "NullPointerException", "C": "ArrayIndexOutOfBoundsException", "D": "IOException"},
+      "answer": "D",
+      "explanation": "IOException is a checked exception — the compiler requires it to be either caught with a try-catch block or declared with 'throws'. The other three options are all unchecked RuntimeExceptions."
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What is the basic syntax of exception handling in Java?",
+      "options": {
+        "A": "try { } handle(Exception e) { }",
+        "B": "try { } catch(ExceptionType e) { } finally { }",
+        "C": "attempt { } except(Exception e) { }",
+        "D": "do { } rescue(Exception e) { }"
+      },
+      "answer": "B",
+      "explanation": "Java's exception handling uses try-catch-finally blocks. Risky code goes in try, the handler in catch (with the exception type specified), and cleanup code in the optional finally block that always executes."
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What is the difference between Error and Exception in Java?",
+      "options": {
+        "A": "Error is for program bugs; Exception is for JVM failures",
+        "B": "Error represents JVM-level failures (like OutOfMemoryError) that are typically unrecoverable; Exception represents program-level problems that can be handled",
+        "C": "Error and Exception are the same — they are aliases",
+        "D": "Error can be caught; Exception cannot be caught"
+      },
+      "answer": "B",
+      "explanation": "Error represents serious JVM-level failures like OutOfMemoryError and StackOverflowError that programs generally cannot recover from. Exception represents program-level issues that can and should be handled by the application."
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "Which exception is thrown when you attempt to divide an integer by zero in Java?",
+      "options": {"A": "NullPointerException", "B": "ArithmeticException", "C": "DivisionByZeroException", "D": "NumberFormatException"},
+      "answer": "B",
+      "explanation": "Dividing an integer by zero in Java throws ArithmeticException with the message '/ by zero'. Note that dividing a floating-point number by zero results in Infinity, not an exception."
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "Which exception is thrown when you access an array element with an out-of-bounds index?",
+      "options": {
+        "A": "IndexOutOfRangeException",
+        "B": "ArraySizeException",
+        "C": "ArrayIndexOutOfBoundsException",
+        "D": "BoundsException"
+      },
+      "answer": "C",
+      "explanation": "Accessing an array with an invalid index (negative or >= array.length) throws ArrayIndexOutOfBoundsException at runtime. This is an unchecked RuntimeException."
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "When multiple catch blocks are used, what is the rule for their order?",
+      "options": {
+        "A": "Order does not matter — Java picks the best match",
+        "B": "The most general exception must come first",
+        "C": "The most specific exception must come first, then more general ones",
+        "D": "All catch blocks must catch the same exception type"
+      },
+      "answer": "C",
+      "explanation": "Catch blocks must be ordered from most specific to most general. If a broader exception type (like Exception) appears before a specific one (like IOException), the specific catch block becomes unreachable and causes a compile error."
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "What does the finally block guarantee?",
+      "options": {
+        "A": "It executes only when an exception is thrown",
+        "B": "It executes only when no exception is thrown",
+        "C": "It always executes whether or not an exception is thrown, making it ideal for cleanup",
+        "D": "It prevents exceptions from propagating further"
+      },
+      "answer": "C",
+      "explanation": "The finally block always executes after the try-catch blocks complete, regardless of whether an exception was thrown or caught. It is the standard place for cleanup code such as closing files or database connections."
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "What happens if a checked exception is not caught and not declared with 'throws'?",
+      "options": {
+        "A": "The exception is silently ignored at runtime",
+        "B": "The program compiles but crashes at runtime",
+        "C": "The compiler reports an error — unhandled checked exception",
+        "D": "The exception is converted to a RuntimeException automatically"
+      },
+      "answer": "C",
+      "explanation": "Checked exceptions must be explicitly handled. If a method calls code that throws a checked exception without a try-catch or a 'throws' declaration, the Java compiler reports a compile-time error, forcing the developer to address it."
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "How does exception propagation work in Java?",
+      "options": {
+        "A": "An exception can only be caught in the method where it is thrown",
+        "B": "An unhandled exception propagates up the call stack until it is caught or reaches main(), causing program termination",
+        "C": "Exceptions are always caught by the JVM before reaching the call stack",
+        "D": "Propagation only works for unchecked exceptions"
+      },
+      "answer": "B",
+      "explanation": "When an exception is thrown and not caught in the current method, it propagates to the calling method. This continues up the call stack until a matching catch block is found or the exception reaches the top-level, causing program termination with a stack trace."
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "What is the relationship between RuntimeException and checked exceptions in the class hierarchy?",
+      "options": {
+        "A": "RuntimeException extends Error; checked exceptions extend Throwable directly",
+        "B": "RuntimeException extends Exception but is unchecked; checked exceptions extend Exception and are not under RuntimeException",
+        "C": "All exceptions are checked by default; RuntimeException is the only unchecked one",
+        "D": "RuntimeException and checked exceptions are sibling classes under Throwable"
+      },
+      "answer": "B",
+      "explanation": "RuntimeException is a subclass of Exception. What makes it unchecked is that the compiler does not require RuntimeException subclasses to be caught or declared. Checked exceptions are also subclasses of Exception but are NOT subclasses of RuntimeException."
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "What does 'throw new IllegalArgumentException(\"Age must be positive\")' do?",
+      "options": {
+        "A": "Declares that the method may throw this exception",
+        "B": "Creates and immediately throws an IllegalArgumentException with the given message",
+        "C": "Catches an existing IllegalArgumentException and re-labels it",
+        "D": "Prints the message and continues execution"
+      },
+      "answer": "B",
+      "explanation": "The 'throw' keyword followed by a new exception object creates the exception instance with the provided message and immediately throws it, transferring control to the nearest matching catch block in the call stack."
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "When should a developer use 'throws' in a method signature?",
+      "options": {
+        "A": "When the method throws an unchecked exception",
+        "B": "When the method may throw a checked exception and does not handle it internally",
+        "C": "Whenever any exception might occur",
+        "D": "Only when the method is overriding a superclass method"
+      },
+      "answer": "B",
+      "explanation": "'throws' is used to declare that a method may propagate a checked exception to its caller. For unchecked exceptions, it is optional. It is required when a method encounters a checked exception it cannot or should not handle itself."
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What is OutOfMemoryError classified as in Java's exception hierarchy?",
+      "options": {
+        "A": "A RuntimeException subclass",
+        "B": "A checked exception",
+        "C": "An Error subclass — JVM-level failure",
+        "D": "A subclass of IOException"
+      },
+      "answer": "C",
+      "explanation": "OutOfMemoryError extends Error, the JVM-level failure branch of Throwable. It indicates the JVM cannot allocate more memory. Unlike exceptions, Errors are generally not meant to be caught by application code."
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which exception is thrown when you call a method on a null reference?",
+      "options": {"A": "NullReferenceException", "B": "NullPointerException", "C": "InvalidObjectException", "D": "IllegalStateException"},
+      "answer": "B",
+      "explanation": "Calling any instance method (or accessing any field) through a null reference throws NullPointerException at runtime. It is an unchecked RuntimeException and is one of the most common Java runtime errors."
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What is the purpose of a try block in exception handling?",
+      "options": {
+        "A": "To define a block that never throws exceptions",
+        "B": "To enclose code that might throw an exception so the JVM monitors it for errors",
+        "C": "To define the exception handler",
+        "D": "To create a new thread for risky operations"
+      },
+      "answer": "B",
+      "explanation": "The try block encloses code that might throw an exception. If an exception occurs within it, execution immediately jumps to the matching catch block. Code after the throw point in try is not executed."
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "What happens if a try block contains a return statement and there is also a finally block?",
+      "options": {
+        "A": "The finally block is skipped because return exits the method",
+        "B": "The finally block executes before the return takes effect",
+        "C": "The return value is discarded and finally's return value is used",
+        "D": "A compile error occurs — return and finally cannot coexist"
+      },
+      "answer": "B",
+      "explanation": "The finally block always runs, even when a return statement is encountered in the try block. The return value is temporarily saved, finally executes, and then the method returns the saved value (unless finally has its own return, which overrides it)."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Consider: catch(Exception e) placed before catch(IOException e). What happens?",
+      "options": {
+        "A": "The IOException catch block catches IOException; Exception catch block catches the rest",
+        "B": "Compile error — the IOException catch block is unreachable because Exception catches everything first",
+        "C": "Runtime error when IOException is thrown",
+        "D": "Both catch blocks execute for IOException"
+      },
+      "answer": "B",
+      "explanation": "Since IOException is a subclass of Exception, placing catch(Exception e) first makes catch(IOException e) unreachable — any IOException would be caught by the first block. Java detects this as a compile-time error: 'Exception has already been caught'."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "What is the risk of declaring 'throws Exception' in every method signature?",
+      "options": {
+        "A": "It causes all exceptions to become checked",
+        "B": "It is overly broad — it removes the compiler's ability to enforce specific exception handling and makes API contracts meaningless",
+        "C": "It prevents runtime exceptions from being thrown",
+        "D": "It forces callers to use multiple catch blocks"
+      },
+      "answer": "B",
+      "explanation": "Declaring 'throws Exception' is an anti-pattern. It obliges every caller to catch or re-declare Exception, forcing them to handle scenarios they may not understand. It also hides the actual exceptions a method can throw, degrading API clarity and compiler assistance."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "StackOverflowError is an example of which category?",
+      "options": {
+        "A": "Checked exception — must be declared with throws",
+        "B": "RuntimeException — thrown by the JVM but catchable",
+        "C": "Error — JVM-level failure typically caused by infinite recursion",
+        "D": "Application-level exception requiring try-catch"
+      },
+      "answer": "C",
+      "explanation": "StackOverflowError extends Error, signaling that the call stack has been exhausted — typically due to infinite or very deep recursion. While technically catchable, it represents a JVM-level failure and is not meant to be handled by application code."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "What does the 'exception propagation' mechanism mean for method A calling B calling C, where C throws an unchecked exception?",
+      "options": {
+        "A": "C must catch the exception; it cannot propagate to B",
+        "B": "The exception travels from C to B to A; it can be caught at any level without requiring throws declarations",
+        "C": "The exception travels from C to B to A; B and A must both declare it with throws",
+        "D": "Unchecked exceptions cannot propagate — they terminate only the throwing method"
+      },
+      "answer": "B",
+      "explanation": "Unchecked exceptions propagate up the call stack automatically without requiring throws declarations. The exception travels from C through B to A, and can be caught at any level. If uncaught by main(), the JVM terminates the program and prints the stack trace."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Consider: void foo() throws IOException. A subclass overrides foo(). What constraints apply to the overriding method's throws clause?",
+      "options": {
+        "A": "The overriding method must declare throws IOException or a supertype of it",
+        "B": "The overriding method can declare only the same exception or a narrower (subclass) exception",
+        "C": "The overriding method can declare any exception it likes",
+        "D": "The overriding method must not declare any exception"
+      },
+      "answer": "B",
+      "explanation": "When overriding a method, the overriding method's throws clause can only declare the same exception, a subclass of it, or no exception. It cannot widen the exception to a broader type, as this would violate Liskov Substitution Principle — callers of the superclass method may not be prepared for additional exception types."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Why is it a bad practice to catch Throwable instead of Exception?",
+      "options": {
+        "A": "Throwable cannot be used in catch blocks — only Exception can",
+        "B": "Catching Throwable also catches Errors like OutOfMemoryError and StackOverflowError, which the program should not attempt to recover from",
+        "C": "Throwable forces all exceptions to be re-thrown",
+        "D": "It has no practical difference from catching Exception"
+      },
+      "answer": "B",
+      "explanation": "Catching Throwable catches both Exception and Error subclasses. Error instances like OutOfMemoryError indicate the JVM is in an unstable state. Catching and swallowing them can cause the program to continue in a broken state, leading to unpredictable behavior."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "What distinguishes a 'throw' statement from a 'throws' declaration in terms of program control flow?",
+      "options": {
+        "A": "'throw' and 'throws' are synonyms — both transfer control to catch blocks",
+        "B": "'throw' immediately transfers control to the nearest catch block; 'throws' is a compile-time declaration that does not affect control flow at runtime",
+        "C": "'throws' immediately transfers control; 'throw' is a declaration",
+        "D": "Both 'throw' and 'throws' terminate the JVM"
+      },
+      "answer": "B",
+      "explanation": "'throw' is a runtime statement that creates and throws an exception, immediately altering control flow. 'throws' is a compile-time declaration in the method signature that informs callers and the compiler about potential exceptions — it has no effect on runtime control flow by itself."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "What is the implication of ArithmeticException being unchecked for developers?",
+      "options": {
+        "A": "Developers must always declare 'throws ArithmeticException' in their methods",
+        "B": "Developers can optionally handle it, but the compiler will not force them — the burden is on the programmer to write defensive code",
+        "C": "Developers cannot catch ArithmeticException with try-catch",
+        "D": "ArithmeticException terminates the JVM and cannot be recovered from"
+      },
+      "answer": "B",
+      "explanation": "As an unchecked exception, ArithmeticException does not require try-catch or a throws declaration. The compiler does not enforce its handling. Developers must proactively validate inputs (like checking for division by zero) or use try-catch optionally."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "If method A calls method B which throws a checked exception, and A neither catches it nor declares it with throws, what is the outcome?",
+      "options": {
+        "A": "A runtime exception is thrown when the code executes",
+        "B": "The JVM ignores the uncaught checked exception",
+        "C": "The compiler rejects the code — A must either catch the exception or declare throws",
+        "D": "The checked exception is automatically converted to a RuntimeException"
+      },
+      "answer": "C",
+      "explanation": "Checked exceptions are enforced at compile time. If method A calls B which throws a checked exception, A must have a try-catch for it or declare 'throws' in its own signature. Failing to do so results in a compile-time error, not a runtime error."
+    }
+  ]
+}

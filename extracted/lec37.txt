@@ -1,0 +1,422 @@
+Programming in Java
+Prof. Debasis Samanta
+Department of Computer Science and Engineering
+Indian Institute of Technology, Kharagpur
+Lecture - 37
+Demonstration – XIII
+Let us have a quick demonstration of few important facts so far the applet programming
+is concerned. So, in this demonstration we are going to demonstrate you few things about
+the different methods that can be included in an applet program.
+(Refer Slide Time: 00:32)
+
+Then we will see exactly the html file details, about the detailed html file needs some
+more time. So, that will be covered in our next demo and there are some issues very that
+is also we can say that interesting fact with the applet programming also will be covered
+here in this demonstration.
+So, let us first have the first demo regarding the simple applet java execution. Applet
+execution is concerned we have already familiar to our HelloWorld, program.
+HelloWorld Applet, so as we know so far the applet program is concerned we have to
+import two packages, namely applet package and then awt package.
+
+(Refer Slide Time: 01:21).
+
+So, in your import section these two packages should be there. If you do not import these
+two packages, you can face compilation error and in this applet as we will see exactly
+there are many more methods, but in this particular applet, current applet as we see only
+one method the paint method it is a vital method in any applet programming and this
+paint method includes, so this paint method includes drawstring and this is right.
+Student: Application.
+Later
+Student: No sir.
+Ok. So, these paint methods include the drawstring methods and it basically display a
+string HelloWorld in the paint area at a particular location called 150 is the vertical and
+horizontal 150. So, this will display. So, these are the contexts already you have familiar
+to this kind of applet program anyway. So, this is the first applet program and very
+simple the most simplest applet program that we can have, but actual applet program is
+not so, simple that we learn in our course of demonstration anyway.
+
+(Refer Slide Time: 02:32)
+
+And the two things there you have to write the applet code using the html, using the java
+syntax and then, this applet code needs to be hosted using an html page following the
+html syntax. So, two programming languages are involved; html and another is java.
+Html stands for hypertext markup language as it is a tag based and in html this is the
+<html> tag. It is there showing that is the html not necessary to be included here is an
+optional, but this is the optional here that applet tag, and this <applet> tag the two
+mandatory specification called the code specification and then, width and then height
+specification. And the code base is also there although it is not mandatory. So, code base
+if it is not mentioned explicitly, then it indicates that this class file, that means the java
+program and this html file itself belongs to the same directory.
+And we assume that this file and the dot, dot, this .class file and the .this html file if we
+save it, should be in the same directory and then we can use any applet viewers.
+
+(Refer Slide Time: 04:01)
+
+For example, if you use the applet viewer, the applet viewer and the name of the html file
+which basically hosts your class file and then it will display.
+(Refer Slide Time: 04:05)
+
+The applet and then the whatever the paint method is defined accordingly it will do the
+job.
+Here is an example as we see this is an applet view with a specification of width and
+height that we have given there in your html page shows the applet completely. So, this
+is the first and then simple most example that we can see for the applet programming
+
+here. Now, our second example showing the different methods rather I should say the
+standard methods. There are few standard methods like init, then start, then paint ,stop
+and destroy. In this example we will see if these methods are mandatory or not, ok.
+So, the methods are already defined in an abstract class called the applet. So, as you see
+this is the Applet abstract class and as you know your this is the applet program you have
+to give the name of this class as a Sample. So, it is the applet program and in this class
+basically inherits the abstract class called the applet which is defined in java.applet
+package. So, this class abstract class is called abstract because it has certain abstract
+methods like say init is the one abstract method. Init is the one abstract method and then
+here this is the start is another and then, paint is the another abstract method.
+Init method does not require any parameters as an argument start also the same, but for
+the paint method it always should be accompanied with one parameter of type Graphics.
+So, Graphics is the class which is defined in java.awt and then, g is an object of that.
+This parameter is required anyway. Now, this is the one method that we have discussed
+here and we have to this one this class, ok. So, this method if it is there, anyway no issue.
+So, this method if we there and this example will show that all these methods we have
+over written here and the method over written is basically in init method as we see. we
+just initialize the applet with background and foreground color.
+The setBackground, setForeground these are the method is defined in java.awt and then
+this is basically the string we have assigned, the string. The name of the sting is msg and
+then its value is this one and in the start method as you see the method which is already
+there in this init method will be appended by this one and here in the paint method it is
+there.
+Now, this program say says that it has 3 methods and then, the order of execution as
+already we have discussed that init will be invoked first followed by the init, the start
+will be invoked and then, the print will be invoked in this order. Now, this order of
+execution if it is invoked so message will be fast initiate Inside init, then it will be
+appended this message by inside start and then, in finally in the paint it will be again
+inside init followed by Inside start and then, Inside what is called the paint and then, this
+message will be then displayed by the paint method using this method drawstring into
+this applet area.
+
+Now, so this is the order right if and also in the initialization we see background will be
+cyan and then, foreground. That means, the font will appear in the red color.
+(Refer Slide Time: 07:59)
+
+Now, let us run this program compilation with the java and then a hosting in an html file
+and then compilation, ok. We can compile using applet viewer. So, applet viewer then
+the name of the html file let the name of the html file is Sample.html and as you see fine
+just come here, ok. So, this applet as you see the foreground color is red font and then,
+background design and then this is basically this one as you see init method is executed
+fast that is why message is there, then the start method and then finally paint method.
+That is why this thing come into the paint method and ultimately it is showing there. So,
+the ordering is there inside, then start and then paint that is the important thing.
+
+(Refer Slide Time: 08:58)
+
+Now, let us again see as I said already that all these methods are not necessary to be
+defined by the programmer. It is mandatory. If you do not use this method also it will be
+there. Now in this case for example we have overwritten, however overwritten without
+any code the void this program is also one sort of overwriting and if we run this program
+again applet viewer and then, this program if you run it and we will see as you see this
+browser just little bit all right.
+So, as you see here there is no setting so far, the initialization, background, foreground
+because we do not have any code. So far init method is concerned no start, no paint
+nothing is there and that is why it is a blank applet. So, is a that applet does not contain
+anything else.
+Now, so here you have overwritten although there is no code, but here also we can write
+an applet program also without any code itself. So, I just want to comment all these
+methods there and then let us commence this program.
+
+(Refer Slide Time: 10:16)
+
+So, this is the one see this is also one applet program, however this program does not
+have any method definition, but still it is usable and this is a html file hosting this one
+AppletSkeleton2.class. Now, we can see it, it will give it will not show anything, but
+applet will be browsed, applet will be open, applet will start, actually applet will start
+although without any valid execution valid content in it actually, fine.
+(Refer Slide Time: 10:42)
+
+So, as you see the same thing. So, applet is running applet has started, but without any
+content in it now. So, we have discussed about 3 methods init start and then, paint
+
+method and then, there order of execution and also we have mentioned that all these
+methods are preferably to be overwritten, but not necessary. Now our next example
+showing the use of stop method in an applet 4, right.
+(Refer Slide Time: 10:32)
+
+So, stop method as you know that this method will stop execution of an applet and will
+see exactly one another form of the applet programming here and we declare first a
+frame is basically the concept of awt.
+(Refer Slide Time: 11:48)
+
+Although awt is not covered and so, let us assume that this basically a frame will be
+created and then, frame will be displayed and this frame used one event called the
+WindowsAdapter event, ok.
+Let us assume that this code basically it will create a frame, that frame can be created by
+an applet. Our next part of the program code that is basically including this one frame.
+So, here this is the main program main applet program we can say here, ok. So, this is
+the main program here that applet frame is a extend applet. So, this is the AppletFrame is
+our main applet program. We have the init code here.
+The method, this method basically create a frame, the frame which is already discussed
+earlier and then, the name of the frame object is f, the frame objects and we have just a
+frame window a message that will be appeared on the title on the top of the frame and
+this is the size of the frame that will be there and then said visible this is the one concept
+that is required to make the frame visible and then, start method.
+As you see it is very simple set visible true. That means, we make it and then stop it
+basically f dot set visible false. So, whenever we just stop, we invoke the stop method in
+there.
+Now, one more thing is that init is implicitly invoked, the start also implicitly invoked
+whatever the stock can be explicitly needs to be invoked in your applet. If you do not use
+it, then applet will go on starting I mean viewing displaying, its content like this one.
+Anyway in this applet method again paint is basically the simple. It will display this the
+string in your applet area. Now, if we run this program successfully compiled and then
+we are running this program and you will see exactly how the stop method come into the
+its effect. In earlier applet there was no stop method declaration. Now in this applet, we
+have used the stop method here we see that.
+
+(Refer Slide Time: 13:59)
+
+In this display as you see two things are there. Whenever you started this one, this is
+basically our usual applet. Applet started and this applet basically invoked another frame
+which is already in the applet init method. This is the frame and this is the title, it is
+applet that is called the this is the frame right and then, within this frame some string is
+there which is not displayable properly and this is basically the string that is painted by
+the paint method there.
+So, now here the applet is now in starting and in execution is active applet we can say.
+Now, we can stop it. If we stop this one, then this frame will go on, but applet still is
+running. So, if you stop it here then it, so that frame is no more exists and it is stopped
+means we have to invoke it later on again running the same program. Now, here again
+applet as you see applet is still running and if we just click it, then is basically it will stop
+the applet execution. So, it is basically stopping the plate and here you can say applet is
+stopped here and then cursor returned to the control command here.
+Now, on the other hand if we stop the applet, so applet that mean thread will stop
+everything all together. Automatically frame will be ceased to exist. I am stopping it here
+and you see both the frame as well applet now no more exist. So, this is basically the
+concept of stop. Stop is there in another context also. The stop method coming to the
+play say as you see html page hosting an applet view, if you stop if you close the html
+page, then what will happen this applet also will go out. Now, again if we run the same
+
+applet, then the same applet will be displayed. So, that means stop does not make the
+does not mean that it is stopped permanently. It is just from memory. For temporarily it
+is not there, but in the memory it remains there.
+(Refer Slide Time: 16:13)
+
+So, in order to move this applet completely from the memory, we have to call the destroy
+method. Our next example will explain this concept that how it can be clean completely
+from the main method, main memory. Now, here you see this is another example of
+applet as you see as you see here. So, this is the applet life cycle, this is the name of the
+applet program here, inherit the applet class and it is basically used a string and also it
+used add item on method.
+The method is declared here in this part is basically just do two things. It print on the
+console area as well as print on the applet string using the repaint method and it has of
+the start. Start basically call add item using some string as an argument because this add
+item require a string to be passed. The stop also doing the same thing and then, destroy
+also doing the same thing. Call all three methods, called the addItem method. addItem
+method basically display one string on the console control window, another is it display
+some string appending all the strings there in the applet area.
+
+(Refer Slide Time: 17:40)
+
+Now, so here it basically as you see here in this program we use four methods; init, start
+stop, destroy and then obviously paint method is there. All four methods are there in this
+particular applet example and then, paint method is basically draw a rectangle and then,
+within this rectangle it will draw a string within that like that. Now, let us see how this
+and then, the repaint method here again. Repaint means whatever the previous content it
+will be there, it will basically update and then the repaint in the fresh way.
+(Refer Slide Time: 18:19)
+
+Actually now if we run this program again using an applet.
+
+(Refer Slide Time: 18:22)
+
+Viewer let us see how it will look like this. Now here two things are there. You just I
+taken here just come into for this one here, now here there are two things that you should
+note it here.
+So, this is the console area and in the console area you can note it is giving this
+initializing the applet because of the init method that is there and then, also starting the
+applet because these two methods are called automatically whenever the applet has
+started and then it is also showing the appended text initializing the applet and then,
+starting the applet as you see.
+Now, we do not have any destroy or call any methods are there. Now, if we stop it then
+the stop method will be in execution and this method will execution means, but a stop
+method will call the add item. So, add item will just display it, but as it will the applet
+will be no more once it is stopped. So, that will be no view actually. Now, let us stop it.
+As you see here stopping the applet and then unloading the applet, those are the basically
+by virtue of call of the stop method and this is the by virtue of the destroy method. Now
+whenever you call this and console return to our main common from area, this indicates
+that applet is no more in memory and no more thread, nothing no more execution.
+So, this basically says that how the destroy method can be invoked immediately after the
+stop method. Now destroy method can be called only the stop method is invoked.
+
+(Refer Slide Time: 20:07)
+
+We cannot destroy method until a stop method is invoked.
+(Refer Slide Time: 20:11)
+
+So, this example illustrates 5 different methods; init, start, paint, stop and the destroyed.
+There are few more methods are there update and repaint method and it is more
+fascinating to have a demo about the update and repaint method using a very interesting
+one applet is called the banner applet. Now here is the code for the banner applet, ok. It
+may be little bit difficult to understand, but if we are little bits meticulous about this, then
+
+we can see what the contents are, the code elements, code things are there in this
+program.
+Now, here these are the import section as usual and here is the name of the applet. Now
+you see extends Applet is, but this banner applet needs a thread to be executed. So, it
+implements Runnable thread and you know the thread means we have to declare a thread
+and then, we have to define the run method. Now, here a thread is declared in the start
+method. As you see here, this is the start method where a thread is created and this thread
+is basically thread of the entire applet is basically itself a thread here.
+So, this is parameter to this thread. So, this thread is now created thread, instance is
+created and now t.start() means thread has started its execution. So, init method will
+basically change the background and foreground automatically invoked, start also will be
+automatically invoked by virtue of this, the thread will be automatically in execution and
+then whenever the thread is executed, then it basically execute the code that is defined in
+the run method.
+So, run is basically accompanies the thread class since the run method that is the
+runnable interface, the overeaten method here a little bit. This is a tricky code, right. We
+should not explain much about how these code works actually.
+(Refer Slide Time: 22:12)
+
+It basically select one character from the string which needs to be mark quick actually.
+That means, string will move and then that string will be painted and then, repaint and
+update will be invoked. So long this thread will be in execution, this thread is basically
+execution and intermittently the thread goes on sleep state for 250 milliseconds. It is just
+for perception of your views that one character is displayed.
+The next sub string of the character will come, it will be again repainted, update the
+things I mean area and then, again repaint, update, repaint going on and this process will
+go and then if we do not close it, it will continue. So, stop method is there and then event
+can be maintained for that if we just click button here is no event like that anyway. So, it
+is stop means we just stopped whatever the procedure we have discussed here. So, stop
+means the banner will or starts a complete and its execution.
+Now, let us see have the demo of this applet class here. Only here the run method is bit
+difficult to understand, otherwise everything is very simple ok. I am just enlarging this
+applet window little bit, so that we can understand about it. Now, here our applet is in
+execution as you see. So, applet started and here you see the banner is working the state
+that the string is moving a simple banner come there. Again a simple this is a banner
+actually look like actually the display digital display look like banner you know. So, it is
+basically in the applet that you can do it and then background, foreground it is already by
+the init method.
+Now, so here our thread is still it in execution and then, in order to stop this thread we
+just simply close it. So, now we come control return to our execution I mean in the
+execution in the runtime manager. That means applet has stopped now. So, this is the one
+example the banner example that we have planned it and then, we see that how this is
+possible using writing a simple applet program here.
+
+(Refer Slide Time: 24:35)
+
+And then one basic thing so far the applet programming is concerned is, hosting using an
+html page. We have an idea about applet programming. So far the applet program is
+concerned different methods the standard methods are there.
+I want to mention one more thing is that in addition to these are the standard methods,
+we can use you can include many other methods defined by the user, user defined
+method as well as the method can be inherited from other API class also, ok. So, those
+are the things is possible and that is there regarding the different methods that user can
+define, we in the different application context all those things will be again discussed
+once we know many more things regarding applet programming and awt programming,
+ok.
+So, that will be discussed then. Now, just I want to think is that two important things
+there. Two programming rather I should say one is that java programming. By means of
+java programming we can define our class file that can be the code in our applet and then
+html right. That means, that that class file should be embedded into the html there.
+Now, what exactly an html file is there. html is there, html as you know html stands for
+hypertext markup language. It is a basically a language specification that a browser can
+understand this code and browser can understand this html code by understanding or by
+recognizing the tag. So, html is basically is a collection of html tags and here we can see
+the different tags and then tags has the starting and closing what is called a syntax.
+
+For example, html the starting syntax within the angular brackets(< >) as we see and is a
+closing is this one, then whatever the portion that will be within this starting and closing
+is basically the portion of this tag and your html page. The browser actually this basically
+can be executed by a browser, browser can open this html page and tagged by tag, it can
+interpret what exactly the content.
+Now, here in this example as you see html within html again another tag body and then,
+within this body as you see some other tag is called the applet. Now this is a very typical
+one look like, but html is not that all the tags is necessary or mandatory. There are all
+those tags are optional also. Now here is an example that we can go how a typically
+simple html page usually look like without any applet code in it here.
+(Refer Slide Time: 27:33)
+
+This is a typical look of a simple html file which include many other important things are
+there. As you see here title is another tag <head> is another tag <body> is another tag
+within the body <Applet> is there now.
+
+(Refer Slide Time: 27:50)
+
+Here you can see this is the title and these are the simple text within his, right. Html will
+not be able to process it. Simply it will just pass it to the displayer, it will just as a string
+only whenever html not able to pass it is just string contents as a string and then, these
+are <head> <TITLE> <H1>.
+These are different html tags for the different meanings those know the html. They can
+understand about it anyway. I do not know want to discuss about the meaning of each tag
+and whatever it is there and the comment can be post in html tag using this notation and
+then, this can be opened by applet viewer also, but applet viewer can recognize only
+applet code. All other things those are there applet viewer is these are not recognizable to
+applet viewer.
+But html page can be better recognized by any browser. So, any browser in our machine
+say chrome or browser here I am just opening this one using our chrome browser you
+just where is the html file is stored, go there and double click automatically the default
+browser which is there in. Your system will be invoked to open it as you see this is the
+html content and this content will be interpreted by our browser here and display it and
+you see the html image is there which basically image is there.
+So, image is displayed and then link hyperlink it is there. So, link means it go to this one.
+So, link is if you go to the link, if the machine is connected it will automatically go to the
+
+NPTEL web sites. From this browser automatically is a hyperlink it is there and then, it
+will be executed.
+Now, so another thing is that html browser, your chrome browser in this case cannot
+recognize this part that is there because they are not embedded within any html specific
+code. So, it is basically coming there in this here and here is a title you see a simple html
+and the browser you can see the title bar.
+Actually it is showing a simple html page is there. So, these are basic concept of html
+display it is there and one thing is that all these tags are basically not case sensitive. You
+can write in capital letter or small letter. Absolutely it is not an issue. It will run it. So,
+html browse html page is case in sensitive and obviously, if there is any mistake in the
+tag that html will not be able to recognize as you say, then means it has just simply
+ignored.
+(Refer Slide Time: 30:31)
+
+But the next part will be it goes there. So, it is interpreted successfully. If something is
+not correct, then the rest thing, which are there correct thing will be executed there, ok.
+So, this is about this and then one important tag that can be included in this html file is
+applet code and then, if this code is there and applet viewer can recognize this one only,
+but applet viewer will not be able to understand this one now. So, now we have used this
+applet code and then appletviewer can process it, however it will not process any other
+
+things that is there because other tags those are there in html page is not executive to
+applet.
+Now, let us run this appletviewer as you see it will not give the same impact as the
+browser has given it to us. So, I am running this html pages applet viewer then right ok.
+As you see applet class is not there, that is why it was not executing hello world class.
+So, here applet viewer has could not be able to display this class file because in the same
+html file where this program is there, it is not there for dot java is not correct. You have
+to do the dot class, ok.
+Now, dot we have changed this one save it and then, the .(dot)class file is there. There
+are some mistakes there. So, we have included in the code file.(dot)java. Dot java cannot
+be interpreted by the applet viewer. So, it did not give any output actually now we have
+changed it. So, as you see this hello world class is giving there are some mistakes are
+there anyway. So, it is basically the applet viewer can recognize this code, but it can
+again if the earlier without any applet code our browser or successfully display it.
+Now let us see using this applet code if we again run this app chrome this html file what
+will happen, ok. So, now here you can see our chrome browser cannot interpret it. Applet
+code is basically simply ignore it, however other has been there.
+So, it is basically the applet viewer and then, browser as a point I just want to mention
+here is that the current browsers those are available at the moment, they do not support
+the applet code now a days.
+
+(Refer Slide Time: 33:07)
+
+If in your machine internet explorer version 4 and lower onwards is available, they can
+be supported and then browser that IEEE the internet explorer browser can recognize this
+one, but version 4 upwards or not that is not support is possible, however there are few
+browsers they are called java enabled browsers like Netscape navigator and then, hot
+Java.
+They can do it, they can support everything whatever the html tags including the applet
+they can browse it properly and more specifically Mozilla also which in a restrictive
+manner if you use certain plugin code, for that plugin is available in the free plugin in the
+net. You can install it and then, that Mozilla with this plugin can process both all the
+html tags as well as applet tags always and again html 5 version onwards applet becomes
+obsolete of applet. You can use the <object> tag. Their <object> tag is very similar to
+applet tag.
+That includes our today’s first demonstration on applet programming. Our next
+demonstration on applet programming 2 in our next module onwards and then, we will
+discuss another programming concept in java.
+Thank you very much.
+
+

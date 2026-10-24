@@ -1,0 +1,391 @@
+{
+  "lecture": 25,
+  "title": "Exception Handling III",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What is a nested try-catch block?",
+      "options": {
+        "A": "A try-catch block that contains no exception handling",
+        "B": "A try-catch block placed inside another try block",
+        "C": "Multiple catch blocks for the same exception type",
+        "D": "A finally block that contains another finally block"
+      },
+      "answer": "B",
+      "explanation": "A nested try-catch is a try-catch construct placed within the body of an outer try block. It allows granular exception handling for different sections of complex code, with each inner try handling specific exception types."
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which exception is thrown when an integer is divided by zero?",
+      "options": {
+        "A": "NullPointerException",
+        "B": "ArithmeticException",
+        "C": "DivideByZeroException",
+        "D": "MathException"
+      },
+      "answer": "B",
+      "explanation": "Dividing an integer by zero in Java throws ArithmeticException: / by zero. This is an unchecked RuntimeException that occurs only with integer division — floating-point division by zero yields Infinity."
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "Which exception is thrown when an array is accessed with an invalid index?",
+      "options": {
+        "A": "IndexOutOfBoundsException",
+        "B": "ArrayAccessException",
+        "C": "ArrayIndexOutOfBoundsException",
+        "D": "InvalidIndexException"
+      },
+      "answer": "C",
+      "explanation": "ArrayIndexOutOfBoundsException is thrown when an array is accessed with a negative index or an index >= array.length. It is an unchecked RuntimeException and a subclass of IndexOutOfBoundsException."
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What does args.length represent in a Java main method?",
+      "options": {
+        "A": "The number of classes in the program",
+        "B": "The number of command-line arguments passed when running the program",
+        "C": "The length of the class name",
+        "D": "The number of methods in the class"
+      },
+      "answer": "B",
+      "explanation": "In 'public static void main(String[] args)', args.length gives the count of command-line arguments provided when running the Java program. It is commonly used to check whether sufficient arguments were passed."
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What is the purpose of try-with-resources introduced in Java 7?",
+      "options": {
+        "A": "To automatically retry a failed operation",
+        "B": "To automatically close resources (like files or streams) after use",
+        "C": "To catch multiple exceptions simultaneously",
+        "D": "To create resources inside the catch block"
+      },
+      "answer": "B",
+      "explanation": "Try-with-resources (Java 7) automatically closes any resource declared in the try parentheses after the block completes, whether or not an exception occurred. The resource must implement the AutoCloseable interface."
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "In nested try-catch, if the inner try block throws an exception that is not caught by the inner catch, what happens?",
+      "options": {
+        "A": "The exception is silently ignored",
+        "B": "The exception propagates to the outer try-catch block",
+        "C": "The program terminates immediately",
+        "D": "The exception is converted to a Warning"
+      },
+      "answer": "B",
+      "explanation": "If an inner catch block does not handle the exception (wrong type or no matching catch), the exception propagates outward to the enclosing try block. If the outer try also doesn't catch it, propagation continues up the call stack."
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What is exception chaining?",
+      "options": {
+        "A": "Creating a chain of multiple exception objects that are all thrown at once",
+        "B": "Catching an exception and throwing a new exception with the original as its cause",
+        "C": "Linking exception classes with 'extends' in a hierarchy",
+        "D": "Calling multiple catch blocks sequentially"
+      },
+      "answer": "B",
+      "explanation": "Exception chaining involves catching an exception and wrapping it in a new exception: 'throw new HighLevelException(\"context\", originalException)'. This preserves the root cause while adding higher-level context. getCause() retrieves the original exception."
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "Which interface must a resource implement to be used in try-with-resources?",
+      "options": {"A": "Closeable", "B": "AutoCloseable", "C": "Serializable", "D": "Disposable"},
+      "answer": "B",
+      "explanation": "Resources in try-with-resources must implement the AutoCloseable interface, which declares the close() method. Closeable (used by streams) extends AutoCloseable, so stream objects also qualify."
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "Why would you use nested try-catch instead of a single try with multiple catch blocks?",
+      "options": {
+        "A": "Nested try-catch is always faster",
+        "B": "Different sections of code have different exception risks that need separate handling",
+        "C": "Single try blocks cannot have more than one catch",
+        "D": "Nested try-catch prevents exception propagation"
+      },
+      "answer": "B",
+      "explanation": "Nested try-catch is useful when different code sections have different exception risks. For example, one section may risk array out of bounds while another risks division by zero — each inner try handles its specific section independently."
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "In exception handling context, what is the effect of 'args[0]' when the program is run without command-line arguments?",
+      "options": {
+        "A": "It returns null",
+        "B": "It returns an empty string",
+        "C": "It throws ArrayIndexOutOfBoundsException because args.length is 0",
+        "D": "It throws NullPointerException because args is null"
+      },
+      "answer": "C",
+      "explanation": "When no command-line arguments are passed, args is an empty array (not null) with length 0. Accessing args[0] attempts to access index 0 of a zero-length array, which throws ArrayIndexOutOfBoundsException."
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "In a nested try-catch, the inner catch handles ArithmeticException but not ArrayIndexOutOfBoundsException. The outer catch handles ArrayIndexOutOfBoundsException. Which catch handles an ArrayIndexOutOfBoundsException thrown in the inner try?",
+      "options": {
+        "A": "The inner catch — it handles all exceptions",
+        "B": "The outer catch — the inner catch cannot match it, so it propagates outward",
+        "C": "Neither — it propagates past both catches",
+        "D": "Both catches execute sequentially"
+      },
+      "answer": "B",
+      "explanation": "An exception propagates outward until a matching catch is found. If the inner catch doesn't match ArrayIndexOutOfBoundsException, the exception escapes the inner try-catch and is caught by the outer catch that handles it."
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "What is the correct syntax for try-with-resources?",
+      "options": {
+        "A": "try(Resource r = new Resource()) { } catch(Exception e) { }",
+        "B": "try { Resource r = new Resource(); } finally { r.close(); }",
+        "C": "try-resources(Resource r) { } catch(Exception e) { }",
+        "D": "using(Resource r = new Resource()) { }"
+      },
+      "answer": "A",
+      "explanation": "Try-with-resources syntax places resource declaration in parentheses after 'try': try(Resource r = new Resource()) { }. Multiple resources can be declared separated by semicolons. The resource is automatically closed at block exit."
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "How does try-with-resources handle exceptions thrown in both the try block and the close() method?",
+      "options": {
+        "A": "Both exceptions propagate simultaneously",
+        "B": "The try block exception propagates; the close() exception is suppressed and attached via addSuppressed()",
+        "C": "The close() exception propagates; the try block exception is lost",
+        "D": "The close() exception is silently ignored"
+      },
+      "answer": "B",
+      "explanation": "If both the try body and close() throw exceptions, the try body exception propagates (primary), and the close() exception is suppressed. It is attached to the primary exception via addSuppressed() and can be retrieved with getSuppressed()."
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "In the demo where args.length controls which exception occurs, what determines whether ArithmeticException or ArrayIndexOutOfBoundsException is triggered?",
+      "options": {
+        "A": "The Java version being used",
+        "B": "The number of arguments provided — too few causes array access failure; correct count may cause arithmetic error in computation",
+        "C": "The operating system executing the program",
+        "D": "The IDE settings for exception handling"
+      },
+      "answer": "B",
+      "explanation": "Command-line arguments (args.length) determine what code paths execute. If no arguments are provided, accessing args[0] throws ArrayIndexOutOfBoundsException. If arguments are provided but a division operation encounters zero, ArithmeticException occurs. Nested try handles each case."
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Can you declare multiple resources in a single try-with-resources statement?",
+      "options": {
+        "A": "No — only one resource per try-with-resources",
+        "B": "Yes — separated by semicolons; they are closed in reverse order of declaration",
+        "C": "Yes — separated by commas; they are closed in declaration order",
+        "D": "Yes — but only if they are the same type"
+      },
+      "answer": "B",
+      "explanation": "Multiple resources can be declared in try-with-resources, separated by semicolons: try(R1 r1 = ...; R2 r2 = ...) { }. Resources are closed in reverse order of declaration (r2 first, then r1), which is the opposite of their initialization order."
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "What is exception chaining useful for in layered architectures?",
+      "options": {
+        "A": "It speeds up exception handling",
+        "B": "It allows a high-level layer to throw a meaningful exception while preserving the original low-level cause for debugging",
+        "C": "It prevents exceptions from reaching the UI layer",
+        "D": "It automatically logs exceptions to a file"
+      },
+      "answer": "B",
+      "explanation": "In layered architectures (DAO, Service, Controller), a low-level SQLException can be wrapped in a high-level ServiceException. The high-level exception is meaningful to the caller, while getCause() allows developers to dig into the root cause during debugging."
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which statement correctly describes the advantage of nested try-catch for complex operations?",
+      "options": {
+        "A": "It reduces the number of catch blocks needed",
+        "B": "It allows isolated handling of exceptions from specific code sections without aborting the entire operation",
+        "C": "It makes all exceptions unchecked",
+        "D": "It prevents exceptions from propagating to the caller"
+      },
+      "answer": "B",
+      "explanation": "Nested try-catch allows certain inner exceptions to be handled and recovered from locally, while the outer operation continues. For example, a failed step in a loop can be caught and logged without stopping the entire loop."
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What does the outer try block's catch handle when inner exceptions are not caught by the inner catch?",
+      "options": {
+        "A": "Nothing — the outer catch only handles exceptions from code outside the inner try",
+        "B": "Exceptions that propagate from the inner try-catch, either because no inner catch matched or the inner catch re-threw",
+        "C": "Only RuntimeExceptions from the outer try block",
+        "D": "Only checked exceptions declared with 'throws'"
+      },
+      "answer": "B",
+      "explanation": "The outer catch acts as a fallback for the inner try-catch. If an exception from the inner try isn't caught by the inner catch, it propagates to the outer try's scope and can be caught by the outer catch. It also catches exceptions thrown directly in the outer try block."
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "In try-with-resources, when is the resource's close() method called?",
+      "options": {
+        "A": "Only when the try block completes normally without an exception",
+        "B": "Only when an exception is thrown",
+        "C": "At the end of the try block, whether it completes normally or an exception is thrown",
+        "D": "Only when the garbage collector runs"
+      },
+      "answer": "C",
+      "explanation": "The key benefit of try-with-resources is that close() is called automatically at the end of the try block regardless of how it exits — normal completion, exception, or return statement. This eliminates resource leaks without explicit finally blocks."
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "If the inner catch block itself throws an exception, where does that exception propagate?",
+      "options": {
+        "A": "It is ignored since it occurred inside a catch block",
+        "B": "It propagates to the outer try-catch as if it were thrown directly in the outer try block",
+        "C": "It is caught by the same inner catch block again",
+        "D": "The program terminates immediately"
+      },
+      "answer": "B",
+      "explanation": "An exception thrown inside a catch block is not caught by the same try's other catch blocks. It propagates outward to the enclosing try block (if nested) or up the call stack, just like any other exception thrown in that scope."
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "In a nested try structure, the inner finally block runs before or after the outer catch block?",
+      "options": {
+        "A": "The outer catch runs first, then the inner finally",
+        "B": "The inner finally runs before the exception propagates to the outer catch",
+        "C": "They run simultaneously",
+        "D": "The inner finally only runs if the outer catch doesn't match the exception"
+      },
+      "answer": "B",
+      "explanation": "Finally blocks execute before exception propagation. When an exception from the inner try propagates, the inner finally block runs first (cleanup), and only then does the exception continue outward to the outer catch block."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Can try-with-resources be combined with additional catch and finally blocks?",
+      "options": {
+        "A": "No — try-with-resources cannot have catch or finally",
+        "B": "Yes — you can add catch and finally blocks after try-with-resources; finally runs after the resource is closed",
+        "C": "Yes — but only catch blocks, not finally",
+        "D": "Only finally is allowed, not catch"
+      },
+      "answer": "B",
+      "explanation": "Try-with-resources can have catch and finally blocks just like regular try. The resource is closed first (after try body), then catch blocks handle exceptions, and then the explicit finally block runs. This provides full flexibility."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "What is the difference in behavior when an exception is thrown during resource initialization in try-with-resources?",
+      "options": {
+        "A": "If R1 initialization fails, R2 is still initialized and both are closed",
+        "B": "If R1 initialization fails, R2 is never initialized; only successfully initialized resources are closed",
+        "C": "If any resource fails to initialize, all are initialized anyway then all are closed",
+        "D": "Resource initialization failures are ignored"
+      },
+      "answer": "B",
+      "explanation": "Resources are initialized left to right. If R1 fails with an exception, R2 is never created, so only R1 needs closing (though it failed, so it's not closed either). Only successfully initialized resources are closed by try-with-resources."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Why is nested try-catch considered better than deeply nested if-else for error handling in Java?",
+      "options": {
+        "A": "Nested try-catch is faster at runtime than if-else",
+        "B": "Try-catch separates error handling from normal logic; deeply nested if-else mixes both, reducing readability and maintainability",
+        "C": "If-else cannot handle runtime exceptions",
+        "D": "Nested try-catch automatically logs errors to a file"
+      },
+      "answer": "B",
+      "explanation": "Exception handling separates the 'happy path' (try block) from error handling (catch blocks), making code more readable. Deeply nested if-else for error checking mixes normal logic with error logic, making code harder to read and maintain."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Consider: the inner try catches ArithmeticException, but the code in the inner try throws both ArithmeticException AND another exception before it. What happens?",
+      "options": {
+        "A": "Both exceptions are thrown simultaneously and both are caught",
+        "B": "The first exception stops execution of the try block; only that exception propagates",
+        "C": "Java queues exceptions and processes them sequentially",
+        "D": "The second exception cancels the first"
+      },
+      "answer": "B",
+      "explanation": "Only one exception can propagate at a time. The first thrown exception immediately stops execution of the try block and transfers control to the catch block. Subsequent statements in the try block do not execute. Exception queuing does not exist in Java."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "How does getSuppressed() relate to try-with-resources and what does it return?",
+      "options": {
+        "A": "It returns all exceptions thrown during the try block",
+        "B": "It returns an array of exceptions suppressed via addSuppressed() — those thrown during close() when the try body also threw",
+        "C": "It returns the original cause of the exception",
+        "D": "It returns null unless you explicitly call addSuppressed()"
+      },
+      "answer": "B",
+      "explanation": "getSuppressed() returns the array of exceptions attached via addSuppressed(). In try-with-resources, if close() throws while the try body also threw, the close() exception is attached as suppressed. This API allows accessing both the primary and secondary exceptions."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "In deeply nested try-catch, what is the risk of silently catching exceptions at inner levels?",
+      "options": {
+        "A": "No risk — inner catch blocks are always more specific",
+        "B": "Silently catching exceptions at inner levels can hide errors from outer levels, leading to incorrect program state being passed upward",
+        "C": "Silent catches improve performance by reducing exception overhead",
+        "D": "Silent inner catches force outer catches to handle everything"
+      },
+      "answer": "B",
+      "explanation": "Silently catching (and ignoring) exceptions at inner levels allows the outer code to continue with potentially invalid state. For example, failing to read a configuration value silently may cause incorrect behavior throughout the program without any visible error."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "What happens when try-with-resources closes a resource that throws an exception, but no exception was thrown in the try block?",
+      "options": {
+        "A": "The close() exception is suppressed silently",
+        "B": "The close() exception propagates normally as if it were thrown directly in the try block",
+        "C": "The resource is left open",
+        "D": "The close() exception is logged but not thrown"
+      },
+      "answer": "B",
+      "explanation": "If the try block completes normally (no exception thrown) but close() throws an exception, that exception propagates normally — it is not suppressed. Suppression only occurs when BOTH the try block and close() throw exceptions simultaneously."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "If nested try blocks have both inner and outer finally blocks, in what order do they execute when the inner try throws an unhandled exception?",
+      "options": {
+        "A": "Outer finally → inner finally → exception propagates to caller",
+        "B": "Inner finally → outer finally → exception propagates to caller",
+        "C": "Exception propagates to caller → inner finally → outer finally",
+        "D": "Both finally blocks run simultaneously"
+      },
+      "answer": "B",
+      "explanation": "Finally blocks execute in innermost-to-outermost order. When the inner try throws an unhandled exception: the inner finally runs first, then the exception propagates to the outer try's scope, the outer finally runs, and then the exception continues to the caller."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Why is converting checked exceptions to unchecked exceptions (by wrapping in RuntimeException) controversial?",
+      "options": {
+        "A": "It is not controversial — it is always the correct approach",
+        "B": "It removes compiler-enforced handling, potentially leaving callers unaware of error conditions they should handle; used judiciously in frameworks to avoid verbose checked exception propagation",
+        "C": "Converting exceptions always causes data loss",
+        "D": "It is illegal in Java and causes a compile error"
+      },
+      "answer": "B",
+      "explanation": "Wrapping checked exceptions in RuntimeException removes compiler-enforced awareness. While this reduces boilerplate, callers lose the compile-time signal that an error condition requires handling. It is used in frameworks like Spring but requires careful documentation to avoid swallowed errors."
+    }
+  ]
+}

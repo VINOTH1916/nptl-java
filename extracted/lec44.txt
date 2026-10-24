@@ -1,0 +1,554 @@
+Programming in Java
+Prof. Debasis Samanta
+Department of Computer Science and Engineering
+Indian Institute of Technology, Kharagpur
+Lecture – 44
+Swing Programming – II
+We are discussing about java swing and in the last module we have discussed some
+components in it, and there are few more components that we are going to cover in this
+module.
+(Refer Slide Time: 00:33)
+
+So, the first component that here JSeparator; JSeparator is a new one which was not there
+in AWT and then JSeparator basically as it is shown here it looks like a separator in the
+sense that it will basically divide the display area into two parts with the different setting
+look like.
+
+(Refer Slide Time: 00:55)
+
+(Refer Slide Time: 00:57)
+
+And it has two constructors and the two methods.
+
+(Refer Slide Time: 00:59)
+
+And there is a simple example that will show the usage of JSeparator in any widow
+program as we see here.
+So, this is basically the JSeparator. This JSeparator includes the menu and whenever you
+click menu some items will appear here. So, in the JSeparator some other things also can
+be added, we will discuss about the tab and other menus also can be added like and if
+you see then menu item will disclaim it is there. So, this is basically the usage of the
+JSeparator in your program and this program you can understand yourself and is very
+simple that you will be able to follow it how it is worked there.
+
+(Refer Slide Time: 01:43)
+
+And they progress bar usually we are familiar to whenever you are some downloading or
+saving some file or copying some from one source to another, usually a progress bar will
+show that how much percentage of things that we have done.
+So, the progress bar is a dynamic component and this is a look of a clear progress bar.
+Now in your java program also you can have a progress bar.
+(Refer Slide Time: 02:03)
+
+And then you can show it.
+
+(Refer Slide Time: 02:07)
+
+So, there are 4 constructors to, do it and then it has some methods by which different
+information about the progress bar can be extracted.
+(Refer Slide Time: 02:11)
+
+And this is a simple example by which you can show we have given the two outputs like
+in a middle way or in the progress bar is working, and when the finish job is there. So,
+this is a simple example that you can try and you can see how it will work in your
+program.
+
+And then JTree this is very interesting one a swing component. A JTree actually we are
+also familiar to these things whenever we browse a directory and then that. So, it
+basically shows what are the subdirectories under a directory what are the files under the
+subdirectories like.
+(Refer Slide Time: 02:51)
+
+So, the entire tree will look like this, it can be maintained using a component class only
+from which the information can be obtained from the drive.
+(Refer Slide Time: 03:01)
+
+So, it has 3 constructors.
+
+(Refer Slide Time: 03:05)
+
+And it is a simple example which basically shows how JTree can be shown can be used
+as we see here, we declare is this is basically the one we can say the style is the one root
+under this root there is a two nodes it is nodes under this again nodes there are subnodes
+actually.
+Now, you see how we can create it, is basically style it is basically the default mutable
+mu t node this is the file it is there in class which is declared therein swing package; we
+have to use it and then we can create style and then we can create other what is called the
+menu t node like say color and font.
+Now, here you see style.addcolor, that means we add color as a part of the style and then
+add font as a part of the style like style under style color and under style font. Then we
+can add some other mu note under this color. So, it is basically we define it and under
+this color dot at a rate, this means we go into the color rate. So, this way trees of any
+branches after the other branches can be created. So, this is the simple example which
+basically tells you how the JJavaTree can be crated whenever it is required in your
+program.
+So, this is the idea about JTree and the next is JColorChooser this is also very interesting
+probably you know whenever you use any word application like MS word and whenever
+you have to decide the font of a color of a font, then you have to choose it and then color
+can be chosen from a color pen.
+
+(Refer Slide Time: 04:49)
+
+So, here is a color pen look like and you can choose any one color and then that color
+can be settled there. Instead of writing color dot blue color dot green like any other color
+can be added here
+(Refer Slide Time: 05:09)
+
+So, by default it will have this is the color chosen which say 200 colors like you can add
+more colors into it also there are pro facilities those things can be done by this
+constructor.
+
+(Refer Slide Time: 05:13)
+
+And there is a method by which the color chooser items can which color it has been
+chosen the value of that color can be used there.
+(Refer Slide Time: 05:19)
+
+So, again this is a simple pa program for the practice you can practice this program you
+can see how the color can be chosen, here is basically one button is added and using this
+button the action handler is there. If you click it the color chooser option will pop-up and
+then from there you can select some color and the color will be selected and using that
+color if you write something if you draw something, that will be with that color and then
+
+color can be reset. And here is also see whatever the recent color that you have used that
+also will be displayed to you. It is a very similar to it is in the context of saying micro
+(Refer Time: 05:57) or this kind of things it is there the same concept it can. So, using
+this color chooser you can develop our very sophisticated and smart program in this
+program.
+(Refer Slide Time: 06:09)
+
+And then tabbed pane is basically essential one component, which is also new not there
+in the AWT and within these things it basically if you create a frame, in this frame a lot
+of other tabs are there. If you know excel and you know probably at the bottom, there are
+lot of tabs that will be there that tabs corresponding the page 1 page 2 or more probably
+it is called the seat 1 seat 2 seat 3 like the one. So, these are the tab and you can rename
+this tab. So, this name is seat 1 this is seat 2 or say photo album 1 album 2 album 3 or
+whatever it is there.
+So, it basically helps to develop a program develop a windows program which to
+organize the different menu items on the frame itself and it can be placed again the
+constructor is there, the tab can be placed either in the top or usually the bottom. So,
+usually the by default the top tabbed pane is there and then otherwise you can customize
+into according to your.
+
+(Refer Slide Time: 07:05)
+
+So, here is basically JTabbedPane and then JTabbedPane in tab placement in it is
+basically is the placement the 0 on these are the 2 things are there, otherwise in the left
+side also items also 0 1 2 3 these are the different value that can be mentioned and this
+basically table layout policy; that means, the tabbed pane if it is there if you want to add
+more items into it, and then what is the layout manager that you can follow.
+(Refer Slide Time: 07:29)
+
+And it has a simple example for your practice again, you can see how the tabbed pane
+will appear into a frame which is included in a container.
+
+(Refer Slide Time: 07:43)
+
+And then JSlider is another one example which also knows which is not there is AWT,
+and as you see this is a basically is a usual look of a slider using the mouse you can just
+select a slider and then slider can be dragged to show that this is a position that you want
+to have. So, this way the different values can be entered into the system and if you press
+at the position the slider has released, it will basically get the same value and it returns to
+the system.
+(Refer Slide Time: 08:13)
+
+It has a few constructors and then methods.
+
+(Refer Slide Time: 08:17)
+
+And this is the one simple program for your practice, you can run it and you can see this
+how it will work and then you can click using a mouse you can drag and move the slider
+into any positions and release it like that.
+And then JSpinner is also similar to the slider, but here actually the numerical value is a
+conti at the continuous rage or some discrete and both can be defined can be utilized
+here.
+(Refer Slide Time: 08:39)
+
+Here is basically it is like look like whenever you have to select font size usually you
+know in the Microsoft word or other word documents processor, there is basically this
+kind of spinner is there. If you click it then it will change it if you click if you keep on
+clicking there is a value automatically will increase and then it will release it then that
+value will be selected and then if you press it then that value is selected like this.
+(Refer Slide Time: 09:05)
+
+So, this is a leisure look of a JSpinner and it has the two constructors and two methods.
+(Refer Slide Time: 09:09)
+
+And this is the one simple example by which a JSpinner with some default values can be
+planned and you can change the different values, there we can see the JSpinner whenever
+it displays you with initial value phi and it has range 0 to 10. So, we can decide what is
+the range. So, for example, 0 to 100 also we can decide it and this is basically the step;
+that means, how much incrementation 0 1 like this 1 if we say 0.5; that means, the in the
+rate of the increment that can be specified here. So, this is the different way the JSpinner
+can be controlled you can run this program with different settings and then you can get
+how the JSpinner will look like this here.
+(Refer Slide Time: 09:51)
+
+And JFileChooser is basically whenever you have to develop a system program like and
+then JFileChooser is really more preferable. Here basically whatever the files are there in
+the current directory it will select it and then it will display and then it will allow
+generating many events by selecting a particular file and then saving it or copying it or
+opening it whatever it is there. So, this basically look like the component according to
+JFileChooser in java swing.
+
+(Refer Slide Time: 10:21)
+
+It has four constructors.
+(Refer Slide Time: 10:25)
+
+And this is a simple program that you can check of your own, these are the different
+folder that you have included here in this folder whatever the files it is there it basically
+will be displayed there. So, you can try it and then you can have fun regarding running
+and you see how it is there. If you specify the different directory according to the
+directory whatever the files it is there, that files will be displayed automatically.
+
+(Refer Slide Time: 10:49)
+
+And then JToggleButton it is also a button, but the difference that it has only toggling
+either on-off or open closed or male-female this kind of things are there. So, the binary
+pattern is there.
+(Refer Slide Time: 11:03)
+
+(Refer Slide Time: 11:05)
+
+It has two constructors so, many constructors and then methods.
+(Refer Slide Time: 11:07)
+
+And it is an example as we see we have created one button and then it has two fields on
+and off and how this, if you click it here, automatically on, will be toggled to off and
+whenever it is off it is clicked it or toggle to on. So, toggling is occurs whenever there is
+an event occurs and then it can bis that button value will automatically say it accordingly
+and then that value will be used for some other requirement that is there in your program.
+
+(Refer Slide Time: 11:39)
+
+And then JToolBar it is very similar to the menu item itself it looks it has the two
+constructors.
+(Refer Slide Time: 11:45)
+
+And then so, many methods are there.
+(Refer Slide Time: 11:47)
+
+(Refer Slide Time: 11:49)
+
+This is an example as we see the file edit option 1 like in under this option 1 so, many
+other things are there. So, it is called the toolbar like it is just similar to the menu bar, but
+it is special in the MS toolbar and we can use it. So, as it is used to develop some tools
+that are the it is the name is a toolbar.
+
+(Refer Slide Time: 12:07)
+
+And JViewport is just like a text area look like, but it is ja or it is also very similar to the
+panel also has a special area that can be viewed in a separate way like.
+(Refer Slide Time: 12:23)
+
+And it has the two classes two nested class in it and then it has the two different values
+and then constructor.
+
+(Refer Slide Time: 12:29)
+
+(Refer Slide Time: 12:31)
+
+Only one constructor and there are so, many methods.
+
+(Refer Slide Time: 12:33)
+
+And it is an example which basically displays the viewport and then the background
+everything can be chosen there and the different setting style the different theme also can
+be included and those things you can use the different constructor to do that.
+So, you can try with the same thing here I have used the default constructor, but my
+advice is that you can try with the different constructor that I have already mentioned and
+then on this program. It is applicable to all examples that I have instead there I have used
+only one constructor, but for your practice for your learning you should try all these
+things with the different constructors. And the different method also you can call once
+this object is created you can see what is the method returns and then you can try to print
+this method on the windows or you can try to print the method using (Refer Time: 13:23)
+into the same frame like this one.
+So, you can understand that what they are doing for you actually, and then this is just a
+starting point. You have to ultimately you have to use to develop your program that you
+can decide one project and then in for that project you can think that what you want to
+have and according to try to realize it, and that is all basically this is the way of learning
+this kind of concept it is there.
+
+(Refer Slide Time: 13:49)
+
+So, this is the JViewpoint and then I will come to the container class there as you see this
+is the component. There are so, many components we have covered in this module as
+well in the last module and then. So, for the container is concerned there are 3 things are
+there frame panel dialog box and 1 container is also applet. So, applet also can be added
+here and although we have not used any example for that, but it is basically if you create
+one program which extends an applet, and whatever the component you want to add can
+be added into the applet also which we have already given enough illustration discussion
+in the while we are discussing about AWT. So, an applet is very same we just ignore it
+here in this discussion
+Anyway. So, for the container is concerned as we see container includes window, it can
+input panel and also frame dialog and it can also include an applet. So, these are the full
+what is called the I mean concept. So, for the container in the java swing is concerned
+there, and all those things are there in AWT itself. So, it is an addition with some better
+what is called the look and feeling.
+
+(Refer Slide Time: 14:57)
+
+Now, let us see what is the JPanel it is there and as we see a panel can include within
+another panel and so, on so, on. So, it can be nested that is why it is called the nested
+facility which was not there in AWT of course.
+(Refer Slide Time: 15:09)
+
+And it has the constructor like panel and then it has one pa argument w buffer; that
+means, all the contents can be stored and the layout manager means which layout
+manager if you want to add many more items into the panel itself, then which it the
+layout manager that you have to follow. Layout manager concept is the same as the
+
+layout manager that we have discussed in java.awt; that means, flow layout water layout
+grid layout char layout all those things are applicable here also.
+That is why they are they do not have any explicit or special bearing in java swing that is
+why it is not included here. And this is an example about how the panel can be there as
+we see them here entirely this is basically a frame this is the entire frame, in this frame
+the panel is there.
+(Refer Slide Time: 15:47)
+
+And in this panel, two buttons are added here. So, this is the example and the; for this
+output the program will look like as it is shown here. So, you can run this program and
+you can see the output, and you can change many parameters in a program that we have
+used there and then you can see it. For example, the background of the panel can be
+changed and then button instead of the button you can add some other components into it
+whatever it is there.
+You can do a lot of experiments, and starting this program you can start changing many
+things and they learn it. So, this is the idea actually that I want to mention.
+
+(Refer Slide Time: 16:35)
+
+And so, this is the panel and then like frame we have already familiar to frame concept
+there is an AWT is the same concept it is here also. It is also nested class means the
+frame is defined we inside the component class that is why it is called the nested class.
+(Refer Slide Time: 16:49)
+
+It has some fields like exit on close root pane checking to enable.
+
+(Refer Slide Time: 16:55)
+
+These are the fields and it has the four constructors for the different way the frame can be
+initialized actually; all constructors as per initializing the object whenever you create it.
+So, there is a default constructor and then some graphics can be added it basically this
+graphics is for style, a frame can be with different style shading color background all
+these things are there. The frame can be added using some title also and both title and
+then configure and also it is there frame can be without any title like this one.
+(Refer Slide Time: 17:23)
+
+So, these are the constructor that can be used there while you are having the program and
+there are so, many methods using these methods the information about the panel can be
+extracted which can be utilized for controlling your program.
+(Refer Slide Time: 17:33)
+
+And this is a simple example as we see it is a frame and this frame includes on simple
+button and then it will basically use it. And then this pa this program is as we see here a
+level is also used in this frame. So, level, button, a button is level as button and then the
+frame is created as a. So, frame it is their title is JFrame by example.
+So, this is the one thing that we have used in a simple container, but the same thing again
+if you can repeat it, here just only changed it what change you should do it? For example,
+you want to include these things into an applet; that means, we want to add frame in their
+applet, only simple change you should do public class JFrame ex extends applet and then
+the main method should not be there. Instead of the main method you can write some
+unique method here you can and then code include all these codes that is all it will
+basically create a frame and then frame include some other elements like.
+So, it is a simple that you have already experienced while we are discussing about AWT,
+how a component can be added into an applet how a component can be added into a
+frame like.
+
+(Refer Slide Time: 18:51)
+
+So, this is the idea about the frame and then the calculator let us see one idea about. We
+have already given one illustration about how a calculator will look like if we use AWT.
+Now that time also we have explained we have mentioned that the calculator does not
+pretty look good, and a lot of other stylings that you have to do from the programmer end
+only so, that the calculator can look very good and more elegant is there.
+However, java swing has a lot of simplicity; so that a calculator can be easily drawn
+according to the nice view of each without much headache about the programmer here.
+And as you see here this is a very good looking calculator and this is a calculator that we
+can develop using swing components easily. So, I will give you the step by step whatever
+the method that we can follow to develop such a calculator.
+So, what are the method that is required and then designing a calculator is basically is a
+first-time practice actually. If you can design a calculator successfully, then you can earn
+a lot of confidence about how the swing can be utilized to develop an application for
+your requirement that we can suit to your requirements.
+Now, first the method that we should mention is that. So, we have to add with the
+component which is the component that needs to be used that say suppose we have to
+create this as a frame or is a panel, then you have to add this component and then add
+other components those will be included in this one. So, here actually as we see wa; so
+all buttons are there. So, we can see 16 buttons, as well as one, equals button total
+
+altogether 17 buttons are there and in addition to 17 buttons as we see 1 text field area is
+there. So, as we see these are the 17 buttons right and this is basically the frame area and
+in this frame area there is another text field also there.
+So, the enter is the frame and in this frame, there is one text field area and these are the
+button and this 1 there. And buttons are now included in this component; obviously, we
+can follow certain layout managers maybe say grid layout manager. So, we can create a
+grid layout like this one then accordingly we can decide it. And if you use the flow
+layout manager also we can do that whatever the way you can do no issues. So, you can
+adjust it.
+So, these are the 17 buttons you can customize to place it say suppose equals button you
+can say this one. So, right-aligned or it is there, we have used the center-aligned for this
+1 like. So, the anyways so, these are the buttons and then text field and then the
+background these are the few things that you have to consider. So, for this calculator
+design is concerned. You can change the color as an instead of blue maybe say silent
+audio low whatever it is there anyway.
+So, first we have to add the components and then all the components that will include
+into the container, we have to define then and then adjust. And then finally, this will give
+a look like which is basically just a structure, but we have to add the event now how the
+event can be added? We have already discussed about we have to register the action
+listener which action listener that you want to use here.
+Here, the user, is the mouse being the action listener can be added there, add action
+listener or specify the event to be controlled. And then background color whatever it is
+there you can choose it size of the that calculator, also you can decide using set size
+function and then setText; setText is basically set the text to the level to s; that means,
+whatever the levels are there you can set the text like and then getText is basically
+returned to the text that we have leveled it here. So, here basically 1 2 3 all these things
+are text that we have set to each ba each button like and then it will basically return the
+values. So, whether the value will be here in the text field or the value will be here all
+those things can be here.
+Now, in addition to this as we see these are the few other it is not the text actually, they
+are basically for some operation and those operation means if we click it basically ca
+
+action is that whatever the results it is there and then what are the subsequent things will
+be entered into this it will appear and then the addition of the two apparent will takes
+place. So, this is the idea actually it is there.
+Now, So, the idea is that we have to first design the layout and then place all the
+components in it and then finally, define the event handling mechanism. So, these are the
+steps major steps are involved here.
+Now, let us see the stepwise everything one by one for each discussion here.
+(Refer Slide Time: 23:45)
+
+Now, this is the first step in this step what we do is that, as we see here let us go slowly
+so, that you can understand about it. So, we are creating a calculator extends JFrame and
+implement ActionListener because we want to include event there.
+Now, So, first we create a JFrame and this is a filter frame and then text field that is
+given as a l and a 0 s 1 and s 2 are the 3 strings that we have considered for the 2
+apparent and one result actually. So, a calculator is the ba constructor initially they are
+basically null stream and so initially, calculator basically has the null value like and then
+we have to go to the mainframe main method. The main method creates a frame f using
+swing calculator. So, it will be basically title here or it will be displayed here. So, in
+calculator look like
+So, with these things, it will basically create like this one.
+
+(Refer Slide Time: 24:47)
+
+Now if we go put the next step; our step 2 and then in step 2 as we see we just use one
+UIManger
+
+it
+
+is
+
+defined
+
+in
+
+the
+
+a
+
+java
+
+swing
+
+itself
+
+SetLookAndFeel.
+
+UIManger.getSystemLookAndFeelClassName. So, is basically automatically defined
+whichever the look that you can have. So, it is basically that this is a default look that we
+have used it here and if suppose it is not able to decide this UIManger, then it will just
+simply throw an error like this one.
+Any way we can this one and get the system look and feel a class name is basically
+giving you what are the UIManager that you are ee including. It is just same as the layout
+manager concept it is a here in the java swing expression it is called the user interface
+manager UIManger like.
+Anyway then we create a calculator object c is a type we have already designed the
+constructor there with initial value s 0 equals to s 1 equals to s 2 equals to non-string like
+and then we create a text field they then text field is there and set editable; that means,
+text field can be editable we can try something here also this is why it makes editable and
+this is a false means no editable is possible. So, we cannot type anything here
+And then we create so, many buttons b 0 to b nine for the numeric button and b 8 to b m
+for addition subtraction and division multiplication for equal and b equal b equal lay b
+equal other 2 also we have created it anyway. And then we add all these buttons or we
+
+create a button v 0 with some level as it is shown here. So, we are just we are continuing
+the step 2 again, because there are few more items to be added there and so.
+(Refer Slide Time: 26:39)
+
+So, we are adding all these aa items all buttons are there na 0 to 9 buttons all these
+basically some addition subtraction multiplication all these buttons are there with label
+all these things are there and 10 b another button is created with dot. So, point is there
+and b equal another button also will be added.
+Now, JPanel p equals to the new panel we create 1 panel that is a panel is basically we
+want to include this is basically rather we can say instead of the frame it is a panel
+actually. So, in this panel, we want to add all these things there. Now we are defining the
+action listener method here. So, bn bd bs ba for this class component actually here, in
+this case, calculate the component. So, we are adding some methods that that if we press
+bn then what of action that it will produce. So, these are the things it is declared here and
+then. So, these are the action listener for all components those we have included here we
+have added it there.
+
+(Refer Slide Time: 27:41)
+
+And then finally, we add all the buttons and labels and text fields into the panel. So, this
+is the statement for that. So, this completes the addition of all the elements into the
+button side by side and then this one; what is my suggestion is that, you just do 1 step
+and then run it check it that how it is going on. So, usually if you do everything together
+and then you may not find that how it is working. So, first create the button and then you
+complete it and then run it and see the output then add buttons then run it see how it is
+coming to add text field run it see and these things. So, one by one if you do it you will
+be able to have the good feeling that how it is working actually for you.
+(Refer Slide Time: 28:33)
+
+And then next step is basically once all components are added into the button and we
+have to define the action performed for each what is called the component. So, here is a
+routine for action performed that you have to write it. Now here if s dot character 0; that
+means, the first character is 0 or it is less than 9 or it is this one. So, this basically go on
+appending here. So, if you type something here in this one. So, it will go on appending
+here. So, 45.6. So, it will 45.6 will be display here like that.
+So, this is basically the first thing that we are doing and then. So, this is basically the
+continuation.
+(Refer Slide Time: 29:19)
+
+Next is here we are clearing if the different things are an app for example, if this equals
+right this thing is there then is basically sum and then if this is c the clear. So, c button is
+there if we then it is basically what will happen and then. So, these are the different
+actions if something is happened for plus or minus or division then it is basically what it
+will do all these things. So, whenever you face it with basically read one string another
+read string. So, that those string and attach there and then result will be obtained. So, this
+is the procedure by which the different actions can listen and for these actions, the
+consequence can be added there and operation will be there.
+
+(Refer Slide Time: 30:11)
+
+And finally, as we see here finally, the result will be stored there and the result will be
+like this.
+(Refer Slide Time: 30:17)
+
+So, set text is a level that means text field area it can show it here. Now so, idea how a
+calculator can be designed I have given an idea about it. So, two things are there first you
+have to plan the entire layout and then according to the layout, we have to decide that
+what are the different components are to be included and then you include those
+
+components and then you have to add the action handling mechanism that is all. So, this
+way you can we will be able to do it.
+So, this program as I have given for your practice I should advise you to run this
+program, and then you will see how it is working and then part by part program
+execution is better suggested so, that you can understand this concept clearly.
+Anyway so, we have learned about AWT and Swing and these are the things very much
+essential for window programming, other than the simple pro programming that we have
+learned regarding multi-threading input-output handling and then in capsulation, all those
+things are there, but this will add more color to your programming arena actually. And
+here obviously, you can have the answer that whether both sw string and AWT can be
+punched together or not; obviously, it is possible and then as you see if you compare
+AWT and string then they are comparable in terms of many other parameters, but 1
+parameters is that swing gives you much more elements than the AWT.
+It is much much more actually. Now I just slip it as an exercise that how many classes
+that you can use. So, for the AWT is concerned and how many swings it is there. Now
+you can count it and you can just learn it that swing is mo much more elaborative more
+voluminous. However, easier than the AWT to use it and it gives you more what is called
+the smart-looking program development.
+So, thank you for your attending this module.
+
+

@@ -1,0 +1,381 @@
+{
+  "lecture": 22,
+  "title": "Demonstration IX - Interfaces Demo",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What keyword is used to place an interface inside a package in Java?",
+      "options": {"A": "import", "B": "package", "C": "namespace", "D": "module"},
+      "answer": "B",
+      "explanation": "The 'package' declaration at the top of a source file places it inside a named package. For example, 'package myInterface;' places the interface AnInterface into the myInterface package."
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "How does a class use an interface stored in a different package?",
+      "options": {
+        "A": "extends packageName.InterfaceName",
+        "B": "import packageName.*; then implements InterfaceName",
+        "C": "include packageName.InterfaceName",
+        "D": "using packageName.InterfaceName"
+      },
+      "answer": "B",
+      "explanation": "To use an interface from another package, you first import it with 'import myInterface.*;' or 'import myInterface.AnInterface;', then use 'implements AnInterface' in the class declaration."
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is the implicit access modifier for methods declared in an interface?",
+      "options": {"A": "private abstract", "B": "protected abstract", "C": "public abstract", "D": "default abstract"},
+      "answer": "C",
+      "explanation": "All methods declared in a Java interface are implicitly public and abstract. You do not need to write these keywords explicitly, though doing so is allowed and has the same effect."
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What are the implicit modifiers for fields declared inside a Java interface?",
+      "options": {
+        "A": "public static final",
+        "B": "public instance variable",
+        "C": "private static final",
+        "D": "protected final"
+      },
+      "answer": "A",
+      "explanation": "Fields in an interface are implicitly public, static, and final — they are constants. They must be initialized at declaration and cannot be changed by implementing classes."
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "Which of the following demonstrates multiple inheritance via interfaces in Java?",
+      "options": {
+        "A": "class C extends A, B",
+        "B": "class C implements A, B",
+        "C": "class C extends A implements A",
+        "D": "interface C extends A, B then class D extends C"
+      },
+      "answer": "B",
+      "explanation": "A class achieves multiple inheritance of type by implementing multiple interfaces separated by commas. Java does not allow a class to extend multiple classes, but it can implement any number of interfaces."
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "Can an abstract class have a constructor?",
+      "options": {
+        "A": "No, abstract classes cannot have constructors",
+        "B": "Yes, abstract classes can have constructors called by subclass constructors",
+        "C": "Only if the constructor is abstract",
+        "D": "Only if there is exactly one abstract method"
+      },
+      "answer": "B",
+      "explanation": "Abstract classes can have constructors. They are called via super() from subclass constructors to initialize the abstract class's fields. Interfaces, by contrast, cannot have constructors."
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "Which syntax correctly declares a class that extends a superclass AND implements an interface?",
+      "options": {
+        "A": "class A implements B extends C",
+        "B": "class A extends B, implements C",
+        "C": "class A extends B implements C",
+        "D": "class A implements C extends B"
+      },
+      "answer": "C",
+      "explanation": "When a class both extends a superclass and implements an interface, 'extends' must come before 'implements'. The correct syntax is: class A extends B implements C."
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "Which statement about interface vs abstract class is correct?",
+      "options": {
+        "A": "An interface can have instance variables; an abstract class cannot",
+        "B": "An abstract class can have concrete methods; an interface (pre-Java 8) cannot",
+        "C": "Both interface and abstract class can be instantiated directly",
+        "D": "An interface can extend a class"
+      },
+      "answer": "B",
+      "explanation": "Before Java 8, interfaces could only have abstract methods. Abstract classes can have both abstract and concrete (implemented) methods, constructors, and instance variables, making them more flexible for partial implementation."
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "In the context of packages, what does 'import myInterface.*;' accomplish?",
+      "options": {
+        "A": "It copies all interface source code into the current file",
+        "B": "It makes all public types in the myInterface package accessible in the current file",
+        "C": "It merges the myInterface package into the current package",
+        "D": "It imports only the interfaces, not classes, from myInterface"
+      },
+      "answer": "B",
+      "explanation": "The wildcard import 'import myInterface.*;' makes all public types (classes, interfaces, enums) in the myInterface package available for use in the current source file without fully-qualified names."
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What happens when the same method call is made through an interface reference, but the actual object is of a different class each time?",
+      "options": {
+        "A": "The interface's default implementation is always called",
+        "B": "A compile error occurs because the method is ambiguous",
+        "C": "The JVM calls the appropriate method based on the actual object type — runtime polymorphism",
+        "D": "The first implementing class's method is always chosen"
+      },
+      "answer": "C",
+      "explanation": "This is runtime polymorphism: when you call a method via an interface reference, the JVM dynamically dispatches the call to the actual implementing class's method at runtime. Different objects produce different behavior from the same method call."
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Why must interface fields be 'final' in Java?",
+      "options": {
+        "A": "To prevent them from being inherited by implementing classes",
+        "B": "Because interfaces have no instance context, and final ensures fields are constants that cannot be reassigned",
+        "C": "To allow the compiler to inline their values in bytecode",
+        "D": "To prevent implementing classes from accessing them"
+      },
+      "answer": "B",
+      "explanation": "Interface fields are implicitly static and final because interfaces represent contracts, not state. Making them final ensures they are constants; since there are no interface instances, instance variables would have no owner."
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "If a class implements an interface but does not implement all its methods, the class must be declared as:",
+      "options": {"A": "final", "B": "static", "C": "abstract", "D": "synchronized"},
+      "answer": "C",
+      "explanation": "If a class implements an interface but leaves one or more abstract methods unimplemented, the class itself must be declared abstract. It then becomes the responsibility of a concrete subclass to provide the remaining implementations."
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which of the following best describes the main practical difference between an interface and an abstract class when modeling 'behavior contracts'?",
+      "options": {
+        "A": "Interfaces define IS-A relationships; abstract classes define CAN-DO relationships",
+        "B": "Abstract classes are better for CAN-DO (capability) contracts; interfaces are better for IS-A (classification) hierarchies",
+        "C": "Interfaces define CAN-DO (capability) contracts shared by unrelated classes; abstract classes define a common base for closely related classes",
+        "D": "There is no practical difference in modern Java"
+      },
+      "answer": "C",
+      "explanation": "Interfaces define behavioral contracts (what an object can do) and can be implemented by unrelated classes. Abstract classes define a shared base implementation for closely related classes in the same hierarchy. This is the standard design principle behind choosing one over the other."
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Given: 'AnInterface ref = new ConcreteClass();' — what can ref be used to call?",
+      "options": {
+        "A": "Only methods defined in AnInterface, not methods specific to ConcreteClass",
+        "B": "All methods of ConcreteClass including private methods",
+        "C": "Only the static methods of AnInterface",
+        "D": "No methods, since AnInterface cannot be instantiated"
+      },
+      "answer": "A",
+      "explanation": "When an object is referenced through an interface type, only methods declared in that interface (plus those inherited from Object) are accessible through the reference. Methods specific to ConcreteClass require a cast."
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "In the interface-based polymorphism demo, if two classes implement the same interface method differently, what determines which implementation runs?",
+      "options": {
+        "A": "The order in which the classes are compiled",
+        "B": "The actual type of the object stored in the interface reference at runtime",
+        "C": "The name of the reference variable",
+        "D": "The position of the method in the interface definition"
+      },
+      "answer": "B",
+      "explanation": "Dynamic dispatch selects the method based on the runtime type of the object, not the declared type of the reference. This is the core mechanism of runtime polymorphism — same call, different behavior depending on the object."
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "What is the advantage of declaring an interface in a separate package?",
+      "options": {
+        "A": "It makes the interface private to the package",
+        "B": "It promotes modularity and reuse — multiple projects can import the package and use the interface",
+        "C": "It forces all implementing classes to be in the same package",
+        "D": "It prevents the interface from being subclassed"
+      },
+      "answer": "B",
+      "explanation": "Placing interfaces in their own package promotes separation of concerns and reusability. Other projects or modules can import the package and implement the interface without knowing the concrete implementations."
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Class C implements interfaces A and B, and both define a constant MAX = 100 and MAX = 200 respectively. What is the result?",
+      "options": {
+        "A": "C inherits both; accessing C.MAX is ambiguous and causes a compile error",
+        "B": "C uses A.MAX = 100 since A is listed first",
+        "C": "C uses B.MAX = 200 since the last interface overrides",
+        "D": "Both constants are available as A.MAX and B.MAX; accessing MAX via C is a compile error"
+      },
+      "answer": "D",
+      "explanation": "When both interfaces define a constant with the same name, the inheriting class gets both but accessing it unqualified through the class causes a compile-time ambiguity error. They must be accessed as A.MAX or B.MAX to disambiguate."
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "A user-defined interface stored in package 'myInterface' must be compiled before classes that use it. Which compiler command correctly compiles a class that imports it?",
+      "options": {
+        "A": "javac -classpath . MyClass.java",
+        "B": "java myInterface.AnInterface",
+        "C": "javac MyClass.java without any classpath needed",
+        "D": "javac -package myInterface MyClass.java"
+      },
+      "answer": "A",
+      "explanation": "The -classpath (or -cp) flag tells javac where to find compiled classes. If the myInterface package is in the current directory, '-classpath .' tells javac to look there. The interface must be compiled first so its .class file is available."
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Why can't an interface have a constructor?",
+      "options": {
+        "A": "Constructors are inherited, and interfaces cannot inherit",
+        "B": "Interfaces cannot be instantiated, so a constructor would serve no purpose",
+        "C": "Constructors conflict with the static nature of interface fields",
+        "D": "Java simply forgot to allow it — it is a design oversight"
+      },
+      "answer": "B",
+      "explanation": "A constructor's purpose is to initialize a new instance. Since interfaces cannot be instantiated directly, there is no instance to initialize, making constructors meaningless. Abstract classes can have constructors because their subclasses do create instances."
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "In 'class A extends B implements C', which is initialized first when 'new A()' is called?",
+      "options": {
+        "A": "Interface C's constructor (which doesn't exist), then B, then A",
+        "B": "B's constructor first (via super()), then A's constructor body",
+        "C": "A's constructor first, then B's",
+        "D": "All three are initialized simultaneously"
+      },
+      "answer": "B",
+      "explanation": "Java always calls the superclass constructor before the subclass constructor body. When 'new A()' is called, B's constructor runs first (explicitly via super() or implicitly), then A's constructor body executes. Interface C has no constructor."
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Two interfaces I1 and I2 both declare 'void display();'. Class C implements both. Class D extends C and overrides display(). When called via I1 reference holding a D object, which display() runs?",
+      "options": {
+        "A": "I1's default implementation of display()",
+        "B": "C's implementation of display()",
+        "C": "D's overridden display() — runtime dispatch picks the most specific override",
+        "D": "A compile error occurs due to ambiguity"
+      },
+      "answer": "C",
+      "explanation": "Runtime polymorphism always dispatches to the most specific (most derived) override in the actual object's class. D overrides display(), so D's version runs regardless of whether the reference is typed as I1, I2, or C."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "What is the primary design reason Java uses interfaces for multiple inheritance rather than multiple class inheritance?",
+      "options": {
+        "A": "Interfaces are faster to compile than classes",
+        "B": "Multiple class inheritance introduces the diamond problem — ambiguous method implementations from multiple parents; interfaces (pre-Java 8) had no implementations to conflict",
+        "C": "Multiple class inheritance is allowed but deprecated in Java",
+        "D": "Interfaces take less memory at runtime than multiple class parents"
+      },
+      "answer": "B",
+      "explanation": "The diamond problem arises when two parent classes have different implementations of the same method — the subclass inherits ambiguous behavior. Since interfaces (pre-Java 8) only declared method signatures with no bodies, there was nothing ambiguous to inherit, making interface-based multiple inheritance safe."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "When demonstrating interface polymorphism, if you store different objects in an array of interface type and iterate, calling the same method — what principle makes this work correctly?",
+      "options": {
+        "A": "Static binding: the array type determines which method is called",
+        "B": "Dynamic dispatch: each element's actual class provides its own implementation at runtime",
+        "C": "The interface provides a default implementation used for all elements",
+        "D": "Java clones all objects into the same type before calling the method"
+      },
+      "answer": "B",
+      "explanation": "An array of interface type can hold objects of any implementing class. When you call the interface method on each element, dynamic dispatch ensures each object's own class implementation runs. This is the power of polymorphic collections."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "A class implements interface A (which has method foo()) and extends abstract class B (which also declares abstract foo()). The class provides one foo() implementation. Which contract does it satisfy?",
+      "options": {
+        "A": "Only interface A's contract — abstract class methods take lower priority",
+        "B": "Only abstract class B's contract — class hierarchy takes precedence",
+        "C": "Both — the single implementation satisfies the method signature requirement from both A and B",
+        "D": "Neither — duplicate method requirements cause a compile error"
+      },
+      "answer": "C",
+      "explanation": "When a method signature appears in both the implemented interface and the extended abstract class, a single implementation in the concrete class satisfies both simultaneously. The JVM sees one method that fulfills both contracts."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Why does placing an interface in a package improve the design of large systems?",
+      "options": {
+        "A": "It prevents other packages from implementing the interface",
+        "B": "It enforces that only one class can implement the interface",
+        "C": "It separates the contract (interface) from implementation, enabling different teams to work on implementations independently while depending only on the shared interface contract",
+        "D": "It removes the need for import statements in client code"
+      },
+      "answer": "C",
+      "explanation": "Packaging interfaces separately creates a stable contract layer. Client code depends on the interface package, not on specific implementations. Teams can independently develop, test, and swap implementations without breaking code that depends only on the interface."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Consider interface I with constant PI = 3.14. Class C implements I. Can C modify PI?",
+      "options": {
+        "A": "Yes, by declaring 'this.PI = 3.14159' in the constructor",
+        "B": "Yes, by redeclaring PI as a non-static field",
+        "C": "No — PI is implicitly public static final; reassignment is a compile error",
+        "D": "Yes, using reflection to bypass the final modifier"
+      },
+      "answer": "C",
+      "explanation": "Interface constants are implicitly public static final. Since they are final, they cannot be reassigned anywhere — not in the implementing class, not via constructors. Attempting to reassign causes a compile-time error."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "In Java, can an interface extend multiple interfaces? What is the implication?",
+      "options": {
+        "A": "No — interfaces follow the same single-inheritance rule as classes",
+        "B": "Yes — interface I3 extends I1, I2; any class implementing I3 must implement all methods from I1, I2, and I3",
+        "C": "Yes, but only if I1 and I2 share no common methods",
+        "D": "Yes, but only up to two parent interfaces"
+      },
+      "answer": "B",
+      "explanation": "An interface can extend multiple interfaces: 'interface I3 extends I1, I2'. A class implementing I3 inherits all abstract methods from I1, I2, and I3, and must implement all of them. This is how Java builds rich behavioral contracts."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "During the demo, runtime polymorphism is demonstrated by passing different objects to the same interface-typed parameter. What would break this polymorphism?",
+      "options": {
+        "A": "Using a concrete class type instead of the interface type as the parameter",
+        "B": "Calling the method with different argument values",
+        "C": "Compiling with a newer version of Java",
+        "D": "Using a static method in the interface"
+      },
+      "answer": "A",
+      "explanation": "If the parameter is declared as a specific concrete class type, the method can only accept objects of that class (or subclasses), breaking polymorphism. Declaring the parameter as the interface type allows any implementing class to be passed, enabling runtime dispatch."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "What is the effect of 'class A extends B implements C' where B is an abstract class and C is an interface, and both require method 'void work()'?",
+      "options": {
+        "A": "Class A must provide two different implementations of work() — one for B and one for C",
+        "B": "Class A provides one implementation of work() that satisfies both B's abstract requirement and C's interface requirement",
+        "C": "Compile error — duplicate method requirement from class and interface cannot coexist",
+        "D": "B's version of work() automatically satisfies C's requirement without A needing to implement it"
+      },
+      "answer": "B",
+      "explanation": "When the same method signature is required by both the abstract superclass and the interface, providing a single implementation in class A satisfies both contracts. The compiler verifies that the signature matches both requirements."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "In the demo, if a class implements an interface but the interface is in a different package and the interface methods are not explicitly declared public in the implementing class, what happens?",
+      "options": {
+        "A": "The methods default to package-private, which is acceptable",
+        "B": "Compile error — when implementing an interface method, you cannot reduce the access level below public",
+        "C": "The methods inherit the interface's public modifier automatically, so any access level is fine",
+        "D": "The methods become protected — a slightly reduced but compatible access level"
+      },
+      "answer": "B",
+      "explanation": "Interface methods are public, so implementing classes must declare them as public. Providing a weaker access modifier (like package-private or protected) would reduce visibility, violating the interface contract. Java enforces this with a compile-time error."
+    }
+  ]
+}

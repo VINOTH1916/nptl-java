@@ -1,0 +1,396 @@
+{
+  "lecture": 4,
+  "title": "Demonstration I (Setting Up Java Environment)",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What does the JAVA_HOME environment variable point to?",
+      "options": {
+        "A": "The directory where Java source files are stored",
+        "B": "The root installation directory of the JDK",
+        "C": "The directory containing .class files",
+        "D": "The Java Virtual Machine executable"
+      },
+      "answer": "B",
+      "explanation": "JAVA_HOME is set to the root directory of the JDK installation (e.g., C:\\Program Files\\Java\\jdk1.8.0_171). Other tools and scripts reference JAVA_HOME to locate the JDK without hardcoding the path."
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What must be added to the PATH environment variable for Java tools to be accessible from the command line?",
+      "options": {
+        "A": "%JAVA_HOME%\\lib",
+        "B": "%JAVA_HOME%\\jre",
+        "C": "%JAVA_HOME%\\bin",
+        "D": "%JAVA_HOME%\\src"
+      },
+      "answer": "C",
+      "explanation": "The bin directory inside the JDK installation contains all executable tools like javac, java, javadoc, and jdb. Adding %JAVA_HOME%\\bin to PATH makes these tools accessible from any command prompt directory."
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is the purpose of the CLASSPATH environment variable?",
+      "options": {
+        "A": "It tells the compiler where to find JDK source code",
+        "B": "It tells the JVM where to find compiled .class files",
+        "C": "It points to the Java installation directory",
+        "D": "It defines where HTML documentation is stored"
+      },
+      "answer": "B",
+      "explanation": "CLASSPATH tells the Java compiler and JVM where to search for .class files and library JARs. Without a properly set CLASSPATH, the JVM cannot locate user-defined or third-party classes."
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What is the correct command to compile a Java source file named 'HelloWorld.java'?",
+      "options": {
+        "A": "java HelloWorld.java",
+        "B": "javac HelloWorld",
+        "C": "compile HelloWorld.java",
+        "D": "javac HelloWorld.java"
+      },
+      "answer": "D",
+      "explanation": "The javac command compiles Java source files and requires the full filename including the .java extension. It produces a HelloWorld.class file in the same directory by default."
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What is the correct command to run a compiled Java class named 'HelloWorld'?",
+      "options": {
+        "A": "java HelloWorld.class",
+        "B": "java HelloWorld",
+        "C": "javac HelloWorld",
+        "D": "run HelloWorld.class"
+      },
+      "answer": "B",
+      "explanation": "The java command runs compiled classes using the class name WITHOUT the .class extension. Including '.class' is a common mistake that causes a 'ClassNotFoundException' or 'NoClassDefFoundError'."
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "Which JDK version was demonstrated in Lecture 4 of the NPTEL Java course?",
+      "options": {
+        "A": "JDK 1.6.0_45",
+        "B": "JDK 1.7.0_80",
+        "C": "JDK 1.8.0_171",
+        "D": "JDK 11.0.2"
+      },
+      "answer": "C",
+      "explanation": "The NPTEL Lecture 4 demonstration specifically shows JDK 1.8.0_171 installed on the system. JDK 1.8 is also commonly referred to as Java 8, which is the version recommended in this course."
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "Which text editor is recommended in the NPTEL Java course for writing Java source files?",
+      "options": {
+        "A": "Microsoft Word",
+        "B": "Notepad++",
+        "C": "Eclipse",
+        "D": "vi/vim only"
+      },
+      "answer": "B",
+      "explanation": "Notepad++ is recommended as a lightweight code editor because it provides syntax highlighting, line numbers, and a simple interface. It is free and does not impose the overhead of a full IDE for beginners."
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What happens if the Java source filename does not match the public class name inside it?",
+      "options": {
+        "A": "The program runs but produces wrong output",
+        "B": "A compilation error occurs",
+        "C": "The JVM renames the class automatically",
+        "D": "A runtime exception is thrown"
+      },
+      "answer": "B",
+      "explanation": "Java requires that the filename match the public class name exactly (including case). If they don't match, the javac compiler throws an error like 'class ClassName is public, should be declared in a file named ClassName.java'."
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What file extension does a compiled Java class file have?",
+      "options": {
+        "A": ".java",
+        "B": ".exe",
+        "C": ".class",
+        "D": ".jar"
+      },
+      "answer": "C",
+      "explanation": "When javac compiles a .java source file, it produces a .class file containing Java bytecode. This bytecode is platform-independent and is executed by the Java Virtual Machine (JVM)."
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What is considered a best practice for organizing Java project files?",
+      "options": {
+        "A": "Store all files in the root C:\\ directory",
+        "B": "Mix source and class files in the same directory as the JDK",
+        "C": "Create a dedicated project directory for each Java project",
+        "D": "Keep all projects in the JAVA_HOME directory"
+      },
+      "answer": "C",
+      "explanation": "Creating a dedicated project directory for each Java project is a best practice. It keeps source files, class files, and resources organized and avoids conflicts between different projects or JDK files."
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "If JAVA_HOME is set to 'C:\\Program Files\\Java\\jdk1.8.0_171', what should be appended to PATH?",
+      "options": {
+        "A": "C:\\Program Files\\Java",
+        "B": "C:\\Program Files\\Java\\jdk1.8.0_171",
+        "C": "C:\\Program Files\\Java\\jdk1.8.0_171\\bin",
+        "D": "C:\\Program Files\\Java\\jdk1.8.0_171\\lib"
+      },
+      "answer": "C",
+      "explanation": "The bin subdirectory contains all executable JDK tools (javac, java, jdb, etc.). Adding the bin directory to PATH makes these tools runnable from any command-line location without specifying the full path each time."
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "A student creates a file named 'helloworld.java' (lowercase) but declares 'public class HelloWorld' inside. What will happen during compilation?",
+      "options": {
+        "A": "Compilation succeeds and creates HelloWorld.class",
+        "B": "Compilation fails with an error about class name mismatch",
+        "C": "Compilation succeeds and creates helloworld.class",
+        "D": "The compiler automatically renames the file to HelloWorld.java"
+      },
+      "answer": "B",
+      "explanation": "Java is case-sensitive, and the filename must exactly match the public class name. 'helloworld.java' does not match 'HelloWorld' (case difference), so javac will produce an error: 'class HelloWorld is public, should be declared in a file named HelloWorld.java'."
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "What distinguishes the CLASSPATH variable from the PATH variable in a Java setup?",
+      "options": {
+        "A": "PATH locates Java source files; CLASSPATH locates the JDK",
+        "B": "PATH locates OS-level executables (including JDK tools); CLASSPATH locates .class files for the JVM",
+        "C": "They serve identical purposes and only one is needed",
+        "D": "CLASSPATH is only needed on Linux; PATH is only needed on Windows"
+      },
+      "answer": "B",
+      "explanation": "PATH is an OS-level variable that helps the shell find executable programs like javac and java. CLASSPATH is a Java-specific variable that tells the JVM and compiler where to find compiled .class files and library JARs during compilation and execution."
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "A student runs 'java MyProgram.class' instead of 'java MyProgram'. What error will most likely occur?",
+      "options": {
+        "A": "SyntaxError: Invalid class name",
+        "B": "NoClassDefFoundError or ClassNotFoundException for 'MyProgram/class'",
+        "C": "The program runs but prints nothing",
+        "D": "Compilation error — .class extension is not allowed"
+      },
+      "answer": "B",
+      "explanation": "When you run 'java MyProgram.class', Java treats 'MyProgram.class' as the class name (with the dot interpreted as a package separator). It looks for a class named 'class' in a package 'MyProgram', which doesn't exist, resulting in a NoClassDefFoundError."
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Why must the class name match the filename in Java, unlike in some other languages?",
+      "options": {
+        "A": "It is purely a convention; Java doesn't technically require it",
+        "B": "The JVM uses the filename to locate the .class file when the class is referenced",
+        "C": "The Java compiler cannot read files with mismatched names",
+        "D": "The OS file system restricts class names to match filenames"
+      },
+      "answer": "B",
+      "explanation": "Java's class loading mechanism uses the class name to find the corresponding .class file. The JVM looks for 'HelloWorld.class' when loading a class named 'HelloWorld'. If the names don't match, the class cannot be found. This rule also allows the compiler to enforce one public class per file."
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "What does the %JAVA_HOME% syntax signify on Windows when used in environment variable configuration?",
+      "options": {
+        "A": "It is a literal string to be typed exactly",
+        "B": "It is a reference to the value of the JAVA_HOME variable",
+        "C": "It is a special JDK command",
+        "D": "It indicates a Java method call"
+      },
+      "answer": "B",
+      "explanation": "On Windows, %VARIABLE_NAME% is the syntax for variable expansion. %JAVA_HOME% expands to the current value of the JAVA_HOME environment variable. This allows PATH to be set as '%JAVA_HOME%\\bin' without hardcoding the actual installation path."
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "After compiling 'HelloWorld.java', which file is created by default in the same directory?",
+      "options": {
+        "A": "HelloWorld.exe",
+        "B": "HelloWorld.jar",
+        "C": "HelloWorld.class",
+        "D": "HelloWorld.java.compiled"
+      },
+      "answer": "C",
+      "explanation": "By default, javac places the compiled HelloWorld.class file in the same directory as the source file. To output to a different directory, you use 'javac -d targetDirectory HelloWorld.java'."
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What is the consequence of NOT including the JDK bin directory in the system PATH?",
+      "options": {
+        "A": "Java programs will run but 50% slower",
+        "B": "Commands like javac and java will not be found unless the full path is specified each time",
+        "C": "The JDK will automatically uninstall",
+        "D": "Only 'java' will work; 'javac' will be unavailable"
+      },
+      "answer": "B",
+      "explanation": "Without the JDK bin in PATH, the OS cannot locate the java and javac executables by name. You would need to type the full path (e.g., 'C:\\Program Files\\Java\\jdk1.8.0_171\\bin\\javac') every time, which is impractical."
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "In Notepad++, what feature makes it particularly suitable for editing Java source code compared to plain Notepad?",
+      "options": {
+        "A": "It can compile and run Java directly",
+        "B": "It provides syntax highlighting and line numbers",
+        "C": "It automatically manages CLASSPATH settings",
+        "D": "It prevents compilation errors proactively"
+      },
+      "answer": "B",
+      "explanation": "Notepad++ provides syntax highlighting (color-codes keywords, strings, comments) and line numbers, which help developers write and navigate code more easily. Plain Notepad lacks these features, making it harder to spot syntax issues visually."
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "A developer wants to verify that Java is properly installed and configured. Which command checks the installed Java version?",
+      "options": {
+        "A": "java -show",
+        "B": "javac --version",
+        "C": "java -version",
+        "D": "java --info"
+      },
+      "answer": "C",
+      "explanation": "'java -version' displays the installed JRE version, vendor, and build number. It is the standard command to verify Java installation and confirm which version is active in the current PATH."
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "A developer has two JDK versions installed: JDK 8 at C:\\jdk8\\bin and JDK 11 at C:\\jdk11\\bin. Both are in PATH (JDK 8 first). What JDK version will 'javac' use?",
+      "options": {
+        "A": "JDK 11, because newer versions take precedence",
+        "B": "JDK 8, because it appears first in PATH",
+        "C": "The one pointed to by JAVA_HOME, regardless of PATH order",
+        "D": "Both versions are used simultaneously"
+      },
+      "answer": "B",
+      "explanation": "The OS searches PATH entries in order and uses the first matching executable found. Since C:\\jdk8\\bin appears before C:\\jdk11\\bin in PATH, javac from JDK 8 is used. To switch versions, you must reorder PATH or change JAVA_HOME and update PATH accordingly."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "When running 'java MyProgram arg1 arg2', what is the value of args[0] inside the main method?",
+      "options": {
+        "A": "MyProgram",
+        "B": "java",
+        "C": "arg1",
+        "D": "arg2"
+      },
+      "answer": "C",
+      "explanation": "In Java, command-line arguments start at args[0], which receives the first argument after the class name. 'java' and 'MyProgram' are the interpreter and class name, not passed as args. So args[0]='arg1' and args[1]='arg2'."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "If CLASSPATH is set to 'C:\\MyLib' and a user runs 'java com.example.App' from 'C:\\Projects', where will the JVM look for com/example/App.class?",
+      "options": {
+        "A": "Only in C:\\Projects\\com\\example\\",
+        "B": "Only in C:\\MyLib\\com\\example\\",
+        "C": "In both C:\\Projects\\com\\example\\ and C:\\MyLib\\com\\example\\",
+        "D": "In the JDK installation directory"
+      },
+      "answer": "B",
+      "explanation": "When CLASSPATH is explicitly set, the JVM searches only the paths listed in CLASSPATH, not the current directory (unless '.' is included). The JVM maps package names to directory structure, so it looks for com\\example\\App.class under each CLASSPATH entry."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "A source file 'Calc.java' contains TWO classes: 'public class Calc' and 'class Helper'. After compilation, how many .class files are produced?",
+      "options": {
+        "A": "One: Calc.class only",
+        "B": "One: Calc.class (Helper is inlined)",
+        "C": "Two: Calc.class and Helper.class",
+        "D": "Compilation error — only one class allowed per file"
+      },
+      "answer": "C",
+      "explanation": "Java allows multiple classes in one source file, but only one can be public and it must match the filename. The compiler produces a separate .class file for EACH class defined, so both Calc.class and Helper.class are generated from Calc.java."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Why is it a best practice to use '%JAVA_HOME%\\bin' in PATH rather than hardcoding 'C:\\Program Files\\Java\\jdk1.8.0_171\\bin'?",
+      "options": {
+        "A": "JAVA_HOME is faster to evaluate than hardcoded paths",
+        "B": "Changing JAVA_HOME alone updates PATH everywhere it is referenced, enabling easy JDK version switches",
+        "C": "Windows requires variable expansion in PATH for security reasons",
+        "D": "Hardcoded paths do not work with spaces in directory names"
+      },
+      "answer": "B",
+      "explanation": "Using %JAVA_HOME%\\bin means PATH dynamically reflects whatever JAVA_HOME points to. When upgrading the JDK, you only need to update JAVA_HOME; PATH and all tools that reference %JAVA_HOME% automatically use the new version without additional changes."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "A developer successfully compiles 'MyApp.java' to get 'MyApp.class', then renames 'MyApp.class' to 'App.class' and runs 'java App'. What happens?",
+      "options": {
+        "A": "The program runs successfully",
+        "B": "NoClassDefFoundError because the class name inside the bytecode is still 'MyApp'",
+        "C": "ClassCastException at runtime",
+        "D": "The JVM automatically maps App to MyApp"
+      },
+      "answer": "B",
+      "explanation": "The .class file contains the fully qualified class name ('MyApp') embedded in the bytecode. When you run 'java App', the JVM looks for a class named 'App' inside App.class, but finds 'MyApp' instead, resulting in a NoClassDefFoundError or class loading failure."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "What is the difference between System PATH and CLASSPATH in terms of which Java component uses each?",
+      "options": {
+        "A": "Both PATH and CLASSPATH are used only by javac",
+        "B": "PATH is used by the OS shell to find JDK executables; CLASSPATH is used by the JVM and compiler to find Java classes",
+        "C": "PATH is used by the JVM; CLASSPATH is used by the OS",
+        "D": "PATH and CLASSPATH are merged into one variable at JVM startup"
+      },
+      "answer": "B",
+      "explanation": "PATH is an OS-level mechanism: the shell searches PATH to locate executables like javac and java. Once the JVM is running, it uses CLASSPATH to locate .class files and JARs needed to resolve class references. They operate at different layers of the software stack."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "A student writes a class 'public class Main' in a file 'Main.java', compiles it successfully, then moves only the .class file to a new directory and runs it there without setting CLASSPATH. Will it run?",
+      "options": {
+        "A": "No — the .java source file must be present at runtime",
+        "B": "Yes — the JVM runs .class files and by default searches the current directory",
+        "C": "No — the .class file must remain in the same directory as it was compiled",
+        "D": "Yes — but only if JAVA_HOME points to the new directory"
+      },
+      "answer": "B",
+      "explanation": "The JVM only needs the .class file (bytecode) to execute a program; the .java source file is not required at runtime. When CLASSPATH is not set, the JVM defaults to searching the current working directory, so running 'java Main' from the directory containing Main.class will succeed."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Why does the Java ecosystem use bytecode (.class) as an intermediate format instead of compiling directly to native machine code?",
+      "options": {
+        "A": "Bytecode compresses better than machine code, saving disk space",
+        "B": "Bytecode enables platform independence: the same .class file runs on any OS with a JVM",
+        "C": "Native code compilation is not supported by javac",
+        "D": "Bytecode is faster to execute than native machine code"
+      },
+      "answer": "B",
+      "explanation": "Java's 'write once, run anywhere' principle is achieved through bytecode. The compiler produces platform-independent bytecode, and each OS has its own JVM implementation that translates bytecode to native machine instructions at runtime. This separates compilation from the target platform."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "During the Lecture 4 demonstration, if you change the Java source code and want the changes to take effect, what must you do before running the program again?",
+      "options": {
+        "A": "Restart the command prompt only",
+        "B": "Recompile the source file with javac before running java again",
+        "C": "Delete the old .class file — Java will automatically recompile",
+        "D": "Set CLASSPATH to point to the .java file"
+      },
+      "answer": "B",
+      "explanation": "The JVM executes the compiled .class file, not the .java source file. After modifying the source, you must recompile with javac to produce an updated .class file. Simply re-running 'java ClassName' without recompiling will execute the OLD bytecode with your changes having no effect."
+    }
+  ]
+}

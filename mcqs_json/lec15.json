@@ -1,0 +1,396 @@
+{
+  "lecture": 15,
+  "title": "Information Hiding",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What is information hiding in Java?",
+      "options": {
+        "A": "Hiding source code from the JVM",
+        "B": "Controlling access to class members to protect internal implementation details",
+        "C": "Storing data in encrypted format",
+        "D": "Preventing certain classes from being compiled"
+      },
+      "answer": "B",
+      "explanation": "Information hiding means controlling which parts of a class are accessible from outside. By restricting access to internal implementation details, the class protects its state from unintended modification and simplifies the public interface."
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "How many access modifiers does Java provide?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "answer": "C",
+      "explanation": "Java provides 4 access modifiers: public, protected, private, and default (no modifier, also called package-private). Together they provide four levels of access control from most permissive (public) to most restrictive (private)."
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "Which access modifier makes a member accessible from ANYWHERE?",
+      "options": {
+        "A": "private",
+        "B": "protected",
+        "C": "default",
+        "D": "public"
+      },
+      "answer": "D",
+      "explanation": "public is the most permissive access modifier. A public member can be accessed from any class, in any package, anywhere in the program. There are no restrictions."
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "Which access modifier makes a member accessible ONLY within the same class?",
+      "options": {
+        "A": "public",
+        "B": "protected",
+        "C": "private",
+        "D": "default"
+      },
+      "answer": "C",
+      "explanation": "private is the most restrictive access modifier. A private member can only be accessed within the class where it is declared. Even subclasses and classes in the same package cannot directly access private members."
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What is the 'default' access level (no modifier) in Java?",
+      "options": {
+        "A": "Same as public",
+        "B": "Accessible within the same class only",
+        "C": "Package-private: accessible within the same class and same package",
+        "D": "Accessible everywhere except subclasses"
+      },
+      "answer": "C",
+      "explanation": "Default (no modifier, also called package-private) access allows a member to be accessed within the same class AND any other class in the same package (same directory in the filesystem). It is more permissive than private but not accessible from different packages."
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What access modifier must the main() method always have?",
+      "options": {
+        "A": "private",
+        "B": "protected",
+        "C": "default",
+        "D": "public"
+      },
+      "answer": "D",
+      "explanation": "main() must always be public because the JVM calls it from outside the class to start the program. If main() were private, protected, or default, the JVM would not be able to access it and the program would not start."
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "Where is a protected member accessible?",
+      "options": {
+        "A": "Only within the same class",
+        "B": "Within the same class and package only",
+        "C": "Within the same class, same package, AND subclasses (even in different packages)",
+        "D": "Everywhere, like public"
+      },
+      "answer": "C",
+      "explanation": "protected allows access from: (1) the declaring class, (2) any class in the same package, and (3) any subclass in any package. This makes it useful for providing controlled access to subclasses while hiding from unrelated classes."
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "Do access modifiers apply to both fields and methods?",
+      "options": {
+        "A": "No — only to methods",
+        "B": "No — only to fields",
+        "C": "Yes — access modifiers apply to both fields and methods",
+        "D": "Only to public fields and private methods"
+      },
+      "answer": "C",
+      "explanation": "Access modifiers (public, protected, private, default) can be applied to both fields (instance variables, class variables) and methods. They control who can read/modify the field or call the method."
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "Which principle does Java use access modifiers to implement?",
+      "options": {
+        "A": "Polymorphism",
+        "B": "Inheritance",
+        "C": "Information Hiding",
+        "D": "Serialization"
+      },
+      "answer": "C",
+      "explanation": "Access modifiers are the primary mechanism Java uses to implement information hiding. By marking internal fields as private, the class hides its implementation details from external code, exposing only what is necessary through public methods."
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "In access control ordering from MOST restrictive to LEAST restrictive, what is the correct order?",
+      "options": {
+        "A": "public → protected → default → private",
+        "B": "private → default → protected → public",
+        "C": "default → private → protected → public",
+        "D": "private → protected → public → default"
+      },
+      "answer": "B",
+      "explanation": "From most to least restrictive: private (same class only) < default (same package) < protected (same package + subclasses) < public (everywhere). This ordering is important for understanding how to choose the appropriate access level."
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "A field 'int balance' in class Account has no access modifier. Which classes can access it?",
+      "options": {
+        "A": "Only Account class",
+        "B": "Any class anywhere",
+        "C": "Account class and any class in the same package",
+        "D": "Account class and its subclasses only"
+      },
+      "answer": "C",
+      "explanation": "No modifier means default (package-private) access. 'balance' is accessible from Account itself and from any other class in the same package (same directory). Classes in different packages cannot access it."
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Why should most fields in a well-designed class be declared private?",
+      "options": {
+        "A": "Private fields run faster than public fields",
+        "B": "Prevents external code from directly modifying the object's internal state, ensuring data integrity",
+        "C": "Private fields don't consume memory",
+        "D": "Required by Java coding standards"
+      },
+      "answer": "B",
+      "explanation": "Declaring fields private forces all state changes to go through methods, which can validate input and enforce invariants. External code cannot set a Circle's radius to a negative value if r is private — the setRadius() method can check the value before assigning it."
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "What is the difference between 'protected' and 'default' access?",
+      "options": {
+        "A": "They are identical",
+        "B": "Protected is more restrictive than default",
+        "C": "Protected includes subclasses across different packages; default only covers the same package",
+        "D": "Default includes subclasses; protected only covers the same class"
+      },
+      "answer": "C",
+      "explanation": "Both protected and default are accessible within the same package. Protected additionally allows access from subclasses even if they are in different packages. Default is package-private only — subclasses in different packages cannot access default members."
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "A class in package 'com.bank' has a protected field. Can a subclass in package 'com.account' access it?",
+      "options": {
+        "A": "No — protected is limited to the same package",
+        "B": "Yes — protected allows access from subclasses regardless of package",
+        "C": "Only if both packages are imported",
+        "D": "Only if the field is also final"
+      },
+      "answer": "B",
+      "explanation": "Protected access extends across package boundaries for subclasses. A subclass in 'com.account' that extends the 'com.bank' class can access the protected field. This is the key distinction between protected (subclass access across packages) and default (same package only)."
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "What is the typical access pattern for implementing information hiding in Java?",
+      "options": {
+        "A": "Public fields, private methods",
+        "B": "Private fields with public getter and setter methods",
+        "C": "Static fields with protected methods",
+        "D": "Default fields with final methods"
+      },
+      "answer": "B",
+      "explanation": "The standard information hiding pattern is: private fields (no direct external access) + public getter methods (for reading: getBalance()) + public setter methods with validation (for writing: setBalance(x) checks x >= 0). This is called encapsulation with accessor/mutator pattern."
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Can access modifiers be applied to top-level classes (not inner classes)?",
+      "options": {
+        "A": "Yes — any access modifier can be used on top-level classes",
+        "B": "Only public or default — private and protected are not allowed on top-level classes",
+        "C": "Only private is allowed on top-level classes",
+        "D": "Access modifiers don't apply to classes, only members"
+      },
+      "answer": "B",
+      "explanation": "Top-level classes can only be public or default (no modifier). Private and protected are not allowed for top-level classes because they don't make conceptual sense — a private top-level class would be inaccessible to everything. Inner/nested classes can have any access modifier."
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What happens if you try to access a private field of class A from class B?",
+      "options": {
+        "A": "Runtime NullPointerException",
+        "B": "Compilation error: field has private access in A",
+        "C": "The field returns its default value (0 or null)",
+        "D": "The access is silently ignored"
+      },
+      "answer": "B",
+      "explanation": "Attempting to access a private member from outside its declaring class causes a compile-time error: 'variableName has private access in ClassName'. Java enforces access control at compile time, not runtime."
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What is a 'getter' method and why is it used with private fields?",
+      "options": {
+        "A": "A method that gets the class name",
+        "B": "A public method that returns the value of a private field, providing controlled read access",
+        "C": "A method that initializes private fields",
+        "D": "A method that gets objects from a database"
+      },
+      "answer": "B",
+      "explanation": "A getter (accessor) method provides read-only access to a private field: 'public int getRadius() { return r; }'. It allows external code to read the field's value without directly accessing it. The getter can also apply logic (e.g., return a copy instead of the original for mutable objects)."
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Two classes are in the same package. Class A has a field with default (no modifier) access. Can class B access it?",
+      "options": {
+        "A": "No — only A can access its own default fields",
+        "B": "Yes — default access allows access within the same package",
+        "C": "Only if B extends A",
+        "D": "Only if both classes are in the same file"
+      },
+      "answer": "B",
+      "explanation": "Default (package-private) access allows any class in the same package to access the member. Since A and B are in the same package, B can directly access A's default-access fields and methods without any inheritance relationship."
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "How does information hiding support the principle of 'coding to an interface' (using methods rather than direct field access)?",
+      "options": {
+        "A": "It forces all code to use interfaces",
+        "B": "Private fields require external code to interact with the object only through its public methods, creating a stable API independent of implementation",
+        "C": "It makes all methods default access",
+        "D": "It ensures all classes implement at least one interface"
+      },
+      "answer": "B",
+      "explanation": "When fields are private, external code can only interact with the object through its public methods. This creates a stable API: the implementation (how fields are stored, what algorithms are used) can change completely without affecting code that uses the class, as long as the public method signatures remain the same."
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Class A (package 'com.p1') has 'protected int x = 10'. Class B in 'com.p2' extends A and has 'void show() { System.out.println(x); }'. Is this valid?",
+      "options": {
+        "A": "No — protected doesn't work across packages",
+        "B": "Yes — B as a subclass of A can access A's protected member 'x' even in a different package",
+        "C": "Only if x is also static",
+        "D": "Only if both packages are in the same module"
+      },
+      "answer": "B",
+      "explanation": "Protected access grants access to subclasses regardless of package. B extends A, so B is a subclass of A. Inside B, the inherited protected field 'x' is accessible directly. This is exactly the designed use case for 'protected' — subclass access across package boundaries."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "What is the access table summary for all 4 modifiers? Which modifier allows access from (same class | same package | subclass | different package)?",
+      "options": {
+        "A": "public: Y|Y|Y|Y; protected: Y|Y|Y|N; default: Y|Y|N|N; private: Y|N|N|N",
+        "B": "public: Y|Y|Y|Y; protected: Y|Y|N|N; default: Y|Y|Y|N; private: Y|N|N|N",
+        "C": "public: Y|Y|Y|Y; protected: Y|Y|N|Y; default: Y|Y|N|N; private: Y|N|N|N",
+        "D": "public: Y|N|N|N; protected: Y|Y|N|N; default: Y|Y|Y|N; private: Y|Y|Y|Y"
+      },
+      "answer": "A",
+      "explanation": "Access table: public (Y|Y|Y|Y — everywhere); protected (Y|Y|Y|N — same class, same package, subclass YES, but different non-subclass package NO); default (Y|Y|N|N — same class and package only); private (Y|N|N|N — same class only). Protected allows subclass access across packages."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "A class has private fields and public setters. The setter 'setAge(int age) { this.age = age; }' has no validation. What problem does this create?",
+      "options": {
+        "A": "No problem — the private field is fully protected",
+        "B": "External code can set age to invalid values (negative, 999) through the setter, defeating information hiding's intent",
+        "C": "The setter won't compile without validation",
+        "D": "The JVM will automatically validate the value"
+      },
+      "answer": "B",
+      "explanation": "Information hiding alone (private fields) doesn't guarantee data integrity. Validation must be added to setters: 'if(age > 0 && age < 150) this.age = age; else throw new IllegalArgumentException(...)'. Without validation, making a field private only changes HOW it's accessed, not WHAT values it can hold."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "What is the 'principle of least privilege' and how does it relate to Java access modifiers?",
+      "options": {
+        "A": "Give every member the highest possible access for flexibility",
+        "B": "Give every member the minimum access necessary for its function, reducing the attack surface and unintended dependencies",
+        "C": "Only privileged users can access any class members",
+        "D": "All classes should use only private members"
+      },
+      "answer": "B",
+      "explanation": "The principle of least privilege says to grant only the access needed and no more. In Java: use private unless protected/default/public is needed. This minimizes the API surface, reduces dependencies, prevents misuse, and makes code easier to change (fewer external dependencies on internals)."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "If class C (different package, not a subclass of A) tries to access A's protected field, what happens?",
+      "options": {
+        "A": "Successful — protected allows all class access",
+        "B": "Compilation error — protected access does not extend to non-subclasses in different packages",
+        "C": "Runtime error",
+        "D": "Access succeeds if C imports A's package"
+      },
+      "answer": "B",
+      "explanation": "Protected access for non-subclasses is limited to the same package. Class C in a different package that doesn't extend A is neither in the same package nor a subclass — neither path grants protected access. Compilation fails with 'x has protected access in A'."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Is it possible to have a public method in a private inner class? What does public mean in that context?",
+      "options": {
+        "A": "No — private class members can only be private",
+        "B": "Yes — but 'public' on a method of a private class only means public within the outer class's context; it doesn't make it accessible from outside the outer class",
+        "C": "Yes — and it makes the method accessible from anywhere",
+        "D": "Public methods in private classes automatically become protected"
+      },
+      "answer": "B",
+      "explanation": "Access modifiers on class members are bounded by the class's own access. A public method in a private inner class can be called by the outer class (which has access to the private inner class), but not by any external class — because the class itself is private and inaccessible externally."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Why is it generally bad practice to have public fields in a class that's intended for use across multiple contexts?",
+      "options": {
+        "A": "Public fields use more memory",
+        "B": "Public fields allow any code to read AND write the field directly, bypassing any validation, creating tight coupling and preventing implementation changes",
+        "C": "Public fields cause compilation errors",
+        "D": "Public fields are only appropriate for static constants"
+      },
+      "answer": "B",
+      "explanation": "Public fields create tight coupling: external code can modify the field directly, bypassing validation; changing the field type or name breaks all code that uses it; you can't add behavior (logging, validation) later without breaking the API. Public static final constants (like Math.PI) are the exception — immutability makes public safe there."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "What is 'reflection' in Java and how does it relate to access modifiers?",
+      "options": {
+        "A": "Reflection is a mirror copy of a class",
+        "B": "Reflection allows runtime inspection and manipulation of classes, potentially bypassing private access via setAccessible(true) — but this is controlled by security managers",
+        "C": "Reflection strengthens access modifiers at runtime",
+        "D": "Reflection is only for public members"
+      },
+      "answer": "B",
+      "explanation": "Java's Reflection API (java.lang.reflect) can access private members at runtime by calling field.setAccessible(true). This bypasses normal access control and is used by frameworks (Spring, Hibernate). Security managers can restrict this. It demonstrates that access modifiers are enforced at compile time and by convention at runtime, but can be bypassed deliberately."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "In a well-designed API, what is the recommended relationship between the access level of a class and its methods?",
+      "options": {
+        "A": "Methods should be more restrictive than their class",
+        "B": "Methods should have the same access as their class",
+        "C": "Methods can be any access level, but public methods define the class's contract and should be designed carefully",
+        "D": "All methods must be public for an API to be usable"
+      },
+      "answer": "C",
+      "explanation": "In API design, public methods form the class's contract — they are the promised interface. Private and package-private methods are implementation details. Making a method public is a commitment (changing/removing it is a breaking change). This is why you should think carefully before making a method public and prefer the minimum access needed."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "How do access modifiers support 'loose coupling' between classes?",
+      "options": {
+        "A": "They make all dependencies explicit in import statements",
+        "B": "By hiding implementation details (private), external classes can only depend on the public interface, not on internal implementation — allowing implementation changes without affecting clients",
+        "C": "They prevent any interaction between classes",
+        "D": "They enforce that each class handles exactly one function"
+      },
+      "answer": "B",
+      "explanation": "Loose coupling means classes depend on each other's interface (public API), not on implementation details. When internals are private, implementation can be freely changed (better algorithm, different data structure) without breaking external code that only uses the public interface. This is fundamental to maintainable, flexible software architecture."
+    }
+  ]
+}

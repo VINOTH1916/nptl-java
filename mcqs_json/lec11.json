@@ -1,0 +1,396 @@
+{
+  "lecture": 11,
+  "title": "Java Scope Rules",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What does 'scope' mean in the context of Java programming?",
+      "options": {
+        "A": "The size of a Java file",
+        "B": "The region of code where a variable is defined and accessible",
+        "C": "The number of classes in a program",
+        "D": "The execution order of methods"
+      },
+      "answer": "B",
+      "explanation": "Scope refers to the region of a program where a variable is visible and accessible. A variable is only valid within its scope; outside it, the variable doesn't exist (from the compiler's perspective)."
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What type of scope rule does Java use to determine variable scope?",
+      "options": {
+        "A": "Only dynamic scope rules",
+        "B": "Only static scope rules",
+        "C": "Both static and dynamic scope rules",
+        "D": "No scope rules — all variables are global"
+      },
+      "answer": "C",
+      "explanation": "Java uses both static (lexical) scope and dynamic scope rules. Static scope determines which variables a block can access based on the source code structure (at compile time), while dynamic scope applies at runtime for things like method calls and object resolution."
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is a static (lexical) scope rule?",
+      "options": {
+        "A": "Scope determined at runtime based on the call stack",
+        "B": "Scope determined by reading the source code structure (at compile time)",
+        "C": "Scope that only applies to static variables",
+        "D": "Scope restricted to static methods"
+      },
+      "answer": "B",
+      "explanation": "Static (lexical) scope means the scope of a variable is determined by its position in the source code — which block or method it is declared in. The compiler determines scope by analyzing the code structure, without running the program."
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What is an instance variable?",
+      "options": {
+        "A": "A variable declared inside a method",
+        "B": "A variable declared in the class body; each object has its own copy",
+        "C": "A variable shared by all objects of the class",
+        "D": "A variable declared with the 'static' keyword"
+      },
+      "answer": "B",
+      "explanation": "An instance variable is declared in the class body (not inside any method) without the static keyword. Each object created from the class has its own independent copy of instance variables, allowing different objects to hold different values."
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What is a class (static) variable?",
+      "options": {
+        "A": "A variable declared inside a constructor",
+        "B": "A variable declared with 'static' in the class body; one copy shared by all objects",
+        "C": "A variable used only in static methods",
+        "D": "A final variable that cannot change"
+      },
+      "answer": "B",
+      "explanation": "A class variable is declared with the 'static' keyword in the class body. Unlike instance variables, there is exactly ONE copy of a class variable shared by all objects of the class. Modifying it through any object changes it for all objects."
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What is block scope in Java?",
+      "options": {
+        "A": "Variables accessible throughout the entire class",
+        "B": "A variable declared inside { } braces is only accessible within those braces",
+        "C": "Variables that are blocked from access",
+        "D": "Scope that applies only to while loops"
+      },
+      "answer": "B",
+      "explanation": "Block scope means a variable declared inside a pair of curly braces { } is only visible within that block. Once the block ends, the variable is out of scope and inaccessible. This applies to if blocks, loop bodies, and method bodies."
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "How are namespace collisions (two objects having fields with the same name) resolved in Java?",
+      "options": {
+        "A": "By renaming one field",
+        "B": "Using the object reference before the field name: b.x vs c.x",
+        "C": "Using the class name: Box.x vs Circle.x",
+        "D": "Collisions are compilation errors in Java"
+      },
+      "answer": "B",
+      "explanation": "When two objects have fields with the same name (e.g., Box b and Circle c both have field 'x'), Java uses the object reference to disambiguate: b.x refers to Box's x and c.x refers to Circle's x. Each is a distinct field belonging to its respective object."
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What happens to a variable declared inside an if block after the if block ends?",
+      "options": {
+        "A": "It becomes accessible throughout the method",
+        "B": "It retains its value but becomes read-only",
+        "C": "It goes out of scope and is no longer accessible",
+        "D": "It is converted to a class variable"
+      },
+      "answer": "C",
+      "explanation": "Variables declared inside a block (including if blocks) have block scope. They exist only within the { } of that block. Once the closing brace is reached, the variable goes out of scope and the memory is eligible for garbage collection."
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "Does Java have truly global variables (accessible from any class anywhere)?",
+      "options": {
+        "A": "Yes — any variable declared outside a class is global",
+        "B": "Yes — variables in the main class are global",
+        "C": "No — Java does not support global variables; the closest is public static variables in a class",
+        "D": "Yes — static variables are automatically global"
+      },
+      "answer": "C",
+      "explanation": "Java has no global variables. The closest equivalent is a public static variable in a class, which can be accessed from anywhere using 'ClassName.variableName'. But it is still associated with a class, not a standalone global."
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "If two Box objects b and c are created with b.x = 5 and c.x = 10, what is b.x?",
+      "options": {
+        "A": "10, because c.x assignment overwrites b.x",
+        "B": "5, because b and c are independent objects with their own fields",
+        "C": "0, because objects don't retain values",
+        "D": "Compilation error due to namespace collision"
+      },
+      "answer": "B",
+      "explanation": "b.x and c.x are independent instance variables — each object has its own x. Setting c.x = 10 does not affect b.x = 5. The namespace collision (both having 'x') is resolved by using the object reference (b.x vs c.x)."
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "In a class with instance variable 'int x = 5' and a method 'void test() { int x = 10; System.out.println(x); }', what does the method print?",
+      "options": {
+        "A": "5 (the instance variable)",
+        "B": "10 (the local variable shadows the instance variable)",
+        "C": "15 (sum of both x values)",
+        "D": "Compilation error due to duplicate declaration"
+      },
+      "answer": "B",
+      "explanation": "The local variable 'x' declared inside test() shadows the instance variable 'x'. Within the method, the name 'x' refers to the nearest (innermost) scope, which is the local variable. To access the instance variable, use 'this.x'. Printing 'x' alone gives 10."
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "What is the difference between instance scope and class (static) scope?",
+      "options": {
+        "A": "Instance scope is faster; class scope is slower",
+        "B": "Instance variables belong to each object (per-object copy); class variables belong to the class (one shared copy)",
+        "C": "Instance scope is for methods; class scope is for fields",
+        "D": "They are identical except for naming"
+      },
+      "answer": "B",
+      "explanation": "Instance scope means each object has its own copy of the variable — changing one object's instance variable doesn't affect others. Class (static) scope means there is one shared copy — changing it via any reference affects all objects."
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "What is a 'namespace collision' and how does Java handle it?",
+      "options": {
+        "A": "Two packages with the same name — handled by renaming",
+        "B": "Two variables or fields with the same name in scope simultaneously — handled through scoping rules and object references",
+        "C": "Two methods with the same name — causes compilation error",
+        "D": "Two classes with the same name in the same file — handled by inheritance"
+      },
+      "answer": "B",
+      "explanation": "A namespace collision occurs when two accessible items have the same name. Java resolves this through scoping: local variables shadow instance variables (use 'this.x' to access the instance variable). For different objects with fields of the same name, use object references (b.x vs c.x)."
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Given: 'static int count = 0;' in class Student. If s1.count++ and s2.count++ are called, what is the value of Student.count?",
+      "options": {
+        "A": "0 — static variables cannot be changed through object references",
+        "B": "1 — only the last increment counts",
+        "C": "2 — both increments affect the single shared copy",
+        "D": "Undefined — static variable accessed through object reference is invalid"
+      },
+      "answer": "C",
+      "explanation": "The static variable 'count' has one shared copy across all Student instances. s1.count++ increments count to 1, and s2.count++ increments the same count to 2. Both operate on the same memory location, so Student.count = 2."
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "What does 'dynamic scope rule' mean in the context of Java?",
+      "options": {
+        "A": "Variables change type at runtime",
+        "B": "Scope is determined at runtime based on the actual method call chain and object types",
+        "C": "All variables are dynamically allocated",
+        "D": "Variable names can be changed at runtime"
+      },
+      "answer": "B",
+      "explanation": "Dynamic scope is determined at runtime. In Java, this manifests in method dispatch for polymorphism — the actual method called is determined at runtime based on the actual object type, not the declared reference type. This is different from static scope which is fixed at compile time."
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "A variable declared inside a for loop body — what is its scope?",
+      "options": {
+        "A": "Accessible in the entire method",
+        "B": "Accessible only within the for loop body (the { } block)",
+        "C": "Accessible until the program ends",
+        "D": "Accessible only on the line it is declared"
+      },
+      "answer": "B",
+      "explanation": "A variable declared inside the for loop body { } has block scope — it exists only within that block. It is created on each iteration and destroyed at the end of each iteration. It is not accessible before the loop or after the loop."
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "How can you access an instance variable 'x' when a method parameter also named 'x' shadows it?",
+      "options": {
+        "A": "x.instance",
+        "B": "super.x",
+        "C": "this.x",
+        "D": "class.x"
+      },
+      "answer": "C",
+      "explanation": "'this.x' explicitly refers to the instance variable of the current object, bypassing the shadowing local variable. 'this' is a reference to the current object, and 'this.x' navigates to its field 'x', regardless of any local variable named 'x'."
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What is the scope of a method parameter in Java?",
+      "options": {
+        "A": "Accessible throughout the entire class",
+        "B": "Accessible only within the method body",
+        "C": "Accessible in all methods of the class",
+        "D": "Accessible only in the line where it is used"
+      },
+      "answer": "B",
+      "explanation": "Method parameters are local to the method — their scope is the method body. They are created when the method is called and destroyed when the method returns. They are not accessible in other methods or the class body."
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What is the purpose of having both instance and class variables in Java?",
+      "options": {
+        "A": "Instance variables are for primitive types; class variables are for objects",
+        "B": "Instance variables hold per-object state; class variables hold shared state common to all objects",
+        "C": "They serve the same purpose but with different performance",
+        "D": "Class variables are faster; instance variables are safer"
+      },
+      "answer": "B",
+      "explanation": "Instance variables model per-object characteristics (a Circle's specific radius, a Student's name). Class variables model shared properties common to all instances (a counter of how many Students exist, a constant like PI). This distinction allows both individual and shared state."
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Can two different methods in the same class declare local variables with the same name?",
+      "options": {
+        "A": "No — variable names must be unique within the class",
+        "B": "Yes — each method has its own scope; same-named locals don't conflict",
+        "C": "Only if one is static and the other is not",
+        "D": "Only if they are of the same type"
+      },
+      "answer": "B",
+      "explanation": "Local variables in different methods don't conflict because each method has its own independent scope. 'int x' in method A and 'int x' in method B are completely separate variables with no relationship to each other."
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Given: class A { int x=1; void show() { int x=2; { int x=3; /* ERROR HERE */ } } }, what is the issue with int x=3?",
+      "options": {
+        "A": "No issue — three different x's are fine",
+        "B": "Compilation error: variable x is already defined in the inner block's enclosing scope",
+        "C": "Runtime error when x=3 is accessed",
+        "D": "x=3 silently shadows x=2"
+      },
+      "answer": "B",
+      "explanation": "In Java, you cannot redeclare a local variable in a nested block if a variable with the same name already exists in an enclosing block within the same method. 'int x=2' is in the method scope, so 'int x=3' in the nested block causes a compilation error: 'variable x is already defined in method show()'."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "What is the key difference between Java's handling of scope and C's handling of scope in terms of shadowing?",
+      "options": {
+        "A": "C allows variable shadowing in nested blocks within the same function; Java does NOT allow this",
+        "B": "Java allows shadowing; C does not",
+        "C": "They handle scope identically",
+        "D": "C uses dynamic scope; Java uses static scope"
+      },
+      "answer": "A",
+      "explanation": "In C, you can redeclare a variable in a nested block even if the outer block has a variable with the same name (the inner shadows the outer). Java prohibits this within the same method — you cannot redeclare a local variable with a name already in an enclosing local scope. This prevents subtle bugs from accidental shadowing."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "In class Counter with 'static int count=0;' and 'Counter() { count++; }', if Counter a = new Counter() and Counter b = new Counter() are created, what is a.count, b.count, and Counter.count?",
+      "options": {
+        "A": "a.count=1, b.count=1, Counter.count=2",
+        "B": "a.count=2, b.count=2, Counter.count=2",
+        "C": "a.count=1, b.count=2, Counter.count=2",
+        "D": "All are 2, since it's the same variable"
+      },
+      "answer": "B",
+      "explanation": "Since count is static, there is only ONE count variable. After two object creations, count=2. All access paths (a.count, b.count, Counter.count) read the same underlying variable, so all return 2. This is the key behavior of class variables."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "What problem does Java's prohibition of inner-scope redeclaration of local variables (unlike C) solve?",
+      "options": {
+        "A": "It prevents infinite loops",
+        "B": "It prevents subtle bugs where a programmer accidentally reuses a variable name in a nested block, expecting to modify the outer variable but creating a new one instead",
+        "C": "It improves garbage collection performance",
+        "D": "It ensures backward compatibility with Java 1.0"
+      },
+      "answer": "B",
+      "explanation": "In C, a programmer might accidentally write 'int i = 5;' in a nested block intending to modify the outer 'i', but instead creating a new variable that shadows it. The outer 'i' is unchanged, causing bugs. Java catches this at compile time, forcing distinct names and preventing the confusion."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "In Java, what is the lifetime (not just scope) of an instance variable compared to a local variable?",
+      "options": {
+        "A": "Both exist for the entire program duration",
+        "B": "Instance variable lives as long as the object exists (heap lifetime); local variable exists only during method execution (stack lifetime)",
+        "C": "Local variables live longer than instance variables",
+        "D": "Both are destroyed when the method returns"
+      },
+      "answer": "B",
+      "explanation": "Instance variables are stored in heap memory and live as long as the object is reachable (until garbage collected). Local variables are stored in stack frames and are created when the method is called and destroyed when it returns. This is a fundamental memory management distinction."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Can a static method in a class access instance variables of the same class directly (without an object)?",
+      "options": {
+        "A": "Yes — static methods have full access to all class members",
+        "B": "No — instance variables require an object context; a static method has no 'this' reference",
+        "C": "Yes, but only if the instance variable is final",
+        "D": "Yes, but only if the instance variable is declared before the static method"
+      },
+      "answer": "B",
+      "explanation": "Static methods don't have a 'this' reference because they don't operate on a specific object. Instance variables require an object to belong to (they are per-object). A static method cannot directly access instance variables — it must create or receive an object reference first."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Consider: 'for(int i=0; i<5; i++) { System.out.println(i); } System.out.println(i);'. What happens with the final println(i)?",
+      "options": {
+        "A": "Prints 5 (the final value of i)",
+        "B": "Prints 4 (last loop iteration value)",
+        "C": "Compilation error: i is out of scope",
+        "D": "Runtime error: NullPointerException"
+      },
+      "answer": "C",
+      "explanation": "The loop variable 'i' declared in the for-loop's initialization is scoped to the for-loop (including its body). After the loop's closing brace, 'i' is out of scope. The final println(i) causes a compilation error: 'cannot find symbol: variable i'."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "In Java, what does 'static scope' (lexical scope) guarantee that makes Java code easier to reason about?",
+      "options": {
+        "A": "All methods always run in the same order",
+        "B": "A variable's accessible scope is determined by its physical position in the source code, not by the runtime call path, making it predictable from reading the code",
+        "C": "Static scope means variables never change values",
+        "D": "Variables declared static cannot be garbage collected"
+      },
+      "answer": "B",
+      "explanation": "Static (lexical) scope guarantees that you can determine a variable's scope by visually inspecting its position in the source code. You don't need to trace runtime call chains to know which 'x' a statement refers to. This predictability is fundamental to readable, maintainable code."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "If class A has 'static int x = 5;' and class B (in the same package) accesses 'A.x', what access modifier should 'x' have for this to work?",
+      "options": {
+        "A": "private",
+        "B": "protected",
+        "C": "public or default (package-private)",
+        "D": "final"
+      },
+      "answer": "C",
+      "explanation": "For class B (in the same package) to access A.x, the variable must be at least package-level accessible: public (accessible everywhere) or default/no-modifier (accessible within the same package). Private would restrict it to class A only. Protected would also work (package + subclasses)."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "What is the scope of a variable declared in a try block in Java?",
+      "options": {
+        "A": "Accessible in the entire method",
+        "B": "Accessible in the try block AND catch/finally blocks",
+        "C": "Accessible only within the try block's { } braces",
+        "D": "Accessible in catch blocks but not finally"
+      },
+      "answer": "C",
+      "explanation": "A variable declared inside a try block's { } has scope limited to that try block. It is NOT accessible in catch or finally blocks — those are separate blocks at the same lexical level. To access a variable in catch/finally, declare it before the try block."
+    }
+  ]
+}

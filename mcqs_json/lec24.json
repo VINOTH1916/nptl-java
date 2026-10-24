@@ -1,0 +1,391 @@
+{
+  "lecture": 24,
+  "title": "Exception Handling II",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What is the purpose of the finally block in Java exception handling?",
+      "options": {
+        "A": "To catch exceptions that were not caught by any catch block",
+        "B": "To execute cleanup code that always runs regardless of whether an exception occurred",
+        "C": "To declare which exceptions a method can throw",
+        "D": "To terminate the program after an exception"
+      },
+      "answer": "B",
+      "explanation": "The finally block always executes whether or not an exception is thrown, making it ideal for resource cleanup like closing file handles or database connections. It runs after the try block and any catch blocks."
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "How do you create a custom exception class in Java?",
+      "options": {
+        "A": "class MyException implements Exception { }",
+        "B": "class MyException extends Exception { }",
+        "C": "class MyException throws Exception { }",
+        "D": "class MyException catch Exception { }"
+      },
+      "answer": "B",
+      "explanation": "To create a custom (user-defined) exception, extend the Exception class (for a checked custom exception) or RuntimeException (for an unchecked one). For example: class InvalidAgeException extends Exception { }"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What method returns the message stored in an exception object?",
+      "options": {"A": "getError()", "B": "toString()", "C": "getMessage()", "D": "getDescription()"},
+      "answer": "C",
+      "explanation": "The getMessage() method returns the detail message string that was passed to the exception's constructor. It gives a human-readable description of the error condition."
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What does e.printStackTrace() do?",
+      "options": {
+        "A": "Returns the exception message as a String",
+        "B": "Terminates the program immediately",
+        "C": "Prints the full exception type, message, and call stack to standard error",
+        "D": "Clears the exception and continues normal execution"
+      },
+      "answer": "C",
+      "explanation": "printStackTrace() outputs the exception class name, message, and the complete call stack trace to standard error (System.err). This is very useful for debugging — it shows exactly where the exception was thrown and how the call chain led to it."
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What is exception propagation?",
+      "options": {
+        "A": "Cloning an exception and throwing it in multiple methods",
+        "B": "An unhandled exception moving up the call stack from the throwing method to its caller(s)",
+        "C": "Catching an exception and ignoring it",
+        "D": "Converting a checked exception to an unchecked one"
+      },
+      "answer": "B",
+      "explanation": "When a method throws an exception it doesn't catch, the exception propagates (bubbles up) to the calling method. This continues up the call stack until a matching catch block is found or the program terminates."
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "In Java 7+, how can you catch multiple different exception types in a single catch block?",
+      "options": {
+        "A": "catch(Exception1, Exception2 e)",
+        "B": "catch(Exception1 | Exception2 e)",
+        "C": "catch(Exception1 + Exception2 e)",
+        "D": "catch(Exception1 and Exception2 e)"
+      },
+      "answer": "B",
+      "explanation": "Java 7 introduced multi-catch: catch(IOException | SQLException e). The pipe (|) operator separates exception types, and the variable e refers to whichever type was actually thrown. This reduces code duplication."
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What is a user-defined exception used for?",
+      "options": {
+        "A": "Replacing all built-in Java exceptions",
+        "B": "Representing application-specific error conditions not covered by built-in exceptions",
+        "C": "Creating exceptions that cannot be caught",
+        "D": "Bypassing the try-catch requirement"
+      },
+      "answer": "B",
+      "explanation": "User-defined exceptions model domain-specific errors. For example, InvalidAgeException can signal that an age value is outside a valid range — a condition meaningful to the application but not represented by any built-in exception."
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What is the difference between 'throw' and 'throws' in Java?",
+      "options": {
+        "A": "They are interchangeable synonyms",
+        "B": "'throw' is used to actually throw an exception object; 'throws' declares potential exceptions in a method signature",
+        "C": "'throws' throws the exception; 'throw' declares it",
+        "D": "'throw' is for checked exceptions; 'throws' is for unchecked exceptions"
+      },
+      "answer": "B",
+      "explanation": "'throw' is an executable statement that throws a specific exception instance at runtime. 'throws' is a compile-time declaration in the method signature informing callers which checked exceptions the method may propagate."
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "Which is a best practice when catching exceptions?",
+      "options": {
+        "A": "Always catch the broadest exception type (Exception or Throwable)",
+        "B": "Catch specific exception types rather than broad ones",
+        "C": "Leave all exceptions uncaught for performance",
+        "D": "Use catch(Exception e) {} with an empty body to silence errors"
+      },
+      "answer": "B",
+      "explanation": "Catching specific exceptions allows for targeted error handling and avoids masking unexpected errors. Catching broad exceptions like Exception or Throwable can hide bugs and prevent proper recovery from the actual error condition."
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What does re-throwing an exception mean?",
+      "options": {
+        "A": "Creating a copy of the exception and throwing the copy",
+        "B": "Catching an exception in a catch block and then throwing it (or a new exception) again",
+        "C": "Printing the exception and stopping execution",
+        "D": "Converting a checked exception to an Error"
+      },
+      "answer": "B",
+      "explanation": "Re-throwing means catching an exception and then using 'throw' to propagate it further up the call stack. You may re-throw the same exception or wrap it in a new exception (exception chaining) to add context."
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Does the finally block execute even if there is a return statement in the catch block?",
+      "options": {
+        "A": "No — a return statement in catch exits the method immediately before finally runs",
+        "B": "Yes — finally always executes before the method actually returns",
+        "C": "Only if the return statement throws an exception",
+        "D": "Only if the finally block also has a return statement"
+      },
+      "answer": "B",
+      "explanation": "The finally block executes regardless of return statements in try or catch. The return value is saved, finally runs, and then the method returns. The only exception is System.exit(), which may bypass finally on some JVMs."
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "What is the constructor signature typically added to a custom exception class?",
+      "options": {
+        "A": "public MyException() only",
+        "B": "A constructor that accepts a String message and passes it to super(message)",
+        "C": "A static factory method instead of a constructor",
+        "D": "A default constructor that throws a compile error"
+      },
+      "answer": "B",
+      "explanation": "Custom exception classes typically include a constructor that takes a String message and calls super(message). This makes the error description available via getMessage() and ensures it displays properly in stack traces."
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "In multi-catch 'catch(IOException | SQLException e)', can 'e' be reassigned inside the catch block?",
+      "options": {
+        "A": "Yes, e can be reassigned to any exception object",
+        "B": "No — in multi-catch, e is effectively final and cannot be reassigned",
+        "C": "Yes, but only to a subclass of IOException",
+        "D": "Yes, e can be set to null to suppress the exception"
+      },
+      "answer": "B",
+      "explanation": "In a multi-catch block, the exception variable is implicitly final in Java 7+. This prevents reassignment, which could cause type ambiguity since e could represent either caught type. You can only read it, not reassign it."
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "What happens to the original exception when you catch it and throw a new exception without chaining?",
+      "options": {
+        "A": "The original exception is automatically included in the new exception's stack trace",
+        "B": "The original exception is lost — the new exception has no record of it",
+        "C": "Both exceptions are thrown simultaneously",
+        "D": "The original exception's message is automatically appended to the new one"
+      },
+      "answer": "B",
+      "explanation": "If you catch an exception and throw a new one without passing the original as the cause, the original exception's details are lost. This is why exception chaining (throw new NewException(\"msg\", originalException)) is recommended — it preserves the root cause."
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "What does 'throw new InvalidAgeException(\"Age must be >= 18\")' require about InvalidAgeException?",
+      "options": {
+        "A": "InvalidAgeException must be an interface",
+        "B": "InvalidAgeException must extend either Exception or RuntimeException and have a constructor accepting a String",
+        "C": "InvalidAgeException must be declared in the same method",
+        "D": "InvalidAgeException must be a final class"
+      },
+      "answer": "B",
+      "explanation": "To be thrown, InvalidAgeException must be a class that extends Throwable (directly or indirectly, via Exception or RuntimeException). The String constructor must exist to accept the message that getMessage() will return."
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "What is exception chaining and why is it useful?",
+      "options": {
+        "A": "Chaining multiple catch blocks for the same exception type",
+        "B": "Wrapping a caught exception inside a new exception (as the cause) to add higher-level context while preserving the root cause",
+        "C": "Throwing multiple exceptions simultaneously",
+        "D": "Linking exception classes using 'extends'"
+      },
+      "answer": "B",
+      "explanation": "Exception chaining captures the original exception as the cause of a new exception: 'throw new ServiceException(\"msg\", originalException)'. The getCause() method reveals the root cause, helping developers trace the actual error through layers of abstraction."
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "If a custom exception class extends Exception, does the caller need to handle it?",
+      "options": {
+        "A": "No — custom exceptions are always unchecked",
+        "B": "Yes — extending Exception makes it a checked exception; callers must catch or declare it",
+        "C": "Only if the exception is thrown with the 'throw' keyword",
+        "D": "Only if the exception class has a default constructor"
+      },
+      "answer": "B",
+      "explanation": "A custom class extending Exception is a checked exception. Callers of methods that throw it must handle it with try-catch or propagate it with throws. To create an unchecked custom exception, extend RuntimeException instead."
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "When does exception propagation stop?",
+      "options": {
+        "A": "When the exception reaches the top of the call stack (main method) and is still unhandled",
+        "B": "When the exception is caught by a matching catch block at any level of the call stack",
+        "C": "Both A and B are correct termination points",
+        "D": "Propagation never stops — it continues indefinitely"
+      },
+      "answer": "C",
+      "explanation": "Propagation stops either when a matching catch block is found at some level in the call stack, or when the exception reaches the bottom of the call stack (exits main()). In the latter case, the JVM prints the stack trace and terminates the program."
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What is the advantage of the multi-catch syntax 'catch(IOException | SQLException e)' over two separate catch blocks?",
+      "options": {
+        "A": "It processes both exceptions simultaneously",
+        "B": "It eliminates duplicate handler code when two exception types require the same handling logic",
+        "C": "It allows mixing checked and unchecked exceptions in one block",
+        "D": "It improves performance by reducing JVM exception checks"
+      },
+      "answer": "B",
+      "explanation": "Multi-catch reduces code duplication when different exception types need identical handling logic. Instead of repeating the same handler in two separate catch blocks, you write it once for both types, making code cleaner and easier to maintain."
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "e.getMessage() returns null for an exception. What does this indicate?",
+      "options": {
+        "A": "The exception was not actually thrown",
+        "B": "The exception was created with a no-argument constructor and no message was provided",
+        "C": "The exception has been caught and cleared",
+        "D": "The exception class does not extend Exception"
+      },
+      "answer": "B",
+      "explanation": "getMessage() returns the detail message string passed to the exception constructor. If the exception was created with a no-argument constructor (new SomeException()), the message is null, so getMessage() returns null."
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "What happens if an exception is thrown inside a finally block while another exception is already propagating?",
+      "options": {
+        "A": "Both exceptions propagate together as a chain",
+        "B": "The original exception is suppressed and replaced by the exception thrown in finally",
+        "C": "The finally exception is ignored; the original propagates",
+        "D": "A compile error prevents exceptions in finally blocks"
+      },
+      "answer": "B",
+      "explanation": "If a finally block throws an exception, it replaces (suppresses) the original exception that was propagating. The original exception is lost unless you explicitly save and re-attach it using Throwable.addSuppressed(), which Java 7+ try-with-resources does automatically."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Consider: a method declares 'throws IOException' but the body never actually throws IOException. Is this valid?",
+      "options": {
+        "A": "No — the compiler requires at least one throw statement matching the declared exception",
+        "B": "Yes — it is valid; it simply means callers must handle IOException even though it may never occur",
+        "C": "Yes, but only for abstract methods",
+        "D": "No — it causes an unchecked exception at runtime"
+      },
+      "answer": "B",
+      "explanation": "Java allows declaring exceptions with 'throws' even if the method body doesn't actually throw them. This is sometimes used for future extensibility or interface compliance. Callers must still handle the declared exception — the compiler enforces it."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "What is the relationship between Throwable.initCause() and exception chaining constructors?",
+      "options": {
+        "A": "initCause() can only be called once and before any constructor with a cause parameter",
+        "B": "Both set the cause, but initCause() can be used on exceptions whose constructors don't accept a cause parameter, whereas chaining constructors require a Throwable cause argument",
+        "C": "initCause() and chaining constructors are identical in all cases",
+        "D": "initCause() removes the existing cause; chaining constructors add a new one"
+      },
+      "answer": "B",
+      "explanation": "Exception chaining constructors (e.g., new SomeException(msg, cause)) set the cause at construction time. initCause() is a fallback for exception types that lack a cause-accepting constructor — it sets the cause post-construction but can only be called once."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "A finally block has a return statement. What effect does this have?",
+      "options": {
+        "A": "Compile error — return is not allowed in finally",
+        "B": "The finally block's return overrides any return in the try or catch blocks, and also suppresses any propagating exception",
+        "C": "The return in finally is ignored; the try/catch return takes precedence",
+        "D": "Both returns execute and the program uses the last one"
+      },
+      "answer": "B",
+      "explanation": "A return statement in a finally block overrides the return value from try or catch, and critically, also suppresses any exception that was propagating. This is considered a dangerous antipattern because it silently swallows exceptions."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Why should catch blocks for specific exceptions come before broader ones, and what is the consequence of reversing this order?",
+      "options": {
+        "A": "Order affects only performance — specific exceptions match faster",
+        "B": "If a broader exception (like Exception) comes first, it catches everything including specific ones, making later specific catch blocks unreachable — a compile error",
+        "C": "The JVM evaluates all catch blocks and picks the best match regardless of order",
+        "D": "Reversing the order causes both catch blocks to execute"
+      },
+      "answer": "B",
+      "explanation": "Java evaluates catch blocks in order. If Exception appears before IOException, any IOException is caught by the first block, making the IOException catch block unreachable. The compiler detects this and issues an error: 'Exception has already been caught'."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "What distinguishes a custom checked exception from a custom unchecked exception in terms of design decision?",
+      "options": {
+        "A": "Checked exceptions are for programming errors; unchecked for environment errors",
+        "B": "Checked exceptions are appropriate for recoverable conditions callers are expected to handle; unchecked for programming bugs that should not occur in correct code",
+        "C": "Unchecked exceptions are always slower due to runtime checks",
+        "D": "Checked exceptions can only be defined in java.lang; unchecked anywhere"
+      },
+      "answer": "B",
+      "explanation": "The design principle: use checked exceptions for conditions callers can reasonably anticipate and recover from (like FileNotFoundException). Use unchecked exceptions for programming errors (like null arguments) where the bug should be fixed rather than caught."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "In the call chain: main() → A() → B() → C(). C() throws a checked exception. A() has a try-catch for it. What must B() declare?",
+      "options": {
+        "A": "Nothing — A() catches it, so B() is unaffected",
+        "B": "B() must declare 'throws CheckedException' since it calls C() and does not catch it",
+        "C": "B() must catch it too, even though A() will also catch it",
+        "D": "B() automatically handles it because A() has a catch block"
+      },
+      "answer": "B",
+      "explanation": "Even though A() catches the exception, B() itself calls C() and does not handle the exception. B() must declare 'throws CheckedException' to propagate it. The compiler verifies each method individually — A()'s catch block does not exempt B() from the throws requirement."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "What is the primary risk of catching Exception with an empty catch body: catch(Exception e) {}?",
+      "options": {
+        "A": "It prevents the program from compiling",
+        "B": "It silently swallows all exceptions including unexpected ones, hiding bugs and making the program difficult to debug",
+        "C": "It causes the exception to be re-thrown automatically",
+        "D": "It only works for checked exceptions"
+      },
+      "answer": "B",
+      "explanation": "An empty catch block swallows exceptions silently. The program continues as if nothing went wrong, masking bugs and making failures invisible. This is one of the most dangerous antipatterns in Java — at minimum, log the exception or re-throw it."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "What does getCause() return when called on an exception that was not created with exception chaining?",
+      "options": {
+        "A": "The exception itself",
+        "B": "An empty string",
+        "C": "null — there is no cause if chaining was not used",
+        "D": "The parent exception class"
+      },
+      "answer": "C",
+      "explanation": "getCause() returns null when the exception has no associated cause — i.e., when it was created without exception chaining. It returns the Throwable cause only when initCause() was called or a cause-accepting constructor was used."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Why can't you use multi-catch with exception types that are in a subtype relationship?",
+      "options": {
+        "A": "Multi-catch requires all types to be from different packages",
+        "B": "If type A is a supertype of type B, catching both is redundant — A already catches B — so the compiler rejects it as an error",
+        "C": "Multi-catch only works with RuntimeExceptions, not checked exceptions",
+        "D": "The JVM cannot resolve the type at runtime if supertypes are mixed"
+      },
+      "answer": "B",
+      "explanation": "The compiler detects that catch(A | B e) where B extends A is redundant — type A would already catch any B. This is a compile-time error similar to having an unreachable catch block. All types in a multi-catch must be disjoint (no subtype relationship)."
+    }
+  ]
+}

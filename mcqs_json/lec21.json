@@ -1,0 +1,361 @@
+{
+  "lecture": 21,
+  "title": "Interfaces II",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "Which package contains the Iterator interface in Java?",
+      "options": {"A": "java.lang", "B": "java.util", "C": "java.io", "D": "java.awt"},
+      "answer": "B",
+      "explanation": "The Iterator interface is part of the java.util package. It provides methods hasNext(), next(), and remove() for iterating over collections."
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which of the following is a marker interface in Java?",
+      "options": {"A": "Comparable", "B": "Iterator", "C": "Cloneable", "D": "Runnable"},
+      "answer": "C",
+      "explanation": "Cloneable is a marker interface in java.lang — it has no methods. Its presence signals the JVM that an object's clone() method may be called to create a field-for-field copy."
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "Which interface must a class implement to enable object serialization in Java?",
+      "options": {"A": "Cloneable", "B": "Comparable", "C": "Serializable", "D": "Iterable"},
+      "answer": "C",
+      "explanation": "The Serializable interface (from java.io) is a marker interface that enables an object to be converted into a byte stream. Without implementing it, attempts to serialize the object will throw NotSerializableException."
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "Which method does the Comparable interface define?",
+      "options": {"A": "equals()", "B": "compareTo()", "C": "compare()", "D": "hashCode()"},
+      "answer": "B",
+      "explanation": "The Comparable interface (java.lang) declares the single method compareTo(Object o), which allows objects to be compared for natural ordering. It is used by sorting utilities like Collections.sort()."
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "Which method of the Iterator interface checks whether more elements remain in the collection?",
+      "options": {"A": "next()", "B": "remove()", "C": "hasNext()", "D": "peek()"},
+      "answer": "C",
+      "explanation": "The hasNext() method returns true if the iteration has more elements. It should always be called before next() to avoid a NoSuchElementException."
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "In Java, an interface can extend another interface using which keyword?",
+      "options": {"A": "implements", "B": "inherits", "C": "extends", "D": "uses"},
+      "answer": "C",
+      "explanation": "An interface uses the 'extends' keyword to inherit from another interface, not 'implements'. This allows building interface hierarchies without providing any implementation."
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "Which of the following correctly states how a class implements multiple interfaces?",
+      "options": {
+        "A": "class MyClass extends A, B",
+        "B": "class MyClass implements A extends B",
+        "C": "class MyClass implements A, B",
+        "D": "class MyClass extends A implements B, C only if B extends A"
+      },
+      "answer": "C",
+      "explanation": "A class can implement multiple interfaces by listing them after the 'implements' keyword, separated by commas. This is Java's way of achieving multiple inheritance of type."
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What does interface-based polymorphism allow in Java?",
+      "options": {
+        "A": "A class to have multiple constructors",
+        "B": "A reference variable of interface type to hold objects of any implementing class",
+        "C": "An interface to provide default method implementations only",
+        "D": "Multiple classes to share the same field values"
+      },
+      "answer": "B",
+      "explanation": "Interface-based polymorphism means a reference variable declared as the interface type can hold any object whose class implements that interface. This enables runtime polymorphism through dynamic method dispatch."
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "Which package contains the Comparable and Cloneable interfaces?",
+      "options": {"A": "java.util", "B": "java.io", "C": "java.lang", "D": "java.net"},
+      "answer": "C",
+      "explanation": "Both Comparable and Cloneable are defined in java.lang, which is automatically imported. Serializable is in java.io and Iterator is in java.util."
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "A shallow copy of an object means:",
+      "options": {
+        "A": "A new object is created and all referenced objects are also deeply duplicated",
+        "B": "A new object is created but it still references the same sub-objects as the original",
+        "C": "Only the primitive fields are copied; reference fields are set to null",
+        "D": "The original object's memory address is shared with the copy"
+      },
+      "answer": "B",
+      "explanation": "In a shallow copy, a new object is created with copied field values, but reference-type fields still point to the same objects as the original. Changes to nested objects through either reference will affect both."
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "What happens if a class calls clone() without implementing the Cloneable interface?",
+      "options": {
+        "A": "It compiles fine but returns null at runtime",
+        "B": "It throws CloneNotSupportedException at runtime",
+        "C": "It performs a deep copy automatically",
+        "D": "It causes a compile-time error"
+      },
+      "answer": "B",
+      "explanation": "The Object.clone() method checks at runtime whether the class implements Cloneable. If not, it throws CloneNotSupportedException. Cloneable is a marker interface that grants permission to clone."
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "When compareTo() returns a negative integer, what does it indicate?",
+      "options": {
+        "A": "The calling object is greater than the argument",
+        "B": "The calling object is equal to the argument",
+        "C": "The calling object is less than the argument",
+        "D": "The comparison is undefined"
+      },
+      "answer": "C",
+      "explanation": "By contract, compareTo() returns a negative value when the calling object is less than the argument, zero when equal, and a positive value when greater. This contract is used by sorting algorithms."
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which statement about the Serializable interface is correct?",
+      "options": {
+        "A": "It requires implementing a writeObject() method",
+        "B": "It is a marker interface with no methods to implement",
+        "C": "It is in the java.lang package",
+        "D": "It automatically handles transient fields during serialization"
+      },
+      "answer": "B",
+      "explanation": "Serializable is a marker interface — it declares no methods. Its mere presence tells the ObjectOutputStream that the object can be serialized. Fields marked 'transient' are intentionally excluded from serialization."
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Given: Iterator it = list.iterator(); What is the correct way to safely retrieve all elements?",
+      "options": {
+        "A": "while(it.next() != null) { process(it.next()); }",
+        "B": "while(it.hasNext()) { process(it.next()); }",
+        "C": "for(int i=0; i < it.size(); i++) { process(it.get(i)); }",
+        "D": "do { process(it.next()); } while(it.hasNext());"
+      },
+      "answer": "B",
+      "explanation": "The standard iterator pattern calls hasNext() before each next() call. Option A calls next() twice per iteration and can throw NoSuchElementException; Option D processes an element before checking."
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "What is the key difference between a shallow copy and a deep copy when cloning an object?",
+      "options": {
+        "A": "Shallow copy duplicates primitive fields only; deep copy ignores primitives",
+        "B": "Shallow copy shares referenced objects with the original; deep copy duplicates all referenced objects recursively",
+        "C": "Deep copy is faster than shallow copy",
+        "D": "Shallow copy can only be used for arrays; deep copy works for any object"
+      },
+      "answer": "B",
+      "explanation": "In a shallow copy, copied reference fields still point to the same objects as the original. A deep copy recursively duplicates all referenced objects, ensuring complete independence between the original and the copy."
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "How does runtime polymorphism work through interfaces?",
+      "options": {
+        "A": "The compiler selects the correct method at compile time based on the interface type",
+        "B": "The JVM dispatches the method call to the actual object's implementation at runtime",
+        "C": "Only the first implementing class's method is ever called",
+        "D": "The interface method body is executed if no implementing class overrides it"
+      },
+      "answer": "B",
+      "explanation": "Dynamic method dispatch means the JVM decides at runtime which implementing class's method to call, based on the actual object type stored in the interface reference variable. This is the essence of runtime polymorphism."
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "If interface A extends interface B, and class C implements A, then:",
+      "options": {
+        "A": "Class C must only implement methods declared in A",
+        "B": "Class C must implement all abstract methods from both A and B",
+        "C": "Class C can choose which interface's methods to implement",
+        "D": "Class C automatically gets implementations of B's methods"
+      },
+      "answer": "B",
+      "explanation": "When an interface extends another, it inherits all abstract methods. A class implementing the sub-interface must provide implementations for all abstract methods from both the sub-interface and the parent interface."
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which of the following correctly uses interface-based polymorphism?",
+      "options": {
+        "A": "Comparable c = new Comparable();",
+        "B": "Comparable c = new String(\"hello\");",
+        "C": "String s = new Comparable();",
+        "D": "Comparable c = 42;"
+      },
+      "answer": "B",
+      "explanation": "Since String implements Comparable, a Comparable reference can hold a String object. You cannot instantiate an interface directly (option A), and a String reference cannot hold a Comparable object (option C)."
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What is true about fields declared inside a Java interface?",
+      "options": {
+        "A": "They are instance variables that each implementing class gets",
+        "B": "They are implicitly public, static, and final",
+        "C": "They can be private or protected",
+        "D": "They must be initialized in the implementing class"
+      },
+      "answer": "B",
+      "explanation": "All fields declared in an interface are implicitly public, static, and final — effectively constants. They are shared across all implementing classes and cannot be reassigned."
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Why would you use Comparable instead of a custom sorting method?",
+      "options": {
+        "A": "Comparable allows sorting without writing any comparison logic",
+        "B": "Implementing Comparable enables objects to work with Java's built-in sorting utilities like Arrays.sort() and Collections.sort()",
+        "C": "Comparable is faster than any custom comparator",
+        "D": "Comparable eliminates the need for equals() and hashCode()"
+      },
+      "answer": "B",
+      "explanation": "Java's Collections.sort() and Arrays.sort() rely on the compareTo() method from Comparable to perform natural ordering. By implementing Comparable, your class integrates seamlessly with these standard library utilities."
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "A class implements both Cloneable and Serializable. Which statement is most accurate about these two together?",
+      "options": {
+        "A": "They conflict — only one can be implemented at a time",
+        "B": "Serializable provides deep copy behavior; Cloneable provides shallow copy behavior by default",
+        "C": "Both are marker interfaces but serve different purposes: Cloneable for in-memory copying, Serializable for persistent/stream-based copying",
+        "D": "Implementing Serializable automatically satisfies the Cloneable requirement"
+      },
+      "answer": "C",
+      "explanation": "Both are marker interfaces with no methods, but their semantics differ. Cloneable grants permission for Object.clone() to create an in-memory copy, while Serializable enables the object to be converted to a byte stream for persistence or network transfer. They are independent and complementary."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Consider: class A implements Comparable<A>. If compareTo() returns 0, what are the implications for correctness with Java collections?",
+      "options": {
+        "A": "It means nothing special; zero is just a placeholder",
+        "B": "It should be consistent with equals(): if compareTo() returns 0, equals() should return true for correctness in sorted sets and maps",
+        "C": "It prevents the object from being stored in any collection",
+        "D": "It forces the JVM to throw an exception during sort"
+      },
+      "answer": "B",
+      "explanation": "The Java documentation recommends that compareTo() returning 0 be consistent with equals(). Sorted collections like TreeSet use compareTo() for equality; if inconsistent with equals(), objects that are 'equal' by compareTo() may be incorrectly deduplicated."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Why does the default Object.clone() produce a shallow copy, and what must a developer do to achieve a deep copy?",
+      "options": {
+        "A": "Object.clone() is abstract; the developer must implement it from scratch for all cases",
+        "B": "Object.clone() copies all bits field-by-field; for deep copy, the developer must override clone() and manually clone each reference field",
+        "C": "Object.clone() already performs deep copy; shallow copy requires a separate utility",
+        "D": "Deep copy is automatic when all fields are marked final"
+      },
+      "answer": "B",
+      "explanation": "Object.clone() performs a bitwise, field-by-field copy, so reference fields still point to the original sub-objects (shallow). To achieve a deep copy, the developer must override clone() and explicitly call clone() on each reference-type field, recursively."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "An interface I1 extends I2, and interface I2 extends I3. Class C implements I1. Which statement is true?",
+      "options": {
+        "A": "C is only a subtype of I1",
+        "B": "C is a subtype of I1, I2, and I3 — satisfying all three interface types",
+        "C": "C must explicitly declare 'implements I1, I2, I3'",
+        "D": "Interface inheritance chains are not allowed in Java"
+      },
+      "answer": "B",
+      "explanation": "Through transitivity of interface inheritance, class C is a subtype of I1, I2, and I3. A reference of any of these three interface types can hold a C object. C only needs to declare 'implements I1' — the chain is inherited."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "What is the potential problem with Iterator's remove() method if called incorrectly?",
+      "options": {
+        "A": "It removes all elements from the collection at once",
+        "B": "Calling remove() without a preceding next() call throws IllegalStateException",
+        "C": "remove() is a default method that does nothing unless overridden",
+        "D": "It can only remove the first element of the collection"
+      },
+      "answer": "B",
+      "explanation": "The Iterator contract specifies that remove() can only be called once per call to next(), and must follow a call to next(). Calling it without a preceding next() call throws IllegalStateException, as there is no 'current element' to remove."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Why is it generally unsafe to modify a collection directly (not via Iterator.remove()) while iterating over it with an Iterator?",
+      "options": {
+        "A": "The collection will be sorted automatically, disrupting iteration order",
+        "B": "It throws ConcurrentModificationException because the iterator detects structural modification",
+        "C": "The iterator will skip every other element silently",
+        "D": "The collection becomes immutable after the iterator is obtained"
+      },
+      "answer": "B",
+      "explanation": "Most Java collection iterators are fail-fast: they track a modCount. If the collection is structurally modified (add/remove) by any means other than Iterator.remove(), the iterator detects the mismatch and throws ConcurrentModificationException on the next hasNext() or next() call."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "If two interfaces define a method with the same signature and a class implements both, what happens in Java?",
+      "options": {
+        "A": "Compile error always — Java prohibits implementing two interfaces with the same method signature",
+        "B": "The class provides one implementation that satisfies both interfaces simultaneously",
+        "C": "The class must implement the method twice with different bodies",
+        "D": "The JVM picks the implementation from the first interface listed"
+      },
+      "answer": "B",
+      "explanation": "When two interfaces declare a method with the same signature, a single implementation in the class satisfies both. There is no ambiguity for abstract methods — the class simply provides one body. Conflicts only arise with default methods (Java 8+)."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "Consider serialization of an object that contains a reference to a non-Serializable object. What happens?",
+      "options": {
+        "A": "The non-Serializable field is serialized using reflection automatically",
+        "B": "NotSerializableException is thrown at runtime unless the field is marked transient",
+        "C": "The non-Serializable field is set to its default value after deserialization",
+        "D": "Serialization succeeds but the non-Serializable field is silently dropped"
+      },
+      "answer": "B",
+      "explanation": "If an object contains a reference to a non-Serializable object, ObjectOutputStream throws NotSerializableException. To avoid this, mark the field 'transient', which tells the serialization mechanism to skip it entirely."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "What distinguishes runtime polymorphism via interfaces from compile-time polymorphism in Java?",
+      "options": {
+        "A": "Compile-time polymorphism uses method overriding; runtime uses method overloading",
+        "B": "Runtime polymorphism resolves the method call at runtime based on actual object type; compile-time (overloading) resolves based on method signature at compile time",
+        "C": "Interface polymorphism is resolved at compile time; abstract class polymorphism is at runtime",
+        "D": "There is no difference — both are resolved at compile time by the JVM"
+      },
+      "answer": "B",
+      "explanation": "Compile-time polymorphism (method overloading) is resolved by the compiler based on argument types. Runtime polymorphism (method overriding via interfaces or inheritance) is resolved by the JVM at runtime using dynamic dispatch based on the actual object type in the reference variable."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Which scenario best illustrates why Comparable's compareTo() must be transitive?",
+      "options": {
+        "A": "If a.compareTo(b) > 0 and b.compareTo(c) > 0, then a.compareTo(c) must also be > 0; otherwise TreeSet and sorted collections produce incorrect orderings",
+        "B": "Transitivity means if a equals b in compareTo, then a and b must be the same object",
+        "C": "Transitivity only matters for primitive wrapper types, not custom objects",
+        "D": "Transitivity is optional and only affects the performance of sorting algorithms"
+      },
+      "answer": "A",
+      "explanation": "The compareTo() contract requires transitivity: if a > b and b > c, then a > c must hold. Violating this breaks sorting algorithms, causing TreeSet and Collections.sort() to produce inconsistent or incorrect results, since they assume a consistent total ordering."
+    }
+  ]
+}

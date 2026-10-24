@@ -1,0 +1,310 @@
+Programming in Java
+Prof. Debasis Samanta
+Department of Computer Science and Engineering
+Indian Institute of Technology, Kharagpur
+Lecture - 52
+JDBC - III
+Now, this is the 3rd session of our JDBC learning and then in this session we are going
+to learn about the five-step, that we should follow from the program execution point of
+view in order to access the database remotely from the hope your host machine.
+(Refer Slide Time: 00:38)
+
+Now, so we will see exactly how all those things can be done, but using some examples
+one by one different example that we are going to cover in these slides are like how we
+can connect JAVA application to the database server. In this case; obviously, MySQL
+only and then how a table can be created and then how the records into such a table can
+be inserted. And, then how the results obtained from a table can be processed and then
+the record can be updated and then record can be deleted. All these things we have done
+in our first session of learning of JDBC when we are just connecting directly from our
+console missing to the SQL server. But, here we will do the same thing, but using our
+from program, not from the console.
+
+(Refer Slide Time: 01:00)
+
+Now, let us first see exactly how the connection to the remote a SQL server can be done,
+as you have already mentioned about this idea about that connection as we see here. So,
+basically this is the guest login and password that is a piece of information that is
+required and these basically shows the JDBC MySQL database location driver actually
+we have to connect it and the test is the name of the database and then that connection
+class that can be created by using this method only.
+So, this basically return you the connection objects and then connection object basically
+can be obtained using URL, username, password which we have set in the last three
+statement. And then finally, we can have this statement console from your
+System.out.println usual database connection established successfully if it is there. And
+all these things should be put under the try-catch block as I have already told you in
+order to handle the exception if any occurs during any problem which may occur during
+either this time or this time it is there.
+
+(Refer Slide Time: 02:25)
+
+So, this way the connections can be established and then so, this is a method by which a
+connection can be done right. And, this is a simple statement that you have to follow
+usually in every Java application you have to include this kind of course, in your
+program always.
+(Refer Slide Time: 02:42)
+
+Now, let us see how a table can be created. First of all;’ the same procedure that the
+connection can be done. So, this is the statement that you have to include.
+
+(Refer Slide Time: 02:49)
+
+And this statement follows the different statement like how the; we can execute a
+statement here. As we see here in this example so, the statement object is created using
+this statement, these two statements are to create a statement object. So, statement conn
+createStatement this is basically instantiation and finally, execute the method of the
+statement can be used using passing the SQL commands. So, this is basically SQL
+command show tables. Now, the result will be written and this result will be caught in
+the rs result statement object; rs is basically statemented that we have created here.
+And, then we just scan all the results that obtain that that is there in these rs we can say
+array of results we can say rs and then rs.next means we scan each element in this rs
+array one by one and then we can display on the console. So, if you can pass a while
+statement until all the elements are traverse; we will be able to do that. And, then
+statement .execute another statement that we are going to execute after knowing that this
+table is there, create table JavaCourse Roll Integer primary key, Name Varchar Marks
+Integer not null, Grade Varchar. So, these basically tell you that a new character table
+can be created and that name of the new table may be saying JavaCourse.
+So, this way the new table can be created and then we can get it. So, all the statement
+that we can we have executed ones using SQL server directly from the console it can be
+existed from the Java program using this statement actually.
+
+(Refer Slide Time: 04:24)
+
+And then the statement can be executed again after the in creation is there, if you want to
+see exactly where the table is created again the same statement can be executed show
+tables. And, then rs statement getResultSet it will again the return the results is showing
+all the table and in this case you will be able to see that new tables which have been
+recently added can be shown in there.
+(Refer Slide Time: 04:52)
+
+And then these are the parenthesis things under the catch and try and catch blocks should
+be there so, that the exception can be handled properly. So, these courses are available
+
+readily will be able I will give you the source of all these courses in our next session
+when you will discuss then you can run all those courses and you can understand
+thoroughly one by one so, that if you can. So, that will give you a lot of practice to
+understand how things are going on.
+Now, we will discuss about how a record can be inserted into a table again from the Java
+application; you know how the same thing can be done from the console directly to the
+MySQL server.
+(Refer Slide Time: 05:22)
+
+So, again here you see the Connection type of object conn Statement and rs these are the
+three different type of objects of type connection statement and the result sets that are the
+things we have defined it. And finally, we create a connection here using the same
+method that we have discussed.
+
+(Refer Slide Time: 05:42)
+
+So, the connection is established and then finally, we execute the statement and this a
+statement object is created and this a select star from JavaCourse. This is the SQL
+statement we fire from this program and then it will result return the results rs. And, then
+we can browse the results through this while statement; each record can be printed on our
+screen. I mean displaced screen like using this simple System.out.println. Once the
+record will be obtained and this is the process by which we can get the values and then
+processing these values into the string, actually, it will display all the results.
+And, then once the result is the after the execution of the select star from JavaCourse we
+have to execute some other statement like statement execute INSERT INTO JavaCourse
+with value this one. So; that means, here the five different statements SQL statements we
+have fire these are related to the inserting the records into the table. This is the initial
+table, it may we usually if it is the initial table it does not have any record after inserting
+this one it will give the records are to be inserted into there. And finally, we can get
+results sets using this rs statement and then the result can be obtained after the result of
+this in secretion is there.
+
+(Refer Slide Time: 07:02)
+
+And then that the result again be processed using the again passing because, it will
+process all the results that can be obtained from this one and then the result can be shown
+on the display screen. So, this way you can connect you can establish a connection and
+then once the connection is established we can fire a lot many skill statements to be
+executed. And, then on the successful execution of each statement we can get the result
+and then all those result can be processed using these are the few courses that we have
+mentioned here.
+(Refer Slide Time: 07:31)
+
+And then finally, all those programs should be put into the exception handling trike and
+broths mechanism.
+(Refer Slide Time: 07:41)
+
+Now, inserting a record with another example; let us see how things can be done. Again
+it is the same as the previous one we create the conn and then p statement here basically
+we have to prepared statement we have to follow; that means, we can read some values
+from the keyboard and then statement can be prepared and then finally, this statement
+can be executed. So, these are p statement object is created finally, this is a statement and
+then rs the result where it will be stored. So, they are the four objects that we have
+defined here and this is the connection mechanism few lines of course, that is obvious it
+is there and we can just simply make a connection.
+
+(Refer Slide Time: 08:3)
+
+And then once this connection is there we can execute some statement. So, the statement
+is created and then this is the SQL statement is fired from this. So, SELECT star FROM
+JavaCourse and these basically first we want to see the result before insertion what is the
+data it is there; so, it is the basically it will get all the records those are there at the
+moment before executing any insertion. And, now we are going to take the input from
+the entries of the table JavaCourse; first we give a prompt Enter Name read the name
+from the buffer keyboard. So, keyboard from the keyboard the array name will be
+entered and then it will read it and then this will store into this name right.
+(Refer Slide Time: 08:55)
+
+So, it is basically name and then grades and then roll number and the marks everything
+can be read from the keyboard and then their value can be temporarily held there. And,
+then the p statement using this command all these values that we have read from recently
+from the keyboard can go to these values. So, this basically this thing we prepared using
+INSERT INTO JavaCourse Roll, Marks, number, Grade VALUES is this one; all those
+values is question mark. Those value will obtain from the p statement all these get int get
+string setIntString.
+And then finally, p statement executeUpdate means all the value that we have already
+stored and will go to this one and finally, the entire statement will be executed. So, this is
+basically the problem the statement that you can do it and then finally, after this insertion
+is done we can display the result. So, results after the insertion again we can execute
+SELECT star FROM JavaCourse, the result set can be obtained again and then these
+results can be scanned one by one for each field Name, Roll, Marks, and Grade one by
+one. So, it will basically display all the records including the new record that we have
+added into the system and finally, it will try cache block it is as it is there.
+(Refer Slide Time: 10:06)
+
+Now, inserting a record into a table that we have discussed how it can be there and now
+processing a table either we can do a lot of processing.
+
+(Refer Slide Time: 10:18)
+
+So, basically, the result data set that can be processed here. Now, here again same thing
+we first import java.sql.star; all these things would be inputted there and this class
+basically is a Java application in this case by which we can process any execution like
+and these are the few statements here as we see here. In this example what you want to
+do is that say, suppose already a table is there and for each table, all the marks are
+already there for say 100 records or whatever it is there.
+Now, we want to get the results and then we can get the results from the server and then
+being all the results in our application end and then make their average. So, basically this
+program will tell how the results can be obtained from the remote server from a table and
+then the average of all the marks can be calculated and it can be finally displayed. So, it
+is the idea and so, this is the process that we are going to give a simple example here. So,
+these are the few statements as usual earlier. So, it basically establishes a connection
+from where application to the server.
+
+(Refer Slide Time: 11:30)
+
+And then this is the statement object is created and then we got all the results because we
+need to fetch all the results. So, SELECT star FROM JavaCourse it will basically fetch
+all the results, those the result will be store in rs results sets and then results that can be
+obtained can be processed it is like this as you see here. So, we just give the Name, Roll,
+Marks and Grade they are all string and then finally, we can convert all these things into
+the numbers form.
+So, total marks are integer parseInt MarkString so, it basically read the results are there.
+So, total marks will be obtained for each record getting one record at a time and then
+getting the results are there and then finally, the total number of records can also be ca co
+obtained. So, this is the formula getRow from the result sets is basically says that how
+many rows that we have fetched it. So, this basically includes the total number of records
+are there. So, it is basically a total number of students and we in this statement after
+parsing all the records we can got the total marks and then this is the total number of
+records. And finally, the average marks can be obtained by this one and the assign can be
+printed on the screen.
+So, as you have learned about how the entire results from a database can be fetched into
+your Java application and then some processing. It is a just an example that how this
+processing can be done. There are a lot many processing also can be done from the SQL
+end also; this average calculation is also possible at the SQL site also using some SQL
+
+command. But, this result also can be obtained and you can get it there. Now, here is a
+question some processing can be done at the server end, it is possible you can fire those
+processing exhibiting the statement from here and then get the result. Or, you can get the
+entire result in your n program end application and then compute it and then process it.
+So, both way it is there, some things which are not possible from the server end you can
+get it and then you can solve it that is also quite possible.
+(Refer Slide Time: 13:29)
+
+So, whatever the way the processing it is there and the rest of the trailing part of the
+program is basically related to the exception handling. Then updating a table it is
+basically how we can update command.
+
+(Refer Slide Time: 13:43)
+
+Update command already you have learned about while we are studying the SQL
+statement there. So, first of all, we have to create an establishment and then create few
+important objects like conn statement and rs for related to the connection statement and
+other result states storing. And, then these are the basic string that we have declared to
+be used intermediate way and this is basically the; for five steps which are required for
+establishing a connection from your program to the JDBC server.
+(Refer Slide Time: 14:07)
+
+And then we can use the statement like this one this basically creates a; I mean is a
+define a statement and then this is the execution of the statement like SELECT star
+FROM JavaCourse. So, this basically shows that what are the entries are there as usual
+earlier we have discussed it. So, this a statement will be executed, the data result will be
+stored in the rs object and then this rs object can be passed one by one, scan then finally,
+it will display.
+And, then here we just give we just execute one more statement is called the update. As
+you see statement.execute we are going to execute one more statement update, then
+JavaCourse set Marks. Here exactly you see update these are table name and set, the
+Marks equals to 85, code equals to Ex where Name equals to this one. So, that means, it
+will find a record whose name is this one, if it find this is the condition upon the
+condition; satisfying the condition it will basically change this record with these values.
+And, then after this update command is successfully executed we can face all the records
+and see whether the results are updated or not.
+(Refer Slide Time: 15:25)
+
+So, the last few statements is basically executed the select start from and then rs.next we
+can again reply we can see that whether the update common has been executed or not. If
+that data is satisfied this condition definitely you can do it and then finally, it will have
+updation is successful there and again the try-catch block is basically to ensure that the
+program is executed in a reliable and more robust way.
+
+And then deleting a record, it is basically how the record can be deleted, the same
+procedure will follow. First of all we have to create the statement object and then
+connection objects and then result set object and then we have to establish a connection.
+And, then using the statement object we have to fire the; a co statement SQL statement,
+in this case, deletes a record.
+(Refer Slide Time: 16:13)
+
+Now, here is the statement here we create the connection object, statement object, result
+set object and then these are the temporary variable that is required.
+(Refer Slide Time: 16:27)
+
+And then this is the five steps that are necessary to create a connection and all those
+things should be placed in the try cache block. And, here now Result Before Delete; we
+just see exactly what is the result it is there and then here basically we are creating we
+are executing one statement called the delete from JavaCourse. Now, if we delete from
+JavaCourse this means that it will delete the entire, I mean a number of records those are
+there in the table. If they delete some records from this one certification condition only
+that kind of records will be deleted whose condition is satisfied.
+But, this is a very dangerous one delete common like it will delete all the records, but not
+the entire table. Table will remain there now, hereafter this deletion is there if we just
+simply execute this statement to get the other records if it is there, if you see then get
+result. And, then again processing the result as is the same way one by one you will see
+as this is not there so, rs.next will return null.
+(Refer Slide Time: 17:25)
+
+So, null means it will not execute further this statement and then it will do not give any
+print on the screen.
+
+(Refer Slide Time: 17:30)
+
+And so, this is the delete statement as we have seen.
+(Refer Slide Time: 17:32)
+
+And then deleting a table and this is another command it is there drop command and
+again the Statement, Connection and the ResultSet are created and this is a connection is
+established.
+
+(Refer Slide Time: 17:44)
+
+And we execute the show tables; that means, what are the tables are there. So, show table
+says you know show table, show databases everything is there you can execute it, under
+your own login password, your authorization. If their many databases it is there showing
+database will show you all the databases. Now it is there so, results as getResultSet
+basically it will return you the result set and System.out.println it will show all the tables
+which are there including their table name. So, the Table in the test will be there and then
+the table will be displayed; that means, whatever the tables are there.
+Now, after these things we execute the drop table JavaCourse; that means, we want to
+delete the table permanently whether it contains a record or not. It will remove the table
+permanently physically from the server and then show tables after this thing again the
+same thing if we repeat and then you will see that all tables are there except the
+JavaCourse table is there because JavaCourse table has been deleted. So, this is the way
+the different statement that can be executed and then after exiting the different statement
+we can process the results.
+We have state three sessions, we will discuss about demonstration giving all those things
+in details starting from the installation of SQL server, installation of JDBC driver and the
+execution of some SQL statement from your application.
+So, thank you very much.
+
+

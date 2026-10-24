@@ -1,0 +1,319 @@
+Programming in Java
+Prof. Debasis Samanta
+Department of Computer Science and Engineering
+Indian Institute of Technology, Kharagpur
+Lecture – 60
+Case Study – V
+So, we are almost at the end of our course plan and definitely which is my endpoint, in
+fact, it is your I mean point of starting. So, my endpoint means your beginning, in fact,
+you have to start it. Now, anyway so, this is the concluding section session and in the
+sessions, we are going to discuss about two more interesting projects so that these
+projects you can take as a challenge and then try to implement these projects. And,
+definitely I am sure that if you can take this project and then you will enjoy a lot.
+Now, let us have a discussion about the project idea. This is the 10th program projects
+and we as the name that you can see here the name of the project is Course Management
+Systems. You probably know exactly it is managing the course. What is the course?
+Whenever students attend some classes and take some involvement in a course he
+becomes the participants of the course; then there is a teacher called the course
+coordinator, who basically control many information about, right say what are the marks
+obtained by each student and then grading and so many these things are there.
+Now, in these projects similar kind of things needs to be maintained so that the courserelated information needs to be stored and then the user can enter the marks and you can
+process the results, the results can be available, the user can see, the teacher can see, a
+student also can see whatever it is there. So, many other improvement can be done. It is a
+starting point of the projects and then you can extend this project adding some idea from
+your side as well as.
+
+(Refer Slide Time: 02:03)
+
+Now, let us see exactly for this project what is the skillset that you should have. You
+have to implement this project using Java Swing as it is proposed here, then JDBC and
+networking that knowledge is required so that you can implement this project.
+(Refer Slide Time: 02:18)
+
+Now, idea about this project let us come to the idea. So, we have to maintain a server
+database. This server database will store a number of entries; it is basically a number of
+tables I can say, each tables for each subject. Say suppose one student taking physics,
+maths, chemistry then three tables are to be maintained. It may be that is all students'
+
+same students are not taking all the subjects. So, there should be another table also which
+includes all the students under this particular year or semester who are active in an
+academic program. So, there will be a list of student, the student’s information and then
+marks obtained by different students in different courses.
+So, this is the table or database that needs to be maintained and here the administrator
+can maintain this information otherwise you can develop one interface for which
+database can be enter whatever the projects that you have already some idea can be
+applied here also, but I am thinking that all the database table is entered by the
+administrator. So, here you do not have any burden on a responsibility for this.
+So, create a GUI program therefore, here the teacher can enter the marks obtained by the
+students in the course he has offered. So, here the facilities that will be available so that
+is to user can run a program. Once the user runs the program and interface will appear
+and using this interface the user can enter the marks obtained by the different subjects
+who attended the course.
+And, then there will be a computation aspect, the results of the results stored in the
+database will be compiled for either for each student or for each course whatever the way
+that will be decided. And, then accordingly the results will be compared result means
+grading can be done depending on some rule base say if marks are greater than 90
+percent then he should be added EX grade if 80 to 90 percent A grade or this kind of
+grading composition you can decide and implement it.
+So, the computing server will be there which will basically do all this computation task,
+not in the teacher's machine. So, the teacher’s machine is another machine, the server
+will compute all this thing another machine and then database which will be stored
+maybe in the different machine or the same server machine we will assuming that
+database can be maintained in a different server.
+So, there is three-layer architecture as we see from the user site from the server site
+computation and then from another server from the storing the database.
+
+(Refer Slide Time: 05:09)
+
+Anyway, so, now we will consider for simplicity maintain a database server in some
+machine which is connected to the net and the database should contents two tables as we
+have mentioned here as a practice purpose you can just simply add on more only you can
+add some other subjects other things also. So, the student table is there, maths subjects
+mathematics table is there and the physics table is there; three tables are to be maintained
+in the MySQL server.
+(Refer Slide Time: 05:38)
+
+Then whenever the database administrator will maintain this table we have to fix the
+table database. So, I have given an idea about how the database table look like. So, for
+the students, it will have the roll number and name, and then we have given the type that
+our roll is of type integer of size 10, then name is varchar of size 50 and then roll number
+is the primary key here and then this is the other is there.
+Now similarly, for the maths, roll, attendance and then marks obtained will be to be
+added here. Similarly, physics also the name roll number and the marks need to be
+maintained here. In the slides marks are not shown here, but you have to add the marks
+they are also in this entry. Anyway, so, these are the different entries are to be there.
+(Refer Slide Time: 06:17)
+
+And so, GUI program; this is a typical look I am not necessary that you have to follow
+the same look. If you have some better aesthetic sense then you can design the layout of
+your own and then you can use it. So, you can develop the layer in such a way that the
+user, maybe say teacher from his own mobile also can access this program. So, a browser
+should be according to that way only. So, the GUI window will be planned this way. So,
+that it is compatible to anywhere actually there.
+Anyway, so, the first task in this project is basically there; after the database is created
+this is the first task. Our second task is basically to create the GUI programs for the data
+entry interface for the teacher and so I have already told you this is the look of that
+teacher interface is there. Here the user will enter the student name and then enter the
+
+marks and everything, and then order and everything if you want to face the data it will
+show in which order it will get it and then rank and everything will be there. Otherwise,
+you can decide some other interface of your own also so that the user can use it and then
+can go on adding the data into the system.
+(Refer Slide Time: 07:39)
+
+Now, once the user enter the data, it will go directly to the computing server and then
+from the computing server, it will go to the MySQL database that the user or any user
+cannot directly access the database. So, a database is a back end server we can say and
+then add them. So, this is the database server at the backend of the computing server.
+And at the front end the user program so that the user interface is there which will
+communicate to the computing server which can be again communicated to the back end
+server like this.
+Now so now, next is the data processing mechanism. Here the computing server will take
+care. Computing server can access the database server by means of program and then
+depending on the user requirement either preparing the results or sorting of the marks
+based on some ascending or descending order and many other utilities that can be added
+here in the computing server.
+
+(Refer Slide Time: 08:39)
+
+So, this is the data processing mechanisms are there. Now, I will just quickly brief about
+the data processing mechanism that you should follow here; nowhere the step by step.
+So, there is a socket program that you have to develop and we can say it is a client socket
+and then the server socket is basically at the server end which will basically you
+computing aspects will be there and then MySQL the server is there. So, there are three
+entities, three computing entities; one is the client-server and then the database server is
+to be there in this system.
+And, then the teacher who can insert the marks is there. So, a teacher will be there who
+can enter the marks. So, from the GUI interface here the teacher will enter the marks
+here and then once the teacher enter the marks it will go to the client sockets. These
+sockets can run in the same machine or like it is actually basically it should run in the
+same machine. Once the result is going there it will go to the server socket whatever the
+in data that the user that the teacher has populated it will go to the server. Then the server
+will send it to the MySQL server through the JDBC connectivity.
+Now, again if either wants to retrieve something any user say student or any other
+teacher then another GUI should be developed there, then through the same GUI it sends
+a request go to the computing server first, then MySQL and the MySQL written the
+result computing server we will process according to the requirement or some retrieval
+
+information that is there and then it will go to the client sockets and then finally, it will
+display on the users machine.
+So, this is basically the idea about how the flow of data we will take place from the user
+to the system itself. As this is the three-tier architecture as I told you. So, these basically
+look like a three-tier architecture as it is shown here. So, this is basically the architecture
+that you have to consider for in this project actually and this architecture has been
+planned little bit typically level I should say bit high because here so, many tiers are to
+be implemented and then they should be properly synchronized communicates, but it is
+only for the experienced user and they can do it easily. And, it is not the very heavy job
+actually you can make the cattle the job according to your own time and then knack and
+interest you can do it the minimum version of it also. So, this is about our tenth projects.
+(Refer Slide Time: 11:16)
+
+And our next project and this is the most challenging project. Challenging project in the
+sense that it is because a lot of other things are to be exercised and then your the
+knowledge level has to be highly applied here and the program is called Java WordPro
+Duo. So, here the name is not complete here. So, Java Word Pro Duo this is the project
+actually that we are going to discuss. Now, let us see what is the project idea so that you
+can understand what exactly this project it is and this project is as the name implies word
+pro stands for word processing and duo means it will do more than one job actually at the
+same time. So, that is why it is a duo.
+
+(Refer Slide Time: 12:09)
+
+Now, for this project the skillset that you should consider here swing, even handling,
+encapsulation handling, that is all; it is no network involved, it is no JDBC involved, no
+other and a what is called the things involved, only the GUI and the programming is
+involved. Now, so, this is the smallest level, but lot of other things. So, if you want to
+make yourself is a I mean great Swing programmer, then this project really you can think
+for as a good what is called the task actually, is a good challenge for you.
+(Refer Slide Time: 12:50)
+
+Now, let us see what is the idea of the project. So, as I have mentioned that this project is
+basically is a word processing is there. So, we have to develop a word processing editor.
+You are already familiar which some word processing the editor that most only you have
+used while you are compiling you are typing your program. For example; Notepad plus,
+WordPad, Notepad these are the work. So, a similar kind of software you have to
+develop. It is also I mean the problem is solved actually, but from your side, whether you
+have solved this problem? If the answer is no, then there is a challenge that how you can
+develop such a word processing document editor or word processing editor, text editor
+we can say like that. So, it is not a big job. It is a simple application of Java Swing that
+can help you to do the job very easily actually.
+Now, next is that you have to develop a GUI program for the WordPro. So, is very nice
+looking graphical user interface to be developed you have to have a little bit some ideas
+so that whatever the existing or processor is there how your software can be comparable
+to them. So, you can add a few more things so that you can say that you see this is the
+thing that is my program where the other program does not have this kind of thing are
+there. So, colorings and so many other things also you can add it if you can do it. It is not
+the big job, it is not infeasible, it is practically feasible. So, you can do it, only you have
+to think about that what you want to do and then think about how this can be done.
+So, this what and how to resolve rigid if you re can resolve these what and how questions
+then you can solve these problems very easily. So, that is why there is a lot of
+customization and moreover, the main customization is that how this word processing
+system can be used for both the composing a document as well as is a calculator purpose.
+So, an idea is there and if you can then such a document I mean word processing
+document can be also implemented compatible with any Indian language; that is also a
+challenging job and that is also a very beautiful project also and the calculator also can
+be ok. So, if it is an Indian language compatible maybe say in Hindi or in Bengali then
+you can do it typing in Bengali or Hindi like this one.
+So, a job is it is not a very novel of it is kind, but it is a challenging as well as and it will
+give a lot of experience and learning scope. So, that you can use to develop more other
+more advanced and sophisticated program in different application and moreover you if
+you developed in here you can use it in the windows the android operating system, if we
+can develop it here you can use it in a macOS if you can develop infer the desktop you
+
+can use also in for laptop or tabloid or it is in notebook or it is in a mobile handset,
+Smartphone whatever it is there. So, the scope is very high, application potential is also
+heavy.
+(Refer Slide Time: 16:04)
+
+Now, let us see how it looks like in the first phase the step by step if you do it then the
+job becomes easier. You should not try to do all the things together, one by one. So, first,
+you have to see how a canvas sort of thing which basically appears is a Windows should
+be given to the user so that the user can type anything. Whatever the user we will type it
+will appear on the canvas itself. So, this basically adds an editing panel or frame looks
+like. So, a typical look as it is shown here you have to implement like this.
+
+(Refer Slide Time: 16:37)
+
+Then you have to add on functionalities into this frame one by one. As you see here we
+have added one functionalities called the file. You can see any word processing what are
+the menus are there you can go on adding all those things one by one. Once the file it is
+there it will give New, Open, Save or Exit these kind of things are there. So, this File
+Open if it is there, now if you want to save it for example, here then it will ask that Save
+or Don’t Save or Cancel whatever it is there.
+So, after adding this File option you can add few more buttons also there and then you
+can add it is. For example, after File, Edit; Edit means it can have the editing facilities
+like editing, Cut, Paste and then Select All whatever the things are there you can apply it
+here. So, here basically even handling for each component if you add one by one, go on
+adding, test the program and go to the next step and so on, so on. This way you can see
+an after few efforts you can develop a nice document WordPro program like.
+
+(Refer Slide Time: 17:47)
+
+Then, our next version is that so, input, as I told you it should be used for a dual purpose
+dual, means text editing. So, if it just text editing, then fine. Now, whenever if the text
+editor from where you can type it. So, obviously, you use the standard keyboard which is
+already attached to the things, but in some mobile environment there is no standard
+keyboard. So, if you want to use it for the mobile setting then how it can do that.
+So, for these things you can develop one software keyboard. Even the software keyboard
+also can be used using your lap laptop or using your PC also. If your PC or laptop touch
+enable, so, after touching also it can be done or clicking also by mouse pointing also it
+can be done whatever it is there. So, keyboard and then keyboard has the software,
+keyboard, as well as the hardware keyboard, is compatible with there.
+Now, so far the software keyboard it is there I have given a layout of the software
+keyboard. Once the user selects that system keyboard or virtual keyboard; I mean a
+software keyboard, then this kind of things will appear for the user. So, that user can
+click it or touch it and then accordingly the text will be entered and then it will display
+on the screen. So, this is the only layout and this basically obviously, a little bit complex.
+It is not so simple as the calculator panel is there, it is very difficult.
+It is not difficult actually, it is only voluminous because so many keys are involved and
+not all keys are of equal size. There are maybe function keys also which I have not
+mentioned here you can do; again the caps key click also caps is there also, numeric keys
+
+there also, punctuation keys are there also, all those things will be settled it out. But,
+everything is possible writing a simple software program in fact, and using Java is not a
+very difficult job for any programmer.
+(Refer Slide Time: 19:48)
+
+And, then the software keyboard that you have developed also can be utilized to use as a
+calculator. So, a calculator for the display here is there and then the you see whenever
+you use as a calculator here. So, there is a calculator button will be there if you select it
+then it will act as a calculator, in this case, all the button will be in a disable stage. So, no
+response will be there, no event operations will be there. However, all the calculator
+related buttons will be there and then you can use it.
+And, more important thing is that you can little bit improve this calculator by adding
+some more I mean character button also there so that some expression; say, suppose A
+equals to 5, B equals to 10 and C equals to 100. If you add and then you can express A
+star B plus C divided by A plus B plus C this kind of an expression also can be carried
+out using this calculator is easy. So, this is the advantage of this calculator in addition to
+the calculator for text entry and really very useful because you will get the two facilities
+in the same product that is why this product is called the duo project.
+Anyway, so, we have discussed about many other things which are related to this then I
+am almost at the concluding part. But, before going to this concluding portion I want to
+
+make one more thing very clear that whatever the programs that we have used in our
+entire throughout the entire course those programs are available.
+(Refer Slide Time: 21:26)
+
+And, the link I have given in these slides, you can see the link. So, it is basically https
+then cse.iitkgp.ac.in/dsamanta. So, this is the link actually as we see. In this link if you
+follow then you will find one HTML page there which contains all the necessary pieces
+of information; those I have used in this course also it is already there. This is a very
+huge resource and then you can get all the documents from there also.
+In addition to this resource where all the programs that I have used I have already
+deposited there, you should download all the program and run them. Just try to run it if
+you run it then you can learn it. If you do not nurture this program you will not be there,
+only learning theory, syntax and everything we will help we will not help you to learn it
+much more.
+And, then another thing is that in the first introduction slides in the first lectures you can
+note I have given one tutorial link of the website. So, it is called a Java tutorial from the
+Oracle you can even the from the Google search engine type that Java tutorial from
+Oracle. So, it will give the link. So, it is basically standard edition is there and the Oracle
+is the one another party of now developing these Java system actually. They are a part of
+the Java development team. So now, they maintained a very nice link nice web page
+which basically gives for all aspects of the Java programming with examples and all the.
+
+So that you can consider as a complement to this course learning whatever you are. If
+you find any difficulties to learn from my delivery then you can consult quickly there
+and you can learn also like that. Another important resource that you should consider so
+that you can horn your skill is basically Java API. Now, Java API is very important; very
+important because if you know the different methods belongs to the different class then
+you can try to apply it. But, I have not mentioned all the methods that can belong to a
+particular class. For example, the string. Under the string, there may be said a hundred
+methods are there. How so many methods can be discussed in a short duration of half an
+hour lectures or like that I did not do that.
+However, you can have all the methods, their constructors, the return type, the peels and
+then description everything that is also from the Java Oracle sites again; the same Oracle
+website you can follow. It will give you all the information about. So, you can give a
+type like Java API from Oracle. So, it will give all the packages whatever it is and it is
+basically the genuine source; the source from the developer itself. So, source from the
+creator itself. So, this is a very important source, that you can think about it.
+And, as I told you already, so, I am almost at the endpoint and I told you my endpoint is
+not it is my endpoint is basically your starting point for your things are. So, with these
+things, I would like to conclude this course here and then I obviously, wish you all the
+best and ever success in your career. And, also I want to convey my thanks to all of you
+for attending this course and thanks for your attention throughout this long journey. I
+wish you all the very best for the career point of view, from your development point of
+view ok.
+Thank you very much.
+
+

@@ -1,0 +1,425 @@
+Programming in Java
+Prof. Debasis Samanta
+Department of Computer Science Engineering
+Indian Institute of Technology, Kharagpur
+Lecture – 14
+Demonstration – VI
+Let us have a quick demonstration on the topics that we have learned in the last module.
+Our last module was on was based on the inheritance in Java. So, today we are going to
+have a quick demo on the topic that we have learned in the last class.
+(Refer Slide Time: 00:37)
+
+So, to in today’s demo we are going to cover the basic concept of inheritance, namely the
+simple inheritance and then we will discuss about multi-level inheritance, we have
+discussed about the super keyword which used to avoid the names space collision, the
+super keyword use of the super keyword to invoke the superclass constructor and then
+using the super keyword we can reference to some variable of the superclass. And then
+overriding is an important concept in any inheritance, so method overriding will be
+discussed.
+There are two more keywords namely; abstract and then, the final keyword that is come
+on the way of inheritance. So, we will discuss this one. So, these are the topic that we are
+going to discuss in this demonstration lecture. Now let us have the first demonstration on
+
+simple inheritance. So, how is a class can be needed from another class we can see it let
+us have the demo.
+(Refer Slide Time: 01:45)
+
+Now, let us watch this program here in this program we see a class namely class A is
+declared. This is the superclass in this case, this class has 2 members i and j and it has 2
+one method called the show i j printing the values of i j i and j in this class.
+Now, in the next class the class B which basically inherits the class A. So, class B
+extends A and we can see that in class B we declare one variable called the k of type
+integer and then class B has its own methods. So, k printing the variable k in this class
+and also it has another method sum, it will print the value of i j, which are inherited from
+the superclass and the value of k, which is in its own variable.
+
+(Refer Slide Time: 02:47)
+
+So, these are this is the inherited class B and as you know class B therefore, by virtue of
+inheritance have the access of both ij and the method. So, I j which are declared in class
+a as a default access specifier as there in the same file they are readily accessible by
+virtue of inheritance as well as default access specification. Now let us have that main
+class the main class here we name as demonstration_6 1 and in this class, we create 2
+objects of type class A and class B namely super Ob and sub Ob.
+So, 2 objects of 2 different classes are created and in the next statement we initialize the
+values of i and j in the superclass objects and then also print, I call the method of so ij or
+the superclass object. And in the next statement we see we initialize, the subclass object
+ij and k as 7 8 9 and then we display the values of show i j, show i j as it is accessible to
+sub Ob ib by means of the inheritance and then also we call the show k method of thus
+subclass objects sub Ob and then we print it.
+Now, let us have a quick demo. So, you can see that this is all legitimate access, we can
+use this thing and it will give that results that we have initialized and finally, it will also
+display the value accordingly. So, we run this program as using javac and then execution,
+so fine. So, it will work because there is no error in the program and it will print
+accordingly. So, this is the value that this class will print for us ok. So, this is the first
+example showing how the simple inheritance in Java can be done.
+
+Now, our next demonstration is based on the initialization of the subclass object by the
+constructors that are there in the superclass.
+(Refer Slide Time: 05:01)
+
+So, this demonstration will tell will go show us how we can initialize a subclass object
+using the constructor which is defined there in the superclass. Now let us have the
+program where we can see the class Box is a superclass class having 3 data width height
+and depth they are declared as double. And, the box is the constructor it is a superclass
+constructor default constructor and in addition to this default constructor there is one
+more constructors is initializing the different values in the class objects and also it has
+one method volume it is a simple multiplication of the values of the objects.
+
+(Refer Slide Time: 05:49)
+
+So, this is a class superclass. Now we derive one class give the name as box weight it is
+an inheritance of the superclass. Box here in this case and in addition to w h and d which
+are there in the box class we define another data weight of type w see this is the data of
+its own and then we declare a constructor in this class box weight which we pass the
+value there and then initialization if this one.
+So, we can create an object of superclass as well as subclass here in the means class we
+can see. The main class is demonstration_62 a. So, we create an object my box 1 of the
+class box and then also we create another object my box 2 of the type box weight which
+is the subclass in this case passing the values 2 3 4 and 0.076 as an argument we
+initialize the object. And then finally, we print the volume for the object.
+So, there we can see we have created a subclass object, we have created a superclass
+object; although no problem. For the superclass object, there is 2 constructor. So, in this
+example, the default constructor will be called whereas, for the initialization of the
+subclass object the constructor only constructor here that will be called. So, this program
+will be executed and let us see the execution of this program. So, this program (Refer
+Time: 07:22) you successful compilation and execution. It will print the volume of both
+objects my box 1 and my box 2 which we have created yeah.
+So, we can see that 2 objects are successfully created one object is that a subclass object
+another is the superclass object. Now, we have shown in this the example that how the
+
+subclass object can be initialized. Now we are going to have another illustration where a
+subclass object can be initialized with the help of superclass constructor. So, this is the
+one program in this direction it is simple as usual earlier the superclass remains the same
+wherever we just redefine the sub superclass subclass object in the following let's go
+down yeah.
+(Refer Slide Time: 08:33)
+
+So, here you can see we just have the 2 constructors, one is the default constructor in the
+subclass object subclass the box weight the default and another is the width some values.
+Now in case of default constructor we see we call super within this one, this basically
+called the superclass constructor in the superclass namely box ok. So, it will call this one,
+so it will initialize with the 0 0 0 values to the members.
+
+(Refer Slide Time: 09:03)
+
+Now, again the super w h here basically it is the superclass constructor, which has the 3
+arguments that is required and then we call this superclass constructor to initialize this
+using the box weight constructor here.
+Now, let us have the same demo here it is the same thing we create 2 objects, my box on
+for the superclass object my box 2 for the inherited class objects and then it is the same
+program as earlier, only the thing that we have initialized with the help of superclass
+constructor. Now, so in this demo, the superclass constructor is basically, super with the
+certain argument. The argument which will fit with the superclass constructor will be
+used herein the subclass constructor.
+So, let us have another demo. It basically super use of the super keyword that basically
+how we can refer a subclass object with the help of superclass variable. Now let us have
+the demo 6.3. Now, in this case, we will see how the superclass variable can be referent
+to the subclass variable like this one. We can better explain this now this is the subclass
+definition class box, it is the same as earlier it has 2 constructors, the if the class
+definition is same already that we have discussed here. Now, let us come to the
+superclass object. It is also same, it basically has the weights and then the only
+constructor here in this case.
+
+(Refer Slide Time: 10:43)
+
+Now, let us see the main class method here. This needs to be checked very carefully.
+Here we define one object of subclass box weight, the namely weight box is the object
+passing the parameter for it. Now in addition to this also we declare here another object
+plain box of class superclass box here and volume is the volume to hold the volume of
+this one.
+Now, if we call the volume method for the weight box. So, it will call the volume
+method in which is defined in the subclass and accordingly the volume will be calculated
+now. So, it will be printed now so, that is all. Now let us come to the next one. Now here
+we can see the plain box is equal to weight box. So, it is possible, here basically we are
+referencing a subclass with the help of superclass. The plain box is a superclass object
+and weight of box is a subclass object. This kind of assignment is quite legitimate; that
+means, we can reference a subclass object name with the help of superclass object name
+and next statement is also quite valid volume will be obtained for the plain box there.
+Now, again you can see which method will be called here. It is basically the volume of
+the weight box method will be called here. Now let us run this program 6.3. So, we can
+see the volume that we can print here is the volume of the subclass object, but it is a
+reference to the superclass object ok. So, this is the 1 demo. Let us have another demo,
+this demo is basically planned to explain using the usefulness of super to avoid the name
+namespace collision. So, basically, we can write overcome the name hiding using the
+
+super construct. Let us 6.5 the demo yes, so this is the one simple program that we can
+check it.
+(Refer Slide Time: 13:09)
+
+Now, here let us look at the program class A is a class declared here having an integer as
+a variable in it and class B is inherited class from A and also see i integer is declared of
+its own. Now here whenever by means of inheritance, the value the variable i both that is
+there in the superclass is also accessible to the subclass, then it becomes a problem it is
+called the collision, collision means both i is there ok.
+Now, of course, according to the inheritance, it basically overwrites that mean the scope
+according to the see this I, which is declared in class b is basically i of this subclass
+objects not that one. So, this i, which is declared in class B in fact, heights the i which is
+already there in A; however, we can refer both the variable and this reference is possible
+using the super keyword.
+Now let us see the constructor which we have defined for the subclass object B is like
+passing A and B as the arguments. Now if I mention super.i this refer to the variable I,
+which is there in the superclass object and similarly I, if we do not mention anything it
+basically refers to the variable i in the same class itself that is here in the B. So, this way
+we can refer to some superclass variable as well as the subclass variable this way.
+
+So, super can be used to resolve the collision that is what happens in this case. So, the
+rest of the program is very simple. So, this method we will print all the values those are
+there in the subclass as well as the superclass to print statement is used for that and these
+is the main() method, a sub-object subclass object is created and then we call the so
+method, it will print the 2 values there ok.
+So, for example, 1 and 2 will be painted here, 1 will go to the eye, the superclass values
+and then 2 will go to the value to the subclass ok. Let us run this program quickly so that
+we can see exactly whether it is running or not and then we can have the understanding
+then that superclass can be used to resolve the name collision. So we can see that ok, so
+it is it basically is successful so far execution is concerned. So, it works. Now, our next
+demonstration basically to see how the coat shearing is possible, it is also a very good
+example of the dynamic binding concept that is there.
+(Refer Slide Time: 16:07)
+
+Actually, it is a runtime polymorphism concept, it is they are during runtime it will
+resolve which method is basically called here. Now here we can see first we declare one
+class the name of the class is a cat and it has one method speak and then it basically print
+this meaon statement here.
+Now, another class which is basically inherited from that class cat is a subclass pet cat of
+superclass cat. It has also the method speak and this method has this statement meow.
+Now here you can see the 2 methods are defined, but it is a method overriding. Thus the
+
+speak method in pet care overridden then, then the method that is there in the subclass
+method cat. Now we declare another one class also an extension of cat it is basically
+multi-level multi multiple it is we can say that 2 inheritances, 2 multiple single intents
+we can say here because we another inherit another class magic cat from the class cat
+and we can define one variable is a Boolean type no one.
+Now, void speaks if no one, if it is true then it will call the super speak. Super speak
+mean in this case, it will call the cat class to speak that is there in declare method
+meaning in discussing it will spin meow and if it is false then it will call this simple
+message. Now let us see how dynamically we can bind to this.
+(Refer Slide Time: 17:47)
+
+Let us have this program, this is a little bit tricky. You can see how these statements are
+here. So, demonstration_66 is basically giving the idea about runtime polymorphism in
+this case, but we will resolve it using the super concept here. So, here we create an object
+of a subclass pet cat c 1.
+So, that is very simple. Also, you create another object c 2, the magiccat and so C2 no
+one we mention true; that means, if it is no one, it will spin the superclass method for this
+c 2. Now, again c 2 speak. So, it will call the method here. Now c 1 speak if we call that
+it will call another subclass objects that is the B met one. Now we can mets c 2 noOne as
+false. So, it is now false and if we call again C 2 speak, then it will call another method.
+
+So, it accordingly it will print meow meow and then hello cat. Now let us see the run the
+program we will see exactly how it will work yeah ok.
+Now, you can see this basically print according to the different states depending on the
+concept it is there. So, this is one example here basically we can see how that 2 or more
+classes can be inherited from one superclass. This also example signify this fact. Now let
+us have another instance of multi-level inheritance.
+(Refer Slide Time: 19:33)
+
+Multilevel inheritance means if we can derive from one class subclass sub from subclass
+we can derive another subclass. So, like this one the example of multi-level inheritance,
+now, here let us see the class box which is already the same as we have discussed in the
+earlier demonstration and also we used the box weight another subclass derived from the
+class box. So, it is more or less the same as we have already discussed, now, here the
+simple inheritance of 2 level.
+
+(Refer Slide Time: 20:01)
+
+Now, in the next level we inherit another, so we define another class shipment it is
+basically subclass of the class box weight; that means, box weight is a derived class from
+the class box and shipment is another derived class from the box weight. So, this is the
+shipment is an example of multi-level inheritance. And again for the same concept, it is
+also applicable here, the multi-level inheritance can be initialized by calling its
+superclass constructor, in this case, box weight constructor.
+So, super wh dm basically called the constructor that is defined there box weight, it is
+like this way and it is initialization. Now let us come to the creation of objects.
+
+(Refer Slide Time: 20:47)
+
+So, demonstration 6 7 there is a program, here we can create 2 objects shipment 1 and
+shipment 2 and then we can call this method it works and then, so let us run this
+program. So, that you can see them in the different for the 2 different objects, which are
+derived in a multilevel way can be used to create objects and then the different methods
+in those objects can be accessed by a Java program ok. So, this is an example that we can
+verify with the court, so that it is working correctly.
+So, this is an example of multilevel inheritance. Now let us discuss the abstract class.
+(Refer Slide Time: 21:31)
+
+A class is defined as an abstract class, all the classes that we have discussed earlier
+superclass they are they are with the access specification the defaults So, they is a
+default, there is no other access specifier it is used here; otherwise, we can use some
+other access specifier depending on its application. Now here we use one keyword called
+abstract. If we specify an abstract keyword before a class then that class is called abstract
+class. So, in this case, the base class is declared as an abstract and also one method if a
+method is specified by a specifier called abstract then the method is called abstract.
+So, in this case, a class is an abstract and in this class, one method is declared which is
+also abstract. Even we can also declare a method without any abstract also is called a
+non-abstract method, but in this case, let us have the method is now an abstract class. So,
+what is the meaning of this abstract class? As we have already know learn about that, if
+we declare a class as an abstract class this means that no object can be created for this,
+but this class can be used to inherit some other class; means that an abstract class can be
+used for superclass, but no object can be created for this kind of class abstract class.
+Now, let us have the one example here, we can see class derived is a subclass of the
+superclass base, so it is quite and if there are any abstract method, then in the subclass
+the method should be declared and defined properly. So, the method if you see abstract,
+whenever you declared abstract, no code need to be mention there, so there is no code, so
+it is a blank. Now here you see in the subclass declaration we fully declared the method
+fun and this basically includes on system pin statement it will basically pin this one.
+Now, let us come to the main method here demonstration 6 (Refer Time: 23:40) now 6 8,
+so here we can see, so here we can see, if we uncomment the statement like base b, new
+b then, let us uncomment the statement and then try to run it and we will see what is the
+consequence. So, this will give an error, because the base class here is an abstract class
+and we are not privileged to create an object. As we can see the state the error during the
+compilation base b, newly derived it is basically saying variable b is already defined in a
+method mean like this one.
+So, basically, abstract class cannot be instantiated you can see an abstract class cannot be
+instantiated because it is like this one. So, let us uncomment comment it again now have
+the next one base b, newly derived this is quite yeah. So, now, see we can have the
+reference of base type by means of this kind of upcasting is quite possible there. So, now,
+
+we create an object of type derived class but reference it through a base class object this
+is quite possible and then we call the b.fun as it is there. So, this fun is basically the fun
+method, which is declaring the subclass method. So, this program if it is run, then it will
+give the output, so this is working correctly. So, this is a concept it is there, so far the
+abstract class is concerned. Now again here that whether abstract class we have
+understood that no object can be created.
+(Refer Slide Time: 25:11)
+
+Now, whether abstract class, can have any constructor or not. So, our next example
+showing this thing that yes an abstract class may have its own constructor.
+
+(Refer Slide Time: 25:25)
+
+.
+That means abstractor can be used to initialize the member elements if it is there if it is
+not an object creation event. Actually, this constructor will be useful to initialize the
+object of the subclass of this class because for an abstract class subclass can be created.
+Now, here is an example where you can see how an abstract class can have its own
+constructor and how the same constructor can be useful to initialize the subclass objects.
+So, here we can see the base is an abstract class constructor here it basically prints the
+same statement and the next is basically an abstract method namely the fun here. And the
+see derived class is a subclass of the class base here and derived is a constructor of its
+own it derives is there and void fun is the method which is basically an implementation
+of the abstract method that is there in the base class.
+So, here derived is there, although this constructor is not called; that means, superclass
+constructor is not called here. I will tell you how this can be called here anyway. Now let
+us have the demo about it so; that means, the constructor it is there we can call it ok. We
+can just little change this program whether base class constructor can be called here in
+this method in the derived class. So, you can do that yeah this program is running fine
+yeah, so it is running.
+
+(Refer Slide Time: 26:51)
+
+Now, let us come to the code again switch to the code. Now we can call the base class
+constructor here. So, in the derived class got not yeah yes kind. So, right next statement
+we can add here before right yes. So, you can write super then within this one. So,
+basically superclass constructor namely, the base constructor will be called here right ok,
+then save it compile it. So, here you can see both the derived class constructor, as well as
+superclass constructor will be called here, illegal start of type ok.
+(Refer Slide Time: 27:39)
+
+So, can we write base here, simple base. Let us try whether the base call concern can be
+called in this method or not. In this case, super it does not work here, anyway so, the
+superclass constructor cannot be used here, but we can use in the derived class
+constructor base class constructor right system. yeah, you can just comment it yeah fine.
+Then within this derived class method constructor go there right here right, then go to the
+2 statement right one is that super yeah, super within write yeah construct not 0, right oh
+yeah they're fine.
+(Refer Slide Time: 28:09)
+
+Now, we call this constructor a through the derived class constructor. Let us see whether
+it works for us or not yeah. So, in this case, it works that mean a constructor can be
+called by means of the subclass constructor only now let us run this program. It will call
+the superclass constructor as the base class constructor ok. So, this is basically we have
+understood that a constructor can be declared in an abstract class and that same
+constructor can be used in the derived class objects. So, this is one example.
+Now, let us have another example, as in the last example we have discussed that an
+abstract class with an abstract method, but an abstract class may have the non-abstract
+that means without any.
+
+(Refer Slide Time: 29:03)
+
+So, that method also can exist, but this method can be accessed through the subclass
+object. So, this is the one example that we are going to give a demo, here the class base
+is the abstract class defined as an abstract keyword and then it has the method fun which
+is basically non-abstract method.
+Now, we can call we can create a subclass object derived here inherited from the base
+class and then the fun method is here it is basically overridden method here because we
+have overridden the fun method there it is like this one fine. Now let us come to the main
+class here demonstration_6 1 0 main class, we basically create an object for the derived
+class derived the new derived. So, in this case, you can understand d.fun we will call the
+fun method there ok.
+So, let us run this program we can understand how it works for us yeah. So, it is derived
+is called here ok. So, derive constructor is called and derive phone is called, so it is like
+this. Now let us see how we can access the fun method which is defined they are in the
+base class method lets come to the object here no yeah here.
+
+(Refer Slide Time: 30:41)
+
+So, now not here these as the previous program you have switched to the next one yeah.
+So, this fun method which is defined they are in the base method is basically it is allowed
+that abstract non-abstract method.
+Now, my question is whether we can call this non-abstract method here in the derived
+class or not. We can use it here we can use as a super right, you can use the super
+keyword. For example, in the fun method or somewhere right we can write super. fun,
+super.fun right and then this one. Now we can understand that we used the fun method in
+the right. So, by super keyword we can refer to the member which is there in the base
+class; although the object is not created, it will be accessed yeah. So, it is right yeah we
+can understand this one.
+So, now non-abstract method may be there in the abstract class, like non-obstructive data
+may be there in the abstract class they can be accessed using the super keyword that is
+there in any subclass objects.
+
+(Refer Slide Time: 32:07)
+
+Our next example: basically demonstrating the final keyword that is there. Final keyword
+is a very strict keyword if you declare a class as final; that means, this class cannot be
+inherited in any other class, that means no subclass can be created from this one.
+So, this is the one example where the bike is the one class we have declared as a final.
+So, final means, no inheritance is possible. Now, this code definitely it is not a valid code
+because, we are attempting to create a subclass called Honda 1, extending bike class,
+bike class and then definitely if it is not possible. So, the next statement main class is
+also not a valid one, now let us run this program, see whether this program gives a
+compilation error or it works ok. So now, we can see it gives an error that that cannot
+inherit from the final bike. So, this means that we cannot do this one ok. So, this is the
+one.
+Now, this question that arises that then what is the use of the final? Sometimes we can
+have a stick restriction that this class is a stick class that no on class can be derived
+because derivation means is an accessing some member in the superclass. So, if we want
+to protect it, so we can fix the final keyword. Now a class can be made as a final like a
+method also can be made as a final, a variable also can be made as a final. Now, here in
+the next example that, we are going to give a demo 6.12 a, showing that, how a method
+can be declared as a final. If we declare a method as a final that means, this method
+cannot be overridden in any way.
+
+(Refer Slide Time: 33:55)
+
+So, this is one example that we can see. The class base is the abstract class, that’s fine
+and there is a method fun which is declared as a final. This means that no overheating is
+possible. Now here derived is the derived class, extent base class it does not have any
+other method or members is ok. Now we can create an object of the derived class, but
+referencing to the base class and then we call the b.fun. So, it will basically call the apps,
+the final method which is the fun method derive declare in defined in the base class. So,
+this fun method is basically system.out.println final fun is called.
+Now, let us run this program, we can have the quick demo so that we can see about it
+yeah. So, fine, so this is running. Now let us have to see whether we can override it or
+not? This is an attempt to override a method, this is the next demonstration, please. So,
+we can see, we are trying to override it at one method which is declared as a final method
+in a base class and derived class we are going to overwrite it in.
+Now let us have the quick look at the program here. So, here class based abstract method
+and then fun is also final. In derived we have the method derived is the constructor no
+issue. Now, void pan here is basically our attempt to override the method which is there
+in the base class. Now let us compile this program. If it compiles then means that over it
+is in successful. Now let us run this program, compile this program it is 62b yeah fine
+right. Now see it gives compilation that derives cannot overwrite fun in this. So, we have
+understood that a method if it is declared as a final, in super class then, it cannot be
+
+overridden; however, it can be accessed in the subclass object by referring to this either
+super or this course ok.
+So, this is the demonstration about the inheritance and the many features in inheritance in
+Java program. And we have discussed, so many things are there. It is adviced that you
+should practice all the program that we have this used in this demonstration, so that, you
+can understand more. And if you have any doubt, any confusion you are you can feel
+free to approach at posting your doubts in the forum so that, we can answer to your
+question.
+Thank you, thanks for your attention.
+
+

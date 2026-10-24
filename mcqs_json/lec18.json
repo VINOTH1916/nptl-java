@@ -1,0 +1,396 @@
+{
+  "lecture": 18,
+  "title": "Packages II",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What does the CLASSPATH environment variable tell the JVM?",
+      "options": {
+        "A": "Where Java source files are stored",
+        "B": "Where to find compiled .class files and packages",
+        "C": "The location of the JDK installation",
+        "D": "Which version of Java to use"
+      },
+      "answer": "B",
+      "explanation": "CLASSPATH tells the Java compiler (javac) and JVM (java) where to search for .class files and package directories/JARs. Without CLASSPATH set (or with the default working directory), the JVM only looks in the current directory."
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What are the three ways to specify the package location for the JVM?",
+      "options": {
+        "A": "Registry, configuration file, command line",
+        "B": "Default (working directory), CLASSPATH environment variable, -classpath flag with java/javac",
+        "C": "JAVA_HOME, PATH, CLASSPATH",
+        "D": "package.xml, manifest.mf, classpath.txt"
+      },
+      "answer": "B",
+      "explanation": "The three ways to specify where the JVM looks for packages: 1) Default — the current working directory is automatically searched, 2) CLASSPATH environment variable — set globally, 3) -classpath (or -cp) flag passed directly to java/javac commands."
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What does 'javac -d . MyClass.java' do?",
+      "options": {
+        "A": "Compiles MyClass.java with debug info",
+        "B": "Compiles MyClass.java and places the .class file in the correct package directory under the current directory",
+        "C": "Deletes MyClass.java after compilation",
+        "D": "Compiles to a different source file"
+      },
+      "answer": "B",
+      "explanation": "The '-d' flag specifies the output directory for compiled .class files. '-d .' means the current directory. For a class in package 'MyPack', javac automatically creates 'MyPack/' subdirectory and places 'MyClass.class' there, matching the package structure."
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What is the correct command to run a class 'MyClass' in package 'MyPack'?",
+      "options": {
+        "A": "java MyClass",
+        "B": "java MyPack/MyClass",
+        "C": "java MyPack.MyClass",
+        "D": "java MyPack\\MyClass.class"
+      },
+      "answer": "C",
+      "explanation": "When running a class in a package, use the fully qualified name with dot notation: 'java MyPack.MyClass'. The JVM maps this to the directory path 'MyPack/MyClass.class' relative to the classpath."
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "When creating a user-defined package 'MyPack', where is the package declaration placed in the source file?",
+      "options": {
+        "A": "At the end of the file",
+        "B": "After import statements",
+        "C": "At the very top of the file before any other code",
+        "D": "Inside the class body"
+      },
+      "answer": "C",
+      "explanation": "'package MyPack;' must be the first statement in the source file (comments and blank lines are acceptable before it, but no other code). It must come before import statements and the class declaration."
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "If a class in package 'MyPack' is to be used from outside the package, what access modifier must the class have?",
+      "options": {
+        "A": "protected",
+        "B": "default (no modifier)",
+        "C": "private",
+        "D": "public"
+      },
+      "answer": "D",
+      "explanation": "For a class to be accessible from outside its package, it must be declared public. Default-access classes are package-private — only accessible within the same package. Classes intended for external use (in a library) must be public."
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What does 'import MyPack.Balance;' do?",
+      "options": {
+        "A": "Creates a copy of Balance in the current package",
+        "B": "Allows using 'Balance' without the full package qualifier in the current file",
+        "C": "Moves Balance into the current package",
+        "D": "Compiles the Balance class"
+      },
+      "answer": "B",
+      "explanation": "'import MyPack.Balance;' tells the compiler that 'Balance' refers to 'MyPack.Balance'. After this import, you can write 'Balance b = new Balance()' instead of 'MyPack.Balance b = new MyPack.Balance()'."
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "Is 'import java.lang.*;' necessary in a Java program?",
+      "options": {
+        "A": "Yes — java.lang must always be explicitly imported",
+        "B": "No — java.lang is automatically imported by the compiler",
+        "C": "Only when using the Math class",
+        "D": "Only in JDK 8 and above"
+      },
+      "answer": "B",
+      "explanation": "'import java.lang.*;' is redundant because the Java compiler automatically imports java.lang for every source file. Writing this import explicitly does no harm but is unnecessary — String, Math, System, Integer, etc. are already available."
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What example of CLASSPATH setting is shown in the NPTEL lecture?",
+      "options": {
+        "A": "set CLASSPATH=C:\\Java\\bin",
+        "B": "set CLASSPATH=C:\\MyPrograms\\Java",
+        "C": "CLASSPATH=/usr/java/lib",
+        "D": "CLASSPATH=%JAVA_HOME%\\lib"
+      },
+      "answer": "B",
+      "explanation": "The NPTEL Lecture 18 shows the example 'set CLASSPATH=C:\\MyPrograms\\Java' to configure where the JVM should look for user-defined packages and classes on Windows. This sets the CLASSPATH for the current command prompt session."
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "If a class 'Balance' is in package 'MyPack', what import statement allows using 'Balance' directly?",
+      "options": {
+        "A": "import Balance;",
+        "B": "import MyPack.*;",
+        "C": "import MyPack.Balance; or import MyPack.*;",
+        "D": "package MyPack.Balance;"
+      },
+      "answer": "C",
+      "explanation": "Both 'import MyPack.Balance;' (specific import) and 'import MyPack.*;' (wildcard import) allow using 'Balance' directly. The specific import is preferred as it makes dependencies explicit; the wildcard imports everything in the package."
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "What is the difference between the -classpath flag and the CLASSPATH environment variable?",
+      "options": {
+        "A": "They are identical in function",
+        "B": "-classpath is per-command (overrides CLASSPATH for that invocation); CLASSPATH is global (applies to all java/javac invocations in the session)",
+        "C": "CLASSPATH works for all JDK tools; -classpath only works for javac",
+        "D": "-classpath is for Linux; CLASSPATH is for Windows"
+      },
+      "answer": "B",
+      "explanation": "The -classpath (or -cp) flag on the command line is command-specific — it sets the classpath for that single javac or java execution and overrides CLASSPATH for that command. CLASSPATH as an environment variable applies globally to all Java tools in the current session."
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "After compiling 'javac -d . MyPack/Balance.java', where would 'Balance.class' be placed?",
+      "options": {
+        "A": "In the current directory as Balance.class",
+        "B": "In MyPack/ subdirectory of the current directory as Balance.class",
+        "C": "In the JDK lib directory",
+        "D": "In the JAVA_HOME directory"
+      },
+      "answer": "B",
+      "explanation": "'-d .' places compiled .class files in the current directory, preserving the package directory structure. For 'package MyPack;', the compiler creates 'MyPack/' if it doesn't exist and places 'Balance.class' inside it at './MyPack/Balance.class'."
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "What happens if CLASSPATH does not include the directory containing a package, and you try to run a program that uses it?",
+      "options": {
+        "A": "The JVM auto-discovers the package",
+        "B": "ClassNotFoundException or NoClassDefFoundError at runtime",
+        "C": "The program compiles but runs with empty objects",
+        "D": "A warning is printed but execution continues"
+      },
+      "answer": "B",
+      "explanation": "If the JVM cannot find a class at runtime (missing from all CLASSPATH entries), it throws ClassNotFoundException (if loaded explicitly) or NoClassDefFoundError (if referenced directly). The program cannot continue because the required class is unavailable."
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "What is the difference between 'import MyPack.Balance;' and 'import MyPack.*;'?",
+      "options": {
+        "A": "No functional difference",
+        "B": "The first imports only Balance; the second imports all public types in MyPack",
+        "C": "The second imports sub-packages too; the first doesn't",
+        "D": "The wildcard form is faster at compile time"
+      },
+      "answer": "B",
+      "explanation": "Specific import 'import MyPack.Balance;' imports only Balance. Wildcard 'import MyPack.*;' imports all public classes and interfaces in MyPack. Neither imports sub-packages. Both have identical runtime behavior — import only affects compile-time name resolution."
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "If the same class name exists in two different packages, how do you use both in the same file?",
+      "options": {
+        "A": "Use both wildcard imports",
+        "B": "Import one class and use the fully qualified name for the other",
+        "C": "Create aliases for the classes",
+        "D": "It is impossible to use both"
+      },
+      "answer": "B",
+      "explanation": "Java has no aliasing mechanism. The common solution is to import one class normally and use the fully qualified name for the other. For example: import com.lib1.Manager; and use com.lib2.Manager as com.lib2.Manager b = new com.lib2.Manager();"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "In the NPTEL lecture, what example class is used to demonstrate user-defined packages?",
+      "options": {
+        "A": "Calculator in package MathUtils",
+        "B": "Balance in package MyPack",
+        "C": "Employee in package company",
+        "D": "Student in package university"
+      },
+      "answer": "B",
+      "explanation": "The NPTEL Lecture 18 demonstrates user-defined packages using a 'Balance' class placed in 'MyPack' package. This example shows how to create, compile, and use a user-defined package with the Balance class representing a bank balance."
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Can you include '.' (current directory) in CLASSPATH?",
+      "options": {
+        "A": "No — the current directory is always the only classpath",
+        "B": "Yes — including '.' ensures the current directory is searched along with other specified paths",
+        "C": "Only on Linux systems",
+        "D": "Only if no other paths are in CLASSPATH"
+      },
+      "answer": "B",
+      "explanation": "Including '.' in CLASSPATH adds the current directory to the search path: 'CLASSPATH=.;C:\\MyLib'. If '.' is not included and CLASSPATH is set, the JVM won't automatically look in the current directory (unless -cp is used with .). This is a common mistake that causes ClassNotFoundErrors."
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "When accessing class 'Balance' from package 'MyPack' after importing it, how is the object created?",
+      "options": {
+        "A": "MyPack.Balance b = new MyPack.Balance(args);",
+        "B": "Balance b = new Balance(args);",
+        "C": "import MyPack.Balance; b = create Balance(args);",
+        "D": "Both A and B are correct"
+      },
+      "answer": "D",
+      "explanation": "After 'import MyPack.Balance;', you can use 'Balance b = new Balance(args);' (short form). Without import, you must use 'MyPack.Balance b = new MyPack.Balance(args);' (fully qualified). Both are functionally identical — the import just provides the shorthand."
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What is the purpose of the '-d' flag in javac?",
+      "options": {
+        "A": "Enables debug mode",
+        "B": "Specifies the destination directory for compiled .class files",
+        "C": "Defines a preprocessor macro",
+        "D": "Disables compiler warnings"
+      },
+      "answer": "B",
+      "explanation": "The '-d directory' flag tells javac where to place the compiled .class files. If the class is in a package, javac creates the necessary subdirectory structure under the specified directory. '-d .' places classes in the current directory with proper package subdirectories."
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What directory structure is needed for a class 'Manager' in package 'com.company.hr'?",
+      "options": {
+        "A": "com.company.hr/Manager.class",
+        "B": "com/company/hr/Manager.class",
+        "C": "company/hr/Manager.class",
+        "D": "Manager.class anywhere in classpath"
+      },
+      "answer": "B",
+      "explanation": "Package names map directly to directory paths using forward slashes (on Unix/Mac) or backslashes (on Windows). 'com.company.hr' becomes 'com/company/hr/', so 'Manager.class' must be in 'com/company/hr/Manager.class' relative to a CLASSPATH entry."
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "A developer sets 'CLASSPATH=C:\\lib\\myapp.jar' but their program also needs classes in the current directory. What should CLASSPATH be?",
+      "options": {
+        "A": "CLASSPATH=C:\\lib\\myapp.jar (current directory is always included)",
+        "B": "CLASSPATH=.;C:\\lib\\myapp.jar (include '.' for current directory)",
+        "C": "CLASSPATH=C:\\lib\\myapp.jar;* (wildcard adds current)",
+        "D": "CLASSPATH=current;C:\\lib\\myapp.jar"
+      },
+      "answer": "B",
+      "explanation": "When CLASSPATH is explicitly set, the current directory is NOT automatically included. Add '.' to CLASSPATH: 'CLASSPATH=.;C:\\lib\\myapp.jar' (Windows) or 'CLASSPATH=.:C:\\lib\\myapp.jar' (Unix). This ensures both the current directory and the JAR are searched."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "What is a JAR (Java Archive) file and how does it relate to packages?",
+      "options": {
+        "A": "A JAR is a single .class file with compression",
+        "B": "A JAR is a ZIP archive containing .class files organized in package directory structure, allowing packages to be distributed as a single file",
+        "C": "A JAR file contains only source code",
+        "D": "JAR files are only used for executable programs"
+      },
+      "answer": "B",
+      "explanation": "A JAR (Java Archive) is a ZIP-format archive containing .class files in their package directory structure (e.g., com/bank/Account.class inside the JAR), plus a META-INF/MANIFEST.MF file. Adding a JAR to CLASSPATH makes all its packages and classes available to the JVM."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "If two JARs on the CLASSPATH both contain 'com.utils.StringHelper', which one does the JVM use?",
+      "options": {
+        "A": "The JVM always uses the newer version",
+        "B": "The JVM uses the one from the first JAR found in CLASSPATH order",
+        "C": "Both are loaded and merged",
+        "D": "ClassConflictException is thrown"
+      },
+      "answer": "B",
+      "explanation": "The JVM's class loader uses a first-match strategy: it searches CLASSPATH entries in order and uses the first 'com.utils.StringHelper' it finds. This can cause subtle bugs when JARs have conflicting versions of the same class. This is sometimes called the 'JAR hell' problem."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "What is the difference between compile-time classpath (-classpath in javac) and runtime classpath (-classpath in java)?",
+      "options": {
+        "A": "They are identical",
+        "B": "Compile-time classpath resolves class/package references during compilation; runtime classpath allows the JVM to find and load classes during execution — both must include all needed classes",
+        "C": "Compile-time classpath includes source files; runtime includes .class files",
+        "D": "Only the runtime classpath matters"
+      },
+      "answer": "B",
+      "explanation": "Both serve different purposes: javac's -classpath resolves type references (checking if classes/methods exist during compilation). java's -classpath allows the JVM to actually load and execute the class bytecode at runtime. A class can compile fine (compile-time classpath OK) but fail at runtime if the runtime classpath is wrong."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "What does 'package-private' mean in terms of encapsulation strategy in a multi-package library?",
+      "options": {
+        "A": "All classes should be package-private",
+        "B": "Implementation classes that other packages shouldn't depend on should be package-private, while API classes that clients use should be public",
+        "C": "Package-private prevents compilation of other packages",
+        "D": "Package-private is equivalent to protected"
+      },
+      "answer": "B",
+      "explanation": "Using package-private strategically: put implementation helpers in the same package and keep them package-private (internal details). Only make API-facing classes public. This creates a stable public API while allowing internal implementation to change freely without affecting external users."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "What is the effect of having multiple directories in CLASSPATH? For example: CLASSPATH=C:\\app;C:\\lib?",
+      "options": {
+        "A": "Only C:\\app is searched; C:\\lib is ignored",
+        "B": "The JVM searches both directories (in order) for class files",
+        "C": "The paths are combined into one directory",
+        "D": "Multiple CLASSPATH entries cause a JVM error"
+      },
+      "answer": "B",
+      "explanation": "Multiple CLASSPATH entries (separated by ; on Windows, : on Unix) are all searched. The JVM looks for a class in each entry in order: first C:\\app, then C:\\lib. If a class is found in C:\\app, C:\\lib is not searched for that class. This allows combining multiple class libraries."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Why does 'import java.lang.*;' produce no compilation error even though it's redundant?",
+      "options": {
+        "A": "The compiler ignores all import statements",
+        "B": "java.lang is always available; adding a redundant import to an already-available package is harmless — the compiler just doesn't need to act on it",
+        "C": "import statements are only comments in Java",
+        "D": "java.lang has a special flag allowing duplicate imports"
+      },
+      "answer": "B",
+      "explanation": "Import statements are not directives to include code — they are hints to the compiler about where to look for class names. Importing an already-available package (java.lang) is redundant but harmless; the compiler ignores it since java.lang is already in scope. Redundant imports may generate an IDE warning but no compile error."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "How does a build tool like Maven manage CLASSPATH automatically, and why is this better than manual CLASSPATH management?",
+      "options": {
+        "A": "Maven ignores CLASSPATH entirely",
+        "B": "Maven downloads declared dependencies, builds the CLASSPATH automatically for compilation and runtime, handling version conflicts through dependency resolution — eliminating manual CLASSPATH management errors",
+        "C": "Maven sets CLASSPATH globally for all Java programs",
+        "D": "Maven is only for enterprise applications"
+      },
+      "answer": "B",
+      "explanation": "Maven (and Gradle) resolve declared dependencies from repositories, download JARs, and construct the correct CLASSPATH automatically. This solves JAR hell: dependency versions are explicitly declared, transitive dependencies are resolved, and the CLASSPATH is automatically correct for both compilation and execution. Manual CLASSPATH management is error-prone and doesn't scale."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "In the NPTEL lecture example, what is the significance of 'Balance' being in package 'MyPack' when demonstrating access from another class?",
+      "options": {
+        "A": "It shows that unpackaged classes cannot use packaged classes",
+        "B": "It demonstrates the import mechanism — the accessing class must either import MyPack.Balance or use the fully qualified name to use Balance",
+        "C": "It demonstrates that Balance must be recompiled for each use",
+        "D": "It shows that user-defined packages are compiled differently"
+      },
+      "answer": "B",
+      "explanation": "The demonstration shows that when Balance is in package MyPack, a class in a different package must either 'import MyPack.Balance;' and use 'Balance', or use the fully qualified 'MyPack.Balance'. This is the core package access mechanism — packages establish explicit dependency declarations through imports."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "What is the 'unnamed package' (default package) and what are its limitations?",
+      "options": {
+        "A": "The unnamed package is the same as java.lang",
+        "B": "Classes without a 'package' statement are in the unnamed package; they cannot be imported by named-package classes, making them suitable only for small experiments, not libraries or reusable code",
+        "C": "The unnamed package includes all standard library classes",
+        "D": "Classes in the unnamed package have public access everywhere"
+      },
+      "answer": "B",
+      "explanation": "The unnamed (default) package is for classes without a 'package' statement. Key limitation: named-package classes CANNOT import from the unnamed package — 'import HelloWorld;' doesn't work. This makes unnamed-package classes unsuitable for libraries. Best practice: always declare a package for production code."
+    }
+  ]
+}

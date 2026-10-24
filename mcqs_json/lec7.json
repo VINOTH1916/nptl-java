@@ -1,0 +1,396 @@
+{
+  "lecture": 7,
+  "title": "Encapsulation",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What is encapsulation in Java?",
+      "options": {
+        "A": "Hiding source code from the compiler",
+        "B": "Bundling data (fields) and methods together within a class",
+        "C": "Creating multiple objects from one class",
+        "D": "Inheriting properties from a parent class"
+      },
+      "answer": "B",
+      "explanation": "Encapsulation is the OOP principle of bundling related data (fields/attributes) and the methods that operate on that data together inside a single class. This packages related behavior and state into a cohesive unit."
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "In the Circle class example, what are the fields representing the center of the circle?",
+      "options": {
+        "A": "int a, int b",
+        "B": "double cx, double cy",
+        "C": "float x, float y",
+        "D": "float centerX, float centerY"
+      },
+      "answer": "C",
+      "explanation": "In the NPTEL lecture's Circle class example, the center coordinates are stored as fields 'float x' and 'float y'. The radius is stored as 'float r'. All three fields are of type float."
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "How do you create an object of the Circle class in Java?",
+      "options": {
+        "A": "Circle c;",
+        "B": "Circle c = Circle();",
+        "C": "Circle c = new Circle();",
+        "D": "new Circle c;"
+      },
+      "answer": "C",
+      "explanation": "'Circle c = new Circle();' declares a Circle reference 'c' and uses the 'new' keyword to allocate a new Circle object on the heap. The parentheses call the constructor to initialize the object."
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "How do you access a field 'x' of a Circle object 'c' using the dot operator?",
+      "options": {
+        "A": "Circle->x",
+        "B": "c::x",
+        "C": "c.x",
+        "D": "c[x]"
+      },
+      "answer": "C",
+      "explanation": "In Java, the dot (.) operator is used to access fields and methods of an object. 'c.x' accesses the field 'x' of object 'c'. This is the standard member access syntax in Java."
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What does the Circle class's circumference() method compute?",
+      "options": {
+        "A": "The area of the circle",
+        "B": "The diameter of the circle",
+        "C": "The perimeter (2 * π * r) of the circle",
+        "D": "The volume of the circle"
+      },
+      "answer": "C",
+      "explanation": "The circumference() method computes the perimeter of a circle using the formula 2 * π * r, where r is the radius field. This is the distance around the circle."
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "Which elements can a class contain in Java?",
+      "options": {
+        "A": "Only fields and methods",
+        "B": "Fields, methods, constructors, blocks, nested classes, and interfaces",
+        "C": "Only methods and constructors",
+        "D": "Only fields and constructors"
+      },
+      "answer": "B",
+      "explanation": "A Java class can contain: fields (data members), methods (behavior), constructors (initialization), initializer blocks, nested classes, and nested interfaces. This comprehensive set of elements supports the full range of OOP design patterns."
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "In the Box class example, what are the three fields?",
+      "options": {
+        "A": "x, y, z",
+        "B": "length, breadth, height",
+        "C": "width, height, depth",
+        "D": "a, b, c"
+      },
+      "answer": "C",
+      "explanation": "The Box class in the lecture uses three fields: width, height, and depth. These represent the three dimensions of a box. The class also has methods area() and volume() that operate on these fields."
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "If two Circle objects c1 and c2 are created, do they share the same fields?",
+      "options": {
+        "A": "Yes — all objects of a class share the same fields",
+        "B": "No — each object has its own independent copy of instance fields",
+        "C": "Only if they were created with the same constructor arguments",
+        "D": "Yes, unless the fields are declared private"
+      },
+      "answer": "B",
+      "explanation": "Each object has its own independent copy of instance (non-static) fields. c1.x and c2.x are separate memory locations. Changes to c1.x do not affect c2.x, allowing each object to maintain its own state."
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What is the 'main class' in the context of a Java program?",
+      "options": {
+        "A": "The largest class in the program",
+        "B": "The first class defined in the source file",
+        "C": "The class that contains the public static void main() method",
+        "D": "The class with the most methods"
+      },
+      "answer": "C",
+      "explanation": "The 'main class' refers to the class that contains the 'public static void main(String[] args)' method. This is the entry point of the application — the JVM starts program execution at this method."
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "How do you call the circumference() method on a Circle object 'c'?",
+      "options": {
+        "A": "circumference(c)",
+        "B": "Circle.circumference()",
+        "C": "c->circumference()",
+        "D": "c.circumference()"
+      },
+      "answer": "D",
+      "explanation": "Instance methods are called using the dot operator on an object reference: 'c.circumference()'. This calls the circumference() method on the specific object 'c', using 'c's field values (particularly r) for the computation."
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "In the Circle class, what does the area() method compute and what is the formula?",
+      "options": {
+        "A": "Circumference: 2 * π * r",
+        "B": "Area: π * r * r",
+        "C": "Volume: (4/3) * π * r³",
+        "D": "Diameter: 2 * r"
+      },
+      "answer": "B",
+      "explanation": "The area() method of the Circle class computes the area of a circle using the formula π * r², where r is the radius field. In Java, this would be computed as Math.PI * r * r."
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Is it allowed to define multiple classes in a single Java source file?",
+      "options": {
+        "A": "No — only one class per file is allowed",
+        "B": "Yes — but only one class can be declared public, and it must match the filename",
+        "C": "Yes — any number of public classes can be in one file",
+        "D": "Yes — but only if they are inner classes"
+      },
+      "answer": "B",
+      "explanation": "Java allows multiple class definitions in a single source file, but only one class can be declared public, and that class's name must match the filename. All other classes in the file will have default (package-private) access."
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Given Circle c1 = new Circle(); and Circle c2 = new Circle();, c1.r = 5.0f; what is the value of c2.r?",
+      "options": {
+        "A": "5.0",
+        "B": "Undefined/garbage value",
+        "C": "0.0 (default float value)",
+        "D": "Same as c1.r because they are the same class"
+      },
+      "answer": "C",
+      "explanation": "c1 and c2 are independent objects. Setting c1.r = 5.0f affects only c1's radius field. c2.r remains at the default float value of 0.0 (Java initializes all numeric instance fields to zero). The objects are fully independent."
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Which method does the Box class typically provide to compute the space inside the box?",
+      "options": {
+        "A": "area()",
+        "B": "perimeter()",
+        "C": "volume()",
+        "D": "capacity()"
+      },
+      "answer": "C",
+      "explanation": "The Box class in the lecture has a volume() method that computes width * height * depth. It also has an area() method, but volume() specifically computes the 3D space inside the box."
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "What is the relationship between a class and an object in Java?",
+      "options": {
+        "A": "A class is an instance of an object",
+        "B": "A class is a blueprint; an object is a concrete instance created from that blueprint",
+        "C": "They are identical terms",
+        "D": "An object defines the structure; a class is the runtime instance"
+      },
+      "answer": "B",
+      "explanation": "A class defines the structure and behavior (fields and methods) as a blueprint. An object is a concrete instance created from the blueprint using 'new'. Many objects can be created from one class, each with its own state but sharing the same method implementations."
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "What are the data types of the fields x, y (center), and r (radius) in the Circle class as shown in the NPTEL lecture?",
+      "options": {
+        "A": "int x, int y, int r",
+        "B": "double x, double y, double r",
+        "C": "float x, float y, float r",
+        "D": "String x, String y, float r"
+      },
+      "answer": "C",
+      "explanation": "In the NPTEL lecture's Circle class, all three fields (x, y for center coordinates and r for radius) are declared as float. Using float provides sufficient precision for geometric calculations while using less memory than double."
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "How many Box objects can be created from a single Box class definition?",
+      "options": {
+        "A": "Only one per program",
+        "B": "As many as system memory allows",
+        "C": "Exactly two (a minimum and maximum)",
+        "D": "Only one per method"
+      },
+      "answer": "B",
+      "explanation": "A class definition is a template, and you can create as many object instances as needed (limited only by available memory). Each object is independent with its own field values but shares the same method implementations."
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "In the main class, after creating Circle c = new Circle() and setting c.r = 5.0f, what does c.area() return approximately?",
+      "options": {
+        "A": "10.0",
+        "B": "31.4159",
+        "C": "78.5398",
+        "D": "25.0"
+      },
+      "answer": "C",
+      "explanation": "area() computes π * r * r = π * 5 * 5 = π * 25 ≈ 78.5398. This is the standard circle area formula applied with r=5.0."
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What is the purpose of defining methods in a class rather than just fields?",
+      "options": {
+        "A": "Methods reduce memory usage",
+        "B": "Methods define behavior — how the object's data is processed and what operations can be performed",
+        "C": "Methods are required by the Java compiler for all classes",
+        "D": "Methods store data; fields define behavior"
+      },
+      "answer": "B",
+      "explanation": "Fields store state (data), while methods define behavior (operations). Methods encapsulate the logic for computing results from the object's data, ensuring that complex computations (like circumference) are always done correctly and consistently through the class interface."
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which statement correctly sets the width of a Box object 'b' to 10?",
+      "options": {
+        "A": "Box.width = 10;",
+        "B": "b->width = 10;",
+        "C": "b.width = 10;",
+        "D": "set(b.width, 10);"
+      },
+      "answer": "C",
+      "explanation": "Field values are set using the dot operator: 'b.width = 10;'. This assigns the value 10 to the width field of the Box object referenced by 'b'. Arrow notation (->) is used in C/C++, not Java."
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Two Circle objects c1 and c2 exist. c1.x=1, c1.y=2, c1.r=3; c2.x=4, c2.y=5, c2.r=6. What does c2.area() compute?",
+      "options": {
+        "A": "π * 3 * 3 ≈ 28.27",
+        "B": "π * 6 * 6 ≈ 113.10",
+        "C": "π * (1+4) * (2+5) ≈ 109.96",
+        "D": "π * 9 ≈ 28.27"
+      },
+      "answer": "B",
+      "explanation": "c2.area() operates on c2's fields, specifically c2.r = 6. The formula is π * r² = π * 6 * 6 = π * 36 ≈ 113.10. It does NOT use c1's fields — each object method call uses that object's own field values."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "What design principle does the Circle class in the lecture demonstrate by having x, y, r fields and circumference(), area() methods all in one class?",
+      "options": {
+        "A": "Polymorphism — different behaviors for different contexts",
+        "B": "Encapsulation — related data and behavior are bundled together in a single unit",
+        "C": "Inheritance — Circle extends the concept of a geometric shape",
+        "D": "Abstraction — hiding the implementation details"
+      },
+      "answer": "B",
+      "explanation": "The Circle class demonstrates encapsulation by bundling the center coordinates (x, y), radius (r), and the operations on that data (circumference(), area()) into one cohesive unit. This keeps related things together and prevents the data from being scattered across the program."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "If a Java file 'Shapes.java' contains 'public class Circle' and 'class Box', which class must the filename match?",
+      "options": {
+        "A": "Box, because it is declared first",
+        "B": "Circle, because it is the public class",
+        "C": "Either, because Java doesn't enforce filename matching",
+        "D": "Both must match, so the file must be renamed to 'CircleBox.java'"
+      },
+      "answer": "B",
+      "explanation": "Java requires that the filename match the name of the public class. Since 'Circle' is declared public, the file must be named 'Circle.java'. The 'Box' class will be compiled into 'Box.class' but the source file must be named after the public class."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Why is encapsulation considered a fundamental OOP principle? What problem does it solve?",
+      "options": {
+        "A": "It reduces the number of lines of code needed",
+        "B": "It prevents data corruption by controlling access and grouping related data with the methods that manage it",
+        "C": "It makes programs run faster",
+        "D": "It allows multiple programmers to write the same class"
+      },
+      "answer": "B",
+      "explanation": "Encapsulation solves the problem of data integrity and coupling. By grouping fields with their managing methods and controlling access (via access modifiers), it prevents external code from directly manipulating internal data in invalid ways. This reduces bugs and makes the code easier to maintain."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "In a program with Circle c1 = new Circle(); Circle c2 = c1; c2.r = 10.0f;, what is c1.r?",
+      "options": {
+        "A": "0.0 (the default, unchanged)",
+        "B": "10.0, because c1 and c2 reference the same object",
+        "C": "Compilation error",
+        "D": "It depends on the constructor"
+      },
+      "answer": "B",
+      "explanation": "'Circle c2 = c1;' copies the reference, not the object. Both c1 and c2 point to the same Circle object in memory. When c2.r = 10.0f changes the object's r field, c1.r is also 10.0 because c1 sees the same object."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "The Box class has width, height, and depth fields. To compute surface area (2*(w*h + h*d + w*d)), should this logic be in a method or computed externally in main()?",
+      "options": {
+        "A": "Externally in main(), to separate data from computation",
+        "B": "In a method inside Box, to encapsulate the computation with the data it operates on",
+        "C": "In a separate utility class",
+        "D": "Either option is equally good OOP practice"
+      },
+      "answer": "B",
+      "explanation": "Encapsulation dictates that operations on an object's data should be defined as methods within that class. Placing surfaceArea() inside Box keeps the computation with the data it needs (width, height, depth), makes the class self-contained, and hides the formula from external code."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "In the Circle class, the fields x, y, r are declared without access modifiers. What is their default access level?",
+      "options": {
+        "A": "private — accessible only within Circle",
+        "B": "public — accessible from anywhere",
+        "C": "protected — accessible in subclasses",
+        "D": "default (package-private) — accessible within the same package"
+      },
+      "answer": "D",
+      "explanation": "Without an explicit access modifier, fields and methods have default (package-private) access. They are accessible from any class in the same package but not from classes in different packages. This is less restrictive than private but more restrictive than public."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "What is the memory layout difference between 'int x' as an instance variable vs 'static int x' in a class?",
+      "options": {
+        "A": "No memory difference — they are stored identically",
+        "B": "Instance 'int x' allocates one copy per object; 'static int x' allocates one shared copy for all objects of the class",
+        "C": "Instance variables are on the stack; static variables are on the heap for each object",
+        "D": "static variables allocate more memory than instance variables"
+      },
+      "answer": "B",
+      "explanation": "Instance variables (int x) are stored in the heap memory of each object — 100 objects means 100 separate x fields. Static variables (static int x) are stored once in the class's method area and shared by all instances. Changing static x in one object changes it for all."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "A Box object 'b' has width=3, height=4, depth=5. If b.volume() computes width*height*depth, and the method accidentally uses 'width*height' only (a bug), what is returned?",
+      "options": {
+        "A": "60 (correct answer using width*height*depth)",
+        "B": "12 (buggy: width*height only)",
+        "C": "20 (buggy: height*depth only)",
+        "D": "0 (fields not accessible inside the method)"
+      },
+      "answer": "B",
+      "explanation": "If the method only computes width*height, it returns 3*4=12. The correct volume would be 3*4*5=60. This illustrates why encapsulation is valuable — the volume computation is hidden inside the method; a bug there is localized and can be fixed in one place."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "How does encapsulation in Java classes support code reusability?",
+      "options": {
+        "A": "It copies code automatically to other classes",
+        "B": "A well-encapsulated class can be used in any program that needs its functionality without exposing internal implementation details",
+        "C": "It reduces compile time, making programs reusable",
+        "D": "Encapsulation prevents any external use of the class"
+      },
+      "answer": "B",
+      "explanation": "Encapsulation produces self-contained classes with a clear public interface (methods). Any program needing Circle's functionality can create Circle objects and call circumference()/area() without knowing how those methods work internally. The implementation can change without breaking code that uses the class."
+    }
+  ]
+}

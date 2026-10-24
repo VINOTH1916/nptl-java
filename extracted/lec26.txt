@@ -1,0 +1,270 @@
+Programming in Java
+Prof. Debasis Samanta
+Department of Computer Science and Engineering
+Indian Institute of Technology, Kharagpur
+Lecture – 26
+Demonstration – X
+So, let us have a demonstration regarding the Exception Handling Mechanism in Java.
+(Refer Slide Time: 00:25)
+
+And today’s demonstration includes mainly the compile-time errors, and then what are
+the run time errors are there, and then how exception handling mechanism can be
+achieved by means of simple try-catch block, try with multiple catch, then multiple error
+errors with single catch. And there is another block that can be added with the try-catch
+is called the finally, so try-catch-finally block in along with the try-catch block, and then
+throw and then throw used in exception handling and then nested try-catch block also.
+
+(Refer Slide Time: 01:08)
+
+So, let us have the first look at the compile-time error. As you know if you run the
+program which is not as per the syntax of java programming language. So, the job java
+compiler reports all these things as an error as we see here in this program here. We can
+see a lot of errors are there and here we can see in the first statement itself start with error
+because java is a case sensitive. So, capital C in the class declaration key work is not
+allowed.
+(Refer Slide Time: 01:38)
+
+So, if we run this program as it is the first execution, so compiler will halt it here
+showing this error there. So, we will correct one error at a time as we see the compiler
+will report the class error here.
+Now, let us quickly remove this error now we can see there is more error and public also
+capital P it is not allowed, so let us small capital is there and then again the error is there,
+ok. Let us quick to fix it, right. Public and then the system as we see capital S should be
+there and then capital S, and then you see all the statement should be terminative
+semicolon. So, as there is no semicolon, so we should make the semicolon here again put
+the semicolon as we see. So, java compile compiler will compile the program and
+whenever it finds an error it will report it and then until this report is fixed, so this
+program will not lead to the successful execution of the program.
+So, there are a few more errors as we see. Any method should not be declared and
+abstract inside a class method as we can see here because it is not an abstract class. So,
+there is an error, and then there are few more error as we see those basically compiletime errors actually.
+Now, so after knowing this compile-time error let us have the run time error concept it is
+there. Our next illustration to explain the idea is about the run time error. So, let us go to
+demonstration 10.2. Here we can declare on class, the name of the class is error and ok,
+right.
+(Refer Slide Time: 03:22)
+
+As we see this is the one class declaration, let us follow let us have the quick look at the
+class declaration here. Now here we can see this program is perfectly there is no
+compilation error, as we have compiled it successfully; however, this program will run
+but will not run for all. Now, if we run with this one we will see it run for all not for all,
+but for some.
+For example, for if we run this program with input 1 2 it will run, input 1 2 give, it runs
+correctly. Now, 10 20 30, as we see these program will gives an, it is 10 30; 10 20 30.
+So, this program also takes this input. Now, what will happen if we give only a single
+output? As we see it also ok. So, that is a single input, in this case, it gives an error. So,
+this error is basically array index out of bound exception array error it is there.
+Now, again four 4.5 and 5 the different error it will basically it is called the exception.
+Also, we can see the number format exception error it is there. Now, we will see these
+are not actually errors they are called exceptions because in some situation this program
+not able to handle this, and this so program is there is no error in the program rather these
+programs cannot handle all input that is the cases of exception that is why they are called
+exception.
+(Refer Slide Time: 05:10)
+
+Now, let us see how we can make our program robust using the exception handling
+mechanism it is there. So, let us have the first program there. As we see this program
+10.3, this program we see there are lot of exception scope of exception as we see for
+
+example, in statement x; display, display yeah, ok. So, here we can see in that class
+demonstration 103 we see a equals to x divided by y. So, there is a scope of an exception
+to occur because if y is 0; that means, any function is called with two arguments with the
+second argument is 0 and then again there is a possible job exception in integer.percent
+in case suppose if we run this with non integer parameter passed through there right.
+Now, anyway. So, this program has that it is, it is if we compile it or definitely there is
+no compile-time error this means the program does not have any error there. So, if we
+run it for two it is no error, but if we run with see first argument other than 0 then, ok; 10
+and 0 for example, as we see here two inputs one is 10 and another is 0, because second
+input if it is 0 it will basically divide by 0 or arithmetic exception as we see here
+arithmetic exception error occurs here. So, this is a case of exception that we can see and
+we see this program is therefore, not so robust.
+(Refer Slide Time: 07:10)
+
+Now, towards the implementation robust program, we can use simple try-catch. So, this
+is the example to show how the simple try-catch can make the program robust.
+So, here the point of exception where we just enclose it in the try-catch block, and there
+is another source of exception there a equals to integer.percent they are also a source of
+exception there. So, we have just put them in the try-catch. Now, this program will run
+for any input whatever the input that was not working in for the previous case.
+
+Now, let us run this program with inputs 10 and 0 again. As it was not working there in
+this case you see it works there and divide by 0 it reported and then result in 0 returns
+this one, ok. So, this way we can; so in previous cases the program was not program was
+abnormally terminated rather, but in this case program run successfully, but exception
+which occurs it caught and then handle it.
+(Refer Slide Time: 08:12)
+
+Now, the next example is basically, so how the robust program can be developed. Again
+the same thing, if we run the different cases we can skip let us go to the 10.6 runs the
+following program, run the program without exception handling mechanism for some
+input.
+Let us see have the 106 programs there, yeah. 10.6 program as we see here this program
+includes again exception in many regions here in the, for example, string my string, new
+string, I, there is a possibility if i is 0 in all points are assignment and then next if my
+string 0 equals, ok. We can write it instead of my string 0 you know you just write args 0
+if args 0; no if args 0 ok, that is fine it will work ok, if args 0.
+Now, let us compile this program and as we see it will work for some input, but not all
+output, not all inputs, ok. And again if we run this program first say Java input is capital
+J a v a. So, it basically runs this program correctly and I love Java. Now, let us see you
+can see this program basically starts at the point here in the last statement. So, an error is
+there. It will not work for example, now what will happen if we run this program without
+
+passing any input common line. So, just simply run. It is also giving an error because an
+array index out of bound error is there. So, we see this program is erroneous.
+Now, let us implement this with multiple catch block.
+(Refer Slide Time: 10:08)
+
+So, this is an example to illustrate the try with multiple catch. So, all the errors all the
+exception that occurs there in the program can be handled using try or that means, try
+will check if exception if any occurs during run time and then corresponding catch will
+catch all the exception and then handle them with their proper code here. Here very
+simple code that we have used system print l n only.
+Now, here there is point one where the error occurs, point two also the error occurs and
+point three also the error occurs here. And we just in the process of catching this here
+arithmetic exception and then if it is there so first catch is to catch the arithmetic
+exception, second catch to null pointer exception, and then the third catch is to array
+index out of bound exception. So, this way if we run this program again it will run
+successfully, again my string 0 you can check it arg 0 that is all. If the statement, is ok,
+fine.
+
+(Refer Slide Time: 11:12)
+
+So, this program is now robust and whatever the situation happens here in the last case it
+was working java all the input it is where, but I love java it was not working there. A null
+pointer exception java.lang.nullpointerexception where it is? Ok, you just do my string
+whatever it is here, ok. Run this some of here is a program, yeah. So, no compile-time
+error, yeah. So, there is an error because no input, if we do not give input one error will
+be there, if we just simply java a null pointer java.lang (Refer Time: 12:12), yeah.
+So, it was working correctly; there are some marks there we have resolving. Anyway, so
+now, again if we run this program java without any input, I mean this program without
+any input common line output these also it will catch the exception and accordingly
+program will not abruptly terminated. Array index out of bound this is why it gives the
+error, fine.
+So, let us have the next one. This is also another example that multiple errors by a single
+catch. So, this example we can see the multiple errors here in the switch statement
+actually, in every switch there is an error is there. And then if we run this program as we
+have make the program robust by using single try, but the multiple errors are only one try
+and then catch is to handle all the catch here you can see catch exception e because of all
+the irrespective of the type of error it will catch it. This is the exception is there.
+
+(Refer Slide Time: 13:26)
+
+And this program will; ok. If we run it, it in fact for each switch statement case statement
+it will face an exception and this accession will be caught by the catch statement.
+(Refer Slide Time: 13:33)
+
+Yeah as we see so all exceptions that occur in the four case statements are caught in the
+single catch statement.
+
+(Refer Slide Time: 13:58)
+
+Now, so there is another block that can be added with the try-catch block called the
+finally,. So, here is the next program that we can see, ok.
+(Refer Slide Time: 14:03)
+
+We can see the block with finally, so all the exception that can be caught by try here the
+try statement and then corresponding catch, and then we add it finally, statement here.
+And as we see whatever the exception whether occur or not this finally statement will be
+executed and it will accordingly the code will be, code will run and then gives the output.
+
+Now, let us run this program as we see the greetings has the three, so this while loop is
+successful for three, first three loops, I mean three iterations 0 1 3, but three for the three
+because less than 4 means this loop will roll till 3 and for the last one it will report an
+error and then we will see the finally, will print this statement accordingly. So, here we
+can see it will print high statements all the time, but the next if i less than 3 it will do
+nothing but it will be if i greater than 3, ok. So, as we see this is the output here and the
+last statement finally, whenever I loop is there fine. So, here we can see that finally block
+if it is added with try-catch. So, for every try-catch occurrence this finally will be
+executed, this is the main use of the final statement finally statement.
+Now, our next illustration to highlights the throw clause in a program and here is
+basically the demonstration of the throws.
+(Refer Slide Time: 15:35)
+
+As we see as we have discussed in our theoretical discussion a throws clause can throw
+an exception explicitly and that exception then can be caught in the try-catch block here.
+Now here is a small program segment as we see the name of the class is demonstration
+and the score 1010, and here array is a declaration of size 3 and then try for integer i
+equal to 0, i less than 4, so 0 1 2 3. As it is an array size 3 definitely for the first array it
+is an array index out of bound exception it will be there. So, for i equal to 0 no exception,
+i equal to 1 2 no exception, for i equal to 3 the exception will be there.
+
+(Refer Slide Time: 16:27)
+
+Now, this exception will be caught in the try block and then catch will do it and here
+actually it will see the different methods those are there in the exception class is invoked
+here. For example, getCause, then fillInStackTrace, then getLocalisedMessage,
+getMessage whatever it is there. So, it is basically the implementation of exception class
+in java.lang.throwable to package and according to this, we can access this method in our
+program.
+So, this catch whenever it occurs it catch the array index out of bound exception, for that
+error it will basically give the all message trace and then regarding the complete
+information about the exception that it occurs there via the different methods in that
+throwable class. Now, let us run this program and also it has finally method.
+
+(Refer Slide Time: 17:19)
+
+And here you can see within this catch block we include the throw statement it basically
+throw the exception to the caller. So, this method if it is called here the method is
+basically the name of the method is named the here method is ok. So, here is no caller of
+course, so it will not return anything to any other, but if this method is the try-catch block
+is inside a method, which basically throw then the throw an exception which basically
+returns to the caller here, fine.
+So, this is the complete methods are there, if we run it then we can see how this output it
+will give for us. So, it is basically showing the exception as we see for others it will give
+it. Where is a program compilation? It is here, yeah. So, java array index out of bound
+exception for 3 and it gives all the detail information about the exception it is there. So, if
+you want to scrutinize this program for further details and then the cause and effects and
+everything then all those information will be useful.
+
+(Refer Slide Time: 18:48)
+
+Now, our next example is basically a nested try-catch example. Nested try-catch example
+as we have mentioned that a try-catch block can be put inside another try-catch block, so
+it is called the nested here now, this is the one program. As you see this program does
+not have any error but when we want to run it, it may leads to some exception. Here this
+program if it is run for the three different intention, for example, let us run this program
+and give the three intentions as we see and when the exception occurs you will see
+exactly.
+(Refer Slide Time: 19:15)
+
+So, without try-catch this is the implementation and run this program first with 1 2 3 as
+an input yeah, so this program is successful at this stage. Now, 1 2 only two inputs it
+gives an exception as the array index out of bound exception. Now, again with only
+single input it also gives an exception it is also an arithmetic exception. Now, no input it
+also gives an error, it is also given the error that, ok. So, we can see, so this program is
+vulnerable to three inputs, as we are three cases, as three test data as we have checked it,
+but it works only for them. So, an exception is there.
+Now, let us see our enmity how this can be robust, make a robust program using trycatch, nested try-catch.
+(Refer Slide Time: 20:13)
+
+Now, here if we see the first blocks 42 by a is basically arithmetic exception and if a
+equals to 1 it is an arithmetic exception. So, it is a very similar kind of exception. So, as
+it is only one exception, so this can be tried with an only try block. So, this is the outer
+try block.
+Now, inside again this is another exception if a equal to 2 it is basically the exception is
+called array out of bound exception. So, to take care of this exception we put another trycatch, so inside this one. So, this is an example of a try-catch. As you see the in-out trycatch caught, I mean try for the array index out of bound exception and catch
+accordingly whereas, the outermost try-catch block caught the arithmetic exception here
+and cause it. So, this is the idea about the instant try-catch block.
+
+(Refer Slide Time: 21:07)
+
+And now if we run this program and again try with all possible output for which it was
+not working in the previous case let us see what will happen, 1 2 3 it is work. Now java 1
+2, it is 1 2 it also works, right. It is showing the report; it basically catches the exception
+that has been cached. Again 1 it is also seen divide by 0 it is basically the exception has
+been caught, and then these also by 0 it is caught.
+So, in this case, the program is robust in the sense that in the cause of exception the
+program will completes its execution and finally without any abnormal termination or
+any causes or loss of data whatever it is there. So, this is a concept of exception handling.
+In fact, exception handling is a very important feature in java programming language
+scenario, and more practice is required of course.
+
+(Refer Slide Time: 21:54)
+
+Again I advise you to practice all the example that we have used in this demonstration so
+that you can practice your own. And then this basically hands-on practice is required to
+understand all these things thoroughly, and in case of any doubt and confusion, you are
+most welcome to, feel free to ask us. So, thank you for your attention.
+Thank you very much and all the best for learning.
+
+

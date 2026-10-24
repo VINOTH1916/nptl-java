@@ -1,0 +1,340 @@
+Programming In Java
+Prof. Debasis Samanta
+Department of Computer Science Engineering
+Indian Institute of Technology, Kharagpur
+Lecture – 02
+Java Programming Environment
+So, in this lecture, we are going to learn about how we can write our own program and
+then the same program can be executed in our machine. So, today we will discuss the
+different steps of programming in Java in a very simple way. So, if you do not have any
+idea, it is not difficult, you will be able to follow it. Now, let us see how we can write our
+first Java program.
+(Refer Slide Time: 00:45)
+
+Now, before going to write the first Java program I just tell about how we usually write a
+program for example, in C. So, if you know C programming then it is good that you will
+be able to follow it. So, here is basically the idea it is given here how a C programming
+will look like that. So, it has basically (Refer Time: 01:03) preprocessing statement at
+right, say include. So, here is basically the include and then it basically the main. So, the
+main function as you know the C programming is basically functionoriented
+programming.
+So, there should be one function called the main function. So, this program is written in
+the C programming and you can see that this program will basically if you run it then it
+
+will print a message called “Hello, World!”. Now, let us see how the same right task can
+be executed by writing a Java program. Now, a Java program will typically look like
+this. Now, you can see the difference between the two programs: one program is in C
+and another is in Java.
+So, it is ‘include’ in C, but here it is ‘import’ in Java. And here you write the main, here
+also we write the main like this, but with a peculiar that if syntax. The peculiar syntax is
+like this public static void which is not required there only int or some void can be there
+in C. So, here is the special thing we learn about the meaning of these things which are
+required in Java. The print statement is there in C to print a message. Here in Java to do
+the same thing we need this kind of syntax – System.out.println(“ ”) and then within this
+double quote the message that needs to be printed.
+So, essentially the two programs will do the same thing, but they are written in a
+different syntax and different language construct. So, this is the idea about that and this is
+your first program and one more thing that I should mention here is that Java as it is
+objectoriented programming. So, we have to develop an object. An object is basically
+developed by means of defining a class. So, here this is the name of the class that
+basically we will be used to run; I mean, run this program as an object. So, the name of
+the class here is called HelloWorldApp this is the name you can give a 1, a 2 like this
+one also. But there are few things that you have to follow it before giving the particular
+name and whatever it.
+Now, we have to learn about how we can run a program in Java to print a message and
+this is a typical look of this program, you may find it a little bit difficult. So, that what
+are the different syntax and everything, but as the time pass and then you will discuss
+many things. So, all these things will be easy for you and then you will be able to
+accustom to this concept. So, you should not be worried about that. Now, after running
+this and another important thing is that as a case sensitive, both the programming
+language as you know or if you know already C programming then you know that C is a
+case sensitive and Java is also a case sensitive. Case sensitive means for example, where
+the System is filled it like this. So, the first character is capital S and it matters.
+So, if you write this program which system as small letters all characters in small capital,
+small letters then it is not the same thing as it should be. And here, for example, the name
+
+of the class is HelloWorld and you see the some is capital letters some is small letters
+this means that they are distinguishable. So, if you write all in small letters this means
+that it defines a new class and like this. So, these are basically the case sensitive and Java
+is a case sensitive programming language. Then while you typing the program then you
+should consider whether they have the right letters have been chosen or not.
+(Refer Slide Time: 05:31)
+
+Now, here again, there are few more differences about the C programming versus Java
+programming and regarding the paradigms that we use, by this paradigm, the two
+program languages are totally different. And, also C programming is not the platform
+independent whereas, Java programming is the platform independent. And few things
+you can note it from this table that many things which support C programming but does
+not support Java programming. This may be a little bit surprising, but is not the surprise
+actually Java developer wants to make the programming as simple as possible, as easy
+for the programmer is it possible.
+So, that is why the many critical and then complex issues which basically leads to a lot
+of errors have been carefully ignored in Java programming setting. So, that is why there
+are many things which are not supported by Java programmer and in addition to this
+there are few things also which is not possible in functionoriented programming like C,
+but it is possible in Java programming. For example, inheritance a concept we have
+discussed in the last lectures. It is basically not possible in C whereas, it is possible in
+
+Java. A pointer is one great deal of errors and then is learning capabilities actually so, it
+usually very difficult to cope with this concept.
+So, Java developer has ignored this there that means there is no business of pointer in
+Java programming; few things are very much essential. So far the distributed
+programming and then internet applications they are called multithreading and interfaces
+those things are there. And, to make the robust and most reliable programming the Java
+introduced the concept which is new of its kind. In fact, is called the exception handling
+which is not there in C programming language, but it is readily available in Java
+programming. And, database connectivity usually C does not support database
+connectivity, but with Java, we will be able to connect the database. All these are the
+basically facility over the C programming and that is we can enjoy from the Java
+programming environment.
+(Refer Slide Time: 07:42)
+
+Now, so we have discussed the first program that we can write in java programming, we
+have an idea about it. Now, let us see how we can type this program, what setting should
+we have to do that. Now, you can use any editor, there is a text editor like say Notepad or
+MSWord or Edit command in Unix whatever it is there. In Unix there is some other
+command editor also there like vi, emacs and gedit. So, you can use any editor and then
+type any text like your java program that we have discussed in a few slides back
+HelloWorldApp you can write it.
+
+(Refer Slide Time: 08:29)
+
+So, writing the program using editor is not a big thing to discuss and once you write this
+program you have to save this program. So, you should save this program in a particular
+directory and that can be used using any command in Unix or any prompt common
+prompt from the windows. So, that you can make a directory and all the program that
+you have developed using editor can be safe there.
+(Refer Slide Time: 08:51)
+
+And while you save this program then particular care, ok, I mean task should be taken
+into consideration is that naming of the program.
+
+(Refer Slide Time: 09:06)
+
+The name of the program should be the same as the name of the class that you have
+defined. For example: in the ongoing example the name of the class that we have given
+HelloWorldApp. So, the name of the program; that means, this program should be saved
+as a HelloWorldApp and one more important thing that you should know is that
+extension. For example, in case of C program the extension should be ‘.c’ whereas, in
+case of java the extension of the program should be . java; that means, the program in
+java should be saved as ‘.java’ file.
+(Refer Slide Time: 09:44)
+
+So, and then the directory that you can see; here after saving you will be able to see this
+kind of program has been safe in your current working directory.
+(Refer Slide Time: 09:54)
+
+So, once so this is basically the task of editing; that means how you can type your
+program using an editor like gedit editor or Notepad or MSWord. Now, I will come to
+the discussion of how you can compile this program that means translate this program.
+As you know the java file is basically is a highlevel program that means a program
+written in a highlevel language. So, this program in order to execute it should be
+translated into a machine level code binary code form.
+Now, I will discuss how this can be I mean compiled or translated. Now, for this
+translation there is a program provided by the Java developer and the name of the
+program or you can say the command is called java c javac it is called the javac; it is a
+basically short form of java compiler. So, you can use javac as a command and then type
+this javac followed by the name of the java file. For example, javac HelloWorldApp .
+java. So, if you run this and if there is no error in your program then java will compile
+this program successfully.
+
+(Refer Slide Time: 11:12)
+
+So, this is a command that you can use from your command prompt, Windows or from
+your Unix terminal the program. And, once the program is successfully compiled this .
+java file will be converted into one file having the same name as the name of the java file
+earlier, but the extension is different. The name of the file with executable code is called
+. class. So that means, HelloWorldApp . java will be translated into a code a file is
+called HelloWorldApp . class.
+(Refer Slide Time: 11:58)
+
+So, this is basically the task that the compilation we will do for you and then running that
+mean execution. So, the class file that you have already created you can execute the same
+file from the same directory if you type the command from the directory. So, the class
+file which belongs to the directory say you are working directory and then from the
+directory, if you run this command, like the then it will run the program.
+And, here you see while you run this program you do not have to specify them . class,
+just simply name of the file without any extension it will run your program. And, if there
+is no error during runtime also sometimes an error is there then this program will
+produce the output on the screen or it will be store the output. So, we learn about how to
+edit a program, then how to compile it and how to execute the program ok.
+(Refer Slide Time: 12:58)
+
+So, the concept is pretty simple and it needs few I mean practice to cope with this.
+
+(Refer Slide Time: 13:02)
+
+So, in our one demonstration, we will give you enough program so, that you can practice
+on your own. Now, before going to our next discussion I just want to highlights a few
+things about. I several times told about that programming is a platform independent
+whereas, C programming is not; what it does mean actually. So, here the meaning can be
+understood here. For example, this is the program that you have written using any editor
+Notepad like and then the name of the program is HelloWorld java. And, this program is
+translated by a compiler called javac this one.
+Then platform independent it does means that the same file that you have developed
+should be executed in one machine we say Windows 32, in another machine we say
+Windows 64 or in another machine say Solaris or is a MacOS or like that. So that means,
+the program which is compiled successfully should be executable in any operating
+system whether it is Windows or it is Unix or it is MacOS, then it is called the platform
+independents. So, that concept is basically possible here. This means that the file that we
+built by compiling that means . class file is basically one sort of thing which any
+machine can understand it ok.
+If it is not platform independent this means that compiler will compile one code which
+basically only one particular machine can understand it. So, C compiler is basically the
+different C compilers are there or the translating the program into the different machines
+that is why it is totally platform related. That means the same machine which basically
+
+compiles for this machine cannot be executable into another machine. Maybe high-level
+language program same, but the ultimate executable thing is basically different.
+So, that is why the C programming cannot provide us the platform-independent concept,
+but here is basically because of the concept of . class. Now, here again, question is that
+what is the special thing in the . class.
+(Refer Slide Time: 15:32)
+
+So, that that idea is basically the concept of . class is basically one code which basically
+any machine can understand; that means, this executable code is basically developed
+targeting a virtual machine. Now, regarding this concept, we will discuss in details
+whenever you will discuss the platform independent issue in a more detail manner. Now,
+is a programming language and mainly it is an object-oriented programming language.
+Like there is another object-oriented programming language before came into the market
+that time another programming is also very popular; it is called the C++.
+The programming is basically is an extension of C, C is a function-oriented whereas, C+
++ is object-oriented, but the two programming language all through object-oriented
+programming has radically many different features are there. So, let us quickly see what
+are the difference between the two programming environment C or C++ and Java. Now
+first of all so far the program building and software development is a concern they follow
+the complete different task; the task that that is followed in C, C++ is shown here. So,
+here if you write a program that is you call the program file, source file it is and the
+
+source file has certain preprocessing; that means, it will link and if it is any library and
+everything.
+So, they first undergo through preprocessing and then finally, pre proposed things will be
+compiled. And, then after the compilation, it produces the assembly code. Assembly
+code is basically the program in numeric at, sharp like this one. Then the assembler will
+be there which will basically translate the assembly code into the assembler ok, using
+assembler into the machine level. And here these assembler is basically different
+assemblers are there in the different what is called the architectures. Similarly, the
+different compiler because of the different machine, different architecture, different
+operating system follow the different assembly code.
+And then different hardware, the microprocessor follow the different machine level code
+from the same assembly language programming actually. So, the assembler will convert
+a high-level program written in .c or . cpp for C++ and then finally, produce an object
+file. And, sometimes these object file may take some help of some libraries or build in
+the program. So, this is a built-in program that needs to be linked and finally, the
+executable file will be created. So, this is the way the conventional C or C++
+programming work for us; that means, from writing from program to executing a
+program. Now, let us see the same thing how it works in the system, environment; it is in
+fact pretty simple.
+It is not so complex task rather it basically these are java file program written in java .
+java file and then there is a compiler. This compiler is the same compiler, what about the
+machine you use (Refer Time: 18:57) not an issue. This compiler will translate into .
+class file, . class file in technology it is called the program not in binary form or not in
+machine level code rather it is in the form of code it is called the byte code. It looks like
+1 0 0 0 1 1 like this one machine level code, but its formats its syntax is totally different.
+So, this is the byte code, byte code is now we can say is executive code; then in order to
+run these byte codes we need one interpreter. So, basically, this is one it is called the
+interpreter, an interpreter and interpreter as you know interpreter basically take one code,
+run it then go to the next run it like this one. So, it is an interpretative mode, it is not that
+the way compiler and then the executive code finally, is produced for this machine and
+then it will execute. Now, here you can think that here in C or C++ everything is
+
+basically the compilation whereas, in the case of two things are there both interpretations
+as well as a compilation are there.
+So, it halfway compiles the program into byte code and then the next halfway it basically
+execute the byte code into the corresponding machine. So, here the idea about that this
+bytecode that will be produced is targeting a hypothetical machine irrespective of the
+architecture it is there. And, the interpreter for every architecture there is a corresponding
+interpreter. So, these interpreters know that if this is a byte code then how to work with
+this and then that way the machine independence is maintained here in case of the
+environment.
+So, this is the idea about the execution of the two different programming concepts, for
+example, C C++ and apart from this thing there are few more differences are there. So,
+far the two programming languages both are object-oriented programming languages C+
++ and Java, I will quickly summarize the different concept it is here.
+(Refer Slide Time: 21:28)
+
+So, C++ and both are object-oriented programming, but they are a target are not (Refer
+Time: 21:38) same. For example, C++ usually preferable for developing very large
+software such as library management system, employee management system, then a
+passenger railway reservation system like this. Whereas this can be used to develop all
+these kind of systems of course, but in addition to this is a very special programming
+
+language which is suitable for developing particularly communication or internet
+application related software development.
+For example, if you want to develop networking technology, to develop many protocols
+in networking then you should use instead of C++. For internet programming; that
+means, how the browser work, how the remote desktop can work; all these things are
+best suitable. You if you want to develop the web page, the web page is a very common
+things nowadays many organization they maintain their web pages including any
+information and then many services.
+So, web services, for example, the bank, and everything. So, the webpage you can
+develop and then web browser also; that means, it will browse any webpage if it is
+available on the internet or www. So, these are the programming that you can do using
+programming better and in C++ sometimes they are not possible or infeasible.
+(Refer Slide Time: 23:19)
+
+So, these are the difference in the task that the two programming languages are there.
+Now, I will just feature wise I will tell about how the two programming languages are
+different. Now, here I have mention a few important things which are possible in C++
+and which are not possible in and vice versa. Now so, for the encapsulation is concerned
+we have discussed that is an object-oriented programming and encapsulation is a
+programming feature. So, both C++ and provides the encapsulation and that means, they
+allow us to develop our class file. Polymorphism if you see both C++ and provides a
+
+polymorphism and binding; that means, how the different a data can be bind to the
+different functions or methods.
+There is a concept called the binding and there are two types of binding; the static and
+dynamic both kind of binding is possible in as well as in C++. And, then inheritance here
+is a bit different in C++ and Java. C++ supports are both single as well as multiple,
+multiple is a very complex inheritance mechanism. On the other hand, does not support
+multiple inheritances, supports only single inheritance. And, then operator overloading
+this is another important things; that means, that different operator, for example, the
+plus-plus can be used for adding two numbers, plus can be used for adding two
+documents like this; this is a polymer print concept actually.
+So, operator overloading is a concept of polymorphism. C++ allows operator
+overloading whereas, Java does not allow operator overloading. And, then template
+classes these basically C++ allow template class; that means, one template means is basic
+class can be developed which basically not suitable for creating an object, but it is a
+template only. But Java does not give any facilities to create a template class. There are
+few more things like a pointer. Pointer is not possible in Java whereas, a pointer is
+possible in C++. And, interface and packages Java is a very good one features regarding
+this whereas, in C++ does not have.
+Now, here we can see many things; many things for example, here in C++ whereas, Java
+they do not have and few things, of course, Java has where the C++ does not have. Now
+here obviously, I told you that what is the reason behind this. The reason is that Java we
+want to develop a user-friendly one programming environment. In order to make a user
+programming user-friendly environment the Java developer (Refer Time: 26:22) down
+many complicated features which basically associated with a lot of errors; a lot of errors
+in the program list to the program which is not a robust program or reliable program. So,
+eliminating some features which are very complex and erroneous so, we can make a
+reliable and robust Java programming; that is the beauty of the Java programming and
+that that is why Java become a great programming language is here.
+
+(Refer Slide Time: 26:50)
+
+And another difference this is obviously there another see difference is there C++ again
+is an object-oriented programming, but it is not platform independent. That means
+different compiler is required to translate the C++ code into the different programming
+languages whereas, Java is a platform independent programming language this means
+that that. So, Java code will create a byte code and then byte code will be interpreted in a
+different programming environment. And this way the platform independent; that means,
+the same code can be executed wherever you want to run it.
+But here the different compiler is required to run your same program in the different
+programming environment. So, this is the idea about the two programming languages C+
++ and Java and the basic difference between them ok. So, we have learned in this lecture
+the idea about the programming the different steps of programming in Java and how Java
+programming is different from the C++ or C programming or other functional
+programming concept.
+
+(Refer Slide Time: 28:05)
+
+Now, so far we have discussed a very simple program which includes only one class. In
+our example, we have considered one class namely HelloWorldApp.java, but is it
+possible that a program can consist of more than one classes. And, if it consists more
+than one classes whether the same techniques for compiling and executing is there or not
+or we have to follow the different concepts. And, also how a browser can execute a Java
+program; those are the interesting things in Java. So, all these things we will cover in our
+next lecture.
+Thank you very much.
+
+

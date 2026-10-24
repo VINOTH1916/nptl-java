@@ -1,0 +1,396 @@
+{
+  "lecture": 17,
+  "title": "Packages I",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What is a Java package?",
+      "options": {
+        "A": "A compressed archive of .class files",
+        "B": "A namespace container for organizing related classes, avoiding name collisions",
+        "C": "A collection of Java programs stored on a disk",
+        "D": "A way to import external libraries"
+      },
+      "answer": "B",
+      "explanation": "A package is a namespace that groups related classes and interfaces together. It helps avoid naming collisions (two classes with the same name in different packages), provides access control, and organizes code into logical modules."
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What is the Java statement used to declare which package a class belongs to?",
+      "options": {
+        "A": "import myPackage;",
+        "B": "namespace myPackage;",
+        "C": "package myPackage;",
+        "D": "group myPackage;"
+      },
+      "answer": "C",
+      "explanation": "The 'package' statement declares the package a class belongs to. It must be the FIRST statement in a Java source file (before any import statements or class declaration). Example: 'package com.company.project;'"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is the naming convention for Java packages?",
+      "options": {
+        "A": "PascalCase starting with uppercase",
+        "B": "ALL_CAPS with underscores",
+        "C": "Lowercase letters, often using reverse domain (com.company.project)",
+        "D": "camelCase starting with lowercase letter"
+      },
+      "answer": "C",
+      "explanation": "Java package names are conventionally all lowercase. The standard convention is to use the reverse of your internet domain name: 'com.company.projectname'. This ensures globally unique package names and avoids naming conflicts between different organizations."
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What is a sub-package in Java?",
+      "options": {
+        "A": "A package with fewer than 5 classes",
+        "B": "A package nested within another package using dot notation (e.g., java.util.concurrent)",
+        "C": "A private package inaccessible from outside",
+        "D": "A package that extends another package"
+      },
+      "answer": "B",
+      "explanation": "Sub-packages are packages nested within other packages. 'java.util.concurrent' is a sub-package of 'java.util'. They are created using hierarchical directory structures and allow further organization within large packages."
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What statement is used to make classes from another package available in the current file?",
+      "options": {
+        "A": "include java.util.Scanner;",
+        "B": "use java.util.Scanner;",
+        "C": "import java.util.Scanner;",
+        "D": "require java.util.Scanner;"
+      },
+      "answer": "C",
+      "explanation": "The 'import' statement tells the Java compiler where to find classes from other packages. 'import java.util.Scanner;' allows using 'Scanner' directly instead of 'java.util.Scanner' everywhere in the file."
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What does 'import packageName.*;' do?",
+      "options": {
+        "A": "Imports all packages in the JDK",
+        "B": "Imports all public classes and interfaces from the specified package",
+        "C": "Creates a copy of all classes in the current package",
+        "D": "Imports all methods from a specific class"
+      },
+      "answer": "B",
+      "explanation": "'import packageName.*;' uses a wildcard to import all public classes and interfaces from the named package. For example, 'import java.util.*;' makes Scanner, ArrayList, HashMap, etc., all available without their full qualified names."
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "Must a class intended to be used outside its package be declared public?",
+      "options": {
+        "A": "No — any class can be used from any package",
+        "B": "Yes — only public classes are accessible from outside their package",
+        "C": "Only if the class has public methods",
+        "D": "Only if the class is in a named package"
+      },
+      "answer": "B",
+      "explanation": "A class must be declared public to be accessible from other packages. Default (no modifier) classes are package-private — visible only within their package. For a library class to be usable by other packages, it must be public."
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What is the primary advantage of using packages to avoid naming conflicts?",
+      "options": {
+        "A": "Packages rename classes automatically",
+        "B": "Two different packages can have classes with the same name without conflict; fully qualified names distinguish them",
+        "C": "Packages prevent compilation of duplicate class names",
+        "D": "Packages encrypt class names"
+      },
+      "answer": "B",
+      "explanation": "Packages create separate namespaces. 'com.bank.Transaction' and 'com.retail.Transaction' are completely different classes despite the same simple name. The fully qualified name (package.ClassName) uniquely identifies each class globally."
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What are the two types of packages in Java?",
+      "options": {
+        "A": "System packages and application packages",
+        "B": "Built-in API packages (from JDK) and user-defined packages",
+        "C": "Compiled packages and source packages",
+        "D": "Local packages and remote packages"
+      },
+      "answer": "B",
+      "explanation": "Java packages fall into two categories: 1) Built-in API packages provided by the JDK (java.lang, java.util, java.io, javax.swing, etc.), and 2) User-defined packages that developers create to organize their own code."
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What are the four key advantages of using packages?",
+      "options": {
+        "A": "Speed, memory, security, portability",
+        "B": "Namespace collision avoidance, access control, reusability, maintainability",
+        "C": "Compilation speed, runtime speed, debugging, testing",
+        "D": "Documentation, versioning, distribution, installation"
+      },
+      "answer": "B",
+      "explanation": "The four advantages of packages as covered in the NPTEL lecture are: 1) Namespace collision avoidance (unique naming), 2) Access control (package-level visibility), 3) Reusability (package libraries), and 4) Maintainability (organized code structure)."
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Where must the 'package' declaration appear in a Java source file?",
+      "options": {
+        "A": "After all import statements",
+        "B": "Before everything else (must be the first non-comment statement)",
+        "C": "After the class declaration",
+        "D": "Anywhere in the file"
+      },
+      "answer": "B",
+      "explanation": "The 'package' statement must be the first non-comment, non-blank statement in a Java source file. It must come before any import statements and before the class declaration. Placing it elsewhere is a syntax error."
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "How does Java's package structure relate to the directory structure on disk?",
+      "options": {
+        "A": "Packages and directories are unrelated",
+        "B": "Package names map directly to directory paths: package com.bank.accounts corresponds to com/bank/accounts/",
+        "C": "All packages reside in the root directory",
+        "D": "Packages are stored in a database, not directories"
+      },
+      "answer": "B",
+      "explanation": "Java's package structure mirrors the filesystem: 'package com.bank.accounts' requires the .class file to be in 'com/bank/accounts/' directory relative to the classpath root. The JVM uses this directory structure to locate classes by their fully qualified names."
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "What is a fully qualified class name?",
+      "options": {
+        "A": "A class name with at least 10 characters",
+        "B": "The complete class identifier including package path: packageName.ClassName (e.g., java.util.Scanner)",
+        "C": "A class name that includes the method names",
+        "D": "A class name used only in import statements"
+      },
+      "answer": "B",
+      "explanation": "A fully qualified class name includes the complete package path: 'java.util.Scanner'. This uniquely identifies the class globally, distinguishing it from any other class named 'Scanner' in any other package. You can use fully qualified names without import statements."
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "What happens if two imported packages have classes with the same name?",
+      "options": {
+        "A": "The compiler uses the first import",
+        "B": "Compilation error due to ambiguity; use the fully qualified name to disambiguate",
+        "C": "The JVM selects one at random",
+        "D": "The second import overrides the first"
+      },
+      "answer": "B",
+      "explanation": "If 'import com.lib1.*;' and 'import com.lib2.*;' both have a class 'Manager', using 'Manager' in the code is ambiguous. The compiler reports an error. The solution is to use fully qualified names: 'com.lib1.Manager' or 'com.lib2.Manager' to explicitly specify which one."
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Can a class use another class in the same package without an import statement?",
+      "options": {
+        "A": "No — all classes need import statements",
+        "B": "Yes — classes in the same package can use each other without importing",
+        "C": "Only if both are public",
+        "D": "Only if they are in the same source file"
+      },
+      "answer": "B",
+      "explanation": "Classes in the same package have automatic access to each other without import statements. Import is only needed when using classes from DIFFERENT packages. This is why java.lang doesn't need importing — it's automatically available."
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Is 'import java.lang.*;' necessary at the top of every Java file?",
+      "options": {
+        "A": "Yes — java.lang must always be explicitly imported",
+        "B": "No — java.lang is automatically imported by the compiler for every file",
+        "C": "Only if you use String or System",
+        "D": "Only for applet programs"
+      },
+      "answer": "B",
+      "explanation": "java.lang is the only package automatically imported by the Java compiler into every source file. It contains fundamental classes (String, System, Math, Integer, Object) so essential that they're always available. Writing 'import java.lang.*;' is redundant (though harmless)."
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "To create a package named 'myPackage', what statement goes at the top of the .java file?",
+      "options": {
+        "A": "create package myPackage;",
+        "B": "package myPackage;",
+        "C": "namespace myPackage;",
+        "D": "package = myPackage;"
+      },
+      "answer": "B",
+      "explanation": "'package myPackage;' is the correct syntax. This statement declares that the class in this file belongs to the 'myPackage' package. The .class file must then be placed in a directory named 'myPackage' relative to the classpath root."
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What is the difference between 'import java.util.Scanner;' and 'import java.util.*;'?",
+      "options": {
+        "A": "They are identical",
+        "B": "First imports only Scanner; second imports all public classes in java.util",
+        "C": "First imports all classes; second imports only Scanner",
+        "D": "The wildcard form is slower at runtime"
+      },
+      "answer": "B",
+      "explanation": "'import java.util.Scanner;' imports only the Scanner class. 'import java.util.*;' imports all public classes in java.util (Scanner, ArrayList, HashMap, etc.). The wildcard has no runtime performance impact — it only affects compile-time class resolution."
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Can java.util.concurrent be considered a sub-package of java.util?",
+      "options": {
+        "A": "No — packages cannot be nested",
+        "B": "Yes — java.util.concurrent is a sub-package of java.util",
+        "C": "Only if java.util.concurrent explicitly imports java.util",
+        "D": "Only if concurrent is declared inside java.util"
+      },
+      "answer": "B",
+      "explanation": "java.util.concurrent is a sub-package of java.util in terms of naming convention and directory structure. However, in Java, sub-packages are NOT automatically imported with 'import java.util.*;' — you must explicitly import 'import java.util.concurrent.*;' separately."
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What does 'import java.util.*;' NOT do?",
+      "options": {
+        "A": "Make ArrayList available without full qualification",
+        "B": "Import java.util.concurrent classes",
+        "C": "Make Scanner available without full qualification",
+        "D": "Make HashMap available"
+      },
+      "answer": "B",
+      "explanation": "Wildcard imports do NOT import sub-packages. 'import java.util.*;' imports all classes in java.util but does NOT import classes from java.util.concurrent, java.util.function, or any other sub-package. Sub-packages must be imported separately."
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "A developer writes 'package com.project.util;' in MyHelper.java but places the file in 'C:\\src\\MyHelper.java' (not in com/project/util/ directory). What happens when compiling with javac?",
+      "options": {
+        "A": "Compilation succeeds; the JVM auto-creates the directory",
+        "B": "Compilation may succeed, but runtime class loading will fail because the class won't be found at the expected path",
+        "C": "Compilation error: file not in correct directory",
+        "D": "The package declaration is ignored"
+      },
+      "answer": "B",
+      "explanation": "javac typically compiles the file regardless of directory placement (the package statement is in source). However, when running, the JVM looks for com.project.util.MyHelper at 'classpath/com/project/util/MyHelper.class'. If the .class file isn't at that path (or doesn't get placed there with -d), class loading fails at runtime."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Why is the reverse domain name convention (e.g., com.oracle.java) used for package naming?",
+      "options": {
+        "A": "It is required by the Java compiler",
+        "B": "Domain names are globally unique, making package names globally unique and avoiding conflicts between different organizations' packages",
+        "C": "It speeds up class loading",
+        "D": "Internet domains are shorter names"
+      },
+      "answer": "B",
+      "explanation": "Internet domain names are globally unique (organizations register distinct domains). Reversing the domain (com.oracle → oracle.com) and appending project names creates package names that are globally unique by construction. This prevents package name conflicts when code from different organizations is used together."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Does 'import' make a copy of the class in the current package?",
+      "options": {
+        "A": "Yes — import physically copies the class",
+        "B": "No — import only tells the compiler to look for the class in the specified package; no copying occurs",
+        "C": "Import caches the class for faster loading",
+        "D": "Import downloads the class from the internet"
+      },
+      "answer": "B",
+      "explanation": "Import statements are purely a compile-time convenience. They tell the compiler what full package path to use when it encounters a short class name. No copying, caching, or downloading occurs. At runtime, the JVM loads class bytecode from the classpath as needed."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "If a class in package 'com.app' needs to use java.util.ArrayList, can it be used WITHOUT any import statement?",
+      "options": {
+        "A": "No — import is always required for other-package classes",
+        "B": "Yes — by using the fully qualified name 'java.util.ArrayList' everywhere it is referenced",
+        "C": "Only if java.util is a sub-package of com.app",
+        "D": "Only for JDK built-in classes"
+      },
+      "answer": "B",
+      "explanation": "Import statements are optional conveniences. You can always use a class without importing by writing its fully qualified name everywhere: 'java.util.ArrayList list = new java.util.ArrayList();'. Imports just allow you to write 'ArrayList' instead of the full path."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "What is the relationship between Java packages and Java modules (introduced in Java 9)?",
+      "options": {
+        "A": "Modules replaced packages entirely in Java 9",
+        "B": "Modules group related packages and explicitly declare dependencies between modules; packages remain as organizational units within modules",
+        "C": "Modules and packages are identical",
+        "D": "Modules are packages with at least 100 classes"
+      },
+      "answer": "B",
+      "explanation": "Java 9's module system (Project Jigsaw) adds a higher-level organizational unit above packages. A module is a group of related packages with an explicit module-info.java that declares which packages it exports and which modules it requires. Packages remain unchanged as the lower-level organizational unit within modules."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Can a package span multiple .jar files or directories?",
+      "options": {
+        "A": "No — a package must be in a single directory or .jar",
+        "B": "Yes — as long as all locations are in the classpath, the JVM finds all classes of the same package across multiple locations",
+        "C": "Only if the package is named 'default'",
+        "D": "Only for java.* packages"
+      },
+      "answer": "B",
+      "explanation": "A package can be split across multiple .jar files or directories, all present in the classpath. The JVM searches all classpath entries and combines classes from the same package from all locations. This is how the JDK itself is structured — different JDK JARs contribute to the same java.* packages."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "What is a 'package-info.java' file and what is its purpose?",
+      "options": {
+        "A": "It lists all class files in a package",
+        "B": "It provides package-level documentation (Javadoc) and can contain package-level annotations",
+        "C": "It is required for compilation of any package",
+        "D": "It stores the package's version number"
+      },
+      "answer": "B",
+      "explanation": "package-info.java is an optional special file that allows adding Javadoc comments for the entire package (visible in generated documentation) and package-level annotations. It is not required for compilation but is a best practice for well-documented libraries."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "If a developer at oracle.com creates a package 'com.oracle.db' and another developer at oracle.com creates 'com.oracle.network', why is there no naming conflict?",
+      "options": {
+        "A": "Oracle owns the com.oracle namespace; different teams can create sub-packages without conflict",
+        "B": "com.oracle is registered as a global trademark",
+        "C": "The JDK automatically prevents naming conflicts",
+        "D": "Package names are case-sensitive, preventing conflicts"
+      },
+      "answer": "A",
+      "explanation": "Since oracle.com is a unique domain, com.oracle is uniquely theirs. Any sub-package under com.oracle (com.oracle.db, com.oracle.network, etc.) is controlled by Oracle. Different teams within Oracle create different sub-packages under their namespace, avoiding conflicts with other organizations."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Why do Java packages improve code maintainability?",
+      "options": {
+        "A": "Packages automatically fix bugs in the code",
+        "B": "Grouping related classes in packages makes it easier to locate, update, and replace entire functional units; changes within a package are isolated from other packages",
+        "C": "Packages reduce the number of classes needed",
+        "D": "Packages enforce coding standards automatically"
+      },
+      "answer": "B",
+      "explanation": "Packages improve maintainability through modularity: related classes are grouped, making them easier to find and understand; a package can be updated or replaced without affecting other packages (if its public API is preserved); access control (package-private) hides internal details from the rest of the system."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "A class 'Config' in package 'com.app.internal' has default access. Can 'com.app.Main' use it?",
+      "options": {
+        "A": "Yes — com.app.Main and com.app.internal.Config are in the same overall namespace",
+        "B": "No — com.app and com.app.internal are different packages; default access doesn't cross package boundaries",
+        "C": "Only if Main imports com.app.internal",
+        "D": "Yes — parent package classes have access to sub-package classes"
+      },
+      "answer": "B",
+      "explanation": "In Java, 'com.app' and 'com.app.internal' are two completely separate, independent packages. The hierarchical naming is just a convention — there is no automatic access between parent and child packages. Default-access Config in 'com.app.internal' is not accessible from 'com.app.Main'. Make it public if cross-package access is needed."
+    }
+  ]
+}

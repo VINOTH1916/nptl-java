@@ -1,0 +1,396 @@
+{
+  "lecture": 3,
+  "title": "Java Tools and Resources",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "Which JDK tool is used to compile a Java source file?",
+      "options": {
+        "A": "java",
+        "B": "javac",
+        "C": "javadoc",
+        "D": "jdb"
+      },
+      "answer": "B",
+      "explanation": "javac is the Java compiler that translates .java source files into .class bytecode files. The tool 'java' is the interpreter used to run compiled classes, not compile them."
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which JDK tool is used to run/interpret a compiled Java class?",
+      "options": {
+        "A": "javac",
+        "B": "javadoc",
+        "C": "java",
+        "D": "javap"
+      },
+      "answer": "C",
+      "explanation": "The 'java' command is the Java interpreter (JVM launcher) that executes compiled .class bytecode files. javac is for compilation, not execution."
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "Which JDK tool is used to generate HTML documentation from Java source comments?",
+      "options": {
+        "A": "jdb",
+        "B": "javah",
+        "C": "javap",
+        "D": "javadoc"
+      },
+      "answer": "D",
+      "explanation": "javadoc reads special /** */ comments in Java source files and generates HTML API documentation. It is the standard documentation generation tool provided with the JDK."
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "Which JDK tool is used to run Java applets?",
+      "options": {
+        "A": "appletviewer",
+        "B": "java",
+        "C": "javaw",
+        "D": "jrunscript"
+      },
+      "answer": "A",
+      "explanation": "appletviewer is the JDK tool specifically designed to run Java applets embedded in HTML files without needing a full browser. It was provided as part of the standard JDK toolkit."
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "Which JDK tool is used to debug Java programs?",
+      "options": {
+        "A": "javap",
+        "B": "javah",
+        "C": "jdb",
+        "D": "javadoc"
+      },
+      "answer": "C",
+      "explanation": "jdb (Java Debugger) is the command-line debugging tool included in the JDK that allows you to step through code, set breakpoints, and inspect variables at runtime."
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "Which JDK tool disassembles a compiled .class file to show its bytecode or member signatures?",
+      "options": {
+        "A": "javac",
+        "B": "javap",
+        "C": "jdb",
+        "D": "javah"
+      },
+      "answer": "B",
+      "explanation": "javap is the Java class file disassembler. It can display the member declarations and bytecode instructions inside a compiled .class file, useful for inspecting compiled code."
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "Which Java package is automatically imported in every Java program without any explicit import statement?",
+      "options": {
+        "A": "java.util",
+        "B": "java.io",
+        "C": "java.lang",
+        "D": "java.awt"
+      },
+      "answer": "C",
+      "explanation": "java.lang is automatically imported by the Java compiler into every Java program. It contains fundamental classes like String, Math, Integer, Object, and System."
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "Which of the following is a valid Java identifier?",
+      "options": {
+        "A": "2ndValue",
+        "B": "my-value",
+        "C": "_myValue",
+        "D": "my value"
+      },
+      "answer": "C",
+      "explanation": "Java identifiers must start with a letter, underscore (_), or dollar sign ($). They cannot start with a digit or contain hyphens or spaces. _myValue is valid because it starts with an underscore."
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "How do you declare a one-dimensional integer array named 'x' of size 100 in Java?",
+      "options": {
+        "A": "int x = new int(100);",
+        "B": "int x[100];",
+        "C": "int[] x = new int[100];",
+        "D": "array int x[100];"
+      },
+      "answer": "C",
+      "explanation": "In Java, a 1D array is declared as 'int[] x = new int[100];'. The square brackets denote an array type and the 'new' keyword allocates memory for 100 integers on the heap."
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What is the index of the first element in a Java array?",
+      "options": {
+        "A": "1",
+        "B": "-1",
+        "C": "0",
+        "D": "Depends on array type"
+      },
+      "answer": "C",
+      "explanation": "Java arrays are zero-indexed, meaning the first element is always at index 0. For an array of size n, valid indices run from 0 to n-1."
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "How many standard JDK tools are specifically mentioned in Lecture 3 of the NPTEL Java course?",
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "9"
+      },
+      "answer": "C",
+      "explanation": "The lecture mentions exactly 7 JDK tools: javac (compiler), java (interpreter), javadoc (documentation), appletviewer (applet runner), jdb (debugger), javap (disassembler), and javah (native header generator)."
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Which JDK tool generates C header files needed for Java Native Interface (JNI) programming?",
+      "options": {
+        "A": "javac",
+        "B": "jdb",
+        "C": "javap",
+        "D": "javah"
+      },
+      "answer": "D",
+      "explanation": "javah generates C/C++ header files from a compiled Java class, enabling Java Native Interface (JNI) development where Java code calls native C/C++ functions. It bridges Java and native code."
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which of the following correctly declares a 2D integer array with 3 rows and 4 columns in Java?",
+      "options": {
+        "A": "int x = new int[3,4];",
+        "B": "int[][] x = new int[3][4];",
+        "C": "int[3][4] x = new int[][];",
+        "D": "int x[][] = new int(3)(4);"
+      },
+      "answer": "B",
+      "explanation": "A 2D array in Java is declared as 'int[][] x = new int[3][4];', specifying rows and columns in separate square brackets. The alternative 'int x[][]' syntax is also valid but 'int[][] x' is the preferred style."
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Which package provides the Swing GUI components introduced in Java 5 (J2SE 5.0)?",
+      "options": {
+        "A": "java.awt",
+        "B": "java.gui",
+        "C": "javax.swing",
+        "D": "java.widget"
+      },
+      "answer": "C",
+      "explanation": "javax.swing provides the Swing GUI toolkit, which offers more sophisticated and platform-independent GUI components compared to java.awt. The 'javax' prefix indicates it was an extension that later became standard."
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "What is the correct inline initialization syntax for a Java integer array with values 12, 13, 9, and 15?",
+      "options": {
+        "A": "int[] x = new int[]{12, 13, 9, 15};",
+        "B": "int[] x = {12, 13, 9, 15};",
+        "C": "Both A and B are correct",
+        "D": "int x[] = new int(12, 13, 9, 15);"
+      },
+      "answer": "C",
+      "explanation": "Both syntaxes are valid in Java. 'int[] x = {12, 13, 9, 15};' is the shorter inline initializer form, while 'int[] x = new int[]{12, 13, 9, 15};' is the explicit anonymous array form. Both compile correctly."
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Which package would you import to use SQL database connectivity in Java?",
+      "options": {
+        "A": "java.net",
+        "B": "java.sql",
+        "C": "java.db",
+        "D": "javax.database"
+      },
+      "answer": "B",
+      "explanation": "java.sql is the standard Java package for database connectivity (JDBC - Java Database Connectivity). It provides classes like Connection, Statement, ResultSet, and DriverManager for interacting with SQL databases."
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which IDE is recommended for beginners in the NPTEL Java course, and why?",
+      "options": {
+        "A": "Eclipse, because it is the most popular",
+        "B": "IntelliJ IDEA, because it has the best refactoring tools",
+        "C": "NetBeans, because it is free and feature-rich",
+        "D": "BlueJ, because it is designed specifically for teaching"
+      },
+      "answer": "C",
+      "explanation": "NetBeans is recommended in the NPTEL course because it is a free, open-source IDE that provides comprehensive features including syntax highlighting, debugging, and project management without cost."
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What distinguishes a 'jagged array' from a regular 2D array in Java?",
+      "options": {
+        "A": "A jagged array stores non-numeric types",
+        "B": "A jagged array has rows of different lengths",
+        "C": "A jagged array uses linked lists internally",
+        "D": "A jagged array can only be 1-dimensional"
+      },
+      "answer": "B",
+      "explanation": "A jagged array (also called a ragged array) is a multi-dimensional array where each row can have a different number of columns. Unlike a rectangular 2D array (e.g., int[3][4] where every row has 4 elements), a jagged array allocates each row independently."
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which of the following is TRUE about Java identifiers?",
+      "options": {
+        "A": "Java identifiers are case-insensitive",
+        "B": "Java identifiers can start with a digit",
+        "C": "Java identifiers are case-sensitive and must start with a letter or underscore",
+        "D": "Java identifiers cannot contain digits anywhere"
+      },
+      "answer": "C",
+      "explanation": "Java identifiers are case-sensitive (myVar and MyVar are different), and they must begin with a letter (a-z, A-Z), underscore (_), or dollar sign ($). Digits (0-9) are allowed but not as the first character."
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which package provides networking classes like Socket and URL in Java?",
+      "options": {
+        "A": "java.web",
+        "B": "java.io",
+        "C": "java.net",
+        "D": "java.comm"
+      },
+      "answer": "C",
+      "explanation": "java.net contains classes for network programming in Java, including Socket, ServerSocket, URL, URLConnection, and InetAddress. It is the standard package for implementing network communication."
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "A developer writes 'int[][] jagged = new int[3][];' and then assigns 'jagged[0] = new int[2]; jagged[1] = new int[5]; jagged[2] = new int[1];'. What is the total number of integer elements allocated?",
+      "options": {
+        "A": "6",
+        "B": "8",
+        "C": "9",
+        "D": "15"
+      },
+      "answer": "B",
+      "explanation": "Row 0 has 2 elements, row 1 has 5 elements, and row 2 has 1 element, totaling 2+5+1 = 8 integer elements. This is a jagged array where each row is independently allocated with a different size."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Why does the JDK provide both 'JDK' and 'SDK' versions, and which is recommended for beginners?",
+      "options": {
+        "A": "SDK is for beginners; JDK is for advanced developers",
+        "B": "JDK 8 is for beginners; SDK includes additional enterprise tools for advanced use",
+        "C": "They are identical; the terms are interchangeable",
+        "D": "JDK is only for Windows; SDK is cross-platform"
+      },
+      "answer": "B",
+      "explanation": "The NPTEL course recommends JDK 8 for beginners because it is stable, widely supported, and contains all necessary tools. The SDK (Software Development Kit) bundles additional frameworks and tools suited for advanced enterprise development scenarios."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Given that java.lang is auto-imported, which of the following statements is NOT needed in a typical Java program that only uses String and Math?",
+      "options": {
+        "A": "import java.util.Scanner;",
+        "B": "import java.lang.String;",
+        "C": "import java.io.IOException;",
+        "D": "import java.awt.Graphics;"
+      },
+      "answer": "B",
+      "explanation": "java.lang is automatically imported by the Java compiler, so 'import java.lang.String;' is redundant and unnecessary. String, Math, Integer, Object, and all other java.lang classes are available without any import statement."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "A programmer declares 'int[] arr = {5, 10, 15, 20, 25};'. What does 'arr[arr.length - 1]' evaluate to?",
+      "options": {
+        "A": "20",
+        "B": "25",
+        "C": "ArrayIndexOutOfBoundsException",
+        "D": "0"
+      },
+      "answer": "B",
+      "explanation": "arr.length is 5, so arr.length - 1 is 4. arr[4] is the last element, which is 25. Java arrays are zero-indexed, so for a 5-element array, valid indices are 0 through 4."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Which statement best explains why java.applet and java.awt are separate packages instead of one?",
+      "options": {
+        "A": "java.applet was created before java.awt and could not be merged",
+        "B": "java.awt provides general GUI components usable in any application, while java.applet provides browser-embedding lifecycle support; separating them allows each to be used independently",
+        "C": "They contain conflicting class names that prevent merging",
+        "D": "java.awt is platform-dependent while java.applet is platform-independent"
+      },
+      "answer": "B",
+      "explanation": "Separation of concerns drives the package design: java.awt provides reusable GUI building blocks (windows, buttons, graphics) applicable to both applications and applets, while java.applet provides the Applet class and lifecycle methods (init, start, stop, destroy) specific to browser-embedded programs. This allows GUI code to be reused in standalone applications."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "A student tries to use the identifier '3dPoint' in Java code. The compiler rejects it. Which alternative identifier would be valid AND follow Java naming conventions?",
+      "options": {
+        "A": "3-d-Point",
+        "B": "point-3d",
+        "C": "Point3D",
+        "D": "3DPoint"
+      },
+      "answer": "C",
+      "explanation": "'Point3D' is valid: it starts with a letter and follows the Java convention of PascalCase for class names. '3dPoint' and '3DPoint' are invalid because they start with a digit. 'point-3d' and '3-d-Point' contain hyphens, which are not allowed in identifiers."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Why does javap (the disassembler) serve a different purpose than jdb (the debugger), even though both work with compiled .class files?",
+      "options": {
+        "A": "javap is a runtime tool; jdb is a compile-time tool",
+        "B": "javap performs static inspection of bytecode structure, while jdb enables dynamic runtime control of program execution",
+        "C": "javap only works with standard library classes; jdb works with user classes",
+        "D": "They perform identical functions but with different user interfaces"
+      },
+      "answer": "B",
+      "explanation": "javap is a static analysis tool that reads and displays the structure of .class files (field declarations, method signatures, bytecode) without executing the program. jdb is a dynamic tool that attaches to a running JVM to allow breakpoints, stepping, and variable inspection during execution. Their use cases are fundamentally different."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "A developer initializes 'int[][] matrix = new int[4][5];'. How much memory (in terms of integer elements) is allocated, and what are all elements initialized to?",
+      "options": {
+        "A": "20 elements, all initialized to null",
+        "B": "20 elements, all initialized to 0",
+        "C": "9 elements, all initialized to 0",
+        "D": "20 elements, with undefined/garbage values"
+      },
+      "answer": "B",
+      "explanation": "4 rows × 5 columns = 20 integer elements total. In Java, all array elements are automatically initialized to their default values upon allocation: 0 for int, 0.0 for double/float, false for boolean, and null for object references."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "The java.sql package provides JDBC connectivity. Which architectural pattern does JDBC follow that makes it database-vendor independent?",
+      "options": {
+        "A": "Singleton pattern — one instance per database type",
+        "B": "Driver pattern — vendor-specific drivers implement standard JDBC interfaces",
+        "C": "Factory pattern — java.sql itself contains all database implementations",
+        "D": "Observer pattern — database events are broadcast to listeners"
+      },
+      "answer": "B",
+      "explanation": "JDBC uses a driver architecture: java.sql defines standard interfaces (Connection, Statement, ResultSet), and each database vendor (MySQL, Oracle, PostgreSQL) provides a driver JAR that implements those interfaces. Programs use only the standard interfaces, making them database-vendor independent."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Given 'int[] a = {1,2,3}; int[] b = a; b[0] = 99;', what is the value of a[0] and why?",
+      "options": {
+        "A": "1, because 'b = a' creates a copy of the array",
+        "B": "99, because both a and b reference the same array object",
+        "C": "99, because Java passes arrays by value but mutates the original",
+        "D": "Compilation error — you cannot assign one array to another"
+      },
+      "answer": "B",
+      "explanation": "In Java, arrays are objects, so 'b = a' copies the reference, not the array contents. Both 'a' and 'b' now point to the same array in memory. Modifying b[0] = 99 changes the same array that 'a' refers to, so a[0] is also 99."
+    }
+  ]
+}

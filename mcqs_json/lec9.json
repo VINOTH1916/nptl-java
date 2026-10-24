@@ -1,0 +1,396 @@
+{
+  "lecture": 9,
+  "title": "Java Programming Insights (main method)",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What is the complete correct signature of the main method in Java?",
+      "options": {
+        "A": "static void main(String args)",
+        "B": "public static void main(String[] args)",
+        "C": "public void main(String[] args)",
+        "D": "public static int main(String[] args)"
+      },
+      "answer": "B",
+      "explanation": "'public static void main(String[] args)' is the required signature. Each keyword plays a specific role: public allows the JVM to access it, static allows calling without an object, void means no return value, and String[] args receives command-line arguments."
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Why is the main() method declared 'public'?",
+      "options": {
+        "A": "Because public methods run faster",
+        "B": "Because the JVM (which is outside the class) needs to call it to start the program",
+        "C": "Because only public methods can be static",
+        "D": "Because main() must be accessible from subclasses"
+      },
+      "answer": "B",
+      "explanation": "The JVM starts execution from outside the class, so it needs public access to call main(). If main() were private or protected, the JVM from an external context would not be able to invoke it, and the program couldn't start."
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "Why is the main() method declared 'static'?",
+      "options": {
+        "A": "Static methods execute faster than instance methods",
+        "B": "The JVM calls main() without creating an object of the class first",
+        "C": "All methods in the main class must be static",
+        "D": "Static methods can accept String[] args"
+      },
+      "answer": "B",
+      "explanation": "The JVM needs to call main() before any object exists. Declaring it static means it belongs to the class itself, not an instance. The JVM can invoke 'ClassName.main(args)' without needing to instantiate the class first."
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "Why is the main() method declared 'void'?",
+      "options": {
+        "A": "Because main() cannot compute anything",
+        "B": "Because the JVM (the caller of main) does not expect a return value from the program entry point",
+        "C": "Because void is the default return type",
+        "D": "Because returning a value from main() would be a security risk"
+      },
+      "answer": "B",
+      "explanation": "The JVM calls main() to start the program and doesn't use a return value from it. Declaring it void reflects this — the JVM has no mechanism to receive and use a value returned from main(). (Note: System.exit() can pass an exit code to the OS as an alternative.)"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What is the purpose of String[] args in the main method signature?",
+      "options": {
+        "A": "To store the class name of the program",
+        "B": "To receive command-line arguments passed when running the program",
+        "C": "To hold the Java version number",
+        "D": "To pass database connection strings automatically"
+      },
+      "answer": "B",
+      "explanation": "String[] args is an array of Strings that receives command-line arguments. When you run 'java MyProgram arg1 arg2', args[0] = \"arg1\" and args[1] = \"arg2\". This allows users to pass input to the program at launch time."
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What happens when a Java program is run and the specified class has no main() method?",
+      "options": {
+        "A": "The program runs without any output",
+        "B": "The first method in the class is called instead",
+        "C": "A runtime error occurs: 'Main method not found'",
+        "D": "The compiler automatically adds main()"
+      },
+      "answer": "C",
+      "explanation": "If the JVM cannot find a 'public static void main(String[] args)' method in the specified class, it throws a runtime error: 'Main method not found in class ClassName, please define the main method as: public static void main(String[] args)'."
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "Which Java package contains the Math class?",
+      "options": {
+        "A": "java.math",
+        "B": "java.util",
+        "C": "java.lang",
+        "D": "java.io"
+      },
+      "answer": "C",
+      "explanation": "java.lang.Math is in the java.lang package, which is automatically imported. This means you can use Math.sqrt(), Math.PI, Math.abs(), etc. without any import statement."
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "How do you call the Math.sqrt() method?",
+      "options": {
+        "A": "Math m = new Math(); m.sqrt(16);",
+        "B": "Math.sqrt(16);",
+        "C": "sqrt(16);",
+        "D": "import Math; sqrt(16);"
+      },
+      "answer": "B",
+      "explanation": "Math methods are static, so they are called on the class itself without creating an instance: 'Math.sqrt(16)' returns 4.0. You never write 'new Math()' because Math is a utility class with only static members."
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What is the difference between an instance variable and a class (static) variable?",
+      "options": {
+        "A": "Instance variables are faster; class variables are slower",
+        "B": "Each object has its own instance variable; all objects share one copy of a class (static) variable",
+        "C": "Instance variables must be initialized; static variables cannot be initialized",
+        "D": "Class variables are inside methods; instance variables are outside"
+      },
+      "answer": "B",
+      "explanation": "Instance variables (non-static) have a separate copy for each object. Static (class) variables have exactly one copy shared by all objects of the class. Changing a static variable through one object changes it for all objects."
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What is the access modifier that makes a field or method accessible ONLY within the same class?",
+      "options": {
+        "A": "public",
+        "B": "protected",
+        "C": "default",
+        "D": "private"
+      },
+      "answer": "D",
+      "explanation": "private is the most restrictive access modifier. A private field or method is accessible only from within the class where it is declared. Even subclasses and other classes in the same package cannot access it directly."
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "What does the 'static' modifier mean when applied to a method?",
+      "options": {
+        "A": "The method cannot be changed at runtime",
+        "B": "The method belongs to the class and can be called without creating an object",
+        "C": "The method can only access static fields",
+        "D": "The method is final and cannot be overridden"
+      },
+      "answer": "B",
+      "explanation": "A static method belongs to the class rather than any instance. It can be called as 'ClassName.methodName()' without creating an object. Static methods can only directly access static fields and call other static methods (they cannot use 'this' or access instance members directly)."
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Can a Java program have multiple classes with main() methods?",
+      "options": {
+        "A": "No — only one main() is allowed per program",
+        "B": "Yes — but only the first one defined is used",
+        "C": "Yes — any class can have main(), and the JVM uses the one in the class specified in the 'java' command",
+        "D": "No — duplicate main() methods cause a compilation error"
+      },
+      "answer": "C",
+      "explanation": "Multiple classes in a program can each have their own main() method. The JVM calls the main() of whatever class name you specify: 'java ClassA' calls ClassA's main(), 'java ClassB' calls ClassB's main(). This is useful for testing individual classes."
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Why doesn't java.lang need an explicit import statement?",
+      "options": {
+        "A": "java.lang classes are part of the JVM bytecode specification",
+        "B": "The Java compiler automatically inserts 'import java.lang.*;' for every source file",
+        "C": "java.lang is a special package that must be explicitly imported once per project",
+        "D": "java.lang classes are compiled into each .class file"
+      },
+      "answer": "B",
+      "explanation": "The Java Language Specification requires the compiler to behave as if 'import java.lang.*;' is at the top of every source file. This gives automatic access to String, System, Math, Integer, Object, and other fundamental classes without explicit imports."
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Given 'java MyProgram Hello World', what are args[0] and args[1] inside main()?",
+      "options": {
+        "A": "args[0]=\"java\", args[1]=\"MyProgram\"",
+        "B": "args[0]=\"MyProgram\", args[1]=\"Hello\"",
+        "C": "args[0]=\"Hello\", args[1]=\"World\"",
+        "D": "args[0]=\"World\", args[1]=\"Hello\""
+      },
+      "answer": "C",
+      "explanation": "Command-line arguments in Java start at args[0] from the first argument AFTER the class name. 'java' and 'MyProgram' are not passed to the program — they are the interpreter and the class name. So args[0]=\"Hello\" and args[1]=\"World\"."
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "What is the value of Math.PI in Java?",
+      "options": {
+        "A": "3.14",
+        "B": "3.14159",
+        "C": "3.141592653589793",
+        "D": "22.0/7.0"
+      },
+      "answer": "C",
+      "explanation": "Math.PI is a static final double constant in java.lang.Math with value 3.141592653589793, which is the highest precision double representation of π. It is the standard constant to use for pi in Java calculations."
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Which of these access modifiers provides the MOST access (most permissive)?",
+      "options": {
+        "A": "private",
+        "B": "protected",
+        "C": "default (no modifier)",
+        "D": "public"
+      },
+      "answer": "D",
+      "explanation": "In order from most to least restrictive: private < default < protected < public. 'public' is the most permissive — accessible from any class anywhere, regardless of package or inheritance relationship."
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Why is Math.sqrt() a static method rather than an instance method?",
+      "options": {
+        "A": "Static methods are required for all Math operations",
+        "B": "sqrt() is a stateless mathematical function that doesn't depend on any object state; it only needs the input value",
+        "C": "Java cannot make instance methods in utility classes",
+        "D": "Static methods are more accurate for floating-point math"
+      },
+      "answer": "B",
+      "explanation": "sqrt() is a pure function — its result depends only on its input, not on any object's state. Making it static allows use without creating a Math object, which would be wasteful. The Math class is designed as a pure utility class with all-static methods."
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What is the entry point of a Java program and why is it important?",
+      "options": {
+        "A": "The first method defined in the source file",
+        "B": "main() — it is where the JVM begins executing the program",
+        "C": "The constructor of the main class",
+        "D": "The first static block in the class"
+      },
+      "answer": "B",
+      "explanation": "main() is the entry point — the JVM starts execution here. Without a properly defined main() in the class specified for execution, the JVM cannot start the program. Note: static initializer blocks DO execute before main(), but main() is the designated program entry point."
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "How do you call an instance method of class Circle from the main() method?",
+      "options": {
+        "A": "Directly: circumference();",
+        "B": "Through an object: Circle c = new Circle(); c.circumference();",
+        "C": "Through the class: Circle.circumference();",
+        "D": "Using this: this.circumference();"
+      },
+      "answer": "B",
+      "explanation": "Instance methods require an object to operate on. From main() (which is static), you must first create an object with 'new', then call the method on that object. 'Circle.circumference()' would only work if circumference() were static."
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What is the protected access modifier? Where is a protected member accessible?",
+      "options": {
+        "A": "Only within the same class",
+        "B": "Within the same class, same package, and subclasses (even in different packages)",
+        "C": "Only in subclasses, regardless of package",
+        "D": "Everywhere, like public"
+      },
+      "answer": "B",
+      "explanation": "Protected access allows a member to be accessed from: (1) within the declaring class, (2) any class in the same package, and (3) any subclass, even if the subclass is in a different package. It is more permissive than default but less than public."
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "A static method in class A tries to call 'this.someField'. What happens?",
+      "options": {
+        "A": "Compiles and accesses the class-level field",
+        "B": "Compilation error: 'this' cannot be used in a static context",
+        "C": "Accesses the field of the most recently created object",
+        "D": "Compilation error only if someField is private"
+      },
+      "answer": "B",
+      "explanation": "'this' refers to the current object instance, but static methods don't execute in the context of any particular object. Using 'this' in a static method causes a compile-time error: 'non-static variable/method/this cannot be referenced from a static context'."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "What happens if args array is accessed as args[0] but no command-line arguments were provided?",
+      "options": {
+        "A": "Returns an empty string \"\"",
+        "B": "Returns null",
+        "C": "ArrayIndexOutOfBoundsException at runtime",
+        "D": "Compilation error"
+      },
+      "answer": "C",
+      "explanation": "If no command-line arguments are given, args is an empty array (length 0), not null. Accessing args[0] when args.length == 0 throws ArrayIndexOutOfBoundsException at runtime. Always check args.length before accessing command-line arguments."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Why can a static method in class A NOT directly call a non-static method of the same class without an object?",
+      "options": {
+        "A": "Static methods have no access to non-static members",
+        "B": "Non-static methods operate on specific object state (fields), and without an object, there is no 'this' context — the method wouldn't know which object's fields to use",
+        "C": "Non-static methods are always private",
+        "D": "The Java compiler enforces this rule arbitrarily"
+      },
+      "answer": "B",
+      "explanation": "Instance (non-static) methods are designed to operate on a specific object's state via 'this'. Without an object reference, there's no 'this', and the instance method doesn't know which Circle's x, y, r to use. Static methods can only directly access static (class-level) members that don't require an object."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "In the context of the main method, 'public static void main(String[] args)' — can 'args' be renamed to something else like 'arguments'?",
+      "options": {
+        "A": "No — 'args' is a reserved keyword in Java",
+        "B": "Yes — the parameter name can be anything; only the type String[] and the rest of the signature are fixed",
+        "C": "Only to 'argv' as in C programming",
+        "D": "No — the JVM specifically looks for 'args'"
+      },
+      "answer": "B",
+      "explanation": "Only the method signature structure matters: 'public static void main(String[])'. The parameter name is arbitrary — 'args', 'arguments', 'cmdArgs' all work. 'args' is just a convention. The JVM identifies main() by its method signature, not the parameter name."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "A class has a static variable 'count' incremented in the constructor. If 3 objects are created, what is count?",
+      "options": {
+        "A": "0 — static variables are not updated by constructors",
+        "B": "1 — only the first constructor call updates static variables",
+        "C": "3 — the static variable is shared and incremented once per object creation",
+        "D": "Undefined — static and instance contexts cannot interact"
+      },
+      "answer": "C",
+      "explanation": "The static variable 'count' is shared across all instances. Each constructor call (triggered by 'new') increments the same shared count. After creating 3 objects, count=3. This is a common pattern for tracking how many instances of a class have been created."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "What is the difference between 'main method not found' runtime error and a compilation error in the context of Java startup?",
+      "options": {
+        "A": "They are the same error at different times",
+        "B": "Compilation errors (missing main()) occur at javac time; 'main method not found' is a JVM runtime error when the specified class has no valid main()",
+        "C": "Compilation errors occur only for syntax issues; main() errors are always compilation errors",
+        "D": "There are no runtime errors related to main() — all are compile-time"
+      },
+      "answer": "B",
+      "explanation": "Compilation errors (javac) catch syntax and type problems. A class without main() compiles perfectly — the compiler doesn't require main() to exist. The 'Main method not found' error happens at runtime when the JVM loads the class and can't find a valid main() method to execute."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Why are all methods in java.lang.Math declared as static?",
+      "options": {
+        "A": "To prevent subclassing of Math",
+        "B": "Math functions are purely computational with no object state; static design allows use without instantiation, making them more convenient",
+        "C": "The JVM requires all math operations to be static for performance",
+        "D": "Static methods are required in the java.lang package"
+      },
+      "answer": "B",
+      "explanation": "Mathematical functions like sqrt, sin, cos are stateless — they always produce the same output for the same input. There's no concept of 'a Math object with state'. Making them static enables 'Math.sqrt(x)' without 'new Math().sqrt(x)', which is cleaner and avoids unnecessary object creation."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "If a Java class has both 'public static void main(String[] args)' and 'public static void main(String args)' (without array brackets), which is the JVM entry point?",
+      "options": {
+        "A": "Both are valid entry points; the JVM calls both",
+        "B": "'public static void main(String[] args)' is the entry point; main(String) is just a regular overloaded method",
+        "C": "Compilation error due to ambiguous main signatures",
+        "D": "'public static void main(String args)' because it is simpler"
+      },
+      "answer": "B",
+      "explanation": "Only 'public static void main(String[] args)' — with the String array — is recognized by the JVM as the program entry point. 'main(String args)' (single String parameter) is a valid method but treated as a regular overloaded method, not the JVM entry point."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "When the JVM calls main(), is an object of the class created first?",
+      "options": {
+        "A": "Yes — the JVM creates one instance before calling main()",
+        "B": "No — main() is static; the JVM calls it directly on the class without creating an object",
+        "C": "Yes — but only if the class has a no-arg constructor",
+        "D": "It depends on whether the class implements Runnable"
+      },
+      "answer": "B",
+      "explanation": "main() is static, so the JVM invokes it as a class method: ClassName.main(args). No instance of the class is created just to call main(). This is the entire reason main() must be static — to be callable without an object."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "A student defines 'public static void main(String[] args)' inside an interface. Can this be a valid program entry point in Java 8+?",
+      "options": {
+        "A": "No — interfaces cannot have static methods",
+        "B": "Yes — Java 8 allows static methods in interfaces; the JVM can use it as an entry point",
+        "C": "No — the JVM only looks for main() in concrete classes, not interfaces",
+        "D": "Only if the interface is implemented by at least one class"
+      },
+      "answer": "C",
+      "explanation": "While Java 8 introduced static methods in interfaces, the JVM's application launch mechanism specifically looks for the main() method in a class (not an interface). Attempting to run 'java MyInterface' where MyInterface is an interface will result in 'Main method not found'."
+    }
+  ]
+}
