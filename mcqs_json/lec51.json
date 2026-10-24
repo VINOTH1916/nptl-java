@@ -1,0 +1,396 @@
+{
+  "lecture": 51,
+  "title": "JDBC II – Drivers & Connection",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "According to Lecture 51, what is correct?",
+      "options": {
+        "A": "JDBC driver: connector between Java application and database",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JDBC driver: connector between Java application and database"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "According to Lecture 51, what is correct?",
+      "options": {
+        "A": "java.sql package: contains JDBC API classes",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: java.sql package: contains JDBC API classes"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "According to Lecture 51, what is correct?",
+      "options": {
+        "A": "DriverManager: manages JDBC drivers; getConnection() establi...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: DriverManager: manages JDBC drivers; getConnection() establishes connection"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "According to Lecture 51, what is correct?",
+      "options": {
+        "A": "Connection: represents active database connection",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Connection: represents active database connection"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "According to Lecture 51, what is correct?",
+      "options": {
+        "A": "Statement: executes SQL queries; executeQuery() for SELECT, ...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Statement: executes SQL queries; executeQuery() for SELECT, executeUpdate() for INSERT/UPDATE/DELETE"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "According to Lecture 51, what is correct?",
+      "options": {
+        "A": "ResultSet: result of SELECT query; next() iterates rows",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: ResultSet: result of SELECT query; next() iterates rows"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "According to Lecture 51, what is correct?",
+      "options": {
+        "A": "JDBC URL format: jdbc:mysql://host:port/database",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JDBC URL format: jdbc:mysql://host:port/database"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "According to Lecture 51, what is correct?",
+      "options": {
+        "A": "Loading driver: Class.forName('com.mysql.cj.jdbc.Driver')",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Loading driver: Class.forName('com.mysql.cj.jdbc.Driver')"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "According to Lecture 51, what is correct?",
+      "options": {
+        "A": "Connection conn = DriverManager.getConnection(url, user, pas...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Connection conn = DriverManager.getConnection(url, user, password)"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to Lecture 51, what is correct?",
+      "options": {
+        "A": "Three types of statements: Statement, PreparedStatement, Cal...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Three types of statements: Statement, PreparedStatement, CallableStatement"
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JDBC driver: connector between Java application an?",
+      "options": {
+        "A": "JDBC driver: connector between Java application and database",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC II – Drivers & Connection: JDBC driver: connector between Java application and database"
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: java.sql package: contains JDBC API classes?",
+      "options": {
+        "A": "java.sql package: contains JDBC API classes",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC II – Drivers & Connection: java.sql package: contains JDBC API classes"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: DriverManager: manages JDBC drivers; getConnection?",
+      "options": {
+        "A": "DriverManager: manages JDBC drivers; getConnection() establishes connection",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC II – Drivers & Connection: DriverManager: manages JDBC drivers; getConnection() establishes connection"
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Connection: represents active database connection?",
+      "options": {
+        "A": "Connection: represents active database connection",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC II – Drivers & Connection: Connection: represents active database connection"
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Statement: executes SQL queries; executeQuery?",
+      "options": {
+        "A": "Statement: executes SQL queries; executeQuery() for SELECT, executeUpdate() for ",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC II – Drivers & Connection: Statement: executes SQL queries; executeQuery() for SELECT, executeUpdate() for INSERT/UPDATE/DELETE"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: ResultSet: result of SELECT query; next?",
+      "options": {
+        "A": "ResultSet: result of SELECT query; next() iterates rows",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC II – Drivers & Connection: ResultSet: result of SELECT query; next() iterates rows"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JDBC URL format: jdbc:mysql://host:port/database?",
+      "options": {
+        "A": "JDBC URL format: jdbc:mysql://host:port/database",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC II – Drivers & Connection: JDBC URL format: jdbc:mysql://host:port/database"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Loading driver: Class.forName?",
+      "options": {
+        "A": "Loading driver: Class.forName('com.mysql.cj.jdbc.Driver')",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC II – Drivers & Connection: Loading driver: Class.forName('com.mysql.cj.jdbc.Driver')"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Connection conn = DriverManager.getConnection?",
+      "options": {
+        "A": "Connection conn = DriverManager.getConnection(url, user, password)",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC II – Drivers & Connection: Connection conn = DriverManager.getConnection(url, user, password)"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Three types of statements: Statement, PreparedStat?",
+      "options": {
+        "A": "Three types of statements: Statement, PreparedStatement, CallableStatement",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC II – Drivers & Connection: Three types of statements: Statement, PreparedStatement, CallableStatement"
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: ResultSet: result of SELECT query; next in the context of JDBC II – Drivers & Connection. Which is correct?",
+      "options": {
+        "A": "ResultSet: result of SELECT query; next() iterates rows",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: ResultSet: result of SELECT query; next() iterates rows. Understanding this is crucial for mastery of JDBC II – Drivers & Connection."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JDBC URL format: jdbc:mysql://host:port/database in the context of JDBC II – Drivers & Connection. Which is correct?",
+      "options": {
+        "A": "JDBC URL format: jdbc:mysql://host:port/database",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JDBC URL format: jdbc:mysql://host:port/database. Understanding this is crucial for mastery of JDBC II – Drivers & Connection."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Loading driver: Class.forName in the context of JDBC II – Drivers & Connection. Which is correct?",
+      "options": {
+        "A": "Loading driver: Class.forName('com.mysql.cj.jdbc.Driver')",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Loading driver: Class.forName('com.mysql.cj.jdbc.Driver'). Understanding this is crucial for mastery of JDBC II – Drivers & Connection."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Connection conn = DriverManager.getConnection in the context of JDBC II – Drivers & Connection. Which is correct?",
+      "options": {
+        "A": "Connection conn = DriverManager.getConnection(url, user, password)",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Connection conn = DriverManager.getConnection(url, user, password). Understanding this is crucial for mastery of JDBC II – Drivers & Connection."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Three types of statements: Statement, PreparedStat in the context of JDBC II – Drivers & Connection. Which is correct?",
+      "options": {
+        "A": "Three types of statements: Statement, PreparedStatement, CallableStatement",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Three types of statements: Statement, PreparedStatement, CallableStatement. Understanding this is crucial for mastery of JDBC II – Drivers & Connection."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JDBC driver: connector between Java application an in the context of JDBC II – Drivers & Connection. Which is correct?",
+      "options": {
+        "A": "JDBC driver: connector between Java application and database",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JDBC driver: connector between Java application and database. Understanding this is crucial for mastery of JDBC II – Drivers & Connection."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: java.sql package: contains JDBC API classes in the context of JDBC II – Drivers & Connection. Which is correct?",
+      "options": {
+        "A": "java.sql package: contains JDBC API classes",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: java.sql package: contains JDBC API classes. Understanding this is crucial for mastery of JDBC II – Drivers & Connection."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: DriverManager: manages JDBC drivers; getConnection in the context of JDBC II – Drivers & Connection. Which is correct?",
+      "options": {
+        "A": "DriverManager: manages JDBC drivers; getConnection() establishes connection",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: DriverManager: manages JDBC drivers; getConnection() establishes connection. Understanding this is crucial for mastery of JDBC II – Drivers & Connection."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Connection: represents active database connection in the context of JDBC II – Drivers & Connection. Which is correct?",
+      "options": {
+        "A": "Connection: represents active database connection",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Connection: represents active database connection. Understanding this is crucial for mastery of JDBC II – Drivers & Connection."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Statement: executes SQL queries; executeQuery in the context of JDBC II – Drivers & Connection. Which is correct?",
+      "options": {
+        "A": "Statement: executes SQL queries; executeQuery() for SELECT, executeUpdate() for ",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Statement: executes SQL queries; executeQuery() for SELECT, executeUpdate() for INSERT/UPDATE/DELETE. Understanding this is crucial for mastery of JDBC II – Drivers & Connection."
+    }
+  ]
+}

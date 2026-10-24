@@ -1,0 +1,396 @@
+{
+  "lecture": 44,
+  "title": "Swing Programming II",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "According to Lecture 44, what is correct?",
+      "options": {
+        "A": "JFrame: extends Frame, adds content pane, double buffering",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JFrame: extends Frame, adds content pane, double buffering"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "According to Lecture 44, what is correct?",
+      "options": {
+        "A": "JDialog: Swing dialog with modal/non-modal options",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JDialog: Swing dialog with modal/non-modal options"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "According to Lecture 44, what is correct?",
+      "options": {
+        "A": "JOptionPane: predefined dialogs (showMessageDialog, showConf...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JOptionPane: predefined dialogs (showMessageDialog, showConfirmDialog)"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "According to Lecture 44, what is correct?",
+      "options": {
+        "A": "JFileChooser: file selection dialog (replaces FileDialog)",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JFileChooser: file selection dialog (replaces FileDialog)"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "According to Lecture 44, what is correct?",
+      "options": {
+        "A": "JColorChooser: color selection dialog",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JColorChooser: color selection dialog"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "According to Lecture 44, what is correct?",
+      "options": {
+        "A": "JComboBox: dropdown with editable option",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JComboBox: dropdown with editable option"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "According to Lecture 44, what is correct?",
+      "options": {
+        "A": "JList: Swing list with ListModel for data",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JList: Swing list with ListModel for data"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "According to Lecture 44, what is correct?",
+      "options": {
+        "A": "JTable: tabular data display with rows and columns",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JTable: tabular data display with rows and columns"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "According to Lecture 44, what is correct?",
+      "options": {
+        "A": "JTree: hierarchical tree display",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JTree: hierarchical tree display"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to Lecture 44, what is correct?",
+      "options": {
+        "A": "JTabbedPane: tabbed interface for switching panels",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JTabbedPane: tabbed interface for switching panels"
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JFrame: extends Frame, adds content pane, double b?",
+      "options": {
+        "A": "JFrame: extends Frame, adds content pane, double buffering",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Swing Programming II: JFrame: extends Frame, adds content pane, double buffering"
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JDialog: Swing dialog with modal/non-modal options?",
+      "options": {
+        "A": "JDialog: Swing dialog with modal/non-modal options",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Swing Programming II: JDialog: Swing dialog with modal/non-modal options"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JOptionPane: predefined dialogs?",
+      "options": {
+        "A": "JOptionPane: predefined dialogs (showMessageDialog, showConfirmDialog)",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Swing Programming II: JOptionPane: predefined dialogs (showMessageDialog, showConfirmDialog)"
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JFileChooser: file selection dialog?",
+      "options": {
+        "A": "JFileChooser: file selection dialog (replaces FileDialog)",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Swing Programming II: JFileChooser: file selection dialog (replaces FileDialog)"
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JColorChooser: color selection dialog?",
+      "options": {
+        "A": "JColorChooser: color selection dialog",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Swing Programming II: JColorChooser: color selection dialog"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JComboBox: dropdown with editable option?",
+      "options": {
+        "A": "JComboBox: dropdown with editable option",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Swing Programming II: JComboBox: dropdown with editable option"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JList: Swing list with ListModel for data?",
+      "options": {
+        "A": "JList: Swing list with ListModel for data",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Swing Programming II: JList: Swing list with ListModel for data"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JTable: tabular data display with rows and columns?",
+      "options": {
+        "A": "JTable: tabular data display with rows and columns",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Swing Programming II: JTable: tabular data display with rows and columns"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JTree: hierarchical tree display?",
+      "options": {
+        "A": "JTree: hierarchical tree display",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Swing Programming II: JTree: hierarchical tree display"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JTabbedPane: tabbed interface for switching panels?",
+      "options": {
+        "A": "JTabbedPane: tabbed interface for switching panels",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Swing Programming II: JTabbedPane: tabbed interface for switching panels"
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JComboBox: dropdown with editable option in the context of Swing Programming II. Which is correct?",
+      "options": {
+        "A": "JComboBox: dropdown with editable option",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JComboBox: dropdown with editable option. Understanding this is crucial for mastery of Swing Programming II."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JList: Swing list with ListModel for data in the context of Swing Programming II. Which is correct?",
+      "options": {
+        "A": "JList: Swing list with ListModel for data",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JList: Swing list with ListModel for data. Understanding this is crucial for mastery of Swing Programming II."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JTable: tabular data display with rows and columns in the context of Swing Programming II. Which is correct?",
+      "options": {
+        "A": "JTable: tabular data display with rows and columns",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JTable: tabular data display with rows and columns. Understanding this is crucial for mastery of Swing Programming II."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JTree: hierarchical tree display in the context of Swing Programming II. Which is correct?",
+      "options": {
+        "A": "JTree: hierarchical tree display",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JTree: hierarchical tree display. Understanding this is crucial for mastery of Swing Programming II."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JTabbedPane: tabbed interface for switching panels in the context of Swing Programming II. Which is correct?",
+      "options": {
+        "A": "JTabbedPane: tabbed interface for switching panels",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JTabbedPane: tabbed interface for switching panels. Understanding this is crucial for mastery of Swing Programming II."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JFrame: extends Frame, adds content pane, double b in the context of Swing Programming II. Which is correct?",
+      "options": {
+        "A": "JFrame: extends Frame, adds content pane, double buffering",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JFrame: extends Frame, adds content pane, double buffering. Understanding this is crucial for mastery of Swing Programming II."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JDialog: Swing dialog with modal/non-modal options in the context of Swing Programming II. Which is correct?",
+      "options": {
+        "A": "JDialog: Swing dialog with modal/non-modal options",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JDialog: Swing dialog with modal/non-modal options. Understanding this is crucial for mastery of Swing Programming II."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JOptionPane: predefined dialogs in the context of Swing Programming II. Which is correct?",
+      "options": {
+        "A": "JOptionPane: predefined dialogs (showMessageDialog, showConfirmDialog)",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JOptionPane: predefined dialogs (showMessageDialog, showConfirmDialog). Understanding this is crucial for mastery of Swing Programming II."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JFileChooser: file selection dialog in the context of Swing Programming II. Which is correct?",
+      "options": {
+        "A": "JFileChooser: file selection dialog (replaces FileDialog)",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JFileChooser: file selection dialog (replaces FileDialog). Understanding this is crucial for mastery of Swing Programming II."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JColorChooser: color selection dialog in the context of Swing Programming II. Which is correct?",
+      "options": {
+        "A": "JColorChooser: color selection dialog",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JColorChooser: color selection dialog. Understanding this is crucial for mastery of Swing Programming II."
+    }
+  ]
+}

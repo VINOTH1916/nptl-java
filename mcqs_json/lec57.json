@@ -1,0 +1,396 @@
+{
+  "lecture": 57,
+  "title": "Case Study II – Project Design",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "According to Lecture 57, what is correct?",
+      "options": {
+        "A": "Project: Student Registration System",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Project: Student Registration System"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "According to Lecture 57, what is correct?",
+      "options": {
+        "A": "Components: login, registration form, database, report gener...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Components: login, registration form, database, report generation"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "According to Lecture 57, what is correct?",
+      "options": {
+        "A": "MVC architecture: Model (data), View (GUI), Controller (logi...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: MVC architecture: Model (data), View (GUI), Controller (logic)"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "According to Lecture 57, what is correct?",
+      "options": {
+        "A": "Database tables: students (id, name, course, year)",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Database tables: students (id, name, course, year)"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "According to Lecture 57, what is correct?",
+      "options": {
+        "A": "GUI design: JFrame with JTabbedPane for different functions",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: GUI design: JFrame with JTabbedPane for different functions"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "According to Lecture 57, what is correct?",
+      "options": {
+        "A": "Input validation: checking empty fields, valid email, unique...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Input validation: checking empty fields, valid email, unique ID"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "According to Lecture 57, what is correct?",
+      "options": {
+        "A": "Event handling: ActionListener for buttons, focus events for...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Event handling: ActionListener for buttons, focus events for validation"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "According to Lecture 57, what is correct?",
+      "options": {
+        "A": "Report generation: display data in JTable from database quer...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Report generation: display data in JTable from database query"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "According to Lecture 57, what is correct?",
+      "options": {
+        "A": "Error handling: try-catch SQLException, show error dialogs",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Error handling: try-catch SQLException, show error dialogs"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to Lecture 57, what is correct?",
+      "options": {
+        "A": "Project demonstrates integration of multiple Java concepts",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Project demonstrates integration of multiple Java concepts"
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Project: Student Registration System?",
+      "options": {
+        "A": "Project: Student Registration System",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study II – Project Design: Project: Student Registration System"
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Components: login, registration form, database, re?",
+      "options": {
+        "A": "Components: login, registration form, database, report generation",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study II – Project Design: Components: login, registration form, database, report generation"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: MVC architecture: Model?",
+      "options": {
+        "A": "MVC architecture: Model (data), View (GUI), Controller (logic)",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study II – Project Design: MVC architecture: Model (data), View (GUI), Controller (logic)"
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Database tables: students?",
+      "options": {
+        "A": "Database tables: students (id, name, course, year)",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study II – Project Design: Database tables: students (id, name, course, year)"
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: GUI design: JFrame with JTabbedPane for different ?",
+      "options": {
+        "A": "GUI design: JFrame with JTabbedPane for different functions",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study II – Project Design: GUI design: JFrame with JTabbedPane for different functions"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Input validation: checking empty fields, valid ema?",
+      "options": {
+        "A": "Input validation: checking empty fields, valid email, unique ID",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study II – Project Design: Input validation: checking empty fields, valid email, unique ID"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Event handling: ActionListener for buttons, focus ?",
+      "options": {
+        "A": "Event handling: ActionListener for buttons, focus events for validation",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study II – Project Design: Event handling: ActionListener for buttons, focus events for validation"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Report generation: display data in JTable from dat?",
+      "options": {
+        "A": "Report generation: display data in JTable from database query",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study II – Project Design: Report generation: display data in JTable from database query"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Error handling: try-catch SQLException, show error?",
+      "options": {
+        "A": "Error handling: try-catch SQLException, show error dialogs",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study II – Project Design: Error handling: try-catch SQLException, show error dialogs"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Project demonstrates integration of multiple Java ?",
+      "options": {
+        "A": "Project demonstrates integration of multiple Java concepts",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study II – Project Design: Project demonstrates integration of multiple Java concepts"
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Input validation: checking empty fields, valid ema in the context of Case Study II – Project Design. Which is correct?",
+      "options": {
+        "A": "Input validation: checking empty fields, valid email, unique ID",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Input validation: checking empty fields, valid email, unique ID. Understanding this is crucial for mastery of Case Study II – Project Design."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Event handling: ActionListener for buttons, focus  in the context of Case Study II – Project Design. Which is correct?",
+      "options": {
+        "A": "Event handling: ActionListener for buttons, focus events for validation",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Event handling: ActionListener for buttons, focus events for validation. Understanding this is crucial for mastery of Case Study II – Project Design."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Report generation: display data in JTable from dat in the context of Case Study II – Project Design. Which is correct?",
+      "options": {
+        "A": "Report generation: display data in JTable from database query",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Report generation: display data in JTable from database query. Understanding this is crucial for mastery of Case Study II – Project Design."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Error handling: try-catch SQLException, show error in the context of Case Study II – Project Design. Which is correct?",
+      "options": {
+        "A": "Error handling: try-catch SQLException, show error dialogs",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Error handling: try-catch SQLException, show error dialogs. Understanding this is crucial for mastery of Case Study II – Project Design."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Project demonstrates integration of multiple Java  in the context of Case Study II – Project Design. Which is correct?",
+      "options": {
+        "A": "Project demonstrates integration of multiple Java concepts",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Project demonstrates integration of multiple Java concepts. Understanding this is crucial for mastery of Case Study II – Project Design."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Project: Student Registration System in the context of Case Study II – Project Design. Which is correct?",
+      "options": {
+        "A": "Project: Student Registration System",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Project: Student Registration System. Understanding this is crucial for mastery of Case Study II – Project Design."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Components: login, registration form, database, re in the context of Case Study II – Project Design. Which is correct?",
+      "options": {
+        "A": "Components: login, registration form, database, report generation",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Components: login, registration form, database, report generation. Understanding this is crucial for mastery of Case Study II – Project Design."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: MVC architecture: Model in the context of Case Study II – Project Design. Which is correct?",
+      "options": {
+        "A": "MVC architecture: Model (data), View (GUI), Controller (logic)",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: MVC architecture: Model (data), View (GUI), Controller (logic). Understanding this is crucial for mastery of Case Study II – Project Design."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Database tables: students in the context of Case Study II – Project Design. Which is correct?",
+      "options": {
+        "A": "Database tables: students (id, name, course, year)",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Database tables: students (id, name, course, year). Understanding this is crucial for mastery of Case Study II – Project Design."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: GUI design: JFrame with JTabbedPane for different  in the context of Case Study II – Project Design. Which is correct?",
+      "options": {
+        "A": "GUI design: JFrame with JTabbedPane for different functions",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: GUI design: JFrame with JTabbedPane for different functions. Understanding this is crucial for mastery of Case Study II – Project Design."
+    }
+  ]
+}

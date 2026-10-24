@@ -1,0 +1,396 @@
+{
+  "lecture": 48,
+  "title": "Networking I",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "According to Lecture 48, what is correct?",
+      "options": {
+        "A": "Java networking: java.net package",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Java networking: java.net package"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "According to Lecture 48, what is correct?",
+      "options": {
+        "A": "URL: Uniform Resource Locator; represents a web address",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: URL: Uniform Resource Locator; represents a web address"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "According to Lecture 48, what is correct?",
+      "options": {
+        "A": "URL class: URL url = new URL('http://example.com/page.html')",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: URL class: URL url = new URL('http://example.com/page.html')"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "According to Lecture 48, what is correct?",
+      "options": {
+        "A": "URLConnection: represents a connection to a URL",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: URLConnection: represents a connection to a URL"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "According to Lecture 48, what is correct?",
+      "options": {
+        "A": "Socket: endpoint for TCP communication between client and se...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Socket: endpoint for TCP communication between client and server"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "According to Lecture 48, what is correct?",
+      "options": {
+        "A": "ServerSocket: server-side socket that listens for connection...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: ServerSocket: server-side socket that listens for connections"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "According to Lecture 48, what is correct?",
+      "options": {
+        "A": "InetAddress: represents an IP address; getByName(), getHostA...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: InetAddress: represents an IP address; getByName(), getHostAddress()"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "According to Lecture 48, what is correct?",
+      "options": {
+        "A": "Socket programming: client-server model over TCP",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Socket programming: client-server model over TCP"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "According to Lecture 48, what is correct?",
+      "options": {
+        "A": "URL methods: getProtocol(), getHost(), getPort(), getFile()",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: URL methods: getProtocol(), getHost(), getPort(), getFile()"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to Lecture 48, what is correct?",
+      "options": {
+        "A": "Port numbers: 0-65535; well-known ports (80=HTTP, 443=HTTPS,...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Port numbers: 0-65535; well-known ports (80=HTTP, 443=HTTPS, 21=FTP)"
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Java networking: java.net package?",
+      "options": {
+        "A": "Java networking: java.net package",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Networking I: Java networking: java.net package"
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: URL: Uniform Resource Locator; represents a web ad?",
+      "options": {
+        "A": "URL: Uniform Resource Locator; represents a web address",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Networking I: URL: Uniform Resource Locator; represents a web address"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: URL class: URL url = new URL?",
+      "options": {
+        "A": "URL class: URL url = new URL('http://example.com/page.html')",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Networking I: URL class: URL url = new URL('http://example.com/page.html')"
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: URLConnection: represents a connection to a URL?",
+      "options": {
+        "A": "URLConnection: represents a connection to a URL",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Networking I: URLConnection: represents a connection to a URL"
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Socket: endpoint for TCP communication between cli?",
+      "options": {
+        "A": "Socket: endpoint for TCP communication between client and server",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Networking I: Socket: endpoint for TCP communication between client and server"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: ServerSocket: server-side socket that listens for ?",
+      "options": {
+        "A": "ServerSocket: server-side socket that listens for connections",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Networking I: ServerSocket: server-side socket that listens for connections"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: InetAddress: represents an IP address; getByName?",
+      "options": {
+        "A": "InetAddress: represents an IP address; getByName(), getHostAddress()",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Networking I: InetAddress: represents an IP address; getByName(), getHostAddress()"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Socket programming: client-server model over TCP?",
+      "options": {
+        "A": "Socket programming: client-server model over TCP",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Networking I: Socket programming: client-server model over TCP"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: URL methods: getProtocol?",
+      "options": {
+        "A": "URL methods: getProtocol(), getHost(), getPort(), getFile()",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Networking I: URL methods: getProtocol(), getHost(), getPort(), getFile()"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Port numbers: 0-65535; well-known ports?",
+      "options": {
+        "A": "Port numbers: 0-65535; well-known ports (80=HTTP, 443=HTTPS, 21=FTP)",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Networking I: Port numbers: 0-65535; well-known ports (80=HTTP, 443=HTTPS, 21=FTP)"
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: ServerSocket: server-side socket that listens for  in the context of Networking I. Which is correct?",
+      "options": {
+        "A": "ServerSocket: server-side socket that listens for connections",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: ServerSocket: server-side socket that listens for connections. Understanding this is crucial for mastery of Networking I."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: InetAddress: represents an IP address; getByName in the context of Networking I. Which is correct?",
+      "options": {
+        "A": "InetAddress: represents an IP address; getByName(), getHostAddress()",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: InetAddress: represents an IP address; getByName(), getHostAddress(). Understanding this is crucial for mastery of Networking I."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Socket programming: client-server model over TCP in the context of Networking I. Which is correct?",
+      "options": {
+        "A": "Socket programming: client-server model over TCP",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Socket programming: client-server model over TCP. Understanding this is crucial for mastery of Networking I."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: URL methods: getProtocol in the context of Networking I. Which is correct?",
+      "options": {
+        "A": "URL methods: getProtocol(), getHost(), getPort(), getFile()",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: URL methods: getProtocol(), getHost(), getPort(), getFile(). Understanding this is crucial for mastery of Networking I."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Port numbers: 0-65535; well-known ports in the context of Networking I. Which is correct?",
+      "options": {
+        "A": "Port numbers: 0-65535; well-known ports (80=HTTP, 443=HTTPS, 21=FTP)",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Port numbers: 0-65535; well-known ports (80=HTTP, 443=HTTPS, 21=FTP). Understanding this is crucial for mastery of Networking I."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Java networking: java.net package in the context of Networking I. Which is correct?",
+      "options": {
+        "A": "Java networking: java.net package",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Java networking: java.net package. Understanding this is crucial for mastery of Networking I."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: URL: Uniform Resource Locator; represents a web ad in the context of Networking I. Which is correct?",
+      "options": {
+        "A": "URL: Uniform Resource Locator; represents a web address",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: URL: Uniform Resource Locator; represents a web address. Understanding this is crucial for mastery of Networking I."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: URL class: URL url = new URL in the context of Networking I. Which is correct?",
+      "options": {
+        "A": "URL class: URL url = new URL('http://example.com/page.html')",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: URL class: URL url = new URL('http://example.com/page.html'). Understanding this is crucial for mastery of Networking I."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: URLConnection: represents a connection to a URL in the context of Networking I. Which is correct?",
+      "options": {
+        "A": "URLConnection: represents a connection to a URL",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: URLConnection: represents a connection to a URL. Understanding this is crucial for mastery of Networking I."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Socket: endpoint for TCP communication between cli in the context of Networking I. Which is correct?",
+      "options": {
+        "A": "Socket: endpoint for TCP communication between client and server",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Socket: endpoint for TCP communication between client and server. Understanding this is crucial for mastery of Networking I."
+    }
+  ]
+}

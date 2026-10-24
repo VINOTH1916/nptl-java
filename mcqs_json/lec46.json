@@ -1,0 +1,396 @@
+{
+  "lecture": 46,
+  "title": "Demonstration XVI – Swing Components Demo",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "According to Lecture 46, what is correct?",
+      "options": {
+        "A": "Importing javax.swing.* and java.awt.* for Swing programs",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Importing javax.swing.* and java.awt.* for Swing programs"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "According to Lecture 46, what is correct?",
+      "options": {
+        "A": "JFrame creation: extends JFrame, add components in construct...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JFrame creation: extends JFrame, add components in constructor"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "According to Lecture 46, what is correct?",
+      "options": {
+        "A": "JButton with image: setIcon(new ImageIcon('image.png'))",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JButton with image: setIcon(new ImageIcon('image.png'))"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "According to Lecture 46, what is correct?",
+      "options": {
+        "A": "JTextField for single-line input; JPasswordField for passwor...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JTextField for single-line input; JPasswordField for passwords"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "According to Lecture 46, what is correct?",
+      "options": {
+        "A": "JTextArea with JScrollPane for multi-line text",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JTextArea with JScrollPane for multi-line text"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "According to Lecture 46, what is correct?",
+      "options": {
+        "A": "JCheckBox: boolean selection; isSelected()",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JCheckBox: boolean selection; isSelected()"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "According to Lecture 46, what is correct?",
+      "options": {
+        "A": "JRadioButton with ButtonGroup for exclusive selection",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JRadioButton with ButtonGroup for exclusive selection"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "According to Lecture 46, what is correct?",
+      "options": {
+        "A": "JSpinner: numeric input with up/down arrows",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JSpinner: numeric input with up/down arrows"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "According to Lecture 46, what is correct?",
+      "options": {
+        "A": "JToggleButton: two-state button (pressed/released)",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JToggleButton: two-state button (pressed/released)"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to Lecture 46, what is correct?",
+      "options": {
+        "A": "Simple calculator using Swing JButton and JTextField",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Simple calculator using Swing JButton and JTextField"
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Importing javax.swing.* and java.awt.* for Swing p?",
+      "options": {
+        "A": "Importing javax.swing.* and java.awt.* for Swing programs",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XVI – Swing Components Demo: Importing javax.swing.* and java.awt.* for Swing programs"
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JFrame creation: extends JFrame, add components in?",
+      "options": {
+        "A": "JFrame creation: extends JFrame, add components in constructor",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XVI – Swing Components Demo: JFrame creation: extends JFrame, add components in constructor"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JButton with image: setIcon?",
+      "options": {
+        "A": "JButton with image: setIcon(new ImageIcon('image.png'))",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XVI – Swing Components Demo: JButton with image: setIcon(new ImageIcon('image.png'))"
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JTextField for single-line input; JPasswordField f?",
+      "options": {
+        "A": "JTextField for single-line input; JPasswordField for passwords",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XVI – Swing Components Demo: JTextField for single-line input; JPasswordField for passwords"
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JTextArea with JScrollPane for multi-line text?",
+      "options": {
+        "A": "JTextArea with JScrollPane for multi-line text",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XVI – Swing Components Demo: JTextArea with JScrollPane for multi-line text"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JCheckBox: boolean selection; isSelected?",
+      "options": {
+        "A": "JCheckBox: boolean selection; isSelected()",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XVI – Swing Components Demo: JCheckBox: boolean selection; isSelected()"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JRadioButton with ButtonGroup for exclusive select?",
+      "options": {
+        "A": "JRadioButton with ButtonGroup for exclusive selection",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XVI – Swing Components Demo: JRadioButton with ButtonGroup for exclusive selection"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JSpinner: numeric input with up/down arrows?",
+      "options": {
+        "A": "JSpinner: numeric input with up/down arrows",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XVI – Swing Components Demo: JSpinner: numeric input with up/down arrows"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JToggleButton: two-state button?",
+      "options": {
+        "A": "JToggleButton: two-state button (pressed/released)",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XVI – Swing Components Demo: JToggleButton: two-state button (pressed/released)"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Simple calculator using Swing JButton and JTextFie?",
+      "options": {
+        "A": "Simple calculator using Swing JButton and JTextField",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XVI – Swing Components Demo: Simple calculator using Swing JButton and JTextField"
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JCheckBox: boolean selection; isSelected in the context of Demonstration XVI – Swing Components Demo. Which is correct?",
+      "options": {
+        "A": "JCheckBox: boolean selection; isSelected()",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JCheckBox: boolean selection; isSelected(). Understanding this is crucial for mastery of Demonstration XVI – Swing Components Demo."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JRadioButton with ButtonGroup for exclusive select in the context of Demonstration XVI – Swing Components Demo. Which is correct?",
+      "options": {
+        "A": "JRadioButton with ButtonGroup for exclusive selection",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JRadioButton with ButtonGroup for exclusive selection. Understanding this is crucial for mastery of Demonstration XVI – Swing Components Demo."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JSpinner: numeric input with up/down arrows in the context of Demonstration XVI – Swing Components Demo. Which is correct?",
+      "options": {
+        "A": "JSpinner: numeric input with up/down arrows",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JSpinner: numeric input with up/down arrows. Understanding this is crucial for mastery of Demonstration XVI – Swing Components Demo."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JToggleButton: two-state button in the context of Demonstration XVI – Swing Components Demo. Which is correct?",
+      "options": {
+        "A": "JToggleButton: two-state button (pressed/released)",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JToggleButton: two-state button (pressed/released). Understanding this is crucial for mastery of Demonstration XVI – Swing Components Demo."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Simple calculator using Swing JButton and JTextFie in the context of Demonstration XVI – Swing Components Demo. Which is correct?",
+      "options": {
+        "A": "Simple calculator using Swing JButton and JTextField",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Simple calculator using Swing JButton and JTextField. Understanding this is crucial for mastery of Demonstration XVI – Swing Components Demo."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Importing javax.swing.* and java.awt.* for Swing p in the context of Demonstration XVI – Swing Components Demo. Which is correct?",
+      "options": {
+        "A": "Importing javax.swing.* and java.awt.* for Swing programs",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Importing javax.swing.* and java.awt.* for Swing programs. Understanding this is crucial for mastery of Demonstration XVI – Swing Components Demo."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JFrame creation: extends JFrame, add components in in the context of Demonstration XVI – Swing Components Demo. Which is correct?",
+      "options": {
+        "A": "JFrame creation: extends JFrame, add components in constructor",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JFrame creation: extends JFrame, add components in constructor. Understanding this is crucial for mastery of Demonstration XVI – Swing Components Demo."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JButton with image: setIcon in the context of Demonstration XVI – Swing Components Demo. Which is correct?",
+      "options": {
+        "A": "JButton with image: setIcon(new ImageIcon('image.png'))",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JButton with image: setIcon(new ImageIcon('image.png')). Understanding this is crucial for mastery of Demonstration XVI – Swing Components Demo."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JTextField for single-line input; JPasswordField f in the context of Demonstration XVI – Swing Components Demo. Which is correct?",
+      "options": {
+        "A": "JTextField for single-line input; JPasswordField for passwords",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JTextField for single-line input; JPasswordField for passwords. Understanding this is crucial for mastery of Demonstration XVI – Swing Components Demo."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JTextArea with JScrollPane for multi-line text in the context of Demonstration XVI – Swing Components Demo. Which is correct?",
+      "options": {
+        "A": "JTextArea with JScrollPane for multi-line text",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JTextArea with JScrollPane for multi-line text. Understanding this is crucial for mastery of Demonstration XVI – Swing Components Demo."
+    }
+  ]
+}

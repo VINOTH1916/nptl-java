@@ -1,0 +1,396 @@
+{
+  "lecture": 45,
+  "title": "Demonstration XV – Event Handling Demo",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "According to Lecture 45, what is correct?",
+      "options": {
+        "A": "Scribble applet: drawing with mouse drag",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Scribble applet: drawing with mouse drag"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "According to Lecture 45, what is correct?",
+      "options": {
+        "A": "MouseListener: mousePressed, mouseReleased, mouseEntered, mo...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: MouseListener: mousePressed, mouseReleased, mouseEntered, mouseExited"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "According to Lecture 45, what is correct?",
+      "options": {
+        "A": "MouseMotionListener: mouseDragged, mouseMoved",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: MouseMotionListener: mouseDragged, mouseMoved"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "According to Lecture 45, what is correct?",
+      "options": {
+        "A": "mousePressed stores starting coordinates; mouseDragged draws...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: mousePressed stores starting coordinates; mouseDragged draws lines"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "According to Lecture 45, what is correct?",
+      "options": {
+        "A": "Registering listeners: addMouseListener(this); addMouseMotio...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Registering listeners: addMouseListener(this); addMouseMotionListener(this)"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "According to Lecture 45, what is correct?",
+      "options": {
+        "A": "Implementing all interface methods (even if empty) is requir...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Implementing all interface methods (even if empty) is required"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "According to Lecture 45, what is correct?",
+      "options": {
+        "A": "Keyboard event handling with KeyListener: keyPressed, keyRel...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Keyboard event handling with KeyListener: keyPressed, keyReleased, keyTyped"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "According to Lecture 45, what is correct?",
+      "options": {
+        "A": "Calculator demo with button events and TextField display",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Calculator demo with button events and TextField display"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "According to Lecture 45, what is correct?",
+      "options": {
+        "A": "e.getX() and e.getY() get mouse coordinates",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: e.getX() and e.getY() get mouse coordinates"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to Lecture 45, what is correct?",
+      "options": {
+        "A": "Graphics g = getGraphics() for drawing outside paint()",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Graphics g = getGraphics() for drawing outside paint()"
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Scribble applet: drawing with mouse drag?",
+      "options": {
+        "A": "Scribble applet: drawing with mouse drag",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XV – Event Handling Demo: Scribble applet: drawing with mouse drag"
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: MouseListener: mousePressed, mouseReleased, mouseE?",
+      "options": {
+        "A": "MouseListener: mousePressed, mouseReleased, mouseEntered, mouseExited",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XV – Event Handling Demo: MouseListener: mousePressed, mouseReleased, mouseEntered, mouseExited"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: MouseMotionListener: mouseDragged, mouseMoved?",
+      "options": {
+        "A": "MouseMotionListener: mouseDragged, mouseMoved",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XV – Event Handling Demo: MouseMotionListener: mouseDragged, mouseMoved"
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: mousePressed stores starting coordinates; mouseDra?",
+      "options": {
+        "A": "mousePressed stores starting coordinates; mouseDragged draws lines",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XV – Event Handling Demo: mousePressed stores starting coordinates; mouseDragged draws lines"
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Registering listeners: addMouseListener?",
+      "options": {
+        "A": "Registering listeners: addMouseListener(this); addMouseMotionListener(this)",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XV – Event Handling Demo: Registering listeners: addMouseListener(this); addMouseMotionListener(this)"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Implementing all interface methods?",
+      "options": {
+        "A": "Implementing all interface methods (even if empty) is required",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XV – Event Handling Demo: Implementing all interface methods (even if empty) is required"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Keyboard event handling with KeyListener: keyPress?",
+      "options": {
+        "A": "Keyboard event handling with KeyListener: keyPressed, keyReleased, keyTyped",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XV – Event Handling Demo: Keyboard event handling with KeyListener: keyPressed, keyReleased, keyTyped"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Calculator demo with button events and TextField d?",
+      "options": {
+        "A": "Calculator demo with button events and TextField display",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XV – Event Handling Demo: Calculator demo with button events and TextField display"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: e.getX?",
+      "options": {
+        "A": "e.getX() and e.getY() get mouse coordinates",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XV – Event Handling Demo: e.getX() and e.getY() get mouse coordinates"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Graphics g = getGraphics?",
+      "options": {
+        "A": "Graphics g = getGraphics() for drawing outside paint()",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XV – Event Handling Demo: Graphics g = getGraphics() for drawing outside paint()"
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Implementing all interface methods in the context of Demonstration XV – Event Handling Demo. Which is correct?",
+      "options": {
+        "A": "Implementing all interface methods (even if empty) is required",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Implementing all interface methods (even if empty) is required. Understanding this is crucial for mastery of Demonstration XV – Event Handling Demo."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Keyboard event handling with KeyListener: keyPress in the context of Demonstration XV – Event Handling Demo. Which is correct?",
+      "options": {
+        "A": "Keyboard event handling with KeyListener: keyPressed, keyReleased, keyTyped",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Keyboard event handling with KeyListener: keyPressed, keyReleased, keyTyped. Understanding this is crucial for mastery of Demonstration XV – Event Handling Demo."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Calculator demo with button events and TextField d in the context of Demonstration XV – Event Handling Demo. Which is correct?",
+      "options": {
+        "A": "Calculator demo with button events and TextField display",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Calculator demo with button events and TextField display. Understanding this is crucial for mastery of Demonstration XV – Event Handling Demo."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: e.getX in the context of Demonstration XV – Event Handling Demo. Which is correct?",
+      "options": {
+        "A": "e.getX() and e.getY() get mouse coordinates",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: e.getX() and e.getY() get mouse coordinates. Understanding this is crucial for mastery of Demonstration XV – Event Handling Demo."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Graphics g = getGraphics in the context of Demonstration XV – Event Handling Demo. Which is correct?",
+      "options": {
+        "A": "Graphics g = getGraphics() for drawing outside paint()",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Graphics g = getGraphics() for drawing outside paint(). Understanding this is crucial for mastery of Demonstration XV – Event Handling Demo."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Scribble applet: drawing with mouse drag in the context of Demonstration XV – Event Handling Demo. Which is correct?",
+      "options": {
+        "A": "Scribble applet: drawing with mouse drag",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Scribble applet: drawing with mouse drag. Understanding this is crucial for mastery of Demonstration XV – Event Handling Demo."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: MouseListener: mousePressed, mouseReleased, mouseE in the context of Demonstration XV – Event Handling Demo. Which is correct?",
+      "options": {
+        "A": "MouseListener: mousePressed, mouseReleased, mouseEntered, mouseExited",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: MouseListener: mousePressed, mouseReleased, mouseEntered, mouseExited. Understanding this is crucial for mastery of Demonstration XV – Event Handling Demo."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: MouseMotionListener: mouseDragged, mouseMoved in the context of Demonstration XV – Event Handling Demo. Which is correct?",
+      "options": {
+        "A": "MouseMotionListener: mouseDragged, mouseMoved",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: MouseMotionListener: mouseDragged, mouseMoved. Understanding this is crucial for mastery of Demonstration XV – Event Handling Demo."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: mousePressed stores starting coordinates; mouseDra in the context of Demonstration XV – Event Handling Demo. Which is correct?",
+      "options": {
+        "A": "mousePressed stores starting coordinates; mouseDragged draws lines",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: mousePressed stores starting coordinates; mouseDragged draws lines. Understanding this is crucial for mastery of Demonstration XV – Event Handling Demo."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Registering listeners: addMouseListener in the context of Demonstration XV – Event Handling Demo. Which is correct?",
+      "options": {
+        "A": "Registering listeners: addMouseListener(this); addMouseMotionListener(this)",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Registering listeners: addMouseListener(this); addMouseMotionListener(this). Understanding this is crucial for mastery of Demonstration XV – Event Handling Demo."
+    }
+  ]
+}

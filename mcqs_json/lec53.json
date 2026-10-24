@@ -1,0 +1,396 @@
+{
+  "lecture": 53,
+  "title": "Demonstration XX – JDBC Operations Demo",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "According to Lecture 53, what is correct?",
+      "options": {
+        "A": "Creating Connection, Statement, ResultSet objects for databa...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Creating Connection, Statement, ResultSet objects for database operations"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "According to Lecture 53, what is correct?",
+      "options": {
+        "A": "Executing SELECT: rs = stmt.executeQuery('SELECT * FROM stud...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Executing SELECT: rs = stmt.executeQuery('SELECT * FROM students')"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "According to Lecture 53, what is correct?",
+      "options": {
+        "A": "Iterating ResultSet: while(rs.next()) { rs.getString('name')...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Iterating ResultSet: while(rs.next()) { rs.getString('name'); }"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "According to Lecture 53, what is correct?",
+      "options": {
+        "A": "Executing INSERT/UPDATE/DELETE with executeUpdate()",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Executing INSERT/UPDATE/DELETE with executeUpdate()"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "According to Lecture 53, what is correct?",
+      "options": {
+        "A": "Creating tables from Java: stmt.executeUpdate('CREATE TABLE ...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Creating tables from Java: stmt.executeUpdate('CREATE TABLE ...')"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "According to Lecture 53, what is correct?",
+      "options": {
+        "A": "Verifying operations: check return value of executeUpdate()",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Verifying operations: check return value of executeUpdate()"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "According to Lecture 53, what is correct?",
+      "options": {
+        "A": "Calculating averages from database records",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Calculating averages from database records"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "According to Lecture 53, what is correct?",
+      "options": {
+        "A": "Exception handling: SQLException for database errors",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Exception handling: SQLException for database errors"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "According to Lecture 53, what is correct?",
+      "options": {
+        "A": "Closing resources: rs.close(); stmt.close(); conn.close()",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Closing resources: rs.close(); stmt.close(); conn.close()"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to Lecture 53, what is correct?",
+      "options": {
+        "A": "try-with-resources for automatic closing of JDBC objects",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: try-with-resources for automatic closing of JDBC objects"
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Creating Connection, Statement, ResultSet objects ?",
+      "options": {
+        "A": "Creating Connection, Statement, ResultSet objects for database operations",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XX – JDBC Operations Demo: Creating Connection, Statement, ResultSet objects for database operations"
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Executing SELECT: rs = stmt.executeQuery?",
+      "options": {
+        "A": "Executing SELECT: rs = stmt.executeQuery('SELECT * FROM students')",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XX – JDBC Operations Demo: Executing SELECT: rs = stmt.executeQuery('SELECT * FROM students')"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Iterating ResultSet: while?",
+      "options": {
+        "A": "Iterating ResultSet: while(rs.next()) { rs.getString('name'); }",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XX – JDBC Operations Demo: Iterating ResultSet: while(rs.next()) { rs.getString('name'); }"
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Executing INSERT/UPDATE/DELETE with executeUpdate?",
+      "options": {
+        "A": "Executing INSERT/UPDATE/DELETE with executeUpdate()",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XX – JDBC Operations Demo: Executing INSERT/UPDATE/DELETE with executeUpdate()"
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Creating tables from Java: stmt.executeUpdate?",
+      "options": {
+        "A": "Creating tables from Java: stmt.executeUpdate('CREATE TABLE ...')",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XX – JDBC Operations Demo: Creating tables from Java: stmt.executeUpdate('CREATE TABLE ...')"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Verifying operations: check return value of execut?",
+      "options": {
+        "A": "Verifying operations: check return value of executeUpdate()",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XX – JDBC Operations Demo: Verifying operations: check return value of executeUpdate()"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Calculating averages from database records?",
+      "options": {
+        "A": "Calculating averages from database records",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XX – JDBC Operations Demo: Calculating averages from database records"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Exception handling: SQLException for database erro?",
+      "options": {
+        "A": "Exception handling: SQLException for database errors",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XX – JDBC Operations Demo: Exception handling: SQLException for database errors"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Closing resources: rs.close?",
+      "options": {
+        "A": "Closing resources: rs.close(); stmt.close(); conn.close()",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XX – JDBC Operations Demo: Closing resources: rs.close(); stmt.close(); conn.close()"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: try-with-resources for automatic closing of JDBC o?",
+      "options": {
+        "A": "try-with-resources for automatic closing of JDBC objects",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XX – JDBC Operations Demo: try-with-resources for automatic closing of JDBC objects"
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Verifying operations: check return value of execut in the context of Demonstration XX – JDBC Operations Demo. Which is correct?",
+      "options": {
+        "A": "Verifying operations: check return value of executeUpdate()",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Verifying operations: check return value of executeUpdate(). Understanding this is crucial for mastery of Demonstration XX – JDBC Operations Demo."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Calculating averages from database records in the context of Demonstration XX – JDBC Operations Demo. Which is correct?",
+      "options": {
+        "A": "Calculating averages from database records",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Calculating averages from database records. Understanding this is crucial for mastery of Demonstration XX – JDBC Operations Demo."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Exception handling: SQLException for database erro in the context of Demonstration XX – JDBC Operations Demo. Which is correct?",
+      "options": {
+        "A": "Exception handling: SQLException for database errors",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Exception handling: SQLException for database errors. Understanding this is crucial for mastery of Demonstration XX – JDBC Operations Demo."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Closing resources: rs.close in the context of Demonstration XX – JDBC Operations Demo. Which is correct?",
+      "options": {
+        "A": "Closing resources: rs.close(); stmt.close(); conn.close()",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Closing resources: rs.close(); stmt.close(); conn.close(). Understanding this is crucial for mastery of Demonstration XX – JDBC Operations Demo."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: try-with-resources for automatic closing of JDBC o in the context of Demonstration XX – JDBC Operations Demo. Which is correct?",
+      "options": {
+        "A": "try-with-resources for automatic closing of JDBC objects",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: try-with-resources for automatic closing of JDBC objects. Understanding this is crucial for mastery of Demonstration XX – JDBC Operations Demo."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Creating Connection, Statement, ResultSet objects  in the context of Demonstration XX – JDBC Operations Demo. Which is correct?",
+      "options": {
+        "A": "Creating Connection, Statement, ResultSet objects for database operations",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Creating Connection, Statement, ResultSet objects for database operations. Understanding this is crucial for mastery of Demonstration XX – JDBC Operations Demo."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Executing SELECT: rs = stmt.executeQuery in the context of Demonstration XX – JDBC Operations Demo. Which is correct?",
+      "options": {
+        "A": "Executing SELECT: rs = stmt.executeQuery('SELECT * FROM students')",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Executing SELECT: rs = stmt.executeQuery('SELECT * FROM students'). Understanding this is crucial for mastery of Demonstration XX – JDBC Operations Demo."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Iterating ResultSet: while in the context of Demonstration XX – JDBC Operations Demo. Which is correct?",
+      "options": {
+        "A": "Iterating ResultSet: while(rs.next()) { rs.getString('name'); }",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Iterating ResultSet: while(rs.next()) { rs.getString('name'); }. Understanding this is crucial for mastery of Demonstration XX – JDBC Operations Demo."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Executing INSERT/UPDATE/DELETE with executeUpdate in the context of Demonstration XX – JDBC Operations Demo. Which is correct?",
+      "options": {
+        "A": "Executing INSERT/UPDATE/DELETE with executeUpdate()",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Executing INSERT/UPDATE/DELETE with executeUpdate(). Understanding this is crucial for mastery of Demonstration XX – JDBC Operations Demo."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Creating tables from Java: stmt.executeUpdate in the context of Demonstration XX – JDBC Operations Demo. Which is correct?",
+      "options": {
+        "A": "Creating tables from Java: stmt.executeUpdate('CREATE TABLE ...')",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Creating tables from Java: stmt.executeUpdate('CREATE TABLE ...'). Understanding this is crucial for mastery of Demonstration XX – JDBC Operations Demo."
+    }
+  ]
+}

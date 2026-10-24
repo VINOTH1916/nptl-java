@@ -1,0 +1,396 @@
+{
+  "lecture": 50,
+  "title": "JDBC I – Database & MySQL",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "According to Lecture 50, what is correct?",
+      "options": {
+        "A": "JDBC = Java Database Connectivity",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JDBC = Java Database Connectivity"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "According to Lecture 50, what is correct?",
+      "options": {
+        "A": "Three components: Database (MySQL), JDBC Driver, Java Applic...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Three components: Database (MySQL), JDBC Driver, Java Application"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "According to Lecture 50, what is correct?",
+      "options": {
+        "A": "MySQL: popular open-source relational database management sy...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: MySQL: popular open-source relational database management system"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "According to Lecture 50, what is correct?",
+      "options": {
+        "A": "SQL: Structured Query Language — 4GL for database operations",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: SQL: Structured Query Language — 4GL for database operations"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "According to Lecture 50, what is correct?",
+      "options": {
+        "A": "RDBMS: Relational Database Management System",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: RDBMS: Relational Database Management System"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "According to Lecture 50, what is correct?",
+      "options": {
+        "A": "SQL commands: CREATE, INSERT, SELECT, UPDATE, DELETE, DROP",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: SQL commands: CREATE, INSERT, SELECT, UPDATE, DELETE, DROP"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "According to Lecture 50, what is correct?",
+      "options": {
+        "A": "Database: collection of tables; tables have rows (records) a...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Database: collection of tables; tables have rows (records) and columns (fields)"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "According to Lecture 50, what is correct?",
+      "options": {
+        "A": "Primary key: unique identifier for each row",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Primary key: unique identifier for each row"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "According to Lecture 50, what is correct?",
+      "options": {
+        "A": "Installing MySQL: download, install, configure root password",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Installing MySQL: download, install, configure root password"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to Lecture 50, what is correct?",
+      "options": {
+        "A": "mysql command-line client for database operations",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: mysql command-line client for database operations"
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JDBC = Java Database Connectivity?",
+      "options": {
+        "A": "JDBC = Java Database Connectivity",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC I – Database & MySQL: JDBC = Java Database Connectivity"
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Three components: Database?",
+      "options": {
+        "A": "Three components: Database (MySQL), JDBC Driver, Java Application",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC I – Database & MySQL: Three components: Database (MySQL), JDBC Driver, Java Application"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: MySQL: popular open-source relational database man?",
+      "options": {
+        "A": "MySQL: popular open-source relational database management system",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC I – Database & MySQL: MySQL: popular open-source relational database management system"
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: SQL: Structured Query Language — 4GL for database ?",
+      "options": {
+        "A": "SQL: Structured Query Language — 4GL for database operations",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC I – Database & MySQL: SQL: Structured Query Language — 4GL for database operations"
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: RDBMS: Relational Database Management System?",
+      "options": {
+        "A": "RDBMS: Relational Database Management System",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC I – Database & MySQL: RDBMS: Relational Database Management System"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: SQL commands: CREATE, INSERT, SELECT, UPDATE, DELE?",
+      "options": {
+        "A": "SQL commands: CREATE, INSERT, SELECT, UPDATE, DELETE, DROP",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC I – Database & MySQL: SQL commands: CREATE, INSERT, SELECT, UPDATE, DELETE, DROP"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Database: collection of tables; tables have rows?",
+      "options": {
+        "A": "Database: collection of tables; tables have rows (records) and columns (fields)",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC I – Database & MySQL: Database: collection of tables; tables have rows (records) and columns (fields)"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Primary key: unique identifier for each row?",
+      "options": {
+        "A": "Primary key: unique identifier for each row",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC I – Database & MySQL: Primary key: unique identifier for each row"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Installing MySQL: download, install, configure roo?",
+      "options": {
+        "A": "Installing MySQL: download, install, configure root password",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC I – Database & MySQL: Installing MySQL: download, install, configure root password"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: mysql command-line client for database operations?",
+      "options": {
+        "A": "mysql command-line client for database operations",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC I – Database & MySQL: mysql command-line client for database operations"
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: SQL commands: CREATE, INSERT, SELECT, UPDATE, DELE in the context of JDBC I – Database & MySQL. Which is correct?",
+      "options": {
+        "A": "SQL commands: CREATE, INSERT, SELECT, UPDATE, DELETE, DROP",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: SQL commands: CREATE, INSERT, SELECT, UPDATE, DELETE, DROP. Understanding this is crucial for mastery of JDBC I – Database & MySQL."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Database: collection of tables; tables have rows in the context of JDBC I – Database & MySQL. Which is correct?",
+      "options": {
+        "A": "Database: collection of tables; tables have rows (records) and columns (fields)",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Database: collection of tables; tables have rows (records) and columns (fields). Understanding this is crucial for mastery of JDBC I – Database & MySQL."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Primary key: unique identifier for each row in the context of JDBC I – Database & MySQL. Which is correct?",
+      "options": {
+        "A": "Primary key: unique identifier for each row",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Primary key: unique identifier for each row. Understanding this is crucial for mastery of JDBC I – Database & MySQL."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Installing MySQL: download, install, configure roo in the context of JDBC I – Database & MySQL. Which is correct?",
+      "options": {
+        "A": "Installing MySQL: download, install, configure root password",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Installing MySQL: download, install, configure root password. Understanding this is crucial for mastery of JDBC I – Database & MySQL."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: mysql command-line client for database operations in the context of JDBC I – Database & MySQL. Which is correct?",
+      "options": {
+        "A": "mysql command-line client for database operations",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: mysql command-line client for database operations. Understanding this is crucial for mastery of JDBC I – Database & MySQL."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JDBC = Java Database Connectivity in the context of JDBC I – Database & MySQL. Which is correct?",
+      "options": {
+        "A": "JDBC = Java Database Connectivity",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JDBC = Java Database Connectivity. Understanding this is crucial for mastery of JDBC I – Database & MySQL."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Three components: Database in the context of JDBC I – Database & MySQL. Which is correct?",
+      "options": {
+        "A": "Three components: Database (MySQL), JDBC Driver, Java Application",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Three components: Database (MySQL), JDBC Driver, Java Application. Understanding this is crucial for mastery of JDBC I – Database & MySQL."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: MySQL: popular open-source relational database man in the context of JDBC I – Database & MySQL. Which is correct?",
+      "options": {
+        "A": "MySQL: popular open-source relational database management system",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: MySQL: popular open-source relational database management system. Understanding this is crucial for mastery of JDBC I – Database & MySQL."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: SQL: Structured Query Language — 4GL for database  in the context of JDBC I – Database & MySQL. Which is correct?",
+      "options": {
+        "A": "SQL: Structured Query Language — 4GL for database operations",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: SQL: Structured Query Language — 4GL for database operations. Understanding this is crucial for mastery of JDBC I – Database & MySQL."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: RDBMS: Relational Database Management System in the context of JDBC I – Database & MySQL. Which is correct?",
+      "options": {
+        "A": "RDBMS: Relational Database Management System",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: RDBMS: Relational Database Management System. Understanding this is crucial for mastery of JDBC I – Database & MySQL."
+    }
+  ]
+}

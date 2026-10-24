@@ -1,0 +1,396 @@
+{
+  "lecture": 58,
+  "title": "Case Study III – Advanced Calculator",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "According to Lecture 58, what is correct?",
+      "options": {
+        "A": "Project: Advanced calculator with increasing complexity",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Project: Advanced calculator with increasing complexity"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "According to Lecture 58, what is correct?",
+      "options": {
+        "A": "Version 1: simple calculator with basic operations (+, -, *,...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Version 1: simple calculator with basic operations (+, -, *, /)"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "According to Lecture 58, what is correct?",
+      "options": {
+        "A": "Version 2: add scientific functions (sqrt, pow, sin, cos)",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Version 2: add scientific functions (sqrt, pow, sin, cos)"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "According to Lecture 58, what is correct?",
+      "options": {
+        "A": "Version 3: bracketed expressions with expression parsing",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Version 3: bracketed expressions with expression parsing"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "According to Lecture 58, what is correct?",
+      "options": {
+        "A": "GUI: Grid layout for buttons, TextField for display",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: GUI: Grid layout for buttons, TextField for display"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "According to Lecture 58, what is correct?",
+      "options": {
+        "A": "Event handling: digit buttons, operator buttons, equals, cle...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Event handling: digit buttons, operator buttons, equals, clear"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "According to Lecture 58, what is correct?",
+      "options": {
+        "A": "Expression evaluation: parsing and computing mathematical ex...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Expression evaluation: parsing and computing mathematical expressions"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "According to Lecture 58, what is correct?",
+      "options": {
+        "A": "Customization: font styles, button colors, themes",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Customization: font styles, button colors, themes"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "According to Lecture 58, what is correct?",
+      "options": {
+        "A": "Non-applet version using Swing (JFrame, JButton)",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Non-applet version using Swing (JFrame, JButton)"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to Lecture 58, what is correct?",
+      "options": {
+        "A": "Progressive enhancement: start simple, add features incremen...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Progressive enhancement: start simple, add features incrementally"
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Project: Advanced calculator with increasing compl?",
+      "options": {
+        "A": "Project: Advanced calculator with increasing complexity",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study III – Advanced Calculator: Project: Advanced calculator with increasing complexity"
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Version 1: simple calculator with basic operations?",
+      "options": {
+        "A": "Version 1: simple calculator with basic operations (+, -, *, /)",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study III – Advanced Calculator: Version 1: simple calculator with basic operations (+, -, *, /)"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Version 2: add scientific functions?",
+      "options": {
+        "A": "Version 2: add scientific functions (sqrt, pow, sin, cos)",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study III – Advanced Calculator: Version 2: add scientific functions (sqrt, pow, sin, cos)"
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Version 3: bracketed expressions with expression p?",
+      "options": {
+        "A": "Version 3: bracketed expressions with expression parsing",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study III – Advanced Calculator: Version 3: bracketed expressions with expression parsing"
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: GUI: Grid layout for buttons, TextField for displa?",
+      "options": {
+        "A": "GUI: Grid layout for buttons, TextField for display",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study III – Advanced Calculator: GUI: Grid layout for buttons, TextField for display"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Event handling: digit buttons, operator buttons, e?",
+      "options": {
+        "A": "Event handling: digit buttons, operator buttons, equals, clear",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study III – Advanced Calculator: Event handling: digit buttons, operator buttons, equals, clear"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Expression evaluation: parsing and computing mathe?",
+      "options": {
+        "A": "Expression evaluation: parsing and computing mathematical expressions",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study III – Advanced Calculator: Expression evaluation: parsing and computing mathematical expressions"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Customization: font styles, button colors, themes?",
+      "options": {
+        "A": "Customization: font styles, button colors, themes",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study III – Advanced Calculator: Customization: font styles, button colors, themes"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Non-applet version using Swing?",
+      "options": {
+        "A": "Non-applet version using Swing (JFrame, JButton)",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study III – Advanced Calculator: Non-applet version using Swing (JFrame, JButton)"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Progressive enhancement: start simple, add feature?",
+      "options": {
+        "A": "Progressive enhancement: start simple, add features incrementally",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study III – Advanced Calculator: Progressive enhancement: start simple, add features incrementally"
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Event handling: digit buttons, operator buttons, e in the context of Case Study III – Advanced Calculator. Which is correct?",
+      "options": {
+        "A": "Event handling: digit buttons, operator buttons, equals, clear",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Event handling: digit buttons, operator buttons, equals, clear. Understanding this is crucial for mastery of Case Study III – Advanced Calculator."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Expression evaluation: parsing and computing mathe in the context of Case Study III – Advanced Calculator. Which is correct?",
+      "options": {
+        "A": "Expression evaluation: parsing and computing mathematical expressions",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Expression evaluation: parsing and computing mathematical expressions. Understanding this is crucial for mastery of Case Study III – Advanced Calculator."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Customization: font styles, button colors, themes in the context of Case Study III – Advanced Calculator. Which is correct?",
+      "options": {
+        "A": "Customization: font styles, button colors, themes",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Customization: font styles, button colors, themes. Understanding this is crucial for mastery of Case Study III – Advanced Calculator."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Non-applet version using Swing in the context of Case Study III – Advanced Calculator. Which is correct?",
+      "options": {
+        "A": "Non-applet version using Swing (JFrame, JButton)",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Non-applet version using Swing (JFrame, JButton). Understanding this is crucial for mastery of Case Study III – Advanced Calculator."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Progressive enhancement: start simple, add feature in the context of Case Study III – Advanced Calculator. Which is correct?",
+      "options": {
+        "A": "Progressive enhancement: start simple, add features incrementally",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Progressive enhancement: start simple, add features incrementally. Understanding this is crucial for mastery of Case Study III – Advanced Calculator."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Project: Advanced calculator with increasing compl in the context of Case Study III – Advanced Calculator. Which is correct?",
+      "options": {
+        "A": "Project: Advanced calculator with increasing complexity",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Project: Advanced calculator with increasing complexity. Understanding this is crucial for mastery of Case Study III – Advanced Calculator."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Version 1: simple calculator with basic operations in the context of Case Study III – Advanced Calculator. Which is correct?",
+      "options": {
+        "A": "Version 1: simple calculator with basic operations (+, -, *, /)",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Version 1: simple calculator with basic operations (+, -, *, /). Understanding this is crucial for mastery of Case Study III – Advanced Calculator."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Version 2: add scientific functions in the context of Case Study III – Advanced Calculator. Which is correct?",
+      "options": {
+        "A": "Version 2: add scientific functions (sqrt, pow, sin, cos)",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Version 2: add scientific functions (sqrt, pow, sin, cos). Understanding this is crucial for mastery of Case Study III – Advanced Calculator."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Version 3: bracketed expressions with expression p in the context of Case Study III – Advanced Calculator. Which is correct?",
+      "options": {
+        "A": "Version 3: bracketed expressions with expression parsing",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Version 3: bracketed expressions with expression parsing. Understanding this is crucial for mastery of Case Study III – Advanced Calculator."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: GUI: Grid layout for buttons, TextField for displa in the context of Case Study III – Advanced Calculator. Which is correct?",
+      "options": {
+        "A": "GUI: Grid layout for buttons, TextField for display",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: GUI: Grid layout for buttons, TextField for display. Understanding this is crucial for mastery of Case Study III – Advanced Calculator."
+    }
+  ]
+}

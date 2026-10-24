@@ -1,0 +1,396 @@
+{
+  "lecture": 40,
+  "title": "AWT Programming II – Layout Managers",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "According to Lecture 40, what is correct?",
+      "options": {
+        "A": "LayoutManager manages component positioning in containers",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: LayoutManager manages component positioning in containers"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "According to Lecture 40, what is correct?",
+      "options": {
+        "A": "FlowLayout: left-to-right, top-to-bottom; default for Panel",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: FlowLayout: left-to-right, top-to-bottom; default for Panel"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "According to Lecture 40, what is correct?",
+      "options": {
+        "A": "BorderLayout: 5 regions NORTH/SOUTH/EAST/WEST/CENTER; defaul...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: BorderLayout: 5 regions NORTH/SOUTH/EAST/WEST/CENTER; default for Frame"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "According to Lecture 40, what is correct?",
+      "options": {
+        "A": "GridLayout: uniform grid; all cells same size",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: GridLayout: uniform grid; all cells same size"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "According to Lecture 40, what is correct?",
+      "options": {
+        "A": "CardLayout: stack of panels, show one at a time",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: CardLayout: stack of panels, show one at a time"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "According to Lecture 40, what is correct?",
+      "options": {
+        "A": "FlowLayout constructors: FlowLayout(), FlowLayout(align), Fl...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: FlowLayout constructors: FlowLayout(), FlowLayout(align), FlowLayout(align, hgap, vgap)"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "According to Lecture 40, what is correct?",
+      "options": {
+        "A": "f.add(button, BorderLayout.NORTH) for BorderLayout positioni...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: f.add(button, BorderLayout.NORTH) for BorderLayout positioning"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "According to Lecture 40, what is correct?",
+      "options": {
+        "A": "hgap and vgap: horizontal/vertical gaps between components",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: hgap and vgap: horizontal/vertical gaps between components"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "According to Lecture 40, what is correct?",
+      "options": {
+        "A": "Nested layouts: Panel with FlowLayout inside Frame with Bord...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Nested layouts: Panel with FlowLayout inside Frame with BorderLayout"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to Lecture 40, what is correct?",
+      "options": {
+        "A": "setLayout(null) enables absolute positioning with setBounds(...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: setLayout(null) enables absolute positioning with setBounds()"
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: LayoutManager manages component positioning in con?",
+      "options": {
+        "A": "LayoutManager manages component positioning in containers",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming II – Layout Managers: LayoutManager manages component positioning in containers"
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: FlowLayout: left-to-right, top-to-bottom; default ?",
+      "options": {
+        "A": "FlowLayout: left-to-right, top-to-bottom; default for Panel",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming II – Layout Managers: FlowLayout: left-to-right, top-to-bottom; default for Panel"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: BorderLayout: 5 regions NORTH/SOUTH/EAST/WEST/CENT?",
+      "options": {
+        "A": "BorderLayout: 5 regions NORTH/SOUTH/EAST/WEST/CENTER; default for Frame",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming II – Layout Managers: BorderLayout: 5 regions NORTH/SOUTH/EAST/WEST/CENTER; default for Frame"
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: GridLayout: uniform grid; all cells same size?",
+      "options": {
+        "A": "GridLayout: uniform grid; all cells same size",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming II – Layout Managers: GridLayout: uniform grid; all cells same size"
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: CardLayout: stack of panels, show one at a time?",
+      "options": {
+        "A": "CardLayout: stack of panels, show one at a time",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming II – Layout Managers: CardLayout: stack of panels, show one at a time"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: FlowLayout constructors: FlowLayout?",
+      "options": {
+        "A": "FlowLayout constructors: FlowLayout(), FlowLayout(align), FlowLayout(align, hgap",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming II – Layout Managers: FlowLayout constructors: FlowLayout(), FlowLayout(align), FlowLayout(align, hgap, vgap)"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: f.add?",
+      "options": {
+        "A": "f.add(button, BorderLayout.NORTH) for BorderLayout positioning",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming II – Layout Managers: f.add(button, BorderLayout.NORTH) for BorderLayout positioning"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: hgap and vgap: horizontal/vertical gaps between co?",
+      "options": {
+        "A": "hgap and vgap: horizontal/vertical gaps between components",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming II – Layout Managers: hgap and vgap: horizontal/vertical gaps between components"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Nested layouts: Panel with FlowLayout inside Frame?",
+      "options": {
+        "A": "Nested layouts: Panel with FlowLayout inside Frame with BorderLayout",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming II – Layout Managers: Nested layouts: Panel with FlowLayout inside Frame with BorderLayout"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: setLayout?",
+      "options": {
+        "A": "setLayout(null) enables absolute positioning with setBounds()",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming II – Layout Managers: setLayout(null) enables absolute positioning with setBounds()"
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: FlowLayout constructors: FlowLayout in the context of AWT Programming II – Layout Managers. Which is correct?",
+      "options": {
+        "A": "FlowLayout constructors: FlowLayout(), FlowLayout(align), FlowLayout(align, hgap",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: FlowLayout constructors: FlowLayout(), FlowLayout(align), FlowLayout(align, hgap, vgap). Understanding this is crucial for mastery of AWT Programming II – Layout Managers."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: f.add in the context of AWT Programming II – Layout Managers. Which is correct?",
+      "options": {
+        "A": "f.add(button, BorderLayout.NORTH) for BorderLayout positioning",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: f.add(button, BorderLayout.NORTH) for BorderLayout positioning. Understanding this is crucial for mastery of AWT Programming II – Layout Managers."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: hgap and vgap: horizontal/vertical gaps between co in the context of AWT Programming II – Layout Managers. Which is correct?",
+      "options": {
+        "A": "hgap and vgap: horizontal/vertical gaps between components",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: hgap and vgap: horizontal/vertical gaps between components. Understanding this is crucial for mastery of AWT Programming II – Layout Managers."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Nested layouts: Panel with FlowLayout inside Frame in the context of AWT Programming II – Layout Managers. Which is correct?",
+      "options": {
+        "A": "Nested layouts: Panel with FlowLayout inside Frame with BorderLayout",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Nested layouts: Panel with FlowLayout inside Frame with BorderLayout. Understanding this is crucial for mastery of AWT Programming II – Layout Managers."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: setLayout in the context of AWT Programming II – Layout Managers. Which is correct?",
+      "options": {
+        "A": "setLayout(null) enables absolute positioning with setBounds()",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: setLayout(null) enables absolute positioning with setBounds(). Understanding this is crucial for mastery of AWT Programming II – Layout Managers."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: LayoutManager manages component positioning in con in the context of AWT Programming II – Layout Managers. Which is correct?",
+      "options": {
+        "A": "LayoutManager manages component positioning in containers",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: LayoutManager manages component positioning in containers. Understanding this is crucial for mastery of AWT Programming II – Layout Managers."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: FlowLayout: left-to-right, top-to-bottom; default  in the context of AWT Programming II – Layout Managers. Which is correct?",
+      "options": {
+        "A": "FlowLayout: left-to-right, top-to-bottom; default for Panel",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: FlowLayout: left-to-right, top-to-bottom; default for Panel. Understanding this is crucial for mastery of AWT Programming II – Layout Managers."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: BorderLayout: 5 regions NORTH/SOUTH/EAST/WEST/CENT in the context of AWT Programming II – Layout Managers. Which is correct?",
+      "options": {
+        "A": "BorderLayout: 5 regions NORTH/SOUTH/EAST/WEST/CENTER; default for Frame",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: BorderLayout: 5 regions NORTH/SOUTH/EAST/WEST/CENTER; default for Frame. Understanding this is crucial for mastery of AWT Programming II – Layout Managers."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: GridLayout: uniform grid; all cells same size in the context of AWT Programming II – Layout Managers. Which is correct?",
+      "options": {
+        "A": "GridLayout: uniform grid; all cells same size",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: GridLayout: uniform grid; all cells same size. Understanding this is crucial for mastery of AWT Programming II – Layout Managers."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: CardLayout: stack of panels, show one at a time in the context of AWT Programming II – Layout Managers. Which is correct?",
+      "options": {
+        "A": "CardLayout: stack of panels, show one at a time",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: CardLayout: stack of panels, show one at a time. Understanding this is crucial for mastery of AWT Programming II – Layout Managers."
+    }
+  ]
+}

@@ -1,0 +1,396 @@
+{
+  "lecture": 49,
+  "title": "Networking II – Demo",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "According to Lecture 49, what is correct?",
+      "options": {
+        "A": "Creating URL object and inspecting its components",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Creating URL object and inspecting its components"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "According to Lecture 49, what is correct?",
+      "options": {
+        "A": "url.getProtocol() returns 'https', url.getHost() returns dom...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: url.getProtocol() returns 'https', url.getHost() returns domain"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "According to Lecture 49, what is correct?",
+      "options": {
+        "A": "url.getPort() returns port number; url.getFile() returns pat...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: url.getPort() returns port number; url.getFile() returns path"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "According to Lecture 49, what is correct?",
+      "options": {
+        "A": "Opening URLConnection: url.openConnection() returns URLConne...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Opening URLConnection: url.openConnection() returns URLConnection"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "According to Lecture 49, what is correct?",
+      "options": {
+        "A": "Reading from URL: InputStream is = url.openStream()",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Reading from URL: InputStream is = url.openStream()"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "According to Lecture 49, what is correct?",
+      "options": {
+        "A": "ServerSocket: new ServerSocket(port); accept() waits for cli...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: ServerSocket: new ServerSocket(port); accept() waits for client"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "According to Lecture 49, what is correct?",
+      "options": {
+        "A": "Client Socket: new Socket(host, port) connects to server",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Client Socket: new Socket(host, port) connects to server"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "According to Lecture 49, what is correct?",
+      "options": {
+        "A": "Concurrent server: spawn a thread for each accepted client",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Concurrent server: spawn a thread for each accepted client"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "According to Lecture 49, what is correct?",
+      "options": {
+        "A": "Two-way communication: getInputStream(), getOutputStream() o...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Two-way communication: getInputStream(), getOutputStream() on Socket"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to Lecture 49, what is correct?",
+      "options": {
+        "A": "Reading HTML from a URL with BufferedReader",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Reading HTML from a URL with BufferedReader"
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Creating URL object and inspecting its components?",
+      "options": {
+        "A": "Creating URL object and inspecting its components",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Networking II – Demo: Creating URL object and inspecting its components"
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: url.getProtocol?",
+      "options": {
+        "A": "url.getProtocol() returns 'https', url.getHost() returns domain",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Networking II – Demo: url.getProtocol() returns 'https', url.getHost() returns domain"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: url.getPort?",
+      "options": {
+        "A": "url.getPort() returns port number; url.getFile() returns path",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Networking II – Demo: url.getPort() returns port number; url.getFile() returns path"
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Opening URLConnection: url.openConnection?",
+      "options": {
+        "A": "Opening URLConnection: url.openConnection() returns URLConnection",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Networking II – Demo: Opening URLConnection: url.openConnection() returns URLConnection"
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Reading from URL: InputStream is = url.openStream?",
+      "options": {
+        "A": "Reading from URL: InputStream is = url.openStream()",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Networking II – Demo: Reading from URL: InputStream is = url.openStream()"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: ServerSocket: new ServerSocket?",
+      "options": {
+        "A": "ServerSocket: new ServerSocket(port); accept() waits for client",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Networking II – Demo: ServerSocket: new ServerSocket(port); accept() waits for client"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Client Socket: new Socket?",
+      "options": {
+        "A": "Client Socket: new Socket(host, port) connects to server",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Networking II – Demo: Client Socket: new Socket(host, port) connects to server"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Concurrent server: spawn a thread for each accepte?",
+      "options": {
+        "A": "Concurrent server: spawn a thread for each accepted client",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Networking II – Demo: Concurrent server: spawn a thread for each accepted client"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Two-way communication: getInputStream?",
+      "options": {
+        "A": "Two-way communication: getInputStream(), getOutputStream() on Socket",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Networking II – Demo: Two-way communication: getInputStream(), getOutputStream() on Socket"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Reading HTML from a URL with BufferedReader?",
+      "options": {
+        "A": "Reading HTML from a URL with BufferedReader",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Networking II – Demo: Reading HTML from a URL with BufferedReader"
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: ServerSocket: new ServerSocket in the context of Networking II – Demo. Which is correct?",
+      "options": {
+        "A": "ServerSocket: new ServerSocket(port); accept() waits for client",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: ServerSocket: new ServerSocket(port); accept() waits for client. Understanding this is crucial for mastery of Networking II – Demo."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Client Socket: new Socket in the context of Networking II – Demo. Which is correct?",
+      "options": {
+        "A": "Client Socket: new Socket(host, port) connects to server",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Client Socket: new Socket(host, port) connects to server. Understanding this is crucial for mastery of Networking II – Demo."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Concurrent server: spawn a thread for each accepte in the context of Networking II – Demo. Which is correct?",
+      "options": {
+        "A": "Concurrent server: spawn a thread for each accepted client",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Concurrent server: spawn a thread for each accepted client. Understanding this is crucial for mastery of Networking II – Demo."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Two-way communication: getInputStream in the context of Networking II – Demo. Which is correct?",
+      "options": {
+        "A": "Two-way communication: getInputStream(), getOutputStream() on Socket",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Two-way communication: getInputStream(), getOutputStream() on Socket. Understanding this is crucial for mastery of Networking II – Demo."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Reading HTML from a URL with BufferedReader in the context of Networking II – Demo. Which is correct?",
+      "options": {
+        "A": "Reading HTML from a URL with BufferedReader",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Reading HTML from a URL with BufferedReader. Understanding this is crucial for mastery of Networking II – Demo."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Creating URL object and inspecting its components in the context of Networking II – Demo. Which is correct?",
+      "options": {
+        "A": "Creating URL object and inspecting its components",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Creating URL object and inspecting its components. Understanding this is crucial for mastery of Networking II – Demo."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: url.getProtocol in the context of Networking II – Demo. Which is correct?",
+      "options": {
+        "A": "url.getProtocol() returns 'https', url.getHost() returns domain",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: url.getProtocol() returns 'https', url.getHost() returns domain. Understanding this is crucial for mastery of Networking II – Demo."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: url.getPort in the context of Networking II – Demo. Which is correct?",
+      "options": {
+        "A": "url.getPort() returns port number; url.getFile() returns path",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: url.getPort() returns port number; url.getFile() returns path. Understanding this is crucial for mastery of Networking II – Demo."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Opening URLConnection: url.openConnection in the context of Networking II – Demo. Which is correct?",
+      "options": {
+        "A": "Opening URLConnection: url.openConnection() returns URLConnection",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Opening URLConnection: url.openConnection() returns URLConnection. Understanding this is crucial for mastery of Networking II – Demo."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Reading from URL: InputStream is = url.openStream in the context of Networking II – Demo. Which is correct?",
+      "options": {
+        "A": "Reading from URL: InputStream is = url.openStream()",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Reading from URL: InputStream is = url.openStream(). Understanding this is crucial for mastery of Networking II – Demo."
+    }
+  ]
+}

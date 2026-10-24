@@ -1,0 +1,396 @@
+{
+  "lecture": 39,
+  "title": "AWT Programming I – Components",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "According to Lecture 39, what is correct?",
+      "options": {
+        "A": "AWT = Abstract Window Toolkit, Java's original GUI framework",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: AWT = Abstract Window Toolkit, Java's original GUI framework"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "According to Lecture 39, what is correct?",
+      "options": {
+        "A": "Component hierarchy: Component → Container → Window → Frame",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Component hierarchy: Component → Container → Window → Frame"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "According to Lecture 39, what is correct?",
+      "options": {
+        "A": "Frame: top-level window with title bar and borders",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Frame: top-level window with title bar and borders"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "According to Lecture 39, what is correct?",
+      "options": {
+        "A": "Frame f = new Frame('Title'); f.setSize(400,300); f.setVisib...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Frame f = new Frame('Title'); f.setSize(400,300); f.setVisible(true)"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "According to Lecture 39, what is correct?",
+      "options": {
+        "A": "Panel: container without title bar for organizing components",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Panel: container without title bar for organizing components"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "According to Lecture 39, what is correct?",
+      "options": {
+        "A": "WindowListener: windowClosing() handles close button",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: WindowListener: windowClosing() handles close button"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "According to Lecture 39, what is correct?",
+      "options": {
+        "A": "Label: read-only text display component",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Label: read-only text display component"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "According to Lecture 39, what is correct?",
+      "options": {
+        "A": "Button: clickable component triggering ActionEvent",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Button: clickable component triggering ActionEvent"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "According to Lecture 39, what is correct?",
+      "options": {
+        "A": "TextField: single-line text input; getText()/setText()",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: TextField: single-line text input; getText()/setText()"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to Lecture 39, what is correct?",
+      "options": {
+        "A": "add(component) adds components to containers",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: add(component) adds components to containers"
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: AWT = Abstract Window Toolkit, Java's original GUI?",
+      "options": {
+        "A": "AWT = Abstract Window Toolkit, Java's original GUI framework",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming I – Components: AWT = Abstract Window Toolkit, Java's original GUI framework"
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Component hierarchy: Component → Container → Windo?",
+      "options": {
+        "A": "Component hierarchy: Component → Container → Window → Frame",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming I – Components: Component hierarchy: Component → Container → Window → Frame"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Frame: top-level window with title bar and borders?",
+      "options": {
+        "A": "Frame: top-level window with title bar and borders",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming I – Components: Frame: top-level window with title bar and borders"
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Frame f = new Frame?",
+      "options": {
+        "A": "Frame f = new Frame('Title'); f.setSize(400,300); f.setVisible(true)",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming I – Components: Frame f = new Frame('Title'); f.setSize(400,300); f.setVisible(true)"
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Panel: container without title bar for organizing ?",
+      "options": {
+        "A": "Panel: container without title bar for organizing components",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming I – Components: Panel: container without title bar for organizing components"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: WindowListener: windowClosing?",
+      "options": {
+        "A": "WindowListener: windowClosing() handles close button",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming I – Components: WindowListener: windowClosing() handles close button"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Label: read-only text display component?",
+      "options": {
+        "A": "Label: read-only text display component",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming I – Components: Label: read-only text display component"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Button: clickable component triggering ActionEvent?",
+      "options": {
+        "A": "Button: clickable component triggering ActionEvent",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming I – Components: Button: clickable component triggering ActionEvent"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: TextField: single-line text input; getText?",
+      "options": {
+        "A": "TextField: single-line text input; getText()/setText()",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming I – Components: TextField: single-line text input; getText()/setText()"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: add?",
+      "options": {
+        "A": "add(component) adds components to containers",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming I – Components: add(component) adds components to containers"
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: WindowListener: windowClosing in the context of AWT Programming I – Components. Which is correct?",
+      "options": {
+        "A": "WindowListener: windowClosing() handles close button",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: WindowListener: windowClosing() handles close button. Understanding this is crucial for mastery of AWT Programming I – Components."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Label: read-only text display component in the context of AWT Programming I – Components. Which is correct?",
+      "options": {
+        "A": "Label: read-only text display component",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Label: read-only text display component. Understanding this is crucial for mastery of AWT Programming I – Components."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Button: clickable component triggering ActionEvent in the context of AWT Programming I – Components. Which is correct?",
+      "options": {
+        "A": "Button: clickable component triggering ActionEvent",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Button: clickable component triggering ActionEvent. Understanding this is crucial for mastery of AWT Programming I – Components."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: TextField: single-line text input; getText in the context of AWT Programming I – Components. Which is correct?",
+      "options": {
+        "A": "TextField: single-line text input; getText()/setText()",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: TextField: single-line text input; getText()/setText(). Understanding this is crucial for mastery of AWT Programming I – Components."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: add in the context of AWT Programming I – Components. Which is correct?",
+      "options": {
+        "A": "add(component) adds components to containers",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: add(component) adds components to containers. Understanding this is crucial for mastery of AWT Programming I – Components."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: AWT = Abstract Window Toolkit, Java's original GUI in the context of AWT Programming I – Components. Which is correct?",
+      "options": {
+        "A": "AWT = Abstract Window Toolkit, Java's original GUI framework",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: AWT = Abstract Window Toolkit, Java's original GUI framework. Understanding this is crucial for mastery of AWT Programming I – Components."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Component hierarchy: Component → Container → Windo in the context of AWT Programming I – Components. Which is correct?",
+      "options": {
+        "A": "Component hierarchy: Component → Container → Window → Frame",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Component hierarchy: Component → Container → Window → Frame. Understanding this is crucial for mastery of AWT Programming I – Components."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Frame: top-level window with title bar and borders in the context of AWT Programming I – Components. Which is correct?",
+      "options": {
+        "A": "Frame: top-level window with title bar and borders",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Frame: top-level window with title bar and borders. Understanding this is crucial for mastery of AWT Programming I – Components."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Frame f = new Frame in the context of AWT Programming I – Components. Which is correct?",
+      "options": {
+        "A": "Frame f = new Frame('Title'); f.setSize(400,300); f.setVisible(true)",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Frame f = new Frame('Title'); f.setSize(400,300); f.setVisible(true). Understanding this is crucial for mastery of AWT Programming I – Components."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Panel: container without title bar for organizing  in the context of AWT Programming I – Components. Which is correct?",
+      "options": {
+        "A": "Panel: container without title bar for organizing components",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Panel: container without title bar for organizing components. Understanding this is crucial for mastery of AWT Programming I – Components."
+    }
+  ]
+}

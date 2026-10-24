@@ -1,0 +1,396 @@
+{
+  "lecture": 56,
+  "title": "Case Study I – Mini Project Introduction",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "According to Lecture 56, what is correct?",
+      "options": {
+        "A": "Mini project: apply learned Java concepts to build a complet...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Mini project: apply learned Java concepts to build a complete application"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "According to Lecture 56, what is correct?",
+      "options": {
+        "A": "Project phases: design, implement, test",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Project phases: design, implement, test"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "According to Lecture 56, what is correct?",
+      "options": {
+        "A": "Technologies: Java Core, Swing GUI, JDBC database, networkin...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Technologies: Java Core, Swing GUI, JDBC database, networking"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "According to Lecture 56, what is correct?",
+      "options": {
+        "A": "Example project: Library Management System",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Example project: Library Management System"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "According to Lecture 56, what is correct?",
+      "options": {
+        "A": "Requirements: manage books, members, issue/return, fines",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Requirements: manage books, members, issue/return, fines"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "According to Lecture 56, what is correct?",
+      "options": {
+        "A": "Database design: tables for books, members, transactions",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Database design: tables for books, members, transactions"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "According to Lecture 56, what is correct?",
+      "options": {
+        "A": "GUI: Swing-based interface for librarians",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: GUI: Swing-based interface for librarians"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "According to Lecture 56, what is correct?",
+      "options": {
+        "A": "Skills needed: OOP, GUI, database, file I/O, exception handl...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Skills needed: OOP, GUI, database, file I/O, exception handling"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "According to Lecture 56, what is correct?",
+      "options": {
+        "A": "Project structure: Model classes, View classes, Controller c...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Project structure: Model classes, View classes, Controller classes"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to Lecture 56, what is correct?",
+      "options": {
+        "A": "Testing: unit tests, integration tests, user acceptance",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Testing: unit tests, integration tests, user acceptance"
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Mini project: apply learned Java concepts to build?",
+      "options": {
+        "A": "Mini project: apply learned Java concepts to build a complete application",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study I – Mini Project Introduction: Mini project: apply learned Java concepts to build a complete application"
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Project phases: design, implement, test?",
+      "options": {
+        "A": "Project phases: design, implement, test",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study I – Mini Project Introduction: Project phases: design, implement, test"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Technologies: Java Core, Swing GUI, JDBC database,?",
+      "options": {
+        "A": "Technologies: Java Core, Swing GUI, JDBC database, networking",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study I – Mini Project Introduction: Technologies: Java Core, Swing GUI, JDBC database, networking"
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Example project: Library Management System?",
+      "options": {
+        "A": "Example project: Library Management System",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study I – Mini Project Introduction: Example project: Library Management System"
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Requirements: manage books, members, issue/return,?",
+      "options": {
+        "A": "Requirements: manage books, members, issue/return, fines",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study I – Mini Project Introduction: Requirements: manage books, members, issue/return, fines"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Database design: tables for books, members, transa?",
+      "options": {
+        "A": "Database design: tables for books, members, transactions",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study I – Mini Project Introduction: Database design: tables for books, members, transactions"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: GUI: Swing-based interface for librarians?",
+      "options": {
+        "A": "GUI: Swing-based interface for librarians",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study I – Mini Project Introduction: GUI: Swing-based interface for librarians"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Skills needed: OOP, GUI, database, file I/O, excep?",
+      "options": {
+        "A": "Skills needed: OOP, GUI, database, file I/O, exception handling",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study I – Mini Project Introduction: Skills needed: OOP, GUI, database, file I/O, exception handling"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Project structure: Model classes, View classes, Co?",
+      "options": {
+        "A": "Project structure: Model classes, View classes, Controller classes",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study I – Mini Project Introduction: Project structure: Model classes, View classes, Controller classes"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Testing: unit tests, integration tests, user accep?",
+      "options": {
+        "A": "Testing: unit tests, integration tests, user acceptance",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study I – Mini Project Introduction: Testing: unit tests, integration tests, user acceptance"
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Database design: tables for books, members, transa in the context of Case Study I – Mini Project Introduction. Which is correct?",
+      "options": {
+        "A": "Database design: tables for books, members, transactions",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Database design: tables for books, members, transactions. Understanding this is crucial for mastery of Case Study I – Mini Project Introduction."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: GUI: Swing-based interface for librarians in the context of Case Study I – Mini Project Introduction. Which is correct?",
+      "options": {
+        "A": "GUI: Swing-based interface for librarians",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: GUI: Swing-based interface for librarians. Understanding this is crucial for mastery of Case Study I – Mini Project Introduction."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Skills needed: OOP, GUI, database, file I/O, excep in the context of Case Study I – Mini Project Introduction. Which is correct?",
+      "options": {
+        "A": "Skills needed: OOP, GUI, database, file I/O, exception handling",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Skills needed: OOP, GUI, database, file I/O, exception handling. Understanding this is crucial for mastery of Case Study I – Mini Project Introduction."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Project structure: Model classes, View classes, Co in the context of Case Study I – Mini Project Introduction. Which is correct?",
+      "options": {
+        "A": "Project structure: Model classes, View classes, Controller classes",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Project structure: Model classes, View classes, Controller classes. Understanding this is crucial for mastery of Case Study I – Mini Project Introduction."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Testing: unit tests, integration tests, user accep in the context of Case Study I – Mini Project Introduction. Which is correct?",
+      "options": {
+        "A": "Testing: unit tests, integration tests, user acceptance",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Testing: unit tests, integration tests, user acceptance. Understanding this is crucial for mastery of Case Study I – Mini Project Introduction."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Mini project: apply learned Java concepts to build in the context of Case Study I – Mini Project Introduction. Which is correct?",
+      "options": {
+        "A": "Mini project: apply learned Java concepts to build a complete application",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Mini project: apply learned Java concepts to build a complete application. Understanding this is crucial for mastery of Case Study I – Mini Project Introduction."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Project phases: design, implement, test in the context of Case Study I – Mini Project Introduction. Which is correct?",
+      "options": {
+        "A": "Project phases: design, implement, test",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Project phases: design, implement, test. Understanding this is crucial for mastery of Case Study I – Mini Project Introduction."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Technologies: Java Core, Swing GUI, JDBC database, in the context of Case Study I – Mini Project Introduction. Which is correct?",
+      "options": {
+        "A": "Technologies: Java Core, Swing GUI, JDBC database, networking",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Technologies: Java Core, Swing GUI, JDBC database, networking. Understanding this is crucial for mastery of Case Study I – Mini Project Introduction."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Example project: Library Management System in the context of Case Study I – Mini Project Introduction. Which is correct?",
+      "options": {
+        "A": "Example project: Library Management System",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Example project: Library Management System. Understanding this is crucial for mastery of Case Study I – Mini Project Introduction."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Requirements: manage books, members, issue/return, in the context of Case Study I – Mini Project Introduction. Which is correct?",
+      "options": {
+        "A": "Requirements: manage books, members, issue/return, fines",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Requirements: manage books, members, issue/return, fines. Understanding this is crucial for mastery of Case Study I – Mini Project Introduction."
+    }
+  ]
+}

@@ -1,0 +1,396 @@
+{
+  "lecture": 52,
+  "title": "JDBC III – SQL Operations",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "According to Lecture 52, what is correct?",
+      "options": {
+        "A": "Statement.executeQuery() for SELECT; returns ResultSet",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Statement.executeQuery() for SELECT; returns ResultSet"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "According to Lecture 52, what is correct?",
+      "options": {
+        "A": "Statement.executeUpdate() for INSERT/UPDATE/DELETE; returns ...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Statement.executeUpdate() for INSERT/UPDATE/DELETE; returns int (rows affected)"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "According to Lecture 52, what is correct?",
+      "options": {
+        "A": "ResultSet.next() moves cursor to next row; returns false at ...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: ResultSet.next() moves cursor to next row; returns false at end"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "According to Lecture 52, what is correct?",
+      "options": {
+        "A": "ResultSet.getString(column), getInt(column), getDouble(colum...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: ResultSet.getString(column), getInt(column), getDouble(column) retrieve field values"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "PreparedStatement: precompiled SQL with parameters (?); prevents SQL injection",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: PreparedStatement: precompiled SQL with parameters (?); prevents SQL injection"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "According to Lecture 52, what is correct?",
+      "options": {
+        "A": "PreparedStatement.setString(1, value) sets parameter values",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: PreparedStatement.setString(1, value) sets parameter values"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "According to Lecture 52, what is correct?",
+      "options": {
+        "A": "CallableStatement: for stored procedures",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: CallableStatement: for stored procedures"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "According to Lecture 52, what is correct?",
+      "options": {
+        "A": "CREATE TABLE: stmt.executeUpdate('CREATE TABLE students (id ...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: CREATE TABLE: stmt.executeUpdate('CREATE TABLE students (id INT PRIMARY KEY, name VARCHAR(50))')"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "According to Lecture 52, what is correct?",
+      "options": {
+        "A": "INSERT: stmt.executeUpdate(\"INSERT INTO students VALUES (1, ...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: INSERT: stmt.executeUpdate(\"INSERT INTO students VALUES (1, 'John')\")"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to Lecture 52, what is correct?",
+      "options": {
+        "A": "Transaction: conn.setAutoCommit(false); commit/rollback",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Transaction: conn.setAutoCommit(false); commit/rollback"
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Statement.executeQuery?",
+      "options": {
+        "A": "Statement.executeQuery() for SELECT; returns ResultSet",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC III – SQL Operations: Statement.executeQuery() for SELECT; returns ResultSet"
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Statement.executeUpdate?",
+      "options": {
+        "A": "Statement.executeUpdate() for INSERT/UPDATE/DELETE; returns int (rows affected)",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC III – SQL Operations: Statement.executeUpdate() for INSERT/UPDATE/DELETE; returns int (rows affected)"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: ResultSet.next?",
+      "options": {
+        "A": "ResultSet.next() moves cursor to next row; returns false at end",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC III – SQL Operations: ResultSet.next() moves cursor to next row; returns false at end"
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: ResultSet.getString?",
+      "options": {
+        "A": "ResultSet.getString(column), getInt(column), getDouble(column) retrieve field va",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC III – SQL Operations: ResultSet.getString(column), getInt(column), getDouble(column) retrieve field values"
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: PreparedStatement: precompiled SQL with parameters?",
+      "options": {
+        "A": "PreparedStatement: precompiled SQL with parameters (?); prevents SQL injection",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC III – SQL Operations: PreparedStatement: precompiled SQL with parameters (?); prevents SQL injection"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: PreparedStatement.setString?",
+      "options": {
+        "A": "PreparedStatement.setString(1, value) sets parameter values",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC III – SQL Operations: PreparedStatement.setString(1, value) sets parameter values"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: CallableStatement: for stored procedures?",
+      "options": {
+        "A": "CallableStatement: for stored procedures",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC III – SQL Operations: CallableStatement: for stored procedures"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: CREATE TABLE: stmt.executeUpdate?",
+      "options": {
+        "A": "CREATE TABLE: stmt.executeUpdate('CREATE TABLE students (id INT PRIMARY KEY, nam",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC III – SQL Operations: CREATE TABLE: stmt.executeUpdate('CREATE TABLE students (id INT PRIMARY KEY, name VARCHAR(50))')"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: INSERT: stmt.executeUpdate?",
+      "options": {
+        "A": "INSERT: stmt.executeUpdate(\"INSERT INTO students VALUES (1, 'John')\")",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC III – SQL Operations: INSERT: stmt.executeUpdate(\"INSERT INTO students VALUES (1, 'John')\")"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Transaction: conn.setAutoCommit?",
+      "options": {
+        "A": "Transaction: conn.setAutoCommit(false); commit/rollback",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC III – SQL Operations: Transaction: conn.setAutoCommit(false); commit/rollback"
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: PreparedStatement.setString in the context of JDBC III – SQL Operations. Which is correct?",
+      "options": {
+        "A": "PreparedStatement.setString(1, value) sets parameter values",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: PreparedStatement.setString(1, value) sets parameter values. Understanding this is crucial for mastery of JDBC III – SQL Operations."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: CallableStatement: for stored procedures in the context of JDBC III – SQL Operations. Which is correct?",
+      "options": {
+        "A": "CallableStatement: for stored procedures",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: CallableStatement: for stored procedures. Understanding this is crucial for mastery of JDBC III – SQL Operations."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: CREATE TABLE: stmt.executeUpdate in the context of JDBC III – SQL Operations. Which is correct?",
+      "options": {
+        "A": "CREATE TABLE: stmt.executeUpdate('CREATE TABLE students (id INT PRIMARY KEY, nam",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: CREATE TABLE: stmt.executeUpdate('CREATE TABLE students (id INT PRIMARY KEY, name VARCHAR(50))'). Understanding this is crucial for mastery of JDBC III – SQL Operations."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: INSERT: stmt.executeUpdate in the context of JDBC III – SQL Operations. Which is correct?",
+      "options": {
+        "A": "INSERT: stmt.executeUpdate(\"INSERT INTO students VALUES (1, 'John')\")",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: INSERT: stmt.executeUpdate(\"INSERT INTO students VALUES (1, 'John')\"). Understanding this is crucial for mastery of JDBC III – SQL Operations."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Transaction: conn.setAutoCommit in the context of JDBC III – SQL Operations. Which is correct?",
+      "options": {
+        "A": "Transaction: conn.setAutoCommit(false); commit/rollback",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Transaction: conn.setAutoCommit(false); commit/rollback. Understanding this is crucial for mastery of JDBC III – SQL Operations."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Statement.executeQuery in the context of JDBC III – SQL Operations. Which is correct?",
+      "options": {
+        "A": "Statement.executeQuery() for SELECT; returns ResultSet",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Statement.executeQuery() for SELECT; returns ResultSet. Understanding this is crucial for mastery of JDBC III – SQL Operations."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Statement.executeUpdate in the context of JDBC III – SQL Operations. Which is correct?",
+      "options": {
+        "A": "Statement.executeUpdate() for INSERT/UPDATE/DELETE; returns int (rows affected)",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Statement.executeUpdate() for INSERT/UPDATE/DELETE; returns int (rows affected). Understanding this is crucial for mastery of JDBC III – SQL Operations."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: ResultSet.next in the context of JDBC III – SQL Operations. Which is correct?",
+      "options": {
+        "A": "ResultSet.next() moves cursor to next row; returns false at end",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: ResultSet.next() moves cursor to next row; returns false at end. Understanding this is crucial for mastery of JDBC III – SQL Operations."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: ResultSet.getString in the context of JDBC III – SQL Operations. Which is correct?",
+      "options": {
+        "A": "ResultSet.getString(column), getInt(column), getDouble(column) retrieve field va",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: ResultSet.getString(column), getInt(column), getDouble(column) retrieve field values. Understanding this is crucial for mastery of JDBC III – SQL Operations."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: PreparedStatement: precompiled SQL with parameters in the context of JDBC III – SQL Operations. Which is correct?",
+      "options": {
+        "A": "PreparedStatement: precompiled SQL with parameters (?); prevents SQL injection",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: PreparedStatement: precompiled SQL with parameters (?); prevents SQL injection. Understanding this is crucial for mastery of JDBC III – SQL Operations."
+    }
+  ]
+}

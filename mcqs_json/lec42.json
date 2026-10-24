@@ -1,0 +1,396 @@
+{
+  "lecture": 42,
+  "title": "AWT Programming III – Event Handling",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "According to Lecture 42, what is correct?",
+      "options": {
+        "A": "Event: user action (click, key press, mouse move) that trigg...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Event: user action (click, key press, mouse move) that triggers code"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "According to Lecture 42, what is correct?",
+      "options": {
+        "A": "Delegation Event Model: source generates event, listener han...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Delegation Event Model: source generates event, listener handles it"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "According to Lecture 42, what is correct?",
+      "options": {
+        "A": "Event sources: Button, TextField, List, etc.",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Event sources: Button, TextField, List, etc."
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "According to Lecture 42, what is correct?",
+      "options": {
+        "A": "Event listeners: ActionListener, MouseListener, KeyListener",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Event listeners: ActionListener, MouseListener, KeyListener"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "According to Lecture 42, what is correct?",
+      "options": {
+        "A": "addActionListener(this) registers a listener with a componen...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: addActionListener(this) registers a listener with a component"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "According to Lecture 42, what is correct?",
+      "options": {
+        "A": "actionPerformed(ActionEvent e) handles button clicks",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: actionPerformed(ActionEvent e) handles button clicks"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "According to Lecture 42, what is correct?",
+      "options": {
+        "A": "ActionEvent: event from button click, menu item, Enter in te...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: ActionEvent: event from button click, menu item, Enter in text field"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "According to Lecture 42, what is correct?",
+      "options": {
+        "A": "MouseEvent: mousePressed, mouseReleased, mouseClicked, mouse...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: MouseEvent: mousePressed, mouseReleased, mouseClicked, mouseEntered, mouseExited"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "According to Lecture 42, what is correct?",
+      "options": {
+        "A": "KeyEvent: keyPressed, keyReleased, keyTyped",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: KeyEvent: keyPressed, keyReleased, keyTyped"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to Lecture 42, what is correct?",
+      "options": {
+        "A": "e.getSource() returns the component that generated the event",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: e.getSource() returns the component that generated the event"
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Event: user action?",
+      "options": {
+        "A": "Event: user action (click, key press, mouse move) that triggers code",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming III – Event Handling: Event: user action (click, key press, mouse move) that triggers code"
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Delegation Event Model: source generates event, li?",
+      "options": {
+        "A": "Delegation Event Model: source generates event, listener handles it",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming III – Event Handling: Delegation Event Model: source generates event, listener handles it"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Event sources: Button, TextField, List, etc.?",
+      "options": {
+        "A": "Event sources: Button, TextField, List, etc.",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming III – Event Handling: Event sources: Button, TextField, List, etc."
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Event listeners: ActionListener, MouseListener, Ke?",
+      "options": {
+        "A": "Event listeners: ActionListener, MouseListener, KeyListener",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming III – Event Handling: Event listeners: ActionListener, MouseListener, KeyListener"
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: addActionListener?",
+      "options": {
+        "A": "addActionListener(this) registers a listener with a component",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming III – Event Handling: addActionListener(this) registers a listener with a component"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: actionPerformed?",
+      "options": {
+        "A": "actionPerformed(ActionEvent e) handles button clicks",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming III – Event Handling: actionPerformed(ActionEvent e) handles button clicks"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: ActionEvent: event from button click, menu item, E?",
+      "options": {
+        "A": "ActionEvent: event from button click, menu item, Enter in text field",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming III – Event Handling: ActionEvent: event from button click, menu item, Enter in text field"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: MouseEvent: mousePressed, mouseReleased, mouseClic?",
+      "options": {
+        "A": "MouseEvent: mousePressed, mouseReleased, mouseClicked, mouseEntered, mouseExited",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming III – Event Handling: MouseEvent: mousePressed, mouseReleased, mouseClicked, mouseEntered, mouseExited"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: KeyEvent: keyPressed, keyReleased, keyTyped?",
+      "options": {
+        "A": "KeyEvent: keyPressed, keyReleased, keyTyped",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming III – Event Handling: KeyEvent: keyPressed, keyReleased, keyTyped"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: e.getSource?",
+      "options": {
+        "A": "e.getSource() returns the component that generated the event",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming III – Event Handling: e.getSource() returns the component that generated the event"
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: actionPerformed in the context of AWT Programming III – Event Handling. Which is correct?",
+      "options": {
+        "A": "actionPerformed(ActionEvent e) handles button clicks",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: actionPerformed(ActionEvent e) handles button clicks. Understanding this is crucial for mastery of AWT Programming III – Event Handling."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: ActionEvent: event from button click, menu item, E in the context of AWT Programming III – Event Handling. Which is correct?",
+      "options": {
+        "A": "ActionEvent: event from button click, menu item, Enter in text field",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: ActionEvent: event from button click, menu item, Enter in text field. Understanding this is crucial for mastery of AWT Programming III – Event Handling."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: MouseEvent: mousePressed, mouseReleased, mouseClic in the context of AWT Programming III – Event Handling. Which is correct?",
+      "options": {
+        "A": "MouseEvent: mousePressed, mouseReleased, mouseClicked, mouseEntered, mouseExited",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: MouseEvent: mousePressed, mouseReleased, mouseClicked, mouseEntered, mouseExited. Understanding this is crucial for mastery of AWT Programming III – Event Handling."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: KeyEvent: keyPressed, keyReleased, keyTyped in the context of AWT Programming III – Event Handling. Which is correct?",
+      "options": {
+        "A": "KeyEvent: keyPressed, keyReleased, keyTyped",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: KeyEvent: keyPressed, keyReleased, keyTyped. Understanding this is crucial for mastery of AWT Programming III – Event Handling."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: e.getSource in the context of AWT Programming III – Event Handling. Which is correct?",
+      "options": {
+        "A": "e.getSource() returns the component that generated the event",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: e.getSource() returns the component that generated the event. Understanding this is crucial for mastery of AWT Programming III – Event Handling."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Event: user action in the context of AWT Programming III – Event Handling. Which is correct?",
+      "options": {
+        "A": "Event: user action (click, key press, mouse move) that triggers code",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Event: user action (click, key press, mouse move) that triggers code. Understanding this is crucial for mastery of AWT Programming III – Event Handling."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Delegation Event Model: source generates event, li in the context of AWT Programming III – Event Handling. Which is correct?",
+      "options": {
+        "A": "Delegation Event Model: source generates event, listener handles it",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Delegation Event Model: source generates event, listener handles it. Understanding this is crucial for mastery of AWT Programming III – Event Handling."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Event sources: Button, TextField, List, etc. in the context of AWT Programming III – Event Handling. Which is correct?",
+      "options": {
+        "A": "Event sources: Button, TextField, List, etc.",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Event sources: Button, TextField, List, etc.. Understanding this is crucial for mastery of AWT Programming III – Event Handling."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Event listeners: ActionListener, MouseListener, Ke in the context of AWT Programming III – Event Handling. Which is correct?",
+      "options": {
+        "A": "Event listeners: ActionListener, MouseListener, KeyListener",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Event listeners: ActionListener, MouseListener, KeyListener. Understanding this is crucial for mastery of AWT Programming III – Event Handling."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: addActionListener in the context of AWT Programming III – Event Handling. Which is correct?",
+      "options": {
+        "A": "addActionListener(this) registers a listener with a component",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: addActionListener(this) registers a listener with a component. Understanding this is crucial for mastery of AWT Programming III – Event Handling."
+    }
+  ]
+}

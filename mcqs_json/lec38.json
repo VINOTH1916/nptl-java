@@ -1,0 +1,396 @@
+{
+  "lecture": 38,
+  "title": "Demonstration XIV – Calculator & Banner Applets",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "According to Lecture 38, what is correct?",
+      "options": {
+        "A": "HTML applet tag with code, width, height mandatory parameter...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: HTML applet tag with code, width, height mandatory parameters"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "According to Lecture 38, what is correct?",
+      "options": {
+        "A": "CODEBASE attribute specifies class file directory",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: CODEBASE attribute specifies class file directory"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "According to Lecture 38, what is correct?",
+      "options": {
+        "A": "ARCHIVE attribute for JAR file containing applet classes",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: ARCHIVE attribute for JAR file containing applet classes"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "According to Lecture 38, what is correct?",
+      "options": {
+        "A": "Building a calculator applet with buttons and display",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Building a calculator applet with buttons and display"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "According to Lecture 38, what is correct?",
+      "options": {
+        "A": "Banner applet with scrolling text using threads",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Banner applet with scrolling text using threads"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "According to Lecture 38, what is correct?",
+      "options": {
+        "A": "Adding ActionListeners to calculator buttons",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Adding ActionListeners to calculator buttons"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "According to Lecture 38, what is correct?",
+      "options": {
+        "A": "getText() and setText() for TextField display",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: getText() and setText() for TextField display"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "According to Lecture 38, what is correct?",
+      "options": {
+        "A": "Font and color customization in applets",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Font and color customization in applets"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "According to Lecture 38, what is correct?",
+      "options": {
+        "A": "Calculator handles digit buttons and operator buttons",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Calculator handles digit buttons and operator buttons"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to Lecture 38, what is correct?",
+      "options": {
+        "A": "Banner applet uses Thread.sleep() for smooth scrolling",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Banner applet uses Thread.sleep() for smooth scrolling"
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: HTML applet tag with code, width, height mandatory?",
+      "options": {
+        "A": "HTML applet tag with code, width, height mandatory parameters",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XIV – Calculator & Banner Applets: HTML applet tag with code, width, height mandatory parameters"
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: CODEBASE attribute specifies class file directory?",
+      "options": {
+        "A": "CODEBASE attribute specifies class file directory",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XIV – Calculator & Banner Applets: CODEBASE attribute specifies class file directory"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: ARCHIVE attribute for JAR file containing applet c?",
+      "options": {
+        "A": "ARCHIVE attribute for JAR file containing applet classes",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XIV – Calculator & Banner Applets: ARCHIVE attribute for JAR file containing applet classes"
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Building a calculator applet with buttons and disp?",
+      "options": {
+        "A": "Building a calculator applet with buttons and display",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XIV – Calculator & Banner Applets: Building a calculator applet with buttons and display"
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Banner applet with scrolling text using threads?",
+      "options": {
+        "A": "Banner applet with scrolling text using threads",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XIV – Calculator & Banner Applets: Banner applet with scrolling text using threads"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Adding ActionListeners to calculator buttons?",
+      "options": {
+        "A": "Adding ActionListeners to calculator buttons",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XIV – Calculator & Banner Applets: Adding ActionListeners to calculator buttons"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: getText?",
+      "options": {
+        "A": "getText() and setText() for TextField display",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XIV – Calculator & Banner Applets: getText() and setText() for TextField display"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Font and color customization in applets?",
+      "options": {
+        "A": "Font and color customization in applets",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XIV – Calculator & Banner Applets: Font and color customization in applets"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Calculator handles digit buttons and operator butt?",
+      "options": {
+        "A": "Calculator handles digit buttons and operator buttons",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XIV – Calculator & Banner Applets: Calculator handles digit buttons and operator buttons"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Banner applet uses Thread.sleep?",
+      "options": {
+        "A": "Banner applet uses Thread.sleep() for smooth scrolling",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XIV – Calculator & Banner Applets: Banner applet uses Thread.sleep() for smooth scrolling"
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Adding ActionListeners to calculator buttons in the context of Demonstration XIV – Calculator & Banner Applets. Which is correct?",
+      "options": {
+        "A": "Adding ActionListeners to calculator buttons",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Adding ActionListeners to calculator buttons. Understanding this is crucial for mastery of Demonstration XIV – Calculator & Banner Applets."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: getText in the context of Demonstration XIV – Calculator & Banner Applets. Which is correct?",
+      "options": {
+        "A": "getText() and setText() for TextField display",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: getText() and setText() for TextField display. Understanding this is crucial for mastery of Demonstration XIV – Calculator & Banner Applets."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Font and color customization in applets in the context of Demonstration XIV – Calculator & Banner Applets. Which is correct?",
+      "options": {
+        "A": "Font and color customization in applets",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Font and color customization in applets. Understanding this is crucial for mastery of Demonstration XIV – Calculator & Banner Applets."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Calculator handles digit buttons and operator butt in the context of Demonstration XIV – Calculator & Banner Applets. Which is correct?",
+      "options": {
+        "A": "Calculator handles digit buttons and operator buttons",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Calculator handles digit buttons and operator buttons. Understanding this is crucial for mastery of Demonstration XIV – Calculator & Banner Applets."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Banner applet uses Thread.sleep in the context of Demonstration XIV – Calculator & Banner Applets. Which is correct?",
+      "options": {
+        "A": "Banner applet uses Thread.sleep() for smooth scrolling",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Banner applet uses Thread.sleep() for smooth scrolling. Understanding this is crucial for mastery of Demonstration XIV – Calculator & Banner Applets."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: HTML applet tag with code, width, height mandatory in the context of Demonstration XIV – Calculator & Banner Applets. Which is correct?",
+      "options": {
+        "A": "HTML applet tag with code, width, height mandatory parameters",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: HTML applet tag with code, width, height mandatory parameters. Understanding this is crucial for mastery of Demonstration XIV – Calculator & Banner Applets."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: CODEBASE attribute specifies class file directory in the context of Demonstration XIV – Calculator & Banner Applets. Which is correct?",
+      "options": {
+        "A": "CODEBASE attribute specifies class file directory",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: CODEBASE attribute specifies class file directory. Understanding this is crucial for mastery of Demonstration XIV – Calculator & Banner Applets."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: ARCHIVE attribute for JAR file containing applet c in the context of Demonstration XIV – Calculator & Banner Applets. Which is correct?",
+      "options": {
+        "A": "ARCHIVE attribute for JAR file containing applet classes",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: ARCHIVE attribute for JAR file containing applet classes. Understanding this is crucial for mastery of Demonstration XIV – Calculator & Banner Applets."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Building a calculator applet with buttons and disp in the context of Demonstration XIV – Calculator & Banner Applets. Which is correct?",
+      "options": {
+        "A": "Building a calculator applet with buttons and display",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Building a calculator applet with buttons and display. Understanding this is crucial for mastery of Demonstration XIV – Calculator & Banner Applets."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Banner applet with scrolling text using threads in the context of Demonstration XIV – Calculator & Banner Applets. Which is correct?",
+      "options": {
+        "A": "Banner applet with scrolling text using threads",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Banner applet with scrolling text using threads. Understanding this is crucial for mastery of Demonstration XIV – Calculator & Banner Applets."
+    }
+  ]
+}

@@ -1,0 +1,396 @@
+{
+  "lecture": 59,
+  "title": "Case Study IV – Chat Application",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "According to Lecture 59, what is correct?",
+      "options": {
+        "A": "Project: Chat application using Java networking",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Project: Chat application using Java networking"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "According to Lecture 59, what is correct?",
+      "options": {
+        "A": "Server: ServerSocket listening for client connections",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Server: ServerSocket listening for client connections"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "According to Lecture 59, what is correct?",
+      "options": {
+        "A": "Client: Socket connecting to server",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Client: Socket connecting to server"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "According to Lecture 59, what is correct?",
+      "options": {
+        "A": "Multi-threaded server: one thread per client connection",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Multi-threaded server: one thread per client connection"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "According to Lecture 59, what is correct?",
+      "options": {
+        "A": "Message protocol: format for sending/receiving messages",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Message protocol: format for sending/receiving messages"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "According to Lecture 59, what is correct?",
+      "options": {
+        "A": "GUI: Swing chat window with message area and input field",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: GUI: Swing chat window with message area and input field"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "According to Lecture 59, what is correct?",
+      "options": {
+        "A": "I/O streams: reading/writing messages over socket",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: I/O streams: reading/writing messages over socket"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "According to Lecture 59, what is correct?",
+      "options": {
+        "A": "Concurrent users: server manages multiple client threads",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Concurrent users: server manages multiple client threads"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "According to Lecture 59, what is correct?",
+      "options": {
+        "A": "Broadcast: server forwards messages to all connected clients",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Broadcast: server forwards messages to all connected clients"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to Lecture 59, what is correct?",
+      "options": {
+        "A": "Demonstrates networking + GUI + multithreading integration",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Demonstrates networking + GUI + multithreading integration"
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Project: Chat application using Java networking?",
+      "options": {
+        "A": "Project: Chat application using Java networking",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study IV – Chat Application: Project: Chat application using Java networking"
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Server: ServerSocket listening for client connecti?",
+      "options": {
+        "A": "Server: ServerSocket listening for client connections",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study IV – Chat Application: Server: ServerSocket listening for client connections"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Client: Socket connecting to server?",
+      "options": {
+        "A": "Client: Socket connecting to server",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study IV – Chat Application: Client: Socket connecting to server"
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Multi-threaded server: one thread per client conne?",
+      "options": {
+        "A": "Multi-threaded server: one thread per client connection",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study IV – Chat Application: Multi-threaded server: one thread per client connection"
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Message protocol: format for sending/receiving mes?",
+      "options": {
+        "A": "Message protocol: format for sending/receiving messages",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study IV – Chat Application: Message protocol: format for sending/receiving messages"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: GUI: Swing chat window with message area and input?",
+      "options": {
+        "A": "GUI: Swing chat window with message area and input field",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study IV – Chat Application: GUI: Swing chat window with message area and input field"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: I/O streams: reading/writing messages over socket?",
+      "options": {
+        "A": "I/O streams: reading/writing messages over socket",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study IV – Chat Application: I/O streams: reading/writing messages over socket"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Concurrent users: server manages multiple client t?",
+      "options": {
+        "A": "Concurrent users: server manages multiple client threads",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study IV – Chat Application: Concurrent users: server manages multiple client threads"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Broadcast: server forwards messages to all connect?",
+      "options": {
+        "A": "Broadcast: server forwards messages to all connected clients",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study IV – Chat Application: Broadcast: server forwards messages to all connected clients"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Demonstrates networking + GUI + multithreading int?",
+      "options": {
+        "A": "Demonstrates networking + GUI + multithreading integration",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study IV – Chat Application: Demonstrates networking + GUI + multithreading integration"
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: GUI: Swing chat window with message area and input in the context of Case Study IV – Chat Application. Which is correct?",
+      "options": {
+        "A": "GUI: Swing chat window with message area and input field",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: GUI: Swing chat window with message area and input field. Understanding this is crucial for mastery of Case Study IV – Chat Application."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: I/O streams: reading/writing messages over socket in the context of Case Study IV – Chat Application. Which is correct?",
+      "options": {
+        "A": "I/O streams: reading/writing messages over socket",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: I/O streams: reading/writing messages over socket. Understanding this is crucial for mastery of Case Study IV – Chat Application."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Concurrent users: server manages multiple client t in the context of Case Study IV – Chat Application. Which is correct?",
+      "options": {
+        "A": "Concurrent users: server manages multiple client threads",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Concurrent users: server manages multiple client threads. Understanding this is crucial for mastery of Case Study IV – Chat Application."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Broadcast: server forwards messages to all connect in the context of Case Study IV – Chat Application. Which is correct?",
+      "options": {
+        "A": "Broadcast: server forwards messages to all connected clients",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Broadcast: server forwards messages to all connected clients. Understanding this is crucial for mastery of Case Study IV – Chat Application."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Demonstrates networking + GUI + multithreading int in the context of Case Study IV – Chat Application. Which is correct?",
+      "options": {
+        "A": "Demonstrates networking + GUI + multithreading integration",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Demonstrates networking + GUI + multithreading integration. Understanding this is crucial for mastery of Case Study IV – Chat Application."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Project: Chat application using Java networking in the context of Case Study IV – Chat Application. Which is correct?",
+      "options": {
+        "A": "Project: Chat application using Java networking",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Project: Chat application using Java networking. Understanding this is crucial for mastery of Case Study IV – Chat Application."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Server: ServerSocket listening for client connecti in the context of Case Study IV – Chat Application. Which is correct?",
+      "options": {
+        "A": "Server: ServerSocket listening for client connections",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Server: ServerSocket listening for client connections. Understanding this is crucial for mastery of Case Study IV – Chat Application."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Client: Socket connecting to server in the context of Case Study IV – Chat Application. Which is correct?",
+      "options": {
+        "A": "Client: Socket connecting to server",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Client: Socket connecting to server. Understanding this is crucial for mastery of Case Study IV – Chat Application."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Multi-threaded server: one thread per client conne in the context of Case Study IV – Chat Application. Which is correct?",
+      "options": {
+        "A": "Multi-threaded server: one thread per client connection",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Multi-threaded server: one thread per client connection. Understanding this is crucial for mastery of Case Study IV – Chat Application."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Message protocol: format for sending/receiving mes in the context of Case Study IV – Chat Application. Which is correct?",
+      "options": {
+        "A": "Message protocol: format for sending/receiving messages",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Message protocol: format for sending/receiving messages. Understanding this is crucial for mastery of Case Study IV – Chat Application."
+    }
+  ]
+}

@@ -1,0 +1,396 @@
+{
+  "lecture": 43,
+  "title": "Swing Programming I",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "According to Lecture 43, what is correct?",
+      "options": {
+        "A": "Swing: advanced GUI toolkit introduced from Java 5/6 onwards",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Swing: advanced GUI toolkit introduced from Java 5/6 onwards"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "According to Lecture 43, what is correct?",
+      "options": {
+        "A": "javax.swing package contains Swing components",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: javax.swing package contains Swing components"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "According to Lecture 43, what is correct?",
+      "options": {
+        "A": "Lightweight components: drawn in Java, not native OS widgets",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Lightweight components: drawn in Java, not native OS widgets"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "According to Lecture 43, what is correct?",
+      "options": {
+        "A": "Swing vs AWT: Swing is lightweight, AWT is heavyweight (nati...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Swing vs AWT: Swing is lightweight, AWT is heavyweight (native)"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "According to Lecture 43, what is correct?",
+      "options": {
+        "A": "JFrame: Swing version of Frame",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JFrame: Swing version of Frame"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "According to Lecture 43, what is correct?",
+      "options": {
+        "A": "JButton, JLabel, JTextField, JTextArea: Swing components",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JButton, JLabel, JTextField, JTextArea: Swing components"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "According to Lecture 43, what is correct?",
+      "options": {
+        "A": "JPanel: Swing container, supports double buffering",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JPanel: Swing container, supports double buffering"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "According to Lecture 43, what is correct?",
+      "options": {
+        "A": "Swing has pluggable look-and-feel (Metal, Windows, Motif)",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Swing has pluggable look-and-feel (Metal, Windows, Motif)"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "According to Lecture 43, what is correct?",
+      "options": {
+        "A": "Content pane: add components via frame.getContentPane().add(...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Content pane: add components via frame.getContentPane().add()"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to Lecture 43, what is correct?",
+      "options": {
+        "A": "Swing components start with 'J' prefix (JButton vs Button)",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Swing components start with 'J' prefix (JButton vs Button)"
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Swing: advanced GUI toolkit introduced from Java 5?",
+      "options": {
+        "A": "Swing: advanced GUI toolkit introduced from Java 5/6 onwards",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Swing Programming I: Swing: advanced GUI toolkit introduced from Java 5/6 onwards"
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: javax.swing package contains Swing components?",
+      "options": {
+        "A": "javax.swing package contains Swing components",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Swing Programming I: javax.swing package contains Swing components"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Lightweight components: drawn in Java, not native ?",
+      "options": {
+        "A": "Lightweight components: drawn in Java, not native OS widgets",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Swing Programming I: Lightweight components: drawn in Java, not native OS widgets"
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Swing vs AWT: Swing is lightweight, AWT is heavywe?",
+      "options": {
+        "A": "Swing vs AWT: Swing is lightweight, AWT is heavyweight (native)",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Swing Programming I: Swing vs AWT: Swing is lightweight, AWT is heavyweight (native)"
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JFrame: Swing version of Frame?",
+      "options": {
+        "A": "JFrame: Swing version of Frame",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Swing Programming I: JFrame: Swing version of Frame"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JButton, JLabel, JTextField, JTextArea: Swing comp?",
+      "options": {
+        "A": "JButton, JLabel, JTextField, JTextArea: Swing components",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Swing Programming I: JButton, JLabel, JTextField, JTextArea: Swing components"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JPanel: Swing container, supports double buffering?",
+      "options": {
+        "A": "JPanel: Swing container, supports double buffering",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Swing Programming I: JPanel: Swing container, supports double buffering"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Swing has pluggable look-and-feel?",
+      "options": {
+        "A": "Swing has pluggable look-and-feel (Metal, Windows, Motif)",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Swing Programming I: Swing has pluggable look-and-feel (Metal, Windows, Motif)"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Content pane: add components via frame.getContentP?",
+      "options": {
+        "A": "Content pane: add components via frame.getContentPane().add()",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Swing Programming I: Content pane: add components via frame.getContentPane().add()"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Swing components start with 'J' prefix?",
+      "options": {
+        "A": "Swing components start with 'J' prefix (JButton vs Button)",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Swing Programming I: Swing components start with 'J' prefix (JButton vs Button)"
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JButton, JLabel, JTextField, JTextArea: Swing comp in the context of Swing Programming I. Which is correct?",
+      "options": {
+        "A": "JButton, JLabel, JTextField, JTextArea: Swing components",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JButton, JLabel, JTextField, JTextArea: Swing components. Understanding this is crucial for mastery of Swing Programming I."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JPanel: Swing container, supports double buffering in the context of Swing Programming I. Which is correct?",
+      "options": {
+        "A": "JPanel: Swing container, supports double buffering",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JPanel: Swing container, supports double buffering. Understanding this is crucial for mastery of Swing Programming I."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Swing has pluggable look-and-feel in the context of Swing Programming I. Which is correct?",
+      "options": {
+        "A": "Swing has pluggable look-and-feel (Metal, Windows, Motif)",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Swing has pluggable look-and-feel (Metal, Windows, Motif). Understanding this is crucial for mastery of Swing Programming I."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Content pane: add components via frame.getContentP in the context of Swing Programming I. Which is correct?",
+      "options": {
+        "A": "Content pane: add components via frame.getContentPane().add()",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Content pane: add components via frame.getContentPane().add(). Understanding this is crucial for mastery of Swing Programming I."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Swing components start with 'J' prefix in the context of Swing Programming I. Which is correct?",
+      "options": {
+        "A": "Swing components start with 'J' prefix (JButton vs Button)",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Swing components start with 'J' prefix (JButton vs Button). Understanding this is crucial for mastery of Swing Programming I."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Swing: advanced GUI toolkit introduced from Java 5 in the context of Swing Programming I. Which is correct?",
+      "options": {
+        "A": "Swing: advanced GUI toolkit introduced from Java 5/6 onwards",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Swing: advanced GUI toolkit introduced from Java 5/6 onwards. Understanding this is crucial for mastery of Swing Programming I."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: javax.swing package contains Swing components in the context of Swing Programming I. Which is correct?",
+      "options": {
+        "A": "javax.swing package contains Swing components",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: javax.swing package contains Swing components. Understanding this is crucial for mastery of Swing Programming I."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Lightweight components: drawn in Java, not native  in the context of Swing Programming I. Which is correct?",
+      "options": {
+        "A": "Lightweight components: drawn in Java, not native OS widgets",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Lightweight components: drawn in Java, not native OS widgets. Understanding this is crucial for mastery of Swing Programming I."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Swing vs AWT: Swing is lightweight, AWT is heavywe in the context of Swing Programming I. Which is correct?",
+      "options": {
+        "A": "Swing vs AWT: Swing is lightweight, AWT is heavyweight (native)",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Swing vs AWT: Swing is lightweight, AWT is heavyweight (native). Understanding this is crucial for mastery of Swing Programming I."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JFrame: Swing version of Frame in the context of Swing Programming I. Which is correct?",
+      "options": {
+        "A": "JFrame: Swing version of Frame",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JFrame: Swing version of Frame. Understanding this is crucial for mastery of Swing Programming I."
+    }
+  ]
+}

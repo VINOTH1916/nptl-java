@@ -1,0 +1,396 @@
+{
+  "lecture": 60,
+  "title": "Case Study V – Course Management System",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "According to Lecture 60, what is correct?",
+      "options": {
+        "A": "Final project: Course Management System",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Final project: Course Management System"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "According to Lecture 60, what is correct?",
+      "options": {
+        "A": "Features: manage courses, students, marks, grading",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Features: manage courses, students, marks, grading"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "According to Lecture 60, what is correct?",
+      "options": {
+        "A": "Technology: Java Swing (GUI), JDBC (database), Networking",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Technology: Java Swing (GUI), JDBC (database), Networking"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "According to Lecture 60, what is correct?",
+      "options": {
+        "A": "Server database: tables for students, courses, marks",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Server database: tables for students, courses, marks"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "According to Lecture 60, what is correct?",
+      "options": {
+        "A": "Teacher interface: enter marks, view student records",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Teacher interface: enter marks, view student records"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "According to Lecture 60, what is correct?",
+      "options": {
+        "A": "Student interface: view marks, course info",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Student interface: view marks, course info"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "According to Lecture 60, what is correct?",
+      "options": {
+        "A": "Administrator: manage database entries",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Administrator: manage database entries"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "According to Lecture 60, what is correct?",
+      "options": {
+        "A": "Skills applied: OOP, Swing, JDBC, networking, multithreading",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Skills applied: OOP, Swing, JDBC, networking, multithreading"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "According to Lecture 60, what is correct?",
+      "options": {
+        "A": "Project demonstrates full-stack Java application development",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Project demonstrates full-stack Java application development"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to Lecture 60, what is correct?",
+      "options": {
+        "A": "Extensibility: add features like notifications, analytics, e...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Extensibility: add features like notifications, analytics, export"
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Final project: Course Management System?",
+      "options": {
+        "A": "Final project: Course Management System",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study V – Course Management System: Final project: Course Management System"
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Features: manage courses, students, marks, grading?",
+      "options": {
+        "A": "Features: manage courses, students, marks, grading",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study V – Course Management System: Features: manage courses, students, marks, grading"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Technology: Java Swing?",
+      "options": {
+        "A": "Technology: Java Swing (GUI), JDBC (database), Networking",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study V – Course Management System: Technology: Java Swing (GUI), JDBC (database), Networking"
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Server database: tables for students, courses, mar?",
+      "options": {
+        "A": "Server database: tables for students, courses, marks",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study V – Course Management System: Server database: tables for students, courses, marks"
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Teacher interface: enter marks, view student recor?",
+      "options": {
+        "A": "Teacher interface: enter marks, view student records",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study V – Course Management System: Teacher interface: enter marks, view student records"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Student interface: view marks, course info?",
+      "options": {
+        "A": "Student interface: view marks, course info",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study V – Course Management System: Student interface: view marks, course info"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Administrator: manage database entries?",
+      "options": {
+        "A": "Administrator: manage database entries",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study V – Course Management System: Administrator: manage database entries"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Skills applied: OOP, Swing, JDBC, networking, mult?",
+      "options": {
+        "A": "Skills applied: OOP, Swing, JDBC, networking, multithreading",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study V – Course Management System: Skills applied: OOP, Swing, JDBC, networking, multithreading"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Project demonstrates full-stack Java application d?",
+      "options": {
+        "A": "Project demonstrates full-stack Java application development",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study V – Course Management System: Project demonstrates full-stack Java application development"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Extensibility: add features like notifications, an?",
+      "options": {
+        "A": "Extensibility: add features like notifications, analytics, export",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Case Study V – Course Management System: Extensibility: add features like notifications, analytics, export"
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Student interface: view marks, course info in the context of Case Study V – Course Management System. Which is correct?",
+      "options": {
+        "A": "Student interface: view marks, course info",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Student interface: view marks, course info. Understanding this is crucial for mastery of Case Study V – Course Management System."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Administrator: manage database entries in the context of Case Study V – Course Management System. Which is correct?",
+      "options": {
+        "A": "Administrator: manage database entries",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Administrator: manage database entries. Understanding this is crucial for mastery of Case Study V – Course Management System."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Skills applied: OOP, Swing, JDBC, networking, mult in the context of Case Study V – Course Management System. Which is correct?",
+      "options": {
+        "A": "Skills applied: OOP, Swing, JDBC, networking, multithreading",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Skills applied: OOP, Swing, JDBC, networking, multithreading. Understanding this is crucial for mastery of Case Study V – Course Management System."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Project demonstrates full-stack Java application d in the context of Case Study V – Course Management System. Which is correct?",
+      "options": {
+        "A": "Project demonstrates full-stack Java application development",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Project demonstrates full-stack Java application development. Understanding this is crucial for mastery of Case Study V – Course Management System."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Extensibility: add features like notifications, an in the context of Case Study V – Course Management System. Which is correct?",
+      "options": {
+        "A": "Extensibility: add features like notifications, analytics, export",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Extensibility: add features like notifications, analytics, export. Understanding this is crucial for mastery of Case Study V – Course Management System."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Final project: Course Management System in the context of Case Study V – Course Management System. Which is correct?",
+      "options": {
+        "A": "Final project: Course Management System",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Final project: Course Management System. Understanding this is crucial for mastery of Case Study V – Course Management System."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Features: manage courses, students, marks, grading in the context of Case Study V – Course Management System. Which is correct?",
+      "options": {
+        "A": "Features: manage courses, students, marks, grading",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Features: manage courses, students, marks, grading. Understanding this is crucial for mastery of Case Study V – Course Management System."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Technology: Java Swing in the context of Case Study V – Course Management System. Which is correct?",
+      "options": {
+        "A": "Technology: Java Swing (GUI), JDBC (database), Networking",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Technology: Java Swing (GUI), JDBC (database), Networking. Understanding this is crucial for mastery of Case Study V – Course Management System."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Server database: tables for students, courses, mar in the context of Case Study V – Course Management System. Which is correct?",
+      "options": {
+        "A": "Server database: tables for students, courses, marks",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Server database: tables for students, courses, marks. Understanding this is crucial for mastery of Case Study V – Course Management System."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Teacher interface: enter marks, view student recor in the context of Case Study V – Course Management System. Which is correct?",
+      "options": {
+        "A": "Teacher interface: enter marks, view student records",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Teacher interface: enter marks, view student records. Understanding this is crucial for mastery of Case Study V – Course Management System."
+    }
+  ]
+}

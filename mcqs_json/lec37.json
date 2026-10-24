@@ -1,0 +1,396 @@
+{
+  "lecture": 37,
+  "title": "Demonstration XIII – Applet Methods Demo",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "According to Lecture 37, what is correct?",
+      "options": {
+        "A": "Importing java.applet.Applet and java.awt.Graphics is mandat...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Importing java.applet.Applet and java.awt.Graphics is mandatory"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "According to Lecture 37, what is correct?",
+      "options": {
+        "A": "paint(Graphics g) is the vital method containing drawString(...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: paint(Graphics g) is the vital method containing drawString()"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "According to Lecture 37, what is correct?",
+      "options": {
+        "A": "Applet execution requires HTML file and appletviewer",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Applet execution requires HTML file and appletviewer"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "According to Lecture 37, what is correct?",
+      "options": {
+        "A": "Demonstrating init(), start(), paint(), stop() lifecycle",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Demonstrating init(), start(), paint(), stop() lifecycle"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "According to Lecture 37, what is correct?",
+      "options": {
+        "A": "showStatus() displays messages in the status bar",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: showStatus() displays messages in the status bar"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "According to Lecture 37, what is correct?",
+      "options": {
+        "A": "Adding AWT components: Button, Label, TextField in init()",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Adding AWT components: Button, Label, TextField in init()"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "According to Lecture 37, what is correct?",
+      "options": {
+        "A": "Handling ActionEvent with ActionListener for button clicks",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Handling ActionEvent with ActionListener for button clicks"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "According to Lecture 37, what is correct?",
+      "options": {
+        "A": "Setting background color with setBackground()",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Setting background color with setBackground()"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "According to Lecture 37, what is correct?",
+      "options": {
+        "A": "Using getParameter() to read HTML parameters",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Using getParameter() to read HTML parameters"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to Lecture 37, what is correct?",
+      "options": {
+        "A": "repaint() triggers redraw cycle",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: repaint() triggers redraw cycle"
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Importing java.applet.Applet and java.awt.Graphics?",
+      "options": {
+        "A": "Importing java.applet.Applet and java.awt.Graphics is mandatory",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XIII – Applet Methods Demo: Importing java.applet.Applet and java.awt.Graphics is mandatory"
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: paint?",
+      "options": {
+        "A": "paint(Graphics g) is the vital method containing drawString()",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XIII – Applet Methods Demo: paint(Graphics g) is the vital method containing drawString()"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Applet execution requires HTML file and appletview?",
+      "options": {
+        "A": "Applet execution requires HTML file and appletviewer",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XIII – Applet Methods Demo: Applet execution requires HTML file and appletviewer"
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Demonstrating init?",
+      "options": {
+        "A": "Demonstrating init(), start(), paint(), stop() lifecycle",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XIII – Applet Methods Demo: Demonstrating init(), start(), paint(), stop() lifecycle"
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: showStatus?",
+      "options": {
+        "A": "showStatus() displays messages in the status bar",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XIII – Applet Methods Demo: showStatus() displays messages in the status bar"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Adding AWT components: Button, Label, TextField in?",
+      "options": {
+        "A": "Adding AWT components: Button, Label, TextField in init()",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XIII – Applet Methods Demo: Adding AWT components: Button, Label, TextField in init()"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Handling ActionEvent with ActionListener for butto?",
+      "options": {
+        "A": "Handling ActionEvent with ActionListener for button clicks",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XIII – Applet Methods Demo: Handling ActionEvent with ActionListener for button clicks"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Setting background color with setBackground?",
+      "options": {
+        "A": "Setting background color with setBackground()",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XIII – Applet Methods Demo: Setting background color with setBackground()"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Using getParameter?",
+      "options": {
+        "A": "Using getParameter() to read HTML parameters",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XIII – Applet Methods Demo: Using getParameter() to read HTML parameters"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: repaint?",
+      "options": {
+        "A": "repaint() triggers redraw cycle",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XIII – Applet Methods Demo: repaint() triggers redraw cycle"
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Adding AWT components: Button, Label, TextField in in the context of Demonstration XIII – Applet Methods Demo. Which is correct?",
+      "options": {
+        "A": "Adding AWT components: Button, Label, TextField in init()",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Adding AWT components: Button, Label, TextField in init(). Understanding this is crucial for mastery of Demonstration XIII – Applet Methods Demo."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Handling ActionEvent with ActionListener for butto in the context of Demonstration XIII – Applet Methods Demo. Which is correct?",
+      "options": {
+        "A": "Handling ActionEvent with ActionListener for button clicks",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Handling ActionEvent with ActionListener for button clicks. Understanding this is crucial for mastery of Demonstration XIII – Applet Methods Demo."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Setting background color with setBackground in the context of Demonstration XIII – Applet Methods Demo. Which is correct?",
+      "options": {
+        "A": "Setting background color with setBackground()",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Setting background color with setBackground(). Understanding this is crucial for mastery of Demonstration XIII – Applet Methods Demo."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Using getParameter in the context of Demonstration XIII – Applet Methods Demo. Which is correct?",
+      "options": {
+        "A": "Using getParameter() to read HTML parameters",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Using getParameter() to read HTML parameters. Understanding this is crucial for mastery of Demonstration XIII – Applet Methods Demo."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: repaint in the context of Demonstration XIII – Applet Methods Demo. Which is correct?",
+      "options": {
+        "A": "repaint() triggers redraw cycle",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: repaint() triggers redraw cycle. Understanding this is crucial for mastery of Demonstration XIII – Applet Methods Demo."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Importing java.applet.Applet and java.awt.Graphics in the context of Demonstration XIII – Applet Methods Demo. Which is correct?",
+      "options": {
+        "A": "Importing java.applet.Applet and java.awt.Graphics is mandatory",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Importing java.applet.Applet and java.awt.Graphics is mandatory. Understanding this is crucial for mastery of Demonstration XIII – Applet Methods Demo."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: paint in the context of Demonstration XIII – Applet Methods Demo. Which is correct?",
+      "options": {
+        "A": "paint(Graphics g) is the vital method containing drawString()",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: paint(Graphics g) is the vital method containing drawString(). Understanding this is crucial for mastery of Demonstration XIII – Applet Methods Demo."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Applet execution requires HTML file and appletview in the context of Demonstration XIII – Applet Methods Demo. Which is correct?",
+      "options": {
+        "A": "Applet execution requires HTML file and appletviewer",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Applet execution requires HTML file and appletviewer. Understanding this is crucial for mastery of Demonstration XIII – Applet Methods Demo."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Demonstrating init in the context of Demonstration XIII – Applet Methods Demo. Which is correct?",
+      "options": {
+        "A": "Demonstrating init(), start(), paint(), stop() lifecycle",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Demonstrating init(), start(), paint(), stop() lifecycle. Understanding this is crucial for mastery of Demonstration XIII – Applet Methods Demo."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: showStatus in the context of Demonstration XIII – Applet Methods Demo. Which is correct?",
+      "options": {
+        "A": "showStatus() displays messages in the status bar",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: showStatus() displays messages in the status bar. Understanding this is crucial for mastery of Demonstration XIII – Applet Methods Demo."
+    }
+  ]
+}

@@ -1,0 +1,396 @@
+{
+  "lecture": 55,
+  "title": "Demonstration XXI – JDBC Advanced Demo",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "According to Lecture 55, what is correct?",
+      "options": {
+        "A": "PreparedStatement with parameters: setString(), setInt() for...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: PreparedStatement with parameters: setString(), setInt() for dynamic queries"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "According to Lecture 55, what is correct?",
+      "options": {
+        "A": "Batch insert: addBatch() multiple times, executeBatch() once",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Batch insert: addBatch() multiple times, executeBatch() once"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "According to Lecture 55, what is correct?",
+      "options": {
+        "A": "Reading ResultSet metadata: getColumnCount(), getColumnName(...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Reading ResultSet metadata: getColumnCount(), getColumnName(i)"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "According to Lecture 55, what is correct?",
+      "options": {
+        "A": "Scrollable ResultSet: first(), last(), previous(), absolute(...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Scrollable ResultSet: first(), last(), previous(), absolute(row)"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "According to Lecture 55, what is correct?",
+      "options": {
+        "A": "Transaction management: setAutoCommit(false), commit(), roll...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Transaction management: setAutoCommit(false), commit(), rollback()"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "According to Lecture 55, what is correct?",
+      "options": {
+        "A": "Displaying query results in a formatted table",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Displaying query results in a formatted table"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "According to Lecture 55, what is correct?",
+      "options": {
+        "A": "Handling SQLException: getErrorCode(), getMessage(), getSQLS...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Handling SQLException: getErrorCode(), getMessage(), getSQLState()"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "According to Lecture 55, what is correct?",
+      "options": {
+        "A": "Closing connections properly in finally blocks",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Closing connections properly in finally blocks"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "According to Lecture 55, what is correct?",
+      "options": {
+        "A": "Connecting to remote MySQL server via JDBC URL",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Connecting to remote MySQL server via JDBC URL"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to Lecture 55, what is correct?",
+      "options": {
+        "A": "Demonstrating CRUD operations: Create, Read, Update, Delete",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Demonstrating CRUD operations: Create, Read, Update, Delete"
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: PreparedStatement with parameters: setString?",
+      "options": {
+        "A": "PreparedStatement with parameters: setString(), setInt() for dynamic queries",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XXI – JDBC Advanced Demo: PreparedStatement with parameters: setString(), setInt() for dynamic queries"
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Batch insert: addBatch?",
+      "options": {
+        "A": "Batch insert: addBatch() multiple times, executeBatch() once",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XXI – JDBC Advanced Demo: Batch insert: addBatch() multiple times, executeBatch() once"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Reading ResultSet metadata: getColumnCount?",
+      "options": {
+        "A": "Reading ResultSet metadata: getColumnCount(), getColumnName(i)",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XXI – JDBC Advanced Demo: Reading ResultSet metadata: getColumnCount(), getColumnName(i)"
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Scrollable ResultSet: first?",
+      "options": {
+        "A": "Scrollable ResultSet: first(), last(), previous(), absolute(row)",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XXI – JDBC Advanced Demo: Scrollable ResultSet: first(), last(), previous(), absolute(row)"
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Transaction management: setAutoCommit?",
+      "options": {
+        "A": "Transaction management: setAutoCommit(false), commit(), rollback()",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XXI – JDBC Advanced Demo: Transaction management: setAutoCommit(false), commit(), rollback()"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Displaying query results in a formatted table?",
+      "options": {
+        "A": "Displaying query results in a formatted table",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XXI – JDBC Advanced Demo: Displaying query results in a formatted table"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Handling SQLException: getErrorCode?",
+      "options": {
+        "A": "Handling SQLException: getErrorCode(), getMessage(), getSQLState()",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XXI – JDBC Advanced Demo: Handling SQLException: getErrorCode(), getMessage(), getSQLState()"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Closing connections properly in finally blocks?",
+      "options": {
+        "A": "Closing connections properly in finally blocks",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XXI – JDBC Advanced Demo: Closing connections properly in finally blocks"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Connecting to remote MySQL server via JDBC URL?",
+      "options": {
+        "A": "Connecting to remote MySQL server via JDBC URL",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XXI – JDBC Advanced Demo: Connecting to remote MySQL server via JDBC URL"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Demonstrating CRUD operations: Create, Read, Updat?",
+      "options": {
+        "A": "Demonstrating CRUD operations: Create, Read, Update, Delete",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XXI – JDBC Advanced Demo: Demonstrating CRUD operations: Create, Read, Update, Delete"
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Displaying query results in a formatted table in the context of Demonstration XXI – JDBC Advanced Demo. Which is correct?",
+      "options": {
+        "A": "Displaying query results in a formatted table",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Displaying query results in a formatted table. Understanding this is crucial for mastery of Demonstration XXI – JDBC Advanced Demo."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Handling SQLException: getErrorCode in the context of Demonstration XXI – JDBC Advanced Demo. Which is correct?",
+      "options": {
+        "A": "Handling SQLException: getErrorCode(), getMessage(), getSQLState()",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Handling SQLException: getErrorCode(), getMessage(), getSQLState(). Understanding this is crucial for mastery of Demonstration XXI – JDBC Advanced Demo."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Closing connections properly in finally blocks in the context of Demonstration XXI – JDBC Advanced Demo. Which is correct?",
+      "options": {
+        "A": "Closing connections properly in finally blocks",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Closing connections properly in finally blocks. Understanding this is crucial for mastery of Demonstration XXI – JDBC Advanced Demo."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Connecting to remote MySQL server via JDBC URL in the context of Demonstration XXI – JDBC Advanced Demo. Which is correct?",
+      "options": {
+        "A": "Connecting to remote MySQL server via JDBC URL",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Connecting to remote MySQL server via JDBC URL. Understanding this is crucial for mastery of Demonstration XXI – JDBC Advanced Demo."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Demonstrating CRUD operations: Create, Read, Updat in the context of Demonstration XXI – JDBC Advanced Demo. Which is correct?",
+      "options": {
+        "A": "Demonstrating CRUD operations: Create, Read, Update, Delete",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Demonstrating CRUD operations: Create, Read, Update, Delete. Understanding this is crucial for mastery of Demonstration XXI – JDBC Advanced Demo."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: PreparedStatement with parameters: setString in the context of Demonstration XXI – JDBC Advanced Demo. Which is correct?",
+      "options": {
+        "A": "PreparedStatement with parameters: setString(), setInt() for dynamic queries",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: PreparedStatement with parameters: setString(), setInt() for dynamic queries. Understanding this is crucial for mastery of Demonstration XXI – JDBC Advanced Demo."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Batch insert: addBatch in the context of Demonstration XXI – JDBC Advanced Demo. Which is correct?",
+      "options": {
+        "A": "Batch insert: addBatch() multiple times, executeBatch() once",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Batch insert: addBatch() multiple times, executeBatch() once. Understanding this is crucial for mastery of Demonstration XXI – JDBC Advanced Demo."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Reading ResultSet metadata: getColumnCount in the context of Demonstration XXI – JDBC Advanced Demo. Which is correct?",
+      "options": {
+        "A": "Reading ResultSet metadata: getColumnCount(), getColumnName(i)",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Reading ResultSet metadata: getColumnCount(), getColumnName(i). Understanding this is crucial for mastery of Demonstration XXI – JDBC Advanced Demo."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Scrollable ResultSet: first in the context of Demonstration XXI – JDBC Advanced Demo. Which is correct?",
+      "options": {
+        "A": "Scrollable ResultSet: first(), last(), previous(), absolute(row)",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Scrollable ResultSet: first(), last(), previous(), absolute(row). Understanding this is crucial for mastery of Demonstration XXI – JDBC Advanced Demo."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Transaction management: setAutoCommit in the context of Demonstration XXI – JDBC Advanced Demo. Which is correct?",
+      "options": {
+        "A": "Transaction management: setAutoCommit(false), commit(), rollback()",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Transaction management: setAutoCommit(false), commit(), rollback(). Understanding this is crucial for mastery of Demonstration XXI – JDBC Advanced Demo."
+    }
+  ]
+}

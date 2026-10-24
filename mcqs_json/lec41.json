@@ -1,0 +1,396 @@
+{
+  "lecture": 41,
+  "title": "AWT Programming III – More Components",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "According to Lecture 41, what is correct?",
+      "options": {
+        "A": "TextArea: multi-line text input component",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: TextArea: multi-line text input component"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "According to Lecture 41, what is correct?",
+      "options": {
+        "A": "Checkbox: boolean selection; getState() returns true/false",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Checkbox: boolean selection; getState() returns true/false"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "According to Lecture 41, what is correct?",
+      "options": {
+        "A": "CheckboxGroup: radio button behavior (only one selected)",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: CheckboxGroup: radio button behavior (only one selected)"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "According to Lecture 41, what is correct?",
+      "options": {
+        "A": "Choice: dropdown selection; addItem(), getSelectedItem()",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Choice: dropdown selection; addItem(), getSelectedItem()"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "According to Lecture 41, what is correct?",
+      "options": {
+        "A": "List: multi-item list; single or multiple selection mode",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: List: multi-item list; single or multiple selection mode"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "According to Lecture 41, what is correct?",
+      "options": {
+        "A": "Scrollbar: adjustable value with AdjustmentListener",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Scrollbar: adjustable value with AdjustmentListener"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "According to Lecture 41, what is correct?",
+      "options": {
+        "A": "Canvas: custom drawing surface; override paint()",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Canvas: custom drawing surface; override paint()"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "According to Lecture 41, what is correct?",
+      "options": {
+        "A": "Dialog: popup window; modal blocks parent, non-modal doesn't",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Dialog: popup window; modal blocks parent, non-modal doesn't"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "According to Lecture 41, what is correct?",
+      "options": {
+        "A": "FileDialog: system file chooser (Open/Save)",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: FileDialog: system file chooser (Open/Save)"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to Lecture 41, what is correct?",
+      "options": {
+        "A": "Menu, MenuBar, MenuItem: menu system for frames",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Menu, MenuBar, MenuItem: menu system for frames"
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: TextArea: multi-line text input component?",
+      "options": {
+        "A": "TextArea: multi-line text input component",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming III – More Components: TextArea: multi-line text input component"
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Checkbox: boolean selection; getState?",
+      "options": {
+        "A": "Checkbox: boolean selection; getState() returns true/false",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming III – More Components: Checkbox: boolean selection; getState() returns true/false"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: CheckboxGroup: radio button behavior?",
+      "options": {
+        "A": "CheckboxGroup: radio button behavior (only one selected)",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming III – More Components: CheckboxGroup: radio button behavior (only one selected)"
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Choice: dropdown selection; addItem?",
+      "options": {
+        "A": "Choice: dropdown selection; addItem(), getSelectedItem()",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming III – More Components: Choice: dropdown selection; addItem(), getSelectedItem()"
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: List: multi-item list; single or multiple selectio?",
+      "options": {
+        "A": "List: multi-item list; single or multiple selection mode",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming III – More Components: List: multi-item list; single or multiple selection mode"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Scrollbar: adjustable value with AdjustmentListene?",
+      "options": {
+        "A": "Scrollbar: adjustable value with AdjustmentListener",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming III – More Components: Scrollbar: adjustable value with AdjustmentListener"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Canvas: custom drawing surface; override paint?",
+      "options": {
+        "A": "Canvas: custom drawing surface; override paint()",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming III – More Components: Canvas: custom drawing surface; override paint()"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Dialog: popup window; modal blocks parent, non-mod?",
+      "options": {
+        "A": "Dialog: popup window; modal blocks parent, non-modal doesn't",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming III – More Components: Dialog: popup window; modal blocks parent, non-modal doesn't"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: FileDialog: system file chooser?",
+      "options": {
+        "A": "FileDialog: system file chooser (Open/Save)",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming III – More Components: FileDialog: system file chooser (Open/Save)"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Menu, MenuBar, MenuItem: menu system for frames?",
+      "options": {
+        "A": "Menu, MenuBar, MenuItem: menu system for frames",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in AWT Programming III – More Components: Menu, MenuBar, MenuItem: menu system for frames"
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Scrollbar: adjustable value with AdjustmentListene in the context of AWT Programming III – More Components. Which is correct?",
+      "options": {
+        "A": "Scrollbar: adjustable value with AdjustmentListener",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Scrollbar: adjustable value with AdjustmentListener. Understanding this is crucial for mastery of AWT Programming III – More Components."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Canvas: custom drawing surface; override paint in the context of AWT Programming III – More Components. Which is correct?",
+      "options": {
+        "A": "Canvas: custom drawing surface; override paint()",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Canvas: custom drawing surface; override paint(). Understanding this is crucial for mastery of AWT Programming III – More Components."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Dialog: popup window; modal blocks parent, non-mod in the context of AWT Programming III – More Components. Which is correct?",
+      "options": {
+        "A": "Dialog: popup window; modal blocks parent, non-modal doesn't",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Dialog: popup window; modal blocks parent, non-modal doesn't. Understanding this is crucial for mastery of AWT Programming III – More Components."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: FileDialog: system file chooser in the context of AWT Programming III – More Components. Which is correct?",
+      "options": {
+        "A": "FileDialog: system file chooser (Open/Save)",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: FileDialog: system file chooser (Open/Save). Understanding this is crucial for mastery of AWT Programming III – More Components."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Menu, MenuBar, MenuItem: menu system for frames in the context of AWT Programming III – More Components. Which is correct?",
+      "options": {
+        "A": "Menu, MenuBar, MenuItem: menu system for frames",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Menu, MenuBar, MenuItem: menu system for frames. Understanding this is crucial for mastery of AWT Programming III – More Components."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: TextArea: multi-line text input component in the context of AWT Programming III – More Components. Which is correct?",
+      "options": {
+        "A": "TextArea: multi-line text input component",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: TextArea: multi-line text input component. Understanding this is crucial for mastery of AWT Programming III – More Components."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Checkbox: boolean selection; getState in the context of AWT Programming III – More Components. Which is correct?",
+      "options": {
+        "A": "Checkbox: boolean selection; getState() returns true/false",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Checkbox: boolean selection; getState() returns true/false. Understanding this is crucial for mastery of AWT Programming III – More Components."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: CheckboxGroup: radio button behavior in the context of AWT Programming III – More Components. Which is correct?",
+      "options": {
+        "A": "CheckboxGroup: radio button behavior (only one selected)",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: CheckboxGroup: radio button behavior (only one selected). Understanding this is crucial for mastery of AWT Programming III – More Components."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Choice: dropdown selection; addItem in the context of AWT Programming III – More Components. Which is correct?",
+      "options": {
+        "A": "Choice: dropdown selection; addItem(), getSelectedItem()",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Choice: dropdown selection; addItem(), getSelectedItem(). Understanding this is crucial for mastery of AWT Programming III – More Components."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: List: multi-item list; single or multiple selectio in the context of AWT Programming III – More Components. Which is correct?",
+      "options": {
+        "A": "List: multi-item list; single or multiple selection mode",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: List: multi-item list; single or multiple selection mode. Understanding this is crucial for mastery of AWT Programming III – More Components."
+    }
+  ]
+}

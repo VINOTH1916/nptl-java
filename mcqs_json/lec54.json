@@ -1,0 +1,396 @@
+{
+  "lecture": 54,
+  "title": "JDBC IV – Advanced JDBC",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "According to Lecture 54, what is correct?",
+      "options": {
+        "A": "PreparedStatement: precompiled, reusable, SQL injection resi...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: PreparedStatement: precompiled, reusable, SQL injection resistant"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "According to Lecture 54, what is correct?",
+      "options": {
+        "A": "PreparedStatement vs Statement: PreparedStatement is safer a...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: PreparedStatement vs Statement: PreparedStatement is safer and faster for repeated execution"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "According to Lecture 54, what is correct?",
+      "options": {
+        "A": "Batch processing: addBatch()/executeBatch() for multiple sta...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Batch processing: addBatch()/executeBatch() for multiple statements"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "According to Lecture 54, what is correct?",
+      "options": {
+        "A": "ResultSet types: TYPE_FORWARD_ONLY, TYPE_SCROLL_INSENSITIVE,...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: ResultSet types: TYPE_FORWARD_ONLY, TYPE_SCROLL_INSENSITIVE, TYPE_SCROLL_SENSITIVE"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "According to Lecture 54, what is correct?",
+      "options": {
+        "A": "ResultSet concurrency: CONCUR_READ_ONLY, CONCUR_UPDATABLE",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: ResultSet concurrency: CONCUR_READ_ONLY, CONCUR_UPDATABLE"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "According to Lecture 54, what is correct?",
+      "options": {
+        "A": "ResultSetMetaData: describes columns; getColumnCount(), getC...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: ResultSetMetaData: describes columns; getColumnCount(), getColumnName()"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "According to Lecture 54, what is correct?",
+      "options": {
+        "A": "DatabaseMetaData: describes database; getTables(), getColumn...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: DatabaseMetaData: describes database; getTables(), getColumns()"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "According to Lecture 54, what is correct?",
+      "options": {
+        "A": "Connection pooling: reuse connections for performance (DataS...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Connection pooling: reuse connections for performance (DataSource)"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "According to Lecture 54, what is correct?",
+      "options": {
+        "A": "RowSet: disconnected ResultSet; works without active connect...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: RowSet: disconnected ResultSet; works without active connection"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to Lecture 54, what is correct?",
+      "options": {
+        "A": "DAO pattern: Data Access Object for separating SQL from busi...",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: DAO pattern: Data Access Object for separating SQL from business logic"
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: PreparedStatement: precompiled, reusable, SQL inje?",
+      "options": {
+        "A": "PreparedStatement: precompiled, reusable, SQL injection resistant",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC IV – Advanced JDBC: PreparedStatement: precompiled, reusable, SQL injection resistant"
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: PreparedStatement vs Statement: PreparedStatement ?",
+      "options": {
+        "A": "PreparedStatement vs Statement: PreparedStatement is safer and faster for repeat",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC IV – Advanced JDBC: PreparedStatement vs Statement: PreparedStatement is safer and faster for repeated execution"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Batch processing: addBatch?",
+      "options": {
+        "A": "Batch processing: addBatch()/executeBatch() for multiple statements",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC IV – Advanced JDBC: Batch processing: addBatch()/executeBatch() for multiple statements"
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: ResultSet types: TYPE_FORWARD_ONLY, TYPE_SCROLL_IN?",
+      "options": {
+        "A": "ResultSet types: TYPE_FORWARD_ONLY, TYPE_SCROLL_INSENSITIVE, TYPE_SCROLL_SENSITI",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC IV – Advanced JDBC: ResultSet types: TYPE_FORWARD_ONLY, TYPE_SCROLL_INSENSITIVE, TYPE_SCROLL_SENSITIVE"
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: ResultSet concurrency: CONCUR_READ_ONLY, CONCUR_UP?",
+      "options": {
+        "A": "ResultSet concurrency: CONCUR_READ_ONLY, CONCUR_UPDATABLE",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC IV – Advanced JDBC: ResultSet concurrency: CONCUR_READ_ONLY, CONCUR_UPDATABLE"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: ResultSetMetaData: describes columns; getColumnCou?",
+      "options": {
+        "A": "ResultSetMetaData: describes columns; getColumnCount(), getColumnName()",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC IV – Advanced JDBC: ResultSetMetaData: describes columns; getColumnCount(), getColumnName()"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: DatabaseMetaData: describes database; getTables?",
+      "options": {
+        "A": "DatabaseMetaData: describes database; getTables(), getColumns()",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC IV – Advanced JDBC: DatabaseMetaData: describes database; getTables(), getColumns()"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Connection pooling: reuse connections for performa?",
+      "options": {
+        "A": "Connection pooling: reuse connections for performance (DataSource)",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC IV – Advanced JDBC: Connection pooling: reuse connections for performance (DataSource)"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: RowSet: disconnected ResultSet; works without acti?",
+      "options": {
+        "A": "RowSet: disconnected ResultSet; works without active connection",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC IV – Advanced JDBC: RowSet: disconnected ResultSet; works without active connection"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: DAO pattern: Data Access Object for separating SQL?",
+      "options": {
+        "A": "DAO pattern: Data Access Object for separating SQL from business logic",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in JDBC IV – Advanced JDBC: DAO pattern: Data Access Object for separating SQL from business logic"
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: ResultSetMetaData: describes columns; getColumnCou in the context of JDBC IV – Advanced JDBC. Which is correct?",
+      "options": {
+        "A": "ResultSetMetaData: describes columns; getColumnCount(), getColumnName()",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: ResultSetMetaData: describes columns; getColumnCount(), getColumnName(). Understanding this is crucial for mastery of JDBC IV – Advanced JDBC."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: DatabaseMetaData: describes database; getTables in the context of JDBC IV – Advanced JDBC. Which is correct?",
+      "options": {
+        "A": "DatabaseMetaData: describes database; getTables(), getColumns()",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: DatabaseMetaData: describes database; getTables(), getColumns(). Understanding this is crucial for mastery of JDBC IV – Advanced JDBC."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Connection pooling: reuse connections for performa in the context of JDBC IV – Advanced JDBC. Which is correct?",
+      "options": {
+        "A": "Connection pooling: reuse connections for performance (DataSource)",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Connection pooling: reuse connections for performance (DataSource). Understanding this is crucial for mastery of JDBC IV – Advanced JDBC."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: RowSet: disconnected ResultSet; works without acti in the context of JDBC IV – Advanced JDBC. Which is correct?",
+      "options": {
+        "A": "RowSet: disconnected ResultSet; works without active connection",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: RowSet: disconnected ResultSet; works without active connection. Understanding this is crucial for mastery of JDBC IV – Advanced JDBC."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: DAO pattern: Data Access Object for separating SQL in the context of JDBC IV – Advanced JDBC. Which is correct?",
+      "options": {
+        "A": "DAO pattern: Data Access Object for separating SQL from business logic",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: DAO pattern: Data Access Object for separating SQL from business logic. Understanding this is crucial for mastery of JDBC IV – Advanced JDBC."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: PreparedStatement: precompiled, reusable, SQL inje in the context of JDBC IV – Advanced JDBC. Which is correct?",
+      "options": {
+        "A": "PreparedStatement: precompiled, reusable, SQL injection resistant",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: PreparedStatement: precompiled, reusable, SQL injection resistant. Understanding this is crucial for mastery of JDBC IV – Advanced JDBC."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: PreparedStatement vs Statement: PreparedStatement  in the context of JDBC IV – Advanced JDBC. Which is correct?",
+      "options": {
+        "A": "PreparedStatement vs Statement: PreparedStatement is safer and faster for repeat",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: PreparedStatement vs Statement: PreparedStatement is safer and faster for repeated execution. Understanding this is crucial for mastery of JDBC IV – Advanced JDBC."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Batch processing: addBatch in the context of JDBC IV – Advanced JDBC. Which is correct?",
+      "options": {
+        "A": "Batch processing: addBatch()/executeBatch() for multiple statements",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Batch processing: addBatch()/executeBatch() for multiple statements. Understanding this is crucial for mastery of JDBC IV – Advanced JDBC."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: ResultSet types: TYPE_FORWARD_ONLY, TYPE_SCROLL_IN in the context of JDBC IV – Advanced JDBC. Which is correct?",
+      "options": {
+        "A": "ResultSet types: TYPE_FORWARD_ONLY, TYPE_SCROLL_INSENSITIVE, TYPE_SCROLL_SENSITI",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: ResultSet types: TYPE_FORWARD_ONLY, TYPE_SCROLL_INSENSITIVE, TYPE_SCROLL_SENSITIVE. Understanding this is crucial for mastery of JDBC IV – Advanced JDBC."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: ResultSet concurrency: CONCUR_READ_ONLY, CONCUR_UP in the context of JDBC IV – Advanced JDBC. Which is correct?",
+      "options": {
+        "A": "ResultSet concurrency: CONCUR_READ_ONLY, CONCUR_UPDATABLE",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: ResultSet concurrency: CONCUR_READ_ONLY, CONCUR_UPDATABLE. Understanding this is crucial for mastery of JDBC IV – Advanced JDBC."
+    }
+  ]
+}

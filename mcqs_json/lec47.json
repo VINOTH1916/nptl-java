@@ -1,0 +1,396 @@
+{
+  "lecture": 47,
+  "title": "Demonstration XVII – Advanced Swing Demo",
+  "mcqs": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "According to Lecture 47, what is correct?",
+      "options": {
+        "A": "JFrame with menu bar: JMenuBar, JMenu, JMenuItem",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JFrame with menu bar: JMenuBar, JMenu, JMenuItem"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "According to Lecture 47, what is correct?",
+      "options": {
+        "A": "JFileChooser for Open/Save file dialogs",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JFileChooser for Open/Save file dialogs"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "According to Lecture 47, what is correct?",
+      "options": {
+        "A": "JColorChooser for color selection",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JColorChooser for color selection"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "According to Lecture 47, what is correct?",
+      "options": {
+        "A": "JTabbedPane for multi-panel interfaces",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JTabbedPane for multi-panel interfaces"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "According to Lecture 47, what is correct?",
+      "options": {
+        "A": "JTable for displaying tabular data with custom models",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JTable for displaying tabular data with custom models"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "According to Lecture 47, what is correct?",
+      "options": {
+        "A": "JTree for hierarchical data display",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JTree for hierarchical data display"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "According to Lecture 47, what is correct?",
+      "options": {
+        "A": "JComboBox: editable dropdown selection",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JComboBox: editable dropdown selection"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "According to Lecture 47, what is correct?",
+      "options": {
+        "A": "Event handling: ActionListener for menu items",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: Event handling: ActionListener for menu items"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "According to Lecture 47, what is correct?",
+      "options": {
+        "A": "JProgressBar: visual progress indicator",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JProgressBar: visual progress indicator"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to Lecture 47, what is correct?",
+      "options": {
+        "A": "JToolBar: dockable toolbar with buttons",
+        "B": "This is incorrect",
+        "C": "This does not apply",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "From the lecture: JToolBar: dockable toolbar with buttons"
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JFrame with menu bar: JMenuBar, JMenu, JMenuItem?",
+      "options": {
+        "A": "JFrame with menu bar: JMenuBar, JMenu, JMenuItem",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XVII – Advanced Swing Demo: JFrame with menu bar: JMenuBar, JMenu, JMenuItem"
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JFileChooser for Open/Save file dialogs?",
+      "options": {
+        "A": "JFileChooser for Open/Save file dialogs",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XVII – Advanced Swing Demo: JFileChooser for Open/Save file dialogs"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JColorChooser for color selection?",
+      "options": {
+        "A": "JColorChooser for color selection",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XVII – Advanced Swing Demo: JColorChooser for color selection"
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JTabbedPane for multi-panel interfaces?",
+      "options": {
+        "A": "JTabbedPane for multi-panel interfaces",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XVII – Advanced Swing Demo: JTabbedPane for multi-panel interfaces"
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JTable for displaying tabular data with custom mod?",
+      "options": {
+        "A": "JTable for displaying tabular data with custom models",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XVII – Advanced Swing Demo: JTable for displaying tabular data with custom models"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JTree for hierarchical data display?",
+      "options": {
+        "A": "JTree for hierarchical data display",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XVII – Advanced Swing Demo: JTree for hierarchical data display"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JComboBox: editable dropdown selection?",
+      "options": {
+        "A": "JComboBox: editable dropdown selection",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XVII – Advanced Swing Demo: JComboBox: editable dropdown selection"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: Event handling: ActionListener for menu items?",
+      "options": {
+        "A": "Event handling: ActionListener for menu items",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XVII – Advanced Swing Demo: Event handling: ActionListener for menu items"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JProgressBar: visual progress indicator?",
+      "options": {
+        "A": "JProgressBar: visual progress indicator",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XVII – Advanced Swing Demo: JProgressBar: visual progress indicator"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which statement best describes the concept: JToolBar: dockable toolbar with buttons?",
+      "options": {
+        "A": "JToolBar: dockable toolbar with buttons",
+        "B": "An incorrect alternative",
+        "C": "A misleading option",
+        "D": "Not applicable"
+      },
+      "answer": "A",
+      "explanation": "This concept is covered in Demonstration XVII – Advanced Swing Demo: JToolBar: dockable toolbar with buttons"
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JTree for hierarchical data display in the context of Demonstration XVII – Advanced Swing Demo. Which is correct?",
+      "options": {
+        "A": "JTree for hierarchical data display",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JTree for hierarchical data display. Understanding this is crucial for mastery of Demonstration XVII – Advanced Swing Demo."
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JComboBox: editable dropdown selection in the context of Demonstration XVII – Advanced Swing Demo. Which is correct?",
+      "options": {
+        "A": "JComboBox: editable dropdown selection",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JComboBox: editable dropdown selection. Understanding this is crucial for mastery of Demonstration XVII – Advanced Swing Demo."
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: Event handling: ActionListener for menu items in the context of Demonstration XVII – Advanced Swing Demo. Which is correct?",
+      "options": {
+        "A": "Event handling: ActionListener for menu items",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: Event handling: ActionListener for menu items. Understanding this is crucial for mastery of Demonstration XVII – Advanced Swing Demo."
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JProgressBar: visual progress indicator in the context of Demonstration XVII – Advanced Swing Demo. Which is correct?",
+      "options": {
+        "A": "JProgressBar: visual progress indicator",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JProgressBar: visual progress indicator. Understanding this is crucial for mastery of Demonstration XVII – Advanced Swing Demo."
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JToolBar: dockable toolbar with buttons in the context of Demonstration XVII – Advanced Swing Demo. Which is correct?",
+      "options": {
+        "A": "JToolBar: dockable toolbar with buttons",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JToolBar: dockable toolbar with buttons. Understanding this is crucial for mastery of Demonstration XVII – Advanced Swing Demo."
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JFrame with menu bar: JMenuBar, JMenu, JMenuItem in the context of Demonstration XVII – Advanced Swing Demo. Which is correct?",
+      "options": {
+        "A": "JFrame with menu bar: JMenuBar, JMenu, JMenuItem",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JFrame with menu bar: JMenuBar, JMenu, JMenuItem. Understanding this is crucial for mastery of Demonstration XVII – Advanced Swing Demo."
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JFileChooser for Open/Save file dialogs in the context of Demonstration XVII – Advanced Swing Demo. Which is correct?",
+      "options": {
+        "A": "JFileChooser for Open/Save file dialogs",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JFileChooser for Open/Save file dialogs. Understanding this is crucial for mastery of Demonstration XVII – Advanced Swing Demo."
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JColorChooser for color selection in the context of Demonstration XVII – Advanced Swing Demo. Which is correct?",
+      "options": {
+        "A": "JColorChooser for color selection",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JColorChooser for color selection. Understanding this is crucial for mastery of Demonstration XVII – Advanced Swing Demo."
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JTabbedPane for multi-panel interfaces in the context of Demonstration XVII – Advanced Swing Demo. Which is correct?",
+      "options": {
+        "A": "JTabbedPane for multi-panel interfaces",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JTabbedPane for multi-panel interfaces. Understanding this is crucial for mastery of Demonstration XVII – Advanced Swing Demo."
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "Analyze the implications of: JTable for displaying tabular data with custom mod in the context of Demonstration XVII – Advanced Swing Demo. Which is correct?",
+      "options": {
+        "A": "JTable for displaying tabular data with custom models",
+        "B": "A subtle but incorrect alternative",
+        "C": "A plausible distractor",
+        "D": "A common misconception"
+      },
+      "answer": "A",
+      "explanation": "Deep analysis: JTable for displaying tabular data with custom models. Understanding this is crucial for mastery of Demonstration XVII – Advanced Swing Demo."
+    }
+  ]
+}
